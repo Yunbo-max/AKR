@@ -1,0 +1,547 @@
+event_id,target,prediction,correct,spectrum
+131555,Infant Cry,Twitter,false,original_0-48k
+162983,Infant Cry,Twitter,false,original_0-48k
+193131,Infant Cry,Infant Cry,true,original_0-48k
+201275,Infant Cry,Infant Cry,true,original_0-48k
+213327,Infant Cry,Infant Cry,true,original_0-48k
+221925,Infant Cry,Twitter,false,original_0-48k
+223069,Infant Cry,Infant Cry,true,original_0-48k
+223077,Infant Cry,Infant Cry,true,original_0-48k
+223247,Infant Cry,Tsik,false,original_0-48k
+223262,Infant Cry,Infant Cry,true,original_0-48k
+223312,Infant Cry,Infant Cry,true,original_0-48k
+223332,Infant Cry,Infant Cry,true,original_0-48k
+223352,Infant Cry,Infant Cry,true,original_0-48k
+223375,Infant Cry,Twitter,false,original_0-48k
+223383,Infant Cry,Infant Cry,true,original_0-48k
+223396,Infant Cry,Infant Cry,true,original_0-48k
+223400,Infant Cry,Infant Cry,true,original_0-48k
+223402,Infant Cry,Infant Cry,true,original_0-48k
+234304,Infant Cry,Infant Cry,true,original_0-48k
+237804,Infant Cry,Infant Cry,true,original_0-48k
+238029,Infant Cry,Infant Cry,true,original_0-48k
+238142,Infant Cry,Infant Cry,true,original_0-48k
+238306,Infant Cry,Twitter,false,original_0-48k
+299793,Infant Cry,Infant Cry,true,original_0-48k
+315549,Infant Cry,Twitter,false,original_0-48k
+329778,Infant Cry,Infant Cry,true,original_0-48k
+342684,Infant Cry,Infant Cry,true,original_0-48k
+350340,Infant Cry,Infant Cry,true,original_0-48k
+352081,Infant Cry,Twitter,false,original_0-48k
+354197,Infant Cry,Infant Cry,true,original_0-48k
+357670,Infant Cry,Infant Cry,true,original_0-48k
+372773,Infant Cry,Twitter,false,original_0-48k
+401218,Infant Cry,Infant Cry,true,original_0-48k
+405841,Infant Cry,Infant Cry,true,original_0-48k
+501612,Infant Cry,Twitter,false,original_0-48k
+508745,Infant Cry,Infant Cry,true,original_0-48k
+508764,Infant Cry,Tsik,false,original_0-48k
+508780,Infant Cry,Infant Cry,true,original_0-48k
+508801,Infant Cry,Twitter,false,original_0-48k
+509083,Infant Cry,Infant Cry,true,original_0-48k
+509091,Infant Cry,Twitter,false,original_0-48k
+509092,Infant Cry,Trill,false,original_0-48k
+509100,Infant Cry,Twitter,false,original_0-48k
+518850,Infant Cry,Infant Cry,true,original_0-48k
+524694,Infant Cry,Infant Cry,true,original_0-48k
+524878,Infant Cry,Infant Cry,true,original_0-48k
+526040,Infant Cry,Twitter,false,original_0-48k
+526541,Infant Cry,Twitter,false,original_0-48k
+526671,Infant Cry,Twitter,false,original_0-48k
+526711,Infant Cry,Twitter,false,original_0-48k
+540984,Infant Cry,Tsik,false,original_0-48k
+558438,Infant Cry,Twitter,false,original_0-48k
+558594,Infant Cry,Infant Cry,true,original_0-48k
+558633,Infant Cry,Twitter,false,original_0-48k
+558689,Infant Cry,Infant Cry,true,original_0-48k
+562625,Infant Cry,Twitter,false,original_0-48k
+565266,Infant Cry,Infant Cry,true,original_0-48k
+57995,Infant Cry,Infant Cry,true,original_0-48k
+583214,Infant Cry,Twitter,false,original_0-48k
+596191,Infant Cry,Infant Cry,true,original_0-48k
+604234,Infant Cry,Infant Cry,true,original_0-48k
+609454,Infant Cry,Twitter,false,original_0-48k
+612455,Infant Cry,Infant Cry,true,original_0-48k
+612456,Infant Cry,Infant Cry,true,original_0-48k
+612715,Infant Cry,Infant Cry,true,original_0-48k
+618440,Infant Cry,Infant Cry,true,original_0-48k
+623676,Infant Cry,Infant Cry,true,original_0-48k
+623691,Infant Cry,Infant Cry,true,original_0-48k
+628729,Infant Cry,Twitter,false,original_0-48k
+631861,Infant Cry,Infant Cry,true,original_0-48k
+651191,Infant Cry,Infant Cry,true,original_0-48k
+657848,Infant Cry,Infant Cry,true,original_0-48k
+659272,Infant Cry,Twitter,false,original_0-48k
+6633,Infant Cry,Infant Cry,true,original_0-48k
+664504,Infant Cry,Infant Cry,true,original_0-48k
+666082,Infant Cry,Infant Cry,true,original_0-48k
+667865,Infant Cry,Infant Cry,true,original_0-48k
+667905,Infant Cry,Infant Cry,true,original_0-48k
+669950,Infant Cry,Infant Cry,true,original_0-48k
+669953,Infant Cry,Infant Cry,true,original_0-48k
+670039,Infant Cry,Infant Cry,true,original_0-48k
+691528,Infant Cry,Infant Cry,true,original_0-48k
+693164,Infant Cry,Twitter,false,original_0-48k
+695093,Infant Cry,Infant Cry,true,original_0-48k
+696291,Infant Cry,Infant Cry,true,original_0-48k
+725567,Infant Cry,Infant Cry,true,original_0-48k
+729021,Infant Cry,Twitter,false,original_0-48k
+731937,Infant Cry,Twitter,false,original_0-48k
+742006,Infant Cry,Infant Cry,true,original_0-48k
+763863,Infant Cry,Twitter,false,original_0-48k
+765458,Infant Cry,Infant Cry,true,original_0-48k
+765518,Infant Cry,Tsik,false,original_0-48k
+786486,Infant Cry,Infant Cry,true,original_0-48k
+799579,Infant Cry,Infant Cry,true,original_0-48k
+817109,Infant Cry,Tsik,false,original_0-48k
+817681,Infant Cry,Infant Cry,true,original_0-48k
+866025,Infant Cry,Infant Cry,true,original_0-48k
+867327,Infant Cry,Twitter,false,original_0-48k
+868095,Infant Cry,Twitter,false,original_0-48k
+9024,Infant Cry,Infant Cry,true,original_0-48k
+101138,Phee,Phee,true,original_0-48k
+108998,Phee,Phee,true,original_0-48k
+161381,Phee,Phee,true,original_0-48k
+202978,Phee,Phee,true,original_0-48k
+209319,Phee,Phee,true,original_0-48k
+211839,Phee,Phee,true,original_0-48k
+221515,Phee,Phee,true,original_0-48k
+223107,Phee,Phee,true,original_0-48k
+223154,Phee,Phee,true,original_0-48k
+223196,Phee,Phee,true,original_0-48k
+223198,Phee,Phee,true,original_0-48k
+223206,Phee,Phee,true,original_0-48k
+223208,Phee,Phee,true,original_0-48k
+24031,Phee,Phee,true,original_0-48k
+242790,Phee,Phee,true,original_0-48k
+26795,Phee,Phee,true,original_0-48k
+268974,Phee,Phee,true,original_0-48k
+285967,Phee,Phee,true,original_0-48k
+317391,Phee,Phee,true,original_0-48k
+34756,Phee,Phee,true,original_0-48k
+36485,Phee,Phee,true,original_0-48k
+377896,Phee,Phee,true,original_0-48k
+389438,Phee,Phee,true,original_0-48k
+395548,Phee,Phee,true,original_0-48k
+408631,Phee,Phee,true,original_0-48k
+508670,Phee,Phee,true,original_0-48k
+508675,Phee,Phee,true,original_0-48k
+508696,Phee,Phee,true,original_0-48k
+508707,Phee,Phee,true,original_0-48k
+508717,Phee,Phee,true,original_0-48k
+508775,Phee,Phee,true,original_0-48k
+508835,Phee,Phee,true,original_0-48k
+508966,Phee,Phee,true,original_0-48k
+509009,Phee,Phee,true,original_0-48k
+509015,Phee,Phee,true,original_0-48k
+509036,Phee,Phee,true,original_0-48k
+509047,Phee,Phee,true,original_0-48k
+509050,Phee,Phee,true,original_0-48k
+511620,Phee,Phee,true,original_0-48k
+518079,Phee,Phee,true,original_0-48k
+521545,Phee,Phee,true,original_0-48k
+525796,Phee,Phee,true,original_0-48k
+525942,Phee,Phee,true,original_0-48k
+527150,Phee,Phee,true,original_0-48k
+527518,Phee,Phee,true,original_0-48k
+527789,Phee,Phee,true,original_0-48k
+528688,Phee,Phee,true,original_0-48k
+536094,Phee,Phee,true,original_0-48k
+539354,Phee,Phee,true,original_0-48k
+54180,Phee,Phee,true,original_0-48k
+547992,Phee,Phee,true,original_0-48k
+551590,Phee,Phee,true,original_0-48k
+557502,Phee,Phee,true,original_0-48k
+558541,Phee,Phee,true,original_0-48k
+575225,Phee,Phee,true,original_0-48k
+580352,Phee,Phee,true,original_0-48k
+582600,Phee,Phee,true,original_0-48k
+582669,Phee,Phee,true,original_0-48k
+583172,Phee,Phee,true,original_0-48k
+583673,Phee,Phee,true,original_0-48k
+583769,Phee,Phee,true,original_0-48k
+584012,Phee,Phee,true,original_0-48k
+590590,Phee,Phee,true,original_0-48k
+61472,Phee,Phee,true,original_0-48k
+630989,Phee,Phee,true,original_0-48k
+631145,Phee,Phee,true,original_0-48k
+631485,Phee,Phee,true,original_0-48k
+632300,Phee,Phee,true,original_0-48k
+632863,Phee,Phee,true,original_0-48k
+633531,Phee,Phee,true,original_0-48k
+638580,Phee,Phee,true,original_0-48k
+639491,Phee,Phee,true,original_0-48k
+647588,Phee,Phee,true,original_0-48k
+657440,Phee,Phee,true,original_0-48k
+658275,Phee,Phee,true,original_0-48k
+663233,Phee,Phee,true,original_0-48k
+669577,Phee,Phee,true,original_0-48k
+704199,Phee,Phee,true,original_0-48k
+706021,Phee,Phee,true,original_0-48k
+708365,Phee,Phee,true,original_0-48k
+734091,Phee,Phee,true,original_0-48k
+745366,Phee,Phee,true,original_0-48k
+758751,Phee,Phee,true,original_0-48k
+773651,Phee,Phee,true,original_0-48k
+778988,Phee,Phee,true,original_0-48k
+788000,Phee,Phee,true,original_0-48k
+794666,Phee,Phee,true,original_0-48k
+81234,Phee,Phee,true,original_0-48k
+822050,Phee,Phee,true,original_0-48k
+822265,Phee,Phee,true,original_0-48k
+824405,Phee,Phee,true,original_0-48k
+840586,Phee,Phee,true,original_0-48k
+851005,Phee,Phee,true,original_0-48k
+851788,Phee,Phee,true,original_0-48k
+852264,Phee,Phee,true,original_0-48k
+857896,Phee,Phee,true,original_0-48k
+857970,Phee,Phee,true,original_0-48k
+860537,Phee,Phee,true,original_0-48k
+862343,Phee,Phee,true,original_0-48k
+862520,Phee,Phee,true,original_0-48k
+121321,Seep,Twitter,false,original_0-48k
+135177,Seep,Seep,true,original_0-48k
+173793,Seep,Seep,true,original_0-48k
+211832,Seep,Seep,true,original_0-48k
+211974,Seep,Seep,true,original_0-48k
+212002,Seep,Seep,true,original_0-48k
+212103,Seep,Seep,true,original_0-48k
+212106,Seep,Seep,true,original_0-48k
+212109,Seep,Seep,true,original_0-48k
+212110,Seep,Seep,true,original_0-48k
+212113,Seep,Seep,true,original_0-48k
+212116,Seep,Seep,true,original_0-48k
+212120,Seep,Seep,true,original_0-48k
+212126,Seep,Seep,true,original_0-48k
+212127,Seep,Seep,true,original_0-48k
+212130,Seep,Seep,true,original_0-48k
+223298,Seep,Seep,true,original_0-48k
+228489,Seep,Seep,true,original_0-48k
+235891,Seep,Seep,true,original_0-48k
+237025,Seep,Seep,true,original_0-48k
+242947,Seep,Seep,true,original_0-48k
+277849,Seep,Seep,true,original_0-48k
+285498,Seep,Tsik,false,original_0-48k
+294079,Seep,Seep,true,original_0-48k
+297892,Seep,Seep,true,original_0-48k
+303572,Seep,Seep,true,original_0-48k
+31828,Seep,Seep,true,original_0-48k
+411252,Seep,Seep,true,original_0-48k
+414997,Seep,Seep,true,original_0-48k
+422474,Seep,Seep,true,original_0-48k
+422515,Seep,Seep,true,original_0-48k
+46505,Seep,Seep,true,original_0-48k
+495081,Seep,Twitter,false,original_0-48k
+508896,Seep,Seep,true,original_0-48k
+509055,Seep,Seep,true,original_0-48k
+509060,Seep,Seep,true,original_0-48k
+509065,Seep,Seep,true,original_0-48k
+523406,Seep,Seep,true,original_0-48k
+527437,Seep,Seep,true,original_0-48k
+533988,Seep,Seep,true,original_0-48k
+539296,Seep,Seep,true,original_0-48k
+541326,Seep,Seep,true,original_0-48k
+556028,Seep,Seep,true,original_0-48k
+571992,Seep,Seep,true,original_0-48k
+582662,Seep,Seep,true,original_0-48k
+583884,Seep,Seep,true,original_0-48k
+584362,Seep,Seep,true,original_0-48k
+586064,Seep,Seep,true,original_0-48k
+617822,Seep,Seep,true,original_0-48k
+619623,Seep,Seep,true,original_0-48k
+622417,Seep,Seep,true,original_0-48k
+623382,Seep,Seep,true,original_0-48k
+623621,Seep,Seep,true,original_0-48k
+623713,Seep,Seep,true,original_0-48k
+631021,Seep,Seep,true,original_0-48k
+637669,Seep,Seep,true,original_0-48k
+652668,Seep,Seep,true,original_0-48k
+655668,Seep,Seep,true,original_0-48k
+655868,Seep,Seep,true,original_0-48k
+667130,Seep,Seep,true,original_0-48k
+669272,Seep,Seep,true,original_0-48k
+669273,Seep,Seep,true,original_0-48k
+670290,Seep,Seep,true,original_0-48k
+697899,Seep,Seep,true,original_0-48k
+715845,Seep,Seep,true,original_0-48k
+732993,Seep,Seep,true,original_0-48k
+734314,Seep,Seep,true,original_0-48k
+736548,Seep,Seep,true,original_0-48k
+739815,Seep,Seep,true,original_0-48k
+741056,Seep,Seep,true,original_0-48k
+769197,Seep,Seep,true,original_0-48k
+769489,Seep,Seep,true,original_0-48k
+773125,Seep,Seep,true,original_0-48k
+781684,Seep,Seep,true,original_0-48k
+794037,Seep,Tsik,false,original_0-48k
+81191,Seep,Seep,true,original_0-48k
+857186,Seep,Seep,true,original_0-48k
+866515,Seep,Seep,true,original_0-48k
+866655,Seep,Seep,true,original_0-48k
+102022,Trill,Twitter,false,original_0-48k
+121474,Trill,Trill,true,original_0-48k
+161850,Trill,Trill,true,original_0-48k
+172015,Trill,Trill,true,original_0-48k
+190781,Trill,Twitter,false,original_0-48k
+195490,Trill,Trill,true,original_0-48k
+223123,Trill,Trill,true,original_0-48k
+223144,Trill,Trill,true,original_0-48k
+223263,Trill,Phee,false,original_0-48k
+233067,Trill,Trill,true,original_0-48k
+238981,Trill,Trill,true,original_0-48k
+269263,Trill,Trill,true,original_0-48k
+343808,Trill,Twitter,false,original_0-48k
+354379,Trill,Trill,true,original_0-48k
+362733,Trill,Trill,true,original_0-48k
+397118,Trill,Trill,true,original_0-48k
+436313,Trill,Trill,true,original_0-48k
+456914,Trill,Trill,true,original_0-48k
+463226,Trill,Trill,true,original_0-48k
+470849,Trill,Trill,true,original_0-48k
+502854,Trill,Trill,true,original_0-48k
+51436,Trill,Trill,true,original_0-48k
+515398,Trill,Trill,true,original_0-48k
+517703,Trill,Trill,true,original_0-48k
+526430,Trill,Trill,true,original_0-48k
+52861,Trill,Trill,true,original_0-48k
+548798,Trill,Tsik,false,original_0-48k
+549295,Trill,Trill,true,original_0-48k
+549995,Trill,Phee,false,original_0-48k
+561688,Trill,Trill,true,original_0-48k
+56195,Trill,Trill,true,original_0-48k
+564626,Trill,Phee,false,original_0-48k
+572081,Trill,Trill,true,original_0-48k
+580149,Trill,Trill,true,original_0-48k
+584053,Trill,Trill,true,original_0-48k
+589438,Trill,Trill,true,original_0-48k
+592253,Trill,Trill,true,original_0-48k
+592333,Trill,Trill,true,original_0-48k
+592365,Trill,Trill,true,original_0-48k
+592485,Trill,Phee,false,original_0-48k
+593649,Trill,Trill,true,original_0-48k
+594023,Trill,Trill,true,original_0-48k
+595018,Trill,Trill,true,original_0-48k
+622320,Trill,Phee,false,original_0-48k
+624712,Trill,Trill,true,original_0-48k
+630476,Trill,Trill,true,original_0-48k
+631448,Trill,Phee,false,original_0-48k
+633994,Trill,Trill,true,original_0-48k
+638810,Trill,Trill,true,original_0-48k
+639917,Trill,Phee,false,original_0-48k
+649137,Trill,Trill,true,original_0-48k
+666889,Trill,Trill,true,original_0-48k
+667042,Trill,Trill,true,original_0-48k
+667091,Trill,Trill,true,original_0-48k
+667312,Trill,Trill,true,original_0-48k
+668428,Trill,Trill,true,original_0-48k
+669075,Trill,Phee,false,original_0-48k
+670835,Trill,Trill,true,original_0-48k
+679182,Trill,Trill,true,original_0-48k
+686112,Trill,Trill,true,original_0-48k
+687244,Trill,Phee,false,original_0-48k
+691986,Trill,Trill,true,original_0-48k
+695230,Trill,Tsik,false,original_0-48k
+707417,Trill,Trill,true,original_0-48k
+708875,Trill,Trill,true,original_0-48k
+714664,Trill,Phee,false,original_0-48k
+725841,Trill,Trill,true,original_0-48k
+738495,Trill,Trill,true,original_0-48k
+762457,Trill,Trill,true,original_0-48k
+768310,Trill,Phee,false,original_0-48k
+781044,Trill,Trill,true,original_0-48k
+804279,Trill,Trill,true,original_0-48k
+805610,Trill,Trill,true,original_0-48k
+809280,Trill,Trill,true,original_0-48k
+827373,Trill,Trill,true,original_0-48k
+836027,Trill,Trill,true,original_0-48k
+837515,Trill,Trill,true,original_0-48k
+851383,Trill,Trill,true,original_0-48k
+852107,Trill,Trill,true,original_0-48k
+859379,Trill,Trill,true,original_0-48k
+861790,Trill,Trill,true,original_0-48k
+867502,Trill,Trill,true,original_0-48k
+867780,Trill,Trill,true,original_0-48k
+110359,Tsik,Tsik,true,original_0-48k
+110581,Tsik,Tsik,true,original_0-48k
+122742,Tsik,Tsik,true,original_0-48k
+143307,Tsik,Trill,false,original_0-48k
+170858,Tsik,Tsik,true,original_0-48k
+200722,Tsik,Tsik,true,original_0-48k
+209834,Tsik,Tsik,true,original_0-48k
+209838,Tsik,Tsik,true,original_0-48k
+209846,Tsik,Tsik,true,original_0-48k
+209851,Tsik,Tsik,true,original_0-48k
+209853,Tsik,Tsik,true,original_0-48k
+209876,Tsik,Tsik,true,original_0-48k
+209886,Tsik,Tsik,true,original_0-48k
+209891,Tsik,Tsik,true,original_0-48k
+209893,Tsik,Tsik,true,original_0-48k
+209900,Tsik,Tsik,true,original_0-48k
+209901,Tsik,Seep,false,original_0-48k
+209905,Tsik,Tsik,true,original_0-48k
+209919,Tsik,Tsik,true,original_0-48k
+223371,Tsik,Tsik,true,original_0-48k
+248161,Tsik,Tsik,true,original_0-48k
+31471,Tsik,Tsik,true,original_0-48k
+335642,Tsik,Tsik,true,original_0-48k
+423771,Tsik,Tsik,true,original_0-48k
+438410,Tsik,Tsik,true,original_0-48k
+468429,Tsik,Tsik,true,original_0-48k
+480809,Tsik,Tsik,true,original_0-48k
+481037,Tsik,Twitter,false,original_0-48k
+508866,Tsik,Tsik,true,original_0-48k
+508870,Tsik,Tsik,true,original_0-48k
+508872,Tsik,Tsik,true,original_0-48k
+508903,Tsik,Tsik,true,original_0-48k
+508905,Tsik,Tsik,true,original_0-48k
+508923,Tsik,Tsik,true,original_0-48k
+50919,Tsik,Tsik,true,original_0-48k
+525735,Tsik,Tsik,true,original_0-48k
+526904,Tsik,Tsik,true,original_0-48k
+549904,Tsik,Tsik,true,original_0-48k
+558254,Tsik,Tsik,true,original_0-48k
+563468,Tsik,Tsik,true,original_0-48k
+567790,Tsik,Tsik,true,original_0-48k
+589271,Tsik,Tsik,true,original_0-48k
+593315,Tsik,Tsik,true,original_0-48k
+610080,Tsik,Tsik,true,original_0-48k
+614582,Tsik,Tsik,true,original_0-48k
+614794,Tsik,Tsik,true,original_0-48k
+622312,Tsik,Tsik,true,original_0-48k
+623831,Tsik,Tsik,true,original_0-48k
+631947,Tsik,Tsik,true,original_0-48k
+632037,Tsik,Tsik,true,original_0-48k
+636120,Tsik,Tsik,true,original_0-48k
+636151,Tsik,Tsik,true,original_0-48k
+642827,Tsik,Tsik,true,original_0-48k
+654915,Tsik,Tsik,true,original_0-48k
+662160,Tsik,Tsik,true,original_0-48k
+663998,Tsik,Tsik,true,original_0-48k
+666489,Tsik,Tsik,true,original_0-48k
+666571,Tsik,Tsik,true,original_0-48k
+666726,Tsik,Tsik,true,original_0-48k
+666835,Tsik,Tsik,true,original_0-48k
+667582,Tsik,Tsik,true,original_0-48k
+668393,Tsik,Seep,false,original_0-48k
+668980,Tsik,Tsik,true,original_0-48k
+669789,Tsik,Tsik,true,original_0-48k
+687663,Tsik,Tsik,true,original_0-48k
+716490,Tsik,Tsik,true,original_0-48k
+746198,Tsik,Tsik,true,original_0-48k
+753447,Tsik,Tsik,true,original_0-48k
+755986,Tsik,Tsik,true,original_0-48k
+770417,Tsik,Tsik,true,original_0-48k
+770853,Tsik,Tsik,true,original_0-48k
+779744,Tsik,Tsik,true,original_0-48k
+784804,Tsik,Tsik,true,original_0-48k
+787004,Tsik,Tsik,true,original_0-48k
+792714,Tsik,Trill,false,original_0-48k
+799377,Tsik,Tsik,true,original_0-48k
+801091,Tsik,Tsik,true,original_0-48k
+804713,Tsik,Tsik,true,original_0-48k
+805029,Tsik,Tsik,true,original_0-48k
+807122,Tsik,Tsik,true,original_0-48k
+816990,Tsik,Tsik,true,original_0-48k
+84423,Tsik,Tsik,true,original_0-48k
+847877,Tsik,Tsik,true,original_0-48k
+853911,Tsik,Tsik,true,original_0-48k
+867489,Tsik,Tsik,true,original_0-48k
+137886,Twitter,Twitter,true,original_0-48k
+152770,Twitter,Twitter,true,original_0-48k
+166603,Twitter,Twitter,true,original_0-48k
+174653,Twitter,Twitter,true,original_0-48k
+205050,Twitter,Twitter,true,original_0-48k
+211769,Twitter,Twitter,true,original_0-48k
+223149,Twitter,Twitter,true,original_0-48k
+223184,Twitter,Twitter,true,original_0-48k
+223365,Twitter,Seep,false,original_0-48k
+227303,Twitter,Twitter,true,original_0-48k
+228842,Twitter,Twitter,true,original_0-48k
+241125,Twitter,Twitter,true,original_0-48k
+248263,Twitter,Twitter,true,original_0-48k
+248296,Twitter,Twitter,true,original_0-48k
+250172,Twitter,Twitter,true,original_0-48k
+273977,Twitter,Twitter,true,original_0-48k
+274918,Twitter,Twitter,true,original_0-48k
+293662,Twitter,Twitter,true,original_0-48k
+313999,Twitter,Twitter,true,original_0-48k
+363877,Twitter,Twitter,true,original_0-48k
+36522,Twitter,Twitter,true,original_0-48k
+380174,Twitter,Twitter,true,original_0-48k
+386889,Twitter,Twitter,true,original_0-48k
+400874,Twitter,Twitter,true,original_0-48k
+43726,Twitter,Twitter,true,original_0-48k
+442547,Twitter,Twitter,true,original_0-48k
+452855,Twitter,Twitter,true,original_0-48k
+508634,Twitter,Twitter,true,original_0-48k
+508636,Twitter,Twitter,true,original_0-48k
+508695,Twitter,Twitter,true,original_0-48k
+508749,Twitter,Twitter,true,original_0-48k
+508777,Twitter,Twitter,true,original_0-48k
+508828,Twitter,Twitter,true,original_0-48k
+508830,Twitter,Twitter,true,original_0-48k
+508964,Twitter,Twitter,true,original_0-48k
+508992,Twitter,Twitter,true,original_0-48k
+508993,Twitter,Twitter,true,original_0-48k
+509005,Twitter,Twitter,true,original_0-48k
+509006,Twitter,Twitter,true,original_0-48k
+509008,Twitter,Twitter,true,original_0-48k
+509026,Twitter,Twitter,true,original_0-48k
+509046,Twitter,Twitter,true,original_0-48k
+509087,Twitter,Twitter,true,original_0-48k
+511735,Twitter,Twitter,true,original_0-48k
+525243,Twitter,Twitter,true,original_0-48k
+525561,Twitter,Twitter,true,original_0-48k
+525562,Twitter,Tsik,false,original_0-48k
+527487,Twitter,Twitter,true,original_0-48k
+539125,Twitter,Twitter,true,original_0-48k
+547929,Twitter,Twitter,true,original_0-48k
+550353,Twitter,Twitter,true,original_0-48k
+550482,Twitter,Twitter,true,original_0-48k
+5555,Twitter,Twitter,true,original_0-48k
+556866,Twitter,Twitter,true,original_0-48k
+557194,Twitter,Twitter,true,original_0-48k
+558285,Twitter,Twitter,true,original_0-48k
+567471,Twitter,Twitter,true,original_0-48k
+582722,Twitter,Twitter,true,original_0-48k
+584396,Twitter,Twitter,true,original_0-48k
+592286,Twitter,Twitter,true,original_0-48k
+598116,Twitter,Twitter,true,original_0-48k
+598781,Twitter,Twitter,true,original_0-48k
+600731,Twitter,Twitter,true,original_0-48k
+601927,Twitter,Twitter,true,original_0-48k
+602268,Twitter,Twitter,true,original_0-48k
+622260,Twitter,Twitter,true,original_0-48k
+622758,Twitter,Twitter,true,original_0-48k
+623573,Twitter,Twitter,true,original_0-48k
+624179,Twitter,Twitter,true,original_0-48k
+625053,Twitter,Twitter,true,original_0-48k
+632381,Twitter,Twitter,true,original_0-48k
+645428,Twitter,Twitter,true,original_0-48k
+648272,Twitter,Twitter,true,original_0-48k
+651229,Twitter,Twitter,true,original_0-48k
+662800,Twitter,Twitter,true,original_0-48k
+667201,Twitter,Twitter,true,original_0-48k
+678522,Twitter,Twitter,true,original_0-48k
+680295,Twitter,Twitter,true,original_0-48k
+680791,Twitter,Twitter,true,original_0-48k
+699227,Twitter,Twitter,true,original_0-48k
+737715,Twitter,Twitter,true,original_0-48k
+766645,Twitter,Twitter,true,original_0-48k
+768697,Twitter,Twitter,true,original_0-48k
+786011,Twitter,Twitter,true,original_0-48k
+79941,Twitter,Twitter,true,original_0-48k
+805513,Twitter,Twitter,true,original_0-48k
+807189,Twitter,Twitter,true,original_0-48k
+811393,Twitter,Twitter,true,original_0-48k
+8116,Twitter,Twitter,true,original_0-48k
+820757,Twitter,Twitter,true,original_0-48k
+826133,Twitter,Twitter,true,original_0-48k
+836799,Twitter,Twitter,true,original_0-48k
+844274,Twitter,Twitter,true,original_0-48k
+84477,Twitter,Twitter,true,original_0-48k
+851385,Twitter,Twitter,true,original_0-48k
+861853,Twitter,Twitter,true,original_0-48k
+866525,Twitter,Twitter,true,original_0-48k
+866533,Twitter,Twitter,true,original_0-48k
+866838,Twitter,Twitter,true,original_0-48k

@@ -1,0 +1,129 @@
+{
+  "protocol": "same 75 recording-disjoint queries and identical nested K<=8 prefixes; K16 extends the deterministic support order",
+  "scaling": [
+    {
+      "support_k_per_class": 1,
+      "method": "linear_probe",
+      "n": 75,
+      "accuracy": 0.4666666666666667
+    },
+    {
+      "support_k_per_class": 1,
+      "method": "nearest_centroid",
+      "n": 75,
+      "accuracy": 0.29333333333333333
+    },
+    {
+      "support_k_per_class": 2,
+      "method": "linear_probe",
+      "n": 75,
+      "accuracy": 0.5866666666666667
+    },
+    {
+      "support_k_per_class": 2,
+      "method": "nearest_centroid",
+      "n": 75,
+      "accuracy": 0.4666666666666667
+    },
+    {
+      "support_k_per_class": 4,
+      "method": "linear_probe",
+      "n": 75,
+      "accuracy": 0.7333333333333333
+    },
+    {
+      "support_k_per_class": 4,
+      "method": "nearest_centroid",
+      "n": 75,
+      "accuracy": 0.5066666666666667
+    },
+    {
+      "support_k_per_class": 8,
+      "method": "linear_probe",
+      "n": 75,
+      "accuracy": 0.84
+    },
+    {
+      "support_k_per_class": 8,
+      "method": "nearest_centroid",
+      "n": 75,
+      "accuracy": 0.7866666666666666
+    },
+    {
+      "support_k_per_class": 16,
+      "method": "linear_probe",
+      "n": 75,
+      "accuracy": 0.8266666666666667
+    },
+    {
+      "support_k_per_class": 16,
+      "method": "nearest_centroid",
+      "n": 75,
+      "accuracy": 0.76
+    }
+  ],
+  "support_to_decision_gap": [
+    {
+      "support_k_per_class": 1,
+      "definition": "linear_probe minus audio_ICL",
+      "n": 75,
+      "accuracy_a": 0.4666666666666667,
+      "accuracy_b": 0.08,
+      "difference_a_minus_b": 0.38666666666666666,
+      "bootstrap_95_ci": [
+        0.25333333333333335,
+        0.52
+      ],
+      "a_only_correct": 33,
+      "b_only_correct": 4,
+      "mcnemar_exact_two_sided_p": 1.0843941709026694e-06
+    },
+    {
+      "support_k_per_class": 2,
+      "definition": "linear_probe minus audio_ICL",
+      "n": 75,
+      "accuracy_a": 0.5866666666666667,
+      "accuracy_b": 0.17333333333333334,
+      "difference_a_minus_b": 0.41333333333333333,
+      "bootstrap_95_ci": [
+        0.28,
+        0.5466666666666666
+      ],
+      "a_only_correct": 34,
+      "b_only_correct": 3,
+      "mcnemar_exact_two_sided_p": 1.233129296451807e-07
+    }
+  ],
+  "k16_saturation_tests": [
+    {
+      "method": "linear_probe",
+      "comparison": "K16 minus K8",
+      "n": 75,
+      "accuracy_a": 0.8266666666666667,
+      "accuracy_b": 0.84,
+      "difference_a_minus_b": -0.013333333333333334,
+      "bootstrap_95_ci": [
+        -0.09333333333333334,
+        0.06666666666666667
+      ],
+      "a_only_correct": 4,
+      "b_only_correct": 5,
+      "mcnemar_exact_two_sided_p": 1.0
+    },
+    {
+      "method": "nearest_centroid",
+      "comparison": "K16 minus K8",
+      "n": 75,
+      "accuracy_a": 0.76,
+      "accuracy_b": 0.7866666666666666,
+      "difference_a_minus_b": -0.02666666666666667,
+      "bootstrap_95_ci": [
+        -0.08,
+        0.02666666666666667
+      ],
+      "a_only_correct": 1,
+      "b_only_correct": 3,
+      "mcnemar_exact_two_sided_p": 0.625
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "seed": 20260814,
+  "manifest": "data/manifests/beans_dogs_all_full_lp1.csv",
+  "condition": "lp_0-1000",
+  "labels": [
+    "Farley",
+    "Freid",
+    "Keri",
+    "Louie",
+    "Luke",
+    "Mac",
+    "Roodie",
+    "Rudy",
+    "Siggy",
+    "Zoe"
+  ],
+  "partition": "official-fixed-split",
+  "group_column": null,
+  "query_groups": [],
+  "support_source_split": "train",
+  "support_events_from": "results/beans_dogs_support_k_tokenwise_split.json",
+  "query_split": "valid",
+  "support_k_per_class": [
+    2
+  ],
+  "support_by_label": {
+    "Farley": [
+      "train_486",
+      "train_453"
+    ],
+    "Freid": [
+      "train_553",
+      "train_541"
+    ],
+    "Keri": [
+      "train_522",
+      "train_519"
+    ],
+    "Louie": [
+      "train_185",
+      "train_204"
+    ],
+    "Luke": [
+      "train_656",
+      "train_649"
+    ],
+    "Mac": [
+      "train_22",
+      "train_28"
+    ],
+    "Roodie": [
+      "train_403",
+      "train_364"
+    ],
+    "Rudy": [
+      "train_86",
+      "train_100"
+    ],
+    "Siggy": [
+      "train_146",
+      "train_162"
+    ],
+    "Zoe": [
+      "train_281",
+      "train_266"
+    ]
+  },
+  "support_sets": {
+    "2": [
+      "train_486",
+      "train_453",
+      "train_553",
+      "train_541",
+      "train_522",
+      "train_519",
+      "train_185",
+      "train_204",
+      "train_656",
+      "train_649",
+      "train_22",
+      "train_28",
+      "train_403",
+      "train_364",
+      "train_86",
+      "train_100",
+      "train_146",
+      "train_162",
+      "train_281",
+      "train_266"
+    ]
+  },
+  "query_events": [
+    "valid_4",
+    "valid_7",
+    "valid_13",
+    "valid_21",
+    "valid_26",
+    "valid_27",
+    "valid_29",
+    "valid_37",
+    "valid_46",
+    "valid_47",
+    "valid_50",
+    "valid_57",
+    "valid_70",
+    "valid_71",
+    "valid_75",
+    "valid_77",
+    "valid_79",
+    "valid_89",
+    "valid_96",
+    "valid_98",
+    "valid_102",
+    "valid_119",
+    "valid_125",
+    "valid_128",
+    "valid_142",
+    "valid_154",
+    "valid_157",
+    "valid_161",
+    "valid_163",
+    "valid_166",
+    "valid_168",
+    "valid_171",
+    "valid_174",
+    "valid_175",
+    "valid_177",
+    "valid_192",
+    "valid_194",
+    "valid_197",
+    "valid_200",
+    "valid_205",
+    "valid_206",
+    "valid_214",
+    "valid_215",
+    "valid_218",
+    "valid_223",
+    "valid_227",
+    "valid_236",
+    "valid_239",
+    "valid_247",
+    "valid_249",
+    "valid_254",
+    "valid_258",
+    "valid_264",
+    "valid_267",
+    "valid_276",
+    "valid_279",
+    "valid_292",
+    "valid_293",
+    "valid_297",
+    "valid_303",
+    "valid_324",
+    "valid_331",
+    "valid_333",
+    "valid_335"
+  ],
+  "query_label_counts": {
+    "Farley": 0,
+    "Freid": 0,
+    "Keri": 0,
+    "Louie": 6,
+    "Luke": 0,
+    "Mac": 17,
+    "Roodie": 8,
+    "Rudy": 4,
+    "Siggy": 14,
+    "Zoe": 15
+  },
+  "query_labels_used_for": "post_hoc_scoring_only"
+}

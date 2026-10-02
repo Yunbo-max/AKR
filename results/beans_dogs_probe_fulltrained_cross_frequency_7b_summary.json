@@ -1,0 +1,159 @@
+{
+  "dataset": "dogs",
+  "protocol": "select layer/alpha on full validation; fit full train+valid once; transfer the unchanged decoder to every condition test",
+  "selected_layer": 10,
+  "alpha": 100.0,
+  "n_train_valid": 554,
+  "conditions": [
+    {
+      "condition": "full_0-8k",
+      "n": 139,
+      "accuracy": 0.9280575539568345,
+      "macro_f1": 0.9095401765010166
+    },
+    {
+      "condition": "lp_0-1000",
+      "n": 139,
+      "accuracy": 0.4028776978417266,
+      "macro_f1": 0.29997196069352267
+    },
+    {
+      "condition": "lp_0-2000",
+      "n": 139,
+      "accuracy": 0.5971223021582733,
+      "macro_f1": 0.6208736352214613
+    },
+    {
+      "condition": "lp_0-4000",
+      "n": 139,
+      "accuracy": 0.8129496402877698,
+      "macro_f1": 0.816868170507411
+    },
+    {
+      "condition": "lp_0-6000",
+      "n": 139,
+      "accuracy": 0.920863309352518,
+      "macro_f1": 0.9059667204072864
+    },
+    {
+      "condition": "lp_0-8000",
+      "n": 139,
+      "accuracy": 0.9136690647482014,
+      "macro_f1": 0.8964361227185986
+    }
+  ],
+  "paired_full_minus_condition": {
+    "lp_0-1000": {
+      "n": 139,
+      "delta": 0.5251798561151079,
+      "ci_low": 0.43884892086330934,
+      "ci_high": 0.6115107913669064,
+      "bootstrap_draws": 10000,
+      "left_correct_right_wrong": 74,
+      "left_wrong_right_correct": 1,
+      "mcnemar_exact_p": 4.0234064994579266e-21
+    },
+    "lp_0-2000": {
+      "n": 139,
+      "delta": 0.33093525179856115,
+      "ci_low": 0.2446043165467626,
+      "ci_high": 0.4172661870503597,
+      "bootstrap_draws": 10000,
+      "left_correct_right_wrong": 49,
+      "left_wrong_right_correct": 3,
+      "mcnemar_exact_p": 1.042677055806962e-11
+    },
+    "lp_0-4000": {
+      "n": 139,
+      "delta": 0.11510791366906475,
+      "ci_low": 0.05755395683453238,
+      "ci_high": 0.17985611510791366,
+      "bootstrap_draws": 10000,
+      "left_correct_right_wrong": 18,
+      "left_wrong_right_correct": 2,
+      "mcnemar_exact_p": 0.0004024505615234375
+    },
+    "lp_0-6000": {
+      "n": 139,
+      "delta": 0.007194244604316547,
+      "ci_low": -0.014388489208633094,
+      "ci_high": 0.03597122302158273,
+      "bootstrap_draws": 10000,
+      "left_correct_right_wrong": 2,
+      "left_wrong_right_correct": 1,
+      "mcnemar_exact_p": 1.0
+    },
+    "lp_0-8000": {
+      "n": 139,
+      "delta": 0.014388489208633094,
+      "ci_low": -0.02158273381294964,
+      "ci_high": 0.050359712230215826,
+      "bootstrap_draws": 10000,
+      "left_correct_right_wrong": 4,
+      "left_wrong_right_correct": 2,
+      "mcnemar_exact_p": 0.6875
+    }
+  },
+  "paired_condition_specific_minus_fulltrained_transfer": {
+    "full_0-8k": {
+      "n": 139,
+      "delta": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "bootstrap_draws": 10000,
+      "left_correct_right_wrong": 0,
+      "left_wrong_right_correct": 0,
+      "mcnemar_exact_p": 1.0
+    },
+    "lp_0-1000": {
+      "n": 139,
+      "delta": 0.4748201438848921,
+      "ci_low": 0.381294964028777,
+      "ci_high": 0.5611510791366906,
+      "bootstrap_draws": 10000,
+      "left_correct_right_wrong": 70,
+      "left_wrong_right_correct": 4,
+      "mcnemar_exact_p": 1.2898469490022716e-16
+    },
+    "lp_0-2000": {
+      "n": 139,
+      "delta": 0.31654676258992803,
+      "ci_low": 0.2302158273381295,
+      "ci_high": 0.4028776978417266,
+      "bootstrap_draws": 10000,
+      "left_correct_right_wrong": 48,
+      "left_wrong_right_correct": 4,
+      "mcnemar_exact_p": 1.3065282189472782e-10
+    },
+    "lp_0-4000": {
+      "n": 139,
+      "delta": 0.10071942446043165,
+      "ci_low": 0.04316546762589928,
+      "ci_high": 0.15827338129496402,
+      "bootstrap_draws": 10000,
+      "left_correct_right_wrong": 16,
+      "left_wrong_right_correct": 2,
+      "mcnemar_exact_p": 0.001312255859375
+    },
+    "lp_0-6000": {
+      "n": 139,
+      "delta": -0.02877697841726619,
+      "ci_low": -0.07194244604316546,
+      "ci_high": 0.014388489208633094,
+      "bootstrap_draws": 10000,
+      "left_correct_right_wrong": 3,
+      "left_wrong_right_correct": 7,
+      "mcnemar_exact_p": 0.34375
+    },
+    "lp_0-8000": {
+      "n": 139,
+      "delta": 0.03597122302158273,
+      "ci_low": -0.014388489208633094,
+      "ci_high": 0.09352517985611511,
+      "bootstrap_draws": 10000,
+      "left_correct_right_wrong": 10,
+      "left_wrong_right_correct": 5,
+      "mcnemar_exact_p": 0.3017578125
+    }
+  }
+}

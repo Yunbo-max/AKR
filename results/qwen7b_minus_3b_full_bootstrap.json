@@ -1,0 +1,8 @@
+{
+  "condition": "full_0-8k",
+  "n": 546,
+  "delta_definition": "accuracy_a_minus_b",
+  "delta": 0.09157509157509158,
+  "ci_low": 0.047619047619047616,
+  "ci_high": 0.1336996336996337
+}

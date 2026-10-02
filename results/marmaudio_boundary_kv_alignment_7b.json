@@ -1,0 +1,56 @@
+{
+  "scope": "five preregistered degraded MarmAudio bandwidth conditions",
+  "n_conditions": 5,
+  "rows": [
+    {
+      "condition": "lp_0-1000",
+      "cutoff_hz": 1000,
+      "mean_corrective_field_cosine_to_full": 0.5146303081086704,
+      "corrective_field_rotation_one_minus_cosine": 0.4853696918913296,
+      "condition_specific_probe_accuracy": 0.7728937728937729,
+      "fulltrained_transfer_accuracy": 0.3498168498168498,
+      "decoder_boundary_drift_gap": 0.42307692307692313
+    },
+    {
+      "condition": "lp_0-2000",
+      "cutoff_hz": 2000,
+      "mean_corrective_field_cosine_to_full": 0.6252632481711251,
+      "corrective_field_rotation_one_minus_cosine": 0.3747367518288749,
+      "condition_specific_probe_accuracy": 0.7985347985347986,
+      "fulltrained_transfer_accuracy": 0.5457875457875457,
+      "decoder_boundary_drift_gap": 0.25274725274725285
+    },
+    {
+      "condition": "lp_0-4000",
+      "cutoff_hz": 4000,
+      "mean_corrective_field_cosine_to_full": 0.7233673845018659,
+      "corrective_field_rotation_one_minus_cosine": 0.2766326154981341,
+      "condition_specific_probe_accuracy": 0.826007326007326,
+      "fulltrained_transfer_accuracy": 0.5952380952380952,
+      "decoder_boundary_drift_gap": 0.23076923076923073
+    },
+    {
+      "condition": "lp_0-6000",
+      "cutoff_hz": 6000,
+      "mean_corrective_field_cosine_to_full": 0.8248620842184339,
+      "corrective_field_rotation_one_minus_cosine": 0.17513791578156612,
+      "condition_specific_probe_accuracy": 0.9395604395604396,
+      "fulltrained_transfer_accuracy": 0.8864468864468864,
+      "decoder_boundary_drift_gap": 0.05311355311355315
+    },
+    {
+      "condition": "lp_0-8000",
+      "cutoff_hz": 8000,
+      "mean_corrective_field_cosine_to_full": 0.9786602450268609,
+      "corrective_field_rotation_one_minus_cosine": 0.021339754973139113,
+      "condition_specific_probe_accuracy": 0.9487179487179487,
+      "fulltrained_transfer_accuracy": 0.9542124542124543,
+      "decoder_boundary_drift_gap": -0.005494505494505586
+    }
+  ],
+  "spearman_rho": 0.9999999999999999,
+  "spearman_exact_two_sided_permutation_p": 0.016666666666666666,
+  "pearson_r": 0.9694185955947864,
+  "pearson_exact_two_sided_permutation_p": 0.016666666666666666,
+  "interpretation_limit": "descriptive cross-condition association; n=5 and both quantities co-vary with bandwidth, so this is triangulation rather than a causal mediation estimate"
+}

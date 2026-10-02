@@ -1,0 +1,132 @@
+{
+  "conditions": [
+    {
+      "condition": "full_0-8k",
+      "n": 546,
+      "accuracy": 0.2948717948717949,
+      "macro_f1": 0.21938794847249718
+    },
+    {
+      "condition": "lp_0-1000",
+      "n": 65,
+      "accuracy": 0.0,
+      "macro_f1": 0.0
+    },
+    {
+      "condition": "lp_0-2000",
+      "n": 64,
+      "accuracy": 0.0,
+      "macro_f1": 0.0
+    },
+    {
+      "condition": "lp_0-4000",
+      "n": 64,
+      "accuracy": 0.0,
+      "macro_f1": 0.0
+    },
+    {
+      "condition": "lp_0-6000",
+      "n": 64,
+      "accuracy": 0.0,
+      "macro_f1": 0.0
+    },
+    {
+      "condition": "lp_0-8000",
+      "n": 64,
+      "accuracy": 0.0,
+      "macro_f1": 0.0
+    },
+    {
+      "condition": "remove_0-1000",
+      "n": 64,
+      "accuracy": 0.0,
+      "macro_f1": 0.0
+    },
+    {
+      "condition": "remove_1000-2000",
+      "n": 64,
+      "accuracy": 0.0,
+      "macro_f1": 0.0
+    },
+    {
+      "condition": "remove_2000-4000",
+      "n": 64,
+      "accuracy": 0.0,
+      "macro_f1": 0.0
+    },
+    {
+      "condition": "remove_4000-6000",
+      "n": 64,
+      "accuracy": 0.0,
+      "macro_f1": 0.0
+    },
+    {
+      "condition": "remove_6000-8000",
+      "n": 64,
+      "accuracy": 0.0,
+      "macro_f1": 0.0
+    }
+  ],
+  "paired_full_minus_condition": {
+    "lp_0-1000": {
+      "n": 65,
+      "delta": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0
+    },
+    "lp_0-2000": {
+      "n": 64,
+      "delta": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0
+    },
+    "lp_0-4000": {
+      "n": 64,
+      "delta": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0
+    },
+    "lp_0-6000": {
+      "n": 64,
+      "delta": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0
+    },
+    "lp_0-8000": {
+      "n": 64,
+      "delta": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0
+    },
+    "remove_0-1000": {
+      "n": 64,
+      "delta": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0
+    },
+    "remove_1000-2000": {
+      "n": 64,
+      "delta": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0
+    },
+    "remove_2000-4000": {
+      "n": 64,
+      "delta": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0
+    },
+    "remove_4000-6000": {
+      "n": 64,
+      "delta": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0
+    },
+    "remove_6000-8000": {
+      "n": 64,
+      "delta": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0
+    }
+  }
+}

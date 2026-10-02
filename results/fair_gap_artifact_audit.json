@@ -1,0 +1,170 @@
+{
+  "passed": false,
+  "checks": [
+    {
+      "name": "candidate_scoring_full546",
+      "passed": true,
+      "detail": "expected=1092 observed=1092 unique=1092"
+    },
+    {
+      "name": "marm_recording_disjoint_nested_support",
+      "passed": true,
+      "detail": "query=75 K1=6 K2=12 K4=24 K8=48"
+    },
+    {
+      "name": "dogs_official_nested_support",
+      "passed": true,
+      "detail": "query=139 K1=10 K2=20"
+    },
+    {
+      "name": "watkins_official_nested_support",
+      "passed": true,
+      "detail": "query=339 K1=31 K2=62 K4=124"
+    },
+    {
+      "name": "equal_support_readouts:results/marmaudio_equal_support_readouts_7b_summary.json",
+      "passed": true,
+      "detail": "K=[1, 2, 4, 8] query=75"
+    },
+    {
+      "name": "equal_support_readouts:results/beans_dogs_lp1_equal_support_k1_k2_fullvalid_readouts_7b_summary.json",
+      "passed": true,
+      "detail": "K=[1, 2] query=139"
+    },
+    {
+      "name": "equal_support_readouts:results/beans_watkins_equal_support_readouts_7b_summary.json",
+      "passed": true,
+      "detail": "K=[1, 2, 4] query=339"
+    },
+    {
+      "name": "marm_native_readouts_same_query",
+      "passed": true,
+      "detail": "query=75 readouts=5"
+    },
+    {
+      "name": "icl:results/marmaudio_equal_support_audio_icl_k1_7b.csv",
+      "passed": true,
+      "detail": "expected=75 observed=75 unique=75"
+    },
+    {
+      "name": "icl:results/marmaudio_equal_support_audio_icl_k2_7b.csv",
+      "passed": true,
+      "detail": "expected=75 observed=75 unique=75"
+    },
+    {
+      "name": "icl:results/marmaudio_equal_support_audio_icl_candidate_k1_7b.csv",
+      "passed": true,
+      "detail": "expected=75 observed=75 unique=75"
+    },
+    {
+      "name": "icl:results/beans_dogs_lp1_equal_support_audio_icl_k1_7b.csv",
+      "passed": true,
+      "detail": "expected=139 observed=139 unique=139"
+    },
+    {
+      "name": "optional_full_icl:results/marmaudio_equal_support_audio_icl_candidate_k2_7b.csv",
+      "passed": true,
+      "detail": "K=2 expected=75 observed=75 unique=75"
+    },
+    {
+      "name": "optional_full_icl:results/marmaudio_equal_support_audio_icl_k4_7b.csv",
+      "passed": true,
+      "detail": "K=4 expected=75 observed=75 unique=75"
+    },
+    {
+      "name": "optional_full_icl:results/marmaudio_equal_support_audio_icl_candidate_k4_7b.csv",
+      "passed": true,
+      "detail": "K=4 expected=75 observed=75 unique=75"
+    },
+    {
+      "name": "optional_full_icl:results/marmaudio_equal_support_audio_icl_k8_7b.csv",
+      "passed": true,
+      "detail": "K=8 expected=75 observed=75 unique=75"
+    },
+    {
+      "name": "optional_full_icl:results/marmaudio_equal_support_audio_icl_candidate_k8_7b.csv",
+      "passed": false,
+      "detail": "K=8 expected=75 observed=35 unique=35"
+    },
+    {
+      "name": "marm_arbitrary_label_candidate:identity",
+      "passed": true,
+      "detail": "K0=75 K1=75"
+    },
+    {
+      "name": "marm_arbitrary_label_candidate:shift1",
+      "passed": true,
+      "detail": "K0=75 K1=75"
+    },
+    {
+      "name": "marm_arbitrary_label_candidate:shift2",
+      "passed": true,
+      "detail": "K0=75 K1=75"
+    },
+    {
+      "name": "marm_arbitrary_label_candidate:shift3",
+      "passed": true,
+      "detail": "K0=75 K1=75"
+    },
+    {
+      "name": "marm_arbitrary_label_candidate:shift4",
+      "passed": true,
+      "detail": "K0=75 K1=75"
+    },
+    {
+      "name": "marm_arbitrary_label_candidate:shift5",
+      "passed": true,
+      "detail": "K0=75 K1=75"
+    },
+    {
+      "name": "relative_kv_validation_gate",
+      "passed": true,
+      "detail": "complete_cells=15 query=139 max_norm_error=2.36e-05 fair_test_outputs=0"
+    },
+    {
+      "name": "class_routed_kv_name_labels",
+      "passed": true,
+      "detail": "repair_rows=1251 native_rows=0 max_norm_error=2.57e-05 gate=False"
+    },
+    {
+      "name": "class_routed_kv_arbitrary_labels",
+      "passed": true,
+      "detail": "repair_rows=1251 native_rows=139 max_norm_error=2.14e-05 gate=False"
+    },
+    {
+      "name": "equal_support_lora_dogs",
+      "passed": true,
+      "detail": "support=20 classes=10 valid=139"
+    },
+    {
+      "name": "oracle_label_specific_capacity_controls",
+      "passed": true,
+      "detail": "n=12; correct and wrong-label target effects checked; random null checked"
+    },
+    {
+      "name": "paired_fair_gap_statistics",
+      "passed": true,
+      "detail": "comparisons=11 draws=20000"
+    },
+    {
+      "name": "matched_audio_silence_steering",
+      "passed": true,
+      "detail": "MarmAudio support=6 query=75; Dogs A-J support=10 query=139"
+    },
+    {
+      "name": "marm_arbitrary_counterbalanced_summary",
+      "passed": true,
+      "detail": "mappings=6 queries=75 pairs=450"
+    },
+    {
+      "name": "marm_icl_order_registry",
+      "passed": true,
+      "detail": "query=75 rotations={0: 13, 1: 12, 2: 12, 3: 12, 4: 13, 5: 13}"
+    },
+    {
+      "name": "beans_zero_7b_fullscan",
+      "passed": true,
+      "detail": "predictions=2950 unique=2950 components=12"
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "design": "six cyclic A--F mappings; every acoustic class is paired once with every letter",
+  "n_mappings": 6,
+  "n_unique_queries": 75,
+  "n_query_mapping_pairs": 450,
+  "mappings": [
+    {
+      "mapping": "identity",
+      "k0_accuracy": 0.09333333333333334,
+      "k1_accuracy": 0.12,
+      "k1_minus_k0": 0.02666666666666667,
+      "k1_only_correct": 3,
+      "k0_only_correct": 1,
+      "mcnemar_exact_two_sided_p": 0.625,
+      "k0_prediction_counts": {
+        "A": 48,
+        "D": 19,
+        "B": 8
+      },
+      "k1_prediction_counts": {
+        "A": 48,
+        "E": 27
+      }
+    },
+    {
+      "mapping": "shift1",
+      "k0_accuracy": 0.09333333333333334,
+      "k1_accuracy": 0.21333333333333335,
+      "k1_minus_k0": 0.12,
+      "k1_only_correct": 16,
+      "k0_only_correct": 7,
+      "mcnemar_exact_two_sided_p": 0.0931396484375,
+      "k0_prediction_counts": {
+        "B": 75
+      },
+      "k1_prediction_counts": {
+        "E": 75
+      }
+    },
+    {
+      "mapping": "shift2",
+      "k0_accuracy": 0.12,
+      "k1_accuracy": 0.09333333333333334,
+      "k1_minus_k0": -0.02666666666666667,
+      "k1_only_correct": 7,
+      "k0_only_correct": 9,
+      "mcnemar_exact_two_sided_p": 0.803619384765625,
+      "k0_prediction_counts": {
+        "A": 6,
+        "B": 25,
+        "C": 44
+      },
+      "k1_prediction_counts": {
+        "E": 75
+      }
+    },
+    {
+      "mapping": "shift3",
+      "k0_accuracy": 0.09333333333333334,
+      "k1_accuracy": 0.25333333333333335,
+      "k1_minus_k0": 0.16,
+      "k1_only_correct": 19,
+      "k0_only_correct": 7,
+      "mcnemar_exact_two_sided_p": 0.028959274291992188,
+      "k0_prediction_counts": {
+        "D": 75
+      },
+      "k1_prediction_counts": {
+        "E": 75
+      }
+    },
+    {
+      "mapping": "shift4",
+      "k0_accuracy": 0.09333333333333334,
+      "k1_accuracy": 0.09333333333333334,
+      "k1_minus_k0": 0.0,
+      "k1_only_correct": 0,
+      "k0_only_correct": 0,
+      "mcnemar_exact_two_sided_p": 1.0,
+      "k0_prediction_counts": {
+        "E": 75
+      },
+      "k1_prediction_counts": {
+        "E": 74,
+        "A": 1
+      }
+    },
+    {
+      "mapping": "shift5",
+      "k0_accuracy": 0.08,
+      "k1_accuracy": 0.26666666666666666,
+      "k1_minus_k0": 0.18666666666666668,
+      "k1_only_correct": 15,
+      "k0_only_correct": 1,
+      "mcnemar_exact_two_sided_p": 0.000518798828125,
+      "k0_prediction_counts": {
+        "A": 9,
+        "F": 64,
+        "B": 1,
+        "E": 1
+      },
+      "k1_prediction_counts": {
+        "A": 58,
+        "F": 17
+      }
+    }
+  ],
+  "macro_k0_accuracy": 0.09555555555555555,
+  "macro_k1_accuracy": 0.17333333333333334,
+  "clustered_k1_minus_k0": 0.07777777777777778,
+  "query_cluster_bootstrap_95_ci": [
+    0.026666666666666665,
+    0.12444444444444445
+  ],
+  "query_cluster_signflip_two_sided_p": 0.004049797510124494,
+  "audio_label_association_null": {
+    "procedure": "shared query permutation across six mappings; output frequencies fixed",
+    "k0_null_95_interval": [
+      0.09333333333333332,
+      0.12666666666666668
+    ],
+    "k0_one_sided_p": 0.9643017849107545,
+    "k1_null_95_interval": [
+      0.15333333333333332,
+      0.1777777777777778
+    ],
+    "k1_one_sided_p": 0.15154242287885605
+  },
+  "draws": 20000,
+  "seed": 20260814
+}

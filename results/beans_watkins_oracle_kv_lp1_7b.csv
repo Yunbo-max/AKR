@@ -1,0 +1,6 @@
+event_id,condition,target,baseline_prediction,base_loss,prediction_eta_0p01,correct_eta_0p01,prediction_eta_0p03,correct_eta_0p03,prediction_eta_0p1,correct_eta_0p1,prediction_eta_0p3,correct_eta_0p3,prediction_eta_1p0,correct_eta_1p0
+test_66,lp_0-1000,Bottlenose_Dolphin,"Beluga,_White_Whale",2.5355114936828613,"Beluga,_White_Whale",false,"Beluga,_White_Whale",false,"Beluga,_White_Whale",false,"Beluga,_White_Whale",false,Bottlenose_Dolphin,true
+test_81,lp_0-1000,Bottlenose_Dolphin,False_Killer_Whale,2.385394334793091,False_Killer_Whale,false,False_Killer_Whale,false,False_Killer_Whale,false,False_Killer_Whale,false,Bottlenose_Dolphin,true
+test_207,lp_0-1000,"Beluga,_White_Whale",False_Killer_Whale,2.658933639526367,False_Killer_Whale,false,"Beluga,_White_Whale",true,"Beluga,_White_Whale",true,"Beluga,_White_Whale",true,"Beluga,_White_Whale",true
+test_323,lp_0-1000,Humpback_Whale,"Beluga,_White_Whale",2.9628632068634033,"Beluga,_White_Whale",false,"Beluga,_White_Whale",false,"Beluga,_White_Whale",false,"Beluga,_White_Whale",false,Humpback_Whale,true
+test_1029,lp_0-1000,Killer_Whale,"Beluga,_White_Whale",4.218807697296143,"Beluga,_White_Whale",false,"Beluga,_White_Whale",false,"Beluga,_White_Whale",false,"Beluga,_White_Whale",false,Killer_Whale,true

@@ -1,0 +1,26 @@
+{
+  "model_id": "Qwen/Qwen2.5-Omni-7B",
+  "manifest": "data/manifests/marmaudio_expert_validation.csv",
+  "gate_per_class": 1,
+  "prompts": [
+    "bare"
+  ],
+  "candidate_scoring": {
+    "primary": "mean_token_logprob",
+    "secondary": "sequence_logprob",
+    "candidate_batch_size": 6
+  },
+  "summaries": {
+    "bare": {
+      "n": 1,
+      "mean_normalized": {
+        "accuracy": 1.0,
+        "macro_f1": 0.16666666666666666
+      },
+      "sequence_sum": {
+        "accuracy": 1.0,
+        "macro_f1": 0.16666666666666666
+      }
+    }
+  }
+}

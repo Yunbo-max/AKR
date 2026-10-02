@@ -1,0 +1,285 @@
+[2026-08-14T14:29:57Z] resume stages skipped when the original queue was externally terminated
+[2026-08-14T14:29:57Z] beans_dogs_lp1 K=2/class one-query gate
+You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+Qwen2_5OmniToken2WavModel does not support eager attention implementation, fall back to sdpa
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:01<00:04,  1.14s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:01<00:02,  1.06it/s]Loading checkpoint shards:  60%|██████    | 3/5 [00:02<00:01,  1.13it/s]Loading checkpoint shards:  80%|████████  | 4/5 [00:03<00:00,  1.16it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:04<00:00,  1.32it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:04<00:00,  1.20it/s]
+[W814 14:30:11.845241636 CUDACachingAllocator.cpp:508] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 13697024, total: 25296044032).
+[W814 14:30:11.037290757 CUDACachingAllocator.cpp:508] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 13697024, total: 25296044032).
+[W814 14:30:11.089281802 CUDACachingAllocator.cpp:508] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 13697024, total: 25296044032).
+Traceback (most recent call last):
+  File "/root/animal-omni-kv/scripts/evaluate_equal_support_audio_icl.py", line 156, in <module>
+    main()
+  File "/root/animal-omni-kv/scripts/evaluate_equal_support_audio_icl.py", line 100, in main
+    raw = runner.predict_icl(
+  File "/root/animal-omni-kv/src/animal_omni/qwen_runner.py", line 107, in predict_icl
+    output = self.model.generate(
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py", line 4510, in generate
+    thinker_result = self.thinker.generate(input_ids=input_ids, **thinker_kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/transformers/generation/utils.py", line 2597, in generate
+    result = self._sample(
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/transformers/generation/utils.py", line 3557, in _sample
+    outputs = self(**model_inputs, return_dict=True)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py", line 2366, in forward
+    audio_features = self.get_audio_features(
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py", line 2250, in get_audio_features
+    audio_outputs = self.audio_tower(
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py", line 911, in forward
+    layer_outputs = encoder_layer(
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py", line 772, in forward
+    hidden_states = self.self_attn(
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py", line 626, in forward
+    attn_weights = torch.matmul(query_states, key_states.transpose(1, 2)) / math.sqrt(self.head_dim)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 4.11 GiB. GPU 0 has a total capacity of 23.56 GiB of which 2.06 GiB is free. Including non-PyTorch memory, this process has 21.49 GiB memory in use. Of the allocated memory 21.12 GiB is allocated by PyTorch, and 64.82 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+[2026-08-14T14:30:12Z] beans_dogs_lp1 K=2/class gate failed
+[2026-08-14T14:30:12Z] beans_watkins K=1/class one-query gate
+You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+Qwen2_5OmniToken2WavModel does not support eager attention implementation, fall back to sdpa
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:01<00:04,  1.13s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:01<00:02,  1.08it/s]Loading checkpoint shards:  60%|██████    | 3/5 [00:02<00:01,  1.15it/s]Loading checkpoint shards:  80%|████████  | 4/5 [00:03<00:00,  1.17it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:04<00:00,  1.34it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:04<00:00,  1.22it/s]
+[W814 14:30:29.293763867 CUDACachingAllocator.cpp:508] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 11599872, total: 25296044032).
+[W814 14:30:29.454083712 CUDACachingAllocator.cpp:508] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 11599872, total: 25296044032).
+[W814 14:30:30.508240746 CUDACachingAllocator.cpp:508] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 11599872, total: 25296044032).
+Traceback (most recent call last):
+  File "/root/animal-omni-kv/scripts/evaluate_equal_support_audio_icl.py", line 156, in <module>
+    main()
+  File "/root/animal-omni-kv/scripts/evaluate_equal_support_audio_icl.py", line 100, in main
+    raw = runner.predict_icl(
+  File "/root/animal-omni-kv/src/animal_omni/qwen_runner.py", line 107, in predict_icl
+    output = self.model.generate(
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py", line 4510, in generate
+    thinker_result = self.thinker.generate(input_ids=input_ids, **thinker_kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/transformers/generation/utils.py", line 2597, in generate
+    result = self._sample(
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/transformers/generation/utils.py", line 3557, in _sample
+    outputs = self(**model_inputs, return_dict=True)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py", line 2436, in forward
+    outputs = self.model(
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py", line 1965, in forward
+    layer_outputs = decoder_layer(
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py", line 1826, in forward
+    hidden_states, self_attn_weights, present_key_value = self.self_attn(
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py", line 1515, in forward
+    attn_weights = torch.matmul(query_states, key_states.transpose(2, 3)) / math.sqrt(self.head_dim)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 3.61 GiB. GPU 0 has a total capacity of 23.56 GiB of which 2.18 GiB is free. Including non-PyTorch memory, this process has 21.37 GiB memory in use. Of the allocated memory 20.94 GiB is allocated by PyTorch, and 122.81 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+[2026-08-14T14:30:31Z] beans_watkins K=1/class gate failed
+[2026-08-14T14:30:31Z] beans_watkins K=2/class one-query gate
+You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+Qwen2_5OmniToken2WavModel does not support eager attention implementation, fall back to sdpa
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:01<00:04,  1.14s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:01<00:02,  1.07it/s]Loading checkpoint shards:  60%|██████    | 3/5 [00:02<00:01,  1.14it/s]Loading checkpoint shards:  80%|████████  | 4/5 [00:03<00:00,  1.16it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:04<00:00,  1.32it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:04<00:00,  1.21it/s]
+[W814 14:30:51.222636895 CUDACachingAllocator.cpp:508] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 13697024, total: 25296044032).
+[W814 14:30:51.400645215 CUDACachingAllocator.cpp:508] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 13697024, total: 25296044032).
+[W814 14:30:51.465293082 CUDACachingAllocator.cpp:508] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 13697024, total: 25296044032).
+Traceback (most recent call last):
+  File "/root/animal-omni-kv/scripts/evaluate_equal_support_audio_icl.py", line 156, in <module>
+    main()
+  File "/root/animal-omni-kv/scripts/evaluate_equal_support_audio_icl.py", line 100, in main
+    raw = runner.predict_icl(
+  File "/root/animal-omni-kv/src/animal_omni/qwen_runner.py", line 107, in predict_icl
+    output = self.model.generate(
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py", line 4510, in generate
+    thinker_result = self.thinker.generate(input_ids=input_ids, **thinker_kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/transformers/generation/utils.py", line 2597, in generate
+    result = self._sample(
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/transformers/generation/utils.py", line 3557, in _sample
+    outputs = self(**model_inputs, return_dict=True)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py", line 2366, in forward
+    audio_features = self.get_audio_features(
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py", line 2250, in get_audio_features
+    audio_outputs = self.audio_tower(
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py", line 911, in forward
+    layer_outputs = encoder_layer(
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py", line 772, in forward
+    hidden_states = self.self_attn(
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py", line 626, in forward
+    attn_weights = torch.matmul(query_states, key_states.transpose(1, 2)) / math.sqrt(self.head_dim)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 3.33 GiB. GPU 0 has a total capacity of 23.56 GiB of which 2.47 GiB is free. Including non-PyTorch memory, this process has 21.08 GiB memory in use. Of the allocated memory 20.70 GiB is allocated by PyTorch, and 71.67 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+[2026-08-14T14:30:53Z] beans_watkins K=2/class gate failed
+[2026-08-14T14:30:53Z] validation-only A-J cross-prompt pooled-cache transfer
+You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+Qwen2_5OmniToken2WavModel does not support eager attention implementation, fall back to sdpa
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:01<00:04,  1.14s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:01<00:02,  1.07it/s]Loading checkpoint shards:  60%|██████    | 3/5 [00:02<00:01,  1.14it/s]Loading checkpoint shards:  80%|████████  | 4/5 [00:03<00:00,  1.16it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:04<00:00,  1.32it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:04<00:00,  1.20it/s]
+[1/139] valid_4 routed=Freid
+[10/139] valid_47 routed=Siggy
+[20/139] valid_98 routed=Rudy
+[30/139] valid_166 routed=Farley
+[40/139] valid_205 routed=Louie
+[50/139] valid_249 routed=Siggy
+[60/139] valid_303 routed=Roodie
+[70/139] valid_352 routed=Freid
+[80/139] valid_398 routed=Roodie
+[90/139] valid_457 routed=Farley
+[100/139] valid_495 routed=Louie
+[110/139] valid_547 routed=Freid
+[120/139] valid_620 routed=Zoe
+[130/139] valid_657 routed=Rudy
+[139/139] valid_692 routed=Freid
+You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+Qwen2_5OmniToken2WavModel does not support eager attention implementation, fall back to sdpa
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:01<00:04,  1.13s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:01<00:02,  1.08it/s]Loading checkpoint shards:  60%|██████    | 3/5 [00:02<00:01,  1.16it/s]Loading checkpoint shards:  80%|████████  | 4/5 [00:03<00:00,  1.17it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:04<00:00,  1.33it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:04<00:00,  1.22it/s]
+[140/139] valid_4 routed=Freid
+[149/139] valid_47 routed=Siggy
+[159/139] valid_98 routed=Rudy
+[169/139] valid_166 routed=Farley
+[179/139] valid_205 routed=Louie
+[189/139] valid_249 routed=Siggy
+[199/139] valid_303 routed=Roodie
+[209/139] valid_352 routed=Freid
+[219/139] valid_398 routed=Roodie
+[229/139] valid_457 routed=Farley
+[239/139] valid_495 routed=Louie
+[249/139] valid_547 routed=Freid
+[259/139] valid_620 routed=Zoe
+[269/139] valid_657 routed=Rudy
+You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+Qwen2_5OmniToken2WavModel does not support eager attention implementation, fall back to sdpa
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:01<00:04,  1.14s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:01<00:02,  1.07it/s]Loading checkpoint shards:  60%|██████    | 3/5 [00:02<00:01,  1.13it/s]Loading checkpoint shards:  80%|████████  | 4/5 [00:03<00:00,  1.16it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:04<00:00,  1.32it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:04<00:00,  1.20it/s]
+[1/139] valid_4 routed=Freid
+[10/139] valid_47 routed=Siggy
+[20/139] valid_98 routed=Rudy
+[30/139] valid_166 routed=Farley
+[40/139] valid_205 routed=Louie
+[50/139] valid_249 routed=Siggy
+[60/139] valid_303 routed=Roodie
+[70/139] valid_352 routed=Freid
+[80/139] valid_398 routed=Roodie
+[90/139] valid_457 routed=Farley
+[100/139] valid_495 routed=Louie
+[110/139] valid_547 routed=Freid
+[120/139] valid_620 routed=Zoe
+[130/139] valid_657 routed=Rudy
+[139/139] valid_692 routed=Freid
+You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+Qwen2_5OmniToken2WavModel does not support eager attention implementation, fall back to sdpa
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:01<00:04,  1.14s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:01<00:02,  1.06it/s]Loading checkpoint shards:  60%|██████    | 3/5 [00:02<00:01,  1.13it/s]Loading checkpoint shards:  80%|████████  | 4/5 [00:03<00:00,  1.16it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:04<00:00,  1.32it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:04<00:00,  1.20it/s]
+[140/139] valid_4 routed=Freid
+[149/139] valid_47 routed=Siggy
+[159/139] valid_98 routed=Rudy
+[169/139] valid_166 routed=Farley
+[179/139] valid_205 routed=Louie
+[189/139] valid_249 routed=Siggy
+[199/139] valid_303 routed=Roodie
+[209/139] valid_352 routed=Freid
+[219/139] valid_398 routed=Roodie
+[229/139] valid_457 routed=Farley
+[239/139] valid_495 routed=Louie
+[249/139] valid_547 routed=Freid
+[259/139] valid_620 routed=Zoe
+[269/139] valid_657 routed=Rudy
+{
+  "protocol": "same A-J support gradients and router; only query prompt changes",
+  "prompts": [
+    {
+      "name": "paraphrase",
+      "predictions": "results/beans_dogs_AJ_cross_prompt_paraphrase_7b.csv",
+      "n": 139,
+      "native": {
+        "accuracy": 0.12949640287769784,
+        "macro_f1": 0.07584301663249031,
+        "invalid_response_rate": 0.0
+      },
+      "pooled_alpha_03": {
+        "accuracy": 0.30935251798561153,
+        "macro_f1": 0.24965861344537815,
+        "invalid_response_rate": 0.007194244604316547
+      },
+      "paired_accuracy_gain": 0.17985611510791366,
+      "paired_bootstrap_95_ci": [
+        0.09352517985611511,
+        0.26618705035971224
+      ],
+      "repair_only_correct": 33,
+      "native_only_correct": 8,
+      "mcnemar_exact_two_sided_p": 0.00011222142620681552
+    },
+    {
+      "name": "reverse_order",
+      "predictions": "results/beans_dogs_AJ_cross_prompt_reverse_order_7b.csv",
+      "n": 139,
+      "native": {
+        "accuracy": 0.1079136690647482,
+        "macro_f1": 0.020134228187919465,
+        "invalid_response_rate": 0.0
+      },
+      "pooled_alpha_03": {
+        "accuracy": 0.18705035971223022,
+        "macro_f1": 0.13450895140664962,
+        "invalid_response_rate": 0.014388489208633094
+      },
+      "paired_accuracy_gain": 0.07913669064748201,
+      "paired_bootstrap_95_ci": [
+        0.0,
+        0.15827338129496402
+      ],
+      "repair_only_correct": 22,
+      "native_only_correct": 11,
+      "mcnemar_exact_two_sided_p": 0.08014331245794892
+    }
+  ]
+}
+[2026-08-14T14:35:47Z] remaining equal-support queue finished

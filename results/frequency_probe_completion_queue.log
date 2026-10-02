@@ -1,0 +1,730 @@
+[2026-08-14T12:08:43Z] resume Dogs 2/4/6/8 kHz representations
+[2026-08-14T12:10:38Z] resume Dogs 2/4/6/8 kHz representations
+You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+Qwen2_5OmniToken2WavModel does not support eager attention implementation, fall back to sdpa
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:02<00:09,  2.31s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:03<00:05,  1.77s/it]Loading checkpoint shards:  60%|██████    | 3/5 [00:05<00:03,  1.64s/it]Loading checkpoint shards:  80%|████████  | 4/5 [00:06<00:01,  1.63s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:07<00:00,  1.44s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:07<00:00,  1.58s/it]
+[1/1674] train_226 (29, 3584)
+[25/1674] train_235 (29, 3584)
+[50/1674] train_250 (29, 3584)
+[75/1674] train_260 (29, 3584)
+[100/1674] train_268 (29, 3584)
+[125/1674] train_278 (29, 3584)
+[150/1674] train_286 (29, 3584)
+[175/1674] train_298 (29, 3584)
+[200/1674] train_310 (29, 3584)
+[225/1674] train_318 (29, 3584)
+[250/1674] train_326 (29, 3584)
+[275/1674] train_340 (29, 3584)
+[300/1674] train_355 (29, 3584)
+[325/1674] train_361 (29, 3584)
+[350/1674] train_367 (29, 3584)
+[375/1674] train_377 (29, 3584)
+[400/1674] train_390 (29, 3584)
+[425/1674] train_403 (29, 3584)
+[450/1674] train_412 (29, 3584)
+[475/1674] train_424 (29, 3584)
+[500/1674] train_435 (29, 3584)
+[525/1674] train_443 (29, 3584)
+[550/1674] train_452 (29, 3584)
+[575/1674] train_464 (29, 3584)
+[600/1674] train_474 (29, 3584)
+[625/1674] train_486 (29, 3584)
+[650/1674] train_499 (29, 3584)
+[675/1674] train_509 (29, 3584)
+[700/1674] train_518 (29, 3584)
+[725/1674] train_527 (29, 3584)
+[750/1674] train_540 (29, 3584)
+[775/1674] train_553 (29, 3584)
+[800/1674] train_562 (29, 3584)
+[825/1674] train_574 (29, 3584)
+[850/1674] train_582 (29, 3584)
+[875/1674] train_591 (29, 3584)
+[900/1674] train_599 (29, 3584)
+[925/1674] train_607 (29, 3584)
+[950/1674] train_615 (29, 3584)
+[975/1674] train_630 (29, 3584)
+[1000/1674] train_638 (29, 3584)
+[1025/1674] train_647 (29, 3584)
+[1050/1674] train_658 (29, 3584)
+[1075/1674] train_671 (29, 3584)
+[1100/1674] train_687 (29, 3584)
+[1125/1674] valid_7 (29, 3584)
+[1150/1674] valid_37 (29, 3584)
+[1175/1674] valid_75 (29, 3584)
+[1200/1674] valid_102 (29, 3584)
+[1225/1674] valid_157 (29, 3584)
+[1250/1674] valid_174 (29, 3584)
+[1275/1674] valid_205 (29, 3584)
+[1300/1674] valid_227 (29, 3584)
+[1325/1674] valid_258 (29, 3584)
+[1350/1674] valid_293 (29, 3584)
+[1375/1674] valid_338 (29, 3584)
+[1400/1674] valid_374 (29, 3584)
+[1425/1674] valid_391 (29, 3584)
+[1450/1674] valid_409 (29, 3584)
+[1475/1674] valid_457 (29, 3584)
+[1500/1674] valid_468 (29, 3584)
+[1525/1674] valid_504 (29, 3584)
+[1550/1674] valid_536 (29, 3584)
+[1575/1674] valid_567 (29, 3584)
+[1600/1674] valid_621 (29, 3584)
+[1625/1674] valid_648 (29, 3584)
+[1650/1674] valid_672 (29, 3584)
+[1674/1674] valid_692 (29, 3584)
+[2026-08-14T12:24:42Z] fill Dogs 1 kHz complete official split
+You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+Qwen2_5OmniToken2WavModel does not support eager attention implementation, fall back to sdpa
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:01<00:04,  1.17s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:01<00:02,  1.06it/s]Loading checkpoint shards:  60%|██████    | 3/5 [00:02<00:01,  1.14it/s]Loading checkpoint shards:  80%|████████  | 4/5 [00:03<00:00,  1.16it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:04<00:00,  1.32it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:04<00:00,  1.20it/s]
+[1/470] train_0 (29, 3584)
+[25/470] train_42 (29, 3584)
+[50/470] train_87 (29, 3584)
+[75/470] train_127 (29, 3584)
+[100/470] train_173 (29, 3584)
+[125/470] train_222 (29, 3584)
+[150/470] train_263 (29, 3584)
+[175/470] train_309 (29, 3584)
+[200/470] train_353 (29, 3584)
+[225/470] train_390 (29, 3584)
+[250/470] train_436 (29, 3584)
+[275/470] train_480 (29, 3584)
+[300/470] train_526 (29, 3584)
+[325/470] train_575 (29, 3584)
+[350/470] train_609 (29, 3584)
+[375/470] train_651 (29, 3584)
+[400/470] valid_347 (29, 3584)
+[425/470] valid_465 (29, 3584)
+[450/470] valid_613 (29, 3584)
+[470/470] valid_692 (29, 3584)
+[2026-08-14T12:27:10Z] verify Dogs representations before any probe
+{
+  "dataset": "dogs",
+  "expected_total": 693,
+  "expected_split_counts": {
+    "train": 415,
+    "valid": 139,
+    "test": 139
+  },
+  "conditions": {
+    "full_0-8k": {
+      "directory": "results/reps_beans_dogs_7b",
+      "files": 693,
+      "unique_events": 693,
+      "split_counts": {
+        "train": 415,
+        "valid": 139,
+        "test": 139
+      },
+      "metadata_errors": 0,
+      "representation_errors": 0,
+      "passed": true
+    },
+    "lp_0-1000": {
+      "directory": "results/reps_beans_dogs_lp1_7b",
+      "files": 693,
+      "unique_events": 693,
+      "split_counts": {
+        "train": 415,
+        "valid": 139,
+        "test": 139
+      },
+      "metadata_errors": 0,
+      "representation_errors": 0,
+      "passed": true
+    },
+    "lp_0-2000": {
+      "directory": "results/reps_beans_dogs_frequency_extra_7b/lp_0-2000",
+      "files": 693,
+      "unique_events": 693,
+      "split_counts": {
+        "train": 415,
+        "valid": 139,
+        "test": 139
+      },
+      "metadata_errors": 0,
+      "representation_errors": 0,
+      "passed": true
+    },
+    "lp_0-4000": {
+      "directory": "results/reps_beans_dogs_frequency_extra_7b/lp_0-4000",
+      "files": 693,
+      "unique_events": 693,
+      "split_counts": {
+        "train": 415,
+        "valid": 139,
+        "test": 139
+      },
+      "metadata_errors": 0,
+      "representation_errors": 0,
+      "passed": true
+    },
+    "lp_0-6000": {
+      "directory": "results/reps_beans_dogs_frequency_extra_7b/lp_0-6000",
+      "files": 693,
+      "unique_events": 693,
+      "split_counts": {
+        "train": 415,
+        "valid": 139,
+        "test": 139
+      },
+      "metadata_errors": 0,
+      "representation_errors": 0,
+      "passed": true
+    },
+    "lp_0-8000": {
+      "directory": "results/reps_beans_dogs_frequency_extra_7b/lp_0-8000",
+      "files": 693,
+      "unique_events": 693,
+      "split_counts": {
+        "train": 415,
+        "valid": 139,
+        "test": 139
+      },
+      "metadata_errors": 0,
+      "representation_errors": 0,
+      "passed": true
+    }
+  },
+  "passed": true
+}
+[2026-08-14T12:27:19Z] probe dogs lp1
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=3.16107e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.11044e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.09234e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.13454e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=3.4778e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.20266e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.09931e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.1829e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=3.04125e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.22189e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.20115e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.21799e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=3.52186e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.25108e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=3.91208e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.35772e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=3.54633e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.61249e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.01447e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.91856e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.68037e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.22601e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.7838e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.32853e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.58914e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.47237e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.3982e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.33492e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.28822e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.32624e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.16075e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.439e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.09509e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.40613e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=3.67687e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.55145e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.40164e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.76761e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.51747e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.79046e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.68029e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.5909e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=6.21449e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=7.02334e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=7.00099e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=7.22335e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=6.22185e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=7.05369e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=6.45325e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+{
+  "n_train": 415,
+  "n_valid": 139,
+  "n_test": 139,
+  "selected_layer": 11,
+  "alpha": 100,
+  "validation_macro_f1": 0.8547798875369207,
+  "test_accuracy": 0.8776978417266187,
+  "test_macro_f1": 0.8607247343497344,
+  "protocol": "select_on_valid_refit_train_plus_valid_evaluate_test"
+}
+[2026-08-14T12:27:50Z] probe dogs lp2
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=3.68752e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.4375e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=2.97394e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.34421e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=2.7439e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.50959e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=3.79484e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.37857e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.09565e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.49898e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.15742e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.38302e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=3.76678e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.59433e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=3.55863e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.47784e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=3.91674e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.67399e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=3.9554e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.8212e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.66527e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.10307e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.26656e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.17004e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.24775e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.21672e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=3.78646e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.13019e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.51877e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.07034e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.08566e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.16031e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.2081e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.21295e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.22655e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.4747e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.4503e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.83664e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.19796e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.79757e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.13701e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.56667e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.73278e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=6.06739e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=6.25366e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=6.46488e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.64506e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=6.57285e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.68376e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+{
+  "n_train": 415,
+  "n_valid": 139,
+  "n_test": 139,
+  "selected_layer": 15,
+  "alpha": 100,
+  "validation_macro_f1": 0.824627622212021,
+  "test_accuracy": 0.9136690647482014,
+  "test_macro_f1": 0.8812386330107043,
+  "protocol": "select_on_valid_refit_train_plus_valid_evaluate_test"
+}
+[2026-08-14T12:28:23Z] probe dogs lp4
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=3.71691e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.32419e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=3.99222e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.40542e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=3.83401e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.36722e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=3.63676e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=3.32045e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.42366e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.3345e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.44841e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=3.61717e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.39524e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=3.15046e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.52605e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.09414e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.72316e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=3.99589e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.91427e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.73196e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.36434e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.80219e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.28477e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.32452e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.39714e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.64814e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.22575e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.76849e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.3726e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.56368e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.35581e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.97496e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.43651e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.99235e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.56923e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.04243e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.88647e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.1961e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.47559e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.98962e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.53349e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.61903e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=6.10703e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=6.46208e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.51624e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=6.21437e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=6.15014e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+{
+  "n_train": 415,
+  "n_valid": 139,
+  "n_test": 139,
+  "selected_layer": 12,
+  "alpha": 100,
+  "validation_macro_f1": 0.8719739977865073,
+  "test_accuracy": 0.9136690647482014,
+  "test_macro_f1": 0.9134225635498329,
+  "protocol": "select_on_valid_refit_train_plus_valid_evaluate_test"
+}
+[2026-08-14T12:28:54Z] probe dogs lp6
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=2.91099e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.62748e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=3.67892e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.58479e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=3.68418e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.59298e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.42842e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.67873e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=3.75965e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.56419e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=3.93333e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.6293e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=3.80849e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.63763e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=3.49712e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.61351e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=3.18038e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.98067e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=3.82202e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.07073e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.15737e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.75405e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.87704e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.39278e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.46958e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.47792e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.93085e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.37341e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.96602e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.45377e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.44576e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.41223e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.92643e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.55345e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.98565e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.7945e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.62583e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.82029e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.79664e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.95967e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.89648e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.0086e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.91522e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=6.27826e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=6.61997e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=6.8519e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=6.49482e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=6.89993e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=6.26679e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+{
+  "n_train": 415,
+  "n_valid": 139,
+  "n_test": 139,
+  "selected_layer": 7,
+  "alpha": 10,
+  "validation_macro_f1": 0.8654749272286585,
+  "test_accuracy": 0.8920863309352518,
+  "test_macro_f1": 0.8744344666748042,
+  "protocol": "select_on_valid_refit_train_plus_valid_evaluate_test"
+}
+[2026-08-14T12:29:26Z] probe dogs lp8
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=3.43012e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=3.23038e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.3948e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=3.73758e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=3.33529e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.46964e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=3.56294e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.54372e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=3.5604e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.33876e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=3.71501e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.57752e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.82583e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.71224e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.10391e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.04576e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.44012e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.22775e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.6579e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.70843e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.68061e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.44226e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.91009e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.49273e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.22754e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.52637e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.45425e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.39191e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=4.64509e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.36736e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.28533e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.52933e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.25167e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.75122e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.0024e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.86551e-08): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.42814e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.60323e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.33016e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=6.37079e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.84227e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=6.17591e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=6.42881e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=7.02456e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=6.39906e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/sklearn/linear_model/_ridge.py:250: LinAlgWarning: Ill-conditioned matrix (rcond=5.45545e-09): result may not be accurate.
+  dual_coef = linalg.solve(K, y, assume_a="pos", overwrite_a=False)
+{
+  "n_train": 415,
+  "n_valid": 139,
+  "n_test": 139,
+  "selected_layer": 17,
+  "alpha": 100,
+  "validation_macro_f1": 0.8521188354129532,
+  "test_accuracy": 0.9496402877697842,
+  "test_macro_f1": 0.9501827046722683,
+  "protocol": "select_on_valid_refit_train_plus_valid_evaluate_test"
+}

@@ -1,0 +1,175 @@
+{
+  "complete_cells": [
+    {
+      "method": "probe_class_permuted",
+      "relative_alpha": 0.003,
+      "n": 139,
+      "accuracy": 0.03597122302158273,
+      "macro_f1": 0.014990723562152133,
+      "router_accuracy": 0.35251798561151076,
+      "prediction_matches_routed_label": 0.2158273381294964,
+      "invalid_response_rate": 0.1366906474820144,
+      "prediction_counts": {
+        "Rudy": 94,
+        "": 19,
+        "Louie": 2,
+        "Roodie": 24
+      },
+      "achieved_ratio_mean": 0.0029999578559128924
+    },
+    {
+      "method": "probe_class_permuted",
+      "relative_alpha": 0.01,
+      "n": 139,
+      "accuracy": 0.02158273381294964,
+      "macro_f1": 0.01838235294117647,
+      "router_accuracy": 0.35251798561151076,
+      "prediction_matches_routed_label": 0.12949640287769784,
+      "invalid_response_rate": 0.41007194244604317,
+      "prediction_counts": {
+        "Rudy": 64,
+        "": 57,
+        "Freid": 14,
+        "Siggy": 2,
+        "Farley": 1,
+        "Louie": 1
+      },
+      "achieved_ratio_mean": 0.009999179660451753
+    },
+    {
+      "method": "probe_class_permuted",
+      "relative_alpha": 0.03,
+      "n": 139,
+      "accuracy": 0.007194244604316547,
+      "macro_f1": 0.014285714285714287,
+      "router_accuracy": 0.35251798561151076,
+      "prediction_matches_routed_label": 0.03597122302158273,
+      "invalid_response_rate": 0.935251798561151,
+      "prediction_counts": {
+        "": 130,
+        "Louie": 1,
+        "Farley": 3,
+        "Rudy": 3,
+        "Zoe": 2
+      },
+      "achieved_ratio_mean": 0.029998463875243683
+    },
+    {
+      "method": "probe_class_pooled",
+      "relative_alpha": 0.003,
+      "n": 139,
+      "accuracy": 0.02877697841726619,
+      "macro_f1": 0.005594405594405594,
+      "router_accuracy": 0.35251798561151076,
+      "prediction_matches_routed_label": 0.11510791366906475,
+      "invalid_response_rate": 0.0,
+      "prediction_counts": {
+        "Rudy": 139
+      },
+      "achieved_ratio_mean": 0.0029998644396762256
+    },
+    {
+      "method": "probe_class_pooled",
+      "relative_alpha": 0.01,
+      "n": 139,
+      "accuracy": 0.15827338129496402,
+      "macro_f1": 0.14939088533713393,
+      "router_accuracy": 0.35251798561151076,
+      "prediction_matches_routed_label": 0.4460431654676259,
+      "invalid_response_rate": 0.0,
+      "prediction_counts": {
+        "Rudy": 90,
+        "Roodie": 35,
+        "Farley": 8,
+        "Louie": 6
+      },
+      "achieved_ratio_mean": 0.009999743616591306
+    },
+    {
+      "method": "probe_class_pooled",
+      "relative_alpha": 0.03,
+      "n": 139,
+      "accuracy": 0.20863309352517986,
+      "macro_f1": 0.17762448406949688,
+      "router_accuracy": 0.35251798561151076,
+      "prediction_matches_routed_label": 0.5971223021582733,
+      "invalid_response_rate": 0.1079136690647482,
+      "prediction_counts": {
+        "Rudy": 47,
+        "Farley": 19,
+        "Roodie": 38,
+        "Louie": 5,
+        "Siggy": 8,
+        "": 15,
+        "Freid": 4,
+        "Zoe": 3
+      },
+      "achieved_ratio_mean": 0.029998737200472466
+    },
+    {
+      "method": "probe_class_tokenwise",
+      "relative_alpha": 0.003,
+      "n": 139,
+      "accuracy": 0.1079136690647482,
+      "macro_f1": 0.052732389251997094,
+      "router_accuracy": 0.35251798561151076,
+      "prediction_matches_routed_label": 0.3597122302158273,
+      "invalid_response_rate": 0.1366906474820144,
+      "prediction_counts": {
+        "Rudy": 77,
+        "Roodie": 37,
+        "": 19,
+        "Siggy": 2,
+        "Louie": 4
+      },
+      "achieved_ratio_mean": 0.0029999443709087924
+    },
+    {
+      "method": "probe_class_tokenwise",
+      "relative_alpha": 0.01,
+      "n": 139,
+      "accuracy": 0.1366906474820144,
+      "macro_f1": 0.16100415923945338,
+      "router_accuracy": 0.35251798561151076,
+      "prediction_matches_routed_label": 0.37410071942446044,
+      "invalid_response_rate": 0.5179856115107914,
+      "prediction_counts": {
+        "": 72,
+        "Rudy": 21,
+        "Freid": 8,
+        "Farley": 17,
+        "Mac": 1,
+        "Siggy": 8,
+        "Zoe": 10,
+        "Louie": 2
+      },
+      "achieved_ratio_mean": 0.00999916658640091
+    },
+    {
+      "method": "probe_class_tokenwise",
+      "relative_alpha": 0.03,
+      "n": 139,
+      "accuracy": 0.0,
+      "macro_f1": 0.0,
+      "router_accuracy": 0.35251798561151076,
+      "prediction_matches_routed_label": 0.0,
+      "invalid_response_rate": 0.9928057553956835,
+      "prediction_counts": {
+        "": 138,
+        "Luke": 1
+      },
+      "achieved_ratio_mean": 0.029998794622300047
+    }
+  ],
+  "incomplete_cells": [],
+  "gate": {
+    "registered_rule": "ordered tokenwise beats pooled at >=2 alphas and beats token-permuted at selected alpha; ties select lower norm",
+    "tokenwise_beats_pooled_alphas": [
+      0.003
+    ],
+    "selected_tokenwise_alpha": 0.01,
+    "selected_tokenwise_beats_permuted": true,
+    "passed": false,
+    "test_action": "no_test"
+  }
+}

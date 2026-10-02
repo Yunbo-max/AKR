@@ -1,0 +1,42 @@
+{
+  "model_id": "Qwen/Qwen2.5-Omni-7B",
+  "manifest": "data/manifests/marmaudio_expert_validation.csv",
+  "condition": null,
+  "readout": "candidate",
+  "label_map": {
+    "Infant Cry": "C",
+    "Phee": "D",
+    "Seep": "E",
+    "Trill": "F",
+    "Tsik": "A",
+    "Twitter": "B"
+  },
+  "split": "results/marmaudio_equal_support_split_seed20260814.json",
+  "query_labels_used_for": "post_hoc_scoring_only",
+  "results": {
+    "0": {
+      "support_k_per_class": 0,
+      "support_k_total": 0,
+      "n_query": 75,
+      "accuracy": 0.12,
+      "macro_f1": 0.09631922944616443,
+      "invalid_response_rate": 0.0,
+      "prediction_counts": {
+        "A": 6,
+        "B": 25,
+        "C": 44
+      }
+    },
+    "1": {
+      "support_k_per_class": 1,
+      "support_k_total": 6,
+      "n_query": 75,
+      "accuracy": 0.09333333333333334,
+      "macro_f1": 0.02845528455284553,
+      "invalid_response_rate": 0.0,
+      "prediction_counts": {
+        "E": 75
+      }
+    }
+  }
+}

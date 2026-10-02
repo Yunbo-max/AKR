@@ -1,0 +1,90 @@
+{
+  "dataset": "watkins",
+  "expected_total": 1695,
+  "expected_split_counts": {
+    "train": 1017,
+    "valid": 339,
+    "test": 339
+  },
+  "conditions": {
+    "full_0-8k": {
+      "directory": "results/reps_beans_watkins_7b",
+      "files": 1695,
+      "unique_events": 1695,
+      "split_counts": {
+        "train": 1017,
+        "valid": 339,
+        "test": 339
+      },
+      "metadata_errors": 0,
+      "representation_errors": 0,
+      "passed": true
+    },
+    "lp_0-1000": {
+      "directory": "results/reps_beans_watkins_lp1_7b",
+      "files": 1695,
+      "unique_events": 1695,
+      "split_counts": {
+        "train": 1017,
+        "valid": 339,
+        "test": 339
+      },
+      "metadata_errors": 0,
+      "representation_errors": 0,
+      "passed": true
+    },
+    "lp_0-2000": {
+      "directory": "results/reps_beans_watkins_frequency_extra_7b/lp_0-2000",
+      "files": 1695,
+      "unique_events": 1695,
+      "split_counts": {
+        "train": 1017,
+        "valid": 339,
+        "test": 339
+      },
+      "metadata_errors": 0,
+      "representation_errors": 0,
+      "passed": true
+    },
+    "lp_0-4000": {
+      "directory": "results/reps_beans_watkins_frequency_extra_7b/lp_0-4000",
+      "files": 1695,
+      "unique_events": 1695,
+      "split_counts": {
+        "train": 1017,
+        "valid": 339,
+        "test": 339
+      },
+      "metadata_errors": 0,
+      "representation_errors": 0,
+      "passed": true
+    },
+    "lp_0-6000": {
+      "directory": "results/reps_beans_watkins_frequency_extra_7b/lp_0-6000",
+      "files": 1695,
+      "unique_events": 1695,
+      "split_counts": {
+        "train": 1017,
+        "valid": 339,
+        "test": 339
+      },
+      "metadata_errors": 0,
+      "representation_errors": 0,
+      "passed": true
+    },
+    "lp_0-8000": {
+      "directory": "results/reps_beans_watkins_frequency_extra_7b/lp_0-8000",
+      "files": 1695,
+      "unique_events": 1695,
+      "split_counts": {
+        "train": 1017,
+        "valid": 339,
+        "test": 339
+      },
+      "metadata_errors": 0,
+      "representation_errors": 0,
+      "passed": true
+    }
+  },
+  "passed": true
+}

@@ -1,0 +1,29 @@
+{
+  "model_id": "Qwen/Qwen2.5-Omni-7B",
+  "manifest": "data/manifests/marmaudio_expert_validation.csv",
+  "condition": null,
+  "readout": "free",
+  "label_map": {
+    "Infant Cry": "Infant Cry",
+    "Phee": "Phee",
+    "Seep": "Seep",
+    "Trill": "Trill",
+    "Tsik": "Tsik",
+    "Twitter": "Twitter"
+  },
+  "split": "results/marmaudio_equal_support_split_seed20260814.json",
+  "query_labels_used_for": "post_hoc_scoring_only",
+  "results": {
+    "4": {
+      "support_k_per_class": 4,
+      "support_k_total": 24,
+      "n_query": 1,
+      "accuracy": 0.0,
+      "macro_f1": 0.0,
+      "invalid_response_rate": 0.0,
+      "prediction_counts": {
+        "Twitter": 1
+      }
+    }
+  }
+}

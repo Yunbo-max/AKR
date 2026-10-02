@@ -1,0 +1,20 @@
+model:
+  id: Qwen/Qwen2.5-Omni-7B
+  thinker_only: true
+  target_sample_rate: 16000
+dataset:
+  manifest: data/manifests/beans_watkins.csv
+  labels: [Atlantic_Spotted_Dolphin, Bearded_Seal, "Beluga,_White_Whale", Bottlenose_Dolphin, Bowhead_Whale, Clymene_Dolphin, Common_Dolphin, False_Killer_Whale, "Fin,_Finback_Whale", Frasers_Dolphin, "Grampus,_Rissos_Dolphin", Harp_Seal, Humpback_Whale, Killer_Whale, Leopard_Seal, Long-Finned_Pilot_Whale, Melon_Headed_Whale, Minke_Whale, Narwhal, Northern_Right_Whale, Pantropical_Spotted_Dolphin, Ross_Seal, Rough-Toothed_Dolphin, Short-Finned_Pacific_Pilot_Whale, Southern_Right_Whale, Sperm_Whale, Spinner_Dolphin, Striped_Dolphin, Walrus, White-beaked_Dolphin, White-sided_Dolphin]
+audio:
+  peak_normalize: false
+  lowpass_cutoffs_hz: [1000, 2000, 4000, 6000, 8000]
+  removed_bands_hz: [[0, 1000], [1000, 2000], [2000, 4000], [4000, 6000], [6000, 8000]]
+  filter_order: 10
+evaluation:
+  prompt: "Listen to this marine mammal vocalization. Identify the species. Choose exactly one label from: Atlantic Spotted Dolphin; Bearded Seal; Beluga, White Whale; Bottlenose Dolphin; Bowhead Whale; Clymene Dolphin; Common Dolphin; False Killer Whale; Fin, Finback Whale; Frasers Dolphin; Grampus, Rissos Dolphin; Harp Seal; Humpback Whale; Killer Whale; Leopard Seal; Long-Finned Pilot Whale; Melon Headed Whale; Minke Whale; Narwhal; Northern Right Whale; Pantropical Spotted Dolphin; Ross Seal; Rough-Toothed Dolphin; Short-Finned Pacific Pilot Whale; Southern Right Whale; Sperm Whale; Spinner Dolphin; Striped Dolphin; Walrus; White-beaked Dolphin; White-sided Dolphin. Answer with only the label."
+  temperature: 0.0
+  do_sample: false
+  max_new_tokens: 16
+  batch_size: 1
+kv:
+  oracle_etas: [0.01, 0.03, 0.1, 0.3, 1.0]

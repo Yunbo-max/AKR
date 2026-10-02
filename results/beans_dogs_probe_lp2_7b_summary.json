@@ -1,0 +1,11 @@
+{
+  "n_train": 415,
+  "n_valid": 139,
+  "n_test": 139,
+  "selected_layer": 15,
+  "alpha": 100,
+  "validation_macro_f1": 0.824627622212021,
+  "test_accuracy": 0.9136690647482014,
+  "test_macro_f1": 0.8812386330107043,
+  "protocol": "select_on_valid_refit_train_plus_valid_evaluate_test"
+}

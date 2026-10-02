@@ -1,0 +1,35 @@
+{
+  "seed": 20250813,
+  "per_class": 50,
+  "n_core": 300,
+  "n_controls": 1800,
+  "labels": [
+    "Infant Cry",
+    "Phee",
+    "Seep",
+    "Trill",
+    "Tsik",
+    "Twitter"
+  ],
+  "audio_shuffle": "cyclic next-label pairing at matched within-label index",
+  "rms_gain": {
+    "lp_0-1000_rms_matched": {
+      "mean": 65.31285533544487,
+      "median": 21.50519912190216,
+      "min": 1.3462493320386921,
+      "max": 619.4963967612568
+    },
+    "lp_0-2000_rms_matched": {
+      "mean": 40.366564754492835,
+      "median": 9.915641501705615,
+      "min": 1.0661725137902478,
+      "max": 580.9550018553095
+    },
+    "lp_0-4000_rms_matched": {
+      "mean": 26.319690078274665,
+      "median": 5.4123760114077815,
+      "min": 1.0100879367603606,
+      "max": 551.3360112125259
+    }
+  }
+}

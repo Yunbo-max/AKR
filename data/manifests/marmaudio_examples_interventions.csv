@@ -1,0 +1,661 @@
+event_id,audio_path,label,recording_id,provenance,annotation_tsv_label,example_annotation_agree,condition
+175492,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/175492.wav,Infant Cry,2022_3_2,official_audio_example,Infant Cry,true,full_0-8k
+175492,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/175492.wav,Infant Cry,2022_3_2,official_audio_example,Infant Cry,true,lp_0-1000
+175492,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/175492.wav,Infant Cry,2022_3_2,official_audio_example,Infant Cry,true,lp_0-2000
+175492,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/175492.wav,Infant Cry,2022_3_2,official_audio_example,Infant Cry,true,lp_0-4000
+175492,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/175492.wav,Infant Cry,2022_3_2,official_audio_example,Infant Cry,true,lp_0-6000
+175492,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/175492.wav,Infant Cry,2022_3_2,official_audio_example,Infant Cry,true,lp_0-8000
+175492,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/175492.wav,Infant Cry,2022_3_2,official_audio_example,Infant Cry,true,remove_0-1000
+175492,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/175492.wav,Infant Cry,2022_3_2,official_audio_example,Infant Cry,true,remove_1000-2000
+175492,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/175492.wav,Infant Cry,2022_3_2,official_audio_example,Infant Cry,true,remove_2000-4000
+175492,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/175492.wav,Infant Cry,2022_3_2,official_audio_example,Infant Cry,true,remove_4000-6000
+175492,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/175492.wav,Infant Cry,2022_3_2,official_audio_example,Infant Cry,true,remove_6000-8000
+223326,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/223326.wav,Infant Cry,2019_12_0,official_audio_example,Infant Cry,true,full_0-8k
+223326,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/223326.wav,Infant Cry,2019_12_0,official_audio_example,Infant Cry,true,lp_0-1000
+223326,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/223326.wav,Infant Cry,2019_12_0,official_audio_example,Infant Cry,true,lp_0-2000
+223326,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/223326.wav,Infant Cry,2019_12_0,official_audio_example,Infant Cry,true,lp_0-4000
+223326,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/223326.wav,Infant Cry,2019_12_0,official_audio_example,Infant Cry,true,lp_0-6000
+223326,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/223326.wav,Infant Cry,2019_12_0,official_audio_example,Infant Cry,true,lp_0-8000
+223326,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/223326.wav,Infant Cry,2019_12_0,official_audio_example,Infant Cry,true,remove_0-1000
+223326,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/223326.wav,Infant Cry,2019_12_0,official_audio_example,Infant Cry,true,remove_1000-2000
+223326,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/223326.wav,Infant Cry,2019_12_0,official_audio_example,Infant Cry,true,remove_2000-4000
+223326,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/223326.wav,Infant Cry,2019_12_0,official_audio_example,Infant Cry,true,remove_4000-6000
+223326,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/223326.wav,Infant Cry,2019_12_0,official_audio_example,Infant Cry,true,remove_6000-8000
+349714,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/349714.wav,Infant Cry,2022_3_12,official_audio_example,Infant Cry,true,full_0-8k
+349714,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/349714.wav,Infant Cry,2022_3_12,official_audio_example,Infant Cry,true,lp_0-1000
+349714,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/349714.wav,Infant Cry,2022_3_12,official_audio_example,Infant Cry,true,lp_0-2000
+349714,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/349714.wav,Infant Cry,2022_3_12,official_audio_example,Infant Cry,true,lp_0-4000
+349714,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/349714.wav,Infant Cry,2022_3_12,official_audio_example,Infant Cry,true,lp_0-6000
+349714,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/349714.wav,Infant Cry,2022_3_12,official_audio_example,Infant Cry,true,lp_0-8000
+349714,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/349714.wav,Infant Cry,2022_3_12,official_audio_example,Infant Cry,true,remove_0-1000
+349714,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/349714.wav,Infant Cry,2022_3_12,official_audio_example,Infant Cry,true,remove_1000-2000
+349714,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/349714.wav,Infant Cry,2022_3_12,official_audio_example,Infant Cry,true,remove_2000-4000
+349714,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/349714.wav,Infant Cry,2022_3_12,official_audio_example,Infant Cry,true,remove_4000-6000
+349714,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/349714.wav,Infant Cry,2022_3_12,official_audio_example,Infant Cry,true,remove_6000-8000
+363507,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/363507.wav,Infant Cry,2022_3_13,official_audio_example,Twitter,false,full_0-8k
+363507,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/363507.wav,Infant Cry,2022_3_13,official_audio_example,Twitter,false,lp_0-1000
+363507,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/363507.wav,Infant Cry,2022_3_13,official_audio_example,Twitter,false,lp_0-2000
+363507,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/363507.wav,Infant Cry,2022_3_13,official_audio_example,Twitter,false,lp_0-4000
+363507,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/363507.wav,Infant Cry,2022_3_13,official_audio_example,Twitter,false,lp_0-6000
+363507,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/363507.wav,Infant Cry,2022_3_13,official_audio_example,Twitter,false,lp_0-8000
+363507,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/363507.wav,Infant Cry,2022_3_13,official_audio_example,Twitter,false,remove_0-1000
+363507,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/363507.wav,Infant Cry,2022_3_13,official_audio_example,Twitter,false,remove_1000-2000
+363507,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/363507.wav,Infant Cry,2022_3_13,official_audio_example,Twitter,false,remove_2000-4000
+363507,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/363507.wav,Infant Cry,2022_3_13,official_audio_example,Twitter,false,remove_4000-6000
+363507,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/363507.wav,Infant Cry,2022_3_13,official_audio_example,Twitter,false,remove_6000-8000
+509092,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/509092.wav,Infant Cry,2022_12_3,official_audio_example,Vocalization,false,full_0-8k
+509092,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/509092.wav,Infant Cry,2022_12_3,official_audio_example,Vocalization,false,lp_0-1000
+509092,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/509092.wav,Infant Cry,2022_12_3,official_audio_example,Vocalization,false,lp_0-2000
+509092,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/509092.wav,Infant Cry,2022_12_3,official_audio_example,Vocalization,false,lp_0-4000
+509092,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/509092.wav,Infant Cry,2022_12_3,official_audio_example,Vocalization,false,lp_0-6000
+509092,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/509092.wav,Infant Cry,2022_12_3,official_audio_example,Vocalization,false,lp_0-8000
+509092,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/509092.wav,Infant Cry,2022_12_3,official_audio_example,Vocalization,false,remove_0-1000
+509092,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/509092.wav,Infant Cry,2022_12_3,official_audio_example,Vocalization,false,remove_1000-2000
+509092,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/509092.wav,Infant Cry,2022_12_3,official_audio_example,Vocalization,false,remove_2000-4000
+509092,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/509092.wav,Infant Cry,2022_12_3,official_audio_example,Vocalization,false,remove_4000-6000
+509092,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/509092.wav,Infant Cry,2022_12_3,official_audio_example,Vocalization,false,remove_6000-8000
+526561,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/526561.wav,Infant Cry,2021_1_0,official_audio_example,Vocalization,false,full_0-8k
+526561,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/526561.wav,Infant Cry,2021_1_0,official_audio_example,Vocalization,false,lp_0-1000
+526561,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/526561.wav,Infant Cry,2021_1_0,official_audio_example,Vocalization,false,lp_0-2000
+526561,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/526561.wav,Infant Cry,2021_1_0,official_audio_example,Vocalization,false,lp_0-4000
+526561,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/526561.wav,Infant Cry,2021_1_0,official_audio_example,Vocalization,false,lp_0-6000
+526561,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/526561.wav,Infant Cry,2021_1_0,official_audio_example,Vocalization,false,lp_0-8000
+526561,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/526561.wav,Infant Cry,2021_1_0,official_audio_example,Vocalization,false,remove_0-1000
+526561,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/526561.wav,Infant Cry,2021_1_0,official_audio_example,Vocalization,false,remove_1000-2000
+526561,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/526561.wav,Infant Cry,2021_1_0,official_audio_example,Vocalization,false,remove_2000-4000
+526561,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/526561.wav,Infant Cry,2021_1_0,official_audio_example,Vocalization,false,remove_4000-6000
+526561,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/526561.wav,Infant Cry,2021_1_0,official_audio_example,Vocalization,false,remove_6000-8000
+574304,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/574304.wav,Infant Cry,2020_10_1,official_audio_example,Vocalization,false,full_0-8k
+574304,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/574304.wav,Infant Cry,2020_10_1,official_audio_example,Vocalization,false,lp_0-1000
+574304,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/574304.wav,Infant Cry,2020_10_1,official_audio_example,Vocalization,false,lp_0-2000
+574304,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/574304.wav,Infant Cry,2020_10_1,official_audio_example,Vocalization,false,lp_0-4000
+574304,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/574304.wav,Infant Cry,2020_10_1,official_audio_example,Vocalization,false,lp_0-6000
+574304,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/574304.wav,Infant Cry,2020_10_1,official_audio_example,Vocalization,false,lp_0-8000
+574304,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/574304.wav,Infant Cry,2020_10_1,official_audio_example,Vocalization,false,remove_0-1000
+574304,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/574304.wav,Infant Cry,2020_10_1,official_audio_example,Vocalization,false,remove_1000-2000
+574304,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/574304.wav,Infant Cry,2020_10_1,official_audio_example,Vocalization,false,remove_2000-4000
+574304,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/574304.wav,Infant Cry,2020_10_1,official_audio_example,Vocalization,false,remove_4000-6000
+574304,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/574304.wav,Infant Cry,2020_10_1,official_audio_example,Vocalization,false,remove_6000-8000
+583037,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/583037.wav,Infant Cry,2020_10_1,official_audio_example,Vocalization,false,full_0-8k
+583037,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/583037.wav,Infant Cry,2020_10_1,official_audio_example,Vocalization,false,lp_0-1000
+583037,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/583037.wav,Infant Cry,2020_10_1,official_audio_example,Vocalization,false,lp_0-2000
+583037,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/583037.wav,Infant Cry,2020_10_1,official_audio_example,Vocalization,false,lp_0-4000
+583037,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/583037.wav,Infant Cry,2020_10_1,official_audio_example,Vocalization,false,lp_0-6000
+583037,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/583037.wav,Infant Cry,2020_10_1,official_audio_example,Vocalization,false,lp_0-8000
+583037,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/583037.wav,Infant Cry,2020_10_1,official_audio_example,Vocalization,false,remove_0-1000
+583037,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/583037.wav,Infant Cry,2020_10_1,official_audio_example,Vocalization,false,remove_1000-2000
+583037,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/583037.wav,Infant Cry,2020_10_1,official_audio_example,Vocalization,false,remove_2000-4000
+583037,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/583037.wav,Infant Cry,2020_10_1,official_audio_example,Vocalization,false,remove_4000-6000
+583037,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/583037.wav,Infant Cry,2020_10_1,official_audio_example,Vocalization,false,remove_6000-8000
+764613,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/764613.wav,Infant Cry,2023_3_5,official_audio_example,Vocalization,false,full_0-8k
+764613,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/764613.wav,Infant Cry,2023_3_5,official_audio_example,Vocalization,false,lp_0-1000
+764613,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/764613.wav,Infant Cry,2023_3_5,official_audio_example,Vocalization,false,lp_0-2000
+764613,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/764613.wav,Infant Cry,2023_3_5,official_audio_example,Vocalization,false,lp_0-4000
+764613,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/764613.wav,Infant Cry,2023_3_5,official_audio_example,Vocalization,false,lp_0-6000
+764613,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/764613.wav,Infant Cry,2023_3_5,official_audio_example,Vocalization,false,lp_0-8000
+764613,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/764613.wav,Infant Cry,2023_3_5,official_audio_example,Vocalization,false,remove_0-1000
+764613,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/764613.wav,Infant Cry,2023_3_5,official_audio_example,Vocalization,false,remove_1000-2000
+764613,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/764613.wav,Infant Cry,2023_3_5,official_audio_example,Vocalization,false,remove_2000-4000
+764613,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/764613.wav,Infant Cry,2023_3_5,official_audio_example,Vocalization,false,remove_4000-6000
+764613,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/764613.wav,Infant Cry,2023_3_5,official_audio_example,Vocalization,false,remove_6000-8000
+775365,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/775365.wav,Infant Cry,2023_3_6,official_audio_example,Twitter,false,full_0-8k
+775365,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/775365.wav,Infant Cry,2023_3_6,official_audio_example,Twitter,false,lp_0-1000
+775365,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/775365.wav,Infant Cry,2023_3_6,official_audio_example,Twitter,false,lp_0-2000
+775365,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/775365.wav,Infant Cry,2023_3_6,official_audio_example,Twitter,false,lp_0-4000
+775365,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/775365.wav,Infant Cry,2023_3_6,official_audio_example,Twitter,false,lp_0-6000
+775365,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/775365.wav,Infant Cry,2023_3_6,official_audio_example,Twitter,false,lp_0-8000
+775365,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/775365.wav,Infant Cry,2023_3_6,official_audio_example,Twitter,false,remove_0-1000
+775365,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/775365.wav,Infant Cry,2023_3_6,official_audio_example,Twitter,false,remove_1000-2000
+775365,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/775365.wav,Infant Cry,2023_3_6,official_audio_example,Twitter,false,remove_2000-4000
+775365,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/775365.wav,Infant Cry,2023_3_6,official_audio_example,Twitter,false,remove_4000-6000
+775365,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/775365.wav,Infant Cry,2023_3_6,official_audio_example,Twitter,false,remove_6000-8000
+223119,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/223119.wav,Phee,2019_12_0,official_audio_example,Phee,true,full_0-8k
+223119,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/223119.wav,Phee,2019_12_0,official_audio_example,Phee,true,lp_0-1000
+223119,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/223119.wav,Phee,2019_12_0,official_audio_example,Phee,true,lp_0-2000
+223119,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/223119.wav,Phee,2019_12_0,official_audio_example,Phee,true,lp_0-4000
+223119,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/223119.wav,Phee,2019_12_0,official_audio_example,Phee,true,lp_0-6000
+223119,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/223119.wav,Phee,2019_12_0,official_audio_example,Phee,true,lp_0-8000
+223119,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/223119.wav,Phee,2019_12_0,official_audio_example,Phee,true,remove_0-1000
+223119,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/223119.wav,Phee,2019_12_0,official_audio_example,Phee,true,remove_1000-2000
+223119,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/223119.wav,Phee,2019_12_0,official_audio_example,Phee,true,remove_2000-4000
+223119,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/223119.wav,Phee,2019_12_0,official_audio_example,Phee,true,remove_4000-6000
+223119,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/223119.wav,Phee,2019_12_0,official_audio_example,Phee,true,remove_6000-8000
+223202,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/223202.wav,Phee,2019_12_0,official_audio_example,Phee,true,full_0-8k
+223202,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/223202.wav,Phee,2019_12_0,official_audio_example,Phee,true,lp_0-1000
+223202,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/223202.wav,Phee,2019_12_0,official_audio_example,Phee,true,lp_0-2000
+223202,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/223202.wav,Phee,2019_12_0,official_audio_example,Phee,true,lp_0-4000
+223202,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/223202.wav,Phee,2019_12_0,official_audio_example,Phee,true,lp_0-6000
+223202,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/223202.wav,Phee,2019_12_0,official_audio_example,Phee,true,lp_0-8000
+223202,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/223202.wav,Phee,2019_12_0,official_audio_example,Phee,true,remove_0-1000
+223202,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/223202.wav,Phee,2019_12_0,official_audio_example,Phee,true,remove_1000-2000
+223202,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/223202.wav,Phee,2019_12_0,official_audio_example,Phee,true,remove_2000-4000
+223202,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/223202.wav,Phee,2019_12_0,official_audio_example,Phee,true,remove_4000-6000
+223202,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/223202.wav,Phee,2019_12_0,official_audio_example,Phee,true,remove_6000-8000
+456154,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/456154.wav,Phee,2022_4_4,official_audio_example,Vocalization,false,full_0-8k
+456154,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/456154.wav,Phee,2022_4_4,official_audio_example,Vocalization,false,lp_0-1000
+456154,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/456154.wav,Phee,2022_4_4,official_audio_example,Vocalization,false,lp_0-2000
+456154,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/456154.wav,Phee,2022_4_4,official_audio_example,Vocalization,false,lp_0-4000
+456154,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/456154.wav,Phee,2022_4_4,official_audio_example,Vocalization,false,lp_0-6000
+456154,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/456154.wav,Phee,2022_4_4,official_audio_example,Vocalization,false,lp_0-8000
+456154,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/456154.wav,Phee,2022_4_4,official_audio_example,Vocalization,false,remove_0-1000
+456154,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/456154.wav,Phee,2022_4_4,official_audio_example,Vocalization,false,remove_1000-2000
+456154,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/456154.wav,Phee,2022_4_4,official_audio_example,Vocalization,false,remove_2000-4000
+456154,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/456154.wav,Phee,2022_4_4,official_audio_example,Vocalization,false,remove_4000-6000
+456154,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/456154.wav,Phee,2022_4_4,official_audio_example,Vocalization,false,remove_6000-8000
+486602,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/486602.wav,Phee,2023_4_0,official_audio_example,Phee,true,full_0-8k
+486602,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/486602.wav,Phee,2023_4_0,official_audio_example,Phee,true,lp_0-1000
+486602,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/486602.wav,Phee,2023_4_0,official_audio_example,Phee,true,lp_0-2000
+486602,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/486602.wav,Phee,2023_4_0,official_audio_example,Phee,true,lp_0-4000
+486602,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/486602.wav,Phee,2023_4_0,official_audio_example,Phee,true,lp_0-6000
+486602,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/486602.wav,Phee,2023_4_0,official_audio_example,Phee,true,lp_0-8000
+486602,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/486602.wav,Phee,2023_4_0,official_audio_example,Phee,true,remove_0-1000
+486602,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/486602.wav,Phee,2023_4_0,official_audio_example,Phee,true,remove_1000-2000
+486602,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/486602.wav,Phee,2023_4_0,official_audio_example,Phee,true,remove_2000-4000
+486602,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/486602.wav,Phee,2023_4_0,official_audio_example,Phee,true,remove_4000-6000
+486602,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/486602.wav,Phee,2023_4_0,official_audio_example,Phee,true,remove_6000-8000
+506529,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/506529.wav,Phee,2022_12_3,official_audio_example,Phee,true,full_0-8k
+506529,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/506529.wav,Phee,2022_12_3,official_audio_example,Phee,true,lp_0-1000
+506529,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/506529.wav,Phee,2022_12_3,official_audio_example,Phee,true,lp_0-2000
+506529,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/506529.wav,Phee,2022_12_3,official_audio_example,Phee,true,lp_0-4000
+506529,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/506529.wav,Phee,2022_12_3,official_audio_example,Phee,true,lp_0-6000
+506529,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/506529.wav,Phee,2022_12_3,official_audio_example,Phee,true,lp_0-8000
+506529,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/506529.wav,Phee,2022_12_3,official_audio_example,Phee,true,remove_0-1000
+506529,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/506529.wav,Phee,2022_12_3,official_audio_example,Phee,true,remove_1000-2000
+506529,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/506529.wav,Phee,2022_12_3,official_audio_example,Phee,true,remove_2000-4000
+506529,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/506529.wav,Phee,2022_12_3,official_audio_example,Phee,true,remove_4000-6000
+506529,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/506529.wav,Phee,2022_12_3,official_audio_example,Phee,true,remove_6000-8000
+556679,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/556679.wav,Phee,2020_10_0,official_audio_example,Tsik,false,full_0-8k
+556679,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/556679.wav,Phee,2020_10_0,official_audio_example,Tsik,false,lp_0-1000
+556679,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/556679.wav,Phee,2020_10_0,official_audio_example,Tsik,false,lp_0-2000
+556679,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/556679.wav,Phee,2020_10_0,official_audio_example,Tsik,false,lp_0-4000
+556679,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/556679.wav,Phee,2020_10_0,official_audio_example,Tsik,false,lp_0-6000
+556679,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/556679.wav,Phee,2020_10_0,official_audio_example,Tsik,false,lp_0-8000
+556679,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/556679.wav,Phee,2020_10_0,official_audio_example,Tsik,false,remove_0-1000
+556679,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/556679.wav,Phee,2020_10_0,official_audio_example,Tsik,false,remove_1000-2000
+556679,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/556679.wav,Phee,2020_10_0,official_audio_example,Tsik,false,remove_2000-4000
+556679,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/556679.wav,Phee,2020_10_0,official_audio_example,Tsik,false,remove_4000-6000
+556679,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/556679.wav,Phee,2020_10_0,official_audio_example,Tsik,false,remove_6000-8000
+582850,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/582850.wav,Phee,2020_10_1,official_audio_example,Phee,true,full_0-8k
+582850,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/582850.wav,Phee,2020_10_1,official_audio_example,Phee,true,lp_0-1000
+582850,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/582850.wav,Phee,2020_10_1,official_audio_example,Phee,true,lp_0-2000
+582850,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/582850.wav,Phee,2020_10_1,official_audio_example,Phee,true,lp_0-4000
+582850,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/582850.wav,Phee,2020_10_1,official_audio_example,Phee,true,lp_0-6000
+582850,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/582850.wav,Phee,2020_10_1,official_audio_example,Phee,true,lp_0-8000
+582850,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/582850.wav,Phee,2020_10_1,official_audio_example,Phee,true,remove_0-1000
+582850,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/582850.wav,Phee,2020_10_1,official_audio_example,Phee,true,remove_1000-2000
+582850,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/582850.wav,Phee,2020_10_1,official_audio_example,Phee,true,remove_2000-4000
+582850,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/582850.wav,Phee,2020_10_1,official_audio_example,Phee,true,remove_4000-6000
+582850,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/582850.wav,Phee,2020_10_1,official_audio_example,Phee,true,remove_6000-8000
+658051,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/658051.wav,Phee,2023_3_2,official_audio_example,Vocalization,false,full_0-8k
+658051,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/658051.wav,Phee,2023_3_2,official_audio_example,Vocalization,false,lp_0-1000
+658051,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/658051.wav,Phee,2023_3_2,official_audio_example,Vocalization,false,lp_0-2000
+658051,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/658051.wav,Phee,2023_3_2,official_audio_example,Vocalization,false,lp_0-4000
+658051,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/658051.wav,Phee,2023_3_2,official_audio_example,Vocalization,false,lp_0-6000
+658051,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/658051.wav,Phee,2023_3_2,official_audio_example,Vocalization,false,lp_0-8000
+658051,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/658051.wav,Phee,2023_3_2,official_audio_example,Vocalization,false,remove_0-1000
+658051,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/658051.wav,Phee,2023_3_2,official_audio_example,Vocalization,false,remove_1000-2000
+658051,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/658051.wav,Phee,2023_3_2,official_audio_example,Vocalization,false,remove_2000-4000
+658051,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/658051.wav,Phee,2023_3_2,official_audio_example,Vocalization,false,remove_4000-6000
+658051,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/658051.wav,Phee,2023_3_2,official_audio_example,Vocalization,false,remove_6000-8000
+663389,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/663389.wav,Phee,2023_3_2,official_audio_example,Vocalization,false,full_0-8k
+663389,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/663389.wav,Phee,2023_3_2,official_audio_example,Vocalization,false,lp_0-1000
+663389,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/663389.wav,Phee,2023_3_2,official_audio_example,Vocalization,false,lp_0-2000
+663389,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/663389.wav,Phee,2023_3_2,official_audio_example,Vocalization,false,lp_0-4000
+663389,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/663389.wav,Phee,2023_3_2,official_audio_example,Vocalization,false,lp_0-6000
+663389,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/663389.wav,Phee,2023_3_2,official_audio_example,Vocalization,false,lp_0-8000
+663389,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/663389.wav,Phee,2023_3_2,official_audio_example,Vocalization,false,remove_0-1000
+663389,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/663389.wav,Phee,2023_3_2,official_audio_example,Vocalization,false,remove_1000-2000
+663389,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/663389.wav,Phee,2023_3_2,official_audio_example,Vocalization,false,remove_2000-4000
+663389,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/663389.wav,Phee,2023_3_2,official_audio_example,Vocalization,false,remove_4000-6000
+663389,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/663389.wav,Phee,2023_3_2,official_audio_example,Vocalization,false,remove_6000-8000
+863993,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/863993.wav,Phee,2020_12_2,official_audio_example,Vocalization,false,full_0-8k
+863993,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/863993.wav,Phee,2020_12_2,official_audio_example,Vocalization,false,lp_0-1000
+863993,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/863993.wav,Phee,2020_12_2,official_audio_example,Vocalization,false,lp_0-2000
+863993,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/863993.wav,Phee,2020_12_2,official_audio_example,Vocalization,false,lp_0-4000
+863993,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/863993.wav,Phee,2020_12_2,official_audio_example,Vocalization,false,lp_0-6000
+863993,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/863993.wav,Phee,2020_12_2,official_audio_example,Vocalization,false,lp_0-8000
+863993,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/863993.wav,Phee,2020_12_2,official_audio_example,Vocalization,false,remove_0-1000
+863993,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/863993.wav,Phee,2020_12_2,official_audio_example,Vocalization,false,remove_1000-2000
+863993,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/863993.wav,Phee,2020_12_2,official_audio_example,Vocalization,false,remove_2000-4000
+863993,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/863993.wav,Phee,2020_12_2,official_audio_example,Vocalization,false,remove_4000-6000
+863993,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/863993.wav,Phee,2020_12_2,official_audio_example,Vocalization,false,remove_6000-8000
+152460,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/152460.wav,Seep,2022_2_8,official_audio_example,Seep,true,full_0-8k
+152460,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/152460.wav,Seep,2022_2_8,official_audio_example,Seep,true,lp_0-1000
+152460,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/152460.wav,Seep,2022_2_8,official_audio_example,Seep,true,lp_0-2000
+152460,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/152460.wav,Seep,2022_2_8,official_audio_example,Seep,true,lp_0-4000
+152460,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/152460.wav,Seep,2022_2_8,official_audio_example,Seep,true,lp_0-6000
+152460,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/152460.wav,Seep,2022_2_8,official_audio_example,Seep,true,lp_0-8000
+152460,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/152460.wav,Seep,2022_2_8,official_audio_example,Seep,true,remove_0-1000
+152460,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/152460.wav,Seep,2022_2_8,official_audio_example,Seep,true,remove_1000-2000
+152460,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/152460.wav,Seep,2022_2_8,official_audio_example,Seep,true,remove_2000-4000
+152460,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/152460.wav,Seep,2022_2_8,official_audio_example,Seep,true,remove_4000-6000
+152460,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/152460.wav,Seep,2022_2_8,official_audio_example,Seep,true,remove_6000-8000
+212109,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/212109.wav,Seep,2022_3_4,official_audio_example,Vocalization,false,full_0-8k
+212109,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/212109.wav,Seep,2022_3_4,official_audio_example,Vocalization,false,lp_0-1000
+212109,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/212109.wav,Seep,2022_3_4,official_audio_example,Vocalization,false,lp_0-2000
+212109,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/212109.wav,Seep,2022_3_4,official_audio_example,Vocalization,false,lp_0-4000
+212109,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/212109.wav,Seep,2022_3_4,official_audio_example,Vocalization,false,lp_0-6000
+212109,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/212109.wav,Seep,2022_3_4,official_audio_example,Vocalization,false,lp_0-8000
+212109,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/212109.wav,Seep,2022_3_4,official_audio_example,Vocalization,false,remove_0-1000
+212109,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/212109.wav,Seep,2022_3_4,official_audio_example,Vocalization,false,remove_1000-2000
+212109,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/212109.wav,Seep,2022_3_4,official_audio_example,Vocalization,false,remove_2000-4000
+212109,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/212109.wav,Seep,2022_3_4,official_audio_example,Vocalization,false,remove_4000-6000
+212109,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/212109.wav,Seep,2022_3_4,official_audio_example,Vocalization,false,remove_6000-8000
+223096,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/223096.wav,Seep,2019_12_0,official_audio_example,Seep,true,full_0-8k
+223096,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/223096.wav,Seep,2019_12_0,official_audio_example,Seep,true,lp_0-1000
+223096,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/223096.wav,Seep,2019_12_0,official_audio_example,Seep,true,lp_0-2000
+223096,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/223096.wav,Seep,2019_12_0,official_audio_example,Seep,true,lp_0-4000
+223096,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/223096.wav,Seep,2019_12_0,official_audio_example,Seep,true,lp_0-6000
+223096,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/223096.wav,Seep,2019_12_0,official_audio_example,Seep,true,lp_0-8000
+223096,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/223096.wav,Seep,2019_12_0,official_audio_example,Seep,true,remove_0-1000
+223096,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/223096.wav,Seep,2019_12_0,official_audio_example,Seep,true,remove_1000-2000
+223096,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/223096.wav,Seep,2019_12_0,official_audio_example,Seep,true,remove_2000-4000
+223096,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/223096.wav,Seep,2019_12_0,official_audio_example,Seep,true,remove_4000-6000
+223096,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/223096.wav,Seep,2019_12_0,official_audio_example,Seep,true,remove_6000-8000
+271618,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/271618.wav,Seep,2022_4_1,official_audio_example,Vocalization,false,full_0-8k
+271618,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/271618.wav,Seep,2022_4_1,official_audio_example,Vocalization,false,lp_0-1000
+271618,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/271618.wav,Seep,2022_4_1,official_audio_example,Vocalization,false,lp_0-2000
+271618,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/271618.wav,Seep,2022_4_1,official_audio_example,Vocalization,false,lp_0-4000
+271618,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/271618.wav,Seep,2022_4_1,official_audio_example,Vocalization,false,lp_0-6000
+271618,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/271618.wav,Seep,2022_4_1,official_audio_example,Vocalization,false,lp_0-8000
+271618,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/271618.wav,Seep,2022_4_1,official_audio_example,Vocalization,false,remove_0-1000
+271618,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/271618.wav,Seep,2022_4_1,official_audio_example,Vocalization,false,remove_1000-2000
+271618,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/271618.wav,Seep,2022_4_1,official_audio_example,Vocalization,false,remove_2000-4000
+271618,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/271618.wav,Seep,2022_4_1,official_audio_example,Vocalization,false,remove_4000-6000
+271618,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/271618.wav,Seep,2022_4_1,official_audio_example,Vocalization,false,remove_6000-8000
+316584,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/316584.wav,Seep,2022_3_9,official_audio_example,Vocalization,false,full_0-8k
+316584,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/316584.wav,Seep,2022_3_9,official_audio_example,Vocalization,false,lp_0-1000
+316584,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/316584.wav,Seep,2022_3_9,official_audio_example,Vocalization,false,lp_0-2000
+316584,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/316584.wav,Seep,2022_3_9,official_audio_example,Vocalization,false,lp_0-4000
+316584,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/316584.wav,Seep,2022_3_9,official_audio_example,Vocalization,false,lp_0-6000
+316584,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/316584.wav,Seep,2022_3_9,official_audio_example,Vocalization,false,lp_0-8000
+316584,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/316584.wav,Seep,2022_3_9,official_audio_example,Vocalization,false,remove_0-1000
+316584,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/316584.wav,Seep,2022_3_9,official_audio_example,Vocalization,false,remove_1000-2000
+316584,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/316584.wav,Seep,2022_3_9,official_audio_example,Vocalization,false,remove_2000-4000
+316584,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/316584.wav,Seep,2022_3_9,official_audio_example,Vocalization,false,remove_4000-6000
+316584,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/316584.wav,Seep,2022_3_9,official_audio_example,Vocalization,false,remove_6000-8000
+552983,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/552983.wav,Seep,2020_11_0,official_audio_example,Vocalization,false,full_0-8k
+552983,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/552983.wav,Seep,2020_11_0,official_audio_example,Vocalization,false,lp_0-1000
+552983,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/552983.wav,Seep,2020_11_0,official_audio_example,Vocalization,false,lp_0-2000
+552983,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/552983.wav,Seep,2020_11_0,official_audio_example,Vocalization,false,lp_0-4000
+552983,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/552983.wav,Seep,2020_11_0,official_audio_example,Vocalization,false,lp_0-6000
+552983,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/552983.wav,Seep,2020_11_0,official_audio_example,Vocalization,false,lp_0-8000
+552983,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/552983.wav,Seep,2020_11_0,official_audio_example,Vocalization,false,remove_0-1000
+552983,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/552983.wav,Seep,2020_11_0,official_audio_example,Vocalization,false,remove_1000-2000
+552983,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/552983.wav,Seep,2020_11_0,official_audio_example,Vocalization,false,remove_2000-4000
+552983,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/552983.wav,Seep,2020_11_0,official_audio_example,Vocalization,false,remove_4000-6000
+552983,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/552983.wav,Seep,2020_11_0,official_audio_example,Vocalization,false,remove_6000-8000
+630151,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/630151.wav,Seep,2023_3_0,official_audio_example,Vocalization,false,full_0-8k
+630151,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/630151.wav,Seep,2023_3_0,official_audio_example,Vocalization,false,lp_0-1000
+630151,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/630151.wav,Seep,2023_3_0,official_audio_example,Vocalization,false,lp_0-2000
+630151,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/630151.wav,Seep,2023_3_0,official_audio_example,Vocalization,false,lp_0-4000
+630151,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/630151.wav,Seep,2023_3_0,official_audio_example,Vocalization,false,lp_0-6000
+630151,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/630151.wav,Seep,2023_3_0,official_audio_example,Vocalization,false,lp_0-8000
+630151,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/630151.wav,Seep,2023_3_0,official_audio_example,Vocalization,false,remove_0-1000
+630151,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/630151.wav,Seep,2023_3_0,official_audio_example,Vocalization,false,remove_1000-2000
+630151,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/630151.wav,Seep,2023_3_0,official_audio_example,Vocalization,false,remove_2000-4000
+630151,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/630151.wav,Seep,2023_3_0,official_audio_example,Vocalization,false,remove_4000-6000
+630151,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/630151.wav,Seep,2023_3_0,official_audio_example,Vocalization,false,remove_6000-8000
+630317,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/630317.wav,Seep,2023_3_0,official_audio_example,Twitter,false,full_0-8k
+630317,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/630317.wav,Seep,2023_3_0,official_audio_example,Twitter,false,lp_0-1000
+630317,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/630317.wav,Seep,2023_3_0,official_audio_example,Twitter,false,lp_0-2000
+630317,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/630317.wav,Seep,2023_3_0,official_audio_example,Twitter,false,lp_0-4000
+630317,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/630317.wav,Seep,2023_3_0,official_audio_example,Twitter,false,lp_0-6000
+630317,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/630317.wav,Seep,2023_3_0,official_audio_example,Twitter,false,lp_0-8000
+630317,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/630317.wav,Seep,2023_3_0,official_audio_example,Twitter,false,remove_0-1000
+630317,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/630317.wav,Seep,2023_3_0,official_audio_example,Twitter,false,remove_1000-2000
+630317,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/630317.wav,Seep,2023_3_0,official_audio_example,Twitter,false,remove_2000-4000
+630317,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/630317.wav,Seep,2023_3_0,official_audio_example,Twitter,false,remove_4000-6000
+630317,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/630317.wav,Seep,2023_3_0,official_audio_example,Twitter,false,remove_6000-8000
+661996,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/661996.wav,Seep,2023_3_2,official_audio_example,Twitter,false,full_0-8k
+661996,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/661996.wav,Seep,2023_3_2,official_audio_example,Twitter,false,lp_0-1000
+661996,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/661996.wav,Seep,2023_3_2,official_audio_example,Twitter,false,lp_0-2000
+661996,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/661996.wav,Seep,2023_3_2,official_audio_example,Twitter,false,lp_0-4000
+661996,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/661996.wav,Seep,2023_3_2,official_audio_example,Twitter,false,lp_0-6000
+661996,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/661996.wav,Seep,2023_3_2,official_audio_example,Twitter,false,lp_0-8000
+661996,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/661996.wav,Seep,2023_3_2,official_audio_example,Twitter,false,remove_0-1000
+661996,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/661996.wav,Seep,2023_3_2,official_audio_example,Twitter,false,remove_1000-2000
+661996,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/661996.wav,Seep,2023_3_2,official_audio_example,Twitter,false,remove_2000-4000
+661996,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/661996.wav,Seep,2023_3_2,official_audio_example,Twitter,false,remove_4000-6000
+661996,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/661996.wav,Seep,2023_3_2,official_audio_example,Twitter,false,remove_6000-8000
+846346,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/846346.wav,Seep,2023_4_9,official_audio_example,Vocalization,false,full_0-8k
+846346,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/846346.wav,Seep,2023_4_9,official_audio_example,Vocalization,false,lp_0-1000
+846346,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/846346.wav,Seep,2023_4_9,official_audio_example,Vocalization,false,lp_0-2000
+846346,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/846346.wav,Seep,2023_4_9,official_audio_example,Vocalization,false,lp_0-4000
+846346,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/846346.wav,Seep,2023_4_9,official_audio_example,Vocalization,false,lp_0-6000
+846346,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/846346.wav,Seep,2023_4_9,official_audio_example,Vocalization,false,lp_0-8000
+846346,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/846346.wav,Seep,2023_4_9,official_audio_example,Vocalization,false,remove_0-1000
+846346,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/846346.wav,Seep,2023_4_9,official_audio_example,Vocalization,false,remove_1000-2000
+846346,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/846346.wav,Seep,2023_4_9,official_audio_example,Vocalization,false,remove_2000-4000
+846346,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/846346.wav,Seep,2023_4_9,official_audio_example,Vocalization,false,remove_4000-6000
+846346,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/846346.wav,Seep,2023_4_9,official_audio_example,Vocalization,false,remove_6000-8000
+223123,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/223123.wav,Trill,2019_12_0,official_audio_example,Trill,true,full_0-8k
+223123,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/223123.wav,Trill,2019_12_0,official_audio_example,Trill,true,lp_0-1000
+223123,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/223123.wav,Trill,2019_12_0,official_audio_example,Trill,true,lp_0-2000
+223123,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/223123.wav,Trill,2019_12_0,official_audio_example,Trill,true,lp_0-4000
+223123,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/223123.wav,Trill,2019_12_0,official_audio_example,Trill,true,lp_0-6000
+223123,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/223123.wav,Trill,2019_12_0,official_audio_example,Trill,true,lp_0-8000
+223123,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/223123.wav,Trill,2019_12_0,official_audio_example,Trill,true,remove_0-1000
+223123,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/223123.wav,Trill,2019_12_0,official_audio_example,Trill,true,remove_1000-2000
+223123,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/223123.wav,Trill,2019_12_0,official_audio_example,Trill,true,remove_2000-4000
+223123,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/223123.wav,Trill,2019_12_0,official_audio_example,Trill,true,remove_4000-6000
+223123,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/223123.wav,Trill,2019_12_0,official_audio_example,Trill,true,remove_6000-8000
+223263,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/223263.wav,Trill,2019_12_0,official_audio_example,Trill,true,full_0-8k
+223263,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/223263.wav,Trill,2019_12_0,official_audio_example,Trill,true,lp_0-1000
+223263,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/223263.wav,Trill,2019_12_0,official_audio_example,Trill,true,lp_0-2000
+223263,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/223263.wav,Trill,2019_12_0,official_audio_example,Trill,true,lp_0-4000
+223263,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/223263.wav,Trill,2019_12_0,official_audio_example,Trill,true,lp_0-6000
+223263,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/223263.wav,Trill,2019_12_0,official_audio_example,Trill,true,lp_0-8000
+223263,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/223263.wav,Trill,2019_12_0,official_audio_example,Trill,true,remove_0-1000
+223263,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/223263.wav,Trill,2019_12_0,official_audio_example,Trill,true,remove_1000-2000
+223263,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/223263.wav,Trill,2019_12_0,official_audio_example,Trill,true,remove_2000-4000
+223263,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/223263.wav,Trill,2019_12_0,official_audio_example,Trill,true,remove_4000-6000
+223263,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/223263.wav,Trill,2019_12_0,official_audio_example,Trill,true,remove_6000-8000
+372350,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/372350.wav,Trill,2022_10_0,official_audio_example,Vocalization,false,full_0-8k
+372350,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/372350.wav,Trill,2022_10_0,official_audio_example,Vocalization,false,lp_0-1000
+372350,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/372350.wav,Trill,2022_10_0,official_audio_example,Vocalization,false,lp_0-2000
+372350,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/372350.wav,Trill,2022_10_0,official_audio_example,Vocalization,false,lp_0-4000
+372350,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/372350.wav,Trill,2022_10_0,official_audio_example,Vocalization,false,lp_0-6000
+372350,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/372350.wav,Trill,2022_10_0,official_audio_example,Vocalization,false,lp_0-8000
+372350,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/372350.wav,Trill,2022_10_0,official_audio_example,Vocalization,false,remove_0-1000
+372350,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/372350.wav,Trill,2022_10_0,official_audio_example,Vocalization,false,remove_1000-2000
+372350,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/372350.wav,Trill,2022_10_0,official_audio_example,Vocalization,false,remove_2000-4000
+372350,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/372350.wav,Trill,2022_10_0,official_audio_example,Vocalization,false,remove_4000-6000
+372350,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/372350.wav,Trill,2022_10_0,official_audio_example,Vocalization,false,remove_6000-8000
+556199,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/556199.wav,Trill,2020_11_0,official_audio_example,Tsik,false,full_0-8k
+556199,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/556199.wav,Trill,2020_11_0,official_audio_example,Tsik,false,lp_0-1000
+556199,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/556199.wav,Trill,2020_11_0,official_audio_example,Tsik,false,lp_0-2000
+556199,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/556199.wav,Trill,2020_11_0,official_audio_example,Tsik,false,lp_0-4000
+556199,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/556199.wav,Trill,2020_11_0,official_audio_example,Tsik,false,lp_0-6000
+556199,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/556199.wav,Trill,2020_11_0,official_audio_example,Tsik,false,lp_0-8000
+556199,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/556199.wav,Trill,2020_11_0,official_audio_example,Tsik,false,remove_0-1000
+556199,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/556199.wav,Trill,2020_11_0,official_audio_example,Tsik,false,remove_1000-2000
+556199,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/556199.wav,Trill,2020_11_0,official_audio_example,Tsik,false,remove_2000-4000
+556199,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/556199.wav,Trill,2020_11_0,official_audio_example,Tsik,false,remove_4000-6000
+556199,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/556199.wav,Trill,2020_11_0,official_audio_example,Tsik,false,remove_6000-8000
+669479,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/669479.wav,Trill,2020_11_1,official_audio_example,Vocalization,false,full_0-8k
+669479,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/669479.wav,Trill,2020_11_1,official_audio_example,Vocalization,false,lp_0-1000
+669479,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/669479.wav,Trill,2020_11_1,official_audio_example,Vocalization,false,lp_0-2000
+669479,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/669479.wav,Trill,2020_11_1,official_audio_example,Vocalization,false,lp_0-4000
+669479,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/669479.wav,Trill,2020_11_1,official_audio_example,Vocalization,false,lp_0-6000
+669479,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/669479.wav,Trill,2020_11_1,official_audio_example,Vocalization,false,lp_0-8000
+669479,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/669479.wav,Trill,2020_11_1,official_audio_example,Vocalization,false,remove_0-1000
+669479,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/669479.wav,Trill,2020_11_1,official_audio_example,Vocalization,false,remove_1000-2000
+669479,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/669479.wav,Trill,2020_11_1,official_audio_example,Vocalization,false,remove_2000-4000
+669479,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/669479.wav,Trill,2020_11_1,official_audio_example,Vocalization,false,remove_4000-6000
+669479,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/669479.wav,Trill,2020_11_1,official_audio_example,Vocalization,false,remove_6000-8000
+689771,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/689771.wav,Trill,2023_3_3,official_audio_example,Vocalization,false,full_0-8k
+689771,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/689771.wav,Trill,2023_3_3,official_audio_example,Vocalization,false,lp_0-1000
+689771,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/689771.wav,Trill,2023_3_3,official_audio_example,Vocalization,false,lp_0-2000
+689771,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/689771.wav,Trill,2023_3_3,official_audio_example,Vocalization,false,lp_0-4000
+689771,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/689771.wav,Trill,2023_3_3,official_audio_example,Vocalization,false,lp_0-6000
+689771,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/689771.wav,Trill,2023_3_3,official_audio_example,Vocalization,false,lp_0-8000
+689771,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/689771.wav,Trill,2023_3_3,official_audio_example,Vocalization,false,remove_0-1000
+689771,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/689771.wav,Trill,2023_3_3,official_audio_example,Vocalization,false,remove_1000-2000
+689771,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/689771.wav,Trill,2023_3_3,official_audio_example,Vocalization,false,remove_2000-4000
+689771,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/689771.wav,Trill,2023_3_3,official_audio_example,Vocalization,false,remove_4000-6000
+689771,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/689771.wav,Trill,2023_3_3,official_audio_example,Vocalization,false,remove_6000-8000
+717061,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/717061.wav,Trill,2020_10_3,official_audio_example,Tsik,false,full_0-8k
+717061,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/717061.wav,Trill,2020_10_3,official_audio_example,Tsik,false,lp_0-1000
+717061,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/717061.wav,Trill,2020_10_3,official_audio_example,Tsik,false,lp_0-2000
+717061,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/717061.wav,Trill,2020_10_3,official_audio_example,Tsik,false,lp_0-4000
+717061,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/717061.wav,Trill,2020_10_3,official_audio_example,Tsik,false,lp_0-6000
+717061,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/717061.wav,Trill,2020_10_3,official_audio_example,Tsik,false,lp_0-8000
+717061,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/717061.wav,Trill,2020_10_3,official_audio_example,Tsik,false,remove_0-1000
+717061,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/717061.wav,Trill,2020_10_3,official_audio_example,Tsik,false,remove_1000-2000
+717061,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/717061.wav,Trill,2020_10_3,official_audio_example,Tsik,false,remove_2000-4000
+717061,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/717061.wav,Trill,2020_10_3,official_audio_example,Tsik,false,remove_4000-6000
+717061,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/717061.wav,Trill,2020_10_3,official_audio_example,Tsik,false,remove_6000-8000
+727676,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/727676.wav,Trill,2023_4_2,official_audio_example,Vocalization,false,full_0-8k
+727676,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/727676.wav,Trill,2023_4_2,official_audio_example,Vocalization,false,lp_0-1000
+727676,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/727676.wav,Trill,2023_4_2,official_audio_example,Vocalization,false,lp_0-2000
+727676,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/727676.wav,Trill,2023_4_2,official_audio_example,Vocalization,false,lp_0-4000
+727676,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/727676.wav,Trill,2023_4_2,official_audio_example,Vocalization,false,lp_0-6000
+727676,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/727676.wav,Trill,2023_4_2,official_audio_example,Vocalization,false,lp_0-8000
+727676,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/727676.wav,Trill,2023_4_2,official_audio_example,Vocalization,false,remove_0-1000
+727676,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/727676.wav,Trill,2023_4_2,official_audio_example,Vocalization,false,remove_1000-2000
+727676,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/727676.wav,Trill,2023_4_2,official_audio_example,Vocalization,false,remove_2000-4000
+727676,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/727676.wav,Trill,2023_4_2,official_audio_example,Vocalization,false,remove_4000-6000
+727676,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/727676.wav,Trill,2023_4_2,official_audio_example,Vocalization,false,remove_6000-8000
+73886,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/73886.wav,Trill,2022_2_1,official_audio_example,Trill,true,full_0-8k
+73886,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/73886.wav,Trill,2022_2_1,official_audio_example,Trill,true,lp_0-1000
+73886,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/73886.wav,Trill,2022_2_1,official_audio_example,Trill,true,lp_0-2000
+73886,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/73886.wav,Trill,2022_2_1,official_audio_example,Trill,true,lp_0-4000
+73886,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/73886.wav,Trill,2022_2_1,official_audio_example,Trill,true,lp_0-6000
+73886,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/73886.wav,Trill,2022_2_1,official_audio_example,Trill,true,lp_0-8000
+73886,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/73886.wav,Trill,2022_2_1,official_audio_example,Trill,true,remove_0-1000
+73886,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/73886.wav,Trill,2022_2_1,official_audio_example,Trill,true,remove_1000-2000
+73886,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/73886.wav,Trill,2022_2_1,official_audio_example,Trill,true,remove_2000-4000
+73886,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/73886.wav,Trill,2022_2_1,official_audio_example,Trill,true,remove_4000-6000
+73886,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/73886.wav,Trill,2022_2_1,official_audio_example,Trill,true,remove_6000-8000
+852106,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/852106.wav,Trill,2023_4_9,official_audio_example,Vocalization,false,full_0-8k
+852106,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/852106.wav,Trill,2023_4_9,official_audio_example,Vocalization,false,lp_0-1000
+852106,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/852106.wav,Trill,2023_4_9,official_audio_example,Vocalization,false,lp_0-2000
+852106,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/852106.wav,Trill,2023_4_9,official_audio_example,Vocalization,false,lp_0-4000
+852106,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/852106.wav,Trill,2023_4_9,official_audio_example,Vocalization,false,lp_0-6000
+852106,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/852106.wav,Trill,2023_4_9,official_audio_example,Vocalization,false,lp_0-8000
+852106,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/852106.wav,Trill,2023_4_9,official_audio_example,Vocalization,false,remove_0-1000
+852106,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/852106.wav,Trill,2023_4_9,official_audio_example,Vocalization,false,remove_1000-2000
+852106,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/852106.wav,Trill,2023_4_9,official_audio_example,Vocalization,false,remove_2000-4000
+852106,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/852106.wav,Trill,2023_4_9,official_audio_example,Vocalization,false,remove_4000-6000
+852106,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/852106.wav,Trill,2023_4_9,official_audio_example,Vocalization,false,remove_6000-8000
+209901,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/209901.wav,Tsik,2022_12_0,official_audio_example,Vocalization,false,full_0-8k
+209901,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/209901.wav,Tsik,2022_12_0,official_audio_example,Vocalization,false,lp_0-1000
+209901,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/209901.wav,Tsik,2022_12_0,official_audio_example,Vocalization,false,lp_0-2000
+209901,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/209901.wav,Tsik,2022_12_0,official_audio_example,Vocalization,false,lp_0-4000
+209901,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/209901.wav,Tsik,2022_12_0,official_audio_example,Vocalization,false,lp_0-6000
+209901,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/209901.wav,Tsik,2022_12_0,official_audio_example,Vocalization,false,lp_0-8000
+209901,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/209901.wav,Tsik,2022_12_0,official_audio_example,Vocalization,false,remove_0-1000
+209901,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/209901.wav,Tsik,2022_12_0,official_audio_example,Vocalization,false,remove_1000-2000
+209901,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/209901.wav,Tsik,2022_12_0,official_audio_example,Vocalization,false,remove_2000-4000
+209901,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/209901.wav,Tsik,2022_12_0,official_audio_example,Vocalization,false,remove_4000-6000
+209901,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/209901.wav,Tsik,2022_12_0,official_audio_example,Vocalization,false,remove_6000-8000
+232662,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/232662.wav,Tsik,2022_12_0,official_audio_example,Tsik,true,full_0-8k
+232662,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/232662.wav,Tsik,2022_12_0,official_audio_example,Tsik,true,lp_0-1000
+232662,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/232662.wav,Tsik,2022_12_0,official_audio_example,Tsik,true,lp_0-2000
+232662,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/232662.wav,Tsik,2022_12_0,official_audio_example,Tsik,true,lp_0-4000
+232662,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/232662.wav,Tsik,2022_12_0,official_audio_example,Tsik,true,lp_0-6000
+232662,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/232662.wav,Tsik,2022_12_0,official_audio_example,Tsik,true,lp_0-8000
+232662,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/232662.wav,Tsik,2022_12_0,official_audio_example,Tsik,true,remove_0-1000
+232662,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/232662.wav,Tsik,2022_12_0,official_audio_example,Tsik,true,remove_1000-2000
+232662,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/232662.wav,Tsik,2022_12_0,official_audio_example,Tsik,true,remove_2000-4000
+232662,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/232662.wav,Tsik,2022_12_0,official_audio_example,Tsik,true,remove_4000-6000
+232662,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/232662.wav,Tsik,2022_12_0,official_audio_example,Tsik,true,remove_6000-8000
+353144,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/353144.wav,Tsik,2022_12_2,official_audio_example,Vocalization,false,full_0-8k
+353144,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/353144.wav,Tsik,2022_12_2,official_audio_example,Vocalization,false,lp_0-1000
+353144,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/353144.wav,Tsik,2022_12_2,official_audio_example,Vocalization,false,lp_0-2000
+353144,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/353144.wav,Tsik,2022_12_2,official_audio_example,Vocalization,false,lp_0-4000
+353144,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/353144.wav,Tsik,2022_12_2,official_audio_example,Vocalization,false,lp_0-6000
+353144,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/353144.wav,Tsik,2022_12_2,official_audio_example,Vocalization,false,lp_0-8000
+353144,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/353144.wav,Tsik,2022_12_2,official_audio_example,Vocalization,false,remove_0-1000
+353144,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/353144.wav,Tsik,2022_12_2,official_audio_example,Vocalization,false,remove_1000-2000
+353144,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/353144.wav,Tsik,2022_12_2,official_audio_example,Vocalization,false,remove_2000-4000
+353144,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/353144.wav,Tsik,2022_12_2,official_audio_example,Vocalization,false,remove_4000-6000
+353144,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/353144.wav,Tsik,2022_12_2,official_audio_example,Vocalization,false,remove_6000-8000
+508925,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/508925.wav,Tsik,2022_12_3,official_audio_example,Vocalization,false,full_0-8k
+508925,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/508925.wav,Tsik,2022_12_3,official_audio_example,Vocalization,false,lp_0-1000
+508925,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/508925.wav,Tsik,2022_12_3,official_audio_example,Vocalization,false,lp_0-2000
+508925,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/508925.wav,Tsik,2022_12_3,official_audio_example,Vocalization,false,lp_0-4000
+508925,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/508925.wav,Tsik,2022_12_3,official_audio_example,Vocalization,false,lp_0-6000
+508925,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/508925.wav,Tsik,2022_12_3,official_audio_example,Vocalization,false,lp_0-8000
+508925,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/508925.wav,Tsik,2022_12_3,official_audio_example,Vocalization,false,remove_0-1000
+508925,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/508925.wav,Tsik,2022_12_3,official_audio_example,Vocalization,false,remove_1000-2000
+508925,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/508925.wav,Tsik,2022_12_3,official_audio_example,Vocalization,false,remove_2000-4000
+508925,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/508925.wav,Tsik,2022_12_3,official_audio_example,Vocalization,false,remove_4000-6000
+508925,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/508925.wav,Tsik,2022_12_3,official_audio_example,Vocalization,false,remove_6000-8000
+564120,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/564120.wav,Tsik,2020_10_0,official_audio_example,Twitter,false,full_0-8k
+564120,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/564120.wav,Tsik,2020_10_0,official_audio_example,Twitter,false,lp_0-1000
+564120,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/564120.wav,Tsik,2020_10_0,official_audio_example,Twitter,false,lp_0-2000
+564120,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/564120.wav,Tsik,2020_10_0,official_audio_example,Twitter,false,lp_0-4000
+564120,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/564120.wav,Tsik,2020_10_0,official_audio_example,Twitter,false,lp_0-6000
+564120,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/564120.wav,Tsik,2020_10_0,official_audio_example,Twitter,false,lp_0-8000
+564120,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/564120.wav,Tsik,2020_10_0,official_audio_example,Twitter,false,remove_0-1000
+564120,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/564120.wav,Tsik,2020_10_0,official_audio_example,Twitter,false,remove_1000-2000
+564120,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/564120.wav,Tsik,2020_10_0,official_audio_example,Twitter,false,remove_2000-4000
+564120,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/564120.wav,Tsik,2020_10_0,official_audio_example,Twitter,false,remove_4000-6000
+564120,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/564120.wav,Tsik,2020_10_0,official_audio_example,Twitter,false,remove_6000-8000
+622818,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/622818.wav,Tsik,2020_10_2,official_audio_example,Infant Cry,false,full_0-8k
+622818,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/622818.wav,Tsik,2020_10_2,official_audio_example,Infant Cry,false,lp_0-1000
+622818,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/622818.wav,Tsik,2020_10_2,official_audio_example,Infant Cry,false,lp_0-2000
+622818,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/622818.wav,Tsik,2020_10_2,official_audio_example,Infant Cry,false,lp_0-4000
+622818,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/622818.wav,Tsik,2020_10_2,official_audio_example,Infant Cry,false,lp_0-6000
+622818,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/622818.wav,Tsik,2020_10_2,official_audio_example,Infant Cry,false,lp_0-8000
+622818,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/622818.wav,Tsik,2020_10_2,official_audio_example,Infant Cry,false,remove_0-1000
+622818,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/622818.wav,Tsik,2020_10_2,official_audio_example,Infant Cry,false,remove_1000-2000
+622818,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/622818.wav,Tsik,2020_10_2,official_audio_example,Infant Cry,false,remove_2000-4000
+622818,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/622818.wav,Tsik,2020_10_2,official_audio_example,Infant Cry,false,remove_4000-6000
+622818,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/622818.wav,Tsik,2020_10_2,official_audio_example,Infant Cry,false,remove_6000-8000
+668216,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/668216.wav,Tsik,2023_3_2,official_audio_example,Vocalization,false,full_0-8k
+668216,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/668216.wav,Tsik,2023_3_2,official_audio_example,Vocalization,false,lp_0-1000
+668216,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/668216.wav,Tsik,2023_3_2,official_audio_example,Vocalization,false,lp_0-2000
+668216,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/668216.wav,Tsik,2023_3_2,official_audio_example,Vocalization,false,lp_0-4000
+668216,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/668216.wav,Tsik,2023_3_2,official_audio_example,Vocalization,false,lp_0-6000
+668216,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/668216.wav,Tsik,2023_3_2,official_audio_example,Vocalization,false,lp_0-8000
+668216,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/668216.wav,Tsik,2023_3_2,official_audio_example,Vocalization,false,remove_0-1000
+668216,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/668216.wav,Tsik,2023_3_2,official_audio_example,Vocalization,false,remove_1000-2000
+668216,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/668216.wav,Tsik,2023_3_2,official_audio_example,Vocalization,false,remove_2000-4000
+668216,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/668216.wav,Tsik,2023_3_2,official_audio_example,Vocalization,false,remove_4000-6000
+668216,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/668216.wav,Tsik,2023_3_2,official_audio_example,Vocalization,false,remove_6000-8000
+686420,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/686420.wav,Tsik,2023_4_2,official_audio_example,Tsik,true,full_0-8k
+686420,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/686420.wav,Tsik,2023_4_2,official_audio_example,Tsik,true,lp_0-1000
+686420,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/686420.wav,Tsik,2023_4_2,official_audio_example,Tsik,true,lp_0-2000
+686420,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/686420.wav,Tsik,2023_4_2,official_audio_example,Tsik,true,lp_0-4000
+686420,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/686420.wav,Tsik,2023_4_2,official_audio_example,Tsik,true,lp_0-6000
+686420,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/686420.wav,Tsik,2023_4_2,official_audio_example,Tsik,true,lp_0-8000
+686420,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/686420.wav,Tsik,2023_4_2,official_audio_example,Tsik,true,remove_0-1000
+686420,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/686420.wav,Tsik,2023_4_2,official_audio_example,Tsik,true,remove_1000-2000
+686420,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/686420.wav,Tsik,2023_4_2,official_audio_example,Tsik,true,remove_2000-4000
+686420,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/686420.wav,Tsik,2023_4_2,official_audio_example,Tsik,true,remove_4000-6000
+686420,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/686420.wav,Tsik,2023_4_2,official_audio_example,Tsik,true,remove_6000-8000
+726184,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/726184.wav,Tsik,2023_4_2,official_audio_example,Vocalization,false,full_0-8k
+726184,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/726184.wav,Tsik,2023_4_2,official_audio_example,Vocalization,false,lp_0-1000
+726184,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/726184.wav,Tsik,2023_4_2,official_audio_example,Vocalization,false,lp_0-2000
+726184,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/726184.wav,Tsik,2023_4_2,official_audio_example,Vocalization,false,lp_0-4000
+726184,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/726184.wav,Tsik,2023_4_2,official_audio_example,Vocalization,false,lp_0-6000
+726184,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/726184.wav,Tsik,2023_4_2,official_audio_example,Vocalization,false,lp_0-8000
+726184,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/726184.wav,Tsik,2023_4_2,official_audio_example,Vocalization,false,remove_0-1000
+726184,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/726184.wav,Tsik,2023_4_2,official_audio_example,Vocalization,false,remove_1000-2000
+726184,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/726184.wav,Tsik,2023_4_2,official_audio_example,Vocalization,false,remove_2000-4000
+726184,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/726184.wav,Tsik,2023_4_2,official_audio_example,Vocalization,false,remove_4000-6000
+726184,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/726184.wav,Tsik,2023_4_2,official_audio_example,Vocalization,false,remove_6000-8000
+806933,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/806933.wav,Tsik,2023_4_5,official_audio_example,Vocalization,false,full_0-8k
+806933,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/806933.wav,Tsik,2023_4_5,official_audio_example,Vocalization,false,lp_0-1000
+806933,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/806933.wav,Tsik,2023_4_5,official_audio_example,Vocalization,false,lp_0-2000
+806933,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/806933.wav,Tsik,2023_4_5,official_audio_example,Vocalization,false,lp_0-4000
+806933,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/806933.wav,Tsik,2023_4_5,official_audio_example,Vocalization,false,lp_0-6000
+806933,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/806933.wav,Tsik,2023_4_5,official_audio_example,Vocalization,false,lp_0-8000
+806933,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/806933.wav,Tsik,2023_4_5,official_audio_example,Vocalization,false,remove_0-1000
+806933,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/806933.wav,Tsik,2023_4_5,official_audio_example,Vocalization,false,remove_1000-2000
+806933,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/806933.wav,Tsik,2023_4_5,official_audio_example,Vocalization,false,remove_2000-4000
+806933,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/806933.wav,Tsik,2023_4_5,official_audio_example,Vocalization,false,remove_4000-6000
+806933,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/806933.wav,Tsik,2023_4_5,official_audio_example,Vocalization,false,remove_6000-8000
+211828,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/211828.wav,Twitter,2019_12_0,official_audio_example,Twitter,true,full_0-8k
+211828,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/211828.wav,Twitter,2019_12_0,official_audio_example,Twitter,true,lp_0-1000
+211828,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/211828.wav,Twitter,2019_12_0,official_audio_example,Twitter,true,lp_0-2000
+211828,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/211828.wav,Twitter,2019_12_0,official_audio_example,Twitter,true,lp_0-4000
+211828,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/211828.wav,Twitter,2019_12_0,official_audio_example,Twitter,true,lp_0-6000
+211828,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/211828.wav,Twitter,2019_12_0,official_audio_example,Twitter,true,lp_0-8000
+211828,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/211828.wav,Twitter,2019_12_0,official_audio_example,Twitter,true,remove_0-1000
+211828,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/211828.wav,Twitter,2019_12_0,official_audio_example,Twitter,true,remove_1000-2000
+211828,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/211828.wav,Twitter,2019_12_0,official_audio_example,Twitter,true,remove_2000-4000
+211828,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/211828.wav,Twitter,2019_12_0,official_audio_example,Twitter,true,remove_4000-6000
+211828,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/211828.wav,Twitter,2019_12_0,official_audio_example,Twitter,true,remove_6000-8000
+235475,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/235475.wav,Twitter,2022_12_1,official_audio_example,Vocalization,false,full_0-8k
+235475,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/235475.wav,Twitter,2022_12_1,official_audio_example,Vocalization,false,lp_0-1000
+235475,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/235475.wav,Twitter,2022_12_1,official_audio_example,Vocalization,false,lp_0-2000
+235475,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/235475.wav,Twitter,2022_12_1,official_audio_example,Vocalization,false,lp_0-4000
+235475,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/235475.wav,Twitter,2022_12_1,official_audio_example,Vocalization,false,lp_0-6000
+235475,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/235475.wav,Twitter,2022_12_1,official_audio_example,Vocalization,false,lp_0-8000
+235475,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/235475.wav,Twitter,2022_12_1,official_audio_example,Vocalization,false,remove_0-1000
+235475,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/235475.wav,Twitter,2022_12_1,official_audio_example,Vocalization,false,remove_1000-2000
+235475,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/235475.wav,Twitter,2022_12_1,official_audio_example,Vocalization,false,remove_2000-4000
+235475,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/235475.wav,Twitter,2022_12_1,official_audio_example,Vocalization,false,remove_4000-6000
+235475,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/235475.wav,Twitter,2022_12_1,official_audio_example,Vocalization,false,remove_6000-8000
+245331,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/245331.wav,Twitter,2022_3_5,official_audio_example,Vocalization,false,full_0-8k
+245331,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/245331.wav,Twitter,2022_3_5,official_audio_example,Vocalization,false,lp_0-1000
+245331,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/245331.wav,Twitter,2022_3_5,official_audio_example,Vocalization,false,lp_0-2000
+245331,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/245331.wav,Twitter,2022_3_5,official_audio_example,Vocalization,false,lp_0-4000
+245331,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/245331.wav,Twitter,2022_3_5,official_audio_example,Vocalization,false,lp_0-6000
+245331,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/245331.wav,Twitter,2022_3_5,official_audio_example,Vocalization,false,lp_0-8000
+245331,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/245331.wav,Twitter,2022_3_5,official_audio_example,Vocalization,false,remove_0-1000
+245331,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/245331.wav,Twitter,2022_3_5,official_audio_example,Vocalization,false,remove_1000-2000
+245331,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/245331.wav,Twitter,2022_3_5,official_audio_example,Vocalization,false,remove_2000-4000
+245331,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/245331.wav,Twitter,2022_3_5,official_audio_example,Vocalization,false,remove_4000-6000
+245331,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/245331.wav,Twitter,2022_3_5,official_audio_example,Vocalization,false,remove_6000-8000
+399262,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/399262.wav,Twitter,2022_4_2,official_audio_example,Vocalization,false,full_0-8k
+399262,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/399262.wav,Twitter,2022_4_2,official_audio_example,Vocalization,false,lp_0-1000
+399262,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/399262.wav,Twitter,2022_4_2,official_audio_example,Vocalization,false,lp_0-2000
+399262,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/399262.wav,Twitter,2022_4_2,official_audio_example,Vocalization,false,lp_0-4000
+399262,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/399262.wav,Twitter,2022_4_2,official_audio_example,Vocalization,false,lp_0-6000
+399262,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/399262.wav,Twitter,2022_4_2,official_audio_example,Vocalization,false,lp_0-8000
+399262,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/399262.wav,Twitter,2022_4_2,official_audio_example,Vocalization,false,remove_0-1000
+399262,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/399262.wav,Twitter,2022_4_2,official_audio_example,Vocalization,false,remove_1000-2000
+399262,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/399262.wav,Twitter,2022_4_2,official_audio_example,Vocalization,false,remove_2000-4000
+399262,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/399262.wav,Twitter,2022_4_2,official_audio_example,Vocalization,false,remove_4000-6000
+399262,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/399262.wav,Twitter,2022_4_2,official_audio_example,Vocalization,false,remove_6000-8000
+508836,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/508836.wav,Twitter,2023_4_1,official_audio_example,Phee,false,full_0-8k
+508836,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/508836.wav,Twitter,2023_4_1,official_audio_example,Phee,false,lp_0-1000
+508836,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/508836.wav,Twitter,2023_4_1,official_audio_example,Phee,false,lp_0-2000
+508836,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/508836.wav,Twitter,2023_4_1,official_audio_example,Phee,false,lp_0-4000
+508836,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/508836.wav,Twitter,2023_4_1,official_audio_example,Phee,false,lp_0-6000
+508836,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/508836.wav,Twitter,2023_4_1,official_audio_example,Phee,false,lp_0-8000
+508836,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/508836.wav,Twitter,2023_4_1,official_audio_example,Phee,false,remove_0-1000
+508836,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/508836.wav,Twitter,2023_4_1,official_audio_example,Phee,false,remove_1000-2000
+508836,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/508836.wav,Twitter,2023_4_1,official_audio_example,Phee,false,remove_2000-4000
+508836,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/508836.wav,Twitter,2023_4_1,official_audio_example,Phee,false,remove_4000-6000
+508836,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/508836.wav,Twitter,2023_4_1,official_audio_example,Phee,false,remove_6000-8000
+556729,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/556729.wav,Twitter,2020_10_0,official_audio_example,Vocalization,false,full_0-8k
+556729,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/556729.wav,Twitter,2020_10_0,official_audio_example,Vocalization,false,lp_0-1000
+556729,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/556729.wav,Twitter,2020_10_0,official_audio_example,Vocalization,false,lp_0-2000
+556729,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/556729.wav,Twitter,2020_10_0,official_audio_example,Vocalization,false,lp_0-4000
+556729,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/556729.wav,Twitter,2020_10_0,official_audio_example,Vocalization,false,lp_0-6000
+556729,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/556729.wav,Twitter,2020_10_0,official_audio_example,Vocalization,false,lp_0-8000
+556729,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/556729.wav,Twitter,2020_10_0,official_audio_example,Vocalization,false,remove_0-1000
+556729,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/556729.wav,Twitter,2020_10_0,official_audio_example,Vocalization,false,remove_1000-2000
+556729,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/556729.wav,Twitter,2020_10_0,official_audio_example,Vocalization,false,remove_2000-4000
+556729,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/556729.wav,Twitter,2020_10_0,official_audio_example,Vocalization,false,remove_4000-6000
+556729,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/556729.wav,Twitter,2020_10_0,official_audio_example,Vocalization,false,remove_6000-8000
+599,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/599.wav,Twitter,2022_1_0,official_audio_example,Twitter,true,full_0-8k
+599,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/599.wav,Twitter,2022_1_0,official_audio_example,Twitter,true,lp_0-1000
+599,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/599.wav,Twitter,2022_1_0,official_audio_example,Twitter,true,lp_0-2000
+599,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/599.wav,Twitter,2022_1_0,official_audio_example,Twitter,true,lp_0-4000
+599,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/599.wav,Twitter,2022_1_0,official_audio_example,Twitter,true,lp_0-6000
+599,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/599.wav,Twitter,2022_1_0,official_audio_example,Twitter,true,lp_0-8000
+599,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/599.wav,Twitter,2022_1_0,official_audio_example,Twitter,true,remove_0-1000
+599,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/599.wav,Twitter,2022_1_0,official_audio_example,Twitter,true,remove_1000-2000
+599,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/599.wav,Twitter,2022_1_0,official_audio_example,Twitter,true,remove_2000-4000
+599,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/599.wav,Twitter,2022_1_0,official_audio_example,Twitter,true,remove_4000-6000
+599,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/599.wav,Twitter,2022_1_0,official_audio_example,Twitter,true,remove_6000-8000
+669032,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/669032.wav,Twitter,2020_11_1,official_audio_example,Vocalization,false,full_0-8k
+669032,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/669032.wav,Twitter,2020_11_1,official_audio_example,Vocalization,false,lp_0-1000
+669032,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/669032.wav,Twitter,2020_11_1,official_audio_example,Vocalization,false,lp_0-2000
+669032,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/669032.wav,Twitter,2020_11_1,official_audio_example,Vocalization,false,lp_0-4000
+669032,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/669032.wav,Twitter,2020_11_1,official_audio_example,Vocalization,false,lp_0-6000
+669032,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/669032.wav,Twitter,2020_11_1,official_audio_example,Vocalization,false,lp_0-8000
+669032,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/669032.wav,Twitter,2020_11_1,official_audio_example,Vocalization,false,remove_0-1000
+669032,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/669032.wav,Twitter,2020_11_1,official_audio_example,Vocalization,false,remove_1000-2000
+669032,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/669032.wav,Twitter,2020_11_1,official_audio_example,Vocalization,false,remove_2000-4000
+669032,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/669032.wav,Twitter,2020_11_1,official_audio_example,Vocalization,false,remove_4000-6000
+669032,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/669032.wav,Twitter,2020_11_1,official_audio_example,Vocalization,false,remove_6000-8000
+692890,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/692890.wav,Twitter,2023_2_0,official_audio_example,Vocalization,false,full_0-8k
+692890,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/692890.wav,Twitter,2023_2_0,official_audio_example,Vocalization,false,lp_0-1000
+692890,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/692890.wav,Twitter,2023_2_0,official_audio_example,Vocalization,false,lp_0-2000
+692890,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/692890.wav,Twitter,2023_2_0,official_audio_example,Vocalization,false,lp_0-4000
+692890,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/692890.wav,Twitter,2023_2_0,official_audio_example,Vocalization,false,lp_0-6000
+692890,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/692890.wav,Twitter,2023_2_0,official_audio_example,Vocalization,false,lp_0-8000
+692890,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/692890.wav,Twitter,2023_2_0,official_audio_example,Vocalization,false,remove_0-1000
+692890,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/692890.wav,Twitter,2023_2_0,official_audio_example,Vocalization,false,remove_1000-2000
+692890,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/692890.wav,Twitter,2023_2_0,official_audio_example,Vocalization,false,remove_2000-4000
+692890,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/692890.wav,Twitter,2023_2_0,official_audio_example,Vocalization,false,remove_4000-6000
+692890,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/692890.wav,Twitter,2023_2_0,official_audio_example,Vocalization,false,remove_6000-8000
+748796,/root/animal-omni-kv/data/marmaudio/interventions/full_0-8k/748796.wav,Twitter,2023_3_5,official_audio_example,Vocalization,false,full_0-8k
+748796,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-1000/748796.wav,Twitter,2023_3_5,official_audio_example,Vocalization,false,lp_0-1000
+748796,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-2000/748796.wav,Twitter,2023_3_5,official_audio_example,Vocalization,false,lp_0-2000
+748796,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-4000/748796.wav,Twitter,2023_3_5,official_audio_example,Vocalization,false,lp_0-4000
+748796,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-6000/748796.wav,Twitter,2023_3_5,official_audio_example,Vocalization,false,lp_0-6000
+748796,/root/animal-omni-kv/data/marmaudio/interventions/lp_0-8000/748796.wav,Twitter,2023_3_5,official_audio_example,Vocalization,false,lp_0-8000
+748796,/root/animal-omni-kv/data/marmaudio/interventions/remove_0-1000/748796.wav,Twitter,2023_3_5,official_audio_example,Vocalization,false,remove_0-1000
+748796,/root/animal-omni-kv/data/marmaudio/interventions/remove_1000-2000/748796.wav,Twitter,2023_3_5,official_audio_example,Vocalization,false,remove_1000-2000
+748796,/root/animal-omni-kv/data/marmaudio/interventions/remove_2000-4000/748796.wav,Twitter,2023_3_5,official_audio_example,Vocalization,false,remove_2000-4000
+748796,/root/animal-omni-kv/data/marmaudio/interventions/remove_4000-6000/748796.wav,Twitter,2023_3_5,official_audio_example,Vocalization,false,remove_4000-6000
+748796,/root/animal-omni-kv/data/marmaudio/interventions/remove_6000-8000/748796.wav,Twitter,2023_3_5,official_audio_example,Vocalization,false,remove_6000-8000

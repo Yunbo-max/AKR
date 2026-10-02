@@ -1,0 +1,23 @@
+{
+  "dogs": {
+    "accuracy": 0.02877697841726619,
+    "macro_f1": 0.005594405594405594,
+    "n": 139,
+    "prediction_counts": {
+      "Rudy": 139
+    }
+  },
+  "watkins": {
+    "accuracy": 0.05604719764011799,
+    "macro_f1": 0.018741351084305243,
+    "n": 339,
+    "prediction_counts": {
+      "False_Killer_Whale": 140,
+      "Bottlenose_Dolphin": 84,
+      "Beluga,_White_Whale": 107,
+      "Atlantic_Spotted_Dolphin": 1,
+      "Humpback_Whale": 5,
+      "Killer_Whale": 2
+    }
+  }
+}

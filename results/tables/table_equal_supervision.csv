@@ -1,0 +1,23 @@
+dataset,condition,support_k_per_class,support_k_total,method,n_query,accuracy,macro_f1,query_label_free
+MarmAudio,full_0-8k,1,6,nearest_centroid,75,0.29333333333333333,0.3522364337581729,True
+MarmAudio,full_0-8k,1,6,linear_probe,75,0.4666666666666667,0.4880808080808081,True
+MarmAudio,full_0-8k,2,12,nearest_centroid,75,0.4666666666666667,0.5030830039525692,True
+MarmAudio,full_0-8k,2,12,linear_probe,75,0.5866666666666667,0.5622128510059545,True
+MarmAudio,full_0-8k,4,24,nearest_centroid,75,0.5066666666666667,0.5054361148478795,True
+MarmAudio,full_0-8k,4,24,linear_probe,75,0.7333333333333333,0.711924036342641,True
+MarmAudio,full_0-8k,8,48,nearest_centroid,75,0.7866666666666666,0.7727321477321478,True
+MarmAudio,full_0-8k,8,48,linear_probe,75,0.84,0.8385475231452242,True
+BEANS Dogs,lp_0-1000,1,10,nearest_centroid,139,0.2446043165467626,0.23013344842292213,True
+BEANS Dogs,lp_0-1000,1,10,linear_probe,139,0.35251798561151076,0.31681453168409685,True
+BEANS Dogs,lp_0-1000,2,20,nearest_centroid,139,0.22302158273381295,0.21286230675577178,True
+BEANS Dogs,lp_0-1000,2,20,linear_probe,139,0.35251798561151076,0.33134153565732516,True
+BEANS Watkins,full_0-8k,1,31,nearest_centroid,339,0.26843657817109146,0.2973795404079826,True
+BEANS Watkins,full_0-8k,1,31,linear_probe,339,0.3215339233038348,0.3635173360141205,True
+BEANS Watkins,full_0-8k,2,62,nearest_centroid,339,0.3421828908554572,0.3679341595534023,True
+BEANS Watkins,full_0-8k,2,62,linear_probe,339,0.4247787610619469,0.4417193836014914,True
+BEANS Watkins,full_0-8k,4,124,nearest_centroid,339,0.4837758112094395,0.49430391950824637,True
+BEANS Watkins,full_0-8k,4,124,linear_probe,339,0.5752212389380531,0.5833748534949311,True
+MarmAudio,full_0-8k,1,6,audio_icl_free,75,0.08,0.02941176470588235,True
+MarmAudio,full_0-8k,2,12,audio_icl_free,75,0.17333333333333334,0.04924242424242425,True
+MarmAudio,full_0-8k,1,6,audio_icl_candidate,75,0.04,0.015384615384615384,True
+BEANS Dogs,lp_0-1000,1,10,audio_icl_free,139,0.07194244604316546,0.03130081300813008,True

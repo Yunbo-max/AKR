@@ -1,0 +1,14 @@
+component,n,exact_match,correct
+call-type,25,0.6,15
+unseen-family-cmn,25,0.0,0
+unseen-family-sci,25,0.0,0
+unseen-family-tax,25,0.0,0
+unseen-genus-cmn,25,0.0,0
+unseen-genus-sci,25,0.0,0
+unseen-genus-tax,25,0.0,0
+unseen-species-cmn,25,0.0,0
+unseen-species-sci,25,0.0,0
+unseen-species-tax,25,0.0,0
+watkins,25,0.0,0
+zf-indiv,25,0.72,18
+overall,300,0.11,33

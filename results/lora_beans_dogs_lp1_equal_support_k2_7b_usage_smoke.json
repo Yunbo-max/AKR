@@ -1,0 +1,7 @@
+{
+  "audio": "data/beans/interventions/dogs_all/lp_0-1000/valid_4.wav",
+  "adapter": "results/lora_beans_dogs_lp1_equal_support_k2_7b/epoch_1",
+  "raw_prediction": "Rudy",
+  "prediction": "Rudy",
+  "valid_label": true
+}

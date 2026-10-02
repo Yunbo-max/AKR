@@ -1,0 +1,55 @@
+{
+  "passed": false,
+  "checks": [
+    {
+      "name": "paired:data/manifests/marmaudio_expert_validation_interventions.csv",
+      "passed": true,
+      "detail": "events=546 rows=6006 conditions=11"
+    },
+    {
+      "name": "paired:data/manifests/beans_dogs_test_all_interventions.csv",
+      "passed": true,
+      "detail": "events=139 rows=1529 conditions=11"
+    },
+    {
+      "name": "paired:data/manifests/beans_watkins_test_all_interventions.csv",
+      "passed": true,
+      "detail": "events=339 rows=3729 conditions=11"
+    },
+    {
+      "name": "generation:results/expert_qwen7b_b1_clean.csv",
+      "passed": true,
+      "detail": "expected=6006 observed=6006 unique=True batch1=True"
+    },
+    {
+      "name": "generation:results/beans_dogs_frequency_qwen7b.csv",
+      "passed": true,
+      "detail": "expected=1529 observed=1529 unique=True batch1=True"
+    },
+    {
+      "name": "generation:results/beans_watkins_frequency_qwen7b.csv",
+      "passed": true,
+      "detail": "expected=3729 observed=3729 unique=True batch1=True"
+    },
+    {
+      "name": "generation:results/expert_qwen3b_b1_all.csv",
+      "passed": false,
+      "detail": "expected=6006 observed=635 unique=True batch1=True"
+    },
+    {
+      "name": "fixed_kv:results/beans_dogs_conditional_kv_lp1_7b.csv",
+      "passed": true,
+      "detail": "support=20 query=139 train=True test=True disjoint=True complete=True"
+    },
+    {
+      "name": "fixed_kv:results/beans_watkins_conditional_kv_lp1_7b.csv",
+      "passed": true,
+      "detail": "support=20 query=339 train=True test=True disjoint=True complete=True"
+    },
+    {
+      "name": "marm_conditional_recording_disjoint",
+      "passed": true,
+      "detail": "splits=5 disjoint=True"
+    }
+  ]
+}

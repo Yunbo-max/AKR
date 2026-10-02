@@ -1,0 +1,170 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "paired:data/manifests/marmaudio_expert_validation_interventions.csv",
+      "passed": true,
+      "detail": "events=546 rows=6006 conditions=11"
+    },
+    {
+      "name": "paired:data/manifests/beans_dogs_test_all_interventions.csv",
+      "passed": true,
+      "detail": "events=139 rows=1529 conditions=11"
+    },
+    {
+      "name": "paired:data/manifests/beans_watkins_test_all_interventions.csv",
+      "passed": true,
+      "detail": "events=339 rows=3729 conditions=11"
+    },
+    {
+      "name": "generation:results/expert_qwen7b_b1_clean.csv",
+      "passed": true,
+      "detail": "expected=6006 observed=6006 unique=True batch1=True"
+    },
+    {
+      "name": "generation:results/beans_dogs_frequency_qwen7b.csv",
+      "passed": true,
+      "detail": "expected=1529 observed=1529 unique=True batch1=True"
+    },
+    {
+      "name": "generation:results/beans_watkins_frequency_qwen7b.csv",
+      "passed": true,
+      "detail": "expected=3729 observed=3729 unique=True batch1=True"
+    },
+    {
+      "name": "generation:results/expert_qwen3b_b1_all.csv",
+      "passed": true,
+      "detail": "expected=6006 observed=6006 unique=True batch1=True"
+    },
+    {
+      "name": "fixed_kv:results/beans_dogs_conditional_kv_lp1_7b.csv",
+      "passed": true,
+      "detail": "support=20 query=139 train=True test=True disjoint=True complete=True"
+    },
+    {
+      "name": "fixed_kv:results/beans_watkins_conditional_kv_lp1_7b.csv",
+      "passed": true,
+      "detail": "support=20 query=339 train=True test=True disjoint=True complete=True"
+    },
+    {
+      "name": "marm_conditional_recording_disjoint",
+      "passed": true,
+      "detail": "splits=5 disjoint=True"
+    },
+    {
+      "name": "count:results/beans_zero_core_cap10_qwen7b.csv",
+      "passed": true,
+      "detail": "expected=300 observed=300 unique=300"
+    },
+    {
+      "name": "count:results/marmaudio_controls_qwen7b.csv",
+      "passed": true,
+      "detail": "expected=1800 observed=1800 unique=1800"
+    },
+    {
+      "name": "count:results/marmaudio_prompt_reversed_qwen7b.csv",
+      "passed": true,
+      "detail": "expected=300 observed=300 unique=300"
+    },
+    {
+      "name": "count:results/marmaudio_prompt_permuted_qwen7b.csv",
+      "passed": true,
+      "detail": "expected=300 observed=300 unique=300"
+    },
+    {
+      "name": "count:results/beans_dogs_conditional_kv_lp1_7b_layer28_rank8_followup.csv",
+      "passed": true,
+      "detail": "expected=278 observed=278 unique=278"
+    },
+    {
+      "name": "summary:results/probe_7b_oof_summary.json",
+      "passed": true,
+      "detail": "expected=546 observed=546"
+    },
+    {
+      "name": "summary:results/probe_lp1k_7b_oof_summary.json",
+      "passed": true,
+      "detail": "expected=546 observed=546"
+    },
+    {
+      "name": "summary:results/aves_bio_probe_oof_summary.json",
+      "passed": true,
+      "detail": "expected=546 observed=546"
+    },
+    {
+      "name": "summary:results/beans_dogs_probe_7b_summary.json",
+      "passed": true,
+      "detail": "expected=139 observed=139"
+    },
+    {
+      "name": "summary:results/beans_watkins_probe_7b_summary.json",
+      "passed": true,
+      "detail": "expected=339 observed=339"
+    },
+    {
+      "name": "aves_bio_fixed_split:dogs",
+      "passed": true,
+      "detail": "manifest=693 reps=693 metadata_errors=0 representation_errors=0 test=139 prediction_errors=0 accuracy=0.834532"
+    },
+    {
+      "name": "aves_bio_fixed_split:watkins",
+      "passed": true,
+      "detail": "manifest=1695 reps=1695 metadata_errors=0 representation_errors=0 test=339 prediction_errors=0 accuracy=0.858407"
+    },
+    {
+      "name": "dogs_full_train_lora_fixed_test",
+      "passed": true,
+      "detail": "train=415 valid_monitor=64 test=139 accuracy=0.251799"
+    },
+    {
+      "name": "marm_equal_support_cross_frequency_kv_geometry",
+      "passed": true,
+      "detail": "support=12 layers=28 full_0-8k=12 lp_0-1000=12 lp_0-2000=12 lp_0-4000=12 lp_0-6000=12 lp_0-8000=12"
+    },
+    {
+      "name": "fixed_split_frequency_probe:dogs",
+      "passed": true,
+      "detail": "split=(415, 139, 139) full_0-8k=129/139 lp_0-1000=122/139 lp_0-2000=127/139 lp_0-4000=127/139 lp_0-6000=124/139 lp_0-8000=132/139"
+    },
+    {
+      "name": "fixed_split_frequency_probe:watkins",
+      "passed": true,
+      "detail": "split=(1017, 339, 339) full_0-8k=299/339 lp_0-1000=251/339 lp_0-2000=264/339 lp_0-4000=291/339 lp_0-6000=294/339 lp_0-8000=285/339"
+    },
+    {
+      "name": "fixed_probe_cross_condition:dogs",
+      "passed": true,
+      "detail": "rows=834 conditions=6 test/condition=139"
+    },
+    {
+      "name": "fixed_probe_cross_condition:watkins",
+      "passed": true,
+      "detail": "rows=2034 conditions=6 test/condition=339"
+    },
+    {
+      "name": "probe_transfer_matrix:dogs",
+      "passed": true,
+      "detail": "cells=72 modes=2 diagonal=6 test/target=139"
+    },
+    {
+      "name": "probe_transfer_matrix:watkins",
+      "passed": true,
+      "detail": "cells=72 modes=2 diagonal=6 test/target=339"
+    },
+    {
+      "name": "boundary_kv_alignment",
+      "passed": true,
+      "detail": "conditions=5 spearman=0.9999999999999999"
+    },
+    {
+      "name": "frequency_probe_per_class",
+      "passed": true,
+      "detail": "dogs=10/139 watkins=31/339"
+    },
+    {
+      "name": "quarantined_partial_smoke_invalid_excluded",
+      "passed": true,
+      "detail": "quarantined=22 referenced_by_authoritative=[]"
+    }
+  ]
+}

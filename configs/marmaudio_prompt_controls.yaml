@@ -1,0 +1,11 @@
+seed: 20250813
+dataset: marmaudio_expert_balanced300
+labels: [Infant Cry, Phee, Seep, Trill, Tsik, Twitter]
+prompts:
+  canonical: "Listen to this common marmoset vocalization. Choose exactly one label from: Infant Cry, Phee, Seep, Trill, Tsik, Twitter. Answer with only the label."
+  reversed: "Listen to this common marmoset vocalization. Choose exactly one label from: Twitter, Tsik, Trill, Seep, Phee, Infant Cry. Answer with only the label."
+  seeded_permutation: "Listen to this common marmoset vocalization. Choose exactly one label from: Twitter, Phee, Trill, Tsik, Infant Cry, Seep. Answer with only the label."
+protocol:
+  decoding: deterministic
+  batch_size: 1
+  note: "Only label order changes; wording, audio, examples, and parser stay fixed."

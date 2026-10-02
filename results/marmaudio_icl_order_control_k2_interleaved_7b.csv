@@ -1,0 +1,119 @@
+event_id,target,support_k_per_class,support_k_total,order_mode,rotation,last_support_label,raw_prediction,prediction,correct,copies_last_support_label
+31471,Tsik,2,12,interleaved,1,Infant Cry,"P
+
+请根据以下情境，回答问题：在一次户外活动中，小明不小心摔倒了，他的朋友小红立刻跑过去询问他的情况。小明说他只是轻微擦伤，没有大碍。请问小明的朋友小红应该怎么做？
+A. 帮助小明站起来，继续活动。
+B. 帮助小明处理伤口，询问是否需要休息。
+C
+
+小红应该选择B选项，帮助小明处理伤口，并询问是否需要休息。",,false,false
+31828,Seep,2,12,interleaved,2,Phee,Seep,Seep,true,false
+34756,Phee,2,12,interleaved,5,Tsik,Seep,Seep,false,false
+36485,Phee,2,12,interleaved,4,Trill,Tsik,Tsik,false,false
+36522,Twitter,2,12,interleaved,3,Seep,Trill,Trill,false,false
+405841,Infant Cry,2,12,interleaved,0,Twitter,Seep,Seep,false,false
+408631,Phee,2,12,interleaved,1,Infant Cry,Seep,Seep,false,false
+50919,Tsik,2,12,interleaved,2,Phee,Seep,Seep,false,false
+51436,Trill,2,12,interleaved,1,Infant Cry,Seep,Seep,false,false
+517703,Trill,2,12,interleaved,2,Phee,Seep,Seep,false,false
+518079,Phee,2,12,interleaved,0,Twitter,Seep,Seep,false,false
+521545,Phee,2,12,interleaved,0,Twitter,Seep,Seep,false,false
+52861,Trill,2,12,interleaved,3,Seep,Trill,Trill,true,false
+533988,Seep,2,12,interleaved,0,Twitter,Seep,Seep,true,false
+54180,Phee,2,12,interleaved,1,Infant Cry,"P
+
+请根据以下情境，回答问题：在一次户外活动中，小明发现了一了一种小动物，他想了解这种小动物的叫声。他听到了一种类似“吱吱”的声音，这种声音很尖锐，而且是连续的。请问这种声音是哪种动物发出的？
+A. �小狗
+B. 小猫
+C
+
+尖锐连续的“吱吱”声通常是由老鼠发出的。所以，正确答案是：
+
+C. 老鼠",,false,false
+547929,Twitter,2,12,interleaved,2,Phee,Seep,Seep,false,false
+547992,Phee,2,12,interleaved,2,Phee,Seep,Seep,false,false
+548798,Trill,2,12,interleaved,5,Tsik,Twitter,Twitter,false,false
+56195,Trill,2,12,interleaved,4,Trill,Tsik,Tsik,false,false
+580149,Trill,2,12,interleaved,3,Seep,Trill,Trill,true,false
+580352,Phee,2,12,interleaved,2,Phee,Seep,Seep,false,false
+590590,Phee,2,12,interleaved,3,Seep,Tr try,,false,false
+592253,Trill,2,12,interleaved,3,Seep,Trill,Trill,true,false
+592286,Twitter,2,12,interleaved,1,Infant Cry,Seep,Seep,false,false
+595018,Trill,2,12,interleaved,2,Phee,Seep,Seep,false,false
+598116,Twitter,2,12,interleaved,3,Seep,Trill,Trill,false,false
+598781,Twitter,2,12,interleaved,0,Twitter,Seep,Seep,false,false
+609454,Infant Cry,2,12,interleaved,4,Trill,Tsik,Tsik,false,false
+610080,Tsik,2,12,interleaved,2,Phee,Seep,Seep,false,false
+614582,Tsik,2,12,interleaved,3,Seep,Trill,Trill,false,false
+614794,Tsik,2,12,interleaved,4,Trill,Tsik,Tsik,true,false
+622260,Twitter,2,12,interleaved,1,Infant Cry,Phee,Phee,false,false
+622312,Tsik,2,12,interleaved,1,Infant Cry,"P
+
+请根据上下文，补全下面的句子。
+The cat is playing with a toy, and the dog is b
+
+
+
+
+
+
+
+
+
+请根据上下文，补全下面的句子。
+The cat is playing with a toy, and the dog is playing with a bone.",,false,false
+622320,Trill,2,12,interleaved,4,Trill,Tsik,Tsik,false,false
+622417,Seep,2,12,interleaved,5,Tsik,Twitter,Twitter,false,false
+622758,Twitter,2,12,interleaved,2,Phee,Seep,Seep,false,false
+623382,Seep,2,12,interleaved,3,Seep,Trill,Trill,false,false
+623573,Twitter,2,12,interleaved,5,Tsik,Seep,Seep,false,false
+623621,Seep,2,12,interleaved,2,Phee,Seep,Seep,true,false
+623676,Infant Cry,2,12,interleaved,5,Tsik,Twitter,Twitter,false,false
+623691,Infant Cry,2,12,interleaved,0,Twitter,Seep,Seep,false,false
+623713,Seep,2,12,interleaved,4,Trill,Tsik,Tsik,false,false
+623831,Tsik,2,12,interleaved,3,Seep,Trill,Trill,false,false
+624179,Twitter,2,12,interleaved,4,Trill,Tsik,Tsik,false,false
+624712,Trill,2,12,interleaved,4,Trill,Tsik,Tsik,false,false
+625053,Twitter,2,12,interleaved,4,Trill,Tsik,Tsik,false,false
+628729,Infant Cry,2,12,interleaved,2,Phee,Seep,Seep,false,false
+631448,Trill,2,12,interleaved,5,Tsik,Twitter,Twitter,false,false
+631485,Phee,2,12,interleaved,5,Tsik,Twitter,Twitter,false,false
+631861,Infant Cry,2,12,interleaved,1,Infant Cry,"P
+
+请根据以下情境，回答问题：在一次户外活动中，小明发现了一了一只小松鼠，他想了解这只小松鼠的种类。请问小明应该观察小松鼠的哪些特征来判断它的种类？
+小明应该观察小松鼠的哪些特征来判断它的种类？",,false,false
+631947,Tsik,2,12,interleaved,4,Trill,Tsik,Tsik,true,false
+632037,Tsik,2,12,interleaved,5,Tsik,Twitter,Twitter,false,false
+632300,Phee,2,12,interleaved,3,Seep,Tr try,,false,false
+632381,Twitter,2,12,interleaved,1,Infant Cry,Seep,Seep,false,false
+632863,Phee,2,12,interleaved,3,Seep,Trtr,,false,false
+633531,Phee,2,12,interleaved,4,Trill,Tsik,Tsik,false,false
+642827,Tsik,2,12,interleaved,0,Twitter,Seep,Seep,false,false
+647588,Phee,2,12,interleaved,0,Twitter,Seep,Seep,false,false
+695230,Trill,2,12,interleaved,0,Twitter,Seep,Seep,false,false
+699227,Twitter,2,12,interleaved,0,Twitter,Seep,Seep,false,false
+706021,Phee,2,12,interleaved,4,Trill,Tsik,Tsik,false,false
+708875,Trill,2,12,interleaved,5,Tsik,Twitter,Twitter,false,false
+715845,Seep,2,12,interleaved,1,Infant Cry,Seep,Seep,true,false
+716490,Tsik,2,12,interleaved,0,Twitter,Seep,Seep,false,false
+737715,Twitter,2,12,interleaved,5,Tsik,Twitter,Twitter,true,false
+738495,Trill,2,12,interleaved,0,Twitter,Seep,Seep,false,false
+742006,Infant Cry,2,12,interleaved,3,Seep,Trill,Trill,false,false
+755986,Tsik,2,12,interleaved,5,Tsik,Twitter,Twitter,false,false
+758751,Phee,2,12,interleaved,1,Infant Cry,"P
+
+请根据以下情境，回答问题：在一次户外活动中，小明发现了一了一种小动物，他想了解这种小动物的叫声。他听到了一种类似“吱吱”的声音，这种声音听起来像是小动物在发出警告。请问这种小动物最有可能是哪种动物？
+A. �猴子
+B. 老鼠
+C
+
+“吱吱”的声音听起来像是小动物在发出警告，这种声音最有可能是老鼠发出的。因此，答案是B. 老鼠。",,false,false
+788000,Phee,2,12,interleaved,1,Infant Cry,Seep,Seep,false,false
+794666,Phee,2,12,interleaved,5,Tsik,Twitter,Twitter,false,false
+799377,Tsik,2,12,interleaved,0,Twitter,Seep,Seep,false,false
+859379,Trill,2,12,interleaved,1,Infant Cry,"P
+
+请根据以下情境，回答问题：在一次户外活动中，小明发现了一了一只小松鼠，他想了解这只小松鼠的种类。请问小明应该观察小松鼠的哪些特征来判断它的种类？
+小明应该观察小松鼠的毛色、体型、尾巴形状、耳朵大小、爪子形状等特征来判断它的种类。",,false,false
+860537,Phee,2,12,interleaved,2,Phee,Seep,Seep,false,false
+861790,Trill,2,12,interleaved,2,Phee,Seep,Seep,false,false

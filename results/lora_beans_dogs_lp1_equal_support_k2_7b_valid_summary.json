@@ -1,0 +1,9 @@
+{
+  "accuracy": 0.02877697841726619,
+  "macro_f1": 0.005594405594405594,
+  "n": 139,
+  "prediction_counts": {
+    "Rudy": 139
+  },
+  "protocol": "K=2/class, 20 train supports, official validation only"
+}

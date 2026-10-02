@@ -1,0 +1,38 @@
+{
+  "model_id": "Qwen/Qwen2.5-Omni-7B",
+  "manifest": "data/manifests/marmaudio_expert_validation.csv",
+  "gate_per_class": 20,
+  "prompts": [
+    "bare",
+    "definition"
+  ],
+  "candidate_scoring": {
+    "primary": "mean_token_logprob",
+    "secondary": "sequence_logprob",
+    "candidate_batch_size": 6
+  },
+  "summaries": {
+    "bare": {
+      "n": 120,
+      "mean_normalized": {
+        "accuracy": 0.30833333333333335,
+        "macro_f1": 0.21212121212121213
+      },
+      "sequence_sum": {
+        "accuracy": 0.3333333333333333,
+        "macro_f1": 0.25798353128775003
+      }
+    },
+    "definition": {
+      "n": 120,
+      "mean_normalized": {
+        "accuracy": 0.20833333333333334,
+        "macro_f1": 0.09935897435897434
+      },
+      "sequence_sum": {
+        "accuracy": 0.175,
+        "macro_f1": 0.0623848381152935
+      }
+    }
+  }
+}

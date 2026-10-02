@@ -1,0 +1,48 @@
+{
+  "n": 546,
+  "accuracy": 0.826007326007326,
+  "macro_f1": 0.8250592684571707,
+  "protocol": "nested_stratified_recording_group_oof",
+  "selections": [
+    {
+      "fold": 1,
+      "layer": 9,
+      "alpha": 100,
+      "inner_macro_f1": 0.8622455489986183,
+      "n_train": 423,
+      "n_test": 123
+    },
+    {
+      "fold": 2,
+      "layer": 12,
+      "alpha": 100,
+      "inner_macro_f1": 0.8719741322226128,
+      "n_train": 421,
+      "n_test": 125
+    },
+    {
+      "fold": 3,
+      "layer": 23,
+      "alpha": 100,
+      "inner_macro_f1": 0.8422013945997975,
+      "n_train": 436,
+      "n_test": 110
+    },
+    {
+      "fold": 4,
+      "layer": 7,
+      "alpha": 0.01,
+      "inner_macro_f1": 0.8398668585556847,
+      "n_train": 430,
+      "n_test": 116
+    },
+    {
+      "fold": 5,
+      "layer": 16,
+      "alpha": 100,
+      "inner_macro_f1": 0.8494118080547652,
+      "n_train": 474,
+      "n_test": 72
+    }
+  ]
+}

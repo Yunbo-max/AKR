@@ -1,0 +1,16 @@
+{
+  "accuracy": 0.2517985611510791,
+  "macro_f1": 0.12261904761904763,
+  "n": 139,
+  "invalid": 0,
+  "invalid_response_rate": 0.0,
+  "prediction_counts": {
+    "Mac": 101,
+    "Luke": 32,
+    "Zoe": 6
+  },
+  "split": "test",
+  "protocol": "one epoch rank-8 q/v Thinker LoRA on all 415 official train examples; valid loss monitored on 64 official valid; untouched official test evaluated once after training",
+  "coverage_verified_against_manifest": true,
+  "query_labels_used_for": "post_hoc_scoring_only"
+}

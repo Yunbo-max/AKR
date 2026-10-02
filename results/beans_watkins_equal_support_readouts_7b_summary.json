@@ -1,0 +1,58 @@
+{
+  "manifest": "data/manifests/beans_watkins_all_full_lp1.csv",
+  "split": "results/beans_watkins_equal_support_split_seed20260814.json",
+  "representation_dir": "results/reps_beans_watkins_7b",
+  "feature_layer": 28,
+  "ridge_alpha": 1.0,
+  "protocol": "same nested K-per-class support; no query-label model selection",
+  "results": {
+    "K=1/nearest_centroid": {
+      "support_k_per_class": 1,
+      "support_k_total": 31,
+      "method": "nearest_centroid",
+      "n_query": 339,
+      "accuracy": 0.26843657817109146,
+      "macro_f1": 0.2973795404079826
+    },
+    "K=1/linear_probe": {
+      "support_k_per_class": 1,
+      "support_k_total": 31,
+      "method": "linear_probe",
+      "n_query": 339,
+      "accuracy": 0.3215339233038348,
+      "macro_f1": 0.3635173360141205
+    },
+    "K=2/nearest_centroid": {
+      "support_k_per_class": 2,
+      "support_k_total": 62,
+      "method": "nearest_centroid",
+      "n_query": 339,
+      "accuracy": 0.3421828908554572,
+      "macro_f1": 0.3679341595534023
+    },
+    "K=2/linear_probe": {
+      "support_k_per_class": 2,
+      "support_k_total": 62,
+      "method": "linear_probe",
+      "n_query": 339,
+      "accuracy": 0.4247787610619469,
+      "macro_f1": 0.4417193836014914
+    },
+    "K=4/nearest_centroid": {
+      "support_k_per_class": 4,
+      "support_k_total": 124,
+      "method": "nearest_centroid",
+      "n_query": 339,
+      "accuracy": 0.4837758112094395,
+      "macro_f1": 0.49430391950824637
+    },
+    "K=4/linear_probe": {
+      "support_k_per_class": 4,
+      "support_k_total": 124,
+      "method": "linear_probe",
+      "n_query": 339,
+      "accuracy": 0.5752212389380531,
+      "macro_f1": 0.5833748534949311
+    }
+  }
+}

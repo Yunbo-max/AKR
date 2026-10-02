@@ -1,0 +1,59 @@
+{
+  "protocol": "support class-order rotations are blocked within target class and approximately balanced globally; positions are post-hoc diagnostics",
+  "cells": [
+    {
+      "name": "Marm K2 blocked",
+      "n_query": 75,
+      "n_labels": 6,
+      "valid_prediction_rate": 1.0,
+      "first_support_class_copy_rate": 0.36,
+      "last_support_class_copy_rate": 0.36,
+      "first_copy_exact_binomial_p_vs_uniform_label_prior": 4.2608626696181185e-05,
+      "last_copy_exact_binomial_p_vs_uniform_label_prior": 4.2608626696181185e-05,
+      "prediction_position_counts": {
+        "0": 27,
+        "1": 21,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 27
+      }
+    },
+    {
+      "name": "Marm K2 interleaved",
+      "n_query": 75,
+      "n_labels": 6,
+      "valid_prediction_rate": 0.88,
+      "first_support_class_copy_rate": 0.6,
+      "last_support_class_copy_rate": 0.0,
+      "first_copy_exact_binomial_p_vs_uniform_label_prior": 3.639820390567199e-17,
+      "last_copy_exact_binomial_p_vs_uniform_label_prior": 1.0,
+      "prediction_position_counts": {
+        "0": 45,
+        "1": 6,
+        "2": 13,
+        "3": 2,
+        "4": 0,
+        "5": 0
+      }
+    },
+    {
+      "name": "Marm K8 interleaved",
+      "n_query": 75,
+      "n_labels": 6,
+      "valid_prediction_rate": 1.0,
+      "first_support_class_copy_rate": 1.0,
+      "last_support_class_copy_rate": 0.0,
+      "first_copy_exact_binomial_p_vs_uniform_label_prior": 4.351672676590475e-59,
+      "last_copy_exact_binomial_p_vs_uniform_label_prior": 1.0,
+      "prediction_position_counts": {
+        "0": 75,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0
+      }
+    }
+  ]
+}

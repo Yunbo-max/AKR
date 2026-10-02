@@ -1,0 +1,84 @@
+{
+  "protocol": "nested_recording_group_oof_train_full_apply_paired_conditions",
+  "selection_uses": "full condition inner folds only",
+  "conditions": [
+    {
+      "condition": "full_0-8k",
+      "n": 546,
+      "accuracy": 0.9542124542124543,
+      "macro_f1": 0.9532308047424553
+    },
+    {
+      "condition": "lp_0-1000",
+      "n": 546,
+      "accuracy": 0.3498168498168498,
+      "macro_f1": 0.26214698096013045
+    },
+    {
+      "condition": "lp_0-2000",
+      "n": 546,
+      "accuracy": 0.5457875457875457,
+      "macro_f1": 0.5218392466135638
+    },
+    {
+      "condition": "lp_0-4000",
+      "n": 546,
+      "accuracy": 0.5952380952380952,
+      "macro_f1": 0.5876770426096753
+    },
+    {
+      "condition": "lp_0-6000",
+      "n": 546,
+      "accuracy": 0.8864468864468864,
+      "macro_f1": 0.8828295851640036
+    },
+    {
+      "condition": "lp_0-8000",
+      "n": 546,
+      "accuracy": 0.9542124542124543,
+      "macro_f1": 0.9533812848259378
+    }
+  ],
+  "selections": [
+    {
+      "fold": 1,
+      "layer": 0,
+      "alpha": 100,
+      "full_inner_macro_f1": 0.9580038989435762,
+      "n_train": 423,
+      "n_test": 123
+    },
+    {
+      "fold": 2,
+      "layer": 0,
+      "alpha": 100,
+      "full_inner_macro_f1": 0.9664540538768255,
+      "n_train": 421,
+      "n_test": 125
+    },
+    {
+      "fold": 3,
+      "layer": 19,
+      "alpha": 0.01,
+      "full_inner_macro_f1": 0.9666094294573658,
+      "n_train": 436,
+      "n_test": 110
+    },
+    {
+      "fold": 4,
+      "layer": 15,
+      "alpha": 100,
+      "full_inner_macro_f1": 0.95105074556899,
+      "n_train": 430,
+      "n_test": 116
+    },
+    {
+      "fold": 5,
+      "layer": 21,
+      "alpha": 10,
+      "full_inner_macro_f1": 0.957057291259312,
+      "n_train": 474,
+      "n_test": 72
+    }
+  ]
+}

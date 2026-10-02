@@ -1,0 +1,13 @@
+event_id,target,target_output,support_k_per_class,support_k_total,method,readout,raw_prediction,candidate_scores_json,prediction,correct
+31471,Tsik,Tsik,2,12,audio_icl_free,free,Twitter,,Twitter,false
+31828,Seep,Seep,2,12,audio_icl_free,free,Twitter,,Twitter,false
+34756,Phee,Phee,2,12,audio_icl_free,free,Twitter,,Twitter,false
+36485,Phee,Phee,2,12,audio_icl_free,free,Twitter,,Twitter,false
+36522,Twitter,Twitter,2,12,audio_icl_free,free,Twitter,,Twitter,true
+405841,Infant Cry,Infant Cry,2,12,audio_icl_free,free,Twitter,,Twitter,false
+408631,Phee,Phee,2,12,audio_icl_free,free,Twitter,,Twitter,false
+50919,Tsik,Tsik,2,12,audio_icl_free,free,Twitter,,Twitter,false
+51436,Trill,Trill,2,12,audio_icl_free,free,Twitter,,Twitter,false
+517703,Trill,Trill,2,12,audio_icl_free,free,Twitter,,Twitter,false
+518079,Phee,Phee,2,12,audio_icl_free,free,Twitter,,Twitter,false
+521545,Phee,Phee,2,12,audio_icl_free,free,Twitter,,Twitter,false

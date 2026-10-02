@@ -1,0 +1,61 @@
+event_id,audio_path,label,recording_id,provenance,annotation_tsv_label,example_annotation_agree
+175492,/root/animal-omni-kv/data/marmaudio/examples/Infant_cry_175492.wav,Infant Cry,2022_3_2,official_audio_example,Infant Cry,true
+223326,/root/animal-omni-kv/data/marmaudio/examples/Infant_cry_223326.wav,Infant Cry,2019_12_0,official_audio_example,Infant Cry,true
+349714,/root/animal-omni-kv/data/marmaudio/examples/Infant_cry_349714.wav,Infant Cry,2022_3_12,official_audio_example,Infant Cry,true
+363507,/root/animal-omni-kv/data/marmaudio/examples/Infant_cry_363507.wav,Infant Cry,2022_3_13,official_audio_example,Twitter,false
+509092,/root/animal-omni-kv/data/marmaudio/examples/Infant_cry_509092.wav,Infant Cry,2022_12_3,official_audio_example,Vocalization,false
+526561,/root/animal-omni-kv/data/marmaudio/examples/Infant_cry_526561.wav,Infant Cry,2021_1_0,official_audio_example,Vocalization,false
+574304,/root/animal-omni-kv/data/marmaudio/examples/Infant_cry_574304.wav,Infant Cry,2020_10_1,official_audio_example,Vocalization,false
+583037,/root/animal-omni-kv/data/marmaudio/examples/Infant_cry_583037.wav,Infant Cry,2020_10_1,official_audio_example,Vocalization,false
+764613,/root/animal-omni-kv/data/marmaudio/examples/Infant_cry_764613.wav,Infant Cry,2023_3_5,official_audio_example,Vocalization,false
+775365,/root/animal-omni-kv/data/marmaudio/examples/Infant_cry_775365.wav,Infant Cry,2023_3_6,official_audio_example,Twitter,false
+223119,/root/animal-omni-kv/data/marmaudio/examples/Phee_223119.wav,Phee,2019_12_0,official_audio_example,Phee,true
+223202,/root/animal-omni-kv/data/marmaudio/examples/Phee_223202.wav,Phee,2019_12_0,official_audio_example,Phee,true
+456154,/root/animal-omni-kv/data/marmaudio/examples/Phee_456154.wav,Phee,2022_4_4,official_audio_example,Vocalization,false
+486602,/root/animal-omni-kv/data/marmaudio/examples/Phee_486602.wav,Phee,2023_4_0,official_audio_example,Phee,true
+506529,/root/animal-omni-kv/data/marmaudio/examples/Phee_506529.wav,Phee,2022_12_3,official_audio_example,Phee,true
+556679,/root/animal-omni-kv/data/marmaudio/examples/Phee_556679.wav,Phee,2020_10_0,official_audio_example,Tsik,false
+582850,/root/animal-omni-kv/data/marmaudio/examples/Phee_582850.wav,Phee,2020_10_1,official_audio_example,Phee,true
+658051,/root/animal-omni-kv/data/marmaudio/examples/Phee_658051.wav,Phee,2023_3_2,official_audio_example,Vocalization,false
+663389,/root/animal-omni-kv/data/marmaudio/examples/Phee_663389.wav,Phee,2023_3_2,official_audio_example,Vocalization,false
+863993,/root/animal-omni-kv/data/marmaudio/examples/Phee_863993.wav,Phee,2020_12_2,official_audio_example,Vocalization,false
+152460,/root/animal-omni-kv/data/marmaudio/examples/Seep_152460.wav,Seep,2022_2_8,official_audio_example,Seep,true
+212109,/root/animal-omni-kv/data/marmaudio/examples/Seep_212109.wav,Seep,2022_3_4,official_audio_example,Vocalization,false
+223096,/root/animal-omni-kv/data/marmaudio/examples/Seep_223096.wav,Seep,2019_12_0,official_audio_example,Seep,true
+271618,/root/animal-omni-kv/data/marmaudio/examples/Seep_271618.wav,Seep,2022_4_1,official_audio_example,Vocalization,false
+316584,/root/animal-omni-kv/data/marmaudio/examples/Seep_316584.wav,Seep,2022_3_9,official_audio_example,Vocalization,false
+552983,/root/animal-omni-kv/data/marmaudio/examples/Seep_552983.wav,Seep,2020_11_0,official_audio_example,Vocalization,false
+630151,/root/animal-omni-kv/data/marmaudio/examples/Seep_630151.wav,Seep,2023_3_0,official_audio_example,Vocalization,false
+630317,/root/animal-omni-kv/data/marmaudio/examples/Seep_630317.wav,Seep,2023_3_0,official_audio_example,Twitter,false
+661996,/root/animal-omni-kv/data/marmaudio/examples/Seep_661996.wav,Seep,2023_3_2,official_audio_example,Twitter,false
+846346,/root/animal-omni-kv/data/marmaudio/examples/Seep_846346.wav,Seep,2023_4_9,official_audio_example,Vocalization,false
+223123,/root/animal-omni-kv/data/marmaudio/examples/Trill_223123.wav,Trill,2019_12_0,official_audio_example,Trill,true
+223263,/root/animal-omni-kv/data/marmaudio/examples/Trill_223263.wav,Trill,2019_12_0,official_audio_example,Trill,true
+372350,/root/animal-omni-kv/data/marmaudio/examples/Trill_372350.wav,Trill,2022_10_0,official_audio_example,Vocalization,false
+556199,/root/animal-omni-kv/data/marmaudio/examples/Trill_556199.wav,Trill,2020_11_0,official_audio_example,Tsik,false
+669479,/root/animal-omni-kv/data/marmaudio/examples/Trill_669479.wav,Trill,2020_11_1,official_audio_example,Vocalization,false
+689771,/root/animal-omni-kv/data/marmaudio/examples/Trill_689771.wav,Trill,2023_3_3,official_audio_example,Vocalization,false
+717061,/root/animal-omni-kv/data/marmaudio/examples/Trill_717061.wav,Trill,2020_10_3,official_audio_example,Tsik,false
+727676,/root/animal-omni-kv/data/marmaudio/examples/Trill_727676.wav,Trill,2023_4_2,official_audio_example,Vocalization,false
+73886,/root/animal-omni-kv/data/marmaudio/examples/Trill_73886.wav,Trill,2022_2_1,official_audio_example,Trill,true
+852106,/root/animal-omni-kv/data/marmaudio/examples/Trill_852106.wav,Trill,2023_4_9,official_audio_example,Vocalization,false
+209901,/root/animal-omni-kv/data/marmaudio/examples/Tsik_209901.wav,Tsik,2022_12_0,official_audio_example,Vocalization,false
+232662,/root/animal-omni-kv/data/marmaudio/examples/Tsik_232662.wav,Tsik,2022_12_0,official_audio_example,Tsik,true
+353144,/root/animal-omni-kv/data/marmaudio/examples/Tsik_353144.wav,Tsik,2022_12_2,official_audio_example,Vocalization,false
+508925,/root/animal-omni-kv/data/marmaudio/examples/Tsik_508925.wav,Tsik,2022_12_3,official_audio_example,Vocalization,false
+564120,/root/animal-omni-kv/data/marmaudio/examples/Tsik_564120.wav,Tsik,2020_10_0,official_audio_example,Twitter,false
+622818,/root/animal-omni-kv/data/marmaudio/examples/Tsik_622818.wav,Tsik,2020_10_2,official_audio_example,Infant Cry,false
+668216,/root/animal-omni-kv/data/marmaudio/examples/Tsik_668216.wav,Tsik,2023_3_2,official_audio_example,Vocalization,false
+686420,/root/animal-omni-kv/data/marmaudio/examples/Tsik_686420.wav,Tsik,2023_4_2,official_audio_example,Tsik,true
+726184,/root/animal-omni-kv/data/marmaudio/examples/Tsik_726184.wav,Tsik,2023_4_2,official_audio_example,Vocalization,false
+806933,/root/animal-omni-kv/data/marmaudio/examples/Tsik_806933.wav,Tsik,2023_4_5,official_audio_example,Vocalization,false
+211828,/root/animal-omni-kv/data/marmaudio/examples/Twitter_211828.wav,Twitter,2019_12_0,official_audio_example,Twitter,true
+235475,/root/animal-omni-kv/data/marmaudio/examples/Twitter_235475.wav,Twitter,2022_12_1,official_audio_example,Vocalization,false
+245331,/root/animal-omni-kv/data/marmaudio/examples/Twitter_245331.wav,Twitter,2022_3_5,official_audio_example,Vocalization,false
+399262,/root/animal-omni-kv/data/marmaudio/examples/Twitter_399262.wav,Twitter,2022_4_2,official_audio_example,Vocalization,false
+508836,/root/animal-omni-kv/data/marmaudio/examples/Twitter_508836.wav,Twitter,2023_4_1,official_audio_example,Phee,false
+556729,/root/animal-omni-kv/data/marmaudio/examples/Twitter_556729.wav,Twitter,2020_10_0,official_audio_example,Vocalization,false
+599,/root/animal-omni-kv/data/marmaudio/examples/Twitter_599.wav,Twitter,2022_1_0,official_audio_example,Twitter,true
+669032,/root/animal-omni-kv/data/marmaudio/examples/Twitter_669032.wav,Twitter,2020_11_1,official_audio_example,Vocalization,false
+692890,/root/animal-omni-kv/data/marmaudio/examples/Twitter_692890.wav,Twitter,2023_2_0,official_audio_example,Vocalization,false
+748796,/root/animal-omni-kv/data/marmaudio/examples/Twitter_748796.wav,Twitter,2023_3_5,official_audio_example,Vocalization,false

@@ -1,0 +1,35 @@
+{
+  "protocol": "paired official fixed test; no test-label model selection",
+  "bootstrap_draws": 20000,
+  "seed": 20260814,
+  "comparisons": [
+    {
+      "dataset": "dogs",
+      "n": 139,
+      "qwen_probe_accuracy": 0.9280575539568345,
+      "aves_bio_probe_accuracy": 0.8345323741007195,
+      "qwen_minus_aves": 0.09352517985611511,
+      "paired_bootstrap_95_ci": [
+        0.03597122302158273,
+        0.1510791366906475
+      ],
+      "qwen_only_correct": 16,
+      "aves_only_correct": 3,
+      "mcnemar_exact_two_sided_p": 0.004425048828125
+    },
+    {
+      "dataset": "watkins",
+      "n": 339,
+      "qwen_probe_accuracy": 0.8820058997050148,
+      "aves_bio_probe_accuracy": 0.8584070796460177,
+      "qwen_minus_aves": 0.02359882005899705,
+      "paired_bootstrap_95_ci": [
+        -0.008849557522123894,
+        0.058997050147492625
+      ],
+      "qwen_only_correct": 22,
+      "aves_only_correct": 14,
+      "mcnemar_exact_two_sided_p": 0.24298495403490966
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "dogs_frequency",
+      "passed": true,
+      "detail": "conditions=6 split={'train': 415, 'valid': 139, 'test': 139}"
+    },
+    {
+      "name": "watkins_frequency",
+      "passed": true,
+      "detail": "conditions=6 split={'train': 1017, 'valid': 339, 'test': 339}"
+    },
+    {
+      "name": "correction_geometry",
+      "passed": true,
+      "detail": "datasets=['dogs_k2_lp1', 'marm_failures', 'marm_k2_full', 'marm_k2_lp1']"
+    },
+    {
+      "name": "support_scaling",
+      "passed": true,
+      "detail": "K=[1, 2, 4, 8, 16] strict_gap_tests=2"
+    },
+    {
+      "name": "factorized_validation_split",
+      "passed": true,
+      "detail": "selection=30 confirmation=109 disjoint=True"
+    },
+    {
+      "name": "factorized_is_explicitly_partial",
+      "passed": true,
+      "detail": "queries=16/30 rows=80"
+    },
+    {
+      "name": "candidate_k8_is_explicitly_partial",
+      "passed": true,
+      "detail": "queries=52/75 rows=52"
+    }
+  ]
+}

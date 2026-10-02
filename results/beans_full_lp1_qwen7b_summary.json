@@ -1,0 +1,38 @@
+{
+  "dogs": {
+    "full_0-8k": {
+      "accuracy": 0.02877697841726619,
+      "macro_f1": 0.005594405594405594,
+      "n": 139
+    },
+    "lp_0-1000": {
+      "accuracy": 0.02877697841726619,
+      "macro_f1": 0.005594405594405594,
+      "n": 139
+    },
+    "eligible_full_correct_lp1_wrong": [],
+    "eligible_n": 0,
+    "same_prediction_n": 139
+  },
+  "watkins": {
+    "full_0-8k": {
+      "accuracy": 0.061946902654867256,
+      "macro_f1": 0.021954912004380104,
+      "n": 339
+    },
+    "lp_0-1000": {
+      "accuracy": 0.061946902654867256,
+      "macro_f1": 0.011965417763187644,
+      "n": 339
+    },
+    "eligible_full_correct_lp1_wrong": [
+      "test_66",
+      "test_81",
+      "test_207",
+      "test_323",
+      "test_1029"
+    ],
+    "eligible_n": 5,
+    "same_prediction_n": 201
+  }
+}

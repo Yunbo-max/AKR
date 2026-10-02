@@ -1,0 +1,273 @@
+{
+  "bootstrap_draws": 20000,
+  "seed": 20260814,
+  "inference": "paired example bootstrap; exact two-sided discordant-pair binomial test",
+  "comparisons": [
+    {
+      "comparison": "Marm K1 probe - zero-shot bare candidate sequence-sum",
+      "n": 75,
+      "accuracy_a": 0.4666666666666667,
+      "accuracy_b": 0.49333333333333335,
+      "paired_difference_a_minus_b": -0.02666666666666667,
+      "bootstrap_95_ci": [
+        -0.16,
+        0.12
+      ],
+      "a_only_correct": 13,
+      "b_only_correct": 15,
+      "mcnemar_exact_two_sided_p": 0.8505540192127228
+    },
+    {
+      "comparison": "Marm bare candidate sequence-sum - free generation",
+      "n": 75,
+      "accuracy_a": 0.49333333333333335,
+      "accuracy_b": 0.41333333333333333,
+      "paired_difference_a_minus_b": 0.08,
+      "bootstrap_95_ci": [
+        0.013333333333333334,
+        0.16
+      ],
+      "a_only_correct": 7,
+      "b_only_correct": 1,
+      "mcnemar_exact_two_sided_p": 0.0703125
+    },
+    {
+      "comparison": "Marm K1 probe - K1 audio ICL free",
+      "n": 75,
+      "accuracy_a": 0.4666666666666667,
+      "accuracy_b": 0.08,
+      "paired_difference_a_minus_b": 0.38666666666666666,
+      "bootstrap_95_ci": [
+        0.25333333333333335,
+        0.52
+      ],
+      "a_only_correct": 33,
+      "b_only_correct": 4,
+      "mcnemar_exact_two_sided_p": 1.0843941709026694e-06
+    },
+    {
+      "comparison": "Marm K1 probe - K1 audio ICL candidate",
+      "n": 75,
+      "accuracy_a": 0.4666666666666667,
+      "accuracy_b": 0.04,
+      "paired_difference_a_minus_b": 0.4266666666666667,
+      "bootstrap_95_ci": [
+        0.30666666666666664,
+        0.5466666666666666
+      ],
+      "a_only_correct": 33,
+      "b_only_correct": 1,
+      "mcnemar_exact_two_sided_p": 4.0745362639427185e-09
+    },
+    {
+      "comparison": "Marm K2 probe - K2 audio ICL free",
+      "n": 75,
+      "accuracy_a": 0.5866666666666667,
+      "accuracy_b": 0.17333333333333334,
+      "paired_difference_a_minus_b": 0.41333333333333333,
+      "bootstrap_95_ci": [
+        0.28,
+        0.5466666666666666
+      ],
+      "a_only_correct": 34,
+      "b_only_correct": 3,
+      "mcnemar_exact_two_sided_p": 1.233129296451807e-07
+    },
+    {
+      "comparison": "Marm arbitrary-label candidate K1 - K0",
+      "n": 75,
+      "accuracy_a": 0.12,
+      "accuracy_b": 0.09333333333333334,
+      "paired_difference_a_minus_b": 0.02666666666666667,
+      "bootstrap_95_ci": [
+        -0.02666666666666667,
+        0.08
+      ],
+      "a_only_correct": 3,
+      "b_only_correct": 1,
+      "mcnemar_exact_two_sided_p": 0.625
+    },
+    {
+      "comparison": "Dogs K1 probe - K1 audio ICL free",
+      "n": 139,
+      "accuracy_a": 0.35251798561151076,
+      "accuracy_b": 0.07194244604316546,
+      "paired_difference_a_minus_b": 0.2805755395683453,
+      "bootstrap_95_ci": [
+        0.2014388489208633,
+        0.3597122302158273
+      ],
+      "a_only_correct": 42,
+      "b_only_correct": 3,
+      "mcnemar_exact_two_sided_p": 8.654978955746628e-10
+    },
+    {
+      "comparison": "Dogs K2 probe - K2 LoRA",
+      "n": 139,
+      "accuracy_a": 0.35251798561151076,
+      "accuracy_b": 0.02877697841726619,
+      "paired_difference_a_minus_b": 0.3237410071942446,
+      "bootstrap_95_ci": [
+        0.23741007194244604,
+        0.41007194244604317
+      ],
+      "a_only_correct": 48,
+      "b_only_correct": 3,
+      "mcnemar_exact_two_sided_p": 1.9674928353197174e-11
+    },
+    {
+      "comparison": "Dogs conditional pooled - fixed mean at alpha=.03",
+      "n": 139,
+      "accuracy_a": 0.12949640287769784,
+      "accuracy_b": 0.050359712230215826,
+      "paired_difference_a_minus_b": 0.07913669064748201,
+      "bootstrap_95_ci": [
+        0.02877697841726619,
+        0.1366906474820144
+      ],
+      "a_only_correct": 13,
+      "b_only_correct": 2,
+      "mcnemar_exact_two_sided_p": 0.00738525390625
+    },
+    {
+      "comparison": "Dogs ordered tokenwise - permuted at alpha=.03",
+      "n": 139,
+      "accuracy_a": 0.1079136690647482,
+      "accuracy_b": 0.03597122302158273,
+      "paired_difference_a_minus_b": 0.07194244604316546,
+      "bootstrap_95_ci": [
+        0.014388489208633094,
+        0.12949640287769784
+      ],
+      "a_only_correct": 14,
+      "b_only_correct": 4,
+      "mcnemar_exact_two_sided_p": 0.0308837890625
+    },
+    {
+      "comparison": "Dogs ordered tokenwise - conditional pooled at alpha=.03",
+      "n": 139,
+      "accuracy_a": 0.1079136690647482,
+      "accuracy_b": 0.12949640287769784,
+      "paired_difference_a_minus_b": -0.02158273381294964,
+      "bootstrap_95_ci": [
+        -0.09352517985611511,
+        0.050359712230215826
+      ],
+      "a_only_correct": 12,
+      "b_only_correct": 15,
+      "mcnemar_exact_two_sided_p": 0.7011080384254456
+    },
+    {
+      "comparison": "Marm K2 probe - K2 audio ICL candidate",
+      "n": 75,
+      "accuracy_a": 0.5866666666666667,
+      "accuracy_b": 0.17333333333333334,
+      "paired_difference_a_minus_b": 0.41333333333333333,
+      "bootstrap_95_ci": [
+        0.28,
+        0.5466666666666666
+      ],
+      "a_only_correct": 34,
+      "b_only_correct": 3,
+      "mcnemar_exact_two_sided_p": 1.233129296451807e-07
+    },
+    {
+      "comparison": "Marm K4 probe - K4 audio ICL free",
+      "n": 75,
+      "accuracy_a": 0.7333333333333333,
+      "accuracy_b": 0.17333333333333334,
+      "paired_difference_a_minus_b": 0.56,
+      "bootstrap_95_ci": [
+        0.44,
+        0.6666666666666666
+      ],
+      "a_only_correct": 42,
+      "b_only_correct": 0,
+      "mcnemar_exact_two_sided_p": 4.547473508864641e-13
+    },
+    {
+      "comparison": "Marm K4 probe - K4 audio ICL candidate",
+      "n": 75,
+      "accuracy_a": 0.7333333333333333,
+      "accuracy_b": 0.17333333333333334,
+      "paired_difference_a_minus_b": 0.56,
+      "bootstrap_95_ci": [
+        0.4533333333333333,
+        0.6666666666666666
+      ],
+      "a_only_correct": 42,
+      "b_only_correct": 0,
+      "mcnemar_exact_two_sided_p": 4.547473508864641e-13
+    },
+    {
+      "comparison": "Marm K8 probe - K8 audio ICL free",
+      "n": 75,
+      "accuracy_a": 0.84,
+      "accuracy_b": 0.17333333333333334,
+      "paired_difference_a_minus_b": 0.6666666666666666,
+      "bootstrap_95_ci": [
+        0.56,
+        0.7733333333333333
+      ],
+      "a_only_correct": 50,
+      "b_only_correct": 0,
+      "mcnemar_exact_two_sided_p": 1.7763568394002505e-15
+    },
+    {
+      "comparison": "Marm K2 counterbalanced blocked - fixed grouped order",
+      "n": 75,
+      "accuracy_a": 0.18666666666666668,
+      "accuracy_b": 0.17333333333333334,
+      "paired_difference_a_minus_b": 0.013333333333333334,
+      "bootstrap_95_ci": [
+        -0.06666666666666667,
+        0.10666666666666667
+      ],
+      "a_only_correct": 6,
+      "b_only_correct": 5,
+      "mcnemar_exact_two_sided_p": 1.0
+    },
+    {
+      "comparison": "Marm K2 counterbalanced interleaved - fixed grouped order",
+      "n": 75,
+      "accuracy_a": 0.13333333333333333,
+      "accuracy_b": 0.17333333333333334,
+      "paired_difference_a_minus_b": -0.04,
+      "bootstrap_95_ci": [
+        -0.16,
+        0.08
+      ],
+      "a_only_correct": 9,
+      "b_only_correct": 12,
+      "mcnemar_exact_two_sided_p": 0.6636238098144531
+    },
+    {
+      "comparison": "Marm K2 probe - K2 audio ICL blocked order",
+      "n": 75,
+      "accuracy_a": 0.5866666666666667,
+      "accuracy_b": 0.18666666666666668,
+      "paired_difference_a_minus_b": 0.4,
+      "bootstrap_95_ci": [
+        0.26666666666666666,
+        0.5333333333333333
+      ],
+      "a_only_correct": 35,
+      "b_only_correct": 5,
+      "mcnemar_exact_two_sided_p": 1.382612026645802e-06
+    },
+    {
+      "comparison": "Marm K2 probe - K2 audio ICL interleaved order",
+      "n": 75,
+      "accuracy_a": 0.5866666666666667,
+      "accuracy_b": 0.13333333333333333,
+      "paired_difference_a_minus_b": 0.4533333333333333,
+      "bootstrap_95_ci": [
+        0.30666666666666664,
+        0.6
+      ],
+      "a_only_correct": 40,
+      "b_only_correct": 6,
+      "mcnemar_exact_two_sided_p": 3.1028037028590916e-07
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+task,dataset,model_method,input,protocol,n,accuracy,macro_f1
+Call type,MarmAudio,Official ResNet-50,original 0–48 kHz,fixed expert corpus,546,0.8864468864468864,0.8868482744620745
+Call type,MarmAudio,AVES-bio + linear probe,Qwen-matched 0–8 kHz,nested recording-group OOF,546,0.9340659340659341,0.930929698280567
+Call type,MarmAudio,Qwen-3B zero-shot,observable full 0–8 kHz,fixed expert corpus,546,0.2032967032967033,0.12731345702653069
+Call type,MarmAudio,Qwen-7B zero-shot,observable full 0–8 kHz,fixed expert corpus,546,0.2948717948717949,0.21938794847249718
+Call type,MarmAudio,Qwen-7B + linear probe,observable full 0–8 kHz,nested recording-group OOF,546,0.9542124542124543,0.9532308047424553
+Individual,BEANS Dogs,Qwen-7B zero-shot,observable full 0–8 kHz,official fixed test,139,0.02877697841726619,0.005594405594405594
+Individual,BEANS Dogs,Qwen-7B Thinker LoRA,observable full 0–8 kHz,one epoch; official fixed test,139,0.2517985611510791,0.12261904761904763
+Individual,BEANS Dogs,Qwen-7B + linear probe,observable full 0–8 kHz,official fixed test,139,0.9280575539568345,0.9095401765010166
+Individual,BEANS Dogs,AVES-bio + linear probe,Qwen-matched 0–8 kHz,official fixed test,139,0.8345323741007195,0.807207055636016
+Species,BEANS Watkins,Qwen-7B zero-shot,observable full 0–8 kHz,paired official fixed test,339,0.061946902654867256,0.021954912004380104
+Species,BEANS Watkins,Qwen-7B Thinker LoRA,observable full 0–8 kHz,one epoch; official fixed test,339,0.31563421828908556,0.23439323597981787
+Species,BEANS Watkins,Qwen-7B + linear probe,observable full 0–8 kHz,official fixed test,339,0.8820058997050148,0.8824960111870902
+Species,BEANS Watkins,AVES-bio + linear probe,Qwen-matched 0–8 kHz,official fixed test,339,0.8584070796460177,0.8547694571796925

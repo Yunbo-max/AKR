@@ -1,0 +1,3539 @@
+{
+  "n": 20,
+  "events": [
+    "train_100",
+    "train_146",
+    "train_162",
+    "train_185",
+    "train_204",
+    "train_22",
+    "train_266",
+    "train_28",
+    "train_281",
+    "train_364",
+    "train_403",
+    "train_453",
+    "train_486",
+    "train_519",
+    "train_522",
+    "train_541",
+    "train_553",
+    "train_649",
+    "train_656",
+    "train_86"
+  ],
+  "label_counts": {
+    "Farley": 2,
+    "Freid": 2,
+    "Keri": 2,
+    "Louie": 2,
+    "Luke": 2,
+    "Mac": 2,
+    "Roodie": 2,
+    "Rudy": 2,
+    "Siggy": 2,
+    "Zoe": 2
+  },
+  "layers": {
+    "0": {
+      "all": {
+        "n": 20,
+        "token_count": 250,
+        "effective_token_count_mean": 5.618226528167725,
+        "effective_token_fraction_mean": 0.022472906857728958,
+        "energy_center_of_mass_mean": 0.8883616211050779,
+        "early_third_energy_mean": 0.08989614248275757,
+        "middle_third_energy_mean": 0.038414403796195984,
+        "late_third_energy_mean": 0.8716894388198853,
+        "peak_position_mean": 0.9980000000000002
+      },
+      "by_class": {
+        "Farley": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 2.8525543212890625,
+          "effective_token_fraction_mean": 0.011410217732191086,
+          "energy_center_of_mass_mean": 0.9459977978075307,
+          "early_third_energy_mean": 0.042764320969581604,
+          "middle_third_energy_mean": 0.011066649109125137,
+          "late_third_energy_mean": 0.9461690187454224,
+          "peak_position_mean": 0.998
+        },
+        "Freid": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 5.078193664550781,
+          "effective_token_fraction_mean": 0.020312776789069176,
+          "energy_center_of_mass_mean": 0.9166946438717077,
+          "early_third_energy_mean": 0.04340756684541702,
+          "middle_third_energy_mean": 0.06333540380001068,
+          "late_third_energy_mean": 0.8932570815086365,
+          "peak_position_mean": 0.998
+        },
+        "Keri": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 2.951390027999878,
+          "effective_token_fraction_mean": 0.011805560439825058,
+          "energy_center_of_mass_mean": 0.9587721328756316,
+          "early_third_energy_mean": 0.021983623504638672,
+          "middle_third_energy_mean": 0.034796617925167084,
+          "late_third_energy_mean": 0.9432197213172913,
+          "peak_position_mean": 0.998
+        },
+        "Louie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 4.019328594207764,
+          "effective_token_fraction_mean": 0.01607731357216835,
+          "energy_center_of_mass_mean": 0.905384680823201,
+          "early_third_energy_mean": 0.06593798846006393,
+          "middle_third_energy_mean": 0.06621081382036209,
+          "late_third_energy_mean": 0.8678512573242188,
+          "peak_position_mean": 0.998
+        },
+        "Luke": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 10.433490753173828,
+          "effective_token_fraction_mean": 0.041733961552381516,
+          "energy_center_of_mass_mean": 0.8293458137256093,
+          "early_third_energy_mean": 0.14576302468776703,
+          "middle_third_energy_mean": 0.02735830470919609,
+          "late_third_energy_mean": 0.8268786072731018,
+          "peak_position_mean": 0.998
+        },
+        "Mac": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 5.655277252197266,
+          "effective_token_fraction_mean": 0.02262111008167267,
+          "energy_center_of_mass_mean": 0.865515843835271,
+          "early_third_energy_mean": 0.11618886888027191,
+          "middle_third_energy_mean": 0.04219511151313782,
+          "late_third_energy_mean": 0.8416160345077515,
+          "peak_position_mean": 0.998
+        },
+        "Roodie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 4.284091949462891,
+          "effective_token_fraction_mean": 0.01713636890053749,
+          "energy_center_of_mass_mean": 0.8865630928784166,
+          "early_third_energy_mean": 0.11129783093929291,
+          "middle_third_energy_mean": 0.01780807226896286,
+          "late_third_energy_mean": 0.8708941340446472,
+          "peak_position_mean": 0.998
+        },
+        "Rudy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 8.955366134643555,
+          "effective_token_fraction_mean": 0.03582146391272545,
+          "energy_center_of_mass_mean": 0.8616321666521454,
+          "early_third_energy_mean": 0.09192151576280594,
+          "middle_third_energy_mean": 0.039938777685165405,
+          "late_third_energy_mean": 0.8681397438049316,
+          "peak_position_mean": 0.998
+        },
+        "Siggy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 6.707239627838135,
+          "effective_token_fraction_mean": 0.026828959584236145,
+          "energy_center_of_mass_mean": 0.8866326512667283,
+          "early_third_energy_mean": 0.0868854895234108,
+          "middle_third_energy_mean": 0.045480310916900635,
+          "late_third_energy_mean": 0.8676342368125916,
+          "peak_position_mean": 0.998
+        },
+        "Zoe": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 5.245334625244141,
+          "effective_token_fraction_mean": 0.020981337875127792,
+          "energy_center_of_mass_mean": 0.8270773873145352,
+          "early_third_energy_mean": 0.17281118035316467,
+          "middle_third_energy_mean": 0.035953983664512634,
+          "late_third_energy_mean": 0.7912349104881287,
+          "peak_position_mean": 0.998
+        }
+      }
+    },
+    "1": {
+      "all": {
+        "n": 20,
+        "token_count": 250,
+        "effective_token_count_mean": 30.468429565429688,
+        "effective_token_fraction_mean": 0.12187372148036957,
+        "energy_center_of_mass_mean": 0.7718234496961641,
+        "early_third_energy_mean": 0.15145382285118103,
+        "middle_third_energy_mean": 0.12095898389816284,
+        "late_third_energy_mean": 0.7275871634483337,
+        "peak_position_mean": 0.9980000000000002
+      },
+      "by_class": {
+        "Farley": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 21.70645523071289,
+          "effective_token_fraction_mean": 0.08682581782341003,
+          "energy_center_of_mass_mean": 0.7914001621028074,
+          "early_third_energy_mean": 0.13164928555488586,
+          "middle_third_energy_mean": 0.10843758285045624,
+          "late_third_energy_mean": 0.7599130868911743,
+          "peak_position_mean": 0.998
+        },
+        "Freid": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 26.87482452392578,
+          "effective_token_fraction_mean": 0.10749929398298264,
+          "energy_center_of_mass_mean": 0.7928242428738923,
+          "early_third_energy_mean": 0.13734376430511475,
+          "middle_third_energy_mean": 0.09780814498662949,
+          "late_third_energy_mean": 0.7648480534553528,
+          "peak_position_mean": 0.998
+        },
+        "Keri": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 24.527494430541992,
+          "effective_token_fraction_mean": 0.09810997545719147,
+          "energy_center_of_mass_mean": 0.8032352903784012,
+          "early_third_energy_mean": 0.09648321568965912,
+          "middle_third_energy_mean": 0.16735240817070007,
+          "late_third_energy_mean": 0.736164391040802,
+          "peak_position_mean": 0.998
+        },
+        "Louie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 33.67807388305664,
+          "effective_token_fraction_mean": 0.13471229374408722,
+          "energy_center_of_mass_mean": 0.7596015788764816,
+          "early_third_energy_mean": 0.1436750590801239,
+          "middle_third_energy_mean": 0.18248343467712402,
+          "late_third_energy_mean": 0.6738414764404297,
+          "peak_position_mean": 0.998
+        },
+        "Luke": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 37.12456512451172,
+          "effective_token_fraction_mean": 0.1484982669353485,
+          "energy_center_of_mass_mean": 0.7039806471443353,
+          "early_third_energy_mean": 0.21802011132240295,
+          "middle_third_energy_mean": 0.09937994182109833,
+          "late_third_energy_mean": 0.6826000213623047,
+          "peak_position_mean": 0.998
+        },
+        "Mac": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 16.829486846923828,
+          "effective_token_fraction_mean": 0.06731794774532318,
+          "energy_center_of_mass_mean": 0.8552635425624467,
+          "early_third_energy_mean": 0.08840498328208923,
+          "middle_third_energy_mean": 0.09818671643733978,
+          "late_third_energy_mean": 0.8134082555770874,
+          "peak_position_mean": 0.998
+        },
+        "Roodie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 29.75809097290039,
+          "effective_token_fraction_mean": 0.1190323606133461,
+          "energy_center_of_mass_mean": 0.7435511501378496,
+          "early_third_energy_mean": 0.1760558784008026,
+          "middle_third_energy_mean": 0.12823383510112762,
+          "late_third_energy_mean": 0.6957102417945862,
+          "peak_position_mean": 0.998
+        },
+        "Rudy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 57.31788635253906,
+          "effective_token_fraction_mean": 0.2292715311050415,
+          "energy_center_of_mass_mean": 0.7405355036711262,
+          "early_third_energy_mean": 0.1677544116973877,
+          "middle_third_energy_mean": 0.11252164095640182,
+          "late_third_energy_mean": 0.7197239398956299,
+          "peak_position_mean": 0.998
+        },
+        "Siggy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 34.15337371826172,
+          "effective_token_fraction_mean": 0.13661348819732666,
+          "energy_center_of_mass_mean": 0.7587125300944354,
+          "early_third_energy_mean": 0.16501760482788086,
+          "middle_third_energy_mean": 0.11556750535964966,
+          "late_third_energy_mean": 0.7194148302078247,
+          "peak_position_mean": 0.998
+        },
+        "Zoe": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 22.714046478271484,
+          "effective_token_fraction_mean": 0.09085618704557419,
+          "energy_center_of_mass_mean": 0.7691298491198668,
+          "early_third_energy_mean": 0.19013409316539764,
+          "middle_third_energy_mean": 0.09961859881877899,
+          "late_third_energy_mean": 0.710247278213501,
+          "peak_position_mean": 0.998
+        }
+      }
+    },
+    "2": {
+      "all": {
+        "n": 20,
+        "token_count": 250,
+        "effective_token_count_mean": 29.07611083984375,
+        "effective_token_fraction_mean": 0.1163044199347496,
+        "energy_center_of_mass_mean": 0.40065658945159566,
+        "early_third_energy_mean": 0.4701475501060486,
+        "middle_third_energy_mean": 0.2707899212837219,
+        "late_third_energy_mean": 0.2590624690055847,
+        "peak_position_mean": 0.2668
+      },
+      "by_class": {
+        "Farley": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 17.77597999572754,
+          "effective_token_fraction_mean": 0.07110391557216644,
+          "energy_center_of_mass_mean": 0.33447967920376775,
+          "early_third_energy_mean": 0.4978623390197754,
+          "middle_third_energy_mean": 0.3340970277786255,
+          "late_third_energy_mean": 0.16804073750972748,
+          "peak_position_mean": 0.302
+        },
+        "Freid": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 21.854093551635742,
+          "effective_token_fraction_mean": 0.08741637319326401,
+          "energy_center_of_mass_mean": 0.4609447675490114,
+          "early_third_energy_mean": 0.4168112874031067,
+          "middle_third_energy_mean": 0.15866395831108093,
+          "late_third_energy_mean": 0.42452478408813477,
+          "peak_position_mean": 0.402
+        },
+        "Keri": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 24.664730072021484,
+          "effective_token_fraction_mean": 0.09865891933441162,
+          "energy_center_of_mass_mean": 0.38168681896205225,
+          "early_third_energy_mean": 0.5469766855239868,
+          "middle_third_energy_mean": 0.24234727025032043,
+          "late_third_energy_mean": 0.2106761336326599,
+          "peak_position_mean": 0.552
+        },
+        "Louie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 40.6650390625,
+          "effective_token_fraction_mean": 0.162660151720047,
+          "energy_center_of_mass_mean": 0.34048682711318046,
+          "early_third_energy_mean": 0.5324825048446655,
+          "middle_third_energy_mean": 0.28689077496528625,
+          "late_third_energy_mean": 0.18062663078308105,
+          "peak_position_mean": 0.002
+        },
+        "Luke": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 26.770061492919922,
+          "effective_token_fraction_mean": 0.10708025097846985,
+          "energy_center_of_mass_mean": 0.4871286587818886,
+          "early_third_energy_mean": 0.3538137376308441,
+          "middle_third_energy_mean": 0.27558571100234985,
+          "late_third_energy_mean": 0.37060049176216125,
+          "peak_position_mean": 0.502
+        },
+        "Mac": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 35.63203430175781,
+          "effective_token_fraction_mean": 0.14252814650535583,
+          "energy_center_of_mass_mean": 0.47348500301995045,
+          "early_third_energy_mean": 0.38173818588256836,
+          "middle_third_energy_mean": 0.3247503638267517,
+          "late_third_energy_mean": 0.29351142048835754,
+          "peak_position_mean": 0.5
+        },
+        "Roodie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 17.59231185913086,
+          "effective_token_fraction_mean": 0.07036925107240677,
+          "energy_center_of_mass_mean": 0.3328699526161356,
+          "early_third_energy_mean": 0.5405251979827881,
+          "middle_third_energy_mean": 0.27796947956085205,
+          "late_third_energy_mean": 0.18150532245635986,
+          "peak_position_mean": 0.002
+        },
+        "Rudy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 49.73486328125,
+          "effective_token_fraction_mean": 0.1989394575357437,
+          "energy_center_of_mass_mean": 0.3946048455349911,
+          "early_third_energy_mean": 0.5304762721061707,
+          "middle_third_energy_mean": 0.16987089812755585,
+          "late_third_energy_mean": 0.29965293407440186,
+          "peak_position_mean": 0.002
+        },
+        "Siggy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 33.19092559814453,
+          "effective_token_fraction_mean": 0.13276369869709015,
+          "energy_center_of_mass_mean": 0.3840030427274346,
+          "early_third_energy_mean": 0.5041362047195435,
+          "middle_third_energy_mean": 0.22089670598506927,
+          "late_third_energy_mean": 0.2749671936035156,
+          "peak_position_mean": 0.002
+        },
+        "Zoe": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 22.881019592285156,
+          "effective_token_fraction_mean": 0.09152407944202423,
+          "energy_center_of_mass_mean": 0.41687629900754475,
+          "early_third_energy_mean": 0.3966536521911621,
+          "middle_third_energy_mean": 0.41682732105255127,
+          "late_third_energy_mean": 0.1865191012620926,
+          "peak_position_mean": 0.402
+        }
+      }
+    },
+    "3": {
+      "all": {
+        "n": 20,
+        "token_count": 250,
+        "effective_token_count_mean": 23.503093719482422,
+        "effective_token_fraction_mean": 0.09401236474514008,
+        "energy_center_of_mass_mean": 0.49116108651564955,
+        "early_third_energy_mean": 0.41528186202049255,
+        "middle_third_energy_mean": 0.18674065172672272,
+        "late_third_energy_mean": 0.39797744154930115,
+        "peak_position_mean": 0.46799999999999997
+      },
+      "by_class": {
+        "Farley": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 18.77851104736328,
+          "effective_token_fraction_mean": 0.07511404901742935,
+          "energy_center_of_mass_mean": 0.5110144754214018,
+          "early_third_energy_mean": 0.36458757519721985,
+          "middle_third_energy_mean": 0.21709007024765015,
+          "late_third_energy_mean": 0.4183223247528076,
+          "peak_position_mean": 0.5
+        },
+        "Freid": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 19.946199417114258,
+          "effective_token_fraction_mean": 0.0797848030924797,
+          "energy_center_of_mass_mean": 0.6268879270577603,
+          "early_third_energy_mean": 0.24550846219062805,
+          "middle_third_energy_mean": 0.12480691075325012,
+          "late_third_energy_mean": 0.6296846866607666,
+          "peak_position_mean": 0.872
+        },
+        "Keri": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 30.312503814697266,
+          "effective_token_fraction_mean": 0.12125001847743988,
+          "energy_center_of_mass_mean": 0.540837232718528,
+          "early_third_energy_mean": 0.308377742767334,
+          "middle_third_energy_mean": 0.30516886711120605,
+          "late_third_energy_mean": 0.3864533603191376,
+          "peak_position_mean": 0.8
+        },
+        "Louie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 27.076133728027344,
+          "effective_token_fraction_mean": 0.10830453038215637,
+          "energy_center_of_mass_mean": 0.45852245347534426,
+          "early_third_energy_mean": 0.3964024782180786,
+          "middle_third_energy_mean": 0.29964402318000793,
+          "late_third_energy_mean": 0.30395346879959106,
+          "peak_position_mean": 0.202
+        },
+        "Luke": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 22.54306411743164,
+          "effective_token_fraction_mean": 0.09017226099967957,
+          "energy_center_of_mass_mean": 0.5638838374097701,
+          "early_third_energy_mean": 0.3489082157611847,
+          "middle_third_energy_mean": 0.10576294362545013,
+          "late_third_energy_mean": 0.5453287959098816,
+          "peak_position_mean": 0.502
+        },
+        "Mac": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 26.976369857788086,
+          "effective_token_fraction_mean": 0.10790547728538513,
+          "energy_center_of_mass_mean": 0.5600516522677081,
+          "early_third_energy_mean": 0.3111881613731384,
+          "middle_third_energy_mean": 0.2851239740848541,
+          "late_third_energy_mean": 0.40368786454200745,
+          "peak_position_mean": 0.7
+        },
+        "Roodie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 22.170211791992188,
+          "effective_token_fraction_mean": 0.08868084102869034,
+          "energy_center_of_mass_mean": 0.40417176346614203,
+          "early_third_energy_mean": 0.5540789365768433,
+          "middle_third_energy_mean": 0.13910067081451416,
+          "late_third_energy_mean": 0.3068203926086426,
+          "peak_position_mean": 0.5
+        },
+        "Rudy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 36.80263900756836,
+          "effective_token_fraction_mean": 0.14721055328845978,
+          "energy_center_of_mass_mean": 0.48897205438410307,
+          "early_third_energy_mean": 0.43944019079208374,
+          "middle_third_energy_mean": 0.13422146439552307,
+          "late_third_energy_mean": 0.4263383150100708,
+          "peak_position_mean": 0.5
+        },
+        "Siggy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 18.64774513244629,
+          "effective_token_fraction_mean": 0.07459098100662231,
+          "energy_center_of_mass_mean": 0.41730461337722224,
+          "early_third_energy_mean": 0.5009191036224365,
+          "middle_third_energy_mean": 0.14330485463142395,
+          "late_third_energy_mean": 0.3557758927345276,
+          "peak_position_mean": 0.002
+        },
+        "Zoe": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 11.777543067932129,
+          "effective_token_fraction_mean": 0.0471101738512516,
+          "energy_center_of_mass_mean": 0.3399648555785155,
+          "early_third_energy_mean": 0.6834077835083008,
+          "middle_third_energy_mean": 0.11318270117044449,
+          "late_third_energy_mean": 0.20340955257415771,
+          "peak_position_mean": 0.10200000000000001
+        }
+      }
+    },
+    "4": {
+      "all": {
+        "n": 20,
+        "token_count": 250,
+        "effective_token_count_mean": 4.7783522605896,
+        "effective_token_fraction_mean": 0.019113408401608467,
+        "energy_center_of_mass_mean": 0.14251009739608142,
+        "early_third_energy_mean": 0.8360104560852051,
+        "middle_third_energy_mean": 0.05918385833501816,
+        "late_third_energy_mean": 0.10480572283267975,
+        "peak_position_mean": 0.0020000000000000005
+      },
+      "by_class": {
+        "Farley": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 2.2108726501464844,
+          "effective_token_fraction_mean": 0.008843490853905678,
+          "energy_center_of_mass_mean": 0.0636426124072002,
+          "early_third_energy_mean": 0.9263710975646973,
+          "middle_third_energy_mean": 0.03133734315633774,
+          "late_third_energy_mean": 0.042291704565286636,
+          "peak_position_mean": 0.002
+        },
+        "Freid": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 3.706888198852539,
+          "effective_token_fraction_mean": 0.014827552251517773,
+          "energy_center_of_mass_mean": 0.15520505158423067,
+          "early_third_energy_mean": 0.8102973103523254,
+          "middle_third_energy_mean": 0.052019763737916946,
+          "late_third_energy_mean": 0.13768285512924194,
+          "peak_position_mean": 0.002
+        },
+        "Keri": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 3.257216453552246,
+          "effective_token_fraction_mean": 0.013028865680098534,
+          "energy_center_of_mass_mean": 0.10595414758902702,
+          "early_third_energy_mean": 0.8780205249786377,
+          "middle_third_energy_mean": 0.043202146887779236,
+          "late_third_energy_mean": 0.0787772536277771,
+          "peak_position_mean": 0.002
+        },
+        "Louie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 3.108170509338379,
+          "effective_token_fraction_mean": 0.012432682327926159,
+          "energy_center_of_mass_mean": 0.10113681360546772,
+          "early_third_energy_mean": 0.8545018434524536,
+          "middle_third_energy_mean": 0.10039084404706955,
+          "late_third_energy_mean": 0.04510729759931564,
+          "peak_position_mean": 0.002
+        },
+        "Luke": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 8.730055809020996,
+          "effective_token_fraction_mean": 0.03492022305727005,
+          "energy_center_of_mass_mean": 0.2550382625963339,
+          "early_third_energy_mean": 0.7006674408912659,
+          "middle_third_energy_mean": 0.07325243949890137,
+          "late_third_energy_mean": 0.2260802984237671,
+          "peak_position_mean": 0.002
+        },
+        "Mac": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 6.303878307342529,
+          "effective_token_fraction_mean": 0.0252155140042305,
+          "energy_center_of_mass_mean": 0.19266758893120167,
+          "early_third_energy_mean": 0.7675713300704956,
+          "middle_third_energy_mean": 0.10312388837337494,
+          "late_third_energy_mean": 0.1293049305677414,
+          "peak_position_mean": 0.002
+        },
+        "Roodie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 4.340442657470703,
+          "effective_token_fraction_mean": 0.017361771315336227,
+          "energy_center_of_mass_mean": 0.09666691087675064,
+          "early_third_energy_mean": 0.921630859375,
+          "middle_third_energy_mean": 0.026822704821825027,
+          "late_third_energy_mean": 0.051546428352594376,
+          "peak_position_mean": 0.002
+        },
+        "Rudy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 5.06289005279541,
+          "effective_token_fraction_mean": 0.02025155909359455,
+          "energy_center_of_mass_mean": 0.16274879998176298,
+          "early_third_energy_mean": 0.8277947306632996,
+          "middle_third_energy_mean": 0.03179448843002319,
+          "late_third_energy_mean": 0.14041095972061157,
+          "peak_position_mean": 0.002
+        },
+        "Siggy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 3.439483642578125,
+          "effective_token_fraction_mean": 0.013757934793829918,
+          "energy_center_of_mass_mean": 0.10091026548165756,
+          "early_third_energy_mean": 0.8874191045761108,
+          "middle_third_energy_mean": 0.03211593255400658,
+          "late_third_energy_mean": 0.08046501874923706,
+          "peak_position_mean": 0.002
+        },
+        "Zoe": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 7.623626232147217,
+          "effective_token_fraction_mean": 0.030494505539536476,
+          "energy_center_of_mass_mean": 0.19113052090718197,
+          "early_third_energy_mean": 0.7858304977416992,
+          "middle_third_energy_mean": 0.0977790579199791,
+          "late_third_energy_mean": 0.11639047414064407,
+          "peak_position_mean": 0.002
+        }
+      }
+    },
+    "5": {
+      "all": {
+        "n": 20,
+        "token_count": 250,
+        "effective_token_count_mean": 6.521064758300781,
+        "effective_token_fraction_mean": 0.026084259152412415,
+        "energy_center_of_mass_mean": 0.15056632576233306,
+        "early_third_energy_mean": 0.817585825920105,
+        "middle_third_energy_mean": 0.08205477893352509,
+        "late_third_energy_mean": 0.10035940259695053,
+        "peak_position_mean": 0.043
+      },
+      "by_class": {
+        "Farley": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 1.6673271656036377,
+          "effective_token_fraction_mean": 0.00666930852457881,
+          "energy_center_of_mass_mean": 0.02947423024089872,
+          "early_third_energy_mean": 0.9676167964935303,
+          "middle_third_energy_mean": 0.01423661969602108,
+          "late_third_energy_mean": 0.018146786838769913,
+          "peak_position_mean": 0.002
+        },
+        "Freid": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 5.421265602111816,
+          "effective_token_fraction_mean": 0.02168506197631359,
+          "energy_center_of_mass_mean": 0.14624906758979328,
+          "early_third_energy_mean": 0.8286832571029663,
+          "middle_third_energy_mean": 0.050718292593955994,
+          "late_third_energy_mean": 0.12059830129146576,
+          "peak_position_mean": 0.002
+        },
+        "Keri": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 5.934247016906738,
+          "effective_token_fraction_mean": 0.02373698726296425,
+          "energy_center_of_mass_mean": 0.12143448991063654,
+          "early_third_energy_mean": 0.8622280359268188,
+          "middle_third_energy_mean": 0.06122003123164177,
+          "late_third_energy_mean": 0.07655194401741028,
+          "peak_position_mean": 0.002
+        },
+        "Louie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 4.195537090301514,
+          "effective_token_fraction_mean": 0.01678214967250824,
+          "energy_center_of_mass_mean": 0.08523731156989653,
+          "early_third_energy_mean": 0.885001540184021,
+          "middle_third_energy_mean": 0.08884540945291519,
+          "late_third_energy_mean": 0.026152990758419037,
+          "peak_position_mean": 0.002
+        },
+        "Luke": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 12.441149711608887,
+          "effective_token_fraction_mean": 0.04976459965109825,
+          "energy_center_of_mass_mean": 0.47321520867160705,
+          "early_third_energy_mean": 0.40273934602737427,
+          "middle_third_energy_mean": 0.20282426476478577,
+          "late_third_energy_mean": 0.39443638920783997,
+          "peak_position_mean": 0.412
+        },
+        "Mac": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 4.286888122558594,
+          "effective_token_fraction_mean": 0.017147552222013474,
+          "energy_center_of_mass_mean": 0.09930449356260476,
+          "early_third_energy_mean": 0.8830034732818604,
+          "middle_third_energy_mean": 0.0651235282421112,
+          "late_third_energy_mean": 0.05187297612428665,
+          "peak_position_mean": 0.002
+        },
+        "Roodie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 6.296501159667969,
+          "effective_token_fraction_mean": 0.025186004117131233,
+          "energy_center_of_mass_mean": 0.10769828737782916,
+          "early_third_energy_mean": 0.8786432147026062,
+          "middle_third_energy_mean": 0.07194893062114716,
+          "late_third_energy_mean": 0.04940767586231232,
+          "peak_position_mean": 0.002
+        },
+        "Rudy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 7.9937238693237305,
+          "effective_token_fraction_mean": 0.03197489306330681,
+          "energy_center_of_mass_mean": 0.14817423272822533,
+          "early_third_energy_mean": 0.8333379030227661,
+          "middle_third_energy_mean": 0.043942347168922424,
+          "late_third_energy_mean": 0.12271995097398758,
+          "peak_position_mean": 0.002
+        },
+        "Siggy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 4.353274345397949,
+          "effective_token_fraction_mean": 0.017413096502423286,
+          "energy_center_of_mass_mean": 0.10250829456672425,
+          "early_third_energy_mean": 0.8732317686080933,
+          "middle_third_energy_mean": 0.0603417232632637,
+          "late_third_energy_mean": 0.06642645597457886,
+          "peak_position_mean": 0.002
+        },
+        "Zoe": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 12.620733261108398,
+          "effective_token_fraction_mean": 0.05048293247818947,
+          "energy_center_of_mass_mean": 0.192367641405115,
+          "early_third_energy_mean": 0.7613726854324341,
+          "middle_third_energy_mean": 0.16134673357009888,
+          "late_third_energy_mean": 0.07728062570095062,
+          "peak_position_mean": 0.002
+        }
+      }
+    },
+    "6": {
+      "all": {
+        "n": 20,
+        "token_count": 250,
+        "effective_token_count_mean": 20.788410186767578,
+        "effective_token_fraction_mean": 0.08315365016460419,
+        "energy_center_of_mass_mean": 0.44702934371141334,
+        "early_third_energy_mean": 0.5068005919456482,
+        "middle_third_energy_mean": 0.13092872500419617,
+        "late_third_energy_mean": 0.36227065324783325,
+        "peak_position_mean": 0.5038000000000001
+      },
+      "by_class": {
+        "Farley": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 5.025014400482178,
+          "effective_token_fraction_mean": 0.020100057125091553,
+          "energy_center_of_mass_mean": 0.17328903207582425,
+          "early_third_energy_mean": 0.8094881772994995,
+          "middle_third_energy_mean": 0.04378974810242653,
+          "late_third_energy_mean": 0.14672181010246277,
+          "peak_position_mean": 0.002
+        },
+        "Freid": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 17.984254837036133,
+          "effective_token_fraction_mean": 0.07193702459335327,
+          "energy_center_of_mass_mean": 0.520689481050014,
+          "early_third_energy_mean": 0.45577186346054077,
+          "middle_third_energy_mean": 0.09787450730800629,
+          "late_third_energy_mean": 0.4463536739349365,
+          "peak_position_mean": 0.998
+        },
+        "Keri": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 14.620809555053711,
+          "effective_token_fraction_mean": 0.05848323926329613,
+          "energy_center_of_mass_mean": 0.626820052996995,
+          "early_third_energy_mean": 0.30065637826919556,
+          "middle_third_energy_mean": 0.17675063014030457,
+          "late_third_energy_mean": 0.5225930213928223,
+          "peak_position_mean": 0.998
+        },
+        "Louie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 28.319049835205078,
+          "effective_token_fraction_mean": 0.11327620595693588,
+          "energy_center_of_mass_mean": 0.5166852583729005,
+          "early_third_energy_mean": 0.35764142870903015,
+          "middle_third_energy_mean": 0.31943339109420776,
+          "late_third_energy_mean": 0.3229251503944397,
+          "peak_position_mean": 0.998
+        },
+        "Luke": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 21.393714904785156,
+          "effective_token_fraction_mean": 0.08557485044002533,
+          "energy_center_of_mass_mean": 0.5126131009070742,
+          "early_third_energy_mean": 0.429527223110199,
+          "middle_third_energy_mean": 0.07938572019338608,
+          "late_third_energy_mean": 0.49108707904815674,
+          "peak_position_mean": 0.408
+        },
+        "Mac": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 14.355907440185547,
+          "effective_token_fraction_mean": 0.057423628866672516,
+          "energy_center_of_mass_mean": 0.3536154094389453,
+          "early_third_energy_mean": 0.6104207038879395,
+          "middle_third_energy_mean": 0.10003893822431564,
+          "late_third_energy_mean": 0.2895404100418091,
+          "peak_position_mean": 0.002
+        },
+        "Roodie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 14.480827331542969,
+          "effective_token_fraction_mean": 0.05792330950498581,
+          "energy_center_of_mass_mean": 0.33817852116305175,
+          "early_third_energy_mean": 0.6669343709945679,
+          "middle_third_energy_mean": 0.06328368186950684,
+          "late_third_energy_mean": 0.2697819769382477,
+          "peak_position_mean": 0.002
+        },
+        "Rudy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 51.34880065917969,
+          "effective_token_fraction_mean": 0.20539520680904388,
+          "energy_center_of_mass_mean": 0.4295674924256259,
+          "early_third_energy_mean": 0.4736921787261963,
+          "middle_third_energy_mean": 0.19386394321918488,
+          "late_third_energy_mean": 0.3324439525604248,
+          "peak_position_mean": 0.002
+        },
+        "Siggy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 22.630586624145508,
+          "effective_token_fraction_mean": 0.09052234888076782,
+          "energy_center_of_mass_mean": 0.5026701635817753,
+          "early_third_energy_mean": 0.43678295612335205,
+          "middle_third_energy_mean": 0.12319722771644592,
+          "late_third_energy_mean": 0.44001978635787964,
+          "peak_position_mean": 0.998
+        },
+        "Zoe": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 17.725141525268555,
+          "effective_token_fraction_mean": 0.0709005668759346,
+          "energy_center_of_mass_mean": 0.49616492510192756,
+          "early_third_energy_mean": 0.5270909070968628,
+          "middle_third_energy_mean": 0.11166943609714508,
+          "late_third_energy_mean": 0.3612396717071533,
+          "peak_position_mean": 0.63
+        }
+      }
+    },
+    "7": {
+      "all": {
+        "n": 20,
+        "token_count": 250,
+        "effective_token_count_mean": 22.07758331298828,
+        "effective_token_fraction_mean": 0.08831033110618591,
+        "energy_center_of_mass_mean": 0.20142437849667813,
+        "early_third_energy_mean": 0.7838720679283142,
+        "middle_third_energy_mean": 0.11196042597293854,
+        "late_third_energy_mean": 0.10416754335165024,
+        "peak_position_mean": 0.0020000000000000005
+      },
+      "by_class": {
+        "Farley": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 11.398496627807617,
+          "effective_token_fraction_mean": 0.0455939844250679,
+          "energy_center_of_mass_mean": 0.10328888898284526,
+          "early_third_energy_mean": 0.902746856212616,
+          "middle_third_energy_mean": 0.04944600909948349,
+          "late_third_energy_mean": 0.047806981950998306,
+          "peak_position_mean": 0.002
+        },
+        "Freid": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 20.79155921936035,
+          "effective_token_fraction_mean": 0.08316623419523239,
+          "energy_center_of_mass_mean": 0.2047073676912005,
+          "early_third_energy_mean": 0.754725456237793,
+          "middle_third_energy_mean": 0.1560245156288147,
+          "late_third_energy_mean": 0.08925038576126099,
+          "peak_position_mean": 0.002
+        },
+        "Keri": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 34.42998504638672,
+          "effective_token_fraction_mean": 0.13771994411945343,
+          "energy_center_of_mass_mean": 0.2500298976873664,
+          "early_third_energy_mean": 0.684516191482544,
+          "middle_third_energy_mean": 0.19934260845184326,
+          "late_third_energy_mean": 0.11614116281270981,
+          "peak_position_mean": 0.002
+        },
+        "Louie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 17.961769104003906,
+          "effective_token_fraction_mean": 0.07184707373380661,
+          "energy_center_of_mass_mean": 0.16557583330936995,
+          "early_third_energy_mean": 0.7912578582763672,
+          "middle_third_energy_mean": 0.16889312863349915,
+          "late_third_energy_mean": 0.039849117398262024,
+          "peak_position_mean": 0.002
+        },
+        "Luke": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 24.626174926757812,
+          "effective_token_fraction_mean": 0.0985046997666359,
+          "energy_center_of_mass_mean": 0.3304580371246893,
+          "early_third_energy_mean": 0.6475649476051331,
+          "middle_third_energy_mean": 0.06759492307901382,
+          "late_third_energy_mean": 0.2848401665687561,
+          "peak_position_mean": 0.002
+        },
+        "Mac": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 16.236042022705078,
+          "effective_token_fraction_mean": 0.06494417786598206,
+          "energy_center_of_mass_mean": 0.18797506017351998,
+          "early_third_energy_mean": 0.8025320172309875,
+          "middle_third_energy_mean": 0.12091594934463501,
+          "late_third_energy_mean": 0.07655206322669983,
+          "peak_position_mean": 0.002
+        },
+        "Roodie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 15.019882202148438,
+          "effective_token_fraction_mean": 0.06007952615618706,
+          "energy_center_of_mass_mean": 0.12113014089164108,
+          "early_third_energy_mean": 0.9287991523742676,
+          "middle_third_energy_mean": 0.037416573613882065,
+          "late_third_energy_mean": 0.033784445375204086,
+          "peak_position_mean": 0.002
+        },
+        "Rudy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 37.36813735961914,
+          "effective_token_fraction_mean": 0.14947254955768585,
+          "energy_center_of_mass_mean": 0.27330678677239206,
+          "early_third_energy_mean": 0.6948947310447693,
+          "middle_third_energy_mean": 0.114460289478302,
+          "late_third_energy_mean": 0.19064512848854065,
+          "peak_position_mean": 0.002
+        },
+        "Siggy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 21.240283966064453,
+          "effective_token_fraction_mean": 0.08496113121509552,
+          "energy_center_of_mass_mean": 0.20786399520597887,
+          "early_third_energy_mean": 0.7771366834640503,
+          "middle_third_energy_mean": 0.09688782691955566,
+          "late_third_energy_mean": 0.12597554922103882,
+          "peak_position_mean": 0.002
+        },
+        "Zoe": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 21.703487396240234,
+          "effective_token_fraction_mean": 0.08681394904851913,
+          "energy_center_of_mass_mean": 0.16990777712777777,
+          "early_third_energy_mean": 0.8545470237731934,
+          "middle_third_energy_mean": 0.10862240940332413,
+          "late_third_energy_mean": 0.03683054819703102,
+          "peak_position_mean": 0.002
+        }
+      }
+    },
+    "8": {
+      "all": {
+        "n": 20,
+        "token_count": 250,
+        "effective_token_count_mean": 21.511184692382812,
+        "effective_token_fraction_mean": 0.08604474365711212,
+        "energy_center_of_mass_mean": 0.21226598675665223,
+        "early_third_energy_mean": 0.7785921096801758,
+        "middle_third_energy_mean": 0.12042553722858429,
+        "late_third_energy_mean": 0.10098228603601456,
+        "peak_position_mean": 0.0628
+      },
+      "by_class": {
+        "Farley": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 12.512357711791992,
+          "effective_token_fraction_mean": 0.05004943162202835,
+          "energy_center_of_mass_mean": 0.09614974681652745,
+          "early_third_energy_mean": 0.8950079679489136,
+          "middle_third_energy_mean": 0.06613287329673767,
+          "late_third_energy_mean": 0.03885912895202637,
+          "peak_position_mean": 0.009999999999999998
+        },
+        "Freid": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 19.3358154296875,
+          "effective_token_fraction_mean": 0.07734326273202896,
+          "energy_center_of_mass_mean": 0.18618627824255965,
+          "early_third_energy_mean": 0.7839211225509644,
+          "middle_third_energy_mean": 0.16648386418819427,
+          "late_third_energy_mean": 0.04959504306316376,
+          "peak_position_mean": 0.002
+        },
+        "Keri": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 29.181995391845703,
+          "effective_token_fraction_mean": 0.11672797799110413,
+          "energy_center_of_mass_mean": 0.22169321777711526,
+          "early_third_energy_mean": 0.7193969488143921,
+          "middle_third_energy_mean": 0.1968069076538086,
+          "late_third_energy_mean": 0.08379597216844559,
+          "peak_position_mean": 0.002
+        },
+        "Louie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 29.291908264160156,
+          "effective_token_fraction_mean": 0.1171676367521286,
+          "energy_center_of_mass_mean": 0.27840199715760583,
+          "early_third_energy_mean": 0.651398777961731,
+          "middle_third_energy_mean": 0.32192668318748474,
+          "late_third_energy_mean": 0.026674535125494003,
+          "peak_position_mean": 0.088
+        },
+        "Luke": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 13.847103118896484,
+          "effective_token_fraction_mean": 0.05538841336965561,
+          "energy_center_of_mass_mean": 0.38612731136588513,
+          "early_third_energy_mean": 0.5810559391975403,
+          "middle_third_energy_mean": 0.02904248610138893,
+          "late_third_energy_mean": 0.38990163803100586,
+          "peak_position_mean": 0.412
+        },
+        "Mac": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 27.781490325927734,
+          "effective_token_fraction_mean": 0.11112596094608307,
+          "energy_center_of_mass_mean": 0.26561406831594697,
+          "early_third_energy_mean": 0.6962571144104004,
+          "middle_third_energy_mean": 0.186695858836174,
+          "late_third_energy_mean": 0.11704707145690918,
+          "peak_position_mean": 0.002
+        },
+        "Roodie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 16.128849029541016,
+          "effective_token_fraction_mean": 0.06451538950204849,
+          "energy_center_of_mass_mean": 0.10407307587707289,
+          "early_third_energy_mean": 0.9536160230636597,
+          "middle_third_energy_mean": 0.03451881557703018,
+          "late_third_energy_mean": 0.011865262873470783,
+          "peak_position_mean": 0.002
+        },
+        "Rudy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 39.19955062866211,
+          "effective_token_fraction_mean": 0.15679819881916046,
+          "energy_center_of_mass_mean": 0.26078512548603566,
+          "early_third_energy_mean": 0.7222369909286499,
+          "middle_third_energy_mean": 0.09294554591178894,
+          "late_third_energy_mean": 0.18481725454330444,
+          "peak_position_mean": 0.002
+        },
+        "Siggy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 19.275981903076172,
+          "effective_token_fraction_mean": 0.07710392773151398,
+          "energy_center_of_mass_mean": 0.15716323019272282,
+          "early_third_energy_mean": 0.835921585559845,
+          "middle_third_energy_mean": 0.06784836947917938,
+          "late_third_energy_mean": 0.09623004496097565,
+          "peak_position_mean": 0.002
+        },
+        "Zoe": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 8.556808471679688,
+          "effective_token_fraction_mean": 0.03422723710536957,
+          "energy_center_of_mass_mean": 0.1664658163350508,
+          "early_third_energy_mean": 0.9471089243888855,
+          "middle_third_energy_mean": 0.04185393080115318,
+          "late_third_energy_mean": 0.011036916635930538,
+          "peak_position_mean": 0.106
+        }
+      }
+    },
+    "9": {
+      "all": {
+        "n": 20,
+        "token_count": 250,
+        "effective_token_count_mean": 20.07504653930664,
+        "effective_token_fraction_mean": 0.08030018955469131,
+        "energy_center_of_mass_mean": 0.20167325584325577,
+        "early_third_energy_mean": 0.7703949809074402,
+        "middle_third_energy_mean": 0.1316734254360199,
+        "late_third_energy_mean": 0.09793154895305634,
+        "peak_position_mean": 0.048600000000000004
+      },
+      "by_class": {
+        "Farley": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 15.472051620483398,
+          "effective_token_fraction_mean": 0.061888206750154495,
+          "energy_center_of_mass_mean": 0.15367259590199706,
+          "early_third_energy_mean": 0.8048003911972046,
+          "middle_third_energy_mean": 0.12272113561630249,
+          "late_third_energy_mean": 0.07247850298881531,
+          "peak_position_mean": 0.002
+        },
+        "Freid": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 17.13776397705078,
+          "effective_token_fraction_mean": 0.06855105608701706,
+          "energy_center_of_mass_mean": 0.1823271167207597,
+          "early_third_energy_mean": 0.7461579442024231,
+          "middle_third_energy_mean": 0.19604283571243286,
+          "late_third_energy_mean": 0.057799018919467926,
+          "peak_position_mean": 0.002
+        },
+        "Keri": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 17.76282501220703,
+          "effective_token_fraction_mean": 0.07105129957199097,
+          "energy_center_of_mass_mean": 0.1697897050736676,
+          "early_third_energy_mean": 0.770678699016571,
+          "middle_third_energy_mean": 0.18442252278327942,
+          "late_third_energy_mean": 0.04489875212311745,
+          "peak_position_mean": 0.036000000000000004
+        },
+        "Louie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 27.421588897705078,
+          "effective_token_fraction_mean": 0.10968635231256485,
+          "energy_center_of_mass_mean": 0.20418816847090604,
+          "early_third_energy_mean": 0.7222412824630737,
+          "middle_third_energy_mean": 0.2562532424926758,
+          "late_third_energy_mean": 0.02150537446141243,
+          "peak_position_mean": 0.002
+        },
+        "Luke": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 15.845291137695312,
+          "effective_token_fraction_mean": 0.06338116526603699,
+          "energy_center_of_mass_mean": 0.3418012959885366,
+          "early_third_energy_mean": 0.647569477558136,
+          "middle_third_energy_mean": 0.03601681441068649,
+          "late_third_energy_mean": 0.3164137303829193,
+          "peak_position_mean": 0.072
+        },
+        "Mac": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 19.76327896118164,
+          "effective_token_fraction_mean": 0.0790531113743782,
+          "energy_center_of_mass_mean": 0.2235373292766067,
+          "early_third_energy_mean": 0.7762023210525513,
+          "middle_third_energy_mean": 0.12927742302417755,
+          "late_third_energy_mean": 0.0945201888680458,
+          "peak_position_mean": 0.002
+        },
+        "Roodie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 14.253954887390137,
+          "effective_token_fraction_mean": 0.05701582133769989,
+          "energy_center_of_mass_mean": 0.10335309683235493,
+          "early_third_energy_mean": 0.9440093040466309,
+          "middle_third_energy_mean": 0.044043950736522675,
+          "late_third_energy_mean": 0.011946596205234528,
+          "peak_position_mean": 0.012
+        },
+        "Rudy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 18.741579055786133,
+          "effective_token_fraction_mean": 0.07496631145477295,
+          "energy_center_of_mass_mean": 0.24172586374239202,
+          "early_third_energy_mean": 0.7096080780029297,
+          "middle_third_energy_mean": 0.06975100934505463,
+          "late_third_energy_mean": 0.22064092755317688,
+          "peak_position_mean": 0.342
+        },
+        "Siggy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 26.372241973876953,
+          "effective_token_fraction_mean": 0.10548897087574005,
+          "energy_center_of_mass_mean": 0.20921080404924577,
+          "early_third_energy_mean": 0.7578833699226379,
+          "middle_third_energy_mean": 0.12451125681400299,
+          "late_third_energy_mean": 0.11760557442903519,
+          "peak_position_mean": 0.002
+        },
+        "Zoe": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 27.979888916015625,
+          "effective_token_fraction_mean": 0.11191955208778381,
+          "energy_center_of_mass_mean": 0.18712658237609095,
+          "early_third_energy_mean": 0.8247991800308228,
+          "middle_third_energy_mean": 0.15369421243667603,
+          "late_third_energy_mean": 0.02150687202811241,
+          "peak_position_mean": 0.013999999999999999
+        }
+      }
+    },
+    "10": {
+      "all": {
+        "n": 20,
+        "token_count": 250,
+        "effective_token_count_mean": 29.623226165771484,
+        "effective_token_fraction_mean": 0.11849291622638702,
+        "energy_center_of_mass_mean": 0.24294092752284535,
+        "early_third_energy_mean": 0.7174875140190125,
+        "middle_third_energy_mean": 0.1525638997554779,
+        "late_third_energy_mean": 0.12994851171970367,
+        "peak_position_mean": 0.043
+      },
+      "by_class": {
+        "Farley": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 15.774045944213867,
+          "effective_token_fraction_mean": 0.06309618055820465,
+          "energy_center_of_mass_mean": 0.12594240543742694,
+          "early_third_energy_mean": 0.8522531390190125,
+          "middle_third_energy_mean": 0.08707810938358307,
+          "late_third_energy_mean": 0.060668639838695526,
+          "peak_position_mean": 0.002
+        },
+        "Freid": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 26.445192337036133,
+          "effective_token_fraction_mean": 0.10578076541423798,
+          "energy_center_of_mass_mean": 0.23191100506492443,
+          "early_third_energy_mean": 0.7018992304801941,
+          "middle_third_energy_mean": 0.21618935465812683,
+          "late_third_energy_mean": 0.0819113478064537,
+          "peak_position_mean": 0.002
+        },
+        "Keri": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 36.84710693359375,
+          "effective_token_fraction_mean": 0.14738842844963074,
+          "energy_center_of_mass_mean": 0.24666334484516667,
+          "early_third_energy_mean": 0.6573047041893005,
+          "middle_third_energy_mean": 0.2551002502441406,
+          "late_third_energy_mean": 0.0875951498746872,
+          "peak_position_mean": 0.002
+        },
+        "Louie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 34.979591369628906,
+          "effective_token_fraction_mean": 0.13991835713386536,
+          "energy_center_of_mass_mean": 0.25890972581815913,
+          "early_third_energy_mean": 0.6429547071456909,
+          "middle_third_energy_mean": 0.31251609325408936,
+          "late_third_energy_mean": 0.044528983533382416,
+          "peak_position_mean": 0.002
+        },
+        "Luke": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 23.838237762451172,
+          "effective_token_fraction_mean": 0.09535295516252518,
+          "energy_center_of_mass_mean": 0.4086498325105417,
+          "early_third_energy_mean": 0.5525277256965637,
+          "middle_third_energy_mean": 0.05339924246072769,
+          "late_third_energy_mean": 0.39407289028167725,
+          "peak_position_mean": 0.412
+        },
+        "Mac": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 32.80365753173828,
+          "effective_token_fraction_mean": 0.13121461868286133,
+          "energy_center_of_mass_mean": 0.2760279385050194,
+          "early_third_energy_mean": 0.6765019297599792,
+          "middle_third_energy_mean": 0.20360179245471954,
+          "late_third_energy_mean": 0.11989642679691315,
+          "peak_position_mean": 0.002
+        },
+        "Roodie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 23.692340850830078,
+          "effective_token_fraction_mean": 0.09476937353610992,
+          "energy_center_of_mass_mean": 0.15206329829197524,
+          "early_third_energy_mean": 0.9002920985221863,
+          "middle_third_energy_mean": 0.04579218104481697,
+          "late_third_energy_mean": 0.05391577631235123,
+          "peak_position_mean": 0.002
+        },
+        "Rudy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 34.318023681640625,
+          "effective_token_fraction_mean": 0.13727208971977234,
+          "energy_center_of_mass_mean": 0.26867646165526954,
+          "early_third_energy_mean": 0.6913386583328247,
+          "middle_third_energy_mean": 0.09392092376947403,
+          "late_third_energy_mean": 0.21474045515060425,
+          "peak_position_mean": 0.002
+        },
+        "Siggy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 34.520263671875,
+          "effective_token_fraction_mean": 0.13808105885982513,
+          "energy_center_of_mass_mean": 0.23774451445982947,
+          "early_third_energy_mean": 0.7372514009475708,
+          "middle_third_energy_mean": 0.1000412255525589,
+          "late_third_energy_mean": 0.1627073734998703,
+          "peak_position_mean": 0.002
+        },
+        "Zoe": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 33.01380157470703,
+          "effective_token_fraction_mean": 0.13205520808696747,
+          "energy_center_of_mass_mean": 0.2228207486401409,
+          "early_third_energy_mean": 0.7625521421432495,
+          "middle_third_energy_mean": 0.15799972414970398,
+          "late_third_energy_mean": 0.07944819331169128,
+          "peak_position_mean": 0.002
+        }
+      }
+    },
+    "11": {
+      "all": {
+        "n": 20,
+        "token_count": 250,
+        "effective_token_count_mean": 37.246150970458984,
+        "effective_token_fraction_mean": 0.1489846408367157,
+        "energy_center_of_mass_mean": 0.27463932555436277,
+        "early_third_energy_mean": 0.6815742254257202,
+        "middle_third_energy_mean": 0.17814581096172333,
+        "late_third_energy_mean": 0.14027994871139526,
+        "peak_position_mean": 0.1744
+      },
+      "by_class": {
+        "Farley": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 42.17010498046875,
+          "effective_token_fraction_mean": 0.16868042945861816,
+          "energy_center_of_mass_mean": 0.1803133402624786,
+          "early_third_energy_mean": 0.792128324508667,
+          "middle_third_energy_mean": 0.13678136467933655,
+          "late_third_energy_mean": 0.07109034806489944,
+          "peak_position_mean": 0.024
+        },
+        "Freid": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 29.168243408203125,
+          "effective_token_fraction_mean": 0.11667297780513763,
+          "energy_center_of_mass_mean": 0.23642339994906908,
+          "early_third_energy_mean": 0.701532244682312,
+          "middle_third_energy_mean": 0.25124841928482056,
+          "late_third_energy_mean": 0.04721950367093086,
+          "peak_position_mean": 0.002
+        },
+        "Keri": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 43.803192138671875,
+          "effective_token_fraction_mean": 0.1752127707004547,
+          "energy_center_of_mass_mean": 0.29527217507083403,
+          "early_third_energy_mean": 0.582855224609375,
+          "middle_third_energy_mean": 0.32426780462265015,
+          "late_third_energy_mean": 0.09287704527378082,
+          "peak_position_mean": 0.246
+        },
+        "Louie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 37.63103485107422,
+          "effective_token_fraction_mean": 0.15052413940429688,
+          "energy_center_of_mass_mean": 0.24018958592658102,
+          "early_third_energy_mean": 0.6796168088912964,
+          "middle_third_energy_mean": 0.2845689058303833,
+          "late_third_energy_mean": 0.0358143076300621,
+          "peak_position_mean": 0.064
+        },
+        "Luke": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 20.16417121887207,
+          "effective_token_fraction_mean": 0.08065668493509293,
+          "energy_center_of_mass_mean": 0.40123304312418684,
+          "early_third_energy_mean": 0.5682255029678345,
+          "middle_third_energy_mean": 0.04433576762676239,
+          "late_third_energy_mean": 0.38743898272514343,
+          "peak_position_mean": 0.414
+        },
+        "Mac": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 47.42173385620117,
+          "effective_token_fraction_mean": 0.18968693912029266,
+          "energy_center_of_mass_mean": 0.3760293009856459,
+          "early_third_energy_mean": 0.5743474960327148,
+          "middle_third_energy_mean": 0.2286890298128128,
+          "late_third_energy_mean": 0.19696341454982758,
+          "peak_position_mean": 0.336
+        },
+        "Roodie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 29.353370666503906,
+          "effective_token_fraction_mean": 0.1174134910106659,
+          "energy_center_of_mass_mean": 0.16354362555699595,
+          "early_third_energy_mean": 0.8889536261558533,
+          "middle_third_energy_mean": 0.06962272524833679,
+          "late_third_energy_mean": 0.04142366349697113,
+          "peak_position_mean": 0.052
+        },
+        "Rudy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 47.01317596435547,
+          "effective_token_fraction_mean": 0.1880527138710022,
+          "energy_center_of_mass_mean": 0.34081821186717165,
+          "early_third_energy_mean": 0.6097238659858704,
+          "middle_third_energy_mean": 0.10250644385814667,
+          "late_third_energy_mean": 0.2877695858478546,
+          "peak_position_mean": 0.094
+        },
+        "Siggy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 48.1020393371582,
+          "effective_token_fraction_mean": 0.19240815937519073,
+          "energy_center_of_mass_mean": 0.28282187051567753,
+          "early_third_energy_mean": 0.6746582388877869,
+          "middle_third_energy_mean": 0.12821067869663239,
+          "late_third_energy_mean": 0.19713115692138672,
+          "peak_position_mean": 0.38
+        },
+        "Zoe": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 27.634498596191406,
+          "effective_token_fraction_mean": 0.11053799837827682,
+          "energy_center_of_mass_mean": 0.2297487022849874,
+          "early_third_energy_mean": 0.7437014579772949,
+          "middle_third_energy_mean": 0.21122696995735168,
+          "late_third_energy_mean": 0.04507145285606384,
+          "peak_position_mean": 0.132
+        }
+      }
+    },
+    "12": {
+      "all": {
+        "n": 20,
+        "token_count": 250,
+        "effective_token_count_mean": 26.6567325592041,
+        "effective_token_fraction_mean": 0.10662691295146942,
+        "energy_center_of_mass_mean": 0.21360120280042566,
+        "early_third_energy_mean": 0.7533249855041504,
+        "middle_third_energy_mean": 0.15505966544151306,
+        "late_third_energy_mean": 0.09161536395549774,
+        "peak_position_mean": 0.065
+      },
+      "by_class": {
+        "Farley": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 21.966785430908203,
+          "effective_token_fraction_mean": 0.0878671407699585,
+          "energy_center_of_mass_mean": 0.15600602295016872,
+          "early_third_energy_mean": 0.828134298324585,
+          "middle_third_energy_mean": 0.12704122066497803,
+          "late_third_energy_mean": 0.04482460021972656,
+          "peak_position_mean": 0.024
+        },
+        "Freid": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 16.395843505859375,
+          "effective_token_fraction_mean": 0.06558337062597275,
+          "energy_center_of_mass_mean": 0.1687512751857405,
+          "early_third_energy_mean": 0.7722290754318237,
+          "middle_third_energy_mean": 0.19103966653347015,
+          "late_third_energy_mean": 0.036731332540512085,
+          "peak_position_mean": 0.002
+        },
+        "Keri": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 34.162418365478516,
+          "effective_token_fraction_mean": 0.13664966821670532,
+          "energy_center_of_mass_mean": 0.2321445767543039,
+          "early_third_energy_mean": 0.6788767576217651,
+          "middle_third_energy_mean": 0.25511422753334045,
+          "late_third_energy_mean": 0.06600895524024963,
+          "peak_position_mean": 0.002
+        },
+        "Louie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 22.208820343017578,
+          "effective_token_fraction_mean": 0.08883528411388397,
+          "energy_center_of_mass_mean": 0.1705805630302734,
+          "early_third_energy_mean": 0.7725832462310791,
+          "middle_third_energy_mean": 0.20616500079631805,
+          "late_third_energy_mean": 0.021251648664474487,
+          "peak_position_mean": 0.002
+        },
+        "Luke": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 22.016685485839844,
+          "effective_token_fraction_mean": 0.08806674182415009,
+          "energy_center_of_mass_mean": 0.3727686531468215,
+          "early_third_energy_mean": 0.5975716710090637,
+          "middle_third_energy_mean": 0.07125264406204224,
+          "late_third_energy_mean": 0.33117568492889404,
+          "peak_position_mean": 0.48
+        },
+        "Mac": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 30.709537506103516,
+          "effective_token_fraction_mean": 0.12283814698457718,
+          "energy_center_of_mass_mean": 0.25704144376337834,
+          "early_third_energy_mean": 0.7006407380104065,
+          "middle_third_energy_mean": 0.1951906979084015,
+          "late_third_energy_mean": 0.10416851192712784,
+          "peak_position_mean": 0.002
+        },
+        "Roodie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 12.133636474609375,
+          "effective_token_fraction_mean": 0.048534542322158813,
+          "energy_center_of_mass_mean": 0.10545838316982775,
+          "early_third_energy_mean": 0.9127421379089355,
+          "middle_third_energy_mean": 0.07254442572593689,
+          "late_third_energy_mean": 0.014713384211063385,
+          "peak_position_mean": 0.002
+        },
+        "Rudy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 28.962078094482422,
+          "effective_token_fraction_mean": 0.11584831774234772,
+          "energy_center_of_mass_mean": 0.22151702801495957,
+          "early_third_energy_mean": 0.7412769198417664,
+          "middle_third_energy_mean": 0.09957323968410492,
+          "late_third_energy_mean": 0.15914985537528992,
+          "peak_position_mean": 0.002
+        },
+        "Siggy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 58.93370056152344,
+          "effective_token_fraction_mean": 0.23573479056358337,
+          "energy_center_of_mass_mean": 0.24279758482781288,
+          "early_third_energy_mean": 0.7185156345367432,
+          "middle_third_energy_mean": 0.17187127470970154,
+          "late_third_energy_mean": 0.10961305350065231,
+          "peak_position_mean": 0.002
+        },
+        "Zoe": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 19.07779884338379,
+          "effective_token_fraction_mean": 0.07631119340658188,
+          "energy_center_of_mass_mean": 0.20894649716096986,
+          "early_third_energy_mean": 0.8106788396835327,
+          "middle_third_energy_mean": 0.16080433130264282,
+          "late_third_energy_mean": 0.02851663902401924,
+          "peak_position_mean": 0.132
+        }
+      }
+    },
+    "13": {
+      "all": {
+        "n": 20,
+        "token_count": 250,
+        "effective_token_count_mean": 43.789764404296875,
+        "effective_token_fraction_mean": 0.17515906691551208,
+        "energy_center_of_mass_mean": 0.2688866396282274,
+        "early_third_energy_mean": 0.6956137418746948,
+        "middle_third_energy_mean": 0.1707851141691208,
+        "late_third_energy_mean": 0.13360123336315155,
+        "peak_position_mean": 0.10400000000000001
+      },
+      "by_class": {
+        "Farley": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 35.9908447265625,
+          "effective_token_fraction_mean": 0.14396338164806366,
+          "energy_center_of_mass_mean": 0.19767108008260947,
+          "early_third_energy_mean": 0.7716904878616333,
+          "middle_third_energy_mean": 0.1259654462337494,
+          "late_third_energy_mean": 0.10234423726797104,
+          "peak_position_mean": 0.009999999999999998
+        },
+        "Freid": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 45.73472213745117,
+          "effective_token_fraction_mean": 0.18293888866901398,
+          "energy_center_of_mass_mean": 0.2834180483233558,
+          "early_third_energy_mean": 0.6444464921951294,
+          "middle_third_energy_mean": 0.24891982972621918,
+          "late_third_energy_mean": 0.10663378238677979,
+          "peak_position_mean": 0.002
+        },
+        "Keri": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 47.446754455566406,
+          "effective_token_fraction_mean": 0.18978700041770935,
+          "energy_center_of_mass_mean": 0.27867573204886364,
+          "early_third_energy_mean": 0.6226100921630859,
+          "middle_third_energy_mean": 0.30068081617355347,
+          "late_third_energy_mean": 0.07670916616916656,
+          "peak_position_mean": 0.1
+        },
+        "Louie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 45.597320556640625,
+          "effective_token_fraction_mean": 0.1823892891407013,
+          "energy_center_of_mass_mean": 0.23966576989382635,
+          "early_third_energy_mean": 0.7067087888717651,
+          "middle_third_energy_mean": 0.2514602243900299,
+          "late_third_energy_mean": 0.04183095693588257,
+          "peak_position_mean": 0.14800000000000002
+        },
+        "Luke": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 29.317989349365234,
+          "effective_token_fraction_mean": 0.11727195978164673,
+          "energy_center_of_mass_mean": 0.38338442128426165,
+          "early_third_energy_mean": 0.5873957872390747,
+          "middle_third_energy_mean": 0.059261877089738846,
+          "late_third_energy_mean": 0.35334235429763794,
+          "peak_position_mean": 0.414
+        },
+        "Mac": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 48.563350677490234,
+          "effective_token_fraction_mean": 0.19425341486930847,
+          "energy_center_of_mass_mean": 0.3237091293872186,
+          "early_third_energy_mean": 0.6528602838516235,
+          "middle_third_energy_mean": 0.2330344021320343,
+          "late_third_energy_mean": 0.11410524696111679,
+          "peak_position_mean": 0.126
+        },
+        "Roodie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 35.006675720214844,
+          "effective_token_fraction_mean": 0.14002668857574463,
+          "energy_center_of_mass_mean": 0.1635586787997214,
+          "early_third_energy_mean": 0.8884150385856628,
+          "middle_third_energy_mean": 0.08117081224918365,
+          "late_third_energy_mean": 0.030414139851927757,
+          "peak_position_mean": 0.10999999999999999
+        },
+        "Rudy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 47.793155670166016,
+          "effective_token_fraction_mean": 0.19117262959480286,
+          "energy_center_of_mass_mean": 0.3320379493304481,
+          "early_third_energy_mean": 0.6306366920471191,
+          "middle_third_energy_mean": 0.09207423031330109,
+          "late_third_energy_mean": 0.2772889733314514,
+          "peak_position_mean": 0.064
+        },
+        "Siggy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 57.82754898071289,
+          "effective_token_fraction_mean": 0.2313101887702942,
+          "energy_center_of_mass_mean": 0.2520986040796772,
+          "early_third_energy_mean": 0.7171775102615356,
+          "middle_third_energy_mean": 0.12454304099082947,
+          "late_third_energy_mean": 0.1582794487476349,
+          "peak_position_mean": 0.064
+        },
+        "Zoe": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 44.619293212890625,
+          "effective_token_fraction_mean": 0.17847716808319092,
+          "energy_center_of_mass_mean": 0.23464698305229206,
+          "early_third_energy_mean": 0.7341955900192261,
+          "middle_third_energy_mean": 0.19074048101902008,
+          "late_third_energy_mean": 0.0750640332698822,
+          "peak_position_mean": 0.002
+        }
+      }
+    },
+    "14": {
+      "all": {
+        "n": 20,
+        "token_count": 250,
+        "effective_token_count_mean": 30.027475357055664,
+        "effective_token_fraction_mean": 0.1201099157333374,
+        "energy_center_of_mass_mean": 0.266909027299953,
+        "early_third_energy_mean": 0.701130747795105,
+        "middle_third_energy_mean": 0.18204568326473236,
+        "late_third_energy_mean": 0.1168234795331955,
+        "peak_position_mean": 0.16099999999999998
+      },
+      "by_class": {
+        "Farley": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 21.78022575378418,
+          "effective_token_fraction_mean": 0.0871209055185318,
+          "energy_center_of_mass_mean": 0.1728091117089813,
+          "early_third_energy_mean": 0.8223882913589478,
+          "middle_third_energy_mean": 0.1355583518743515,
+          "late_third_energy_mean": 0.042053114622831345,
+          "peak_position_mean": 0.05
+        },
+        "Freid": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 31.658920288085938,
+          "effective_token_fraction_mean": 0.12663568556308746,
+          "energy_center_of_mass_mean": 0.2987368313548686,
+          "early_third_energy_mean": 0.5956399440765381,
+          "middle_third_energy_mean": 0.3251526951789856,
+          "late_third_energy_mean": 0.07920720428228378,
+          "peak_position_mean": 0.23800000000000002
+        },
+        "Keri": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 39.45275115966797,
+          "effective_token_fraction_mean": 0.1578110158443451,
+          "energy_center_of_mass_mean": 0.24771250691535396,
+          "early_third_energy_mean": 0.6846637725830078,
+          "middle_third_energy_mean": 0.26200759410858154,
+          "late_third_energy_mean": 0.05332860350608826,
+          "peak_position_mean": 0.036
+        },
+        "Louie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 33.49724578857422,
+          "effective_token_fraction_mean": 0.13398899137973785,
+          "energy_center_of_mass_mean": 0.22294615998538325,
+          "early_third_energy_mean": 0.7365818023681641,
+          "middle_third_energy_mean": 0.24234241247177124,
+          "late_third_energy_mean": 0.021075870841741562,
+          "peak_position_mean": 0.026
+        },
+        "Luke": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 11.570476531982422,
+          "effective_token_fraction_mean": 0.046281907707452774,
+          "energy_center_of_mass_mean": 0.4414508914048021,
+          "early_third_energy_mean": 0.5233669877052307,
+          "middle_third_energy_mean": 0.04035854712128639,
+          "late_third_energy_mean": 0.43627437949180603,
+          "peak_position_mean": 0.482
+        },
+        "Mac": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 33.314266204833984,
+          "effective_token_fraction_mean": 0.13325706124305725,
+          "energy_center_of_mass_mean": 0.3278273844078926,
+          "early_third_energy_mean": 0.6948023438453674,
+          "middle_third_energy_mean": 0.18945147097110748,
+          "late_third_energy_mean": 0.11574611812829971,
+          "peak_position_mean": 0.224
+        },
+        "Roodie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 31.662349700927734,
+          "effective_token_fraction_mean": 0.1266493946313858,
+          "energy_center_of_mass_mean": 0.17323687562027465,
+          "early_third_energy_mean": 0.8126100301742554,
+          "middle_third_energy_mean": 0.16699053347110748,
+          "late_third_energy_mean": 0.02039957419037819,
+          "peak_position_mean": 0.024
+        },
+        "Rudy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 26.94902801513672,
+          "effective_token_fraction_mean": 0.10779611766338348,
+          "energy_center_of_mass_mean": 0.3159393504251631,
+          "early_third_energy_mean": 0.6075952053070068,
+          "middle_third_energy_mean": 0.16325145959854126,
+          "late_third_energy_mean": 0.22915323078632355,
+          "peak_position_mean": 0.362
+        },
+        "Siggy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 45.44336700439453,
+          "effective_token_fraction_mean": 0.18177346885204315,
+          "energy_center_of_mass_mean": 0.25373027858691044,
+          "early_third_energy_mean": 0.702855110168457,
+          "middle_third_energy_mean": 0.1480511724948883,
+          "late_third_energy_mean": 0.14909355342388153,
+          "peak_position_mean": 0.028
+        },
+        "Zoe": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 24.946149826049805,
+          "effective_token_fraction_mean": 0.09978459775447845,
+          "energy_center_of_mass_mean": 0.21470088258989944,
+          "early_third_energy_mean": 0.8308040499687195,
+          "middle_third_energy_mean": 0.14729271829128265,
+          "late_third_energy_mean": 0.021903086453676224,
+          "peak_position_mean": 0.14
+        }
+      }
+    },
+    "15": {
+      "all": {
+        "n": 20,
+        "token_count": 250,
+        "effective_token_count_mean": 24.130245208740234,
+        "effective_token_fraction_mean": 0.09652097523212433,
+        "energy_center_of_mass_mean": 0.3362981275729748,
+        "early_third_energy_mean": 0.6199677586555481,
+        "middle_third_energy_mean": 0.20910558104515076,
+        "late_third_energy_mean": 0.17092666029930115,
+        "peak_position_mean": 0.27480000000000004
+      },
+      "by_class": {
+        "Farley": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 25.311565399169922,
+          "effective_token_fraction_mean": 0.10124626755714417,
+          "energy_center_of_mass_mean": 0.2223102063580019,
+          "early_third_energy_mean": 0.7495183348655701,
+          "middle_third_energy_mean": 0.15828323364257812,
+          "late_third_energy_mean": 0.09219848364591599,
+          "peak_position_mean": 0.06
+        },
+        "Freid": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 29.659774780273438,
+          "effective_token_fraction_mean": 0.11863910406827927,
+          "energy_center_of_mass_mean": 0.3029296585165537,
+          "early_third_energy_mean": 0.6466516256332397,
+          "middle_third_energy_mean": 0.25122758746147156,
+          "late_third_energy_mean": 0.10212064534425735,
+          "peak_position_mean": 0.148
+        },
+        "Keri": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 21.134952545166016,
+          "effective_token_fraction_mean": 0.08453980088233948,
+          "energy_center_of_mass_mean": 0.2817974198848795,
+          "early_third_energy_mean": 0.6649059653282166,
+          "middle_third_energy_mean": 0.26490676403045654,
+          "late_third_energy_mean": 0.0701872929930687,
+          "peak_position_mean": 0.14
+        },
+        "Louie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 11.820130348205566,
+          "effective_token_fraction_mean": 0.04728052020072937,
+          "energy_center_of_mass_mean": 0.35353943095637463,
+          "early_third_energy_mean": 0.4162384271621704,
+          "middle_third_energy_mean": 0.5711132287979126,
+          "late_third_energy_mean": 0.01264842227101326,
+          "peak_position_mean": 0.496
+        },
+        "Luke": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 8.884754180908203,
+          "effective_token_fraction_mean": 0.035539016127586365,
+          "energy_center_of_mass_mean": 0.4426784516933262,
+          "early_third_energy_mean": 0.5320544838905334,
+          "middle_third_energy_mean": 0.05178634822368622,
+          "late_third_energy_mean": 0.4161592721939087,
+          "peak_position_mean": 0.514
+        },
+        "Mac": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 48.05674743652344,
+          "effective_token_fraction_mean": 0.19222699105739594,
+          "energy_center_of_mass_mean": 0.4520502057821233,
+          "early_third_energy_mean": 0.4377390742301941,
+          "middle_third_energy_mean": 0.3149344325065613,
+          "late_third_energy_mean": 0.24732647836208344,
+          "peak_position_mean": 0.5
+        },
+        "Roodie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 23.22429084777832,
+          "effective_token_fraction_mean": 0.09289716184139252,
+          "energy_center_of_mass_mean": 0.1958932308041098,
+          "early_third_energy_mean": 0.8965468406677246,
+          "middle_third_energy_mean": 0.06975403428077698,
+          "late_third_energy_mean": 0.0336991623044014,
+          "peak_position_mean": 0.128
+        },
+        "Rudy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 20.53985023498535,
+          "effective_token_fraction_mean": 0.08215939998626709,
+          "energy_center_of_mass_mean": 0.45741562554043885,
+          "early_third_energy_mean": 0.48840802907943726,
+          "middle_third_energy_mean": 0.11868930608034134,
+          "late_third_energy_mean": 0.39290279150009155,
+          "peak_position_mean": 0.09799999999999999
+        },
+        "Siggy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 38.744110107421875,
+          "effective_token_fraction_mean": 0.15497642755508423,
+          "energy_center_of_mass_mean": 0.38040364453612163,
+          "early_third_energy_mean": 0.529132068157196,
+          "middle_third_energy_mean": 0.19604578614234924,
+          "late_third_energy_mean": 0.2748221158981323,
+          "peak_position_mean": 0.42800000000000005
+        },
+        "Zoe": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 13.926254272460938,
+          "effective_token_fraction_mean": 0.05570501461625099,
+          "energy_center_of_mass_mean": 0.2739634016578184,
+          "early_third_energy_mean": 0.8384828567504883,
+          "middle_third_energy_mean": 0.09431526064872742,
+          "late_third_energy_mean": 0.06720194220542908,
+          "peak_position_mean": 0.236
+        }
+      }
+    },
+    "16": {
+      "all": {
+        "n": 20,
+        "token_count": 250,
+        "effective_token_count_mean": 40.11033248901367,
+        "effective_token_fraction_mean": 0.1604413390159607,
+        "energy_center_of_mass_mean": 0.30502713527611136,
+        "early_third_energy_mean": 0.6371692419052124,
+        "middle_third_energy_mean": 0.19388560950756073,
+        "late_third_energy_mean": 0.16894513368606567,
+        "peak_position_mean": 0.1508
+      },
+      "by_class": {
+        "Farley": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 37.74030303955078,
+          "effective_token_fraction_mean": 0.15096120536327362,
+          "energy_center_of_mass_mean": 0.22099238566738358,
+          "early_third_energy_mean": 0.7423027753829956,
+          "middle_third_energy_mean": 0.1557159274816513,
+          "late_third_energy_mean": 0.10198105126619339,
+          "peak_position_mean": 0.002
+        },
+        "Freid": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 39.04402542114258,
+          "effective_token_fraction_mean": 0.15617609024047852,
+          "energy_center_of_mass_mean": 0.26720367279228885,
+          "early_third_energy_mean": 0.6519082188606262,
+          "middle_third_energy_mean": 0.2691289186477661,
+          "late_third_energy_mean": 0.07896281033754349,
+          "peak_position_mean": 0.002
+        },
+        "Keri": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 56.24171447753906,
+          "effective_token_fraction_mean": 0.2249668538570404,
+          "energy_center_of_mass_mean": 0.33172585012594663,
+          "early_third_energy_mean": 0.5883233547210693,
+          "middle_third_energy_mean": 0.28192469477653503,
+          "late_third_energy_mean": 0.12975190579891205,
+          "peak_position_mean": 0.1
+        },
+        "Louie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 47.83916473388672,
+          "effective_token_fraction_mean": 0.19135665893554688,
+          "energy_center_of_mass_mean": 0.2656581723902314,
+          "early_third_energy_mean": 0.644498348236084,
+          "middle_third_energy_mean": 0.3183489441871643,
+          "late_third_energy_mean": 0.03715268895030022,
+          "peak_position_mean": 0.002
+        },
+        "Luke": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 21.133098602294922,
+          "effective_token_fraction_mean": 0.08453239500522614,
+          "energy_center_of_mass_mean": 0.4453086270046621,
+          "early_third_energy_mean": 0.483091801404953,
+          "middle_third_energy_mean": 0.13359104096889496,
+          "late_third_energy_mean": 0.38331717252731323,
+          "peak_position_mean": 0.48
+        },
+        "Mac": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 47.41379928588867,
+          "effective_token_fraction_mean": 0.18965519964694977,
+          "energy_center_of_mass_mean": 0.36063057673405663,
+          "early_third_energy_mean": 0.583191454410553,
+          "middle_third_energy_mean": 0.21179276704788208,
+          "late_third_energy_mean": 0.2050156444311142,
+          "peak_position_mean": 0.002
+        },
+        "Roodie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 31.956954956054688,
+          "effective_token_fraction_mean": 0.12782782316207886,
+          "energy_center_of_mass_mean": 0.16452271022662196,
+          "early_third_energy_mean": 0.8814176321029663,
+          "middle_third_energy_mean": 0.09281128644943237,
+          "late_third_energy_mean": 0.02577112428843975,
+          "peak_position_mean": 0.06
+        },
+        "Rudy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 36.970237731933594,
+          "effective_token_fraction_mean": 0.1478809416294098,
+          "energy_center_of_mass_mean": 0.4208801678572155,
+          "early_third_energy_mean": 0.5117963552474976,
+          "middle_third_energy_mean": 0.10762536525726318,
+          "late_third_energy_mean": 0.3805784583091736,
+          "peak_position_mean": 0.436
+        },
+        "Siggy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 46.18987274169922,
+          "effective_token_fraction_mean": 0.1847594827413559,
+          "energy_center_of_mass_mean": 0.3513377577590992,
+          "early_third_energy_mean": 0.5700920224189758,
+          "middle_third_energy_mean": 0.1488158255815506,
+          "late_third_energy_mean": 0.28109210729599,
+          "peak_position_mean": 0.422
+        },
+        "Zoe": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 36.57418441772461,
+          "effective_token_fraction_mean": 0.14629673957824707,
+          "energy_center_of_mass_mean": 0.22201143220360814,
+          "early_third_energy_mean": 0.7150701880455017,
+          "middle_third_energy_mean": 0.21910133957862854,
+          "late_third_energy_mean": 0.06582847237586975,
+          "peak_position_mean": 0.002
+        }
+      }
+    },
+    "17": {
+      "all": {
+        "n": 20,
+        "token_count": 250,
+        "effective_token_count_mean": 31.803747177124023,
+        "effective_token_fraction_mean": 0.12721498310565948,
+        "energy_center_of_mass_mean": 0.3277327379827291,
+        "early_third_energy_mean": 0.6099039316177368,
+        "middle_third_energy_mean": 0.20455937087535858,
+        "late_third_energy_mean": 0.18553660809993744,
+        "peak_position_mean": 0.2136
+      },
+      "by_class": {
+        "Farley": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 41.819183349609375,
+          "effective_token_fraction_mean": 0.16727674007415771,
+          "energy_center_of_mass_mean": 0.25905926130645784,
+          "early_third_energy_mean": 0.6676934361457825,
+          "middle_third_energy_mean": 0.21470743417739868,
+          "late_third_energy_mean": 0.11759906262159348,
+          "peak_position_mean": 0.034
+        },
+        "Freid": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 37.54451370239258,
+          "effective_token_fraction_mean": 0.15017805993556976,
+          "energy_center_of_mass_mean": 0.32192194711016014,
+          "early_third_energy_mean": 0.6435585021972656,
+          "middle_third_energy_mean": 0.19949638843536377,
+          "late_third_energy_mean": 0.15694516897201538,
+          "peak_position_mean": 0.23
+        },
+        "Keri": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 33.000545501708984,
+          "effective_token_fraction_mean": 0.13200218975543976,
+          "energy_center_of_mass_mean": 0.38930814493993826,
+          "early_third_energy_mean": 0.4118656516075134,
+          "middle_third_energy_mean": 0.43228620290756226,
+          "late_third_energy_mean": 0.1558481901884079,
+          "peak_position_mean": 0.298
+        },
+        "Louie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 26.254451751708984,
+          "effective_token_fraction_mean": 0.10501781105995178,
+          "energy_center_of_mass_mean": 0.29255321501795195,
+          "early_third_energy_mean": 0.6130445599555969,
+          "middle_third_energy_mean": 0.35174986720085144,
+          "late_third_energy_mean": 0.03520551696419716,
+          "peak_position_mean": 0.356
+        },
+        "Luke": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 17.16486358642578,
+          "effective_token_fraction_mean": 0.06865944713354111,
+          "energy_center_of_mass_mean": 0.4865856941429678,
+          "early_third_energy_mean": 0.4956025779247284,
+          "middle_third_energy_mean": 0.05382398143410683,
+          "late_third_energy_mean": 0.45057326555252075,
+          "peak_position_mean": 0.48
+        },
+        "Mac": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 35.24348449707031,
+          "effective_token_fraction_mean": 0.14097392559051514,
+          "energy_center_of_mass_mean": 0.36542757871299614,
+          "early_third_energy_mean": 0.6243742108345032,
+          "middle_third_energy_mean": 0.1666901707649231,
+          "late_third_energy_mean": 0.20893557369709015,
+          "peak_position_mean": 0.12
+        },
+        "Roodie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 19.079727172851562,
+          "effective_token_fraction_mean": 0.07631891220808029,
+          "energy_center_of_mass_mean": 0.18160379257406478,
+          "early_third_energy_mean": 0.8765974640846252,
+          "middle_third_energy_mean": 0.09152941405773163,
+          "late_third_energy_mean": 0.03187311440706253,
+          "peak_position_mean": 0.11599999999999999
+        },
+        "Rudy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 45.79298400878906,
+          "effective_token_fraction_mean": 0.18317192792892456,
+          "energy_center_of_mass_mean": 0.38318947515813523,
+          "early_third_energy_mean": 0.5353935956954956,
+          "middle_third_energy_mean": 0.12717223167419434,
+          "late_third_energy_mean": 0.33743417263031006,
+          "peak_position_mean": 0.36600000000000005
+        },
+        "Siggy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 34.14250183105469,
+          "effective_token_fraction_mean": 0.1365700215101242,
+          "energy_center_of_mass_mean": 0.3267019756667462,
+          "early_third_energy_mean": 0.5922319293022156,
+          "middle_third_energy_mean": 0.15809282660484314,
+          "late_third_energy_mean": 0.24967502057552338,
+          "peak_position_mean": 0.024
+        },
+        "Zoe": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 27.995208740234375,
+          "effective_token_fraction_mean": 0.11198082566261292,
+          "energy_center_of_mass_mean": 0.27097629519787225,
+          "early_third_energy_mean": 0.6386778354644775,
+          "middle_third_energy_mean": 0.25004518032073975,
+          "late_third_energy_mean": 0.11127690970897675,
+          "peak_position_mean": 0.112
+        }
+      }
+    },
+    "18": {
+      "all": {
+        "n": 20,
+        "token_count": 250,
+        "effective_token_count_mean": 35.326194763183594,
+        "effective_token_fraction_mean": 0.14130480587482452,
+        "energy_center_of_mass_mean": 0.34516376741161675,
+        "early_third_energy_mean": 0.556515634059906,
+        "middle_third_energy_mean": 0.2312345802783966,
+        "late_third_energy_mean": 0.21224966645240784,
+        "peak_position_mean": 0.13019999999999998
+      },
+      "by_class": {
+        "Farley": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 9.260643005371094,
+          "effective_token_fraction_mean": 0.03704257309436798,
+          "energy_center_of_mass_mean": 0.15998555374842904,
+          "early_third_energy_mean": 0.7806987762451172,
+          "middle_third_energy_mean": 0.12085577845573425,
+          "late_third_energy_mean": 0.09844545274972916,
+          "peak_position_mean": 0.002
+        },
+        "Freid": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 36.888397216796875,
+          "effective_token_fraction_mean": 0.14755359292030334,
+          "energy_center_of_mass_mean": 0.35927312514167076,
+          "early_third_energy_mean": 0.4698941707611084,
+          "middle_third_energy_mean": 0.40166962146759033,
+          "late_third_energy_mean": 0.12843599915504456,
+          "peak_position_mean": 0.234
+        },
+        "Keri": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 48.776573181152344,
+          "effective_token_fraction_mean": 0.19510629773139954,
+          "energy_center_of_mass_mean": 0.3907496325162988,
+          "early_third_energy_mean": 0.42535996437072754,
+          "middle_third_energy_mean": 0.4315311014652252,
+          "late_third_energy_mean": 0.1431087702512741,
+          "peak_position_mean": 0.256
+        },
+        "Louie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 49.839332580566406,
+          "effective_token_fraction_mean": 0.19935733079910278,
+          "energy_center_of_mass_mean": 0.34896859321226364,
+          "early_third_energy_mean": 0.48203426599502563,
+          "middle_third_energy_mean": 0.42973679304122925,
+          "late_third_energy_mean": 0.08822890371084213,
+          "peak_position_mean": 0.276
+        },
+        "Luke": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 21.79567527770996,
+          "effective_token_fraction_mean": 0.08718270063400269,
+          "energy_center_of_mass_mean": 0.4754296522021839,
+          "early_third_energy_mean": 0.48993244767189026,
+          "middle_third_energy_mean": 0.06232403218746185,
+          "late_third_energy_mean": 0.44774365425109863,
+          "peak_position_mean": 0.512
+        },
+        "Mac": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 41.19121170043945,
+          "effective_token_fraction_mean": 0.16476485133171082,
+          "energy_center_of_mass_mean": 0.3725857769889218,
+          "early_third_energy_mean": 0.5638738870620728,
+          "middle_third_energy_mean": 0.18908986449241638,
+          "late_third_energy_mean": 0.24703609943389893,
+          "peak_position_mean": 0.002
+        },
+        "Roodie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 19.372276306152344,
+          "effective_token_fraction_mean": 0.07748910784721375,
+          "energy_center_of_mass_mean": 0.15700887582654216,
+          "early_third_energy_mean": 0.8755558729171753,
+          "middle_third_energy_mean": 0.08354370296001434,
+          "late_third_energy_mean": 0.04090017080307007,
+          "peak_position_mean": 0.002
+        },
+        "Rudy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 51.6497802734375,
+          "effective_token_fraction_mean": 0.20659911632537842,
+          "energy_center_of_mass_mean": 0.4917008330802616,
+          "early_third_energy_mean": 0.4176403880119324,
+          "middle_third_energy_mean": 0.10860604047775269,
+          "late_third_energy_mean": 0.4737534523010254,
+          "peak_position_mean": 0.002
+        },
+        "Siggy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 33.919578552246094,
+          "effective_token_fraction_mean": 0.13567832112312317,
+          "energy_center_of_mass_mean": 0.3836775524759063,
+          "early_third_energy_mean": 0.48271444439888,
+          "middle_third_energy_mean": 0.19771507382392883,
+          "late_third_energy_mean": 0.31957048177719116,
+          "peak_position_mean": 0.002
+        },
+        "Zoe": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 40.56853103637695,
+          "effective_token_fraction_mean": 0.16227412223815918,
+          "energy_center_of_mass_mean": 0.31225807892368973,
+          "early_third_energy_mean": 0.5774526596069336,
+          "middle_third_energy_mean": 0.2872735857963562,
+          "late_third_energy_mean": 0.13527370989322662,
+          "peak_position_mean": 0.013999999999999999
+        }
+      }
+    },
+    "19": {
+      "all": {
+        "n": 20,
+        "token_count": 250,
+        "effective_token_count_mean": 23.847143173217773,
+        "effective_token_fraction_mean": 0.09538857638835907,
+        "energy_center_of_mass_mean": 0.37308893863653125,
+        "early_third_energy_mean": 0.552648663520813,
+        "middle_third_energy_mean": 0.2194654494524002,
+        "late_third_energy_mean": 0.22788600623607635,
+        "peak_position_mean": 0.378
+      },
+      "by_class": {
+        "Farley": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 14.540451049804688,
+          "effective_token_fraction_mean": 0.05816180258989334,
+          "energy_center_of_mass_mean": 0.2515632385724633,
+          "early_third_energy_mean": 0.7077814340591431,
+          "middle_third_energy_mean": 0.10626647621393204,
+          "late_third_energy_mean": 0.18595238029956818,
+          "peak_position_mean": 0.36000000000000004
+        },
+        "Freid": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 21.781240463256836,
+          "effective_token_fraction_mean": 0.08712495863437653,
+          "energy_center_of_mass_mean": 0.3728794489085104,
+          "early_third_energy_mean": 0.473859965801239,
+          "middle_third_energy_mean": 0.35514888167381287,
+          "late_third_energy_mean": 0.17099124193191528,
+          "peak_position_mean": 0.41200000000000003
+        },
+        "Keri": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 29.069290161132812,
+          "effective_token_fraction_mean": 0.11627716571092606,
+          "energy_center_of_mass_mean": 0.3723098822184151,
+          "early_third_energy_mean": 0.4897870421409607,
+          "middle_third_energy_mean": 0.43371421098709106,
+          "late_third_energy_mean": 0.07649878412485123,
+          "peak_position_mean": 0.364
+        },
+        "Louie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 28.97266387939453,
+          "effective_token_fraction_mean": 0.11589065194129944,
+          "energy_center_of_mass_mean": 0.351824938322426,
+          "early_third_energy_mean": 0.4936652183532715,
+          "middle_third_energy_mean": 0.44180089235305786,
+          "late_third_energy_mean": 0.06453394144773483,
+          "peak_position_mean": 0.276
+        },
+        "Luke": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 7.523957252502441,
+          "effective_token_fraction_mean": 0.03009582869708538,
+          "energy_center_of_mass_mean": 0.49334999070413676,
+          "early_third_energy_mean": 0.48191630840301514,
+          "middle_third_energy_mean": 0.024262962862849236,
+          "late_third_energy_mean": 0.49382075667381287,
+          "peak_position_mean": 0.482
+        },
+        "Mac": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 28.8350887298584,
+          "effective_token_fraction_mean": 0.11534035205841064,
+          "energy_center_of_mass_mean": 0.4470912159116114,
+          "early_third_energy_mean": 0.46592459082603455,
+          "middle_third_energy_mean": 0.2027404010295868,
+          "late_third_energy_mean": 0.33133500814437866,
+          "peak_position_mean": 0.374
+        },
+        "Roodie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 16.64112663269043,
+          "effective_token_fraction_mean": 0.06656450778245926,
+          "energy_center_of_mass_mean": 0.1819672809864643,
+          "early_third_energy_mean": 0.9450101256370544,
+          "middle_third_energy_mean": 0.03991028293967247,
+          "late_third_energy_mean": 0.015079661272466183,
+          "peak_position_mean": 0.206
+        },
+        "Rudy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 28.832820892333984,
+          "effective_token_fraction_mean": 0.11533129215240479,
+          "energy_center_of_mass_mean": 0.6132337688351717,
+          "early_third_energy_mean": 0.2957233786582947,
+          "middle_third_energy_mean": 0.11454524099826813,
+          "late_third_energy_mean": 0.5897314548492432,
+          "peak_position_mean": 0.902
+        },
+        "Siggy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 27.57073211669922,
+          "effective_token_fraction_mean": 0.11028292775154114,
+          "energy_center_of_mass_mean": 0.41349896253497165,
+          "early_third_energy_mean": 0.4356050491333008,
+          "middle_third_energy_mean": 0.24784861505031586,
+          "late_third_energy_mean": 0.3165462613105774,
+          "peak_position_mean": 0.39
+        },
+        "Zoe": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 34.704071044921875,
+          "effective_token_fraction_mean": 0.13881626725196838,
+          "energy_center_of_mass_mean": 0.2331706593711425,
+          "early_third_energy_mean": 0.7372130155563354,
+          "middle_third_energy_mean": 0.22841638326644897,
+          "late_third_energy_mean": 0.034370649605989456,
+          "peak_position_mean": 0.013999999999999999
+        }
+      }
+    },
+    "20": {
+      "all": {
+        "n": 20,
+        "token_count": 250,
+        "effective_token_count_mean": 15.605603218078613,
+        "effective_token_fraction_mean": 0.06242242455482483,
+        "energy_center_of_mass_mean": 0.3745390999287141,
+        "early_third_energy_mean": 0.5105820298194885,
+        "middle_third_energy_mean": 0.24944667518138885,
+        "late_third_energy_mean": 0.23997125029563904,
+        "peak_position_mean": 0.4056
+      },
+      "by_class": {
+        "Farley": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 18.36707878112793,
+          "effective_token_fraction_mean": 0.07346831262111664,
+          "energy_center_of_mass_mean": 0.35336049113858203,
+          "early_third_energy_mean": 0.5410337448120117,
+          "middle_third_energy_mean": 0.2459508329629898,
+          "late_third_energy_mean": 0.2130153626203537,
+          "peak_position_mean": 0.37
+        },
+        "Freid": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 20.024991989135742,
+          "effective_token_fraction_mean": 0.08009997010231018,
+          "energy_center_of_mass_mean": 0.22702967160448914,
+          "early_third_energy_mean": 0.6678287982940674,
+          "middle_third_energy_mean": 0.2538720965385437,
+          "late_third_energy_mean": 0.07829906046390533,
+          "peak_position_mean": 0.092
+        },
+        "Keri": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 19.0997314453125,
+          "effective_token_fraction_mean": 0.07639892399311066,
+          "energy_center_of_mass_mean": 0.45699298177378533,
+          "early_third_energy_mean": 0.2925967872142792,
+          "middle_third_energy_mean": 0.5543590784072876,
+          "late_third_energy_mean": 0.15304413437843323,
+          "peak_position_mean": 0.6659999999999999
+        },
+        "Louie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 9.640846252441406,
+          "effective_token_fraction_mean": 0.03856338560581207,
+          "energy_center_of_mass_mean": 0.40110528243266336,
+          "early_third_energy_mean": 0.18625472486019135,
+          "middle_third_energy_mean": 0.7904186248779297,
+          "late_third_energy_mean": 0.02332685887813568,
+          "peak_position_mean": 0.438
+        },
+        "Luke": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 9.833817481994629,
+          "effective_token_fraction_mean": 0.03933527320623398,
+          "energy_center_of_mass_mean": 0.49872656153605804,
+          "early_third_energy_mean": 0.4635153114795685,
+          "middle_third_energy_mean": 0.032258257269859314,
+          "late_third_energy_mean": 0.5042265057563782,
+          "peak_position_mean": 0.482
+        },
+        "Mac": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 19.065614700317383,
+          "effective_token_fraction_mean": 0.0762624591588974,
+          "energy_center_of_mass_mean": 0.3945936118171215,
+          "early_third_energy_mean": 0.5389094352722168,
+          "middle_third_energy_mean": 0.14328056573867798,
+          "late_third_energy_mean": 0.3178100287914276,
+          "peak_position_mean": 0.336
+        },
+        "Roodie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 11.919351577758789,
+          "effective_token_fraction_mean": 0.047677405178546906,
+          "energy_center_of_mass_mean": 0.14673974894002967,
+          "early_third_energy_mean": 0.9253168106079102,
+          "middle_third_energy_mean": 0.0541640967130661,
+          "late_third_energy_mean": 0.020519061014056206,
+          "peak_position_mean": 0.10400000000000001
+        },
+        "Rudy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 12.640213012695312,
+          "effective_token_fraction_mean": 0.0505608506500721,
+          "energy_center_of_mass_mean": 0.7320171219913438,
+          "early_third_energy_mean": 0.17989440262317657,
+          "middle_third_energy_mean": 0.03332308307290077,
+          "late_third_energy_mean": 0.7867823839187622,
+          "peak_position_mean": 0.9
+        },
+        "Siggy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 24.73019027709961,
+          "effective_token_fraction_mean": 0.09892075508832932,
+          "energy_center_of_mass_mean": 0.3746571469408542,
+          "early_third_energy_mean": 0.5073097348213196,
+          "middle_third_energy_mean": 0.1999315619468689,
+          "late_third_energy_mean": 0.2927587628364563,
+          "peak_position_mean": 0.368
+        },
+        "Zoe": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 10.734203338623047,
+          "effective_token_fraction_mean": 0.042936813086271286,
+          "energy_center_of_mass_mean": 0.16016838111221396,
+          "early_third_energy_mean": 0.8031607866287231,
+          "middle_third_energy_mean": 0.18690869212150574,
+          "late_third_energy_mean": 0.009930305182933807,
+          "peak_position_mean": 0.3
+        }
+      }
+    },
+    "21": {
+      "all": {
+        "n": 20,
+        "token_count": 250,
+        "effective_token_count_mean": 21.00719451904297,
+        "effective_token_fraction_mean": 0.08402876555919647,
+        "energy_center_of_mass_mean": 0.3507542066598015,
+        "early_third_energy_mean": 0.5921555757522583,
+        "middle_third_energy_mean": 0.21893052756786346,
+        "late_third_energy_mean": 0.188913956284523,
+        "peak_position_mean": 0.31320000000000003
+      },
+      "by_class": {
+        "Farley": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 29.913246154785156,
+          "effective_token_fraction_mean": 0.11965298652648926,
+          "energy_center_of_mass_mean": 0.2282602900510684,
+          "early_third_energy_mean": 0.7481288909912109,
+          "middle_third_energy_mean": 0.08946563303470612,
+          "late_third_energy_mean": 0.1624056100845337,
+          "peak_position_mean": 0.36200000000000004
+        },
+        "Freid": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 23.13473129272461,
+          "effective_token_fraction_mean": 0.09253892302513123,
+          "energy_center_of_mass_mean": 0.34066081228073014,
+          "early_third_energy_mean": 0.5202689170837402,
+          "middle_third_energy_mean": 0.38657379150390625,
+          "late_third_energy_mean": 0.09315735846757889,
+          "peak_position_mean": 0.29600000000000004
+        },
+        "Keri": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 14.423273086547852,
+          "effective_token_fraction_mean": 0.05769309401512146,
+          "energy_center_of_mass_mean": 0.3500625884164812,
+          "early_third_energy_mean": 0.5252818465232849,
+          "middle_third_energy_mean": 0.4000491499900818,
+          "late_third_energy_mean": 0.07466889917850494,
+          "peak_position_mean": 0.364
+        },
+        "Louie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 19.35611343383789,
+          "effective_token_fraction_mean": 0.07742445170879364,
+          "energy_center_of_mass_mean": 0.2937233067446883,
+          "early_third_energy_mean": 0.5540955066680908,
+          "middle_third_energy_mean": 0.430652916431427,
+          "late_third_energy_mean": 0.015251551754772663,
+          "peak_position_mean": 0.14800000000000002
+        },
+        "Luke": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 8.100044250488281,
+          "effective_token_fraction_mean": 0.03240017592906952,
+          "energy_center_of_mass_mean": 0.44991306895184363,
+          "early_third_energy_mean": 0.49303847551345825,
+          "middle_third_energy_mean": 0.03565444052219391,
+          "late_third_energy_mean": 0.47130703926086426,
+          "peak_position_mean": 0.422
+        },
+        "Mac": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 22.354534149169922,
+          "effective_token_fraction_mean": 0.08941813558340073,
+          "energy_center_of_mass_mean": 0.4144834649896697,
+          "early_third_energy_mean": 0.5468031167984009,
+          "middle_third_energy_mean": 0.2689816951751709,
+          "late_third_energy_mean": 0.18421517312526703,
+          "peak_position_mean": 0.33199999999999996
+        },
+        "Roodie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 13.908084869384766,
+          "effective_token_fraction_mean": 0.0556323379278183,
+          "energy_center_of_mass_mean": 0.20003707862758335,
+          "early_third_energy_mean": 0.9469586610794067,
+          "middle_third_energy_mean": 0.03826485946774483,
+          "late_third_energy_mean": 0.014776507392525673,
+          "peak_position_mean": 0.206
+        },
+        "Rudy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 21.62260627746582,
+          "effective_token_fraction_mean": 0.08649042248725891,
+          "energy_center_of_mass_mean": 0.5544009841899843,
+          "early_third_energy_mean": 0.34392768144607544,
+          "middle_third_energy_mean": 0.1069953441619873,
+          "late_third_energy_mean": 0.5490767955780029,
+          "peak_position_mean": 0.786
+        },
+        "Siggy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 33.29267501831055,
+          "effective_token_fraction_mean": 0.1331706941127777,
+          "energy_center_of_mass_mean": 0.2766115451636474,
+          "early_third_energy_mean": 0.6749669909477234,
+          "middle_third_energy_mean": 0.17466935515403748,
+          "late_third_energy_mean": 0.15036365389823914,
+          "peak_position_mean": 0.08399999999999999
+        },
+        "Zoe": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 23.96662139892578,
+          "effective_token_fraction_mean": 0.09586648643016815,
+          "energy_center_of_mass_mean": 0.39938892718231844,
+          "early_third_energy_mean": 0.5680851340293884,
+          "middle_third_energy_mean": 0.25799787044525146,
+          "late_third_energy_mean": 0.17391693592071533,
+          "peak_position_mean": 0.132
+        }
+      }
+    },
+    "22": {
+      "all": {
+        "n": 20,
+        "token_count": 250,
+        "effective_token_count_mean": 15.69163703918457,
+        "effective_token_fraction_mean": 0.06276654452085495,
+        "energy_center_of_mass_mean": 0.32022110803932125,
+        "early_third_energy_mean": 0.6394988298416138,
+        "middle_third_energy_mean": 0.21267330646514893,
+        "late_third_energy_mean": 0.14782792329788208,
+        "peak_position_mean": 0.2836
+      },
+      "by_class": {
+        "Farley": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 17.95525550842285,
+          "effective_token_fraction_mean": 0.07182101905345917,
+          "energy_center_of_mass_mean": 0.25213069445208214,
+          "early_third_energy_mean": 0.7000580430030823,
+          "middle_third_energy_mean": 0.11052809655666351,
+          "late_third_energy_mean": 0.18941405415534973,
+          "peak_position_mean": 0.36200000000000004
+        },
+        "Freid": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 20.934371948242188,
+          "effective_token_fraction_mean": 0.08373748511075974,
+          "energy_center_of_mass_mean": 0.2931261337504176,
+          "early_third_energy_mean": 0.5986084938049316,
+          "middle_third_energy_mean": 0.33633044362068176,
+          "late_third_energy_mean": 0.06506108492612839,
+          "peak_position_mean": 0.29600000000000004
+        },
+        "Keri": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 8.309146881103516,
+          "effective_token_fraction_mean": 0.033236585557460785,
+          "energy_center_of_mass_mean": 0.30662244297447233,
+          "early_third_energy_mean": 0.6083399057388306,
+          "middle_third_energy_mean": 0.3751944601535797,
+          "late_third_energy_mean": 0.0164656825363636,
+          "peak_position_mean": 0.364
+        },
+        "Louie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 15.522563934326172,
+          "effective_token_fraction_mean": 0.062090255320072174,
+          "energy_center_of_mass_mean": 0.3047340524359108,
+          "early_third_energy_mean": 0.5151504278182983,
+          "middle_third_energy_mean": 0.4776461720466614,
+          "late_third_energy_mean": 0.007203277200460434,
+          "peak_position_mean": 0.31
+        },
+        "Luke": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 6.269840717315674,
+          "effective_token_fraction_mean": 0.025079362094402313,
+          "energy_center_of_mass_mean": 0.4935382567540176,
+          "early_third_energy_mean": 0.4690004885196686,
+          "middle_third_energy_mean": 0.033638812601566315,
+          "late_third_energy_mean": 0.4973607063293457,
+          "peak_position_mean": 0.482
+        },
+        "Mac": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 32.19532775878906,
+          "effective_token_fraction_mean": 0.12878131866455078,
+          "energy_center_of_mass_mean": 0.3857178379610052,
+          "early_third_energy_mean": 0.5904532670974731,
+          "middle_third_energy_mean": 0.25602278113365173,
+          "late_third_energy_mean": 0.15352392196655273,
+          "peak_position_mean": 0.33199999999999996
+        },
+        "Roodie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 3.408980369567871,
+          "effective_token_fraction_mean": 0.01363592129200697,
+          "energy_center_of_mass_mean": 0.19791886377164059,
+          "early_third_energy_mean": 0.9922174215316772,
+          "middle_third_energy_mean": 0.0068377237766981125,
+          "late_third_energy_mean": 0.0009448248310945928,
+          "peak_position_mean": 0.206
+        },
+        "Rudy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 18.47827911376953,
+          "effective_token_fraction_mean": 0.07391311228275299,
+          "energy_center_of_mass_mean": 0.4200811584740453,
+          "early_third_energy_mean": 0.5524576306343079,
+          "middle_third_energy_mean": 0.11233483254909515,
+          "late_third_energy_mean": 0.33520740270614624,
+          "peak_position_mean": 0.18
+        },
+        "Siggy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 18.427818298339844,
+          "effective_token_fraction_mean": 0.07371127605438232,
+          "energy_center_of_mass_mean": 0.3051690895851813,
+          "early_third_energy_mean": 0.6533999443054199,
+          "middle_third_energy_mean": 0.19979490339756012,
+          "late_third_energy_mean": 0.14680513739585876,
+          "peak_position_mean": 0.16999999999999998
+        },
+        "Zoe": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 15.414791107177734,
+          "effective_token_fraction_mean": 0.06165916472673416,
+          "energy_center_of_mass_mean": 0.24317255023443934,
+          "early_third_energy_mean": 0.7153019905090332,
+          "middle_third_energy_mean": 0.2184046357870102,
+          "late_third_energy_mean": 0.0662931576371193,
+          "peak_position_mean": 0.134
+        }
+      }
+    },
+    "23": {
+      "all": {
+        "n": 20,
+        "token_count": 250,
+        "effective_token_count_mean": 24.068864822387695,
+        "effective_token_fraction_mean": 0.0962754637002945,
+        "energy_center_of_mass_mean": 0.29329835044664576,
+        "early_third_energy_mean": 0.6678279638290405,
+        "middle_third_energy_mean": 0.1895577758550644,
+        "late_third_energy_mean": 0.1426141858100891,
+        "peak_position_mean": 0.2872
+      },
+      "by_class": {
+        "Farley": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 27.34527015686035,
+          "effective_token_fraction_mean": 0.10938107967376709,
+          "energy_center_of_mass_mean": 0.17152634419235027,
+          "early_third_energy_mean": 0.8283528089523315,
+          "middle_third_energy_mean": 0.08099204301834106,
+          "late_third_energy_mean": 0.09065495431423187,
+          "peak_position_mean": 0.036
+        },
+        "Freid": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 21.887649536132812,
+          "effective_token_fraction_mean": 0.08755060285329819,
+          "energy_center_of_mass_mean": 0.30190020713981336,
+          "early_third_energy_mean": 0.593157947063446,
+          "middle_third_energy_mean": 0.3448631167411804,
+          "late_third_energy_mean": 0.06197890266776085,
+          "peak_position_mean": 0.338
+        },
+        "Keri": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 27.443622589111328,
+          "effective_token_fraction_mean": 0.10977449268102646,
+          "energy_center_of_mass_mean": 0.24479300867029993,
+          "early_third_energy_mean": 0.7589167356491089,
+          "middle_third_energy_mean": 0.19965392351150513,
+          "late_third_energy_mean": 0.04142943024635315,
+          "peak_position_mean": 0.098
+        },
+        "Louie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 35.699954986572266,
+          "effective_token_fraction_mean": 0.14279980957508087,
+          "energy_center_of_mass_mean": 0.28515674015063025,
+          "early_third_energy_mean": 0.6221964359283447,
+          "middle_third_energy_mean": 0.33243733644485474,
+          "late_third_energy_mean": 0.045366182923316956,
+          "peak_position_mean": 0.356
+        },
+        "Luke": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 10.653768539428711,
+          "effective_token_fraction_mean": 0.042615074664354324,
+          "energy_center_of_mass_mean": 0.466158940377803,
+          "early_third_energy_mean": 0.4830751121044159,
+          "middle_third_energy_mean": 0.030288491398096085,
+          "late_third_energy_mean": 0.48663628101348877,
+          "peak_position_mean": 0.418
+        },
+        "Mac": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 22.006683349609375,
+          "effective_token_fraction_mean": 0.0880267322063446,
+          "energy_center_of_mass_mean": 0.39587209292584347,
+          "early_third_energy_mean": 0.616227388381958,
+          "middle_third_energy_mean": 0.21980491280555725,
+          "late_third_energy_mean": 0.16396765410900116,
+          "peak_position_mean": 0.524
+        },
+        "Roodie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 19.12431526184082,
+          "effective_token_fraction_mean": 0.07649725675582886,
+          "energy_center_of_mass_mean": 0.16924694068412038,
+          "early_third_energy_mean": 0.9345481395721436,
+          "middle_third_energy_mean": 0.04737367480993271,
+          "late_third_energy_mean": 0.018078237771987915,
+          "peak_position_mean": 0.206
+        },
+        "Rudy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 20.036354064941406,
+          "effective_token_fraction_mean": 0.08014541864395142,
+          "energy_center_of_mass_mean": 0.3405127586956921,
+          "early_third_energy_mean": 0.6482037305831909,
+          "middle_third_energy_mean": 0.05139770731329918,
+          "late_third_energy_mean": 0.3003985583782196,
+          "peak_position_mean": 0.062
+        },
+        "Siggy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 40.4498405456543,
+          "effective_token_fraction_mean": 0.1617993712425232,
+          "energy_center_of_mass_mean": 0.27550886712526096,
+          "early_third_energy_mean": 0.6642147302627563,
+          "middle_third_energy_mean": 0.16239696741104126,
+          "late_third_energy_mean": 0.17338821291923523,
+          "peak_position_mean": 0.336
+        },
+        "Zoe": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 16.04119300842285,
+          "effective_token_fraction_mean": 0.06416477262973785,
+          "energy_center_of_mass_mean": 0.28230760450464387,
+          "early_third_energy_mean": 0.5293866991996765,
+          "middle_third_energy_mean": 0.42636969685554504,
+          "late_third_energy_mean": 0.04424353316426277,
+          "peak_position_mean": 0.498
+        }
+      }
+    },
+    "24": {
+      "all": {
+        "n": 20,
+        "token_count": 250,
+        "effective_token_count_mean": 17.899303436279297,
+        "effective_token_fraction_mean": 0.07159721106290817,
+        "energy_center_of_mass_mean": 0.26723633924863033,
+        "early_third_energy_mean": 0.7194392085075378,
+        "middle_third_energy_mean": 0.16333968937397003,
+        "late_third_energy_mean": 0.11722099781036377,
+        "peak_position_mean": 0.1734
+      },
+      "by_class": {
+        "Farley": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 19.634807586669922,
+          "effective_token_fraction_mean": 0.07853922247886658,
+          "energy_center_of_mass_mean": 0.1929924972045477,
+          "early_third_energy_mean": 0.7936648726463318,
+          "middle_third_energy_mean": 0.1239720955491066,
+          "late_third_energy_mean": 0.08236298710107803,
+          "peak_position_mean": 0.057999999999999996
+        },
+        "Freid": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 6.724531173706055,
+          "effective_token_fraction_mean": 0.026898127049207687,
+          "energy_center_of_mass_mean": 0.22436705925654526,
+          "early_third_energy_mean": 0.740531325340271,
+          "middle_third_energy_mean": 0.2494579404592514,
+          "late_third_energy_mean": 0.010010636411607265,
+          "peak_position_mean": 0.29200000000000004
+        },
+        "Keri": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 18.07980728149414,
+          "effective_token_fraction_mean": 0.07231923192739487,
+          "energy_center_of_mass_mean": 0.24947482450860012,
+          "early_third_energy_mean": 0.7415663003921509,
+          "middle_third_energy_mean": 0.21027560532093048,
+          "late_third_energy_mean": 0.048158198595047,
+          "peak_position_mean": 0.098
+        },
+        "Louie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 25.494434356689453,
+          "effective_token_fraction_mean": 0.10197773575782776,
+          "energy_center_of_mass_mean": 0.2637267477172561,
+          "early_third_energy_mean": 0.6304339170455933,
+          "middle_third_energy_mean": 0.3493505120277405,
+          "late_third_energy_mean": 0.02021544612944126,
+          "peak_position_mean": 0.14600000000000002
+        },
+        "Luke": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 6.042734146118164,
+          "effective_token_fraction_mean": 0.02417093515396118,
+          "energy_center_of_mass_mean": 0.4819741656355942,
+          "early_third_energy_mean": 0.495357871055603,
+          "middle_third_energy_mean": 0.018043464049696922,
+          "late_third_energy_mean": 0.4865984320640564,
+          "peak_position_mean": 0.48
+        },
+        "Mac": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 19.114635467529297,
+          "effective_token_fraction_mean": 0.07645854353904724,
+          "energy_center_of_mass_mean": 0.33545683753322586,
+          "early_third_energy_mean": 0.7247093915939331,
+          "middle_third_energy_mean": 0.1859721839427948,
+          "late_third_energy_mean": 0.08931829035282135,
+          "peak_position_mean": 0.27
+        },
+        "Roodie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 15.466814041137695,
+          "effective_token_fraction_mean": 0.06186725199222565,
+          "energy_center_of_mass_mean": 0.18705598805042428,
+          "early_third_energy_mean": 0.9073257446289062,
+          "middle_third_energy_mean": 0.08120743185281754,
+          "late_third_energy_mean": 0.011466676369309425,
+          "peak_position_mean": 0.206
+        },
+        "Rudy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 27.680606842041016,
+          "effective_token_fraction_mean": 0.11072242259979248,
+          "energy_center_of_mass_mean": 0.28862675391144044,
+          "early_third_energy_mean": 0.7079631090164185,
+          "middle_third_energy_mean": 0.06143089383840561,
+          "late_third_energy_mean": 0.23060595989227295,
+          "peak_position_mean": 0.06
+        },
+        "Siggy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 22.547130584716797,
+          "effective_token_fraction_mean": 0.09018851816654205,
+          "energy_center_of_mass_mean": 0.2610992766267344,
+          "early_third_energy_mean": 0.6559913158416748,
+          "middle_third_energy_mean": 0.163929283618927,
+          "late_third_energy_mean": 0.1800794005393982,
+          "peak_position_mean": 0.018000000000000002
+        },
+        "Zoe": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 18.207529067993164,
+          "effective_token_fraction_mean": 0.07283011078834534,
+          "energy_center_of_mass_mean": 0.1875892420419349,
+          "early_third_energy_mean": 0.7968487739562988,
+          "middle_third_energy_mean": 0.18975748121738434,
+          "late_third_energy_mean": 0.013393889181315899,
+          "peak_position_mean": 0.106
+        }
+      }
+    },
+    "25": {
+      "all": {
+        "n": 20,
+        "token_count": 250,
+        "effective_token_count_mean": 15.504717826843262,
+        "effective_token_fraction_mean": 0.06201887130737305,
+        "energy_center_of_mass_mean": 0.36128663592479826,
+        "early_third_energy_mean": 0.5345667004585266,
+        "middle_third_energy_mean": 0.28020739555358887,
+        "late_third_energy_mean": 0.1852259337902069,
+        "peak_position_mean": 0.33640000000000003
+      },
+      "by_class": {
+        "Farley": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 14.585424423217773,
+          "effective_token_fraction_mean": 0.05834169313311577,
+          "energy_center_of_mass_mean": 0.13382173698608119,
+          "early_third_energy_mean": 0.8776180148124695,
+          "middle_third_energy_mean": 0.06666715443134308,
+          "late_third_energy_mean": 0.055714868009090424,
+          "peak_position_mean": 0.062
+        },
+        "Freid": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 6.771661758422852,
+          "effective_token_fraction_mean": 0.027086645364761353,
+          "energy_center_of_mass_mean": 0.2739686763392484,
+          "early_third_energy_mean": 0.7469313144683838,
+          "middle_third_energy_mean": 0.12145795673131943,
+          "late_third_energy_mean": 0.1316106915473938,
+          "peak_position_mean": 0.14200000000000002
+        },
+        "Keri": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 20.57101058959961,
+          "effective_token_fraction_mean": 0.08228404074907303,
+          "energy_center_of_mass_mean": 0.5007949787395793,
+          "early_third_energy_mean": 0.30786120891571045,
+          "middle_third_energy_mean": 0.3682052791118622,
+          "late_third_energy_mean": 0.32393357157707214,
+          "peak_position_mean": 0.698
+        },
+        "Louie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 19.183481216430664,
+          "effective_token_fraction_mean": 0.07673392444849014,
+          "energy_center_of_mass_mean": 0.3117110213779598,
+          "early_third_energy_mean": 0.4961690902709961,
+          "middle_third_energy_mean": 0.495379775762558,
+          "late_third_energy_mean": 0.008450964465737343,
+          "peak_position_mean": 0.33999999999999997
+        },
+        "Luke": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 3.421542167663574,
+          "effective_token_fraction_mean": 0.013686168938875198,
+          "energy_center_of_mass_mean": 0.6417099698084033,
+          "early_third_energy_mean": 0.05741109326481819,
+          "middle_third_energy_mean": 0.4651981294155121,
+          "late_third_energy_mean": 0.477390855550766,
+          "peak_position_mean": 0.69
+        },
+        "Mac": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 18.80697250366211,
+          "effective_token_fraction_mean": 0.07522788643836975,
+          "energy_center_of_mass_mean": 0.4266910363302483,
+          "early_third_energy_mean": 0.6050335764884949,
+          "middle_third_energy_mean": 0.21100866794586182,
+          "late_third_energy_mean": 0.18395769596099854,
+          "peak_position_mean": 0.28200000000000003
+        },
+        "Roodie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 22.839069366455078,
+          "effective_token_fraction_mean": 0.09135627746582031,
+          "energy_center_of_mass_mean": 0.16189410072078722,
+          "early_third_energy_mean": 0.915405809879303,
+          "middle_third_energy_mean": 0.06630612909793854,
+          "late_third_energy_mean": 0.01828801818192005,
+          "peak_position_mean": 0.13
+        },
+        "Rudy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 27.787097930908203,
+          "effective_token_fraction_mean": 0.11114838719367981,
+          "energy_center_of_mass_mean": 0.41814147747946506,
+          "early_third_energy_mean": 0.5304394960403442,
+          "middle_third_energy_mean": 0.10430151969194412,
+          "late_third_energy_mean": 0.36525896191596985,
+          "peak_position_mean": 0.124
+        },
+        "Siggy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 16.231433868408203,
+          "effective_token_fraction_mean": 0.06492573022842407,
+          "energy_center_of_mass_mean": 0.2861777750677149,
+          "early_third_energy_mean": 0.6778354644775391,
+          "middle_third_energy_mean": 0.06061439961194992,
+          "late_third_energy_mean": 0.26155000925064087,
+          "peak_position_mean": 0.39799999999999996
+        },
+        "Zoe": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 4.849505424499512,
+          "effective_token_fraction_mean": 0.019398022443056107,
+          "energy_center_of_mass_mean": 0.4579555863984952,
+          "early_third_energy_mean": 0.13096146285533905,
+          "middle_third_energy_mean": 0.8429349660873413,
+          "late_third_energy_mean": 0.02610372193157673,
+          "peak_position_mean": 0.498
+        }
+      }
+    },
+    "26": {
+      "all": {
+        "n": 20,
+        "token_count": 250,
+        "effective_token_count_mean": 14.55370807647705,
+        "effective_token_fraction_mean": 0.058214835822582245,
+        "energy_center_of_mass_mean": 0.30171082962490414,
+        "early_third_energy_mean": 0.6617711782455444,
+        "middle_third_energy_mean": 0.16614022850990295,
+        "late_third_energy_mean": 0.17208866775035858,
+        "peak_position_mean": 0.34080000000000005
+      },
+      "by_class": {
+        "Farley": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 11.148844718933105,
+          "effective_token_fraction_mean": 0.0445953793823719,
+          "energy_center_of_mass_mean": 0.11448960575475034,
+          "early_third_energy_mean": 0.8985679149627686,
+          "middle_third_energy_mean": 0.07778678089380264,
+          "late_third_energy_mean": 0.02364516071975231,
+          "peak_position_mean": 0.048
+        },
+        "Freid": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 12.138479232788086,
+          "effective_token_fraction_mean": 0.04855392128229141,
+          "energy_center_of_mass_mean": 0.28142680589778707,
+          "early_third_energy_mean": 0.6375724673271179,
+          "middle_third_energy_mean": 0.2834821939468384,
+          "late_third_energy_mean": 0.0789453536272049,
+          "peak_position_mean": 0.28800000000000003
+        },
+        "Keri": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 19.93757438659668,
+          "effective_token_fraction_mean": 0.07975029945373535,
+          "energy_center_of_mass_mean": 0.2515005299972802,
+          "early_third_energy_mean": 0.7423917055130005,
+          "middle_third_energy_mean": 0.19648540019989014,
+          "late_third_energy_mean": 0.06112290173768997,
+          "peak_position_mean": 0.098
+        },
+        "Louie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 9.137943267822266,
+          "effective_token_fraction_mean": 0.03655177354812622,
+          "energy_center_of_mass_mean": 0.30825951106503524,
+          "early_third_energy_mean": 0.5509467124938965,
+          "middle_third_energy_mean": 0.4467760920524597,
+          "late_third_energy_mean": 0.0022769926581531763,
+          "peak_position_mean": 0.354
+        },
+        "Luke": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 6.871833801269531,
+          "effective_token_fraction_mean": 0.027487337589263916,
+          "energy_center_of_mass_mean": 0.5027202581475106,
+          "early_third_energy_mean": 0.4331112504005432,
+          "middle_third_energy_mean": 0.06960586458444595,
+          "late_third_energy_mean": 0.4972827732563019,
+          "peak_position_mean": 0.482
+        },
+        "Mac": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 28.229602813720703,
+          "effective_token_fraction_mean": 0.11291840672492981,
+          "energy_center_of_mass_mean": 0.3895398626037682,
+          "early_third_energy_mean": 0.65385901927948,
+          "middle_third_energy_mean": 0.17570377886295319,
+          "late_third_energy_mean": 0.17043717205524445,
+          "peak_position_mean": 0.596
+        },
+        "Roodie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 13.964733123779297,
+          "effective_token_fraction_mean": 0.05585893243551254,
+          "energy_center_of_mass_mean": 0.1589517566899845,
+          "early_third_energy_mean": 0.9535567760467529,
+          "middle_third_energy_mean": 0.03875543922185898,
+          "late_third_energy_mean": 0.007687932811677456,
+          "peak_position_mean": 0.206
+        },
+        "Rudy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 18.197399139404297,
+          "effective_token_fraction_mean": 0.07278959453105927,
+          "energy_center_of_mass_mean": 0.4741916429144259,
+          "early_third_energy_mean": 0.46103331446647644,
+          "middle_third_energy_mean": 0.06526698172092438,
+          "late_third_energy_mean": 0.4736994802951813,
+          "peak_position_mean": 0.876
+        },
+        "Siggy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 13.303655624389648,
+          "effective_token_fraction_mean": 0.05321462079882622,
+          "energy_center_of_mass_mean": 0.35748045628488967,
+          "early_third_energy_mean": 0.5431546568870544,
+          "middle_third_energy_mean": 0.06066810339689255,
+          "late_third_energy_mean": 0.39617720246315,
+          "peak_position_mean": 0.374
+        },
+        "Zoe": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 12.60701847076416,
+          "effective_token_fraction_mean": 0.05042807012796402,
+          "energy_center_of_mass_mean": 0.1785478668936096,
+          "early_third_energy_mean": 0.7435169219970703,
+          "middle_third_energy_mean": 0.24687142670154572,
+          "late_third_energy_mean": 0.009611714631319046,
+          "peak_position_mean": 0.08600000000000001
+        }
+      }
+    },
+    "27": {
+      "all": {
+        "n": 20,
+        "token_count": 250,
+        "effective_token_count_mean": 10.475456237792969,
+        "effective_token_fraction_mean": 0.04190182685852051,
+        "energy_center_of_mass_mean": 0.2713097177284321,
+        "early_third_energy_mean": 0.6983116865158081,
+        "middle_third_energy_mean": 0.18963977694511414,
+        "late_third_energy_mean": 0.11204855144023895,
+        "peak_position_mean": 0.2378
+      },
+      "by_class": {
+        "Farley": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 5.236191749572754,
+          "effective_token_fraction_mean": 0.020944766700267792,
+          "energy_center_of_mass_mean": 0.10802015733286723,
+          "early_third_energy_mean": 0.9437228441238403,
+          "middle_third_energy_mean": 0.011032556183636189,
+          "late_third_energy_mean": 0.04524454474449158,
+          "peak_position_mean": 0.054
+        },
+        "Freid": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 5.469613075256348,
+          "effective_token_fraction_mean": 0.021878452971577644,
+          "energy_center_of_mass_mean": 0.3934444790957252,
+          "early_third_energy_mean": 0.3041148781776428,
+          "middle_third_energy_mean": 0.6780542135238647,
+          "late_third_energy_mean": 0.017831047996878624,
+          "peak_position_mean": 0.498
+        },
+        "Keri": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 13.873016357421875,
+          "effective_token_fraction_mean": 0.055492062121629715,
+          "energy_center_of_mass_mean": 0.28432569955499165,
+          "early_third_energy_mean": 0.6513453125953674,
+          "middle_third_energy_mean": 0.33003342151641846,
+          "late_third_energy_mean": 0.018621519207954407,
+          "peak_position_mean": 0.342
+        },
+        "Louie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 18.68889808654785,
+          "effective_token_fraction_mean": 0.07475559413433075,
+          "energy_center_of_mass_mean": 0.3286878566404222,
+          "early_third_energy_mean": 0.532341480255127,
+          "middle_third_energy_mean": 0.46036940813064575,
+          "late_third_energy_mean": 0.007289120927453041,
+          "peak_position_mean": 0.14400000000000002
+        },
+        "Luke": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 6.055230140686035,
+          "effective_token_fraction_mean": 0.024220921099185944,
+          "energy_center_of_mass_mean": 0.4575685706523057,
+          "early_third_energy_mean": 0.5148267149925232,
+          "middle_third_energy_mean": 0.03615665063261986,
+          "late_third_energy_mean": 0.44901663064956665,
+          "peak_position_mean": 0.48
+        },
+        "Mac": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 14.057037353515625,
+          "effective_token_fraction_mean": 0.0562281496822834,
+          "energy_center_of_mass_mean": 0.4226162830348563,
+          "early_third_energy_mean": 0.549268901348114,
+          "middle_third_energy_mean": 0.15952587127685547,
+          "late_third_energy_mean": 0.2912052869796753,
+          "peak_position_mean": 0.45
+        },
+        "Roodie": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 4.887983322143555,
+          "effective_token_fraction_mean": 0.01955193281173706,
+          "energy_center_of_mass_mean": 0.19999336543058274,
+          "early_third_energy_mean": 0.9929507970809937,
+          "middle_third_energy_mean": 0.005689301528036594,
+          "late_third_energy_mean": 0.0013598398072645068,
+          "peak_position_mean": 0.242
+        },
+        "Rudy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 7.084659576416016,
+          "effective_token_fraction_mean": 0.028338637202978134,
+          "energy_center_of_mass_mean": 0.1744554239083112,
+          "early_third_energy_mean": 0.8681641221046448,
+          "middle_third_energy_mean": 0.01901472546160221,
+          "late_third_energy_mean": 0.11282115429639816,
+          "peak_position_mean": 0.06
+        },
+        "Siggy": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 16.67784881591797,
+          "effective_token_fraction_mean": 0.06671139597892761,
+          "energy_center_of_mass_mean": 0.1913086602146699,
+          "early_third_energy_mean": 0.7709707617759705,
+          "middle_third_energy_mean": 0.06396951526403427,
+          "late_third_energy_mean": 0.16505970060825348,
+          "peak_position_mean": 0.002
+        },
+        "Zoe": {
+          "n": 2,
+          "token_count": 250,
+          "effective_token_count_mean": 12.724092483520508,
+          "effective_token_fraction_mean": 0.05089636892080307,
+          "energy_center_of_mass_mean": 0.15267668141958882,
+          "early_third_energy_mean": 0.8554114103317261,
+          "middle_third_energy_mean": 0.13255202770233154,
+          "late_third_energy_mean": 0.012036578729748726,
+          "peak_position_mean": 0.106
+        }
+      }
+    }
+  }
+}

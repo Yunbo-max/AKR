@@ -1,0 +1,51 @@
+{
+  "protocol": "same A-J support gradients and router; only query prompt changes",
+  "prompts": [
+    {
+      "name": "paraphrase",
+      "predictions": "results/beans_dogs_AJ_cross_prompt_paraphrase_7b.csv",
+      "n": 139,
+      "native": {
+        "accuracy": 0.12949640287769784,
+        "macro_f1": 0.07584301663249031,
+        "invalid_response_rate": 0.0
+      },
+      "pooled_alpha_03": {
+        "accuracy": 0.30935251798561153,
+        "macro_f1": 0.24965861344537815,
+        "invalid_response_rate": 0.007194244604316547
+      },
+      "paired_accuracy_gain": 0.17985611510791366,
+      "paired_bootstrap_95_ci": [
+        0.09352517985611511,
+        0.26618705035971224
+      ],
+      "repair_only_correct": 33,
+      "native_only_correct": 8,
+      "mcnemar_exact_two_sided_p": 0.00011222142620681552
+    },
+    {
+      "name": "reverse_order",
+      "predictions": "results/beans_dogs_AJ_cross_prompt_reverse_order_7b.csv",
+      "n": 139,
+      "native": {
+        "accuracy": 0.1079136690647482,
+        "macro_f1": 0.020134228187919465,
+        "invalid_response_rate": 0.0
+      },
+      "pooled_alpha_03": {
+        "accuracy": 0.18705035971223022,
+        "macro_f1": 0.13450895140664962,
+        "invalid_response_rate": 0.014388489208633094
+      },
+      "paired_accuracy_gain": 0.07913669064748201,
+      "paired_bootstrap_95_ci": [
+        0.0,
+        0.15827338129496402
+      ],
+      "repair_only_correct": 22,
+      "native_only_correct": 11,
+      "mcnemar_exact_two_sided_p": 0.08014331245794892
+    }
+  ]
+}

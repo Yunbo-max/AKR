@@ -1,0 +1,107 @@
+[2026-08-14T14:28:21Z] beans_dogs_lp1 K=2/class interleaved order control
+You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+Qwen2_5OmniToken2WavModel does not support eager attention implementation, fall back to sdpa
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:01<00:04,  1.12s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:01<00:02,  1.08it/s]Loading checkpoint shards:  60%|██████    | 3/5 [00:02<00:01,  1.15it/s]Loading checkpoint shards:  80%|████████  | 4/5 [00:03<00:00,  1.17it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:04<00:00,  1.34it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:04<00:00,  1.22it/s]
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+[W814 14:28:36.524705380 CUDACachingAllocator.cpp:508] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 13697024, total: 25296044032).
+[W814 14:28:36.714607492 CUDACachingAllocator.cpp:508] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 13697024, total: 25296044032).
+[W814 14:28:36.766234464 CUDACachingAllocator.cpp:508] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 13697024, total: 25296044032).
+Traceback (most recent call last):
+  File "/root/animal-omni-kv/scripts/evaluate_counterbalanced_audio_icl.py", line 167, in <module>
+    main()
+  File "/root/animal-omni-kv/scripts/evaluate_counterbalanced_audio_icl.py", line 80, in main
+    raw = runner.predict_icl(
+  File "/root/animal-omni-kv/src/animal_omni/qwen_runner.py", line 107, in predict_icl
+    output = self.model.generate(
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py", line 4510, in generate
+    thinker_result = self.thinker.generate(input_ids=input_ids, **thinker_kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/transformers/generation/utils.py", line 2597, in generate
+    result = self._sample(
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/transformers/generation/utils.py", line 3557, in _sample
+    outputs = self(**model_inputs, return_dict=True)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py", line 2366, in forward
+    audio_features = self.get_audio_features(
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py", line 2250, in get_audio_features
+    audio_outputs = self.audio_tower(
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py", line 911, in forward
+    layer_outputs = encoder_layer(
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py", line 772, in forward
+    hidden_states = self.self_attn(
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py", line 626, in forward
+    attn_weights = torch.matmul(query_states, key_states.transpose(1, 2)) / math.sqrt(self.head_dim)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 4.11 GiB. GPU 0 has a total capacity of 23.56 GiB of which 2.06 GiB is free. Including non-PyTorch memory, this process has 21.49 GiB memory in use. Of the allocated memory 21.12 GiB is allocated by PyTorch, and 64.82 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+[2026-08-14T14:28:37Z] incomplete results/beans_dogs_lp1_icl_order_control_k2_interleaved_7b.csv; quarantine
+[2026-08-14T14:28:37Z] beans_watkins K=1/class interleaved order control
+You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+Qwen2_5OmniToken2WavModel does not support eager attention implementation, fall back to sdpa
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:01<00:04,  1.12s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:01<00:02,  1.08it/s]Loading checkpoint shards:  60%|██████    | 3/5 [00:02<00:01,  1.16it/s]Loading checkpoint shards:  80%|████████  | 4/5 [00:03<00:00,  1.17it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:04<00:00,  1.34it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:04<00:00,  1.22it/s]
+WARNING:root:System prompt modified, audio output may not work as expected. Audio output mode only works when using default system prompt 'You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.'
+[W814 14:28:54.314579213 CUDACachingAllocator.cpp:508] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 11599872, total: 25296044032).
+[W814 14:28:54.476221535 CUDACachingAllocator.cpp:508] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 11599872, total: 25296044032).
+[W814 14:28:55.530314417 CUDACachingAllocator.cpp:508] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 11599872, total: 25296044032).
+Traceback (most recent call last):
+  File "/root/animal-omni-kv/scripts/evaluate_counterbalanced_audio_icl.py", line 167, in <module>
+    main()
+  File "/root/animal-omni-kv/scripts/evaluate_counterbalanced_audio_icl.py", line 80, in main
+    raw = runner.predict_icl(
+  File "/root/animal-omni-kv/src/animal_omni/qwen_runner.py", line 107, in predict_icl
+    output = self.model.generate(
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py", line 4510, in generate
+    thinker_result = self.thinker.generate(input_ids=input_ids, **thinker_kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/transformers/generation/utils.py", line 2597, in generate
+    result = self._sample(
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/transformers/generation/utils.py", line 3557, in _sample
+    outputs = self(**model_inputs, return_dict=True)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py", line 2436, in forward
+    outputs = self.model(
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py", line 1965, in forward
+    layer_outputs = decoder_layer(
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py", line 1826, in forward
+    hidden_states, self_attn_weights, present_key_value = self.self_attn(
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/animal-omni-kv/.venv/lib/python3.10/site-packages/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py", line 1515, in forward
+    attn_weights = torch.matmul(query_states, key_states.transpose(2, 3)) / math.sqrt(self.head_dim)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 3.61 GiB. GPU 0 has a total capacity of 23.56 GiB of which 2.18 GiB is free. Including non-PyTorch memory, this process has 21.37 GiB memory in use. Of the allocated memory 20.94 GiB is allocated by PyTorch, and 122.81 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+[2026-08-14T14:28:56Z] incomplete results/beans_watkins_icl_order_control_k1_interleaved_7b.csv; quarantine
+[2026-08-14T14:28:56Z] cross-dataset order controls finished

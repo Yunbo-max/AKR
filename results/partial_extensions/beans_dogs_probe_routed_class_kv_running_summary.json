@@ -1,0 +1,58 @@
+{
+  "complete_cells": [],
+  "incomplete_cells": [
+    {
+      "method": "probe_class_permuted",
+      "relative_alpha": 0.003,
+      "n": 21
+    },
+    {
+      "method": "probe_class_permuted",
+      "relative_alpha": 0.01,
+      "n": 21
+    },
+    {
+      "method": "probe_class_permuted",
+      "relative_alpha": 0.03,
+      "n": 21
+    },
+    {
+      "method": "probe_class_pooled",
+      "relative_alpha": 0.003,
+      "n": 22
+    },
+    {
+      "method": "probe_class_pooled",
+      "relative_alpha": 0.01,
+      "n": 22
+    },
+    {
+      "method": "probe_class_pooled",
+      "relative_alpha": 0.03,
+      "n": 22
+    },
+    {
+      "method": "probe_class_tokenwise",
+      "relative_alpha": 0.003,
+      "n": 22
+    },
+    {
+      "method": "probe_class_tokenwise",
+      "relative_alpha": 0.01,
+      "n": 22
+    },
+    {
+      "method": "probe_class_tokenwise",
+      "relative_alpha": 0.03,
+      "n": 21
+    }
+  ],
+  "gate": {
+    "registered_rule": "ordered tokenwise beats pooled at >=2 alphas and beats token-permuted at selected alpha; ties select lower norm",
+    "tokenwise_beats_pooled_alphas": [],
+    "selected_tokenwise_alpha": null,
+    "selected_tokenwise_beats_permuted": false,
+    "passed": false,
+    "test_action": "no_test"
+  }
+}

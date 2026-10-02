@@ -1,0 +1,49 @@
+{
+  "protocol": "paired official Dogs fixed test; LoRA trained on all 415 official train examples; test generated once after the locked one-epoch adapter",
+  "bootstrap_draws": 20000,
+  "seed": 20260814,
+  "comparisons": [
+    {
+      "reference": "native_generation",
+      "n": 139,
+      "lora_accuracy": 0.2517985611510791,
+      "reference_accuracy": 0.02877697841726619,
+      "lora_minus_reference": 0.22302158273381295,
+      "paired_bootstrap_95_ci": [
+        0.14388489208633093,
+        0.302158273381295
+      ],
+      "lora_only_correct": 35,
+      "reference_only_correct": 4,
+      "mcnemar_exact_two_sided_p": 3.353161446284503e-07
+    },
+    {
+      "reference": "frozen_qwen_probe",
+      "n": 139,
+      "lora_accuracy": 0.2517985611510791,
+      "reference_accuracy": 0.9280575539568345,
+      "lora_minus_reference": -0.6762589928057554,
+      "paired_bootstrap_95_ci": [
+        -0.7553956834532374,
+        -0.5971223021582733
+      ],
+      "lora_only_correct": 0,
+      "reference_only_correct": 94,
+      "mcnemar_exact_two_sided_p": 1.0097419586828951e-28
+    },
+    {
+      "reference": "aves_bio_probe",
+      "n": 139,
+      "lora_accuracy": 0.2517985611510791,
+      "reference_accuracy": 0.8345323741007195,
+      "lora_minus_reference": -0.5827338129496403,
+      "paired_bootstrap_95_ci": [
+        -0.6762589928057554,
+        -0.4892086330935252
+      ],
+      "lora_only_correct": 4,
+      "reference_only_correct": 85,
+      "mcnemar_exact_two_sided_p": 8.269208261418977e-21
+    }
+  ]
+}

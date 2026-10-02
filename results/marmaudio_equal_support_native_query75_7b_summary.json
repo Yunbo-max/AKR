@@ -1,0 +1,27 @@
+{
+  "split": "results/marmaudio_equal_support_split_seed20260814.json",
+  "n_query": 75,
+  "query_labels_used_for": "post_hoc_scoring_only",
+  "results": {
+    "free_generation": {
+      "accuracy": 0.41333333333333333,
+      "macro_f1": 0.30155887397840786
+    },
+    "bare/mean_token_logprob": {
+      "accuracy": 0.4266666666666667,
+      "macro_f1": 0.261178587494377
+    },
+    "bare/sequence_sum": {
+      "accuracy": 0.49333333333333335,
+      "macro_f1": 0.36772486772486773
+    },
+    "definition/mean_token_logprob": {
+      "accuracy": 0.17333333333333334,
+      "macro_f1": 0.07022691705790297
+    },
+    "definition/sequence_sum": {
+      "accuracy": 0.17333333333333334,
+      "macro_f1": 0.05158730158730159
+    }
+  }
+}

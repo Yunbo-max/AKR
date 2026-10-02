@@ -1,0 +1,137 @@
+event_id,recording_id,target,condition,support_k,method,eta,rank,feature_layer,raw_prediction,prediction,correct
+143307,2022_2_8,Tsik,lp_0-1000,20,fixed_mean,300.0,4,0,Phee,Phee,false
+143307,2022_2_8,Tsik,lp_0-1000,20,conditional,300.0,4,0,Twitter,Twitter,false
+152770,2022_2_8,Twitter,lp_0-1000,20,fixed_mean,300.0,4,0,Tsik,Tsik,false
+152770,2022_2_8,Twitter,lp_0-1000,20,conditional,300.0,4,0,Tsik,Tsik,false
+211769,2019_12_0,Twitter,lp_0-1000,20,fixed_mean,300.0,4,0,Tsik,Tsik,false
+211769,2019_12_0,Twitter,lp_0-1000,20,conditional,300.0,4,0,Tsik,Tsik,false
+211832,2019_12_0,Seep,lp_0-1000,20,fixed_mean,300.0,4,0,Tsik,Tsik,false
+211832,2019_12_0,Seep,lp_0-1000,20,conditional,300.0,4,0,Tsik,Tsik,false
+211839,2019_12_0,Phee,lp_0-1000,20,fixed_mean,300.0,4,0,Seep,Seep,false
+211839,2019_12_0,Phee,lp_0-1000,20,conditional,300.0,4,0,Twitter,Twitter,false
+213327,2019_12_0,Infant Cry,lp_0-1000,20,fixed_mean,300.0,4,0,Twitter,Twitter,false
+213327,2019_12_0,Infant Cry,lp_0-1000,20,conditional,300.0,4,0,Tsik,Tsik,false
+221515,2022_3_5,Phee,lp_0-1000,20,fixed_mean,300.0,4,0,Phee,Phee,true
+221515,2022_3_5,Phee,lp_0-1000,20,conditional,300.0,4,0,Tsik,Tsik,false
+221925,2022_3_5,Infant Cry,lp_0-1000,20,fixed_mean,300.0,4,0,Phee,Phee,false
+221925,2022_3_5,Infant Cry,lp_0-1000,20,conditional,300.0,4,0,Tsik,Tsik,false
+223069,2019_12_0,Infant Cry,lp_0-1000,20,fixed_mean,300.0,4,0,Tsik,Tsik,false
+223069,2019_12_0,Infant Cry,lp_0-1000,20,conditional,300.0,4,0,Tsik,Tsik,false
+223077,2019_12_0,Infant Cry,lp_0-1000,20,fixed_mean,300.0,4,0,Tsik,Tsik,false
+223077,2019_12_0,Infant Cry,lp_0-1000,20,conditional,300.0,4,0,Tsik,Tsik,false
+223107,2019_12_0,Phee,lp_0-1000,20,fixed_mean,300.0,4,0,Twitter,Twitter,false
+223107,2019_12_0,Phee,lp_0-1000,20,conditional,300.0,4,0,Twitter,Twitter,false
+223123,2019_12_0,Trill,lp_0-1000,20,fixed_mean,300.0,4,0,Phee,Phee,false
+223123,2019_12_0,Trill,lp_0-1000,20,conditional,300.0,4,0,Tsik,Tsik,false
+223144,2019_12_0,Trill,lp_0-1000,20,fixed_mean,300.0,4,0,Tsik,Tsik,false
+223144,2019_12_0,Trill,lp_0-1000,20,conditional,300.0,4,0,Twitter,Twitter,false
+223149,2019_12_0,Twitter,lp_0-1000,20,fixed_mean,300.0,4,0,Phee,Phee,false
+223149,2019_12_0,Twitter,lp_0-1000,20,conditional,300.0,4,0,Tsik,Tsik,false
+223154,2019_12_0,Phee,lp_0-1000,20,fixed_mean,300.0,4,0,Twitter,Twitter,false
+223154,2019_12_0,Phee,lp_0-1000,20,conditional,300.0,4,0,Phee,Phee,true
+223184,2019_12_0,Twitter,lp_0-1000,20,fixed_mean,300.0,4,0,Tsik,Tsik,false
+223184,2019_12_0,Twitter,lp_0-1000,20,conditional,300.0,4,0,Tsik,Tsik,false
+223196,2019_12_0,Phee,lp_0-1000,20,fixed_mean,300.0,4,0,Twitter,Twitter,false
+223196,2019_12_0,Phee,lp_0-1000,20,conditional,300.0,4,0,Phee,Phee,true
+223198,2019_12_0,Phee,lp_0-1000,20,fixed_mean,300.0,4,0,Twitter,Twitter,false
+223198,2019_12_0,Phee,lp_0-1000,20,conditional,300.0,4,0,Phee,Phee,true
+223206,2019_12_0,Phee,lp_0-1000,20,fixed_mean,300.0,4,0,Twitter,Twitter,false
+223206,2019_12_0,Phee,lp_0-1000,20,conditional,300.0,4,0,Phee,Phee,true
+223208,2019_12_0,Phee,lp_0-1000,20,fixed_mean,300.0,4,0,Twitter,Twitter,false
+223208,2019_12_0,Phee,lp_0-1000,20,conditional,300.0,4,0,Phee,Phee,true
+223247,2019_12_0,Infant Cry,lp_0-1000,20,fixed_mean,300.0,4,0,Seep,Seep,false
+223247,2019_12_0,Infant Cry,lp_0-1000,20,conditional,300.0,4,0,Tsik,Tsik,false
+223262,2019_12_0,Infant Cry,lp_0-1000,20,fixed_mean,300.0,4,0,Tsik,Tsik,false
+223262,2019_12_0,Infant Cry,lp_0-1000,20,conditional,300.0,4,0,Tsik,Tsik,false
+223263,2019_12_0,Trill,lp_0-1000,20,fixed_mean,300.0,4,0,Twitter,Twitter,false
+223263,2019_12_0,Trill,lp_0-1000,20,conditional,300.0,4,0,Twitter,Twitter,false
+223298,2019_12_0,Seep,lp_0-1000,20,fixed_mean,300.0,4,0,Phee,Phee,false
+223298,2019_12_0,Seep,lp_0-1000,20,conditional,300.0,4,0,Seep,Seep,true
+223312,2019_12_0,Infant Cry,lp_0-1000,20,fixed_mean,300.0,4,0,Seep,Seep,false
+223312,2019_12_0,Infant Cry,lp_0-1000,20,conditional,300.0,4,0,Seep,Seep,false
+223332,2019_12_0,Infant Cry,lp_0-1000,20,fixed_mean,300.0,4,0,Twitter,Twitter,false
+223332,2019_12_0,Infant Cry,lp_0-1000,20,conditional,300.0,4,0,Twitter,Twitter,false
+223352,2019_12_0,Infant Cry,lp_0-1000,20,fixed_mean,300.0,4,0,Tsik,Tsik,false
+223352,2019_12_0,Infant Cry,lp_0-1000,20,conditional,300.0,4,0,Seep,Seep,false
+223365,2019_12_0,Twitter,lp_0-1000,20,fixed_mean,300.0,4,0,Phee,Phee,false
+223365,2019_12_0,Twitter,lp_0-1000,20,conditional,300.0,4,0,Twitter,Twitter,true
+223371,2019_12_0,Tsik,lp_0-1000,20,fixed_mean,300.0,4,0,Phee,Phee,false
+223371,2019_12_0,Tsik,lp_0-1000,20,conditional,300.0,4,0,Phee,Phee,false
+223375,2019_12_0,Infant Cry,lp_0-1000,20,fixed_mean,300.0,4,0,Phee,Phee,false
+223375,2019_12_0,Infant Cry,lp_0-1000,20,conditional,300.0,4,0,Tsik,Tsik,false
+223383,2019_12_0,Infant Cry,lp_0-1000,20,fixed_mean,300.0,4,0,Phee,Phee,false
+223383,2019_12_0,Infant Cry,lp_0-1000,20,conditional,300.0,4,0,Tsik,Tsik,false
+223396,2019_12_0,Infant Cry,lp_0-1000,20,fixed_mean,300.0,4,0,Seep,Seep,false
+223396,2019_12_0,Infant Cry,lp_0-1000,20,conditional,300.0,4,0,Tsik,Tsik,false
+223400,2019_12_0,Infant Cry,lp_0-1000,20,fixed_mean,300.0,4,0,Seep,Seep,false
+223400,2019_12_0,Infant Cry,lp_0-1000,20,conditional,300.0,4,0,Tsik,Tsik,false
+223402,2019_12_0,Infant Cry,lp_0-1000,20,fixed_mean,300.0,4,0,Tsik,Tsik,false
+223402,2019_12_0,Infant Cry,lp_0-1000,20,conditional,300.0,4,0,Tsik,Tsik,false
+227303,2020_1_0,Twitter,lp_0-1000,20,fixed_mean,300.0,4,0,Phee,Phee,false
+227303,2020_1_0,Twitter,lp_0-1000,20,conditional,300.0,4,0,Twitter,Twitter,true
+234304,2020_1_0,Infant Cry,lp_0-1000,20,fixed_mean,300.0,4,0,Tsik,Tsik,false
+234304,2020_1_0,Infant Cry,lp_0-1000,20,conditional,300.0,4,0,Seep,Seep,false
+237025,2020_1_0,Seep,lp_0-1000,20,fixed_mean,300.0,4,0,Phee,Phee,false
+237025,2020_1_0,Seep,lp_0-1000,20,conditional,300.0,4,0,Tsik,Tsik,false
+238142,2022_3_5,Infant Cry,lp_0-1000,20,fixed_mean,300.0,4,0,Seep,Seep,false
+238142,2022_3_5,Infant Cry,lp_0-1000,20,conditional,300.0,4,0,Seep,Seep,false
+242790,2022_3_5,Phee,lp_0-1000,20,fixed_mean,300.0,4,0,Tsik,Tsik,false
+242790,2022_3_5,Phee,lp_0-1000,20,conditional,300.0,4,0,Phee,Phee,true
+242947,2022_3_5,Seep,lp_0-1000,20,fixed_mean,300.0,4,0,Phee,Phee,false
+242947,2022_3_5,Seep,lp_0-1000,20,conditional,300.0,4,0,Seep,Seep,true
+363877,2022_4_1,Twitter,lp_0-1000,20,fixed_mean,300.0,4,0,Tsik,Tsik,false
+363877,2022_4_1,Twitter,lp_0-1000,20,conditional,300.0,4,0,Tsik,Tsik,false
+389438,2022_4_1,Phee,lp_0-1000,20,fixed_mean,300.0,4,0,Twitter,Twitter,false
+389438,2022_4_1,Phee,lp_0-1000,20,conditional,300.0,4,0,Twitter,Twitter,false
+456914,2022_10_3,Trill,lp_0-1000,20,fixed_mean,300.0,4,0,Tsik,Tsik,false
+456914,2022_10_3,Trill,lp_0-1000,20,conditional,300.0,4,0,Twitter,Twitter,false
+540984,2020_5_0,Infant Cry,lp_0-1000,20,fixed_mean,300.0,4,0,Tsik,Tsik,false
+540984,2020_5_0,Infant Cry,lp_0-1000,20,conditional,300.0,4,0,Twitter,Twitter,false
+565266,2020_10_1,Infant Cry,lp_0-1000,20,fixed_mean,300.0,4,0,Tsik,Tsik,false
+565266,2020_10_1,Infant Cry,lp_0-1000,20,conditional,300.0,4,0,Tsik,Tsik,false
+571992,2020_10_1,Seep,lp_0-1000,20,fixed_mean,300.0,4,0,Phee,Phee,false
+571992,2020_10_1,Seep,lp_0-1000,20,conditional,300.0,4,0,Seep,Seep,true
+572081,2020_10_1,Trill,lp_0-1000,20,fixed_mean,300.0,4,0,Tsik,Tsik,false
+572081,2020_10_1,Trill,lp_0-1000,20,conditional,300.0,4,0,Phee,Phee,false
+575225,2020_10_1,Phee,lp_0-1000,20,fixed_mean,300.0,4,0,Phee,Phee,true
+575225,2020_10_1,Phee,lp_0-1000,20,conditional,300.0,4,0,Seep,Seep,false
+582722,2020_10_1,Twitter,lp_0-1000,20,fixed_mean,300.0,4,0,Phee,Phee,false
+582722,2020_10_1,Twitter,lp_0-1000,20,conditional,300.0,4,0,Tsik,Tsik,false
+583172,2020_10_1,Phee,lp_0-1000,20,fixed_mean,300.0,4,0,Twitter,Twitter,false
+583172,2020_10_1,Phee,lp_0-1000,20,conditional,300.0,4,0,Phee,Phee,true
+583214,2020_10_1,Infant Cry,lp_0-1000,20,fixed_mean,300.0,4,0,Twitter,Twitter,false
+583214,2020_10_1,Infant Cry,lp_0-1000,20,conditional,300.0,4,0,Twitter,Twitter,false
+583673,2020_10_1,Phee,lp_0-1000,20,fixed_mean,300.0,4,0,Twitter,Twitter,false
+583673,2020_10_1,Phee,lp_0-1000,20,conditional,300.0,4,0,Phee,Phee,true
+583769,2020_10_1,Phee,lp_0-1000,20,fixed_mean,300.0,4,0,Phee,Phee,true
+583769,2020_10_1,Phee,lp_0-1000,20,conditional,300.0,4,0,Seep,Seep,false
+583884,2020_10_1,Seep,lp_0-1000,20,fixed_mean,300.0,4,0,Phee,Phee,false
+583884,2020_10_1,Seep,lp_0-1000,20,conditional,300.0,4,0,Phee,Phee,false
+584012,2020_10_1,Phee,lp_0-1000,20,fixed_mean,300.0,4,0,Twitter,Twitter,false
+584012,2020_10_1,Phee,lp_0-1000,20,conditional,300.0,4,0,Phee,Phee,true
+584053,2020_10_1,Trill,lp_0-1000,20,fixed_mean,300.0,4,0,Phee,Phee,false
+584053,2020_10_1,Trill,lp_0-1000,20,conditional,300.0,4,0,Phee,Phee,false
+584362,2020_10_1,Seep,lp_0-1000,20,fixed_mean,300.0,4,0,Phee,Phee,false
+584362,2020_10_1,Seep,lp_0-1000,20,conditional,300.0,4,0,Phee,Phee,false
+584396,2020_10_1,Twitter,lp_0-1000,20,fixed_mean,300.0,4,0,Phee,Phee,false
+584396,2020_10_1,Twitter,lp_0-1000,20,conditional,300.0,4,0,Tsik,Tsik,false
+586064,2020_10_1,Seep,lp_0-1000,20,fixed_mean,300.0,4,0,Tsik,Tsik,false
+586064,2020_10_1,Seep,lp_0-1000,20,conditional,300.0,4,0,Tsik,Tsik,false
+593315,2020_10_1,Tsik,lp_0-1000,20,fixed_mean,300.0,4,0,Tsik,Tsik,true
+593315,2020_10_1,Tsik,lp_0-1000,20,conditional,300.0,4,0,Tsik,Tsik,true
+593649,2020_10_1,Trill,lp_0-1000,20,fixed_mean,300.0,4,0,Phee,Phee,false
+593649,2020_10_1,Trill,lp_0-1000,20,conditional,300.0,4,0,Tsik,Tsik,false
+594023,2020_10_1,Trill,lp_0-1000,20,fixed_mean,300.0,4,0,Phee,Phee,false
+594023,2020_10_1,Trill,lp_0-1000,20,conditional,300.0,4,0,Seep,Seep,false
+680791,2023_3_3,Twitter,lp_0-1000,20,fixed_mean,300.0,4,0,Tsik,Tsik,false
+680791,2023_3_3,Twitter,lp_0-1000,20,conditional,300.0,4,0,Tsik,Tsik,false
+691528,2023_3_3,Infant Cry,lp_0-1000,20,fixed_mean,300.0,4,0,Tsik,Tsik,false
+691528,2023_3_3,Infant Cry,lp_0-1000,20,conditional,300.0,4,0,Tsik,Tsik,false
+691986,2023_3_3,Trill,lp_0-1000,20,fixed_mean,300.0,4,0,Phee,Phee,false
+691986,2023_3_3,Trill,lp_0-1000,20,conditional,300.0,4,0,Twitter,Twitter,false
+695093,2023_3_3,Infant Cry,lp_0-1000,20,fixed_mean,300.0,4,0,Tsik,Tsik,false
+695093,2023_3_3,Infant Cry,lp_0-1000,20,conditional,300.0,4,0,Tsik,Tsik,false
+81191,2022_2_2,Seep,lp_0-1000,20,fixed_mean,300.0,4,0,Twitter,Twitter,false
+81191,2022_2_2,Seep,lp_0-1000,20,conditional,300.0,4,0,Tsik,Tsik,false
+81234,2022_2_2,Phee,lp_0-1000,20,fixed_mean,300.0,4,0,Phee,Phee,true
+81234,2022_2_2,Phee,lp_0-1000,20,conditional,300.0,4,0,Phee,Phee,true

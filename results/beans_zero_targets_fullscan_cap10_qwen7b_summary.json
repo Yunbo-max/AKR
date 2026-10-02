@@ -1,0 +1,93 @@
+{
+  "call-type": {
+    "n": 283,
+    "exact_match": 0.6148409893992933,
+    "correct": 174,
+    "target_contained": 0.6148409893992933,
+    "contained_correct": 174
+  },
+  "unseen-family-cmn": {
+    "n": 117,
+    "exact_match": 0.0,
+    "correct": 0,
+    "target_contained": 0.0,
+    "contained_correct": 0
+  },
+  "unseen-family-sci": {
+    "n": 130,
+    "exact_match": 0.015384615384615385,
+    "correct": 2,
+    "target_contained": 0.023076923076923078,
+    "contained_correct": 3
+  },
+  "unseen-family-tax": {
+    "n": 123,
+    "exact_match": 0.0,
+    "correct": 0,
+    "target_contained": 0.0,
+    "contained_correct": 0
+  },
+  "unseen-genus-cmn": {
+    "n": 265,
+    "exact_match": 0.0,
+    "correct": 0,
+    "target_contained": 0.0,
+    "contained_correct": 0
+  },
+  "unseen-genus-sci": {
+    "n": 262,
+    "exact_match": 0.0,
+    "correct": 0,
+    "target_contained": 0.0,
+    "contained_correct": 0
+  },
+  "unseen-genus-tax": {
+    "n": 258,
+    "exact_match": 0.0,
+    "correct": 0,
+    "target_contained": 0.0,
+    "contained_correct": 0
+  },
+  "unseen-species-cmn": {
+    "n": 373,
+    "exact_match": 0.0,
+    "correct": 0,
+    "target_contained": 0.0,
+    "contained_correct": 0
+  },
+  "unseen-species-sci": {
+    "n": 364,
+    "exact_match": 0.0,
+    "correct": 0,
+    "target_contained": 0.0,
+    "contained_correct": 0
+  },
+  "unseen-species-tax": {
+    "n": 336,
+    "exact_match": 0.0,
+    "correct": 0,
+    "target_contained": 0.0,
+    "contained_correct": 0
+  },
+  "watkins": {
+    "n": 115,
+    "exact_match": 0.0,
+    "correct": 0,
+    "target_contained": 0.0,
+    "contained_correct": 0
+  },
+  "zf-indiv": {
+    "n": 324,
+    "exact_match": 0.6697530864197531,
+    "correct": 217,
+    "target_contained": 0.6697530864197531,
+    "contained_correct": 217
+  },
+  "overall": {
+    "n": 2950,
+    "exact_match": 0.13322033898305086,
+    "correct": 393,
+    "target_contained": 0.1335593220338983,
+    "contained_correct": 394
+  }
+}

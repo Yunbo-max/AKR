@@ -1,0 +1,74 @@
+{
+  "model_id": "Qwen/Qwen2.5-Omni-7B",
+  "split": "results/marmaudio_equal_support_split_seed20260814.json",
+  "order_registry": "results/marmaudio_icl_order_registry_seed20260814.json",
+  "support_k_per_class": 2,
+  "support_k_total": 12,
+  "order_mode": "interleaved",
+  "n_query": 75,
+  "accuracy": 0.13333333333333333,
+  "macro_f1": 0.11367974549310711,
+  "invalid_response_rate": 0.12,
+  "prediction_counts": {
+    "": 9,
+    "Seep": 34,
+    "Tsik": 12,
+    "Trill": 9,
+    "Twitter": 10,
+    "Phee": 1
+  },
+  "last_label_copy_rate": 0.0,
+  "last_label_copy_exact_binomial_p_vs_uniform_label_prior": 1.0,
+  "copy_rate_when_last_label_is_wrong": 0.0,
+  "accuracy_when_target_equals_last_label": 0.0,
+  "accuracy_when_target_differs_from_last_label": 0.15873015873015872,
+  "by_last_support_label": {
+    "Infant Cry": {
+      "n": 13,
+      "prediction_counts": {
+        "": 6,
+        "Seep": 6,
+        "Phee": 1
+      },
+      "copy_rate": 0.0
+    },
+    "Phee": {
+      "n": 13,
+      "prediction_counts": {
+        "Seep": 13
+      },
+      "copy_rate": 0.0
+    },
+    "Tsik": {
+      "n": 12,
+      "prediction_counts": {
+        "Seep": 2,
+        "Twitter": 10
+      },
+      "copy_rate": 0.0
+    },
+    "Trill": {
+      "n": 12,
+      "prediction_counts": {
+        "Tsik": 12
+      },
+      "copy_rate": 0.0
+    },
+    "Seep": {
+      "n": 12,
+      "prediction_counts": {
+        "Trill": 9,
+        "": 3
+      },
+      "copy_rate": 0.0
+    },
+    "Twitter": {
+      "n": 13,
+      "prediction_counts": {
+        "Seep": 13
+      },
+      "copy_rate": 0.0
+    }
+  },
+  "query_labels_used_for": "counterbalanced experimental blocking and post-hoc scoring only"
+}

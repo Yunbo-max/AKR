@@ -1,0 +1,32 @@
+{
+  "baseline_condition": "lp_0-1000",
+  "baseline_n": 139,
+  "baseline": {
+    "accuracy": 0.02877697841726619,
+    "macro_f1": 0.005594405594405594
+  },
+  "adapted": [
+    {
+      "support_k": 20,
+      "method": "conditional",
+      "n": 139,
+      "accuracy": 0.20863309352517986,
+      "macro_f1": 0.180711564528572,
+      "accuracy_minus_baseline": 0.17985611510791366,
+      "accuracy_minus_baseline_ci_low": 0.11510791366906475,
+      "accuracy_minus_baseline_ci_high": 0.2517985611510791
+    },
+    {
+      "support_k": 20,
+      "method": "fixed_mean",
+      "n": 139,
+      "accuracy": 0.03597122302158273,
+      "macro_f1": 0.025714285714285717,
+      "accuracy_minus_baseline": 0.007194244604316544,
+      "accuracy_minus_baseline_ci_low": 0.0,
+      "accuracy_minus_baseline_ci_high": 0.02158273381294964
+    }
+  ],
+  "query_label_free": true,
+  "selection_note": "eta must be selected on validation before test summarization"
+}

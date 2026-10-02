@@ -1,0 +1,641 @@
+[2026-08-14T13:16:23Z] complete missing MarmAudio equal-support cells
+[2026-08-14T13:16:23Z] MarmAudio K=2/class candidate readout (K=2 free already complete)
+You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+Qwen2_5OmniToken2WavModel does not support eager attention implementation, fall back to sdpa
+/root/animal-omni-kv/.venv/lib/python3.10/site-packages/accelerate/utils/modeling.py:1583: UserWarning: Current model requires 3852248 bytes of buffer for offloaded layers, which seems does not fit any GPU's remaining memory. If you are experiencing a OOM later, please consider using offload_buffers=True.
+  warnings.warn(
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:00<00:00,  6.95it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 16.26it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 15.03it/s]
+[2026-08-14T13:17:25Z] complete missing MarmAudio equal-support cells
+[2026-08-14T13:17:25Z] MarmAudio K=2/class candidate readout (K=2 free already complete)
+You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+Qwen2_5OmniToken2WavModel does not support eager attention implementation, fall back to sdpa
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:01<00:04,  1.11s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:01<00:02,  1.09it/s]Loading checkpoint shards:  60%|██████    | 3/5 [00:02<00:01,  1.16it/s]Loading checkpoint shards:  80%|████████  | 4/5 [00:03<00:00,  1.18it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:04<00:00,  1.34it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:04<00:00,  1.23it/s]
+[1/75] 31471 K/class=2 -> Twitter
+[2/75] 31828 K/class=2 -> Twitter
+[3/75] 34756 K/class=2 -> Twitter
+[4/75] 36485 K/class=2 -> Twitter
+[5/75] 36522 K/class=2 -> Twitter
+[6/75] 405841 K/class=2 -> Twitter
+[7/75] 408631 K/class=2 -> Twitter
+[8/75] 50919 K/class=2 -> Twitter
+[9/75] 51436 K/class=2 -> Twitter
+[10/75] 517703 K/class=2 -> Twitter
+[11/75] 518079 K/class=2 -> Twitter
+[12/75] 521545 K/class=2 -> Twitter
+[13/75] 52861 K/class=2 -> Twitter
+[14/75] 533988 K/class=2 -> Twitter
+[15/75] 54180 K/class=2 -> Twitter
+[16/75] 547929 K/class=2 -> Twitter
+[17/75] 547992 K/class=2 -> Twitter
+[18/75] 548798 K/class=2 -> Twitter
+[19/75] 56195 K/class=2 -> Twitter
+[20/75] 580149 K/class=2 -> Twitter
+[21/75] 580352 K/class=2 -> Twitter
+[22/75] 590590 K/class=2 -> Twitter
+[23/75] 592253 K/class=2 -> Twitter
+[24/75] 592286 K/class=2 -> Twitter
+[25/75] 595018 K/class=2 -> Twitter
+[26/75] 598116 K/class=2 -> Twitter
+[27/75] 598781 K/class=2 -> Twitter
+[28/75] 609454 K/class=2 -> Twitter
+[29/75] 610080 K/class=2 -> Twitter
+[30/75] 614582 K/class=2 -> Twitter
+[31/75] 614794 K/class=2 -> Twitter
+[32/75] 622260 K/class=2 -> Twitter
+[33/75] 622312 K/class=2 -> Twitter
+[34/75] 622320 K/class=2 -> Twitter
+[35/75] 622417 K/class=2 -> Twitter
+[36/75] 622758 K/class=2 -> Twitter
+[37/75] 623382 K/class=2 -> Twitter
+[38/75] 623573 K/class=2 -> Twitter
+[39/75] 623621 K/class=2 -> Twitter
+[40/75] 623676 K/class=2 -> Twitter
+[41/75] 623691 K/class=2 -> Twitter
+[42/75] 623713 K/class=2 -> Twitter
+[43/75] 623831 K/class=2 -> Twitter
+[44/75] 624179 K/class=2 -> Twitter
+[45/75] 624712 K/class=2 -> Twitter
+[46/75] 625053 K/class=2 -> Twitter
+[47/75] 628729 K/class=2 -> Twitter
+[48/75] 631448 K/class=2 -> Twitter
+[49/75] 631485 K/class=2 -> Twitter
+[50/75] 631861 K/class=2 -> Twitter
+[51/75] 631947 K/class=2 -> Twitter
+[52/75] 632037 K/class=2 -> Twitter
+[53/75] 632300 K/class=2 -> Twitter
+[54/75] 632381 K/class=2 -> Twitter
+[55/75] 632863 K/class=2 -> Twitter
+[56/75] 633531 K/class=2 -> Twitter
+[57/75] 642827 K/class=2 -> Twitter
+[58/75] 647588 K/class=2 -> Twitter
+[59/75] 695230 K/class=2 -> Twitter
+[60/75] 699227 K/class=2 -> Twitter
+[61/75] 706021 K/class=2 -> Twitter
+[62/75] 708875 K/class=2 -> Twitter
+[63/75] 715845 K/class=2 -> Twitter
+[64/75] 716490 K/class=2 -> Twitter
+[65/75] 737715 K/class=2 -> Twitter
+[66/75] 738495 K/class=2 -> Twitter
+[67/75] 742006 K/class=2 -> Twitter
+[68/75] 755986 K/class=2 -> Twitter
+[69/75] 758751 K/class=2 -> Twitter
+[70/75] 788000 K/class=2 -> Twitter
+[71/75] 794666 K/class=2 -> Twitter
+[72/75] 799377 K/class=2 -> Twitter
+[73/75] 859379 K/class=2 -> Twitter
+[74/75] 860537 K/class=2 -> Twitter
+[75/75] 861790 K/class=2 -> Twitter
+{
+  "model_id": "Qwen/Qwen2.5-Omni-7B",
+  "manifest": "data/manifests/marmaudio_expert_validation.csv",
+  "condition": null,
+  "readout": "candidate",
+  "label_map": {
+    "Infant Cry": "Infant Cry",
+    "Phee": "Phee",
+    "Seep": "Seep",
+    "Trill": "Trill",
+    "Tsik": "Tsik",
+    "Twitter": "Twitter"
+  },
+  "split": "results/marmaudio_equal_support_split_seed20260814.json",
+  "query_labels_used_for": "post_hoc_scoring_only",
+  "results": {
+    "2": {
+      "support_k_per_class": 2,
+      "support_k_total": 12,
+      "n_query": 75,
+      "accuracy": 0.17333333333333334,
+      "macro_f1": 0.04924242424242425,
+      "invalid_response_rate": 0.0,
+      "prediction_counts": {
+        "Twitter": 75
+      }
+    }
+  }
+}
+[2026-08-14T13:22:34Z] MarmAudio K=4/class free one-query memory gate
+You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+Qwen2_5OmniToken2WavModel does not support eager attention implementation, fall back to sdpa
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:01<00:04,  1.12s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:01<00:02,  1.08it/s]Loading checkpoint shards:  60%|██████    | 3/5 [00:02<00:01,  1.15it/s]Loading checkpoint shards:  80%|████████  | 4/5 [00:03<00:00,  1.17it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:04<00:00,  1.34it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:04<00:00,  1.22it/s]
+[1/1] 31471 K/class=4 -> Twitter
+{
+  "model_id": "Qwen/Qwen2.5-Omni-7B",
+  "manifest": "data/manifests/marmaudio_expert_validation.csv",
+  "condition": null,
+  "readout": "free",
+  "label_map": {
+    "Infant Cry": "Infant Cry",
+    "Phee": "Phee",
+    "Seep": "Seep",
+    "Trill": "Trill",
+    "Tsik": "Tsik",
+    "Twitter": "Twitter"
+  },
+  "split": "results/marmaudio_equal_support_split_seed20260814.json",
+  "query_labels_used_for": "post_hoc_scoring_only",
+  "results": {
+    "4": {
+      "support_k_per_class": 4,
+      "support_k_total": 24,
+      "n_query": 1,
+      "accuracy": 0.0,
+      "macro_f1": 0.0,
+      "invalid_response_rate": 0.0,
+      "prediction_counts": {
+        "Twitter": 1
+      }
+    }
+  }
+}
+[2026-08-14T13:22:51Z] MarmAudio K=4/class free gate passed; run frozen 75-query set
+You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+Qwen2_5OmniToken2WavModel does not support eager attention implementation, fall back to sdpa
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:01<00:04,  1.13s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:01<00:02,  1.08it/s]Loading checkpoint shards:  60%|██████    | 3/5 [00:02<00:01,  1.15it/s]Loading checkpoint shards:  80%|████████  | 4/5 [00:03<00:00,  1.17it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:04<00:00,  1.33it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:04<00:00,  1.22it/s]
+[1/75] 31471 K/class=4 -> Twitter
+[2/75] 31828 K/class=4 -> Twitter
+[3/75] 34756 K/class=4 -> Twitter
+[4/75] 36485 K/class=4 -> Twitter
+[5/75] 36522 K/class=4 -> Twitter
+[6/75] 405841 K/class=4 -> Twitter
+[7/75] 408631 K/class=4 -> Twitter
+[8/75] 50919 K/class=4 -> Twitter
+[9/75] 51436 K/class=4 -> Twitter
+[10/75] 517703 K/class=4 -> Twitter
+[11/75] 518079 K/class=4 -> Twitter
+[12/75] 521545 K/class=4 -> Twitter
+[13/75] 52861 K/class=4 -> Twitter
+[14/75] 533988 K/class=4 -> Twitter
+[15/75] 54180 K/class=4 -> Twitter
+[16/75] 547929 K/class=4 -> Twitter
+[17/75] 547992 K/class=4 -> Twitter
+[18/75] 548798 K/class=4 -> Twitter
+[19/75] 56195 K/class=4 -> Twitter
+[20/75] 580149 K/class=4 -> Twitter
+[21/75] 580352 K/class=4 -> Twitter
+[22/75] 590590 K/class=4 -> Twitter
+[23/75] 592253 K/class=4 -> Twitter
+[24/75] 592286 K/class=4 -> Twitter
+[25/75] 595018 K/class=4 -> Twitter
+[26/75] 598116 K/class=4 -> Twitter
+[27/75] 598781 K/class=4 -> Twitter
+[28/75] 609454 K/class=4 -> Twitter
+[29/75] 610080 K/class=4 -> Twitter
+[30/75] 614582 K/class=4 -> Twitter
+[31/75] 614794 K/class=4 -> Twitter
+[32/75] 622260 K/class=4 -> Twitter
+[33/75] 622312 K/class=4 -> Twitter
+[34/75] 622320 K/class=4 -> Twitter
+[35/75] 622417 K/class=4 -> Twitter
+[36/75] 622758 K/class=4 -> Twitter
+[37/75] 623382 K/class=4 -> Twitter
+[38/75] 623573 K/class=4 -> Twitter
+[39/75] 623621 K/class=4 -> Twitter
+[40/75] 623676 K/class=4 -> Twitter
+[41/75] 623691 K/class=4 -> Twitter
+[42/75] 623713 K/class=4 -> Twitter
+[43/75] 623831 K/class=4 -> Twitter
+[44/75] 624179 K/class=4 -> Twitter
+[45/75] 624712 K/class=4 -> Twitter
+[46/75] 625053 K/class=4 -> Twitter
+[47/75] 628729 K/class=4 -> Twitter
+[48/75] 631448 K/class=4 -> Twitter
+[49/75] 631485 K/class=4 -> Twitter
+[50/75] 631861 K/class=4 -> Twitter
+[51/75] 631947 K/class=4 -> Twitter
+[52/75] 632037 K/class=4 -> Twitter
+[53/75] 632300 K/class=4 -> Twitter
+[54/75] 632381 K/class=4 -> Twitter
+[55/75] 632863 K/class=4 -> Twitter
+[56/75] 633531 K/class=4 -> Twitter
+[57/75] 642827 K/class=4 -> Twitter
+[58/75] 647588 K/class=4 -> Twitter
+[59/75] 695230 K/class=4 -> Twitter
+[60/75] 699227 K/class=4 -> Twitter
+[61/75] 706021 K/class=4 -> Twitter
+[62/75] 708875 K/class=4 -> Twitter
+[63/75] 715845 K/class=4 -> Twitter
+[64/75] 716490 K/class=4 -> Twitter
+[65/75] 737715 K/class=4 -> Twitter
+[66/75] 738495 K/class=4 -> Twitter
+[67/75] 742006 K/class=4 -> Twitter
+[68/75] 755986 K/class=4 -> Twitter
+[69/75] 758751 K/class=4 -> Twitter
+[70/75] 788000 K/class=4 -> Twitter
+[71/75] 794666 K/class=4 -> Twitter
+[72/75] 799377 K/class=4 -> Twitter
+[73/75] 859379 K/class=4 -> Twitter
+[74/75] 860537 K/class=4 -> Twitter
+[75/75] 861790 K/class=4 -> Twitter
+{
+  "model_id": "Qwen/Qwen2.5-Omni-7B",
+  "manifest": "data/manifests/marmaudio_expert_validation.csv",
+  "condition": null,
+  "readout": "free",
+  "label_map": {
+    "Infant Cry": "Infant Cry",
+    "Phee": "Phee",
+    "Seep": "Seep",
+    "Trill": "Trill",
+    "Tsik": "Tsik",
+    "Twitter": "Twitter"
+  },
+  "split": "results/marmaudio_equal_support_split_seed20260814.json",
+  "query_labels_used_for": "post_hoc_scoring_only",
+  "results": {
+    "4": {
+      "support_k_per_class": 4,
+      "support_k_total": 24,
+      "n_query": 75,
+      "accuracy": 0.17333333333333334,
+      "macro_f1": 0.04924242424242425,
+      "invalid_response_rate": 0.0,
+      "prediction_counts": {
+        "Twitter": 75
+      }
+    }
+  }
+}
+[2026-08-14T13:27:57Z] MarmAudio K=4/class candidate one-query memory gate
+You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+Qwen2_5OmniToken2WavModel does not support eager attention implementation, fall back to sdpa
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:01<00:04,  1.12s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:01<00:02,  1.09it/s]Loading checkpoint shards:  60%|██████    | 3/5 [00:02<00:01,  1.16it/s]Loading checkpoint shards:  80%|████████  | 4/5 [00:03<00:00,  1.18it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:04<00:00,  1.34it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:04<00:00,  1.23it/s]
+[1/1] 31471 K/class=4 -> Twitter
+{
+  "model_id": "Qwen/Qwen2.5-Omni-7B",
+  "manifest": "data/manifests/marmaudio_expert_validation.csv",
+  "condition": null,
+  "readout": "candidate",
+  "label_map": {
+    "Infant Cry": "Infant Cry",
+    "Phee": "Phee",
+    "Seep": "Seep",
+    "Trill": "Trill",
+    "Tsik": "Tsik",
+    "Twitter": "Twitter"
+  },
+  "split": "results/marmaudio_equal_support_split_seed20260814.json",
+  "query_labels_used_for": "post_hoc_scoring_only",
+  "results": {
+    "4": {
+      "support_k_per_class": 4,
+      "support_k_total": 24,
+      "n_query": 1,
+      "accuracy": 0.0,
+      "macro_f1": 0.0,
+      "invalid_response_rate": 0.0,
+      "prediction_counts": {
+        "Twitter": 1
+      }
+    }
+  }
+}
+You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+Qwen2_5OmniToken2WavModel does not support eager attention implementation, fall back to sdpa
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:01<00:04,  1.17s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:01<00:02,  1.05it/s]Loading checkpoint shards:  60%|██████    | 3/5 [00:02<00:01,  1.13it/s]Loading checkpoint shards:  80%|████████  | 4/5 [00:03<00:00,  1.16it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:04<00:00,  1.32it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:04<00:00,  1.20it/s]
+[1/75] 31471 K/class=4 -> Twitter
+[2/75] 31828 K/class=4 -> Twitter
+[3/75] 34756 K/class=4 -> Twitter
+[4/75] 36485 K/class=4 -> Twitter
+[5/75] 36522 K/class=4 -> Twitter
+[6/75] 405841 K/class=4 -> Twitter
+[7/75] 408631 K/class=4 -> Twitter
+[8/75] 50919 K/class=4 -> Twitter
+[9/75] 51436 K/class=4 -> Twitter
+[10/75] 517703 K/class=4 -> Twitter
+[11/75] 518079 K/class=4 -> Twitter
+[12/75] 521545 K/class=4 -> Twitter
+[13/75] 52861 K/class=4 -> Twitter
+[14/75] 533988 K/class=4 -> Twitter
+[15/75] 54180 K/class=4 -> Twitter
+[16/75] 547929 K/class=4 -> Twitter
+[17/75] 547992 K/class=4 -> Twitter
+[18/75] 548798 K/class=4 -> Twitter
+[19/75] 56195 K/class=4 -> Twitter
+[20/75] 580149 K/class=4 -> Twitter
+[21/75] 580352 K/class=4 -> Twitter
+[22/75] 590590 K/class=4 -> Twitter
+[23/75] 592253 K/class=4 -> Twitter
+[24/75] 592286 K/class=4 -> Twitter
+[25/75] 595018 K/class=4 -> Twitter
+[26/75] 598116 K/class=4 -> Twitter
+[27/75] 598781 K/class=4 -> Twitter
+[28/75] 609454 K/class=4 -> Twitter
+[29/75] 610080 K/class=4 -> Twitter
+[30/75] 614582 K/class=4 -> Twitter
+[31/75] 614794 K/class=4 -> Twitter
+[32/75] 622260 K/class=4 -> Twitter
+[33/75] 622312 K/class=4 -> Twitter
+[34/75] 622320 K/class=4 -> Twitter
+[35/75] 622417 K/class=4 -> Twitter
+[36/75] 622758 K/class=4 -> Twitter
+[37/75] 623382 K/class=4 -> Twitter
+[38/75] 623573 K/class=4 -> Twitter
+[39/75] 623621 K/class=4 -> Twitter
+[40/75] 623676 K/class=4 -> Twitter
+[41/75] 623691 K/class=4 -> Twitter
+[42/75] 623713 K/class=4 -> Twitter
+[43/75] 623831 K/class=4 -> Twitter
+[44/75] 624179 K/class=4 -> Twitter
+[45/75] 624712 K/class=4 -> Twitter
+[46/75] 625053 K/class=4 -> Twitter
+[47/75] 628729 K/class=4 -> Twitter
+[48/75] 631448 K/class=4 -> Twitter
+[49/75] 631485 K/class=4 -> Twitter
+[50/75] 631861 K/class=4 -> Twitter
+[51/75] 631947 K/class=4 -> Twitter
+[52/75] 632037 K/class=4 -> Twitter
+[53/75] 632300 K/class=4 -> Twitter
+[54/75] 632381 K/class=4 -> Twitter
+[55/75] 632863 K/class=4 -> Twitter
+[56/75] 633531 K/class=4 -> Twitter
+[57/75] 642827 K/class=4 -> Twitter
+[58/75] 647588 K/class=4 -> Twitter
+[59/75] 695230 K/class=4 -> Twitter
+[60/75] 699227 K/class=4 -> Twitter
+[61/75] 706021 K/class=4 -> Twitter
+[62/75] 708875 K/class=4 -> Twitter
+[63/75] 715845 K/class=4 -> Twitter
+[64/75] 716490 K/class=4 -> Twitter
+[65/75] 737715 K/class=4 -> Twitter
+[66/75] 738495 K/class=4 -> Twitter
+[67/75] 742006 K/class=4 -> Twitter
+[68/75] 755986 K/class=4 -> Twitter
+[69/75] 758751 K/class=4 -> Twitter
+[70/75] 788000 K/class=4 -> Twitter
+[71/75] 794666 K/class=4 -> Twitter
+[72/75] 799377 K/class=4 -> Twitter
+[73/75] 859379 K/class=4 -> Twitter
+[74/75] 860537 K/class=4 -> Twitter
+[75/75] 861790 K/class=4 -> Twitter
+{
+  "model_id": "Qwen/Qwen2.5-Omni-7B",
+  "manifest": "data/manifests/marmaudio_expert_validation.csv",
+  "condition": null,
+  "readout": "candidate",
+  "label_map": {
+    "Infant Cry": "Infant Cry",
+    "Phee": "Phee",
+    "Seep": "Seep",
+    "Trill": "Trill",
+    "Tsik": "Tsik",
+    "Twitter": "Twitter"
+  },
+  "split": "results/marmaudio_equal_support_split_seed20260814.json",
+  "query_labels_used_for": "post_hoc_scoring_only",
+  "results": {
+    "4": {
+      "support_k_per_class": 4,
+      "support_k_total": 24,
+      "n_query": 75,
+      "accuracy": 0.17333333333333334,
+      "macro_f1": 0.04924242424242425,
+      "invalid_response_rate": 0.0,
+      "prediction_counts": {
+        "Twitter": 75
+      }
+    }
+  }
+}
+[2026-08-14T13:38:13Z] MarmAudio K=8/class free one-query memory gate
+You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+Qwen2_5OmniToken2WavModel does not support eager attention implementation, fall back to sdpa
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:01<00:04,  1.13s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:01<00:02,  1.08it/s]Loading checkpoint shards:  60%|██████    | 3/5 [00:02<00:01,  1.15it/s]Loading checkpoint shards:  80%|████████  | 4/5 [00:03<00:00,  1.17it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:04<00:00,  1.33it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:04<00:00,  1.21it/s]
+[1/1] 31471 K/class=8 -> Twitter
+{
+  "model_id": "Qwen/Qwen2.5-Omni-7B",
+  "manifest": "data/manifests/marmaudio_expert_validation.csv",
+  "condition": null,
+  "readout": "free",
+  "label_map": {
+    "Infant Cry": "Infant Cry",
+    "Phee": "Phee",
+    "Seep": "Seep",
+    "Trill": "Trill",
+    "Tsik": "Tsik",
+    "Twitter": "Twitter"
+  },
+  "split": "results/marmaudio_equal_support_split_seed20260814.json",
+  "query_labels_used_for": "post_hoc_scoring_only",
+  "results": {
+    "8": {
+      "support_k_per_class": 8,
+      "support_k_total": 48,
+      "n_query": 1,
+      "accuracy": 0.0,
+      "macro_f1": 0.0,
+      "invalid_response_rate": 0.0,
+      "prediction_counts": {
+        "Twitter": 1
+      }
+    }
+  }
+}
+[2026-08-14T13:38:35Z] MarmAudio K=8/class free gate passed; run frozen 75-query set
+You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+Qwen2_5OmniToken2WavModel does not support eager attention implementation, fall back to sdpa
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:01<00:04,  1.14s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:01<00:02,  1.08it/s]Loading checkpoint shards:  60%|██████    | 3/5 [00:02<00:01,  1.15it/s]Loading checkpoint shards:  80%|████████  | 4/5 [00:03<00:00,  1.16it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:04<00:00,  1.33it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:04<00:00,  1.21it/s]
+[1/75] 31471 K/class=8 -> Twitter
+[W814 13:39:01.119036318 CUDACachingAllocator.cpp:508] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 11599872, total: 25296044032).
+[2/75] 31828 K/class=8 -> Twitter
+[3/75] 34756 K/class=8 -> Twitter
+[4/75] 36485 K/class=8 -> Twitter
+[5/75] 36522 K/class=8 -> Twitter
+[6/75] 405841 K/class=8 -> Twitter
+[7/75] 408631 K/class=8 -> Twitter
+[8/75] 50919 K/class=8 -> Twitter
+[9/75] 51436 K/class=8 -> Twitter
+[10/75] 517703 K/class=8 -> Twitter
+[11/75] 518079 K/class=8 -> Twitter
+[12/75] 521545 K/class=8 -> Twitter
+[13/75] 52861 K/class=8 -> Twitter
+[14/75] 533988 K/class=8 -> Twitter
+[15/75] 54180 K/class=8 -> Twitter
+[16/75] 547929 K/class=8 -> Twitter
+[17/75] 547992 K/class=8 -> Twitter
+[18/75] 548798 K/class=8 -> Twitter
+[19/75] 56195 K/class=8 -> Twitter
+[20/75] 580149 K/class=8 -> Twitter
+[21/75] 580352 K/class=8 -> Twitter
+[22/75] 590590 K/class=8 -> Twitter
+[23/75] 592253 K/class=8 -> Twitter
+[24/75] 592286 K/class=8 -> Twitter
+[25/75] 595018 K/class=8 -> Twitter
+[26/75] 598116 K/class=8 -> Twitter
+[27/75] 598781 K/class=8 -> Twitter
+[28/75] 609454 K/class=8 -> Twitter
+[29/75] 610080 K/class=8 -> Twitter
+[30/75] 614582 K/class=8 -> Twitter
+[31/75] 614794 K/class=8 -> Twitter
+[32/75] 622260 K/class=8 -> Twitter
+[33/75] 622312 K/class=8 -> Twitter
+[34/75] 622320 K/class=8 -> Twitter
+[35/75] 622417 K/class=8 -> Twitter
+[36/75] 622758 K/class=8 -> Twitter
+[37/75] 623382 K/class=8 -> Twitter
+[38/75] 623573 K/class=8 -> Twitter
+[39/75] 623621 K/class=8 -> Twitter
+[40/75] 623676 K/class=8 -> Twitter
+[41/75] 623691 K/class=8 -> Twitter
+[42/75] 623713 K/class=8 -> Twitter
+[43/75] 623831 K/class=8 -> Twitter
+[44/75] 624179 K/class=8 -> Twitter
+[45/75] 624712 K/class=8 -> Twitter
+[46/75] 625053 K/class=8 -> Twitter
+[47/75] 628729 K/class=8 -> Twitter
+[48/75] 631448 K/class=8 -> Twitter
+[49/75] 631485 K/class=8 -> Twitter
+[50/75] 631861 K/class=8 -> Twitter
+[51/75] 631947 K/class=8 -> Twitter
+[52/75] 632037 K/class=8 -> Twitter
+[53/75] 632300 K/class=8 -> Twitter
+[54/75] 632381 K/class=8 -> Twitter
+[55/75] 632863 K/class=8 -> Twitter
+[56/75] 633531 K/class=8 -> Twitter
+[57/75] 642827 K/class=8 -> Twitter
+[58/75] 647588 K/class=8 -> Twitter
+[59/75] 695230 K/class=8 -> Twitter
+[60/75] 699227 K/class=8 -> Twitter
+[61/75] 706021 K/class=8 -> Twitter
+[62/75] 708875 K/class=8 -> Twitter
+[63/75] 715845 K/class=8 -> Twitter
+[64/75] 716490 K/class=8 -> Twitter
+[65/75] 737715 K/class=8 -> Twitter
+[66/75] 738495 K/class=8 -> Twitter
+[67/75] 742006 K/class=8 -> Twitter
+[68/75] 755986 K/class=8 -> Twitter
+[69/75] 758751 K/class=8 -> Twitter
+[70/75] 788000 K/class=8 -> Twitter
+[71/75] 794666 K/class=8 -> Twitter
+[72/75] 799377 K/class=8 -> Twitter
+[73/75] 859379 K/class=8 -> Twitter
+[74/75] 860537 K/class=8 -> Twitter
+[75/75] 861790 K/class=8 -> Twitter
+{
+  "model_id": "Qwen/Qwen2.5-Omni-7B",
+  "manifest": "data/manifests/marmaudio_expert_validation.csv",
+  "condition": null,
+  "readout": "free",
+  "label_map": {
+    "Infant Cry": "Infant Cry",
+    "Phee": "Phee",
+    "Seep": "Seep",
+    "Trill": "Trill",
+    "Tsik": "Tsik",
+    "Twitter": "Twitter"
+  },
+  "split": "results/marmaudio_equal_support_split_seed20260814.json",
+  "query_labels_used_for": "post_hoc_scoring_only",
+  "results": {
+    "8": {
+      "support_k_per_class": 8,
+      "support_k_total": 48,
+      "n_query": 75,
+      "accuracy": 0.17333333333333334,
+      "macro_f1": 0.04924242424242425,
+      "invalid_response_rate": 0.0,
+      "prediction_counts": {
+        "Twitter": 75
+      }
+    }
+  }
+}
+[2026-08-14T13:49:45Z] MarmAudio K=8/class candidate one-query memory gate
+You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+Qwen2_5OmniToken2WavModel does not support eager attention implementation, fall back to sdpa
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:01<00:05,  1.33s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:02<00:03,  1.06s/it]Loading checkpoint shards:  60%|██████    | 3/5 [00:03<00:01,  1.02it/s]Loading checkpoint shards:  80%|████████  | 4/5 [00:04<00:00,  1.05it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:04<00:00,  1.23it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:04<00:00,  1.09it/s]
+[1/1] 31471 K/class=8 -> Twitter
+{
+  "model_id": "Qwen/Qwen2.5-Omni-7B",
+  "manifest": "data/manifests/marmaudio_expert_validation.csv",
+  "condition": null,
+  "readout": "candidate",
+  "label_map": {
+    "Infant Cry": "Infant Cry",
+    "Phee": "Phee",
+    "Seep": "Seep",
+    "Trill": "Trill",
+    "Tsik": "Tsik",
+    "Twitter": "Twitter"
+  },
+  "split": "results/marmaudio_equal_support_split_seed20260814.json",
+  "query_labels_used_for": "post_hoc_scoring_only",
+  "results": {
+    "8": {
+      "support_k_per_class": 8,
+      "support_k_total": 48,
+      "n_query": 1,
+      "accuracy": 0.0,
+      "macro_f1": 0.0,
+      "invalid_response_rate": 0.0,
+      "prediction_counts": {
+        "Twitter": 1
+      }
+    }
+  }
+}
+You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section'}
+Qwen2_5OmniToken2WavModel does not support eager attention implementation, fall back to sdpa
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:01<00:04,  1.23s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:02<00:02,  1.02it/s]Loading checkpoint shards:  60%|██████    | 3/5 [00:02<00:01,  1.11it/s]Loading checkpoint shards:  80%|████████  | 4/5 [00:04<00:01,  1.08s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:04<00:00,  1.08it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:04<00:00,  1.03it/s]
+[1/75] 31471 K/class=8 -> Twitter
+[2/75] 31828 K/class=8 -> Twitter
+[3/75] 34756 K/class=8 -> Twitter
+[4/75] 36485 K/class=8 -> Twitter
+[5/75] 36522 K/class=8 -> Twitter
+[6/75] 405841 K/class=8 -> Twitter
+[7/75] 408631 K/class=8 -> Twitter
+[8/75] 50919 K/class=8 -> Twitter
+[9/75] 51436 K/class=8 -> Twitter
+[10/75] 517703 K/class=8 -> Twitter
+[11/75] 518079 K/class=8 -> Twitter
+[12/75] 521545 K/class=8 -> Twitter
+[13/75] 52861 K/class=8 -> Twitter
+[14/75] 533988 K/class=8 -> Twitter
+[15/75] 54180 K/class=8 -> Twitter
+[16/75] 547929 K/class=8 -> Twitter
+[17/75] 547992 K/class=8 -> Twitter
+[18/75] 548798 K/class=8 -> Twitter
+[19/75] 56195 K/class=8 -> Twitter
+[20/75] 580149 K/class=8 -> Twitter
+[21/75] 580352 K/class=8 -> Twitter
+[22/75] 590590 K/class=8 -> Twitter
+[23/75] 592253 K/class=8 -> Twitter
+[24/75] 592286 K/class=8 -> Twitter
+[25/75] 595018 K/class=8 -> Twitter
+[26/75] 598116 K/class=8 -> Twitter
+[27/75] 598781 K/class=8 -> Twitter
+[28/75] 609454 K/class=8 -> Twitter
+[29/75] 610080 K/class=8 -> Twitter
+[30/75] 614582 K/class=8 -> Twitter
+[31/75] 614794 K/class=8 -> Twitter
+[32/75] 622260 K/class=8 -> Twitter
+[33/75] 622312 K/class=8 -> Twitter
+[34/75] 622320 K/class=8 -> Twitter
+[35/75] 622417 K/class=8 -> Twitter
+[36/75] 622758 K/class=8 -> Twitter
+[37/75] 623382 K/class=8 -> Twitter
+[38/75] 623573 K/class=8 -> Twitter
+[39/75] 623621 K/class=8 -> Twitter
+[40/75] 623676 K/class=8 -> Twitter
+[41/75] 623691 K/class=8 -> Twitter
+[42/75] 623713 K/class=8 -> Twitter
+[43/75] 623831 K/class=8 -> Twitter
+[44/75] 624179 K/class=8 -> Twitter
+[45/75] 624712 K/class=8 -> Twitter
+[46/75] 625053 K/class=8 -> Twitter
+[47/75] 628729 K/class=8 -> Twitter
+[48/75] 631448 K/class=8 -> Twitter
+[49/75] 631485 K/class=8 -> Twitter
+[50/75] 631861 K/class=8 -> Twitter
+[51/75] 631947 K/class=8 -> Twitter
+[52/75] 632037 K/class=8 -> Twitter

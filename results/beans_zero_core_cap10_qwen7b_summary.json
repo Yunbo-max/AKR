@@ -1,0 +1,67 @@
+{
+  "call-type": {
+    "n": 25,
+    "exact_match": 0.6,
+    "correct": 15
+  },
+  "unseen-family-cmn": {
+    "n": 25,
+    "exact_match": 0.0,
+    "correct": 0
+  },
+  "unseen-family-sci": {
+    "n": 25,
+    "exact_match": 0.0,
+    "correct": 0
+  },
+  "unseen-family-tax": {
+    "n": 25,
+    "exact_match": 0.0,
+    "correct": 0
+  },
+  "unseen-genus-cmn": {
+    "n": 25,
+    "exact_match": 0.0,
+    "correct": 0
+  },
+  "unseen-genus-sci": {
+    "n": 25,
+    "exact_match": 0.0,
+    "correct": 0
+  },
+  "unseen-genus-tax": {
+    "n": 25,
+    "exact_match": 0.0,
+    "correct": 0
+  },
+  "unseen-species-cmn": {
+    "n": 25,
+    "exact_match": 0.0,
+    "correct": 0
+  },
+  "unseen-species-sci": {
+    "n": 25,
+    "exact_match": 0.0,
+    "correct": 0
+  },
+  "unseen-species-tax": {
+    "n": 25,
+    "exact_match": 0.0,
+    "correct": 0
+  },
+  "watkins": {
+    "n": 25,
+    "exact_match": 0.0,
+    "correct": 0
+  },
+  "zf-indiv": {
+    "n": 25,
+    "exact_match": 0.72,
+    "correct": 18
+  },
+  "overall": {
+    "n": 300,
+    "exact_match": 0.11,
+    "correct": 33
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "manifest": "data/manifests/marmaudio_expert_validation.csv",
+  "split": "results/marmaudio_equal_support_split_k16_seed20260814.json",
+  "representation_dir": "results/reps_full_7b",
+  "feature_layer": 28,
+  "ridge_alpha": 1.0,
+  "protocol": "same nested K-per-class support; no query-label model selection",
+  "results": {
+    "K=1/nearest_centroid": {
+      "support_k_per_class": 1,
+      "support_k_total": 6,
+      "method": "nearest_centroid",
+      "n_query": 75,
+      "accuracy": 0.29333333333333333,
+      "macro_f1": 0.3522364337581729
+    },
+    "K=1/linear_probe": {
+      "support_k_per_class": 1,
+      "support_k_total": 6,
+      "method": "linear_probe",
+      "n_query": 75,
+      "accuracy": 0.4666666666666667,
+      "macro_f1": 0.4880808080808081
+    },
+    "K=2/nearest_centroid": {
+      "support_k_per_class": 2,
+      "support_k_total": 12,
+      "method": "nearest_centroid",
+      "n_query": 75,
+      "accuracy": 0.4666666666666667,
+      "macro_f1": 0.5030830039525692
+    },
+    "K=2/linear_probe": {
+      "support_k_per_class": 2,
+      "support_k_total": 12,
+      "method": "linear_probe",
+      "n_query": 75,
+      "accuracy": 0.5866666666666667,
+      "macro_f1": 0.5622128510059545
+    },
+    "K=4/nearest_centroid": {
+      "support_k_per_class": 4,
+      "support_k_total": 24,
+      "method": "nearest_centroid",
+      "n_query": 75,
+      "accuracy": 0.5066666666666667,
+      "macro_f1": 0.5054361148478795
+    },
+    "K=4/linear_probe": {
+      "support_k_per_class": 4,
+      "support_k_total": 24,
+      "method": "linear_probe",
+      "n_query": 75,
+      "accuracy": 0.7333333333333333,
+      "macro_f1": 0.711924036342641
+    },
+    "K=8/nearest_centroid": {
+      "support_k_per_class": 8,
+      "support_k_total": 48,
+      "method": "nearest_centroid",
+      "n_query": 75,
+      "accuracy": 0.7866666666666666,
+      "macro_f1": 0.7727321477321478
+    },
+    "K=8/linear_probe": {
+      "support_k_per_class": 8,
+      "support_k_total": 48,
+      "method": "linear_probe",
+      "n_query": 75,
+      "accuracy": 0.84,
+      "macro_f1": 0.8385475231452242
+    },
+    "K=16/nearest_centroid": {
+      "support_k_per_class": 16,
+      "support_k_total": 96,
+      "method": "nearest_centroid",
+      "n_query": 75,
+      "accuracy": 0.76,
+      "macro_f1": 0.7408304864445215
+    },
+    "K=16/linear_probe": {
+      "support_k_per_class": 16,
+      "support_k_total": 96,
+      "method": "linear_probe",
+      "n_query": 75,
+      "accuracy": 0.8266666666666667,
+      "macro_f1": 0.8144799644799646
+    }
+  }
+}

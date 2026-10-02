@@ -1,0 +1,4 @@
+dataset,protocol,baseline_accuracy,fixed_accuracy,conditional_accuracy,oracle_recovery,evidence_status,note
+MarmAudio,5 random recording-group query splits; K=20,0.12347455089965284,0.1300796974018204,0.3247223920426273,1.0,exploratory_pre_equal_support_protocol,means over splits; Oracle on eligible failures; not a primary paper result
+BEANS Dogs,fixed test; K=20 layer28 rank8 follow-up,0.02877697841726619,0.03597122302158273,0.20863309352517986,,exploratory_test_selected_do_not_claim,no full-correct/lp1-wrong Oracle-eligible examples; invalid for primary claim
+BEANS Watkins,fixed test; K=20 layer0 rank4,0.061946902654867256,0.05604719764011799,0.05604719764011799,1.0,exploratory_undercovered_support_do_not_claim,Oracle is only 5 eligible examples; K=20 total cannot cover 31 classes

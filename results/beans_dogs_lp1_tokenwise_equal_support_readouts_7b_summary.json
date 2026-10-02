@@ -1,0 +1,26 @@
+{
+  "manifest": "data/manifests/beans_dogs_all_full_lp1.csv",
+  "split": "results/beans_dogs_lp1_tokenwise_equal_support_split.json",
+  "representation_dir": "results/reps_beans_dogs_lp1_7b",
+  "feature_layer": 28,
+  "ridge_alpha": 1.0,
+  "protocol": "same nested K-per-class support; no query-label model selection",
+  "results": {
+    "K=2/nearest_centroid": {
+      "support_k_per_class": 2,
+      "support_k_total": 20,
+      "method": "nearest_centroid",
+      "n_query": 64,
+      "accuracy": 0.25,
+      "macro_f1": 0.16631143075079002
+    },
+    "K=2/linear_probe": {
+      "support_k_per_class": 2,
+      "support_k_total": 20,
+      "method": "linear_probe",
+      "n_query": 64,
+      "accuracy": 0.3125,
+      "macro_f1": 0.2302502760397497
+    }
+  }
+}

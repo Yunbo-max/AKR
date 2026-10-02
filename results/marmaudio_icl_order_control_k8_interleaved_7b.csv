@@ -1,0 +1,76 @@
+event_id,target,support_k_per_class,support_k_total,order_mode,rotation,last_support_label,raw_prediction,prediction,correct,copies_last_support_label
+31471,Tsik,8,48,interleaved,1,Infant Cry,Phee,Phee,false,false
+31828,Seep,8,48,interleaved,2,Phee,Seep,Seep,true,false
+34756,Phee,8,48,interleaved,5,Tsik,Twitter,Twitter,false,false
+36485,Phee,8,48,interleaved,4,Trill,Tsik,Tsik,false,false
+36522,Twitter,8,48,interleaved,3,Seep,Trill,Trill,false,false
+405841,Infant Cry,8,48,interleaved,0,Twitter,Infant Cry,Infant Cry,true,false
+408631,Phee,8,48,interleaved,1,Infant Cry,Phee,Phee,true,false
+50919,Tsik,8,48,interleaved,2,Phee,Seep,Seep,false,false
+51436,Trill,8,48,interleaved,1,Infant Cry,Phee,Phee,false,false
+517703,Trill,8,48,interleaved,2,Phee,Seep,Seep,false,false
+518079,Phee,8,48,interleaved,0,Twitter,Infant Cry,Infant Cry,false,false
+521545,Phee,8,48,interleaved,0,Twitter,Infant Cry,Infant Cry,false,false
+52861,Trill,8,48,interleaved,3,Seep,Trill,Trill,true,false
+533988,Seep,8,48,interleaved,0,Twitter,Infant Cry,Infant Cry,false,false
+54180,Phee,8,48,interleaved,1,Infant Cry,Phee,Phee,true,false
+547929,Twitter,8,48,interleaved,2,Phee,Seep,Seep,false,false
+547992,Phee,8,48,interleaved,2,Phee,Seep,Seep,false,false
+548798,Trill,8,48,interleaved,5,Tsik,Twitter,Twitter,false,false
+56195,Trill,8,48,interleaved,4,Trill,Tsik,Tsik,false,false
+580149,Trill,8,48,interleaved,3,Seep,Trill,Trill,true,false
+580352,Phee,8,48,interleaved,2,Phee,Seep,Seep,false,false
+590590,Phee,8,48,interleaved,3,Seep,Trill,Trill,false,false
+592253,Trill,8,48,interleaved,3,Seep,Trill,Trill,true,false
+592286,Twitter,8,48,interleaved,1,Infant Cry,Phee,Phee,false,false
+595018,Trill,8,48,interleaved,2,Phee,Seep,Seep,false,false
+598116,Twitter,8,48,interleaved,3,Seep,Trill,Trill,false,false
+598781,Twitter,8,48,interleaved,0,Twitter,Infant Cry,Infant Cry,false,false
+609454,Infant Cry,8,48,interleaved,4,Trill,Tsik,Tsik,false,false
+610080,Tsik,8,48,interleaved,2,Phee,Seep,Seep,false,false
+614582,Tsik,8,48,interleaved,3,Seep,Trill,Trill,false,false
+614794,Tsik,8,48,interleaved,4,Trill,Tsik,Tsik,true,false
+622260,Twitter,8,48,interleaved,1,Infant Cry,Phee,Phee,false,false
+622312,Tsik,8,48,interleaved,1,Infant Cry,Phee,Phee,false,false
+622320,Trill,8,48,interleaved,4,Trill,Tsik,Tsik,false,false
+622417,Seep,8,48,interleaved,5,Tsik,Twitter,Twitter,false,false
+622758,Twitter,8,48,interleaved,2,Phee,Seep,Seep,false,false
+623382,Seep,8,48,interleaved,3,Seep,Trill,Trill,false,false
+623573,Twitter,8,48,interleaved,5,Tsik,Twitter,Twitter,true,false
+623621,Seep,8,48,interleaved,2,Phee,Seep,Seep,true,false
+623676,Infant Cry,8,48,interleaved,5,Tsik,Twitter,Twitter,false,false
+623691,Infant Cry,8,48,interleaved,0,Twitter,Infant Cry,Infant Cry,true,false
+623713,Seep,8,48,interleaved,4,Trill,Tsik,Tsik,false,false
+623831,Tsik,8,48,interleaved,3,Seep,Trill,Trill,false,false
+624179,Twitter,8,48,interleaved,4,Trill,Tsik,Tsik,false,false
+624712,Trill,8,48,interleaved,4,Trill,Tsik,Tsik,false,false
+625053,Twitter,8,48,interleaved,4,Trill,Tsik,Tsik,false,false
+628729,Infant Cry,8,48,interleaved,2,Phee,Seep,Seep,false,false
+631448,Trill,8,48,interleaved,5,Tsik,Twitter,Twitter,false,false
+631485,Phee,8,48,interleaved,5,Tsik,Twitter,Twitter,false,false
+631861,Infant Cry,8,48,interleaved,1,Infant Cry,Phee,Phee,false,false
+631947,Tsik,8,48,interleaved,4,Trill,Tsik,Tsik,true,false
+632037,Tsik,8,48,interleaved,5,Tsik,Twitter,Twitter,false,false
+632300,Phee,8,48,interleaved,3,Seep,Trill,Trill,false,false
+632381,Twitter,8,48,interleaved,1,Infant Cry,Phee,Phee,false,false
+632863,Phee,8,48,interleaved,3,Seep,Trill,Trill,false,false
+633531,Phee,8,48,interleaved,4,Trill,Tsik,Tsik,false,false
+642827,Tsik,8,48,interleaved,0,Twitter,Infant Cry,Infant Cry,false,false
+647588,Phee,8,48,interleaved,0,Twitter,Infant Cry,Infant Cry,false,false
+695230,Trill,8,48,interleaved,0,Twitter,Infant Cry,Infant Cry,false,false
+699227,Twitter,8,48,interleaved,0,Twitter,Infant Cry,Infant Cry,false,false
+706021,Phee,8,48,interleaved,4,Trill,Tsik,Tsik,false,false
+708875,Trill,8,48,interleaved,5,Tsik,Twitter,Twitter,false,false
+715845,Seep,8,48,interleaved,1,Infant Cry,Phee,Phee,false,false
+716490,Tsik,8,48,interleaved,0,Twitter,Infant Cry,Infant Cry,false,false
+737715,Twitter,8,48,interleaved,5,Tsik,Twitter,Twitter,true,false
+738495,Trill,8,48,interleaved,0,Twitter,Infant Cry,Infant Cry,false,false
+742006,Infant Cry,8,48,interleaved,3,Seep,Trill,Trill,false,false
+755986,Tsik,8,48,interleaved,5,Tsik,Twitter,Twitter,false,false
+758751,Phee,8,48,interleaved,1,Infant Cry,Phee,Phee,true,false
+788000,Phee,8,48,interleaved,1,Infant Cry,Phee,Phee,true,false
+794666,Phee,8,48,interleaved,5,Tsik,Twitter,Twitter,false,false
+799377,Tsik,8,48,interleaved,0,Twitter,Infant Cry,Infant Cry,false,false
+859379,Trill,8,48,interleaved,1,Infant Cry,Phee,Phee,false,false
+860537,Phee,8,48,interleaved,2,Phee,Seep,Seep,false,false
+861790,Trill,8,48,interleaved,2,Phee,Seep,Seep,false,false

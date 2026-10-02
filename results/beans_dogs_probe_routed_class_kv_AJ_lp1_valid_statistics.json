@@ -1,0 +1,152 @@
+{
+  "predictions": "results/beans_dogs_probe_routed_class_kv_AJ_lp1_valid.csv",
+  "bootstrap_draws": 20000,
+  "seed": 20260814,
+  "inference": "paired example bootstrap; exact two-sided discordant-pair binomial test",
+  "comparisons": [
+    {
+      "relative_alpha": 0.003,
+      "method_a": "probe_class_tokenwise",
+      "method_b": "probe_class_pooled",
+      "n": 139,
+      "accuracy_a": 0.1510791366906475,
+      "accuracy_b": 0.14388489208633093,
+      "paired_difference_a_minus_b": 0.007194244604316547,
+      "bootstrap_95_ci": [
+        -0.05755395683453238,
+        0.07194244604316546
+      ],
+      "a_only_correct": 11,
+      "b_only_correct": 10,
+      "mcnemar_exact_two_sided_p": 1.0
+    },
+    {
+      "relative_alpha": 0.003,
+      "method_a": "probe_class_tokenwise",
+      "method_b": "probe_class_permuted",
+      "n": 139,
+      "accuracy_a": 0.1510791366906475,
+      "accuracy_b": 0.07913669064748201,
+      "paired_difference_a_minus_b": 0.07194244604316546,
+      "bootstrap_95_ci": [
+        0.007194244604316547,
+        0.14388489208633093
+      ],
+      "a_only_correct": 17,
+      "b_only_correct": 7,
+      "mcnemar_exact_two_sided_p": 0.06391465663909912
+    },
+    {
+      "relative_alpha": 0.003,
+      "method_a": "probe_class_pooled",
+      "method_b": "probe_class_permuted",
+      "n": 139,
+      "accuracy_a": 0.14388489208633093,
+      "accuracy_b": 0.07913669064748201,
+      "paired_difference_a_minus_b": 0.06474820143884892,
+      "bootstrap_95_ci": [
+        0.014388489208633094,
+        0.11510791366906475
+      ],
+      "a_only_correct": 11,
+      "b_only_correct": 2,
+      "mcnemar_exact_two_sided_p": 0.0224609375
+    },
+    {
+      "relative_alpha": 0.01,
+      "method_a": "probe_class_tokenwise",
+      "method_b": "probe_class_pooled",
+      "n": 139,
+      "accuracy_a": 0.06474820143884892,
+      "accuracy_b": 0.18705035971223022,
+      "paired_difference_a_minus_b": -0.1223021582733813,
+      "bootstrap_95_ci": [
+        -0.19424460431654678,
+        -0.050359712230215826
+      ],
+      "a_only_correct": 6,
+      "b_only_correct": 23,
+      "mcnemar_exact_two_sided_p": 0.002315700054168701
+    },
+    {
+      "relative_alpha": 0.01,
+      "method_a": "probe_class_tokenwise",
+      "method_b": "probe_class_permuted",
+      "n": 139,
+      "accuracy_a": 0.06474820143884892,
+      "accuracy_b": 0.04316546762589928,
+      "paired_difference_a_minus_b": 0.02158273381294964,
+      "bootstrap_95_ci": [
+        -0.02877697841726619,
+        0.07194244604316546
+      ],
+      "a_only_correct": 8,
+      "b_only_correct": 5,
+      "mcnemar_exact_two_sided_p": 0.5810546875
+    },
+    {
+      "relative_alpha": 0.01,
+      "method_a": "probe_class_pooled",
+      "method_b": "probe_class_permuted",
+      "n": 139,
+      "accuracy_a": 0.18705035971223022,
+      "accuracy_b": 0.04316546762589928,
+      "paired_difference_a_minus_b": 0.14388489208633093,
+      "bootstrap_95_ci": [
+        0.07194244604316546,
+        0.2158273381294964
+      ],
+      "a_only_correct": 24,
+      "b_only_correct": 4,
+      "mcnemar_exact_two_sided_p": 0.00017999112606048584
+    },
+    {
+      "relative_alpha": 0.03,
+      "method_a": "probe_class_tokenwise",
+      "method_b": "probe_class_pooled",
+      "n": 139,
+      "accuracy_a": 0.0,
+      "accuracy_b": 0.2014388489208633,
+      "paired_difference_a_minus_b": -0.2014388489208633,
+      "bootstrap_95_ci": [
+        -0.2733812949640288,
+        -0.1366906474820144
+      ],
+      "a_only_correct": 0,
+      "b_only_correct": 28,
+      "mcnemar_exact_two_sided_p": 7.450580596923828e-09
+    },
+    {
+      "relative_alpha": 0.03,
+      "method_a": "probe_class_tokenwise",
+      "method_b": "probe_class_permuted",
+      "n": 139,
+      "accuracy_a": 0.0,
+      "accuracy_b": 0.007194244604316547,
+      "paired_difference_a_minus_b": -0.007194244604316547,
+      "bootstrap_95_ci": [
+        -0.02158273381294964,
+        0.0
+      ],
+      "a_only_correct": 0,
+      "b_only_correct": 1,
+      "mcnemar_exact_two_sided_p": 1.0
+    },
+    {
+      "relative_alpha": 0.03,
+      "method_a": "probe_class_pooled",
+      "method_b": "probe_class_permuted",
+      "n": 139,
+      "accuracy_a": 0.2014388489208633,
+      "accuracy_b": 0.007194244604316547,
+      "paired_difference_a_minus_b": 0.19424460431654678,
+      "bootstrap_95_ci": [
+        0.12949640287769784,
+        0.2589928057553957
+      ],
+      "a_only_correct": 27,
+      "b_only_correct": 0,
+      "mcnemar_exact_two_sided_p": 1.4901161193847656e-08
+    }
+  ]
+}

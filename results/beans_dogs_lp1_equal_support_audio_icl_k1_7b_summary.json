@@ -1,0 +1,29 @@
+{
+  "model_id": "Qwen/Qwen2.5-Omni-7B",
+  "manifest": "data/manifests/beans_dogs_all_full_lp1.csv",
+  "condition": "lp_0-1000",
+  "readout": "free",
+  "label_map": {
+    "Farley": "Farley",
+    "Freid": "Freid",
+    "Keri": "Keri",
+    "Louie": "Louie",
+    "Luke": "Luke",
+    "Mac": "Mac",
+    "Roodie": "Roodie",
+    "Rudy": "Rudy",
+    "Siggy": "Siggy",
+    "Zoe": "Zoe"
+  },
+  "split": "results/beans_dogs_lp1_equal_support_k1_k2_fullvalid_split.json",
+  "query_labels_used_for": "post_hoc_scoring_only",
+  "results": {
+    "1": {
+      "support_k_per_class": 1,
+      "support_k_total": 10,
+      "n_query": 139,
+      "accuracy": 0.07194244604316546,
+      "macro_f1": 0.03130081300813008
+    }
+  }
+}

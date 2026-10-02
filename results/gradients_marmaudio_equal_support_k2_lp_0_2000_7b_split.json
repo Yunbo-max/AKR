@@ -1,0 +1,62 @@
+{
+  "seed": 20250813,
+  "condition": "lp_0-2000",
+  "source_split": null,
+  "support_sizes": [
+    12
+  ],
+  "support_k_per_class": 2,
+  "registered_support": "results/marmaudio_equal_support_split_seed20260814.json",
+  "support_order": [
+    "223352",
+    "669953",
+    "509009",
+    "824405",
+    "539296",
+    "866655",
+    "649137",
+    "804279",
+    "770853",
+    "223371",
+    "293662",
+    "567471"
+  ],
+  "labels": [
+    "Infant Cry",
+    "Infant Cry",
+    "Phee",
+    "Phee",
+    "Seep",
+    "Seep",
+    "Trill",
+    "Trill",
+    "Tsik",
+    "Tsik",
+    "Twitter",
+    "Twitter"
+  ],
+  "output_labels": [
+    "Infant Cry",
+    "Infant Cry",
+    "Phee",
+    "Phee",
+    "Seep",
+    "Seep",
+    "Trill",
+    "Trill",
+    "Tsik",
+    "Tsik",
+    "Twitter",
+    "Twitter"
+  ],
+  "label_map": {
+    "Infant Cry": "Infant Cry",
+    "Phee": "Phee",
+    "Seep": "Seep",
+    "Trill": "Trill",
+    "Tsik": "Tsik",
+    "Twitter": "Twitter"
+  },
+  "selection": "registered_nested_k_per_class_support",
+  "gradient_granularity": "pooled"
+}

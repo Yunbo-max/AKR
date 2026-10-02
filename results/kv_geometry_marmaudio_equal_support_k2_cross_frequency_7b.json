@@ -1,0 +1,1985 @@
+{
+  "protocol": "same registered K=2/class support at every frequency condition",
+  "n_support": 12,
+  "event_ids": [
+    "223352",
+    "223371",
+    "293662",
+    "509009",
+    "539296",
+    "567471",
+    "649137",
+    "669953",
+    "770853",
+    "804279",
+    "824405",
+    "866655"
+  ],
+  "labels": {
+    "Infant Cry": 2,
+    "Phee": 2,
+    "Seep": 2,
+    "Trill": 2,
+    "Tsik": 2,
+    "Twitter": 2
+  },
+  "anchor": "full_0-8k",
+  "conditions": [
+    "full_0-8k",
+    "lp_0-1000",
+    "lp_0-2000",
+    "lp_0-4000",
+    "lp_0-6000",
+    "lp_0-8000"
+  ],
+  "layers": {
+    "0": {
+      "full_0-8k": {
+        "same_label_mean_cosine": 0.6419225335121155,
+        "different_label_mean_cosine": -0.05767301842570305,
+        "same_minus_different_cosine": 0.69959557056427,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.875985622406006,
+        "between_to_within_trace_ratio": 4.171157151810084,
+        "median_gradient_norm": 0.0103607177734375,
+        "paired_to_anchor_cosine_mean": 1.0,
+        "paired_to_anchor_cosine_median": 1.0
+      },
+      "lp_0-1000": {
+        "same_label_mean_cosine": 0.6728571057319641,
+        "different_label_mean_cosine": -0.07464111596345901,
+        "same_minus_different_cosine": 0.7474982142448425,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 3.033994674682617,
+        "between_to_within_trace_ratio": 5.534419532328821,
+        "median_gradient_norm": 0.008241589181125164,
+        "paired_to_anchor_cosine_mean": 0.5729981064796448,
+        "paired_to_anchor_cosine_median": 0.5094079375267029
+      },
+      "lp_0-2000": {
+        "same_label_mean_cosine": 0.6668226718902588,
+        "different_label_mean_cosine": -0.07009045034646988,
+        "same_minus_different_cosine": 0.7369131445884705,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 3.5962631702423096,
+        "between_to_within_trace_ratio": 5.686597884132586,
+        "median_gradient_norm": 0.008114943280816078,
+        "paired_to_anchor_cosine_mean": 0.6381170153617859,
+        "paired_to_anchor_cosine_median": 0.6018298268318176
+      },
+      "lp_0-4000": {
+        "same_label_mean_cosine": 0.6538673639297485,
+        "different_label_mean_cosine": -0.052433568984270096,
+        "same_minus_different_cosine": 0.7063009142875671,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 3.511890172958374,
+        "between_to_within_trace_ratio": 5.142693965792037,
+        "median_gradient_norm": 0.008327977731823921,
+        "paired_to_anchor_cosine_mean": 0.7455551624298096,
+        "paired_to_anchor_cosine_median": 0.6875691413879395
+      },
+      "lp_0-6000": {
+        "same_label_mean_cosine": 0.6303136944770813,
+        "different_label_mean_cosine": -0.06729445606470108,
+        "same_minus_different_cosine": 0.6976081728935242,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.6907572746276855,
+        "between_to_within_trace_ratio": 4.255845111359299,
+        "median_gradient_norm": 0.011350160464644432,
+        "paired_to_anchor_cosine_mean": 0.8389528393745422,
+        "paired_to_anchor_cosine_median": 0.8486337661743164
+      },
+      "lp_0-8000": {
+        "same_label_mean_cosine": 0.6601138710975647,
+        "different_label_mean_cosine": -0.05939465016126633,
+        "same_minus_different_cosine": 0.7195085287094116,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.852642059326172,
+        "between_to_within_trace_ratio": 4.756604866593891,
+        "median_gradient_norm": 0.010987307876348495,
+        "paired_to_anchor_cosine_mean": 0.977763831615448,
+        "paired_to_anchor_cosine_median": 0.9838592410087585
+      }
+    },
+    "1": {
+      "full_0-8k": {
+        "same_label_mean_cosine": 0.6961718201637268,
+        "different_label_mean_cosine": -0.04801340028643608,
+        "same_minus_different_cosine": 0.744185209274292,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 3.8217148780822754,
+        "between_to_within_trace_ratio": 5.091427371213145,
+        "median_gradient_norm": 0.008941954001784325,
+        "paired_to_anchor_cosine_mean": 1.0,
+        "paired_to_anchor_cosine_median": 1.0
+      },
+      "lp_0-1000": {
+        "same_label_mean_cosine": 0.7388790249824524,
+        "different_label_mean_cosine": -0.09722746908664703,
+        "same_minus_different_cosine": 0.8361064791679382,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 2.463265895843506,
+        "between_to_within_trace_ratio": 3.9145100048483528,
+        "median_gradient_norm": 0.0074225375428795815,
+        "paired_to_anchor_cosine_mean": 0.620694100856781,
+        "paired_to_anchor_cosine_median": 0.6174477338790894
+      },
+      "lp_0-2000": {
+        "same_label_mean_cosine": 0.762385368347168,
+        "different_label_mean_cosine": -0.10370881110429764,
+        "same_minus_different_cosine": 0.866094172000885,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 2.973912239074707,
+        "between_to_within_trace_ratio": 6.754588562209919,
+        "median_gradient_norm": 0.006471032742410898,
+        "paired_to_anchor_cosine_mean": 0.7023575305938721,
+        "paired_to_anchor_cosine_median": 0.7068442106246948
+      },
+      "lp_0-4000": {
+        "same_label_mean_cosine": 0.7246003150939941,
+        "different_label_mean_cosine": -0.10298118740320206,
+        "same_minus_different_cosine": 0.827581524848938,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 2.9005253314971924,
+        "between_to_within_trace_ratio": 4.9751029010665855,
+        "median_gradient_norm": 0.006388120353221893,
+        "paired_to_anchor_cosine_mean": 0.7702128291130066,
+        "paired_to_anchor_cosine_median": 0.7698525190353394
+      },
+      "lp_0-6000": {
+        "same_label_mean_cosine": 0.7279138565063477,
+        "different_label_mean_cosine": -0.08574554324150085,
+        "same_minus_different_cosine": 0.8136594295501709,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 3.56801176071167,
+        "between_to_within_trace_ratio": 5.795659921225413,
+        "median_gradient_norm": 0.007662506774067879,
+        "paired_to_anchor_cosine_mean": 0.8664782643318176,
+        "paired_to_anchor_cosine_median": 0.8769040107727051
+      },
+      "lp_0-8000": {
+        "same_label_mean_cosine": 0.7042989134788513,
+        "different_label_mean_cosine": -0.056655824184417725,
+        "same_minus_different_cosine": 0.760954737663269,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 3.7271523475646973,
+        "between_to_within_trace_ratio": 5.032287631716752,
+        "median_gradient_norm": 0.009000374004244804,
+        "paired_to_anchor_cosine_mean": 0.9845705032348633,
+        "paired_to_anchor_cosine_median": 0.9869377613067627
+      }
+    },
+    "2": {
+      "full_0-8k": {
+        "same_label_mean_cosine": 0.7207477688789368,
+        "different_label_mean_cosine": -0.10042177885770798,
+        "same_minus_different_cosine": 0.8211695551872253,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.19259786605835,
+        "between_to_within_trace_ratio": 3.8766243030640597,
+        "median_gradient_norm": 0.005167622584849596,
+        "paired_to_anchor_cosine_mean": 1.0,
+        "paired_to_anchor_cosine_median": 1.0
+      },
+      "lp_0-1000": {
+        "same_label_mean_cosine": 0.7866268754005432,
+        "different_label_mean_cosine": -0.09350574761629105,
+        "same_minus_different_cosine": 0.8801326155662537,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 2.1258137226104736,
+        "between_to_within_trace_ratio": 4.5070146366363355,
+        "median_gradient_norm": 0.002976156072691083,
+        "paired_to_anchor_cosine_mean": 0.5526347160339355,
+        "paired_to_anchor_cosine_median": 0.5945557355880737
+      },
+      "lp_0-2000": {
+        "same_label_mean_cosine": 0.7847703099250793,
+        "different_label_mean_cosine": -0.09214352816343307,
+        "same_minus_different_cosine": 0.876913845539093,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 3.090578556060791,
+        "between_to_within_trace_ratio": 5.350728867999822,
+        "median_gradient_norm": 0.0033115330152213573,
+        "paired_to_anchor_cosine_mean": 0.6303938031196594,
+        "paired_to_anchor_cosine_median": 0.6063313484191895
+      },
+      "lp_0-4000": {
+        "same_label_mean_cosine": 0.7776315212249756,
+        "different_label_mean_cosine": -0.09982416033744812,
+        "same_minus_different_cosine": 0.8774557113647461,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 2.9335851669311523,
+        "between_to_within_trace_ratio": 4.443530945741053,
+        "median_gradient_norm": 0.0036167860962450504,
+        "paired_to_anchor_cosine_mean": 0.7371721863746643,
+        "paired_to_anchor_cosine_median": 0.6846364736557007
+      },
+      "lp_0-6000": {
+        "same_label_mean_cosine": 0.7199946045875549,
+        "different_label_mean_cosine": -0.11705304682254791,
+        "same_minus_different_cosine": 0.8370476365089417,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 3.909696102142334,
+        "between_to_within_trace_ratio": 3.9957993337127293,
+        "median_gradient_norm": 0.004529093857854605,
+        "paired_to_anchor_cosine_mean": 0.8570787310600281,
+        "paired_to_anchor_cosine_median": 0.8692789077758789
+      },
+      "lp_0-8000": {
+        "same_label_mean_cosine": 0.7395486831665039,
+        "different_label_mean_cosine": -0.1027299016714096,
+        "same_minus_different_cosine": 0.8422785997390747,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.157735824584961,
+        "between_to_within_trace_ratio": 4.29105743208511,
+        "median_gradient_norm": 0.0051542543806135654,
+        "paired_to_anchor_cosine_mean": 0.9838981628417969,
+        "paired_to_anchor_cosine_median": 0.9894143342971802
+      }
+    },
+    "3": {
+      "full_0-8k": {
+        "same_label_mean_cosine": 0.707364559173584,
+        "different_label_mean_cosine": -0.07131315767765045,
+        "same_minus_different_cosine": 0.7786777019500732,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.845806121826172,
+        "between_to_within_trace_ratio": 4.288709975704872,
+        "median_gradient_norm": 0.006905019283294678,
+        "paired_to_anchor_cosine_mean": 1.0,
+        "paired_to_anchor_cosine_median": 1.0
+      },
+      "lp_0-1000": {
+        "same_label_mean_cosine": 0.751387357711792,
+        "different_label_mean_cosine": -0.09762103110551834,
+        "same_minus_different_cosine": 0.8490083813667297,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 2.707805871963501,
+        "between_to_within_trace_ratio": 5.653240639731231,
+        "median_gradient_norm": 0.0030932463705539703,
+        "paired_to_anchor_cosine_mean": 0.5244908928871155,
+        "paired_to_anchor_cosine_median": 0.5340311527252197
+      },
+      "lp_0-2000": {
+        "same_label_mean_cosine": 0.7605794072151184,
+        "different_label_mean_cosine": -0.08910640329122543,
+        "same_minus_different_cosine": 0.849685788154602,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 2.9697580337524414,
+        "between_to_within_trace_ratio": 4.28150616443472,
+        "median_gradient_norm": 0.0032712523825466633,
+        "paired_to_anchor_cosine_mean": 0.583603024482727,
+        "paired_to_anchor_cosine_median": 0.5809953808784485
+      },
+      "lp_0-4000": {
+        "same_label_mean_cosine": 0.7094280123710632,
+        "different_label_mean_cosine": -0.08571073412895203,
+        "same_minus_different_cosine": 0.7951387166976929,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 3.382014036178589,
+        "between_to_within_trace_ratio": 4.3967789982966305,
+        "median_gradient_norm": 0.0045000528916716576,
+        "paired_to_anchor_cosine_mean": 0.6914358735084534,
+        "paired_to_anchor_cosine_median": 0.6533642411231995
+      },
+      "lp_0-6000": {
+        "same_label_mean_cosine": 0.6793717741966248,
+        "different_label_mean_cosine": -0.07157038897275925,
+        "same_minus_different_cosine": 0.7509421706199646,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.804987907409668,
+        "between_to_within_trace_ratio": 4.359723312160803,
+        "median_gradient_norm": 0.005053568631410599,
+        "paired_to_anchor_cosine_mean": 0.8169485926628113,
+        "paired_to_anchor_cosine_median": 0.8482522964477539
+      },
+      "lp_0-8000": {
+        "same_label_mean_cosine": 0.7154811024665833,
+        "different_label_mean_cosine": -0.07680107653141022,
+        "same_minus_different_cosine": 0.7922821640968323,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.8195366859436035,
+        "between_to_within_trace_ratio": 4.591224455393965,
+        "median_gradient_norm": 0.006643623113632202,
+        "paired_to_anchor_cosine_mean": 0.9825950264930725,
+        "paired_to_anchor_cosine_median": 0.9887064695358276
+      }
+    },
+    "4": {
+      "full_0-8k": {
+        "same_label_mean_cosine": 0.7167675495147705,
+        "different_label_mean_cosine": -0.03197876363992691,
+        "same_minus_different_cosine": 0.7487463355064392,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.65678596496582,
+        "between_to_within_trace_ratio": 3.274883611543777,
+        "median_gradient_norm": 0.007577165961265564,
+        "paired_to_anchor_cosine_mean": 1.0,
+        "paired_to_anchor_cosine_median": 1.0
+      },
+      "lp_0-1000": {
+        "same_label_mean_cosine": 0.7799854874610901,
+        "different_label_mean_cosine": -0.1096765324473381,
+        "same_minus_different_cosine": 0.8896620273590088,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 3.4313395023345947,
+        "between_to_within_trace_ratio": 3.9792068335510193,
+        "median_gradient_norm": 0.003759052138775587,
+        "paired_to_anchor_cosine_mean": 0.5816870331764221,
+        "paired_to_anchor_cosine_median": 0.6433435678482056
+      },
+      "lp_0-2000": {
+        "same_label_mean_cosine": 0.7666738033294678,
+        "different_label_mean_cosine": -0.10682543367147446,
+        "same_minus_different_cosine": 0.8734992146492004,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.003323078155518,
+        "between_to_within_trace_ratio": 4.3737841447383445,
+        "median_gradient_norm": 0.004751122556626797,
+        "paired_to_anchor_cosine_mean": 0.646930456161499,
+        "paired_to_anchor_cosine_median": 0.6999967098236084
+      },
+      "lp_0-4000": {
+        "same_label_mean_cosine": 0.7445957660675049,
+        "different_label_mean_cosine": -0.09421541541814804,
+        "same_minus_different_cosine": 0.8388111591339111,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.339183330535889,
+        "between_to_within_trace_ratio": 3.979444473130684,
+        "median_gradient_norm": 0.005029725842177868,
+        "paired_to_anchor_cosine_mean": 0.723456859588623,
+        "paired_to_anchor_cosine_median": 0.769665002822876
+      },
+      "lp_0-6000": {
+        "same_label_mean_cosine": 0.7241037487983704,
+        "different_label_mean_cosine": -0.08400619775056839,
+        "same_minus_different_cosine": 0.8081099390983582,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.491908550262451,
+        "between_to_within_trace_ratio": 3.5573386715774857,
+        "median_gradient_norm": 0.0053187282755970955,
+        "paired_to_anchor_cosine_mean": 0.839249849319458,
+        "paired_to_anchor_cosine_median": 0.8801500797271729
+      },
+      "lp_0-8000": {
+        "same_label_mean_cosine": 0.7365408539772034,
+        "different_label_mean_cosine": -0.04733455926179886,
+        "same_minus_different_cosine": 0.7838754057884216,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.59943962097168,
+        "between_to_within_trace_ratio": 3.5332503240318487,
+        "median_gradient_norm": 0.006935997400432825,
+        "paired_to_anchor_cosine_mean": 0.9809820652008057,
+        "paired_to_anchor_cosine_median": 0.9875186085700989
+      }
+    },
+    "5": {
+      "full_0-8k": {
+        "same_label_mean_cosine": 0.6463894844055176,
+        "different_label_mean_cosine": -0.05162104591727257,
+        "same_minus_different_cosine": 0.6980105042457581,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.5810136795043945,
+        "between_to_within_trace_ratio": 3.768816326046798,
+        "median_gradient_norm": 0.003743403358384967,
+        "paired_to_anchor_cosine_mean": 1.0,
+        "paired_to_anchor_cosine_median": 1.0
+      },
+      "lp_0-1000": {
+        "same_label_mean_cosine": 0.721336841583252,
+        "different_label_mean_cosine": -0.09198513627052307,
+        "same_minus_different_cosine": 0.8133219480514526,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 2.895777463912964,
+        "between_to_within_trace_ratio": 3.9232146221931337,
+        "median_gradient_norm": 0.0025042425841093063,
+        "paired_to_anchor_cosine_mean": 0.5644060969352722,
+        "paired_to_anchor_cosine_median": 0.5976842641830444
+      },
+      "lp_0-2000": {
+        "same_label_mean_cosine": 0.7226858139038086,
+        "different_label_mean_cosine": -0.09440012276172638,
+        "same_minus_different_cosine": 0.8170859217643738,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 3.504274606704712,
+        "between_to_within_trace_ratio": 3.793990742054567,
+        "median_gradient_norm": 0.0027434690855443478,
+        "paired_to_anchor_cosine_mean": 0.6526999473571777,
+        "paired_to_anchor_cosine_median": 0.6984317302703857
+      },
+      "lp_0-4000": {
+        "same_label_mean_cosine": 0.7054205536842346,
+        "different_label_mean_cosine": -0.0944528803229332,
+        "same_minus_different_cosine": 0.799873411655426,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 3.8071682453155518,
+        "between_to_within_trace_ratio": 4.37960632079631,
+        "median_gradient_norm": 0.0029259107541292906,
+        "paired_to_anchor_cosine_mean": 0.7238772511482239,
+        "paired_to_anchor_cosine_median": 0.7615134716033936
+      },
+      "lp_0-6000": {
+        "same_label_mean_cosine": 0.701535165309906,
+        "different_label_mean_cosine": -0.07724951207637787,
+        "same_minus_different_cosine": 0.7787846922874451,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.069614887237549,
+        "between_to_within_trace_ratio": 4.85373419343379,
+        "median_gradient_norm": 0.003330739215016365,
+        "paired_to_anchor_cosine_mean": 0.8300684094429016,
+        "paired_to_anchor_cosine_median": 0.8610234260559082
+      },
+      "lp_0-8000": {
+        "same_label_mean_cosine": 0.6549471020698547,
+        "different_label_mean_cosine": -0.057786401361227036,
+        "same_minus_different_cosine": 0.7127335071563721,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.429970741271973,
+        "between_to_within_trace_ratio": 4.106721469662906,
+        "median_gradient_norm": 0.0039103589951992035,
+        "paired_to_anchor_cosine_mean": 0.974721372127533,
+        "paired_to_anchor_cosine_median": 0.9836909770965576
+      }
+    },
+    "6": {
+      "full_0-8k": {
+        "same_label_mean_cosine": 0.5430271625518799,
+        "different_label_mean_cosine": -0.025409232825040817,
+        "same_minus_different_cosine": 0.5684363842010498,
+        "nearest_cosine_label_accuracy": 0.9166666666666666,
+        "effective_rank_centered": 5.328531265258789,
+        "between_to_within_trace_ratio": 2.627800392938427,
+        "median_gradient_norm": 0.003419262822717428,
+        "paired_to_anchor_cosine_mean": 1.0,
+        "paired_to_anchor_cosine_median": 1.0
+      },
+      "lp_0-1000": {
+        "same_label_mean_cosine": 0.6944937109947205,
+        "different_label_mean_cosine": -0.09011362493038177,
+        "same_minus_different_cosine": 0.7846073508262634,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 3.4576094150543213,
+        "between_to_within_trace_ratio": 3.480788696560186,
+        "median_gradient_norm": 0.0021353252232074738,
+        "paired_to_anchor_cosine_mean": 0.4763488471508026,
+        "paired_to_anchor_cosine_median": 0.47779595851898193
+      },
+      "lp_0-2000": {
+        "same_label_mean_cosine": 0.6910569071769714,
+        "different_label_mean_cosine": -0.09065654128789902,
+        "same_minus_different_cosine": 0.7817134261131287,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.448153495788574,
+        "between_to_within_trace_ratio": 3.8170027050731252,
+        "median_gradient_norm": 0.0026764741633087397,
+        "paired_to_anchor_cosine_mean": 0.5963420271873474,
+        "paired_to_anchor_cosine_median": 0.6623663902282715
+      },
+      "lp_0-4000": {
+        "same_label_mean_cosine": 0.6298486590385437,
+        "different_label_mean_cosine": -0.0801810547709465,
+        "same_minus_different_cosine": 0.7100297212600708,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.662605285644531,
+        "between_to_within_trace_ratio": 3.496155476731184,
+        "median_gradient_norm": 0.002993824193254113,
+        "paired_to_anchor_cosine_mean": 0.7061890959739685,
+        "paired_to_anchor_cosine_median": 0.6807059645652771
+      },
+      "lp_0-6000": {
+        "same_label_mean_cosine": 0.6286360621452332,
+        "different_label_mean_cosine": -0.04722851887345314,
+        "same_minus_different_cosine": 0.675864577293396,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.863556385040283,
+        "between_to_within_trace_ratio": 3.5516109067772166,
+        "median_gradient_norm": 0.003170051844790578,
+        "paired_to_anchor_cosine_mean": 0.790131151676178,
+        "paired_to_anchor_cosine_median": 0.7971208095550537
+      },
+      "lp_0-8000": {
+        "same_label_mean_cosine": 0.5288899540901184,
+        "different_label_mean_cosine": -0.03664598986506462,
+        "same_minus_different_cosine": 0.5655359625816345,
+        "nearest_cosine_label_accuracy": 0.9166666666666666,
+        "effective_rank_centered": 5.388678550720215,
+        "between_to_within_trace_ratio": 2.928930958578424,
+        "median_gradient_norm": 0.0034705232828855515,
+        "paired_to_anchor_cosine_mean": 0.9685097336769104,
+        "paired_to_anchor_cosine_median": 0.9799070358276367
+      }
+    },
+    "7": {
+      "full_0-8k": {
+        "same_label_mean_cosine": 0.6468741297721863,
+        "different_label_mean_cosine": -0.056987084448337555,
+        "same_minus_different_cosine": 0.7038612365722656,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 5.168758392333984,
+        "between_to_within_trace_ratio": 2.9824646635425722,
+        "median_gradient_norm": 0.004190866835415363,
+        "paired_to_anchor_cosine_mean": 1.0,
+        "paired_to_anchor_cosine_median": 1.0
+      },
+      "lp_0-1000": {
+        "same_label_mean_cosine": 0.693211019039154,
+        "different_label_mean_cosine": -0.08569829910993576,
+        "same_minus_different_cosine": 0.7789093255996704,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 3.7069644927978516,
+        "between_to_within_trace_ratio": 3.591571138477997,
+        "median_gradient_norm": 0.0023312545381486416,
+        "paired_to_anchor_cosine_mean": 0.5251321792602539,
+        "paired_to_anchor_cosine_median": 0.5173527002334595
+      },
+      "lp_0-2000": {
+        "same_label_mean_cosine": 0.7020084857940674,
+        "different_label_mean_cosine": -0.08515588939189911,
+        "same_minus_different_cosine": 0.7871643900871277,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 3.964886426925659,
+        "between_to_within_trace_ratio": 3.552118954917258,
+        "median_gradient_norm": 0.002648996189236641,
+        "paired_to_anchor_cosine_mean": 0.5971043109893799,
+        "paired_to_anchor_cosine_median": 0.5934329032897949
+      },
+      "lp_0-4000": {
+        "same_label_mean_cosine": 0.7008159160614014,
+        "different_label_mean_cosine": -0.07512640953063965,
+        "same_minus_different_cosine": 0.775942325592041,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.026225566864014,
+        "between_to_within_trace_ratio": 3.49056997278417,
+        "median_gradient_norm": 0.0027453950606286526,
+        "paired_to_anchor_cosine_mean": 0.6831836700439453,
+        "paired_to_anchor_cosine_median": 0.6675127744674683
+      },
+      "lp_0-6000": {
+        "same_label_mean_cosine": 0.6486793160438538,
+        "different_label_mean_cosine": -0.06557556241750717,
+        "same_minus_different_cosine": 0.7142548561096191,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.591500282287598,
+        "between_to_within_trace_ratio": 3.238240460109667,
+        "median_gradient_norm": 0.003276119939982891,
+        "paired_to_anchor_cosine_mean": 0.7817149758338928,
+        "paired_to_anchor_cosine_median": 0.8058706521987915
+      },
+      "lp_0-8000": {
+        "same_label_mean_cosine": 0.6597287058830261,
+        "different_label_mean_cosine": -0.057559214532375336,
+        "same_minus_different_cosine": 0.7172878980636597,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 5.186105728149414,
+        "between_to_within_trace_ratio": 3.247689950719144,
+        "median_gradient_norm": 0.004134122282266617,
+        "paired_to_anchor_cosine_mean": 0.975464403629303,
+        "paired_to_anchor_cosine_median": 0.9819305539131165
+      }
+    },
+    "8": {
+      "full_0-8k": {
+        "same_label_mean_cosine": 0.7261131405830383,
+        "different_label_mean_cosine": -0.10082338750362396,
+        "same_minus_different_cosine": 0.8269365429878235,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.692279815673828,
+        "between_to_within_trace_ratio": 4.768190135387543,
+        "median_gradient_norm": 0.006295877043157816,
+        "paired_to_anchor_cosine_mean": 1.0,
+        "paired_to_anchor_cosine_median": 1.0
+      },
+      "lp_0-1000": {
+        "same_label_mean_cosine": 0.7344114184379578,
+        "different_label_mean_cosine": -0.08718342334032059,
+        "same_minus_different_cosine": 0.8215948343276978,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 3.0922834873199463,
+        "between_to_within_trace_ratio": 3.249704630674824,
+        "median_gradient_norm": 0.002522860188037157,
+        "paired_to_anchor_cosine_mean": 0.41531339287757874,
+        "paired_to_anchor_cosine_median": 0.390808641910553
+      },
+      "lp_0-2000": {
+        "same_label_mean_cosine": 0.736666202545166,
+        "different_label_mean_cosine": -0.07824321836233139,
+        "same_minus_different_cosine": 0.8149093985557556,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 3.238503932952881,
+        "between_to_within_trace_ratio": 3.1202001340515313,
+        "median_gradient_norm": 0.002724993508309126,
+        "paired_to_anchor_cosine_mean": 0.5251407623291016,
+        "paired_to_anchor_cosine_median": 0.49697384238243103
+      },
+      "lp_0-4000": {
+        "same_label_mean_cosine": 0.6577118635177612,
+        "different_label_mean_cosine": -0.09572362899780273,
+        "same_minus_different_cosine": 0.753435492515564,
+        "nearest_cosine_label_accuracy": 0.9166666666666666,
+        "effective_rank_centered": 3.665652275085449,
+        "between_to_within_trace_ratio": 4.133022094096663,
+        "median_gradient_norm": 0.0036396943032741547,
+        "paired_to_anchor_cosine_mean": 0.6711636185646057,
+        "paired_to_anchor_cosine_median": 0.684053361415863
+      },
+      "lp_0-6000": {
+        "same_label_mean_cosine": 0.6666163802146912,
+        "different_label_mean_cosine": -0.074813112616539,
+        "same_minus_different_cosine": 0.7414295077323914,
+        "nearest_cosine_label_accuracy": 0.8333333333333334,
+        "effective_rank_centered": 4.327218055725098,
+        "between_to_within_trace_ratio": 4.637829433565739,
+        "median_gradient_norm": 0.0048754229210317135,
+        "paired_to_anchor_cosine_mean": 0.802926778793335,
+        "paired_to_anchor_cosine_median": 0.8675628900527954
+      },
+      "lp_0-8000": {
+        "same_label_mean_cosine": 0.7544475197792053,
+        "different_label_mean_cosine": -0.1063467487692833,
+        "same_minus_different_cosine": 0.8607942461967468,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.483745574951172,
+        "between_to_within_trace_ratio": 5.5106597376202995,
+        "median_gradient_norm": 0.006268889643251896,
+        "paired_to_anchor_cosine_mean": 0.9803740382194519,
+        "paired_to_anchor_cosine_median": 0.9900624752044678
+      }
+    },
+    "9": {
+      "full_0-8k": {
+        "same_label_mean_cosine": 0.7046715617179871,
+        "different_label_mean_cosine": -0.058679722249507904,
+        "same_minus_different_cosine": 0.7633512616157532,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 5.217202663421631,
+        "between_to_within_trace_ratio": 4.643470935504013,
+        "median_gradient_norm": 0.0044655995443463326,
+        "paired_to_anchor_cosine_mean": 1.0,
+        "paired_to_anchor_cosine_median": 1.0
+      },
+      "lp_0-1000": {
+        "same_label_mean_cosine": 0.7743963599205017,
+        "different_label_mean_cosine": -0.10092007368803024,
+        "same_minus_different_cosine": 0.8753164410591125,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 3.055110454559326,
+        "between_to_within_trace_ratio": 5.132366973575289,
+        "median_gradient_norm": 0.0028051757253706455,
+        "paired_to_anchor_cosine_mean": 0.6200726628303528,
+        "paired_to_anchor_cosine_median": 0.6408740282058716
+      },
+      "lp_0-2000": {
+        "same_label_mean_cosine": 0.7625752091407776,
+        "different_label_mean_cosine": -0.10915646702051163,
+        "same_minus_different_cosine": 0.871731698513031,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 3.633035898208618,
+        "between_to_within_trace_ratio": 5.094335684712958,
+        "median_gradient_norm": 0.0033039457630366087,
+        "paired_to_anchor_cosine_mean": 0.6983394622802734,
+        "paired_to_anchor_cosine_median": 0.7458425164222717
+      },
+      "lp_0-4000": {
+        "same_label_mean_cosine": 0.7736940979957581,
+        "different_label_mean_cosine": -0.10700685530900955,
+        "same_minus_different_cosine": 0.880700945854187,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.000656604766846,
+        "between_to_within_trace_ratio": 5.530539528492199,
+        "median_gradient_norm": 0.003540521254763007,
+        "paired_to_anchor_cosine_mean": 0.7770156860351562,
+        "paired_to_anchor_cosine_median": 0.8031100034713745
+      },
+      "lp_0-6000": {
+        "same_label_mean_cosine": 0.7514812350273132,
+        "different_label_mean_cosine": -0.08598620444536209,
+        "same_minus_different_cosine": 0.8374674320220947,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.359452724456787,
+        "between_to_within_trace_ratio": 5.960795503381412,
+        "median_gradient_norm": 0.0041891527362167835,
+        "paired_to_anchor_cosine_mean": 0.8404011726379395,
+        "paired_to_anchor_cosine_median": 0.8511608839035034
+      },
+      "lp_0-8000": {
+        "same_label_mean_cosine": 0.7011108994483948,
+        "different_label_mean_cosine": -0.06303902715444565,
+        "same_minus_different_cosine": 0.7641499042510986,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 5.224537372589111,
+        "between_to_within_trace_ratio": 4.82822611464693,
+        "median_gradient_norm": 0.004645913373678923,
+        "paired_to_anchor_cosine_mean": 0.9808700084686279,
+        "paired_to_anchor_cosine_median": 0.9824565649032593
+      }
+    },
+    "10": {
+      "full_0-8k": {
+        "same_label_mean_cosine": 0.6163769960403442,
+        "different_label_mean_cosine": -0.07643475383520126,
+        "same_minus_different_cosine": 0.6928117275238037,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 5.80275297164917,
+        "between_to_within_trace_ratio": 3.522988081031746,
+        "median_gradient_norm": 0.003066231496632099,
+        "paired_to_anchor_cosine_mean": 1.0,
+        "paired_to_anchor_cosine_median": 1.0
+      },
+      "lp_0-1000": {
+        "same_label_mean_cosine": 0.7396693825721741,
+        "different_label_mean_cosine": -0.10515129566192627,
+        "same_minus_different_cosine": 0.8448206782341003,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 3.1620869636535645,
+        "between_to_within_trace_ratio": 4.347596251560284,
+        "median_gradient_norm": 0.0018010770436376333,
+        "paired_to_anchor_cosine_mean": 0.49369776248931885,
+        "paired_to_anchor_cosine_median": 0.4865446090698242
+      },
+      "lp_0-2000": {
+        "same_label_mean_cosine": 0.7023267149925232,
+        "different_label_mean_cosine": -0.09637439996004105,
+        "same_minus_different_cosine": 0.7987011075019836,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.108778476715088,
+        "between_to_within_trace_ratio": 3.533585037105354,
+        "median_gradient_norm": 0.001792463823221624,
+        "paired_to_anchor_cosine_mean": 0.5890253186225891,
+        "paired_to_anchor_cosine_median": 0.616640567779541
+      },
+      "lp_0-4000": {
+        "same_label_mean_cosine": 0.6557148098945618,
+        "different_label_mean_cosine": -0.08751047402620316,
+        "same_minus_different_cosine": 0.7432252764701843,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.665901184082031,
+        "between_to_within_trace_ratio": 3.64781289868858,
+        "median_gradient_norm": 0.0022162459790706635,
+        "paired_to_anchor_cosine_mean": 0.6872045397758484,
+        "paired_to_anchor_cosine_median": 0.6899144053459167
+      },
+      "lp_0-6000": {
+        "same_label_mean_cosine": 0.6421682834625244,
+        "different_label_mean_cosine": -0.07505600154399872,
+        "same_minus_different_cosine": 0.7172242999076843,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 5.165370464324951,
+        "between_to_within_trace_ratio": 4.104581881024704,
+        "median_gradient_norm": 0.00276058167219162,
+        "paired_to_anchor_cosine_mean": 0.7614374756813049,
+        "paired_to_anchor_cosine_median": 0.7705332636833191
+      },
+      "lp_0-8000": {
+        "same_label_mean_cosine": 0.626228392124176,
+        "different_label_mean_cosine": -0.0837983563542366,
+        "same_minus_different_cosine": 0.710026741027832,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 5.919552803039551,
+        "between_to_within_trace_ratio": 3.98633127502884,
+        "median_gradient_norm": 0.003054469358175993,
+        "paired_to_anchor_cosine_mean": 0.9679332375526428,
+        "paired_to_anchor_cosine_median": 0.9757778644561768
+      }
+    },
+    "11": {
+      "full_0-8k": {
+        "same_label_mean_cosine": 0.689095675945282,
+        "different_label_mean_cosine": -0.09295308589935303,
+        "same_minus_different_cosine": 0.782048761844635,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.400496006011963,
+        "between_to_within_trace_ratio": 5.111179702383826,
+        "median_gradient_norm": 0.004105906002223492,
+        "paired_to_anchor_cosine_mean": 1.0,
+        "paired_to_anchor_cosine_median": 1.0
+      },
+      "lp_0-1000": {
+        "same_label_mean_cosine": 0.7239057421684265,
+        "different_label_mean_cosine": -0.09301672875881195,
+        "same_minus_different_cosine": 0.8169224858283997,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.116875648498535,
+        "between_to_within_trace_ratio": 4.112998729785381,
+        "median_gradient_norm": 0.001837587682530284,
+        "paired_to_anchor_cosine_mean": 0.5929551720619202,
+        "paired_to_anchor_cosine_median": 0.5827114582061768
+      },
+      "lp_0-2000": {
+        "same_label_mean_cosine": 0.7609040141105652,
+        "different_label_mean_cosine": -0.10289280861616135,
+        "same_minus_different_cosine": 0.8637968301773071,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 3.4438021183013916,
+        "between_to_within_trace_ratio": 7.257045685457307,
+        "median_gradient_norm": 0.0024763806723058224,
+        "paired_to_anchor_cosine_mean": 0.6583359241485596,
+        "paired_to_anchor_cosine_median": 0.6966946721076965
+      },
+      "lp_0-4000": {
+        "same_label_mean_cosine": 0.6649259924888611,
+        "different_label_mean_cosine": -0.08281806856393814,
+        "same_minus_different_cosine": 0.747744083404541,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 3.720475196838379,
+        "between_to_within_trace_ratio": 5.6078076879710865,
+        "median_gradient_norm": 0.0027357637882232666,
+        "paired_to_anchor_cosine_mean": 0.7301521301269531,
+        "paired_to_anchor_cosine_median": 0.754186749458313
+      },
+      "lp_0-6000": {
+        "same_label_mean_cosine": 0.6954658031463623,
+        "different_label_mean_cosine": -0.09460631757974625,
+        "same_minus_different_cosine": 0.7900721430778503,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 3.984623670578003,
+        "between_to_within_trace_ratio": 5.89057005654897,
+        "median_gradient_norm": 0.0034004771150648594,
+        "paired_to_anchor_cosine_mean": 0.8125187754631042,
+        "paired_to_anchor_cosine_median": 0.8274675607681274
+      },
+      "lp_0-8000": {
+        "same_label_mean_cosine": 0.664753258228302,
+        "different_label_mean_cosine": -0.091910220682621,
+        "same_minus_different_cosine": 0.7566635012626648,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.330118179321289,
+        "between_to_within_trace_ratio": 5.088689888760545,
+        "median_gradient_norm": 0.0037585694808512926,
+        "paired_to_anchor_cosine_mean": 0.9801740646362305,
+        "paired_to_anchor_cosine_median": 0.9811998605728149
+      }
+    },
+    "12": {
+      "full_0-8k": {
+        "same_label_mean_cosine": 0.6161131262779236,
+        "different_label_mean_cosine": -0.06917428970336914,
+        "same_minus_different_cosine": 0.6852874159812927,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 5.311587810516357,
+        "between_to_within_trace_ratio": 4.884819331188752,
+        "median_gradient_norm": 0.003936308436095715,
+        "paired_to_anchor_cosine_mean": 1.0,
+        "paired_to_anchor_cosine_median": 1.0
+      },
+      "lp_0-1000": {
+        "same_label_mean_cosine": 0.6948737502098083,
+        "different_label_mean_cosine": -0.10023908317089081,
+        "same_minus_different_cosine": 0.7951128482818604,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.7217535972595215,
+        "between_to_within_trace_ratio": 4.558276339686831,
+        "median_gradient_norm": 0.0023103547282516956,
+        "paired_to_anchor_cosine_mean": 0.5070236325263977,
+        "paired_to_anchor_cosine_median": 0.5262207388877869
+      },
+      "lp_0-2000": {
+        "same_label_mean_cosine": 0.7157734036445618,
+        "different_label_mean_cosine": -0.09245380014181137,
+        "same_minus_different_cosine": 0.8082271814346313,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.641785144805908,
+        "between_to_within_trace_ratio": 6.575788580685653,
+        "median_gradient_norm": 0.0030162734910845757,
+        "paired_to_anchor_cosine_mean": 0.5744878053665161,
+        "paired_to_anchor_cosine_median": 0.5372997522354126
+      },
+      "lp_0-4000": {
+        "same_label_mean_cosine": 0.693641185760498,
+        "different_label_mean_cosine": -0.09729807823896408,
+        "same_minus_different_cosine": 0.7909392714500427,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.874884128570557,
+        "between_to_within_trace_ratio": 6.1930870504164135,
+        "median_gradient_norm": 0.0029555552173405886,
+        "paired_to_anchor_cosine_mean": 0.7007341384887695,
+        "paired_to_anchor_cosine_median": 0.6952789425849915
+      },
+      "lp_0-6000": {
+        "same_label_mean_cosine": 0.6649689674377441,
+        "different_label_mean_cosine": -0.06196838244795799,
+        "same_minus_different_cosine": 0.7269373536109924,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.731209754943848,
+        "between_to_within_trace_ratio": 5.294917766547693,
+        "median_gradient_norm": 0.003211946226656437,
+        "paired_to_anchor_cosine_mean": 0.7939546704292297,
+        "paired_to_anchor_cosine_median": 0.7928667068481445
+      },
+      "lp_0-8000": {
+        "same_label_mean_cosine": 0.6270902752876282,
+        "different_label_mean_cosine": -0.07331497222185135,
+        "same_minus_different_cosine": 0.7004052400588989,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 5.153425216674805,
+        "between_to_within_trace_ratio": 5.610996688293393,
+        "median_gradient_norm": 0.003843759186565876,
+        "paired_to_anchor_cosine_mean": 0.9745693206787109,
+        "paired_to_anchor_cosine_median": 0.9796651601791382
+      }
+    },
+    "13": {
+      "full_0-8k": {
+        "same_label_mean_cosine": 0.7289465069770813,
+        "different_label_mean_cosine": -0.0838397964835167,
+        "same_minus_different_cosine": 0.8127862811088562,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 2.9550938606262207,
+        "between_to_within_trace_ratio": 2.963130817588015,
+        "median_gradient_norm": 0.005158943589776754,
+        "paired_to_anchor_cosine_mean": 1.0,
+        "paired_to_anchor_cosine_median": 1.0
+      },
+      "lp_0-1000": {
+        "same_label_mean_cosine": 0.79025799036026,
+        "different_label_mean_cosine": -0.09014083445072174,
+        "same_minus_different_cosine": 0.8803988099098206,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.396795272827148,
+        "between_to_within_trace_ratio": 5.567205467935697,
+        "median_gradient_norm": 0.0021688733249902725,
+        "paired_to_anchor_cosine_mean": 0.47528740763664246,
+        "paired_to_anchor_cosine_median": 0.4644966721534729
+      },
+      "lp_0-2000": {
+        "same_label_mean_cosine": 0.7394551634788513,
+        "different_label_mean_cosine": -0.09041251987218857,
+        "same_minus_different_cosine": 0.8298676609992981,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 5.541592121124268,
+        "between_to_within_trace_ratio": 5.986179604717615,
+        "median_gradient_norm": 0.002604170236736536,
+        "paired_to_anchor_cosine_mean": 0.589118242263794,
+        "paired_to_anchor_cosine_median": 0.5289360284805298
+      },
+      "lp_0-4000": {
+        "same_label_mean_cosine": 0.6703594326972961,
+        "different_label_mean_cosine": -0.08344867825508118,
+        "same_minus_different_cosine": 0.7538081407546997,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 5.6480231285095215,
+        "between_to_within_trace_ratio": 3.20038671034911,
+        "median_gradient_norm": 0.003692855592817068,
+        "paired_to_anchor_cosine_mean": 0.7382726073265076,
+        "paired_to_anchor_cosine_median": 0.7540027499198914
+      },
+      "lp_0-6000": {
+        "same_label_mean_cosine": 0.7194831371307373,
+        "different_label_mean_cosine": -0.07870373874902725,
+        "same_minus_different_cosine": 0.7981868982315063,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 5.838929176330566,
+        "between_to_within_trace_ratio": 4.414199146301872,
+        "median_gradient_norm": 0.004437090829014778,
+        "paired_to_anchor_cosine_mean": 0.8095798492431641,
+        "paired_to_anchor_cosine_median": 0.8293296098709106
+      },
+      "lp_0-8000": {
+        "same_label_mean_cosine": 0.7424752712249756,
+        "different_label_mean_cosine": -0.08730627596378326,
+        "same_minus_different_cosine": 0.8297815322875977,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 3.359229564666748,
+        "between_to_within_trace_ratio": 4.024472768076001,
+        "median_gradient_norm": 0.004981263540685177,
+        "paired_to_anchor_cosine_mean": 0.9855809211730957,
+        "paired_to_anchor_cosine_median": 0.9892104864120483
+      }
+    },
+    "14": {
+      "full_0-8k": {
+        "same_label_mean_cosine": 0.640220046043396,
+        "different_label_mean_cosine": -0.09489787369966507,
+        "same_minus_different_cosine": 0.7351179122924805,
+        "nearest_cosine_label_accuracy": 0.9166666666666666,
+        "effective_rank_centered": 5.391847133636475,
+        "between_to_within_trace_ratio": 3.547145983684146,
+        "median_gradient_norm": 0.005395964719355106,
+        "paired_to_anchor_cosine_mean": 1.0,
+        "paired_to_anchor_cosine_median": 1.0
+      },
+      "lp_0-1000": {
+        "same_label_mean_cosine": 0.7460217475891113,
+        "different_label_mean_cosine": -0.09668224304914474,
+        "same_minus_different_cosine": 0.8427039980888367,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 5.176430702209473,
+        "between_to_within_trace_ratio": 4.195950057261517,
+        "median_gradient_norm": 0.0027876803651452065,
+        "paired_to_anchor_cosine_mean": 0.47068914771080017,
+        "paired_to_anchor_cosine_median": 0.48191434144973755
+      },
+      "lp_0-2000": {
+        "same_label_mean_cosine": 0.6621418595314026,
+        "different_label_mean_cosine": -0.09373676776885986,
+        "same_minus_different_cosine": 0.7558786273002625,
+        "nearest_cosine_label_accuracy": 0.9166666666666666,
+        "effective_rank_centered": 5.431031227111816,
+        "between_to_within_trace_ratio": 4.166677109640306,
+        "median_gradient_norm": 0.003525996580719948,
+        "paired_to_anchor_cosine_mean": 0.6371368765830994,
+        "paired_to_anchor_cosine_median": 0.6648203134536743
+      },
+      "lp_0-4000": {
+        "same_label_mean_cosine": 0.6529812216758728,
+        "different_label_mean_cosine": -0.09105711430311203,
+        "same_minus_different_cosine": 0.7440383434295654,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 5.166423320770264,
+        "between_to_within_trace_ratio": 4.479052582176117,
+        "median_gradient_norm": 0.003908191341906786,
+        "paired_to_anchor_cosine_mean": 0.69655442237854,
+        "paired_to_anchor_cosine_median": 0.7246090173721313
+      },
+      "lp_0-6000": {
+        "same_label_mean_cosine": 0.7371533513069153,
+        "different_label_mean_cosine": -0.10430525243282318,
+        "same_minus_different_cosine": 0.8414586186408997,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.88667631149292,
+        "between_to_within_trace_ratio": 6.06407204433235,
+        "median_gradient_norm": 0.004214425105601549,
+        "paired_to_anchor_cosine_mean": 0.8379800319671631,
+        "paired_to_anchor_cosine_median": 0.8849184513092041
+      },
+      "lp_0-8000": {
+        "same_label_mean_cosine": 0.6489397287368774,
+        "different_label_mean_cosine": -0.09574993699789047,
+        "same_minus_different_cosine": 0.7446896433830261,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 5.340240001678467,
+        "between_to_within_trace_ratio": 3.5218587347779637,
+        "median_gradient_norm": 0.005419303197413683,
+        "paired_to_anchor_cosine_mean": 0.9824634194374084,
+        "paired_to_anchor_cosine_median": 0.9832922220230103
+      }
+    },
+    "15": {
+      "full_0-8k": {
+        "same_label_mean_cosine": 0.5795710682868958,
+        "different_label_mean_cosine": -0.057430997490882874,
+        "same_minus_different_cosine": 0.6370020508766174,
+        "nearest_cosine_label_accuracy": 0.75,
+        "effective_rank_centered": 4.531474590301514,
+        "between_to_within_trace_ratio": 3.5465602722468774,
+        "median_gradient_norm": 0.0066227782517671585,
+        "paired_to_anchor_cosine_mean": 1.0,
+        "paired_to_anchor_cosine_median": 1.0
+      },
+      "lp_0-1000": {
+        "same_label_mean_cosine": 0.7356420159339905,
+        "different_label_mean_cosine": -0.04045768454670906,
+        "same_minus_different_cosine": 0.776099681854248,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 5.7272138595581055,
+        "between_to_within_trace_ratio": 5.377527263066575,
+        "median_gradient_norm": 0.002762430813163519,
+        "paired_to_anchor_cosine_mean": 0.312539666891098,
+        "paired_to_anchor_cosine_median": 0.40106964111328125
+      },
+      "lp_0-2000": {
+        "same_label_mean_cosine": 0.7113454341888428,
+        "different_label_mean_cosine": -0.02017466351389885,
+        "same_minus_different_cosine": 0.7315201163291931,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 6.035045146942139,
+        "between_to_within_trace_ratio": 5.7569503658941334,
+        "median_gradient_norm": 0.0030014347285032272,
+        "paired_to_anchor_cosine_mean": 0.4176689386367798,
+        "paired_to_anchor_cosine_median": 0.44155383110046387
+      },
+      "lp_0-4000": {
+        "same_label_mean_cosine": 0.6323102116584778,
+        "different_label_mean_cosine": -0.047156818211078644,
+        "same_minus_different_cosine": 0.6794670224189758,
+        "nearest_cosine_label_accuracy": 0.8333333333333334,
+        "effective_rank_centered": 4.569752216339111,
+        "between_to_within_trace_ratio": 4.467191090587744,
+        "median_gradient_norm": 0.004370343871414661,
+        "paired_to_anchor_cosine_mean": 0.7016887068748474,
+        "paired_to_anchor_cosine_median": 0.7639684677124023
+      },
+      "lp_0-6000": {
+        "same_label_mean_cosine": 0.6044492721557617,
+        "different_label_mean_cosine": -0.07175181061029434,
+        "same_minus_different_cosine": 0.6762011051177979,
+        "nearest_cosine_label_accuracy": 0.8333333333333334,
+        "effective_rank_centered": 3.598149538040161,
+        "between_to_within_trace_ratio": 4.583031838627424,
+        "median_gradient_norm": 0.005453404039144516,
+        "paired_to_anchor_cosine_mean": 0.8032844662666321,
+        "paired_to_anchor_cosine_median": 0.8410706520080566
+      },
+      "lp_0-8000": {
+        "same_label_mean_cosine": 0.621332585811615,
+        "different_label_mean_cosine": -0.0762479156255722,
+        "same_minus_different_cosine": 0.6975805163383484,
+        "nearest_cosine_label_accuracy": 0.8333333333333334,
+        "effective_rank_centered": 4.3576178550720215,
+        "between_to_within_trace_ratio": 4.119927162161956,
+        "median_gradient_norm": 0.00604918971657753,
+        "paired_to_anchor_cosine_mean": 0.9808555245399475,
+        "paired_to_anchor_cosine_median": 0.9935452938079834
+      }
+    },
+    "16": {
+      "full_0-8k": {
+        "same_label_mean_cosine": 0.7428914904594421,
+        "different_label_mean_cosine": -0.10099569708108902,
+        "same_minus_different_cosine": 0.843887209892273,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 5.089986324310303,
+        "between_to_within_trace_ratio": 6.4078530439215164,
+        "median_gradient_norm": 0.0030010268092155457,
+        "paired_to_anchor_cosine_mean": 1.0,
+        "paired_to_anchor_cosine_median": 1.0
+      },
+      "lp_0-1000": {
+        "same_label_mean_cosine": 0.7410619854927063,
+        "different_label_mean_cosine": -0.10185806453227997,
+        "same_minus_different_cosine": 0.8429200649261475,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.445947647094727,
+        "between_to_within_trace_ratio": 4.370593522388574,
+        "median_gradient_norm": 0.0015532418619841337,
+        "paired_to_anchor_cosine_mean": 0.5466440320014954,
+        "paired_to_anchor_cosine_median": 0.6278409361839294
+      },
+      "lp_0-2000": {
+        "same_label_mean_cosine": 0.8092352747917175,
+        "different_label_mean_cosine": -0.10024067759513855,
+        "same_minus_different_cosine": 0.9094759225845337,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.720489978790283,
+        "between_to_within_trace_ratio": 8.4268652195315,
+        "median_gradient_norm": 0.0016492465510964394,
+        "paired_to_anchor_cosine_mean": 0.6531586050987244,
+        "paired_to_anchor_cosine_median": 0.7002776265144348
+      },
+      "lp_0-4000": {
+        "same_label_mean_cosine": 0.7434560656547546,
+        "different_label_mean_cosine": -0.10851764678955078,
+        "same_minus_different_cosine": 0.8519737124443054,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.791709899902344,
+        "between_to_within_trace_ratio": 7.081323757364972,
+        "median_gradient_norm": 0.001966166077181697,
+        "paired_to_anchor_cosine_mean": 0.7508580088615417,
+        "paired_to_anchor_cosine_median": 0.7712827920913696
+      },
+      "lp_0-6000": {
+        "same_label_mean_cosine": 0.7696993350982666,
+        "different_label_mean_cosine": -0.09708211570978165,
+        "same_minus_different_cosine": 0.86678147315979,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.977066516876221,
+        "between_to_within_trace_ratio": 7.842175497153789,
+        "median_gradient_norm": 0.003024338511750102,
+        "paired_to_anchor_cosine_mean": 0.8778376579284668,
+        "paired_to_anchor_cosine_median": 0.889644205570221
+      },
+      "lp_0-8000": {
+        "same_label_mean_cosine": 0.7256631255149841,
+        "different_label_mean_cosine": -0.10132524371147156,
+        "same_minus_different_cosine": 0.8269883394241333,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 5.003184795379639,
+        "between_to_within_trace_ratio": 5.768720721944157,
+        "median_gradient_norm": 0.002936834702268243,
+        "paired_to_anchor_cosine_mean": 0.9801177978515625,
+        "paired_to_anchor_cosine_median": 0.9880358576774597
+      }
+    },
+    "17": {
+      "full_0-8k": {
+        "same_label_mean_cosine": 0.7038080096244812,
+        "different_label_mean_cosine": -0.08159951865673065,
+        "same_minus_different_cosine": 0.785407543182373,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.07574462890625,
+        "between_to_within_trace_ratio": 8.873108098545677,
+        "median_gradient_norm": 0.0018278968054801226,
+        "paired_to_anchor_cosine_mean": 1.0,
+        "paired_to_anchor_cosine_median": 1.0
+      },
+      "lp_0-1000": {
+        "same_label_mean_cosine": 0.800703227519989,
+        "different_label_mean_cosine": -0.11884916573762894,
+        "same_minus_different_cosine": 0.9195523858070374,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.028717994689941,
+        "between_to_within_trace_ratio": 6.417474581766004,
+        "median_gradient_norm": 0.00087573571363464,
+        "paired_to_anchor_cosine_mean": 0.48855629563331604,
+        "paired_to_anchor_cosine_median": 0.520404040813446
+      },
+      "lp_0-2000": {
+        "same_label_mean_cosine": 0.6997522711753845,
+        "different_label_mean_cosine": -0.09233267605304718,
+        "same_minus_different_cosine": 0.7920849323272705,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.559518814086914,
+        "between_to_within_trace_ratio": 4.214829129404411,
+        "median_gradient_norm": 0.0011313642608001828,
+        "paired_to_anchor_cosine_mean": 0.5917893052101135,
+        "paired_to_anchor_cosine_median": 0.6368436813354492
+      },
+      "lp_0-4000": {
+        "same_label_mean_cosine": 0.6772417426109314,
+        "different_label_mean_cosine": -0.09803561866283417,
+        "same_minus_different_cosine": 0.7752773761749268,
+        "nearest_cosine_label_accuracy": 0.9166666666666666,
+        "effective_rank_centered": 3.856159210205078,
+        "between_to_within_trace_ratio": 6.862621545064588,
+        "median_gradient_norm": 0.0010778189171105623,
+        "paired_to_anchor_cosine_mean": 0.708185613155365,
+        "paired_to_anchor_cosine_median": 0.7964500188827515
+      },
+      "lp_0-6000": {
+        "same_label_mean_cosine": 0.7336297035217285,
+        "different_label_mean_cosine": -0.0952681452035904,
+        "same_minus_different_cosine": 0.8288978338241577,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 2.9951815605163574,
+        "between_to_within_trace_ratio": 10.07669871603894,
+        "median_gradient_norm": 0.001380822155624628,
+        "paired_to_anchor_cosine_mean": 0.8413023352622986,
+        "paired_to_anchor_cosine_median": 0.8654913902282715
+      },
+      "lp_0-8000": {
+        "same_label_mean_cosine": 0.7013196349143982,
+        "different_label_mean_cosine": -0.09073798358440399,
+        "same_minus_different_cosine": 0.7920576333999634,
+        "nearest_cosine_label_accuracy": 0.9166666666666666,
+        "effective_rank_centered": 3.742621421813965,
+        "between_to_within_trace_ratio": 8.993134758690474,
+        "median_gradient_norm": 0.00179138348903507,
+        "paired_to_anchor_cosine_mean": 0.9811758995056152,
+        "paired_to_anchor_cosine_median": 0.9857461452484131
+      }
+    },
+    "18": {
+      "full_0-8k": {
+        "same_label_mean_cosine": 0.7387337684631348,
+        "different_label_mean_cosine": -0.070893794298172,
+        "same_minus_different_cosine": 0.8096275329589844,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.719773769378662,
+        "between_to_within_trace_ratio": 7.246161729244434,
+        "median_gradient_norm": 0.0009004140738397837,
+        "paired_to_anchor_cosine_mean": 1.0,
+        "paired_to_anchor_cosine_median": 1.0
+      },
+      "lp_0-1000": {
+        "same_label_mean_cosine": 0.8356928825378418,
+        "different_label_mean_cosine": -0.13079874217510223,
+        "same_minus_different_cosine": 0.9664916396141052,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.135915279388428,
+        "between_to_within_trace_ratio": 9.140605736853471,
+        "median_gradient_norm": 0.000893211574293673,
+        "paired_to_anchor_cosine_mean": 0.6652457118034363,
+        "paired_to_anchor_cosine_median": 0.7180808186531067
+      },
+      "lp_0-2000": {
+        "same_label_mean_cosine": 0.797542154788971,
+        "different_label_mean_cosine": -0.09953709691762924,
+        "same_minus_different_cosine": 0.8970792293548584,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.86675500869751,
+        "between_to_within_trace_ratio": 8.215397976833552,
+        "median_gradient_norm": 0.0011572608491405845,
+        "paired_to_anchor_cosine_mean": 0.7345694899559021,
+        "paired_to_anchor_cosine_median": 0.7653436660766602
+      },
+      "lp_0-4000": {
+        "same_label_mean_cosine": 0.7755745053291321,
+        "different_label_mean_cosine": -0.09248516708612442,
+        "same_minus_different_cosine": 0.8680596947669983,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.647349834442139,
+        "between_to_within_trace_ratio": 8.51767479594071,
+        "median_gradient_norm": 0.0009896988049149513,
+        "paired_to_anchor_cosine_mean": 0.8034823536872864,
+        "paired_to_anchor_cosine_median": 0.8364361524581909
+      },
+      "lp_0-6000": {
+        "same_label_mean_cosine": 0.7726302742958069,
+        "different_label_mean_cosine": -0.10433030128479004,
+        "same_minus_different_cosine": 0.8769605755805969,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.447534084320068,
+        "between_to_within_trace_ratio": 7.587275850144474,
+        "median_gradient_norm": 0.0011364903766661882,
+        "paired_to_anchor_cosine_mean": 0.8598296642303467,
+        "paired_to_anchor_cosine_median": 0.8713406920433044
+      },
+      "lp_0-8000": {
+        "same_label_mean_cosine": 0.7349643707275391,
+        "different_label_mean_cosine": -0.08244093507528305,
+        "same_minus_different_cosine": 0.8174052834510803,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.741664886474609,
+        "between_to_within_trace_ratio": 6.879369772932895,
+        "median_gradient_norm": 0.0009158813627436757,
+        "paired_to_anchor_cosine_mean": 0.9790381789207458,
+        "paired_to_anchor_cosine_median": 0.9867092370986938
+      }
+    },
+    "19": {
+      "full_0-8k": {
+        "same_label_mean_cosine": 0.7729014754295349,
+        "different_label_mean_cosine": -0.07731558382511139,
+        "same_minus_different_cosine": 0.8502170443534851,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.000919818878174,
+        "between_to_within_trace_ratio": 11.16390603943239,
+        "median_gradient_norm": 0.0009336340008303523,
+        "paired_to_anchor_cosine_mean": 1.0,
+        "paired_to_anchor_cosine_median": 1.0
+      },
+      "lp_0-1000": {
+        "same_label_mean_cosine": 0.7484827041625977,
+        "different_label_mean_cosine": -0.10872682183980942,
+        "same_minus_different_cosine": 0.8572095036506653,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.611777305603027,
+        "between_to_within_trace_ratio": 6.4801114618898055,
+        "median_gradient_norm": 0.0011177097912877798,
+        "paired_to_anchor_cosine_mean": 0.655214250087738,
+        "paired_to_anchor_cosine_median": 0.6832553148269653
+      },
+      "lp_0-2000": {
+        "same_label_mean_cosine": 0.7629046440124512,
+        "different_label_mean_cosine": -0.11507231742143631,
+        "same_minus_different_cosine": 0.8779769539833069,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.883620738983154,
+        "between_to_within_trace_ratio": 8.530695773765878,
+        "median_gradient_norm": 0.0014022302348166704,
+        "paired_to_anchor_cosine_mean": 0.7196077704429626,
+        "paired_to_anchor_cosine_median": 0.7525496482849121
+      },
+      "lp_0-4000": {
+        "same_label_mean_cosine": 0.7657120823860168,
+        "different_label_mean_cosine": -0.12105905264616013,
+        "same_minus_different_cosine": 0.8867711424827576,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.7189860343933105,
+        "between_to_within_trace_ratio": 6.843767161419998,
+        "median_gradient_norm": 0.001194379641674459,
+        "paired_to_anchor_cosine_mean": 0.7745773792266846,
+        "paired_to_anchor_cosine_median": 0.8303787708282471
+      },
+      "lp_0-6000": {
+        "same_label_mean_cosine": 0.7976354956626892,
+        "different_label_mean_cosine": -0.10765688121318817,
+        "same_minus_different_cosine": 0.9052923917770386,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 3.693307399749756,
+        "between_to_within_trace_ratio": 8.569027088204463,
+        "median_gradient_norm": 0.001123584806919098,
+        "paired_to_anchor_cosine_mean": 0.8470956683158875,
+        "paired_to_anchor_cosine_median": 0.8633928894996643
+      },
+      "lp_0-8000": {
+        "same_label_mean_cosine": 0.7868286967277527,
+        "different_label_mean_cosine": -0.08981023728847504,
+        "same_minus_different_cosine": 0.8766389489173889,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.101215362548828,
+        "between_to_within_trace_ratio": 10.861685335422433,
+        "median_gradient_norm": 0.0009796533267945051,
+        "paired_to_anchor_cosine_mean": 0.9784443974494934,
+        "paired_to_anchor_cosine_median": 0.9834719896316528
+      }
+    },
+    "20": {
+      "full_0-8k": {
+        "same_label_mean_cosine": 0.8114461302757263,
+        "different_label_mean_cosine": -0.08472905308008194,
+        "same_minus_different_cosine": 0.89617520570755,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 2.383902072906494,
+        "between_to_within_trace_ratio": 11.786013687576803,
+        "median_gradient_norm": 0.0006933310651220381,
+        "paired_to_anchor_cosine_mean": 1.0,
+        "paired_to_anchor_cosine_median": 0.9999999403953552
+      },
+      "lp_0-1000": {
+        "same_label_mean_cosine": 0.804182231426239,
+        "different_label_mean_cosine": -0.13211627304553986,
+        "same_minus_different_cosine": 0.9362984895706177,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.739584445953369,
+        "between_to_within_trace_ratio": 5.864501919441465,
+        "median_gradient_norm": 0.0007056872127577662,
+        "paired_to_anchor_cosine_mean": 0.6637495160102844,
+        "paired_to_anchor_cosine_median": 0.7167191505432129
+      },
+      "lp_0-2000": {
+        "same_label_mean_cosine": 0.8085689544677734,
+        "different_label_mean_cosine": -0.1280938982963562,
+        "same_minus_different_cosine": 0.9366628527641296,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 3.187177896499634,
+        "between_to_within_trace_ratio": 3.6503022874836133,
+        "median_gradient_norm": 0.0009274787735193968,
+        "paired_to_anchor_cosine_mean": 0.7681233286857605,
+        "paired_to_anchor_cosine_median": 0.8020625114440918
+      },
+      "lp_0-4000": {
+        "same_label_mean_cosine": 0.7603493332862854,
+        "different_label_mean_cosine": -0.10683484375476837,
+        "same_minus_different_cosine": 0.8671841621398926,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 2.5398731231689453,
+        "between_to_within_trace_ratio": 7.95050476464527,
+        "median_gradient_norm": 0.000853281351737678,
+        "paired_to_anchor_cosine_mean": 0.7943105101585388,
+        "paired_to_anchor_cosine_median": 0.8361612558364868
+      },
+      "lp_0-6000": {
+        "same_label_mean_cosine": 0.83817058801651,
+        "different_label_mean_cosine": -0.11018858104944229,
+        "same_minus_different_cosine": 0.9483591914176941,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 3.4082562923431396,
+        "between_to_within_trace_ratio": 13.205750908572144,
+        "median_gradient_norm": 0.0008165723411366343,
+        "paired_to_anchor_cosine_mean": 0.8572483062744141,
+        "paired_to_anchor_cosine_median": 0.9046249389648438
+      },
+      "lp_0-8000": {
+        "same_label_mean_cosine": 0.8193053603172302,
+        "different_label_mean_cosine": -0.09625572711229324,
+        "same_minus_different_cosine": 0.9155610799789429,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 2.346146821975708,
+        "between_to_within_trace_ratio": 20.48571780494835,
+        "median_gradient_norm": 0.0007050185231491923,
+        "paired_to_anchor_cosine_mean": 0.9832028746604919,
+        "paired_to_anchor_cosine_median": 0.985328197479248
+      }
+    },
+    "21": {
+      "full_0-8k": {
+        "same_label_mean_cosine": 0.7826520800590515,
+        "different_label_mean_cosine": -0.10933028906583786,
+        "same_minus_different_cosine": 0.89198237657547,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.674964427947998,
+        "between_to_within_trace_ratio": 6.250949331835756,
+        "median_gradient_norm": 0.0011161274742335081,
+        "paired_to_anchor_cosine_mean": 1.0,
+        "paired_to_anchor_cosine_median": 1.0
+      },
+      "lp_0-1000": {
+        "same_label_mean_cosine": 0.664000928401947,
+        "different_label_mean_cosine": -0.09452716261148453,
+        "same_minus_different_cosine": 0.7585281133651733,
+        "nearest_cosine_label_accuracy": 0.9166666666666666,
+        "effective_rank_centered": 4.7291460037231445,
+        "between_to_within_trace_ratio": 3.051102263224083,
+        "median_gradient_norm": 0.0007482693763449788,
+        "paired_to_anchor_cosine_mean": 0.5463629961013794,
+        "paired_to_anchor_cosine_median": 0.5611777305603027
+      },
+      "lp_0-2000": {
+        "same_label_mean_cosine": 0.7263147830963135,
+        "different_label_mean_cosine": -0.07441148161888123,
+        "same_minus_different_cosine": 0.8007262945175171,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.7699971199035645,
+        "between_to_within_trace_ratio": 5.244306974374323,
+        "median_gradient_norm": 0.0010724174790084362,
+        "paired_to_anchor_cosine_mean": 0.579984724521637,
+        "paired_to_anchor_cosine_median": 0.6265656352043152
+      },
+      "lp_0-4000": {
+        "same_label_mean_cosine": 0.7558226585388184,
+        "different_label_mean_cosine": -0.09049412608146667,
+        "same_minus_different_cosine": 0.8463168144226074,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 5.153631687164307,
+        "between_to_within_trace_ratio": 6.558786747442698,
+        "median_gradient_norm": 0.0012826649472117424,
+        "paired_to_anchor_cosine_mean": 0.653792679309845,
+        "paired_to_anchor_cosine_median": 0.7278828620910645
+      },
+      "lp_0-6000": {
+        "same_label_mean_cosine": 0.7694858908653259,
+        "different_label_mean_cosine": -0.10179338604211807,
+        "same_minus_different_cosine": 0.8712792992591858,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.547265529632568,
+        "between_to_within_trace_ratio": 6.339921618823711,
+        "median_gradient_norm": 0.0010508513078093529,
+        "paired_to_anchor_cosine_mean": 0.8190110325813293,
+        "paired_to_anchor_cosine_median": 0.8281348347663879
+      },
+      "lp_0-8000": {
+        "same_label_mean_cosine": 0.7271482348442078,
+        "different_label_mean_cosine": -0.10493437200784683,
+        "same_minus_different_cosine": 0.8320826292037964,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.683450222015381,
+        "between_to_within_trace_ratio": 5.419117725203921,
+        "median_gradient_norm": 0.0010707555338740349,
+        "paired_to_anchor_cosine_mean": 0.9780876636505127,
+        "paired_to_anchor_cosine_median": 0.9864877462387085
+      }
+    },
+    "22": {
+      "full_0-8k": {
+        "same_label_mean_cosine": 0.8045558929443359,
+        "different_label_mean_cosine": -0.09492174535989761,
+        "same_minus_different_cosine": 0.8994776606559753,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 5.054194450378418,
+        "between_to_within_trace_ratio": 5.594329864026973,
+        "median_gradient_norm": 0.0009754500351846218,
+        "paired_to_anchor_cosine_mean": 1.0,
+        "paired_to_anchor_cosine_median": 1.0
+      },
+      "lp_0-1000": {
+        "same_label_mean_cosine": 0.8318376541137695,
+        "different_label_mean_cosine": -0.0815054252743721,
+        "same_minus_different_cosine": 0.913343071937561,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.434945106506348,
+        "between_to_within_trace_ratio": 5.93961055885923,
+        "median_gradient_norm": 0.0008025487186387181,
+        "paired_to_anchor_cosine_mean": 0.6244977712631226,
+        "paired_to_anchor_cosine_median": 0.6874780654907227
+      },
+      "lp_0-2000": {
+        "same_label_mean_cosine": 0.7557506561279297,
+        "different_label_mean_cosine": -0.09945975989103317,
+        "same_minus_different_cosine": 0.8552104234695435,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 5.01371955871582,
+        "between_to_within_trace_ratio": 9.037430844247547,
+        "median_gradient_norm": 0.0011553461663424969,
+        "paired_to_anchor_cosine_mean": 0.7660291194915771,
+        "paired_to_anchor_cosine_median": 0.7559186220169067
+      },
+      "lp_0-4000": {
+        "same_label_mean_cosine": 0.6890949606895447,
+        "different_label_mean_cosine": -0.10339538007974625,
+        "same_minus_different_cosine": 0.7924903631210327,
+        "nearest_cosine_label_accuracy": 0.9166666666666666,
+        "effective_rank_centered": 5.349637985229492,
+        "between_to_within_trace_ratio": 5.077616204225619,
+        "median_gradient_norm": 0.0010949657298624516,
+        "paired_to_anchor_cosine_mean": 0.8323695659637451,
+        "paired_to_anchor_cosine_median": 0.8591933250427246
+      },
+      "lp_0-6000": {
+        "same_label_mean_cosine": 0.7440035939216614,
+        "different_label_mean_cosine": -0.09733571857213974,
+        "same_minus_different_cosine": 0.8413392901420593,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 5.26945161819458,
+        "between_to_within_trace_ratio": 5.555765136781541,
+        "median_gradient_norm": 0.0010866988450288773,
+        "paired_to_anchor_cosine_mean": 0.8862658143043518,
+        "paired_to_anchor_cosine_median": 0.8936758041381836
+      },
+      "lp_0-8000": {
+        "same_label_mean_cosine": 0.8165698051452637,
+        "different_label_mean_cosine": -0.10950425267219543,
+        "same_minus_different_cosine": 0.9260740280151367,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 5.055234432220459,
+        "between_to_within_trace_ratio": 6.475203469381831,
+        "median_gradient_norm": 0.0010914790909737349,
+        "paired_to_anchor_cosine_mean": 0.987144410610199,
+        "paired_to_anchor_cosine_median": 0.9890686273574829
+      }
+    },
+    "23": {
+      "full_0-8k": {
+        "same_label_mean_cosine": 0.7415366172790527,
+        "different_label_mean_cosine": -0.06717877089977264,
+        "same_minus_different_cosine": 0.8087154030799866,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 5.14550256729126,
+        "between_to_within_trace_ratio": 6.367293091321458,
+        "median_gradient_norm": 0.000819533655885607,
+        "paired_to_anchor_cosine_mean": 1.0,
+        "paired_to_anchor_cosine_median": 1.0
+      },
+      "lp_0-1000": {
+        "same_label_mean_cosine": 0.6912093162536621,
+        "different_label_mean_cosine": -0.09093935042619705,
+        "same_minus_different_cosine": 0.7821486592292786,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 5.25548791885376,
+        "between_to_within_trace_ratio": 4.628134239021549,
+        "median_gradient_norm": 0.0005144068854860961,
+        "paired_to_anchor_cosine_mean": 0.35735228657722473,
+        "paired_to_anchor_cosine_median": 0.37073802947998047
+      },
+      "lp_0-2000": {
+        "same_label_mean_cosine": 0.627267599105835,
+        "different_label_mean_cosine": -0.08996178209781647,
+        "same_minus_different_cosine": 0.7172293663024902,
+        "nearest_cosine_label_accuracy": 0.8333333333333334,
+        "effective_rank_centered": 2.973111867904663,
+        "between_to_within_trace_ratio": 6.616648850471261,
+        "median_gradient_norm": 0.0005801154766231775,
+        "paired_to_anchor_cosine_mean": 0.5174925923347473,
+        "paired_to_anchor_cosine_median": 0.483216792345047
+      },
+      "lp_0-4000": {
+        "same_label_mean_cosine": 0.6331679821014404,
+        "different_label_mean_cosine": -0.07177530229091644,
+        "same_minus_different_cosine": 0.7049432992935181,
+        "nearest_cosine_label_accuracy": 0.8333333333333334,
+        "effective_rank_centered": 4.0956525802612305,
+        "between_to_within_trace_ratio": 4.292214410332384,
+        "median_gradient_norm": 0.0007667798781767488,
+        "paired_to_anchor_cosine_mean": 0.6478509306907654,
+        "paired_to_anchor_cosine_median": 0.7448911666870117
+      },
+      "lp_0-6000": {
+        "same_label_mean_cosine": 0.7133408188819885,
+        "different_label_mean_cosine": -0.08471331745386124,
+        "same_minus_different_cosine": 0.7980541586875916,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.526036739349365,
+        "between_to_within_trace_ratio": 5.339734808355299,
+        "median_gradient_norm": 0.000596789235714823,
+        "paired_to_anchor_cosine_mean": 0.7765963077545166,
+        "paired_to_anchor_cosine_median": 0.8141927719116211
+      },
+      "lp_0-8000": {
+        "same_label_mean_cosine": 0.7306971549987793,
+        "different_label_mean_cosine": -0.05120271071791649,
+        "same_minus_different_cosine": 0.7818998694419861,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 5.111515998840332,
+        "between_to_within_trace_ratio": 6.129221837919651,
+        "median_gradient_norm": 0.0008625625050626695,
+        "paired_to_anchor_cosine_mean": 0.9826824069023132,
+        "paired_to_anchor_cosine_median": 0.9842952489852905
+      }
+    },
+    "24": {
+      "full_0-8k": {
+        "same_label_mean_cosine": 0.7658593654632568,
+        "different_label_mean_cosine": -0.12294874340295792,
+        "same_minus_different_cosine": 0.8888081312179565,
+        "nearest_cosine_label_accuracy": 0.9166666666666666,
+        "effective_rank_centered": 4.540530204772949,
+        "between_to_within_trace_ratio": 7.6261020440240985,
+        "median_gradient_norm": 0.0009208852425217628,
+        "paired_to_anchor_cosine_mean": 1.0,
+        "paired_to_anchor_cosine_median": 1.0
+      },
+      "lp_0-1000": {
+        "same_label_mean_cosine": 0.6951887011528015,
+        "different_label_mean_cosine": -0.10320306569337845,
+        "same_minus_different_cosine": 0.7983917593955994,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.312901973724365,
+        "between_to_within_trace_ratio": 4.30348322111374,
+        "median_gradient_norm": 0.0005335074383765459,
+        "paired_to_anchor_cosine_mean": 0.3961097002029419,
+        "paired_to_anchor_cosine_median": 0.4738575220108032
+      },
+      "lp_0-2000": {
+        "same_label_mean_cosine": 0.6276466250419617,
+        "different_label_mean_cosine": -0.07522804290056229,
+        "same_minus_different_cosine": 0.7028746604919434,
+        "nearest_cosine_label_accuracy": 0.8333333333333334,
+        "effective_rank_centered": 4.061187744140625,
+        "between_to_within_trace_ratio": 3.0338079502098863,
+        "median_gradient_norm": 0.000726290512830019,
+        "paired_to_anchor_cosine_mean": 0.5516048669815063,
+        "paired_to_anchor_cosine_median": 0.656214714050293
+      },
+      "lp_0-4000": {
+        "same_label_mean_cosine": 0.577238142490387,
+        "different_label_mean_cosine": -0.09605930000543594,
+        "same_minus_different_cosine": 0.6732974648475647,
+        "nearest_cosine_label_accuracy": 0.75,
+        "effective_rank_centered": 3.8218541145324707,
+        "between_to_within_trace_ratio": 3.1281468851633356,
+        "median_gradient_norm": 0.0009411558276042342,
+        "paired_to_anchor_cosine_mean": 0.6132662296295166,
+        "paired_to_anchor_cosine_median": 0.7786363363265991
+      },
+      "lp_0-6000": {
+        "same_label_mean_cosine": 0.778738260269165,
+        "different_label_mean_cosine": -0.08679226040840149,
+        "same_minus_different_cosine": 0.8655304908752441,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.881705284118652,
+        "between_to_within_trace_ratio": 4.277526481441174,
+        "median_gradient_norm": 0.0007072108564898372,
+        "paired_to_anchor_cosine_mean": 0.8366031050682068,
+        "paired_to_anchor_cosine_median": 0.9049509167671204
+      },
+      "lp_0-8000": {
+        "same_label_mean_cosine": 0.7872151732444763,
+        "different_label_mean_cosine": -0.11361681669950485,
+        "same_minus_different_cosine": 0.9008319973945618,
+        "nearest_cosine_label_accuracy": 0.9166666666666666,
+        "effective_rank_centered": 4.700575351715088,
+        "between_to_within_trace_ratio": 7.474099149249818,
+        "median_gradient_norm": 0.0010045922826975584,
+        "paired_to_anchor_cosine_mean": 0.9845767617225647,
+        "paired_to_anchor_cosine_median": 0.9880635142326355
+      }
+    },
+    "25": {
+      "full_0-8k": {
+        "same_label_mean_cosine": 0.6888068318367004,
+        "different_label_mean_cosine": -0.0687553733587265,
+        "same_minus_different_cosine": 0.7575622200965881,
+        "nearest_cosine_label_accuracy": 0.9166666666666666,
+        "effective_rank_centered": 3.857360363006592,
+        "between_to_within_trace_ratio": 5.383329309479843,
+        "median_gradient_norm": 0.00044845297816209495,
+        "paired_to_anchor_cosine_mean": 1.0,
+        "paired_to_anchor_cosine_median": 1.0
+      },
+      "lp_0-1000": {
+        "same_label_mean_cosine": 0.7224714159965515,
+        "different_label_mean_cosine": -0.0955117717385292,
+        "same_minus_different_cosine": 0.8179832100868225,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 3.985565185546875,
+        "between_to_within_trace_ratio": 6.302510087822045,
+        "median_gradient_norm": 0.00037016498390585184,
+        "paired_to_anchor_cosine_mean": 0.44944605231285095,
+        "paired_to_anchor_cosine_median": 0.45507627725601196
+      },
+      "lp_0-2000": {
+        "same_label_mean_cosine": 0.7719929814338684,
+        "different_label_mean_cosine": -0.11961030960083008,
+        "same_minus_different_cosine": 0.8916032910346985,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 3.1909077167510986,
+        "between_to_within_trace_ratio": 5.528564886608966,
+        "median_gradient_norm": 0.0004635694494936615,
+        "paired_to_anchor_cosine_mean": 0.5685901045799255,
+        "paired_to_anchor_cosine_median": 0.6329407095909119
+      },
+      "lp_0-4000": {
+        "same_label_mean_cosine": 0.6999270915985107,
+        "different_label_mean_cosine": -0.12359015643596649,
+        "same_minus_different_cosine": 0.8235172629356384,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.1077165603637695,
+        "between_to_within_trace_ratio": 4.290704649728526,
+        "median_gradient_norm": 0.0005068026366643608,
+        "paired_to_anchor_cosine_mean": 0.7001888155937195,
+        "paired_to_anchor_cosine_median": 0.7997239232063293
+      },
+      "lp_0-6000": {
+        "same_label_mean_cosine": 0.5991179347038269,
+        "different_label_mean_cosine": -0.06473799794912338,
+        "same_minus_different_cosine": 0.6638559103012085,
+        "nearest_cosine_label_accuracy": 0.6666666666666666,
+        "effective_rank_centered": 4.407650947570801,
+        "between_to_within_trace_ratio": 4.227880863038314,
+        "median_gradient_norm": 0.00047268735943362117,
+        "paired_to_anchor_cosine_mean": 0.7854012846946716,
+        "paired_to_anchor_cosine_median": 0.8408365249633789
+      },
+      "lp_0-8000": {
+        "same_label_mean_cosine": 0.7054644227027893,
+        "different_label_mean_cosine": -0.07058226317167282,
+        "same_minus_different_cosine": 0.7760466933250427,
+        "nearest_cosine_label_accuracy": 0.9166666666666666,
+        "effective_rank_centered": 3.5797977447509766,
+        "between_to_within_trace_ratio": 7.051794329626599,
+        "median_gradient_norm": 0.0004359646700322628,
+        "paired_to_anchor_cosine_mean": 0.9682102799415588,
+        "paired_to_anchor_cosine_median": 0.974137544631958
+      }
+    },
+    "26": {
+      "full_0-8k": {
+        "same_label_mean_cosine": 0.7199141383171082,
+        "different_label_mean_cosine": -0.10693719983100891,
+        "same_minus_different_cosine": 0.8268513679504395,
+        "nearest_cosine_label_accuracy": 0.9166666666666666,
+        "effective_rank_centered": 2.953684091567993,
+        "between_to_within_trace_ratio": 10.197131322213723,
+        "median_gradient_norm": 0.0006188508123159409,
+        "paired_to_anchor_cosine_mean": 1.0,
+        "paired_to_anchor_cosine_median": 1.0
+      },
+      "lp_0-1000": {
+        "same_label_mean_cosine": 0.570079505443573,
+        "different_label_mean_cosine": -0.06483098864555359,
+        "same_minus_different_cosine": 0.6349104642868042,
+        "nearest_cosine_label_accuracy": 0.9166666666666666,
+        "effective_rank_centered": 4.704897403717041,
+        "between_to_within_trace_ratio": 2.910520252016777,
+        "median_gradient_norm": 0.00038516399217769504,
+        "paired_to_anchor_cosine_mean": 0.3269932270050049,
+        "paired_to_anchor_cosine_median": 0.27952951192855835
+      },
+      "lp_0-2000": {
+        "same_label_mean_cosine": 0.6957358717918396,
+        "different_label_mean_cosine": -0.10564111173152924,
+        "same_minus_different_cosine": 0.80137699842453,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.108866214752197,
+        "between_to_within_trace_ratio": 3.995325332052793,
+        "median_gradient_norm": 0.0005521823768503964,
+        "paired_to_anchor_cosine_mean": 0.6205248236656189,
+        "paired_to_anchor_cosine_median": 0.6752607822418213
+      },
+      "lp_0-4000": {
+        "same_label_mean_cosine": 0.7050876021385193,
+        "different_label_mean_cosine": -0.11338294297456741,
+        "same_minus_different_cosine": 0.8184705376625061,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 4.460515022277832,
+        "between_to_within_trace_ratio": 3.741267037830981,
+        "median_gradient_norm": 0.0006518383743241429,
+        "paired_to_anchor_cosine_mean": 0.7669685482978821,
+        "paired_to_anchor_cosine_median": 0.7917973399162292
+      },
+      "lp_0-6000": {
+        "same_label_mean_cosine": 0.7130386829376221,
+        "different_label_mean_cosine": -0.08341406285762787,
+        "same_minus_different_cosine": 0.7964527606964111,
+        "nearest_cosine_label_accuracy": 1.0,
+        "effective_rank_centered": 3.7134151458740234,
+        "between_to_within_trace_ratio": 7.324699296156625,
+        "median_gradient_norm": 0.0006223362870514393,
+        "paired_to_anchor_cosine_mean": 0.8508439064025879,
+        "paired_to_anchor_cosine_median": 0.901580810546875
+      },
+      "lp_0-8000": {
+        "same_label_mean_cosine": 0.7068144679069519,
+        "different_label_mean_cosine": -0.1050528958439827,
+        "same_minus_different_cosine": 0.811867356300354,
+        "nearest_cosine_label_accuracy": 0.9166666666666666,
+        "effective_rank_centered": 3.0818331241607666,
+        "between_to_within_trace_ratio": 9.382199779951227,
+        "median_gradient_norm": 0.000589611183386296,
+        "paired_to_anchor_cosine_mean": 0.9837083220481873,
+        "paired_to_anchor_cosine_median": 0.9874786138534546
+      }
+    },
+    "27": {
+      "full_0-8k": {
+        "same_label_mean_cosine": 0.6151257157325745,
+        "different_label_mean_cosine": -0.11391179263591766,
+        "same_minus_different_cosine": 0.7290375232696533,
+        "nearest_cosine_label_accuracy": 0.8333333333333334,
+        "effective_rank_centered": 3.064784288406372,
+        "between_to_within_trace_ratio": 7.107568870732842,
+        "median_gradient_norm": 0.0006827787728980184,
+        "paired_to_anchor_cosine_mean": 1.0,
+        "paired_to_anchor_cosine_median": 1.0
+      },
+      "lp_0-1000": {
+        "same_label_mean_cosine": 0.6048780679702759,
+        "different_label_mean_cosine": -0.050452057272195816,
+        "same_minus_different_cosine": 0.6553301215171814,
+        "nearest_cosine_label_accuracy": 0.8333333333333334,
+        "effective_rank_centered": 5.315657138824463,
+        "between_to_within_trace_ratio": 2.5457467309175805,
+        "median_gradient_norm": 0.0005915857618674636,
+        "paired_to_anchor_cosine_mean": 0.3835059702396393,
+        "paired_to_anchor_cosine_median": 0.4636004567146301
+      },
+      "lp_0-2000": {
+        "same_label_mean_cosine": 0.6176450848579407,
+        "different_label_mean_cosine": -0.11219966411590576,
+        "same_minus_different_cosine": 0.7298447489738464,
+        "nearest_cosine_label_accuracy": 0.8333333333333334,
+        "effective_rank_centered": 2.7230656147003174,
+        "between_to_within_trace_ratio": 10.865117243370504,
+        "median_gradient_norm": 0.0006099691381677985,
+        "paired_to_anchor_cosine_mean": 0.6990947723388672,
+        "paired_to_anchor_cosine_median": 0.7656830549240112
+      },
+      "lp_0-4000": {
+        "same_label_mean_cosine": 0.660550057888031,
+        "different_label_mean_cosine": -0.126071959733963,
+        "same_minus_different_cosine": 0.7866220474243164,
+        "nearest_cosine_label_accuracy": 0.8333333333333334,
+        "effective_rank_centered": 2.251094102859497,
+        "between_to_within_trace_ratio": 8.0199676205975,
+        "median_gradient_norm": 0.0008901762776076794,
+        "paired_to_anchor_cosine_mean": 0.7245673537254333,
+        "paired_to_anchor_cosine_median": 0.7624399662017822
+      },
+      "lp_0-6000": {
+        "same_label_mean_cosine": 0.7082749009132385,
+        "different_label_mean_cosine": -0.10525719076395035,
+        "same_minus_different_cosine": 0.8135321140289307,
+        "nearest_cosine_label_accuracy": 0.8333333333333334,
+        "effective_rank_centered": 3.4489870071411133,
+        "between_to_within_trace_ratio": 3.843388344382022,
+        "median_gradient_norm": 0.0006871907389722764,
+        "paired_to_anchor_cosine_mean": 0.7753972411155701,
+        "paired_to_anchor_cosine_median": 0.8453249931335449
+      },
+      "lp_0-8000": {
+        "same_label_mean_cosine": 0.6533496379852295,
+        "different_label_mean_cosine": -0.10544204711914062,
+        "same_minus_different_cosine": 0.7587916851043701,
+        "nearest_cosine_label_accuracy": 0.8333333333333334,
+        "effective_rank_centered": 2.922049045562744,
+        "between_to_within_trace_ratio": 8.207957819252256,
+        "median_gradient_norm": 0.0005849515437148511,
+        "paired_to_anchor_cosine_mean": 0.9547722339630127,
+        "paired_to_anchor_cosine_median": 0.9808880090713501
+      }
+    }
+  },
+  "condition_summary": {
+    "full_0-8k": {
+      "mean_layer_class_separation": 0.7744919168097633,
+      "median_layer_effective_rank": 4.665875196456909,
+      "mean_paired_to_anchor_cosine": 1.0,
+      "best_separation_layer": 22,
+      "best_layer_class_separation": 0.8994776606559753
+    },
+    "lp_0-1000": {
+      "mean_layer_class_separation": 0.8255472715411868,
+      "median_layer_effective_rank": 4.1263954639434814,
+      "mean_paired_to_anchor_cosine": 0.5146303081086704,
+      "best_separation_layer": 18,
+      "best_layer_class_separation": 0.9664916396141052
+    },
+    "lp_0-2000": {
+      "mean_layer_class_separation": 0.820566007069179,
+      "median_layer_effective_rank": 4.032255411148071,
+      "mean_paired_to_anchor_cosine": 0.6252632481711251,
+      "best_separation_layer": 20,
+      "best_layer_class_separation": 0.9366628527641296
+    },
+    "lp_0-4000": {
+      "mean_layer_class_separation": 0.7899791406733649,
+      "median_layer_effective_rank": 4.1016845703125,
+      "mean_paired_to_anchor_cosine": 0.7233673845018659,
+      "best_separation_layer": 19,
+      "best_layer_class_separation": 0.8867711424827576
+    },
+    "lp_0-6000": {
+      "mean_layer_class_separation": 0.7957708686590195,
+      "median_layer_effective_rank": 4.46972131729126,
+      "mean_paired_to_anchor_cosine": 0.8248620842184339,
+      "best_separation_layer": 20,
+      "best_layer_class_separation": 0.9483591914176941
+    },
+    "lp_0-8000": {
+      "mean_layer_class_separation": 0.7848140597343445,
+      "median_layer_effective_rank": 4.64144492149353,
+      "mean_paired_to_anchor_cosine": 0.9786602450268609,
+      "best_separation_layer": 22,
+      "best_layer_class_separation": 0.9260740280151367
+    }
+  }
+}

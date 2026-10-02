@@ -1,0 +1,7 @@
+{
+  "audio": "data/beans/protocol/watkins/test/test_10.wav",
+  "adapter": "results/lora_watkins_7b/epoch_1",
+  "raw_prediction": "Frasers_Dolphin",
+  "prediction": "Frasers_Dolphin",
+  "valid_label": true
+}

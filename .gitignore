@@ -1,0 +1,58 @@
+# Python environments and caches
+/.venv/
+/.hf-cache/
+/.pytest_cache/
+**/__pycache__/
+*.py[cod]
+*.egg-info/
+/build/
+/dist/
+
+# Local credentials and editor state
+.env
+.env.*
+*.key
+*.pem
+.vscode/
+.idea/
+
+# Raw/materialized datasets. Keep compact manifests and protocol metadata.
+/data/*
+!/data/manifests/
+!/data/manifests/**
+!/data/beans/
+/data/beans/*
+!/data/beans/BEANS-Zero_README.md
+!/data/beans/beans_dogs/
+/data/beans/beans_dogs/*
+!/data/beans/beans_dogs/README.md
+!/data/beans/beans_watkins/
+/data/beans/beans_watkins/*
+!/data/beans/beans_watkins/README.md
+
+# External dependency checkout and downloaded specialist weights.
+/external/
+
+# Reproducible high-volume intermediate tensors/checkpoints.
+/results/gradients*/
+/results/reps*/
+/results/token_reps*/
+/results/lora_beans_dogs_7b_full/
+*.pt
+*.pth
+*.ckpt
+*.npz
+*.onnx
+*.safetensors
+
+# Large source/archive and audio formats should be fetched or materialized.
+*.wav
+*.flac
+*.mp3
+*.parquet
+*.zip
+*.tar
+*.tar.gz
+
+# Temporary atomic-write files.
+*.tmp

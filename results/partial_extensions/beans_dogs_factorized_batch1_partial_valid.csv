@@ -1,0 +1,6 @@
+event_id,target,target_output,prompt_name,query_split,condition,support_k_per_class,support_k_total,router,routed_label,router_correct,method,relative_alpha,factorized_rank,feature_layer,applied_ratio_mean,applied_ratio_min,applied_ratio_max,prediction,raw_prediction,correct,prediction_matches_routed_label
+valid_4,Mac,F,registered,valid,lp_0-1000,2,20,same-support standardized ridge classifier,Freid,false,probe_class_pooled,0.003,,28,0.002999875079175191,0.0029898006469011307,0.0030134457629173994,A,A,false,false
+valid_4,Mac,F,registered,valid,lp_0-1000,2,20,same-support standardized ridge classifier,Freid,false,probe_class_pooled,0.01,,28,0.01000318197267396,0.009969893842935562,0.01003284566104412,B,B,false,true
+valid_4,Mac,F,registered,valid,lp_0-1000,2,20,same-support standardized ridge classifier,Freid,false,probe_class_pooled,0.03,,28,0.029999449982174804,0.02989889122545719,0.030112292617559433,B,"B,",false,true
+valid_4,Mac,F,registered,valid,lp_0-1000,2,20,same-support standardized ridge classifier,Freid,false,probe_class_factorized_r2,0.003,2,28,0.00299990174659927,0.002991284243762493,0.0030118552967906,,"D, G,",false,false
+valid_4,Mac,F,registered,valid,lp_0-1000,2,20,same-support standardized ridge classifier,Freid,false,probe_class_factorized_r2,0.01,2,28,0.009998483683115669,0.009962654672563076,0.010027342475950718,A,A,false,false

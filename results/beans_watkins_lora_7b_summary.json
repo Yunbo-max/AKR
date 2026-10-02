@@ -1,0 +1,28 @@
+{
+  "accuracy": 0.31563421828908556,
+  "macro_f1": 0.23439323597981787,
+  "n": 339,
+  "invalid": 8,
+  "prediction_counts": {
+    "Frasers_Dolphin": 7,
+    "White-sided_Dolphin": 96,
+    "Narwhal": 11,
+    "Common_Dolphin": 5,
+    "Clymene_Dolphin": 10,
+    "Atlantic_Spotted_Dolphin": 18,
+    "Pantropical_Spotted_Dolphin": 8,
+    "Striped_Dolphin": 28,
+    "Spinner_Dolphin": 16,
+    "Beluga,_White_Whale": 9,
+    "Killer_Whale": 23,
+    "Bowhead_Whale": 37,
+    "": 8,
+    "White-beaked_Dolphin": 14,
+    "Fin,_Finback_Whale": 15,
+    "Harp_Seal": 7,
+    "Walrus": 9,
+    "False_Killer_Whale": 15,
+    "Sperm_Whale": 2,
+    "Bottlenose_Dolphin": 1
+  }
+}

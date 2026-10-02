@@ -1,0 +1,159 @@
+{
+  "dataset": "watkins",
+  "protocol": "select layer/alpha on full validation; fit full train+valid once; transfer the unchanged decoder to every condition test",
+  "selected_layer": 8,
+  "alpha": 100.0,
+  "n_train_valid": 1356,
+  "conditions": [
+    {
+      "condition": "full_0-8k",
+      "n": 339,
+      "accuracy": 0.8820058997050148,
+      "macro_f1": 0.8824960111870902
+    },
+    {
+      "condition": "lp_0-1000",
+      "n": 339,
+      "accuracy": 0.09734513274336283,
+      "macro_f1": 0.06296714423893278
+    },
+    {
+      "condition": "lp_0-2000",
+      "n": 339,
+      "accuracy": 0.24188790560471976,
+      "macro_f1": 0.22586634765876087
+    },
+    {
+      "condition": "lp_0-4000",
+      "n": 339,
+      "accuracy": 0.7109144542772862,
+      "macro_f1": 0.7152167280029336
+    },
+    {
+      "condition": "lp_0-6000",
+      "n": 339,
+      "accuracy": 0.8259587020648967,
+      "macro_f1": 0.8253235746944351
+    },
+    {
+      "condition": "lp_0-8000",
+      "n": 339,
+      "accuracy": 0.8672566371681416,
+      "macro_f1": 0.8704685308584394
+    }
+  ],
+  "paired_full_minus_condition": {
+    "lp_0-1000": {
+      "n": 339,
+      "delta": 0.7846607669616519,
+      "ci_low": 0.7404129793510325,
+      "ci_high": 0.8289085545722714,
+      "bootstrap_draws": 10000,
+      "left_correct_right_wrong": 266,
+      "left_wrong_right_correct": 0,
+      "mcnemar_exact_p": 1.6867516709168837e-80
+    },
+    "lp_0-2000": {
+      "n": 339,
+      "delta": 0.640117994100295,
+      "ci_low": 0.5899705014749262,
+      "ci_high": 0.6902654867256637,
+      "bootstrap_draws": 10000,
+      "left_correct_right_wrong": 217,
+      "left_wrong_right_correct": 0,
+      "mcnemar_exact_p": 9.495567745759799e-66
+    },
+    "lp_0-4000": {
+      "n": 339,
+      "delta": 0.1710914454277286,
+      "ci_low": 0.12684365781710916,
+      "ci_high": 0.2153392330383481,
+      "bootstrap_draws": 10000,
+      "left_correct_right_wrong": 62,
+      "left_wrong_right_correct": 4,
+      "mcnemar_exact_p": 2.0835438409305684e-14
+    },
+    "lp_0-6000": {
+      "n": 339,
+      "delta": 0.05604719764011799,
+      "ci_low": 0.02654867256637168,
+      "ci_high": 0.0855457227138643,
+      "bootstrap_draws": 10000,
+      "left_correct_right_wrong": 24,
+      "left_wrong_right_correct": 5,
+      "mcnemar_exact_p": 0.0005461126565933228
+    },
+    "lp_0-8000": {
+      "n": 339,
+      "delta": 0.014749262536873156,
+      "ci_low": -0.008849557522123894,
+      "ci_high": 0.038348082595870206,
+      "bootstrap_draws": 10000,
+      "left_correct_right_wrong": 12,
+      "left_wrong_right_correct": 7,
+      "mcnemar_exact_p": 0.359283447265625
+    }
+  },
+  "paired_condition_specific_minus_fulltrained_transfer": {
+    "full_0-8k": {
+      "n": 339,
+      "delta": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "bootstrap_draws": 10000,
+      "left_correct_right_wrong": 0,
+      "left_wrong_right_correct": 0,
+      "mcnemar_exact_p": 1.0
+    },
+    "lp_0-1000": {
+      "n": 339,
+      "delta": 0.6430678466076696,
+      "ci_low": 0.5929203539823009,
+      "ci_high": 0.6932153392330384,
+      "bootstrap_draws": 10000,
+      "left_correct_right_wrong": 218,
+      "left_wrong_right_correct": 0,
+      "mcnemar_exact_p": 4.7477838728798994e-66
+    },
+    "lp_0-2000": {
+      "n": 339,
+      "delta": 0.5368731563421829,
+      "ci_low": 0.4837758112094395,
+      "ci_high": 0.5900442477876096,
+      "bootstrap_draws": 10000,
+      "left_correct_right_wrong": 184,
+      "left_wrong_right_correct": 2,
+      "mcnemar_exact_p": 3.546502978357198e-52
+    },
+    "lp_0-4000": {
+      "n": 339,
+      "delta": 0.14749262536873156,
+      "ci_low": 0.10619469026548672,
+      "ci_high": 0.19174041297935104,
+      "bootstrap_draws": 10000,
+      "left_correct_right_wrong": 57,
+      "left_wrong_right_correct": 7,
+      "mcnemar_exact_p": 7.638141345540223e-11
+    },
+    "lp_0-6000": {
+      "n": 339,
+      "delta": 0.04129793510324484,
+      "ci_low": 0.011799410029498525,
+      "ci_high": 0.07079646017699115,
+      "bootstrap_draws": 10000,
+      "left_correct_right_wrong": 20,
+      "left_wrong_right_correct": 6,
+      "mcnemar_exact_p": 0.009355306625366211
+    },
+    "lp_0-8000": {
+      "n": 339,
+      "delta": -0.02654867256637168,
+      "ci_low": -0.058997050147492625,
+      "ci_high": 0.0029498525073746312,
+      "bootstrap_draws": 10000,
+      "left_correct_right_wrong": 10,
+      "left_wrong_right_correct": 19,
+      "mcnemar_exact_p": 0.13604594767093658
+    }
+  }
+}

@@ -1,0 +1,30 @@
+seed: 20260814
+model_id: Qwen/Qwen2.5-Omni-7B
+dataset: marmaudio_expert_unanimous
+manifest: data/manifests/marmaudio_expert_validation.csv
+labels: [Infant Cry, Phee, Seep, Trill, Tsik, Twitter]
+candidate_scoring:
+  primary: mean_token_logprob
+  secondary: sequence_logprob
+  candidate_batch_size: 6
+prompts:
+  bare: >-
+    Listen to this common marmoset vocalization. Choose exactly one label from:
+    Infant Cry, Phee, Seep, Trill, Tsik, Twitter. Answer with only the label.
+  definition: >-
+    Classify the common marmoset vocalization using these acoustic definitions.
+    Infant Cry is a broadband infant call with a low fundamental frequency.
+    Phee is a long, tone-like, nearly steady-frequency call. Seep is a very
+    short, sharp call with continuously rising frequency. Trill has cyclical or
+    sinusoidal frequency modulation throughout. Tsik is a very short call with
+    a rising sweep followed by a sharp falling sweep. Twitter is a sequence of
+    short upward frequency-modulated sweeps. Choose exactly one label from:
+    Infant Cry, Phee, Seep, Trill, Tsik, Twitter. Answer with only the label.
+protocol:
+  expert_filter: four_experts_unanimous_affirmative
+  initial_gate: balanced_first_20_per_class_by_seeded_hash
+  gate_n: 120
+  full_n: 546
+  decoding_role: candidate scoring is a native LM readout, not a supervised probe
+  label_string: exact, no leading space, no EOS
+  query_labels_used_for: post_hoc_scoring_only

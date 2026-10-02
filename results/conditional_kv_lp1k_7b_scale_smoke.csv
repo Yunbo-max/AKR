@@ -1,0 +1,9 @@
+event_id,recording_id,target,condition,support_k,method,eta,rank,feature_layer,raw_prediction,prediction,correct
+31471,2022_1_3,Tsik,lp_0-1000,20,fixed_mean,1.0,4,0,Phee,Phee,false
+31471,2022_1_3,Tsik,lp_0-1000,20,fixed_mean,3.0,4,0,Phee,Phee,false
+31471,2022_1_3,Tsik,lp_0-1000,20,fixed_mean,10.0,4,0,Phee,Phee,false
+31471,2022_1_3,Tsik,lp_0-1000,20,fixed_mean,30.0,4,0,Phee,Phee,false
+31471,2022_1_3,Tsik,lp_0-1000,20,conditional,1.0,4,0,Phee,Phee,false
+31471,2022_1_3,Tsik,lp_0-1000,20,conditional,3.0,4,0,Phee,Phee,false
+31471,2022_1_3,Tsik,lp_0-1000,20,conditional,10.0,4,0,Phee,Phee,false
+31471,2022_1_3,Tsik,lp_0-1000,20,conditional,30.0,4,0,Phee,Phee,false

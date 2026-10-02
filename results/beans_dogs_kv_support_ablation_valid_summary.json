@@ -1,0 +1,56 @@
+{
+  "selection_split": "validation",
+  "selection_metric": "macro_f1_then_accuracy_then_smaller_rank_then_earlier_layer_then_smaller_k",
+  "best": {
+    "feature_layer": 0,
+    "support_k": 20,
+    "requested_rank": 4,
+    "method": "conditional",
+    "actual_rank": 4,
+    "n": 64,
+    "accuracy": 0.0625,
+    "macro_f1": 0.039285714285714285
+  },
+  "candidates": [
+    {
+      "feature_layer": 0,
+      "support_k": 1,
+      "requested_rank": 4,
+      "method": "conditional",
+      "actual_rank": 0,
+      "n": 64,
+      "accuracy": 0.0625,
+      "macro_f1": 0.011764705882352941
+    },
+    {
+      "feature_layer": 0,
+      "support_k": 5,
+      "requested_rank": 4,
+      "method": "conditional",
+      "actual_rank": 4,
+      "n": 64,
+      "accuracy": 0.078125,
+      "macro_f1": 0.03285561497326203
+    },
+    {
+      "feature_layer": 0,
+      "support_k": 10,
+      "requested_rank": 4,
+      "method": "conditional",
+      "actual_rank": 4,
+      "n": 64,
+      "accuracy": 0.046875,
+      "macro_f1": 0.0125
+    },
+    {
+      "feature_layer": 0,
+      "support_k": 20,
+      "requested_rank": 4,
+      "method": "conditional",
+      "actual_rank": 4,
+      "n": 64,
+      "accuracy": 0.0625,
+      "macro_f1": 0.039285714285714285
+    }
+  ]
+}

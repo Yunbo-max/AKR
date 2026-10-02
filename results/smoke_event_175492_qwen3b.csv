@@ -1,0 +1,12 @@
+model_id,event_id,condition,target,raw_prediction,prediction,correct
+Qwen/Qwen2.5-Omni-3B,175492,full_0-8k,Infant Cry,Phee,Phee,false
+Qwen/Qwen2.5-Omni-3B,175492,lp_0-1000,Infant Cry,Phee,Phee,false
+Qwen/Qwen2.5-Omni-3B,175492,lp_0-2000,Infant Cry,Phee,Phee,false
+Qwen/Qwen2.5-Omni-3B,175492,lp_0-4000,Infant Cry,Phee,Phee,false
+Qwen/Qwen2.5-Omni-3B,175492,lp_0-6000,Infant Cry,Phee,Phee,false
+Qwen/Qwen2.5-Omni-3B,175492,lp_0-8000,Infant Cry,Phee,Phee,false
+Qwen/Qwen2.5-Omni-3B,175492,remove_0-1000,Infant Cry,Phee,Phee,false
+Qwen/Qwen2.5-Omni-3B,175492,remove_1000-2000,Infant Cry,Phee,Phee,false
+Qwen/Qwen2.5-Omni-3B,175492,remove_2000-4000,Infant Cry,Phee,Phee,false
+Qwen/Qwen2.5-Omni-3B,175492,remove_4000-6000,Infant Cry,Phee,Phee,false
+Qwen/Qwen2.5-Omni-3B,175492,remove_6000-8000,Infant Cry,Phee,Phee,false

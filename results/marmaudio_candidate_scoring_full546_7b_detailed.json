@@ -1,0 +1,66 @@
+{
+  "n_rows": 1092,
+  "prompts": {
+    "bare": {
+      "n": 546,
+      "mean_token_logprob": {
+        "accuracy": 0.30952380952380953,
+        "macro_f1": 0.20262892070554564,
+        "mean_reciprocal_rank": 0.5009462759462759,
+        "median_target_rank": 4.0,
+        "correct_margin_mean": -0.9006089033952418,
+        "correct_margin_median": -0.5659018456935883,
+        "positive_margin_fraction": 0.30952380952380953,
+        "prediction_counts": {
+          "Tsik": 130,
+          "Seep": 114,
+          "Phee": 302
+        }
+      },
+      "sequence_logprob": {
+        "accuracy": 0.33882783882783885,
+        "macro_f1": 0.2535973039024145,
+        "mean_reciprocal_rank": 0.5298534798534797,
+        "median_target_rank": 2.0,
+        "correct_margin_mean": -2.077387425052377,
+        "correct_margin_median": -0.4069633483886719,
+        "positive_margin_fraction": 0.33882783882783885,
+        "prediction_counts": {
+          "Tsik": 124,
+          "Seep": 110,
+          "Phee": 296,
+          "Twitter": 16
+        }
+      }
+    },
+    "definition": {
+      "n": 546,
+      "mean_token_logprob": {
+        "accuracy": 0.22344322344322345,
+        "macro_f1": 0.10462708023683633,
+        "mean_reciprocal_rank": 0.4459401709401709,
+        "median_target_rank": 3.0,
+        "correct_margin_mean": -0.8633320999578532,
+        "correct_margin_median": -0.8554557859897614,
+        "positive_margin_fraction": 0.22344322344322345,
+        "prediction_counts": {
+          "Seep": 194,
+          "Twitter": 352
+        }
+      },
+      "sequence_logprob": {
+        "accuracy": 0.18864468864468864,
+        "macro_f1": 0.06582633053221289,
+        "mean_reciprocal_rank": 0.4257936507936508,
+        "median_target_rank": 3.0,
+        "correct_margin_mean": -2.4292160768484896,
+        "correct_margin_median": -2.1875239312648773,
+        "positive_margin_fraction": 0.18864468864468864,
+        "prediction_counts": {
+          "Twitter": 513,
+          "Seep": 33
+        }
+      }
+    }
+  }
+}

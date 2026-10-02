@@ -1,0 +1,132 @@
+{
+  "n_events": 12,
+  "scope": "prefill_audio_tokens_only",
+  "cells": {
+    "correct_label": {
+      "0.001": {
+        "accuracy": 0.08333333333333333,
+        "wrong_target_hit": 0.0,
+        "invalid": 0.0
+      },
+      "0.003": {
+        "accuracy": 0.3333333333333333,
+        "wrong_target_hit": 0.0,
+        "invalid": 0.4166666666666667
+      },
+      "0.01": {
+        "accuracy": 0.08333333333333333,
+        "wrong_target_hit": 0.0,
+        "invalid": 0.75
+      },
+      "0.03": {
+        "accuracy": 0.08333333333333333,
+        "wrong_target_hit": 0.0,
+        "invalid": 0.9166666666666666
+      },
+      "0.1": {
+        "accuracy": 0.0,
+        "wrong_target_hit": 0.0,
+        "invalid": 1.0
+      }
+    },
+    "random_field": {
+      "0.001": {
+        "accuracy": 0.0,
+        "wrong_target_hit": 0.0,
+        "invalid": 0.0
+      },
+      "0.003": {
+        "accuracy": 0.0,
+        "wrong_target_hit": 0.0,
+        "invalid": 0.0
+      },
+      "0.01": {
+        "accuracy": 0.0,
+        "wrong_target_hit": 0.0,
+        "invalid": 0.0
+      },
+      "0.03": {
+        "accuracy": 0.0,
+        "wrong_target_hit": 0.0,
+        "invalid": 0.0
+      },
+      "0.1": {
+        "accuracy": 0.0,
+        "wrong_target_hit": 0.08333333333333333,
+        "invalid": 0.9166666666666666
+      }
+    },
+    "token_permuted": {
+      "0.001": {
+        "accuracy": 0.0,
+        "wrong_target_hit": 0.0,
+        "invalid": 0.0
+      },
+      "0.003": {
+        "accuracy": 0.08333333333333333,
+        "wrong_target_hit": 0.0,
+        "invalid": 0.0
+      },
+      "0.01": {
+        "accuracy": 0.0,
+        "wrong_target_hit": 0.16666666666666666,
+        "invalid": 0.5
+      },
+      "0.03": {
+        "accuracy": 0.0,
+        "wrong_target_hit": 0.0,
+        "invalid": 0.9166666666666666
+      },
+      "0.1": {
+        "accuracy": 0.0,
+        "wrong_target_hit": 0.0,
+        "invalid": 1.0
+      }
+    },
+    "wrong_label": {
+      "0.001": {
+        "accuracy": 0.0,
+        "wrong_target_hit": 0.25,
+        "invalid": 0.0
+      },
+      "0.003": {
+        "accuracy": 0.0,
+        "wrong_target_hit": 0.75,
+        "invalid": 0.0
+      },
+      "0.01": {
+        "accuracy": 0.0,
+        "wrong_target_hit": 0.4166666666666667,
+        "invalid": 0.3333333333333333
+      },
+      "0.03": {
+        "accuracy": 0.0,
+        "wrong_target_hit": 0.08333333333333333,
+        "invalid": 0.9166666666666666
+      },
+      "0.1": {
+        "accuracy": 0.0,
+        "wrong_target_hit": 0.08333333333333333,
+        "invalid": 0.9166666666666666
+      }
+    }
+  },
+  "any_alpha": {
+    "correct_label": {
+      "correct_event_fraction": 0.4166666666666667,
+      "wrong_target_event_fraction": 0.0
+    },
+    "random_field": {
+      "correct_event_fraction": 0.0,
+      "wrong_target_event_fraction": 0.08333333333333333
+    },
+    "token_permuted": {
+      "correct_event_fraction": 0.08333333333333333,
+      "wrong_target_event_fraction": 0.16666666666666666
+    },
+    "wrong_label": {
+      "correct_event_fraction": 0.0,
+      "wrong_target_event_fraction": 0.75
+    }
+  }
+}
