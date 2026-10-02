@@ -1,0 +1,80 @@
+name: Import pinned public AKR source
+on:
+  push:
+    paths: ['.github/workflows/import-public-source.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: akr-public-consolidation
+  cancel-in-progress: false
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          persist-credentials: true
+      - name: Import tracked source without executing source code
+        shell: bash
+        run: |
+          set -euo pipefail
+          SOURCE="$RUNNER_TEMP/akr-public-source"
+          git clone --no-checkout https://github.com/Yunbo-max/animal-omni-kv.git "$SOURCE"
+          git -C "$SOURCE" checkout --detach 9e8c244b797c24cba1933998bbafbf44a36b0d86
+          export SOURCE
+          python - <<'PY'
+          import hashlib,json,os,re,shutil,subprocess
+          from pathlib import Path,PurePosixPath
+          source=Path(os.environ['SOURCE']); root=Path.cwd()
+          manifest=root/'migration/public_source_manifest.json'
+          if manifest.exists():
+              print('Pinned source already imported; preserving existing integration.'); raise SystemExit(0)
+          raw=subprocess.check_output(['git','-C',str(source),'ls-files','-s','-z'])
+          entries=[]; blocked=[]
+          patterns=[rb'gh[pousr]_[A-Za-z0-9]{30,}',rb'github_pat_[A-Za-z0-9_]{30,}',rb'hf_[A-Za-z0-9]{25,}',rb'-----BEGIN (?:RSA |OPENSSH |EC )?PRIVATE KEY-----']
+          denied={'.wav','.flac','.mp3','.ogg','.safetensors','.ckpt','.pt','.pth','.pkl'}
+          for record in raw.split(b'\0'):
+              if not record: continue
+              meta,name=record.split(b'\t',1); mode,oid,stage=meta.decode().split(); rel=name.decode()
+              pp=PurePosixPath(rel)
+              if pp.is_absolute() or '..' in pp.parts or mode not in ('100644','100755'): raise RuntimeError('Unsafe source entry: '+rel)
+              data=(source/rel).read_bytes()
+              item={'source_path':rel,'git_blob':oid,'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest()}
+              if pp.suffix.lower() in denied or pp.name in ('.env','id_rsa','id_ed25519'):
+                  item['status']='excluded_raw_or_executable_checkpoint'; entries.append(item); continue
+              if any(re.search(p,data) for p in patterns): blocked.append(rel); continue
+              if len(data)>25000000: raise RuntimeError('Oversized publication entry: '+rel)
+              destrel=('migration/source_workflows/'+rel[len('.github/workflows/'):]+'.disabled') if rel.startswith('.github/workflows/') else rel
+              dest=root/destrel
+              if dest.exists() and dest.read_bytes()!=data:
+                  destrel='migration/public_conflicts/'+rel; dest=root/destrel
+              dest.parent.mkdir(parents=True,exist_ok=True); dest.write_bytes(data)
+              dest.chmod(0o755 if mode=='100755' else 0o644)
+              item.update(status='imported',published_path=destrel); entries.append(item)
+          if blocked: raise RuntimeError('Publication blocked by suspected credentials in: '+', '.join(blocked))
+          manifest.parent.mkdir(exist_ok=True)
+          manifest.write_text(json.dumps({'source':'Yunbo-max/animal-omni-kv','commit':'9e8c244b797c24cba1933998bbafbf44a36b0d86','entries':entries,'private_source_status':'not accessible to current connector; later source integration pending'},indent=2)+'\n')
+          if (root/'README.md').exists(): shutil.copy2(root/'README.md',root/'migration/legacy_public_README.md')
+          print('Imported entries:',sum(e['status']=='imported' for e in entries),'Total tracked:',len(entries))
+          PY
+      - name: Commit snapshot without rewriting history
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'AKR consolidation'
+          git config user.email '82950147+Yunbo-max@users.noreply.github.com'
+          git add --all
+          if ! git diff --cached --quiet; then
+            git commit -m 'Import pinned public animal-omni-kv snapshot with provenance'
+            git push origin HEAD:main
+          fi
+      - name: Package source for verification
+        run: git archive --format=zip --output="$RUNNER_TEMP/akr-public-import.zip" HEAD
+      - uses: actions/upload-artifact@v4
+        with:
+          name: akr-public-import
+          path: ${{ runner.temp }}/akr-public-import.zip
+          retention-days: 7
