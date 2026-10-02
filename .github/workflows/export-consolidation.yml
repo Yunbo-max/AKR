@@ -1,0 +1,22 @@
+name: Export consolidation snapshot
+on:
+  push:
+    branches: [akr-final-consolidation-20261002]
+    paths: ['.github/workflows/export-consolidation.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - run: git archive --format=zip --output="${{ runner.temp }}/akr-snapshot.zip" HEAD
+      - uses: actions/upload-artifact@v4
+        with:
+          name: akr-consolidation-snapshot
+          path: ${{ runner.temp }}/akr-snapshot.zip
+          retention-days: 7
