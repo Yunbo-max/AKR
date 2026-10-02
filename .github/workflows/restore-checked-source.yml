@@ -1,0 +1,73 @@
+name: Restore checked AKR source
+on:
+  push:
+    branches: [akr-final-consolidation-20261002]
+    paths: ['.github/workflows/restore-checked-source.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: akr-public-consolidation
+  cancel-in-progress: false
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 1
+      - name: Verify partial stream and restore complete JSON members only
+        shell: bash
+        run: |
+          python - <<'PY'
+          import base64,hashlib,json,lzma,re
+          from pathlib import Path,PurePosixPath
+          root=Path.cwd(); marker=root/'migration/RESTORED_PREFIX.json'
+          if marker.exists():
+              print('Already restored; preserving integration changes.'); raise SystemExit(0)
+          parts=sorted((root/'migration/payload').glob('*.b64'))
+          if [p.name for p in parts] != [f'{i:02}.b64' for i in range(7)]: raise RuntimeError('Unexpected parts')
+          raw=base64.b64decode(''.join(p.read_text().strip() for p in parts),validate=True)
+          expected='60b356aa1dce575731b1b48756d22327d68360790ded17e444df3770d8e1750e'
+          if hashlib.sha256(raw).hexdigest()!=expected: raise RuntimeError('Payload hash mismatch')
+          decoder=lzma.LZMADecompressor(memlimit=268435456)
+          text=decoder.decompress(raw,max_length=26214400).decode('utf-8')
+          parser=json.JSONDecoder(); cursor=1; members=[]
+          while True:
+              while cursor<len(text) and text[cursor] in ' ,\n\r\t': cursor+=1
+              try: item,end=parser.raw_decode(text,cursor)
+              except json.JSONDecodeError: break
+              members.append(item); cursor=end
+          if len(members)!=32: raise RuntimeError('Expected exactly 32 complete members')
+          allowed=('akr_closing/','akr_final/','configs/','docs/')
+          records=[]
+          for item in members:
+              name=item['path']; p=PurePosixPath(name)
+              if p.is_absolute() or '..' in p.parts or (name!='README.md' and not name.startswith(allowed)): raise RuntimeError('Unsafe destination')
+              content=item['content'].encode('utf-8')
+              if re.search(rb'(gh[pousr]_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{30,}|hf_[A-Za-z0-9]{25,}|-----BEGIN (?:RSA |OPENSSH |EC )?PRIVATE KEY-----)',content): raise RuntimeError('Suspected credential')
+              dest=root/name
+              if dest.exists() and dest.read_bytes()!=content:
+                  backup=root/'migration/pre_restore'/name; backup.parent.mkdir(parents=True,exist_ok=True);backup.write_bytes(dest.read_bytes())
+              dest.parent.mkdir(parents=True,exist_ok=True);dest.write_bytes(content)
+              mode=item.get('mode','100644');dest.chmod(0o755 if str(mode) in ('100755','755') else 0o644)
+              records.append({'path':name,'bytes':len(content),'sha256':hashlib.sha256(content).hexdigest()})
+          marker.write_text(json.dumps({'status':'complete_members_restored_from_incomplete_transport','transport_eof':decoder.eof,'transport_sha256':expected,'member_count':len(records),'members':records,'missing_tail':'docs/research/IMPLEMENTATION_PLAN.md and any subsequent entries; recovered separately','not_private_HEAD_equivalence':True},indent=2)+'\n')
+          print('Verified/restored',len(records),'complete files; incomplete transport is not claimed complete.')
+          PY
+      - name: Save restored sources without executing them
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'AKR consolidation'
+          git config user.email '82950147+Yunbo-max@users.noreply.github.com'
+          git add --all
+          if ! git diff --cached --quiet; then
+            git commit -m 'Restore 32 verified complete AKR source members and retain provenance'
+            AUTH=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
+            git -c "http.https://github.com/.extraheader=AUTHORIZATION: basic $AUTH" push origin HEAD:akr-final-consolidation-20261002
+          fi
