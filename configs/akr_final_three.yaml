@@ -1,0 +1,10 @@
+# Two NEW ablations + focused reuse-capable existing 3B confirmation.
+# Do not change this file under an already-started run ID.
+dataset: marmaudio
+label_mode: semantic
+k_per_class: 8
+max_seeds: 3
+conditions: [full, 'lp:1000']
+anchor_condition: 'lp:1000'
+ranks: [1, 2, 4, 8]
+folds: 5

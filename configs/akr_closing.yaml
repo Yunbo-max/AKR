@@ -1,0 +1,76 @@
+# Frozen protocol for new re-evaluation. E1 separately preserves the historical 75/48 episode.
+# Do not edit a config after starting its run_id; create a new run_id for changes.
+old_root: /root/animal-omni-kv
+router_implementation: repository  # MUST call animal_omni.ConditionalGradientRouter
+seeds: [20260914, 20260915, 20260916]
+models:
+  - tag: qwen7b
+    id: Qwen/Qwen2.5-Omni-7B
+    revision: ae9e1690543ffd5c0221dc27f79834d0294cba00
+layer_fractions: [0.25, 0.5, 0.75, 0.875]
+feature_fraction: 0.875
+max_context_tokens: 32768
+ridge_alpha: 10.0
+ridge_penalties: [1.0, 10.0]
+ranks: [1, 4, 8]
+relative_alphas: [0.003, 0.01, 0.03]
+comparison_rank: 4
+comparison_alpha: 0.01
+max_invalid_rate: 0.01
+prompts: [canonical, paraphrase, reverse_order]
+gradient_nulls: true
+probe_to_lm: true
+# True = only a passed continuous-method confirmation gate permits test re-evaluation.
+# No previously inspected data are re-described as untouched.
+run_test_after_gate: true
+E1:
+  config: configs/marmaudio_fair_gap.yaml
+  manifest: data/manifests/marmaudio_expert_validation.csv
+  split: results/marmaudio_equal_support_split_seed20260814.json
+  predictions: results/marmaudio_equal_support_audio_icl_candidate_k8_7b.csv
+  model_id: Qwen/Qwen2.5-Omni-7B
+  model_revision: ae9e1690543ffd5c0221dc27f79834d0294cba00
+E8:
+  datasets: [marmaudio, dogs]
+  conditions: ['lp:1000']
+  k_per_class: [2, 8]
+  learning_rates: [0.00002, 0.0002]
+  max_steps: 128
+  eval_every: 32
+  accumulation: 8
+  rank: 8
+  include_eos: true
+# Optional E9 adds the locked 3B model, never a new hyperparameter search.
+E9:
+  id: Qwen/Qwen2.5-Omni-3B
+  revision: f75b40e3da2003cdd6e1829b1f420ca70797c34e
+  feature_layer_policy: preserve fractions
+  # Compute-cost reporting is already enabled for 7B; 3B is explicit optional confirmation.
+datasets:
+  - name: marmaudio
+    manifest: data/manifests/marmaudio_expert_validation.csv
+    group_key: recording_id
+    labels: [Infant Cry, Phee, Seep, Trill, Tsik, Twitter]
+    label_modes: [semantic, symbols]
+    conditions: [full, 'lp:1000']
+    support_k: [1, 2, 4, 8, 16]
+    icl_k: [1, 2, 4, 8]
+    repair_k: [2, 8]
+  - name: dogs
+    manifest: data/manifests/beans_dogs.csv
+    group_key: null
+    labels: [Farley, Freid, Keri, Louie, Luke, Mac, Roodie, Rudy, Siggy, Zoe]
+    label_modes: [semantic, symbols]
+    conditions: [full, 'lp:1000']
+    support_k: [1, 2, 4, 8]
+    icl_k: [1, 2]
+    repair_k: [2, 8]
+  - name: watkins
+    manifest: data/manifests/beans_watkins.csv
+    group_key: null
+    labels_from_config: configs/beans_watkins.yaml
+    label_modes: [semantic]
+    conditions: [full, 'lp:1000']
+    support_k: [1, 2, 4]
+    icl_k: [1, 2]
+    repair_k: [1, 2, 4]
