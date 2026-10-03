@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-03",
+  "baseline_remote_sha": "87f99b1fffde709f46987e9d3028e2c043cf17b0",
+  "baseline_cpu_tests": 137,
+  "final_cpu_tests": 143,
+  "final_cpu_failures": 0,
+  "final_cpu_skips": 0,
+  "offline_release_checks": 116,
+  "python_compileall": "passed",
+  "paper": {
+    "pdf_pages": 24,
+    "main_end_page": 9,
+    "undefined_references": false,
+    "missing_figures": false,
+    "overfull_boxes": false,
+    "underfull_vbox_warnings": 1,
+    "tables_unchanged_from_supplied_source": true
+  },
+  "remote_checks": "pending explicit Actions run; do not infer from local CPU tests",
+  "new_scientific_experiments": 0,
+  "S1_real_model_status": "not_run",
+  "skill_engine_gate_status": "not_run_not_certified",
+  "environment": {
+    "python": "Python 3.13.5"
+  },
+  "files": {
+    "akr_final/release.py": "1d07e16acdf06865f179375e015cd579e5d444e82dc4b07637981727d3f2e390",
+    "akr_final/simple_baselines.py": "f00a5d345a35163fb2d719439b92fe4a4e685d86914e007d234583bb98375b2c",
+    "akr_final/runner.py": "fa2a4a5f776ea903d3070c3f75e6996af14a73c9bf42ac829500c8229860ac37",
+    "akr_final/standalone.py": "c6cf9a2e63f720fd06234247b0dfb4c9ab9f2c3416bf985230ba2c7d3b90c73b",
+    "scripts/check_akr_release.py": "d950ecf4f7f50ffb78dc66275232405313f26809728bcc36d20277c2b1001fca",
+    "paper/main.tex": "28cae9336d41ed13fa00304371bef43f11dcbe70e5c1cfc25223dbbdf7149fe8",
+    "paper/references.bib": "7aad76dc546b3928c7191e53740e82bbb0a79b399a20752e01247d51d42df654"
+  }
+}

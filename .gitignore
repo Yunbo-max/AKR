@@ -56,3 +56,12 @@
 
 # Temporary atomic-write files.
 *.tmp
+
+# Rebuild the paper from versioned source; do not accumulate auxiliary outputs.
+/paper/*.aux
+/paper/*.log
+/paper/*.out
+/paper/*.blg
+/paper/*.fls
+/paper/*.fdb_latexmk
+/paper/main.pdf

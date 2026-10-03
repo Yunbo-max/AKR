@@ -1,39 +1,23 @@
-# AKR manuscript sources
+# Manuscript release
 
-This directory consolidates the supplied nine-page RQ-organized manuscript,
-its bibliography/style files, complete numeric tables, plotting data, small
-vector PDF figures, and Figure 1/2 prompts. It is an author working draft, not
-an assertion of venue acceptance or a new experimental evaluation.
+Title: **Acoustic-to-KV Regression for Bioacoustic Recognition in Speech Language Models**.
 
-## Build
+`main.tex` and `references.bib` are restored from the user-approved nine-page RQ-organized
+source package. Only the approved method/title naming and portable image extensions
+are changed in this migration. All numerical table bodies are checked against the
+source. No negative transfer, scale, direct-ridge or class-coverage row is removed.
 
-```bash
-cd paper
-bash build.sh
-```
+Run `bash paper/build.sh` from the repository root, or upload this directory to Overleaf
+with `main.tex` as the root and pdfLaTeX as the engine. All active figure dependencies
+are ordinary files. `main.bbl` is a convenience cache; the bibliography source is present.
 
-The release build produces 9 main-text pages and 24 total pages with the
-supplied style. It requires pdfLaTeX and BibTeX. The style is unmodified.
+`figures/intro.jpg` and `figures/pipeline.jpg` are documented portable derivatives of
+the author's PNG assets (see `../migration/figure_renderings.json`). Full-resolution
+original PNGs and the previous rendered PDF are retained in the supplied Overleaf
+archive, not falsely represented as recovered public bytes. Regeneration prompts are
+in `figure_prompts/`, with the latest two specifications outside historical archives.
 
-Editorial changes in this consolidation: the title and method expansion now
-use **Acoustic-to-KV Regression for Bioacoustic Recognition in Speech Language
-Models**, as approved in the conversation. No numeric results were changed.
-The draft's references are preserved; the bounded literature check is not a
-full submission-grade bibliography or novelty audit.
-
-For transport, `figures/intro.jpg` and `figures/pipeline.jpg` are 1000-pixel
-JPEG renderings of the supplied PNG images. Layout, labels and numeric content
-are unchanged, but the renditions are not pixel-identical. The original
-high-resolution PNGs remain in the supplied `AKR_ICLR2027_Final_9Pages_Tables.zip`
-and in the full-resolution delivery accompanying this consolidation.
-For publication, replace the JPEGs with those original PNGs and change the two
-includegraphics extensions. Hashes and provenance are in
-`../migration/figure_renderings.json`. No new illustration or data was invented.
-
-`data/latest/` contains the supplied F1/F2/F3 scalar exports. A file named
-FINAL_STATUS in that directory belongs to the historical source study; it is
-not the status of a new run. New evaluations write to `../results/akr_final/`.
-
-Raw audio, model weights, private repository HEAD, and absent large gradient
-arrays are not reconstructed from prose or aggregate scores. Figure prompts
-are design instructions, not additional empirical evidence.
+The source package is not itself an anonymous submission: repository identity,
+provenance and historical author metadata need a separate anonymity check. Use the
+compiled manuscript only after author review. Code tests establish implementation
+contracts, not scientific claims or venue acceptance.

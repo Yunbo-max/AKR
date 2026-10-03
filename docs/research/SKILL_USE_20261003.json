@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-03",
+  "source_type": "actual_user_export_not_installed_engine_or_design_proposal",
+  "name": "research-autopilot",
+  "previous_name": "running-autoresearch",
+  "library_file_id": "file_00000000bce081f4882420ef10859fe7",
+  "export_date": "2026-10-02",
+  "archive_sha256": "89165e8450e94abe07ad026822fd77e2dbbb5d8c9e01fc4d108d2955448978e1",
+  "read_files": [
+    {
+      "path": "SKILL.md",
+      "sha256": "b4cd7ba90dd50db34fdaa3336d2f0a96c7e5dffcf231525ab3c751d9a8900b68"
+    },
+    {
+      "path": "references/initial-intake.md",
+      "sha256": "d998d1d8d5ecd2801c77fa8acbca7651029c74ee46ac888a74f48bda0c1d07d8"
+    },
+    {
+      "path": "references/state-and-routing.md",
+      "sha256": "0100d3959a62274bb62848ad56954d41c85e967435e579e566b4ea37324fdff9"
+    },
+    {
+      "path": "references/artifact-contracts.md",
+      "sha256": "b551c41d19cb0497be08aba5ad444f07c633461d4749770e5e93414183a87355"
+    },
+    {
+      "path": "references/host-adapters.md",
+      "sha256": "ede84619e870f06f865f798b4a8b4b4bcffed4b35f9f2cd4e38ddab5c43da0c7"
+    },
+    {
+      "path": "references/literature-evidence.md",
+      "sha256": "0b9ef072152a3bb9f4f94522cd1789a53650dbf7b8c796e84f217cee92f55550"
+    },
+    {
+      "path": "references/collision-audit.md",
+      "sha256": "3e419f70c9b1de31a90c7e19dc298e333a42d79e42a2a23c5d18a02732c098f9"
+    },
+    {
+      "path": "references/importance-preserving-gate.md",
+      "sha256": "8cdbc80f2243e9839f29332dfcba281d117c69063ff30c08838430e509430f66"
+    },
+    {
+      "path": "references/execution-and-handoffs.md",
+      "sha256": "d5608179a3313c459de9ffde91913341570dde09fe43f8744093c36b8432db1c"
+    }
+  ],
+  "origin": "M",
+  "route": "retrospective audit and authorized consolidation",
+  "independent_multi_agent_review": false,
+  "formal_gate_a_run": false,
+  "natural_gate_0": "not retrospectively certified",
+  "new_gpu_runs": 0,
+  "skill_scripts_executed": [],
+  "note": "Native user authorization is authoritative; no host grant or historical protocol lock was fabricated. Named writing/figure child skills were not available and are not claimed used."
+}

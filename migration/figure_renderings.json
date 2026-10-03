@@ -1,0 +1,41 @@
+{
+  "figures": [
+    {
+      "figure": "intro",
+      "source_archive": "AKR_ICLR2027_Final_9Pages_Tables.zip",
+      "source_member": "AKR_RQ_NinePages_20260924/figures/intro.png",
+      "source_sha256": "772425b7172cfd922bc37e1661e21ab99ad9b7e9840f6248ee943144ca26e82c",
+      "source_dimensions": [
+        1672,
+        941
+      ],
+      "published_path": "paper/figures/intro.jpg",
+      "published_sha256": "13cdc8202389321fe1eb54ee00d9bde6681e911c6e09094e89a89e816be45a96",
+      "published_dimensions": [
+        1000,
+        563
+      ],
+      "encoding": "JPEG derivative inherited from materialized consolidation; not byte-identical to PNG",
+      "lossless_original_in_git": false
+    },
+    {
+      "figure": "pipeline",
+      "source_archive": "AKR_ICLR2027_Final_9Pages_Tables.zip",
+      "source_member": "AKR_RQ_NinePages_20260924/figures/pipeline.png",
+      "source_sha256": "21d365ac49979f164f05af99b1c4cd010a2696d8570263bbef947307c802284f",
+      "source_dimensions": [
+        4944,
+        2784
+      ],
+      "published_path": "paper/figures/pipeline.jpg",
+      "published_sha256": "6e1ce9a264f70c4321fabf60bf4f92ee6b68f73e128bd4ef89362721b7c41c0f",
+      "published_dimensions": [
+        1000,
+        563
+      ],
+      "encoding": "JPEG derivative inherited from materialized consolidation; not byte-identical to PNG",
+      "lossless_original_in_git": false
+    }
+  ],
+  "rendering_is_not_new_scientific_evidence": true
+}

@@ -7,7 +7,7 @@ AKR predicts continuous **additive K/V corrections**, not animal labels or repla
 ## Start here
 
 - [Final experiments: exact data, models, metrics and commands](docs/FINAL_EXPERIMENTS_ZH.md)
-- [running-autoresearch specification-based check](docs/research/AUTORESEARCH_CHECK_ZH.md)
+- [Research Autopilot audit (actual 2026-10-02 export)](docs/research/RESEARCH_AUTOPILOT_AUDIT_20261003.md)
 - [Machine-readable experiment/model/dataset registry](configs/akr_registry.json)
 - [Migration coverage and limits](MIGRATION_STATUS.md)
 - [Manuscript and figure sources](paper/README_RELEASE.md)
@@ -20,6 +20,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements-cpu.txt
 PYTHONPATH=src:. python -m pytest -q
+python scripts/check_akr_release.py
 python scripts/run_akr_release.py plan
 ```
 

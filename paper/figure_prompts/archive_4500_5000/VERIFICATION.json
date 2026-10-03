@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "prompt_count": 18,
+  "existing_figure_prompts": 15,
+  "pending_result_templates": 3,
+  "minimum_characters": 4738,
+  "maximum_characters": 4960,
+  "pipeline_aspect_ratio": "16:9",
+  "aspect_ratio_counts": {
+    "1:1": 10,
+    "16:9": 8
+  },
+  "copyable_file_and_combined_block_counts_match": true,
+  "md_and_txt_identical": true,
+  "all_source_attachments_present": true,
+  "gpu_experiments_run": 0,
+  "images_generated": 0
+}

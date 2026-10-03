@@ -1,0 +1,22 @@
+{
+  "complete": true,
+  "workflow_run_id": "37131602379",
+  "incoming_revision": "b7ae120468aa54a81e0172e227323b1f5324e132",
+  "payload_sha256": "a1975b45e533581ad8a1f15c14e38e8ae32c86bc957dbeba170b254d2defd291",
+  "cpu_tests": {
+    "tests": 148,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "release_checks": {
+    "complete": true,
+    "checks": 116,
+    "errors": [],
+    "gpu_started": false,
+    "raw_audio_required_for_this_check": false,
+    "scope": "release integrity, not scientific validation"
+  },
+  "new_scientific_experiments": 0,
+  "S1_status": "implemented_not_run_on_real_model"
+}

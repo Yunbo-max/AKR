@@ -1,3 +1,5 @@
+> 更新：本文件是2026-10-02的设计规范式历史复核。实际2026-10-02导出技能的本轮检查见 [RESEARCH_AUTOPILOT_AUDIT_20261003.md](RESEARCH_AUTOPILOT_AUDIT_20261003.md)。
+
 # AKR：running-autoresearch 规格式复核
 
 检查日期：2026-10-02。入口 M（已有方法、代码、结果和稿件）；本轮为 audit + implement，不是 GPU run。

@@ -74,3 +74,12 @@ def test_simple_baselines_complete_and_resume(tmp_path):
 def test_evidence_prompt_only_accepts_declared_label():
     assert 'may be incorrect' in evidence_prompt('Recognize.','A',['A','B'])
     with pytest.raises(ValueError):evidence_prompt('Recognize.','OTHER',['A','B'])
+
+def test_plan_checks_actual_yaml_against_registry(tmp_path):
+    import shutil
+    (tmp_path/'configs').mkdir()
+    shutil.copy2(ROOT/'configs/akr_registry.json',tmp_path/'configs/akr_registry.json')
+    cfg=(ROOT/'configs/akr_standalone.yaml').read_text().replace('ae9e1690543ffd5c0221dc27f79834d0294cba00','main')
+    (tmp_path/'configs/akr_standalone.yaml').write_text(cfg)
+    with pytest.raises(ValueError,match='revision'):
+        main(['plan','--root',str(tmp_path)])

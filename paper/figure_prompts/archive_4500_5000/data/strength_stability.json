@@ -1,0 +1,33 @@
+{
+  "source": "FAIR_GAP_RESULTS.md, registered Dogs A-J class-routed replication",
+  "commit": "921e6e1a968a248d131775e25e676d5e66e7496b",
+  "n": 139,
+  "alpha": [
+    0.003,
+    0.01,
+    0.03
+  ],
+  "accuracy_percent": {
+    "pooled": [
+      14.39,
+      18.71,
+      20.14
+    ],
+    "ordered": [
+      15.11,
+      6.47,
+      0
+    ],
+    "permuted": [
+      7.91,
+      4.32,
+      0.72
+    ]
+  },
+  "ordered_invalid_percent": [
+    24.46,
+    null,
+    99.28
+  ],
+  "note": "Reported percentage precision retained; no intermediate invalid-rate observation imputed."
+}

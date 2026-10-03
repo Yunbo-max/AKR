@@ -22,6 +22,24 @@ def load_registry(path: Path) -> dict:
     return value
 
 
+def validate_default_config(root: Path, registry: dict) -> None:
+    """Ensure the displayed release pins are the ones the runner will load."""
+    import yaml
+    cfg=yaml.safe_load((root/'configs/akr_standalone.yaml').read_text(encoding='utf-8'))
+    for tag,key in [('qwen7b','model_7b'),('qwen3b','model_3b')]:
+        actual=cfg.get(key,{})
+        for field in ['id','revision']:
+            if actual.get(field)!=registry['models'][tag][field]:
+                raise ValueError(f'{key} {field} differs from release registry; declare a new protocol before changing pins')
+    s1=registry['experiments']['S1']
+    fixed=cfg.get('fixed_settings',{})
+    expected={'rank':s1['fixed_rank'],'alpha':s1['relative_alpha'],'ridge_alpha':s1['ridge_alpha']}
+    if fixed!=expected or cfg.get('seeds')!=[s1['seed']] or cfg.get('k_per_class')!=s1['support_per_class']:
+        raise ValueError('Standalone numerical settings differ from release registry')
+    if cfg.get('labels')!=registry['datasets']['MA-CT']['labels'] or cfg.get('conditions')!=s1['conditions']:
+        raise ValueError('Standalone labels/conditions differ from release registry')
+
+
 def make_command(root: Path, run_id: str, tasks: list[str], profile: str, execute: bool) -> list[str]:
     if not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_.-]*',run_id):raise ValueError('Invalid run ID')
     if not tasks or len(set(tasks))!=len(tasks) or set(tasks)-{'S1','F1','F2','F3'}:
@@ -75,6 +93,7 @@ def main(argv=None):
     ap.add_argument('--execute',action='store_true')
     args=ap.parse_args(argv);root=args.root.resolve()
     registry=load_registry(root/'configs/akr_registry.json')
+    validate_default_config(root,registry)
     tasks=args.tasks.split(',')
     command=make_command(root,args.run_id,tasks,args.profile,args.execute)
     if not math.isfinite(args.budget_hours) or not 0<args.budget_hours<=24:
