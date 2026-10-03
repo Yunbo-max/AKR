@@ -1,0 +1,12 @@
+{
+  "source_commit": "a213de38d67471f40aed77242e6d969ac9dcea13",
+  "csv_git_blob_sha": "e119e8ac3003dcab1d3b2c3dd5dfc46e7684c258",
+  "csv_byte_identity_verified": true,
+  "n_metric_rows": 34,
+  "all_counts_97": true,
+  "all_gain_arithmetic_matches": true,
+  "F1_decomposition_tolerance": 1e-07,
+  "F1_uses_scalar_extracts": true,
+  "journal_completeness_source": "upstream EXPORT_AUDIT.json, not a new full journal audit in this session",
+  "gpu_calls": 0
+}

@@ -1,0 +1,199 @@
+\begin{thebibliography}{22}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Agamaite et~al.(2015)Agamaite, Chang, Osmanski, and
+  Wang]{agamaite2015quantitative}
+James~A. Agamaite, Chia-Jung Chang, Michael~S. Osmanski, and Xiaoqin Wang.
+\newblock A quantitative acoustic analysis of the vocal repertoire of the
+  common marmoset ({Callithrix jacchus}).
+\newblock \emph{The Journal of the Acoustical Society of America}, 138\penalty0
+  (5):\penalty0 2906--2928, 2015.
+\newblock \doi{10.1121/1.4934268}.
+
+\bibitem[Belitsky et~al.(2025)Belitsky, Kopiczko, Dorkenwald, Mirza, Glass,
+  Snoek, and Asano]{belitsky2025kv}
+Max Belitsky, Dawid~J. Kopiczko, Michael Dorkenwald, M.~Jehanzeb Mirza,
+  James~R. Glass, Cees G.~M. Snoek, and Yuki~M. Asano.
+\newblock {KV} cache steering for controlling frozen {LLMs}.
+\newblock arXiv:2507.08799, 2025.
+\newblock URL \url{https://arxiv.org/abs/2507.08799}.
+
+\bibitem[Brown et~al.(2020)Brown, Mann, Ryder, Subbiah, Kaplan, Dhariwal,
+  Neelakantan, Shyam, Sastry, Askell, Agarwal, Herbert-Voss, Krueger, Henighan,
+  Child, Ramesh, Ziegler, Wu, Winter, Hesse, Chen, Sigler, Litwin, Gray, Chess,
+  Clark, Berner, McCandlish, Radford, Sutskever, and Amodei]{brown2020language}
+Tom Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared~D Kaplan, Prafulla
+  Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell,
+  Sandhini Agarwal, Ariel Herbert-Voss, Gretchen Krueger, Tom Henighan, Rewon
+  Child, Aditya Ramesh, Daniel Ziegler, Jeffrey Wu, Clemens Winter, Chris
+  Hesse, Mark Chen, Eric Sigler, Mateusz Litwin, Scott Gray, Benjamin Chess,
+  Jack Clark, Christopher Berner, Sam McCandlish, Alec Radford, Ilya Sutskever,
+  and Dario Amodei.
+\newblock Language models are few-shot learners.
+\newblock In \emph{Advances in Neural Information Processing Systems},
+  volume~33, pp.\  1877--1901, 2020.
+\newblock URL
+  \url{https://proceedings.neurips.cc/paper/2020/hash/1457c0d6bfcb4967418bfb8ac142f64a-Abstract.html}.
+
+\bibitem[DiMattina \& Wang(2006)DiMattina and Wang]{dimattina2006virtual}
+Christopher DiMattina and Xiaoqin Wang.
+\newblock Virtual vocalization stimuli for investigating neural representations
+  of species-specific vocalizations.
+\newblock \emph{Journal of Neurophysiology}, 95\penalty0 (2):\penalty0
+  1244--1262, 2006.
+\newblock \doi{10.1152/jn.00818.2005}.
+
+\bibitem[Glazer et~al.(2026)Glazer, Aharon, and Fetaya]{glazer2026heads}
+Neta Glazer, Lenny Aharon, and Ethan Fetaya.
+\newblock Are audio-language models listening? audio-specialist heads for
+  adaptive audio steering.
+\newblock arXiv:2603.06854, 2026.
+\newblock URL \url{https://arxiv.org/abs/2603.06854}.
+
+\bibitem[Hagiwara(2022)]{hagiwara2022aves}
+Masato Hagiwara.
+\newblock {AVES}: Animal vocalization encoder based on self-supervision.
+\newblock arXiv:2210.14493, 2022.
+\newblock URL \url{https://arxiv.org/abs/2210.14493}.
+
+\bibitem[Hagiwara et~al.(2022)Hagiwara, Hoffman, Liu, Cusimano, Effenberger,
+  and Zacarian]{hagiwara2022beans}
+Masato Hagiwara, Benjamin Hoffman, Jen-Yu Liu, Maddie Cusimano, Felix
+  Effenberger, and Katie Zacarian.
+\newblock {BEANS}: The benchmark of animal sounds.
+\newblock arXiv:2210.12300, 2022.
+\newblock URL \url{https://arxiv.org/abs/2210.12300}.
+
+\bibitem[Hastie et~al.(2009)Hastie, Tibshirani, and
+  Friedman]{hastie2009elements}
+Trevor Hastie, Robert Tibshirani, and Jerome Friedman.
+\newblock \emph{The Elements of Statistical Learning: Data Mining, Inference,
+  and Prediction}.
+\newblock Springer, 2 edition, 2009.
+\newblock \doi{10.1007/978-0-387-84858-7}.
+\newblock URL \url{https://hastie.su.domains/ElemStatLearn/}.
+
+\bibitem[Hewitt \& Liang(2019)Hewitt and Liang]{hewitt2019probes}
+John Hewitt and Percy Liang.
+\newblock Designing and interpreting probes with control tasks.
+\newblock In \emph{Proceedings of EMNLP-IJCNLP}, pp.\  2733--2743, 2019.
+\newblock \doi{10.18653/v1/D19-1275}.
+
+\bibitem[Hoerl \& Kennard(1970)Hoerl and Kennard]{hoerl1970ridge}
+Arthur~E. Hoerl and Robert~W. Kennard.
+\newblock Ridge regression: Biased estimation for nonorthogonal problems.
+\newblock \emph{Technometrics}, 12\penalty0 (1):\penalty0 55--67, 1970.
+\newblock \doi{10.1080/00401706.1970.10488634}.
+
+\bibitem[Hsu et~al.(2026)Hsu, Zhang, Tian, Zhang, and Wu]{hsu2026modality}
+Ming-Hao Hsu, Xueyao Zhang, Xiaohai Tian, Jun Zhang, and Zhizheng Wu.
+\newblock Anatomy of the modality gap: Dissecting the internal states of
+  end-to-end speech {LLMs}.
+\newblock arXiv:2603.01502, 2026.
+\newblock URL \url{https://arxiv.org/abs/2603.01502}.
+
+\bibitem[Hu et~al.(2022)Hu, Shen, Wallis, Allen-Zhu, Li, Wang, Wang, and
+  Chen]{hu2022lora}
+Edward~J. Hu, Yelong Shen, Phillip Wallis, Zeyuan Allen-Zhu, Yuanzhi Li, Shean
+  Wang, Lu~Wang, and Weizhu Chen.
+\newblock {LoRA}: Low-rank adaptation of large language models.
+\newblock In \emph{International Conference on Learning Representations}, 2022.
+\newblock URL \url{https://arxiv.org/abs/2106.09685}.
+
+\bibitem[Jaderberg et~al.(2017)Jaderberg, Czarnecki, Osindero, Vinyals, Graves,
+  Silver, and Kavukcuoglu]{jaderberg2017synthetic}
+Max Jaderberg, Wojciech~Marian Czarnecki, Simon Osindero, Oriol Vinyals, Alex
+  Graves, David Silver, and Koray Kavukcuoglu.
+\newblock Decoupled neural interfaces using synthetic gradients.
+\newblock In \emph{Proceedings of the 34th International Conference on Machine
+  Learning}, volume~70 of \emph{Proceedings of Machine Learning Research}, pp.\
+   1627--1635, 2017.
+\newblock URL \url{https://proceedings.mlr.press/v70/jaderberg17a.html}.
+
+\bibitem[Kong et~al.(2024)Kong, Goel, Badlani, Ping, Valle, and
+  Catanzaro]{kong2024audioflamingo}
+Zhifeng Kong, Arushi Goel, Rohan Badlani, Wei Ping, Rafael Valle, and Bryan
+  Catanzaro.
+\newblock {Audio Flamingo}: A novel audio language model with few-shot learning
+  and dialogue abilities.
+\newblock In \emph{Proceedings of the 41st International Conference on Machine
+  Learning}, volume 235 of \emph{Proceedings of Machine Learning Research},
+  pp.\  25125--25148. PMLR, 2024.
+\newblock URL \url{https://proceedings.mlr.press/v235/kong24a.html}.
+
+\bibitem[Lamothe et~al.(2025)Lamothe, Obliger-Debouche, Best, Trapeau, Ravel,
+  Arti{\`e}res, Marxer, and Belin]{lamothe2025marmaudio}
+Charly Lamothe, Manon Obliger-Debouche, Paul Best, R{\'e}gis Trapeau, Sabrina
+  Ravel, Thierry Arti{\`e}res, Ricard Marxer, and Pascal Belin.
+\newblock A large annotated dataset of vocalizations by common marmosets.
+\newblock \emph{Scientific Data}, 12:\penalty0 782, 2025.
+\newblock \doi{10.1038/s41597-025-04951-8}.
+
+\bibitem[Robinson et~al.(2025)Robinson, Miron, Hagiwara, Weck, Keen, Alizadeh,
+  Narula, Geist, and Pietquin]{robinson2025naturelm}
+David Robinson, Marius Miron, Masato Hagiwara, Benno Weck, Sara Keen, Milad
+  Alizadeh, Gagan Narula, Matthieu Geist, and Olivier Pietquin.
+\newblock {NatureLM-audio}: an audio-language foundation model for
+  bioacoustics.
+\newblock arXiv:2411.07186, version 2, 2025.
+\newblock URL \url{https://arxiv.org/abs/2411.07186}.
+
+\bibitem[Sarkar et~al.(2026)Sarkar, Miron, Robinson, Narula, Alizadeh,
+  Gilsenan-McMahon, Chemla, Pietquin, and Geist]{sarkar2026baseband}
+Eklavya Sarkar, Marius Miron, David Robinson, Gagan Narula, Milad Alizadeh,
+  Ellen Gilsenan-McMahon, Emmanuel Chemla, Olivier Pietquin, and Matthieu
+  Geist.
+\newblock Beyond the baseband: Adaptive multi-band encoding for full-spectrum
+  bioacoustics classification.
+\newblock arXiv:2604.27936, 2026.
+\newblock URL \url{https://arxiv.org/abs/2604.27936}.
+
+\bibitem[Sokolova \& Lapalme(2009)Sokolova and Lapalme]{sokolova2009systematic}
+Marina Sokolova and Guy Lapalme.
+\newblock A systematic analysis of performance measures for classification
+  tasks.
+\newblock \emph{Information Processing \& Management}, 45\penalty0
+  (4):\penalty0 427--437, 2009.
+\newblock \doi{10.1016/j.ipm.2009.03.002}.
+
+\bibitem[Xu et~al.(2025)Xu, Guo, He, Hu, He, Bai, Chen, Wang, Fan, Dang, Zhang,
+  Wang, Chu, and Lin]{xu2025qwen}
+Jin Xu, Zhifang Guo, Jinzheng He, Hangrui Hu, Ting He, Shuai Bai, Keqin Chen,
+  Jialin Wang, Yang Fan, Kai Dang, Bin Zhang, Xiong Wang, Yunfei Chu, and
+  Junyang Lin.
+\newblock {Qwen2.5-Omni} technical report.
+\newblock arXiv:2503.20215, 2025.
+\newblock URL \url{https://arxiv.org/abs/2503.20215}.
+
+\bibitem[Zhao et~al.(2021)Zhao, Wallace, Feng, Klein, and
+  Singh]{zhao2021calibrate}
+Zihao Zhao, Eric Wallace, Shi Feng, Dan Klein, and Sameer Singh.
+\newblock Calibrate before use: Improving few-shot performance of language
+  models.
+\newblock In \emph{Proceedings of the 38th International Conference on Machine
+  Learning}, volume 139 of \emph{Proceedings of Machine Learning Research},
+  pp.\  12697--12706, 2021.
+\newblock URL \url{https://proceedings.mlr.press/v139/zhao21c.html}.
+
+\bibitem[Zheng et~al.(2026{\natexlab{a}})Zheng, Wang, Fan, Jin, and
+  Hasegawa-Johnson]{zheng2026fsagrpo}
+Haolong Zheng, Siyin Wang, Xulin Fan, Zengrui Jin, and Mark Hasegawa-Johnson.
+\newblock {FSA-GRPO}: Teaching auditory {LLMs} to use few-shot demonstrations.
+\newblock \emph{arXiv preprint arXiv:2606.02615}, 2026{\natexlab{a}}.
+\newblock \doi{10.48550/arXiv.2606.02615}.
+\newblock URL \url{https://arxiv.org/abs/2606.02615}.
+
+\bibitem[Zheng et~al.(2026{\natexlab{b}})Zheng, Wang, Jin, and
+  Hasegawa-Johnson]{zheng2026metasicl}
+Haolong Zheng, Siyin Wang, Zengrui Jin, and Mark Hasegawa-Johnson.
+\newblock {MetaSICL}: Globalizing auditory {LLMs} for underserved speakers and
+  languages via meta speech in-context learning.
+\newblock \emph{arXiv preprint arXiv:2601.18904}, 2026{\natexlab{b}}.
+\newblock \doi{10.48550/arXiv.2601.18904}.
+\newblock URL \url{https://arxiv.org/abs/2601.18904}.
+
+\end{thebibliography}

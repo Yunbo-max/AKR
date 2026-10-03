@@ -1,0 +1,100 @@
+{
+  "source_commit": "a213de38d67471f40aed77242e6d969ac9dcea13",
+  "source_run": "results/akr_final/akr_standalone_cwj_20260922_v2",
+  "extract_type": "exact scalar fields; original fold/group lists remain in the repository",
+  "n_support": 48,
+  "n_recording_groups": 32,
+  "n_folds": 5,
+  "heldout_fold_counts": [
+    9,
+    9,
+    13,
+    11,
+    6
+  ],
+  "model": "qwen7b",
+  "seed": 20260914,
+  "hyperparameter_selection": false,
+  "rank_order": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "Full": {
+    "source_blob_sha": "013867f6974d5bf1bbcdcd43e3232a45a552b096",
+    "source_path": "results/akr_final/akr_standalone_cwj_20260922_v2/F1/s20260914_full/RESULT.json",
+    "projection_nmse": [
+      0.5719497521216123,
+      0.3956846169004526,
+      0.2857959432723514,
+      0.23231246087199528
+    ],
+    "coefficient_nmse": [
+      0.1875497656239906,
+      0.3333903904623361,
+      0.39552240272656713,
+      0.45345406166453567
+    ],
+    "predicted_nmse": [
+      0.7594995172341852,
+      0.7290750064675087,
+      0.6813183456765298,
+      0.6857665207571702
+    ],
+    "shuffled_nmse": [
+      1.237349036837931,
+      1.2562704384440952,
+      1.311493969151142,
+      1.3595255311261247
+    ],
+    "mean_cosine": [
+      0.1985808692794914,
+      0.29305288229564513,
+      0.40915288395869237,
+      0.4475337693390126
+    ],
+    "label_oracle_nmse": 0.3572137678291302,
+    "fixed_mean_nmse": 1.0,
+    "nonzero_cosine_n": 48,
+    "label_oracle_fallback_n": 0
+  },
+  "LP1": {
+    "source_blob_sha": "39197d1f3fdb6e8c0475641860584610e349f339",
+    "source_path": "results/akr_final/akr_standalone_cwj_20260922_v2/F1/s20260914_lp_1000/RESULT.json",
+    "projection_nmse": [
+      0.5887318726057309,
+      0.3793743855219472,
+      0.26789703040179563,
+      0.20714344838299883
+    ],
+    "coefficient_nmse": [
+      0.2700462090695046,
+      0.3932008716566974,
+      0.49620808663383953,
+      0.562472317689951
+    ],
+    "predicted_nmse": [
+      0.8587780811542911,
+      0.7725752564432826,
+      0.7641051158816046,
+      0.7696157654213571
+    ],
+    "shuffled_nmse": [
+      1.143868754246809,
+      1.2117727629543313,
+      1.2286348656599675,
+      1.2574241470479037
+    ],
+    "mean_cosine": [
+      0.17559643058727184,
+      0.29674756961564225,
+      0.35796002954399836,
+      0.4207725294011955
+    ],
+    "label_oracle_nmse": 0.29501117722344217,
+    "fixed_mean_nmse": 1.0,
+    "nonzero_cosine_n": 48,
+    "label_oracle_fallback_n": 0
+  }
+}

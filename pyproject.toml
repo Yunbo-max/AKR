@@ -4,30 +4,22 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "animal-omni-kv"
-version = "0.1.0"
-description = "Frequency diagnostics and KV adaptation for animal vocalizations in Qwen2.5-Omni"
+version = "0.2.0"
+description = "Acoustic-to-KV Regression for Bioacoustic Recognition in Speech Language Models"
 requires-python = ">=3.10"
 dependencies = ["numpy>=1.26", "scipy>=1.11", "soundfile>=0.12", "PyYAML>=6"]
 
 [project.optional-dependencies]
-qwen = [
-  "torch==2.13.0",
-  "torchvision==0.28.0",
-  "transformers==4.52.3",
-  "accelerate>=1.5",
-  "qwen-omni-utils==0.0.9",
-]
-test = ["pytest>=8"]
-analysis = [
-  "scikit-learn>=1.4",
-  "matplotlib>=3.8",
-  "onnxruntime>=1.23",
-]
+qwen = ["torch>=2.6", "torchvision", "transformers==4.52.3", "accelerate>=1.5", "qwen-omni-utils==0.0.9"]
+test = ["pytest>=8", "tomli>=2; python_version<'3.11'"]
+analysis = ["scikit-learn>=1.4", "matplotlib>=3.8"]
+specialist = ["onnxruntime>=1.23"]
 data = ["datasets==3.6.0", "pyarrow>=18"]
 adaptation = ["peft==0.17.1"]
 
-[tool.setuptools.packages.find]
-where = ["src"]
+[tool.setuptools]
+packages = ["animal_omni", "akr_closing", "akr_final"]
+package-dir = {animal_omni = "src/animal_omni", akr_closing = "akr_closing", akr_final = "akr_final"}
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

@@ -1,0 +1,301 @@
+{
+  "source_commit": "921e6e1a968a248d131775e25e676d5e66e7496b",
+  "units": "accuracy and macro-F1 are percentages unless explicitly named fraction",
+  "support": {
+    "source": "results/marmaudio_support_scaling_k16_statistics.json",
+    "query_n": 75,
+    "k": [
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "ridge": [
+      46.6666666667,
+      58.6666666667,
+      73.3333333333,
+      84,
+      82.6666666667
+    ],
+    "centroid": [
+      29.3333333333,
+      46.6666666667,
+      50.6666666667,
+      78.6666666667,
+      76
+    ],
+    "icl_k": [
+      1,
+      2
+    ],
+    "icl": [
+      8,
+      17.3333333333
+    ],
+    "paired_gap_ci": [
+      [
+        25.33,
+        52.0
+      ],
+      [
+        28.0,
+        54.67
+      ]
+    ],
+    "note": "Identical support IDs per k; explicit fitting versus in-context inference, not compute matched. Larger-k ICL values are not imputed."
+  },
+  "frequency": {
+    "cutoffs_khz": [
+      1,
+      2,
+      4,
+      6,
+      8
+    ],
+    "marmaudio": {
+      "source": "results/marmaudio_boundary_kv_alignment_7b.json; results/expert_qwen7b_b1_clean.csv",
+      "native": [
+        12.64,
+        15.2,
+        19.23,
+        23.08,
+        28.39
+      ],
+      "matched": [
+        77.28937728937728,
+        79.85347985347985,
+        82.6007326007326,
+        93.95604395604396,
+        94.87179487179488
+      ],
+      "transfer": [
+        34.98168498168498,
+        54.57875457875457,
+        59.52380952380952,
+        88.64468864468864,
+        95.42124542124543
+      ],
+      "full_native": 29.49,
+      "full_matched": 95.42,
+      "n": 546
+    },
+    "dogs": {
+      "source": "RESULTS.md; results/beans_dogs_probe_transfer_matrix_7b_summary.json",
+      "native": [
+        2.88,
+        2.88,
+        2.88,
+        2.88,
+        2.88
+      ],
+      "matched": [
+        87.77,
+        91.37,
+        91.37,
+        89.21,
+        94.96
+      ],
+      "transfer": [
+        40.29,
+        59.71,
+        81.29,
+        92.09,
+        91.37
+      ],
+      "full_native": 2.88,
+      "full_matched": 92.81,
+      "n": 139
+    },
+    "watkins": {
+      "source": "results/beans_watkins_frequency_qwen7b_summary.csv; results/beans_watkins_probe_transfer_matrix_7b_summary.json",
+      "native": [
+        6.1946902654867255,
+        6.489675516224189,
+        5.6047197640118,
+        6.1946902654867255,
+        5.899705014749262
+      ],
+      "matched": [
+        74.04,
+        77.88,
+        85.84,
+        86.73,
+        84.07
+      ],
+      "transfer": [
+        9.73,
+        24.19,
+        71.09,
+        82.6,
+        86.73
+      ],
+      "full_native": 6.1946902654867255,
+      "full_matched": 88.2,
+      "n": 339
+    },
+    "note": "Matched means refitted and selected on source condition, not per-query training. Transfer uses the full-input readout unchanged. Full input is unfiltered observable baseband, not the 8-kHz filtered control."
+  },
+  "repair": {
+    "source": "results/conditional_kv_lp1k_7b_randomquery_multiseed_summary.json",
+    "eta": 300,
+    "rank": 4,
+    "ridge_penalty": 10,
+    "feature_layer": 0,
+    "support_n_total": 20,
+    "support_policy": "One gradient-bearing error-enriched support event per remaining recording; not k-per-class. Query groups sampled from all recordings before failure eligibility.",
+    "seeds": [
+      20250813,
+      20250814,
+      20250815,
+      20250816,
+      20250817
+    ],
+    "query_n": [
+      39,
+      64,
+      57,
+      68,
+      82
+    ],
+    "native_correct": [
+      5,
+      9,
+      3,
+      11,
+      11
+    ],
+    "fixed_correct": [
+      2,
+      19,
+      4,
+      5,
+      13
+    ],
+    "akr_correct": [
+      12,
+      27,
+      16,
+      16,
+      31
+    ],
+    "native_f1": [
+      6.862745098039215,
+      6,
+      2.9644268774703555,
+      6.878306878306878,
+      6.871584699453552
+    ],
+    "fixed_f1": [
+      2.380952380952381,
+      12.874779541446207,
+      4.222222222222222,
+      4.585365853658537,
+      9.6360153256705
+    ],
+    "akr_f1": [
+      23.786181139122313,
+      23.663176854666215,
+      24.831649831649827,
+      19.92449780151854,
+      30.494227994228
+    ],
+    "note": "Overlapping recording-group draws; report mean and sample SD, not independent-seed pooled confidence intervals."
+  },
+  "dogs_ablation": {
+    "source": "FAIR_GAP_RESULTS.md, matched-support Dogs validation table",
+    "query_n": 139,
+    "k_per_class": 2,
+    "alpha": [
+      0.003,
+      0.01,
+      0.03
+    ],
+    "fixed": [
+      2.88,
+      2.88,
+      5.04
+    ],
+    "continuous_pooled": [
+      2.88,
+      2.88,
+      12.95
+    ],
+    "ordered": [
+      2.88,
+      7.19,
+      10.79
+    ],
+    "permuted": [
+      2.88,
+      3.6,
+      3.6
+    ],
+    "random": [
+      2.88,
+      2.88,
+      2.88
+    ],
+    "note": "Matched relative-norm Dogs comparator. Class-dictionary routing is separate."
+  },
+  "class_prompt": {
+    "source": "results/beans_dogs_AJ_cross_prompt_7b_summary.json",
+    "variant": "class-routed pooled, not continuous AKR",
+    "query_n": 139,
+    "alpha": 0.03,
+    "prompts": [
+      "Paraphrase",
+      "Reversed candidates"
+    ],
+    "native": [
+      12.949640287769784,
+      10.79136690647482
+    ],
+    "repair": [
+      30.93525179856115,
+      18.705035971223023
+    ],
+    "gain_ci": [
+      [
+        9.352517985611511,
+        26.618705035971225
+      ],
+      [
+        0,
+        15.827338129496402
+      ]
+    ],
+    "native_f1": [
+      7.584301663249031,
+      2.0134228187919465
+    ],
+    "repair_f1": [
+      24.965861344537814,
+      13.450895140664962
+    ]
+  },
+  "geometry": {
+    "source": "results/marmaudio_boundary_kv_alignment_7b.json; results/correction_geometry_decomposition_7b.json",
+    "cosine_to_full": [
+      0.5146303081086704,
+      0.6252632481711251,
+      0.7233673845018659,
+      0.8248620842184339,
+      0.9786602450268609
+    ],
+    "drift_gap_pp": [
+      42.307692307692314,
+      25.274725274725284,
+      23.076923076923073,
+      5.311355311355315,
+      -0.5494505494505586
+    ],
+    "spearman": 1.0,
+    "pearson": 0.9694185955947864,
+    "n_conditions": 5,
+    "dogs_centroid_raw_energy_percent": 89.19,
+    "dogs_class_centered_variance_percent": 88.48,
+    "dogs_between_within": 7.68,
+    "note": "Gradient geometry is label-conditioned. Across-cutoff association is descriptive, not a causal mediation result."
+  }
+}

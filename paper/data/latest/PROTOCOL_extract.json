@@ -1,0 +1,66 @@
+{
+  "source_commit": "a213de38d67471f40aed77242e6d969ac9dcea13",
+  "source_path": "results/akr_final/akr_standalone_cwj_20260922_v2/STANDALONE_PROTOCOL.json",
+  "source_blob_sha": "da814c52760fe3760e5421d371f3a364f6dcacd6",
+  "extract_type": "selected protocol fields, not full original JSON",
+  "completed_at": "2026-09-22 11:03:41 Asia/Shanghai",
+  "dataset": "MA-CT",
+  "seed": 20260914,
+  "k_per_class": 8,
+  "n_support": 48,
+  "n_query": 97,
+  "conditions": [
+    "full",
+    "lp:1000"
+  ],
+  "rank": 4,
+  "ridge_alpha": 10.0,
+  "relative_alpha": 0.01,
+  "scope": "audio",
+  "scale_type": "relative_active_state_norm",
+  "hyperparameter_selection": false,
+  "settings_origin": "standalone fixed YAML; not historical selected locks",
+  "models": {
+    "qwen7b": {
+      "model_id": "Qwen/Qwen2.5-Omni-7B",
+      "revision": "ae9e1690543ffd5c0221dc27f79834d0294cba00",
+      "feature_layer": 24,
+      "layers": [
+        7,
+        14,
+        21,
+        24
+      ]
+    },
+    "qwen3b": {
+      "model_id": "Qwen/Qwen2.5-Omni-3B",
+      "revision": "f75b40e3da2003cdd6e1829b1f420ca70797c34e",
+      "feature_layer": 32,
+      "layers": [
+        9,
+        18,
+        27,
+        31
+      ]
+    }
+  },
+  "hardware": "RTX 4090",
+  "dtype": "bfloat16",
+  "batch_size": 1,
+  "support_gradient_groups": 32,
+  "support_labels": [
+    "Infant Cry",
+    "Phee",
+    "Seep",
+    "Trill",
+    "Tsik",
+    "Twitter"
+  ],
+  "completed_tasks": [
+    "F1",
+    "F2",
+    "F3"
+  ],
+  "zero_alpha_checks": "repository export audit reports all passed",
+  "source_array_exported": false
+}

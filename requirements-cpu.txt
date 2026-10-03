@@ -1,0 +1,2 @@
+# Install CPU PyTorch separately when running hook tests without a GPU.
+-e .[test,analysis]

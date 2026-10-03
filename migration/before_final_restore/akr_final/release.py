@@ -33,37 +33,6 @@ def make_command(root: Path, run_id: str, tasks: list[str], profile: str, execut
     return cmd+(['--execute'] if execute else [])
 
 
-def _bounded(command: list[str], root: Path, env: dict, deadline: float) -> int:
-    """Apply one shared deadline to preflight and execution; retain checkpoints."""
-    remaining = deadline - time.monotonic()
-    if remaining <= 0:
-        return 124
-    proc = subprocess.Popen(command, cwd=root, env=env, start_new_session=True)
-    old_term = signal.getsignal(signal.SIGTERM)
-    def interrupt(*_):
-        raise KeyboardInterrupt
-    signal.signal(signal.SIGTERM, interrupt)
-    try:
-        return proc.wait(timeout=remaining)
-    except (subprocess.TimeoutExpired, KeyboardInterrupt):
-        try:
-            os.killpg(proc.pid, signal.SIGTERM)
-        except ProcessLookupError:
-            pass
-        try:
-            proc.wait(timeout=90)
-        except subprocess.TimeoutExpired:
-            try:
-                os.killpg(proc.pid, signal.SIGKILL)
-            except ProcessLookupError:
-                pass
-            proc.wait()
-        print('Stopped: checkpoints retained; incomplete tasks have no final score.', file=sys.stderr)
-        return 124
-    finally:
-        signal.signal(signal.SIGTERM, old_term)
-
-
 def main(argv=None):
     ap=argparse.ArgumentParser(description=__doc__)
     ap.add_argument('action',choices=['plan','check','run'],nargs='?',default='plan')
@@ -84,16 +53,24 @@ def main(argv=None):
                           'models':registry['models'],'command':command,
                           'raw_audio_required':True,'old_RUN_LOCK_required':False,
                           'gpu_started':False},indent=2));return 0
-    if args.action == 'run' and not args.execute:
-        print('Use run --execute to authorize model loading; use plan/check otherwise.', file=sys.stderr)
-        return 2
     env=os.environ.copy();env['PYTHONPATH']=str(root/'src')+os.pathsep+str(root)
     env.setdefault('OMP_NUM_THREADS','1');env.setdefault('TOKENIZERS_PARALLELISM','false')
-    # Preflight shares the time cap, rather than running outside an unbounded wait.
-    deadline=time.monotonic()+args.budget_hours*3600
+    # Always run file/hash/partition preflight before any model load.
     preflight=make_command(root,args.run_id,tasks,args.profile,False)
-    status=_bounded(preflight,root,env,deadline)
-    if status or args.action=='check':return status
-    return _bounded(command,root,env,deadline)
+    start=time.monotonic()
+    status=subprocess.run(preflight,cwd=root,env=env,check=False).returncode
+    if status or args.action=='check' or not args.execute:return status
+    remaining=args.budget_hours*3600-(time.monotonic()-start)
+    if remaining<=0: return 124
+    proc=subprocess.Popen(command,cwd=root,env=env,start_new_session=True)
+    try:
+        return proc.wait(timeout=remaining)
+    except (subprocess.TimeoutExpired,KeyboardInterrupt):
+        os.killpg(proc.pid,signal.SIGTERM)
+        try:proc.wait(timeout=90)
+        except subprocess.TimeoutExpired:
+            os.killpg(proc.pid,signal.SIGKILL);proc.wait()
+        print('Budget/interrupt stop: keep partial journals; no partial aggregate is a completed result.',file=sys.stderr)
+        return 124
 
 if __name__=='__main__':raise SystemExit(main())
