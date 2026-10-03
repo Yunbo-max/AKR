@@ -2,6 +2,8 @@
 
 **Bioacoustic Recognition in Speech Language Models.** Canonical consolidation: `Yunbo-max/AKR`.
 
+**2026-10-03 verification:** 148 CPU tests passed with no failures or skips; all 116 offline release checks passed. [Remote verification](docs/research/REMOTE_VERIFICATION_20261003.json) · [Tested materialization run](https://github.com/Yunbo-max/AKR/actions/runs/37131602379) · [Integration PR #1](https://github.com/Yunbo-max/AKR/pull/1). No new GPU experiment was run; S1 remains pending real-model evaluation.
+
 AKR predicts continuous **additive K/V corrections**, not animal labels or replacement model weights. Labelled support recordings supply negative answer-loss gradients; centred SVD and ridge regression map frozen acoustic features to correction coefficients. An unlabelled query uses a feature pass followed by an intervened generation pass. The Speech LM stays frozen.
 
 ## Start here
@@ -15,10 +17,13 @@ AKR predicts continuous **additive K/V corrections**, not animal labels or repla
 
 **No old `RUN.json` or `LOCK.json` is needed by the standalone entrypoint.** Raw audio and accessible model weights are still needed. Missing feature/gradient caches are recomputed; missing historical sample identities cannot be invented. New runs receive new metadata and are not silently called historical replications.
 
+Fresh CPU verification environment (omit the CPU-wheel installation in an existing working GPU environment):
+
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-pip install -r requirements-cpu.txt
+python -m pip install 'torch==2.6.0' --index-url https://download.pytorch.org/whl/cpu
+python -m pip install -r requirements-cpu.txt
 PYTHONPATH=src:. python -m pytest -q
 python scripts/check_akr_release.py
 python scripts/run_akr_release.py plan
