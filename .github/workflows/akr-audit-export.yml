@@ -1,3 +1,4 @@
+# Snapshot refresh: requested final audit, 2026-10-03. No model execution.
 name: AKR audit source export
 on:
   push:
