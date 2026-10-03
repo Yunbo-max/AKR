@@ -1,0 +1,24 @@
+{
+  "base_commit": "921e6e1a968a248d131775e25e676d5e66e7496b",
+  "tested_code_commit": "54688357785a8b90eda0a59b48699acf37fdf7ad",
+  "local_cpu": {
+    "passed": 84,
+    "skipped": 1,
+    "skip_reason": "Full original animal_omni source absent from local overlay; actual regressor test verified in remote CI."
+  },
+  "remote_ci": {
+    "run_id": 35564015188,
+    "job_id": 106222156694,
+    "conclusion": "success",
+    "passed": 26,
+    "skipped": 0,
+    "url": "https://github.com/yuhanlydia/animal/actions/runs/35564015188",
+    "test_log": "26 passed in 2.74s"
+  },
+  "compileall": "pass",
+  "shell_syntax": "pass",
+  "cli_help": "pass",
+  "gpu_scientific_experiments_run": 0,
+  "new_accuracy_results": false,
+  "existing_akr_closing_or_src_files_changed": false
+}

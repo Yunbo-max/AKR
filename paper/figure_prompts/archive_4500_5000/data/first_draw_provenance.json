@@ -1,0 +1,39 @@
+{
+  "source_commit": "921e6e1a968a248d131775e25e676d5e66e7496b",
+  "source_path": "results/conditional_kv_lp1k_7b_randomquery_seed20250813.csv",
+  "scope": "First numerically indexed historical recording-group draw; complete n=39; fixed-mean versus continuous AKR only; no native per-event predictions used; not a representative estimate across all draws.",
+  "transcription": "Five columns transcribed from the GitHub connector response; accuracy and macro-F1 reproduced against the original draw summary.",
+  "labels": [
+    "Infant Cry",
+    "Phee",
+    "Seep",
+    "Trill",
+    "Tsik",
+    "Twitter"
+  ],
+  "seed": 20250813,
+  "support_total": 20,
+  "eta": 300,
+  "rank": 4,
+  "feature_layer": 0,
+  "metrics": [
+    {
+      "method": "fixed_mean",
+      "accuracy": 5.128205128205128,
+      "macro_f1": 2.380952380952381,
+      "effective_classes": 2.5779593556884937,
+      "emitted_classes": 4,
+      "invalid": 0
+    },
+    {
+      "method": "conditional",
+      "accuracy": 30.76923076923077,
+      "macro_f1": 23.786181139122313,
+      "effective_classes": 3.8019133875836126,
+      "emitted_classes": 4,
+      "invalid": 0
+    }
+  ],
+  "repaired": 12,
+  "damaged": 2
+}

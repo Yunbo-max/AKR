@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "animal-omni-kv"
+version = "0.1.0"
+description = "Frequency diagnostics and KV adaptation for animal vocalizations in Qwen2.5-Omni"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26", "scipy>=1.11", "soundfile>=0.12", "PyYAML>=6"]
+
+[project.optional-dependencies]
+qwen = [
+  "torch==2.13.0",
+  "torchvision==0.28.0",
+  "transformers==4.52.3",
+  "accelerate>=1.5",
+  "qwen-omni-utils==0.0.9",
+]
+test = ["pytest>=8"]
+analysis = [
+  "scikit-learn>=1.4",
+  "matplotlib>=3.8",
+  "onnxruntime>=1.23",
+]
+data = ["datasets==3.6.0", "pyarrow>=18"]
+adaptation = ["peft==0.17.1"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,40 @@
+event_id,recording_id,target,fixed_mean,conditional
+143307,2022_2_8,Tsik,Tsik,Twitter
+152770,2022_2_8,Twitter,Tsik,Tsik
+190781,2022_4_0,Trill,Phee,Phee
+195490,2022_4_0,Trill,Phee,Phee
+200722,2022_4_0,Tsik,Phee,Tsik
+228489,2020_2_0,Seep,Phee,Tsik
+228842,2020_2_0,Twitter,Tsik,Tsik
+235891,2022_4_0,Seep,Tsik,Tsik
+237804,2022_12_1,Infant Cry,Tsik,Tsik
+238029,2022_12_1,Infant Cry,Tsik,Seep
+238306,2020_2_0,Infant Cry,Tsik,Tsik
+238981,2020_2_0,Trill,Tsik,Twitter
+241125,2020_2_0,Twitter,Tsik,Twitter
+250172,2022_4_0,Twitter,Tsik,Twitter
+268974,2022_12_1,Phee,Twitter,Phee
+269263,2022_12_1,Trill,Tsik,Twitter
+273977,2022_12_1,Twitter,Phee,Phee
+277849,2020_2_0,Seep,Phee,Tsik
+285498,2020_2_0,Seep,Phee,Tsik
+285967,2020_2_0,Phee,Twitter,Phee
+297892,2022_12_1,Seep,Tsik,Seep
+31471,2022_1_3,Tsik,Tsik,Seep
+315549,2022_3_9,Infant Cry,Tsik,Tsik
+317391,2022_3_9,Phee,Tsik,Phee
+31828,2022_1_3,Seep,Phee,Tsik
+34756,2022_1_3,Phee,Twitter,Phee
+36485,2022_1_3,Phee,Tsik,Phee
+36522,2022_1_3,Twitter,Tsik,Phee
+452855,2022_4_4,Twitter,Tsik,Twitter
+518850,2022_12_4,Infant Cry,Phee,Twitter
+601927,2020_12_1,Twitter,Tsik,Twitter
+602268,2020_12_1,Twitter,Tsik,Twitter
+604234,2020_12_1,Infant Cry,Tsik,Tsik
+612455,2020_12_1,Infant Cry,Tsik,Twitter
+612456,2020_12_1,Infant Cry,Tsik,Seep
+612715,2020_12_1,Infant Cry,Tsik,Tsik
+619623,2020_12_1,Seep,Phee,Twitter
+84423,2022_1_6,Tsik,Phee,Phee
+84477,2022_1_6,Twitter,Seep,Seep

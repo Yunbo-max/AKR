@@ -1,0 +1,3 @@
+# Install driver-compatible PyTorch and torchvision FIRST.
+# No model weights are downloaded by this requirements file.
+-e .[qwen,adaptation,data]

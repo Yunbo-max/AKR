@@ -1,0 +1,14 @@
+{
+  "complete": true,
+  "run_id": "akr_standalone_cwj_20260922_v2",
+  "source_result_files_copied_byte_for_byte": 5550,
+  "complete_prediction_journals": 32,
+  "verified_journal_items": 3104,
+  "queries_per_journal": 97,
+  "complete_metric_tables": 34,
+  "f1_complete_episodes": 2,
+  "zero_alpha_text_and_label_checks": "passed for all exported zero_alpha journals",
+  "source_array_checksums_verified": 772,
+  "raw_audio_and_model_weights_in_export": false,
+  "local_array_files_in_export": false
+}

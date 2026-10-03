@@ -1,0 +1,25 @@
+# NEW fixed-config evaluation. No old RUN.json / LOCK.json or cache required.
+# Do not mix its scores with old source-selected evaluations. No grid search.
+dataset: marmaudio
+manifest: data/manifests/marmaudio_expert_validation.csv
+old_root: /root/animal-omni-kv
+group_key: recording_id
+labels: [Infant Cry, Phee, Seep, Trill, Tsik, Twitter]
+seeds: [20260914]
+k_per_class: 8
+conditions: [full, 'lp:1000']
+fixed_settings:
+  rank: 4
+  alpha: 0.01
+  ridge_alpha: 10.0
+ranks: [1, 2, 4, 8]
+folds: 5
+model_7b:
+  id: Qwen/Qwen2.5-Omni-7B
+  revision: ae9e1690543ffd5c0221dc27f79834d0294cba00
+model_3b:
+  id: Qwen/Qwen2.5-Omni-3B
+  revision: f75b40e3da2003cdd6e1829b1f420ca70797c34e
+layer_fractions: [0.25, 0.5, 0.75, 0.875]
+feature_fraction: 0.875
+max_context_tokens: 32768

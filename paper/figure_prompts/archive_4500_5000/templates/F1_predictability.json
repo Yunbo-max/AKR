@@ -1,0 +1,56 @@
+{
+  "status": "awaiting_complete_results",
+  "instruction": "Replace with complete F1 output; null is missing, never zero.",
+  "complete": false,
+  "n_support": null,
+  "n_recording_groups": null,
+  "seed_count": null,
+  "condition": null,
+  "folds": [],
+  "rows": [
+    {
+      "rank": 1,
+      "predicted_nmse": null,
+      "projection_nmse": null,
+      "coefficient_nmse": null,
+      "shuffled_nmse": null,
+      "fixed_mean_nmse": null,
+      "mean_cosine": null,
+      "nonzero_cosine_n": null,
+      "decomposition_residual": null
+    },
+    {
+      "rank": 2,
+      "predicted_nmse": null,
+      "projection_nmse": null,
+      "coefficient_nmse": null,
+      "shuffled_nmse": null,
+      "fixed_mean_nmse": null,
+      "mean_cosine": null,
+      "nonzero_cosine_n": null,
+      "decomposition_residual": null
+    },
+    {
+      "rank": 4,
+      "predicted_nmse": null,
+      "projection_nmse": null,
+      "coefficient_nmse": null,
+      "shuffled_nmse": null,
+      "fixed_mean_nmse": null,
+      "mean_cosine": null,
+      "nonzero_cosine_n": null,
+      "decomposition_residual": null
+    },
+    {
+      "rank": 8,
+      "predicted_nmse": null,
+      "projection_nmse": null,
+      "coefficient_nmse": null,
+      "shuffled_nmse": null,
+      "fixed_mean_nmse": null,
+      "mean_cosine": null,
+      "nonzero_cosine_n": null,
+      "decomposition_residual": null
+    }
+  ]
+}

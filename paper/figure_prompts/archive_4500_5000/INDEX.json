@@ -1,0 +1,301 @@
+{
+  "count_policy": "len(entire UTF-8 decoded prompt including spaces, Markdown headings and LF newlines); no BOM",
+  "items": [
+    {
+      "id": "01",
+      "title": "任务与同监督动机",
+      "ratio": "16:9",
+      "source": [
+        "data/plot_data.json"
+      ],
+      "target": [
+        "figures/fig1_calls.pdf",
+        "figures/fig1_matched.pdf",
+        "figures/fig1_scaling.pdf"
+      ],
+      "status": "existing",
+      "characters": 4857,
+      "file": "prompts/01_motivation.md",
+      "plain_text": "prompts/01_motivation.txt",
+      "sha256": "ceb7e2a1001e791940981a96191a3aeae521cc1a33fed017dddd41195b4fd5b2"
+    },
+    {
+      "id": "02",
+      "title": "AKR 方法主图",
+      "ratio": "16:9",
+      "source": [],
+      "target": [
+        "figures/fig2_method.pdf"
+      ],
+      "status": "existing",
+      "characters": 4776,
+      "file": "prompts/02_method_pipeline.md",
+      "plain_text": "prompts/02_method_pipeline.txt",
+      "sha256": "8872161ddfbf8d2510e299908ac655b9caefd119baeacb0a59429383b8e63443"
+    },
+    {
+      "id": "03",
+      "title": "三任务频谱读出分析",
+      "ratio": "16:9",
+      "source": [
+        "data/plot_data.json"
+      ],
+      "target": [
+        "figures/fig3_marmaudio.pdf",
+        "figures/fig3_dogs.pdf",
+        "figures/fig3_watkins.pdf"
+      ],
+      "status": "existing",
+      "characters": 4852,
+      "file": "prompts/03_spectral_readout.md",
+      "plain_text": "prompts/03_spectral_readout.txt",
+      "sha256": "703adc0200a3190bc3d117e40e10b6661c64cc82c62d6622e2c9fb25c9ce8454"
+    },
+    {
+      "id": "04",
+      "title": "连续 AKR 五划分结果",
+      "ratio": "16:9",
+      "source": [
+        "data/plot_data.json"
+      ],
+      "target": [
+        "figures/fig4_splits.pdf",
+        "figures/fig4_f1.pdf"
+      ],
+      "status": "existing",
+      "characters": 4929,
+      "file": "prompts/04_continuous_AKR_results.md",
+      "plain_text": "prompts/04_continuous_AKR_results.txt",
+      "sha256": "c321de8cd7cb3507e9bed644d6a4769fe3f34f175c072e3e14e49a16050e87e1"
+    },
+    {
+      "id": "05",
+      "title": "梯度方向与读出漂移",
+      "ratio": "1:1",
+      "source": [
+        "data/plot_data.json"
+      ],
+      "target": [
+        "figures/appendix_rotation.pdf"
+      ],
+      "status": "existing",
+      "characters": 4738,
+      "file": "prompts/05_gradient_rotation.md",
+      "plain_text": "prompts/05_gradient_rotation.txt",
+      "sha256": "08e88f73af72114a016867418bfeccc8325b27e5963b75cdd9ad0cdae46e5fbb"
+    },
+    {
+      "id": "06",
+      "title": "双向频谱迁移",
+      "ratio": "16:9",
+      "source": [
+        "additional_analysis/source_data.json",
+        "additional_analysis/bidirectional_transfer.csv"
+      ],
+      "target": [
+        "figures/analysis/02_bidirectional_readout_transfer.pdf"
+      ],
+      "status": "existing",
+      "characters": 4845,
+      "file": "prompts/06_bidirectional_transfer.md",
+      "plain_text": "prompts/06_bidirectional_transfer.txt",
+      "sha256": "5452486d2f7fec7694456ea2e9191a41b59efede34d1edbdeb514882a31e4aa9"
+    },
+    {
+      "id": "07",
+      "title": "Dogs 频谱迁移差距矩阵",
+      "ratio": "1:1",
+      "source": [
+        "additional_analysis/source_data.json"
+      ],
+      "target": [
+        "figures/analysis/01_dogs_transfer_deficit.pdf"
+      ],
+      "status": "existing",
+      "characters": 4891,
+      "file": "prompts/07_dogs_transfer_matrix.md",
+      "plain_text": "prompts/07_dogs_transfer_matrix.txt",
+      "sha256": "afe47c6e16ede777ff8e7b55c3a75d25e8e432cd51c058ab632359d0edc3c143"
+    },
+    {
+      "id": "08",
+      "title": "Watkins 频谱迁移差距矩阵",
+      "ratio": "1:1",
+      "source": [
+        "additional_analysis/source_data.json"
+      ],
+      "target": [
+        "figures/analysis/01_watkins_transfer_deficit.pdf"
+      ],
+      "status": "existing",
+      "characters": 4887,
+      "file": "prompts/08_watkins_transfer_matrix.md",
+      "plain_text": "prompts/08_watkins_transfer_matrix.txt",
+      "sha256": "68f22cc75d6a6eb9b39ba3ea690a8959fc24fffb3ccac25618cca7e834f4b98f"
+    },
+    {
+      "id": "09",
+      "title": "读出变化与迁移差距平面",
+      "ratio": "1:1",
+      "source": [
+        "additional_analysis/readout_phase.csv",
+        "data/plot_data.json"
+      ],
+      "target": [
+        "figures/analysis/03_readout_change_vs_transfer_deficit.pdf"
+      ],
+      "status": "existing",
+      "characters": 4914,
+      "file": "prompts/09_readout_difference_plane.md",
+      "plain_text": "prompts/09_readout_difference_plane.txt",
+      "sha256": "46a54a708fc9b85bd46ee6c799cfd6677dc7993dd6c318ef5b3e819d4fb7078c"
+    },
+    {
+      "id": "10",
+      "title": "跨 prompt 修复与改错",
+      "ratio": "16:9",
+      "source": [
+        "additional_analysis/source_data.json",
+        "additional_analysis/cross_prompt_transitions.csv"
+      ],
+      "target": [
+        "figures/analysis/04_cross_prompt_repairs_and_harms.pdf"
+      ],
+      "status": "existing",
+      "characters": 4948,
+      "file": "prompts/10_prompt_repairs_and_harms.md",
+      "plain_text": "prompts/10_prompt_repairs_and_harms.txt",
+      "sha256": "7f2a234a5fb3fa45ba12c40abbab60bdc4afc16e7710a45c078393ee5e727f73"
+    },
+    {
+      "id": "11",
+      "title": "完整首划分类别混淆变化",
+      "ratio": "1:1",
+      "source": [
+        "data/first_draw_predictions.csv",
+        "data/first_draw_provenance.json"
+      ],
+      "target": [
+        "figures/analysis/07_first_draw_confusion_change.pdf"
+      ],
+      "status": "existing",
+      "characters": 4960,
+      "file": "prompts/11_class_confusion_change.md",
+      "plain_text": "prompts/11_class_confusion_change.txt",
+      "sha256": "d0274c2dc0d171f74c09ff3e499fdb2573e08e1614fc2274cb432f0190662b11"
+    },
+    {
+      "id": "12",
+      "title": "输出覆盖与识别质量",
+      "ratio": "1:1",
+      "source": [
+        "data/first_draw_predictions.csv",
+        "data/first_draw_provenance.json"
+      ],
+      "target": [
+        "figures/analysis/08_first_draw_coverage.pdf"
+      ],
+      "status": "existing",
+      "characters": 4925,
+      "file": "prompts/12_label_coverage.md",
+      "plain_text": "prompts/12_label_coverage.txt",
+      "sha256": "d667d3e6cd0e2c9b7d5e712a63a1d059683a8b58efd2e333392818c8e7108f9a"
+    },
+    {
+      "id": "13",
+      "title": "模型规模与频谱交叉",
+      "ratio": "1:1",
+      "source": [
+        "additional_analysis/source_data.json"
+      ],
+      "target": [
+        "figures/analysis/05_model_size_bandwidth_interaction.pdf"
+      ],
+      "status": "existing",
+      "characters": 4864,
+      "file": "prompts/13_model_size_bandwidth.md",
+      "plain_text": "prompts/13_model_size_bandwidth.txt",
+      "sha256": "3bcaff3c62f6b1f81aa8e06c7212da2a668d97532854370a9efede8323e1335b"
+    },
+    {
+      "id": "14",
+      "title": "回归秩与特征层交互",
+      "ratio": "1:1",
+      "source": [
+        "additional_analysis/source_data.json"
+      ],
+      "target": [
+        "figures/analysis/06_rank_feature_depth.pdf"
+      ],
+      "status": "existing",
+      "characters": 4898,
+      "file": "prompts/14_rank_feature_depth.md",
+      "plain_text": "prompts/14_rank_feature_depth.txt",
+      "sha256": "7b3de454fd31911cc7fd8d84c416c451cd88e9564d6798178ecf8233d2c1161a"
+    },
+    {
+      "id": "15",
+      "title": "修正强度与输出稳定性",
+      "ratio": "1:1",
+      "source": [
+        "data/strength_stability.json"
+      ],
+      "target": [
+        "figures/analysis/09_strength_stability.pdf"
+      ],
+      "status": "existing",
+      "characters": 4900,
+      "file": "prompts/15_strength_stability.md",
+      "plain_text": "prompts/15_strength_stability.txt",
+      "sha256": "99cdb971e0026da190d6ff2241a9f3490742f57520f848271ededdbb37b7fbc8"
+    },
+    {
+      "id": "F1",
+      "title": "可压缩性与可预测性",
+      "ratio": "16:9",
+      "source": [
+        "templates/F1_predictability.json"
+      ],
+      "target": [
+        "figures/new/f1_predictability.pdf"
+      ],
+      "status": "pending_results",
+      "characters": 4797,
+      "file": "new_experiments/F1_prompt.md",
+      "plain_text": "new_experiments/F1_prompt.txt",
+      "sha256": "2661dac5a1ce00246bc64f1554510cf6b2dad9acaef10e832f45f8bed2c0b1ef"
+    },
+    {
+      "id": "F2",
+      "title": "连续 AKR 跨频谱迁移",
+      "ratio": "1:1",
+      "source": [
+        "templates/F2_transfer.csv"
+      ],
+      "target": [
+        "figures/new/f2_correction_transfer.pdf"
+      ],
+      "status": "pending_results",
+      "characters": 4757,
+      "file": "new_experiments/F2_prompt.md",
+      "plain_text": "new_experiments/F2_prompt.txt",
+      "sha256": "d091b674084f7651c7572aa01ed73c9bcbfd1e15505ce1eb7a8e872d7c66037f"
+    },
+    {
+      "id": "F3",
+      "title": "7B 与 3B 规模比较",
+      "ratio": "16:9",
+      "source": [
+        "templates/F3_scale.csv"
+      ],
+      "target": [
+        "figures/new/f3_locked_scale_comparison.pdf"
+      ],
+      "status": "pending_results",
+      "characters": 4826,
+      "file": "new_experiments/F3_prompt.md",
+      "plain_text": "new_experiments/F3_prompt.txt",
+      "sha256": "581f945520db76a313bc43b1b0ef7b19331947132ebf134ebc2979c7528717cf"
+    }
+  ]
+}

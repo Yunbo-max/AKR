@@ -1,0 +1,27 @@
+# Snapshot refresh: requested final audit, 2026-10-03. No model execution.
+name: AKR audit source export
+on:
+  push:
+    branches: [akr-final-consolidation-20261002]
+    paths: ['.github/workflows/akr-audit-export.yml']
+permissions:
+  contents: read
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Export exact committed sources without executing project code
+        run: |
+          git rev-parse HEAD > "$RUNNER_TEMP/akr-source-sha.txt"
+          git archive --format=zip --output="$RUNNER_TEMP/akr-audit-source.zip" HEAD
+      - uses: actions/upload-artifact@v4
+        with:
+          name: akr-audit-source
+          path: |
+            ${{ runner.temp }}/akr-audit-source.zip
+            ${{ runner.temp }}/akr-source-sha.txt
+          retention-days: 7

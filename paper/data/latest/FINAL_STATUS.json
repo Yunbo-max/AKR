@@ -1,0 +1,24 @@
+{
+  "complete": true,
+  "execute_requested": true,
+  "not_a_scientific_success_gate": true,
+  "required_tasks": [
+    "F1",
+    "F2",
+    "F3"
+  ],
+  "tasks": {
+    "F1": {
+      "positive_result_required": false,
+      "status": "complete"
+    },
+    "F2": {
+      "positive_result_required": false,
+      "status": "complete"
+    },
+    "F3": {
+      "positive_result_required": false,
+      "status": "complete"
+    }
+  }
+}

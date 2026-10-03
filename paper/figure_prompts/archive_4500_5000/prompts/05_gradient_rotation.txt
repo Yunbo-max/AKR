@@ -1,0 +1,23 @@
+## 1. Figure goal
+Create a focused analysis scatterplot relating bandwidth-dependent readout transfer deficits to changes in supervised corrective-gradient orientation. It belongs to the MarmAudio analysis of the AKR paper. It is not a causal mediation test, a training curve, or evidence that the regressor predicts held-out gradients accurately.
+
+## 2. Canvas and hierarchy
+Use a 1:1 square white canvas with one large plotting area. Reserve slightly more space at the left and bottom for readable axis labels, and keep a small inner margin around annotations. No overall title, decorative frequency waves, animal silhouettes, shaded quadrant names, or enlarged correlation badge.
+
+## 3. Exact observations
+Use data/plot_data.json, section geometry, together with its referenced alignment summary. Each pair below is x,y, where y is in percentage points: LP1=(0.4853696919,42.30769231), LP2=(0.3747367518,25.27472527), LP4=(0.2766326155,23.07692308), LP6=(0.1751379158,5.31135531), LP8=(0.0213397550,-0.54945055). These correspond to cutoffs 1,2,4,6,8 kHz. There are exactly five observations. Source-reported descriptive statistics are Spearman rho=1.00 and Pearson r=0.969. Use the higher-precision arrays for plotting and round only the text labels. Do not duplicate points, jitter them, or turn them into a larger apparent sample.
+
+## 4. Axis definitions
+The horizontal coordinate is one minus the mean cosine similarity between a cutoff's corrective gradients and the full-input reference. Label it 'Corrective-target change (1 - cosine)'. It is not an angle in degrees, Euclidean displacement, or gradient magnitude. The vertical coordinate is condition-fitted readout accuracy minus unchanged full-trained readout accuracy on the same filtered queries; label it 'Readout transfer deficit (pp)'. Set x approximately from -0.02 to 0.54 and y from -5 to 48. Preserve the negative LP8 deficit. A thin horizontal zero reference helps interpret that point. The x axis does not represent cutoff or model depth.
+
+## 5. Mark and annotation grammar
+Use five equal-size solid markers in one muted accent or neutral dark tone. Label each point directly by cutoff: '1 kHz', '2 kHz', '4 kHz', '6 kHz', '8 kHz'. Do not encode importance by marker area because the five conditions are not frequency-weighted observations. Place the 2- and 4-kHz labels on different sides to prevent collisions. Keep the LP8 label clear of the axes. Use small, light leader segments only when label displacement is necessary. Prefer no connecting line: the observed ordering is visible from the labels and coordinates. In particular, do not add a fitted trend, smooth curve, confidence ellipse, or shaded regression ribbon.
+
+## 6. Typography and visual balance
+Use one clean sans-serif family. At a final square width of about 3.5 inches, keep axes and cutoff labels at least comfortably readable, roughly 8-9 pt. Use a slightly heavier stroke for observations than for axes; remove top and right spines if doing so improves clarity. A few faint horizontal guides are enough. Leave open white space above the low-deficit points and around the high-deficit point rather than filling it with interpretation text. Use consistent minus signs and decimal formatting. If rho is shown inside the chart, use one small line '5 cutoff conditions; rho = 1.00', never a celebratory badge.
+
+## 7. Evidence and caption boundary
+The targets are correct-label gradients, so their structure is supervised and potentially label dependent. Both axes vary with the same bandwidth manipulation. Their association can motivate studying recording-appropriate corrections, but cannot establish that gradient rotation causes decoder errors. These are not individual recordings, five independent training seeds, or a universal law. Keep that explanation in an external caption, not printed across the plot. Do not rename the horizontal variable 'acoustic semantic drift' or claim a measured physical movement of the decoder's decision boundary. Low projection error and successful acoustic prediction are separate questions not answered here.
+
+## 8. Production and validation
+Export figures/appendix_rotation.pdf, an editable SVG, and a square high-resolution PNG. Use plotting code to place the numerical marks exactly and keep the full 1:1 export frame. Recheck the five cutoff labels against their coordinates, ensure the LP8 value remains below zero, and verify that any shown correlations are descriptive source statistics rather than a newly claimed significance test. Put the file source and methodological detail in the caption or companion notes. Do not compute new model outputs, synthesize gradient vectors, hide an inconvenient point, or modify the data to strengthen a trend.

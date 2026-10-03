@@ -1,0 +1,23 @@
+## 1. Figure goal and status
+Prepare the F2 source-bandwidth transfer figure for continuous AKR. It asks whether a correction map fitted from one support bandwidth remains useful when applied to another query bandwidth. This is a pending-result design, not a completed experiment. templates/F2_transfer.csv contains a header only. Do not populate the figure using frozen-probe transfer scores or assume that cross-condition repair must succeed.
+
+## 2. Canvas and layout
+Use a 1:1 square white canvas centered on a 2 by 2 matrix. Put source support condition on the vertical axis and target query condition on the horizontal axis, each ordered Full then LP1. Leave room beside the matrix for a narrow signed color scale, and below it for a compact two-item numerical key. Use generous white margins and large readable cell annotations rather than a crowded multi-panel dashboard. No global title, diagonal success slogan, large model icon, gradient backdrop, or decorative waveform.
+
+## 3. Required result identity
+Use complete F2 per-cell metrics or aligned predictions. Within each seed, all four cells must use identical support identities and query identities. The bounded setting is MA-CT, semantic labels, eight support recordings per call type, or 48 total, with Full and LP1 audio. Each source condition fits its own normalizer, correction mean, basis, and ridge map. Those objects are transferred unchanged to target-condition features. All four cells share the recorded numeric rank, ridge penalty, and relative alpha fixed for that comparison. Preserve the actual run identity; do not call a newly declared setting an inherited historical lock unless the export supports that description.
+
+## 4. Matrix values
+The primary displayed quantity is continuous-AKR accuracy minus native accuracy on the SAME target queries, expressed in percentage points. Derive it from aligned results or use an equivalent complete exported gain_pp. Use rows/columns Full->Full, Full->LP1, LP1->Full, LP1->LP1 with source and target orientation maintained. Native accuracy is target dependent, not source dependent, so repeated native references are not independent observations. Each cell may show a large signed gain and a smaller line 'AKR: xx.xx%' if the raw accuracy is available. Macro-F1 and invalid rate should remain in an accompanying table rather than sharing the color scale.
+
+## 5. Visual encoding
+Use a restrained diverging scale centered at zero. Select symmetric limits from the complete observed gain range, state the limits, and do not saturate unfavorable cells to make the diagonal look stronger. Keep negative gains visible and annotate all four cells to the same precision. Use fine cell separators and a color scale labelled 'AKR - native (pp)'. The zero-centered palette represents signed gain, not a probability or mutual information. Do not draw a diagonal line implying perfect transfer. Full is unfiltered model-observable input; LP1 is a 1-kHz low-pass version, not a different dataset or a rescaled pitch.
+
+## 6. Controls and aggregation
+The accompanying numerical table should retain native, fixed_mean, continuous_pooled, shuffled_query_field, and ridge_direct if exported. The shuffled field must refer to the actual recorded control, not a newly synthesized permutation for the graphic. Do not silently discard a weak control or select only seeds that passed an old gate. With one seed, annotate point values and no across-seed standard deviations. With several compatible seeds, show the declared mean and retain per-seed values in the table; use actual counts and do not treat reused recordings as independent. If a method or cell is missing, report it as missing, not zero or native-equivalent.
+
+## 7. Typography and interpretation
+Use one clean sans-serif family, tabular numerals, and large enough type for a 3.5-4-inch square in print. Axis titles should read 'Support bandwidth' and 'Query bandwidth'. Keep just two annotation sizes inside cells: the gain and optional raw accuracy. Protocol details belong in an external caption. This compares correction-map applicability, unlike the six-by-six probe matrices.
+
+## 8. Delivery and completion checks
+With complete result exports, create figures/new/f2_correction_transfer.pdf, editable SVG, and a square PNG. Save the four plotted gains and their target-native references. Verify aligned IDs, identical per-seed numeric settings, full cell coverage, source/target labels, metric units, and invalid-output accounting. If results are unavailable, return a blank matrix explicitly marked 'Awaiting complete results' plus missing fields; never sketch an imagined positive diagonal or negative off-diagonal. This prompt is optional scope and does not authorize another experiment.

@@ -1,0 +1,43 @@
+name: Inspect interrupted AKR restore
+on:
+  push:
+    branches: [akr-final-consolidation-20261002]
+    paths: ['.github/workflows/inspect-staged-restore.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Inspect bytes and export branch snapshot
+        shell: bash
+        run: |
+          python - <<'PY'
+          import base64, hashlib, json, lzma, os, subprocess
+          from pathlib import Path
+          out=Path(os.environ['RUNNER_TEMP'])/'akr-inspect'
+          out.mkdir()
+          subprocess.run(['git','archive','--format=zip','--output='+str(out/'branch.zip'),'HEAD'],check=True)
+          parts=sorted(Path('migration/payload').glob('*.b64'))
+          blob=base64.b64decode(''.join(p.read_text().strip() for p in parts),validate=True)
+          dec=lzma.LZMADecompressor(memlimit=256*1024*1024)
+          report={'parts':[p.name for p in parts],'compressed_bytes':len(blob),'sha256':hashlib.sha256(blob).hexdigest()}
+          try:
+              data=dec.decompress(blob,max_length=25*1024*1024)
+              report.update(eof=dec.eof,uncompressed_bytes=len(data),prefix=data[:120].decode('utf-8',errors='replace'))
+              (out/'partial_restore.bin').write_bytes(data)
+          except lzma.LZMAError as exc:
+              report['error']=str(exc)
+          (out/'inspection.json').write_text(json.dumps(report,indent=2)+'\n')
+          print(json.dumps(report,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: akr-interrupted-restore-inspection
+          path: ${{ runner.temp }}/akr-inspect/
+          retention-days: 7

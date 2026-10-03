@@ -1,0 +1,170 @@
+{
+  "status": "complete_members_restored_from_incomplete_transport",
+  "transport_eof": false,
+  "transport_sha256": "60b356aa1dce575731b1b48756d22327d68360790ded17e444df3770d8e1750e",
+  "member_count": 32,
+  "members": [
+    {
+      "path": "README.md",
+      "bytes": 5395,
+      "sha256": "4d64282e5d25a4ccdec9c259b5fb3e4259b9988a46d668448d53df0deef1986d"
+    },
+    {
+      "path": "akr_closing/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "akr_closing/backend.py",
+      "bytes": 12687,
+      "sha256": "5c44e5cc74b7da293f33231181de436d56b439a48491b0cefa30c8f450188bfc"
+    },
+    {
+      "path": "akr_closing/cli.py",
+      "bytes": 6566,
+      "sha256": "960d9733e623c2b8dec4c37665c0d581eaacadb3ef3f3b0b3d191a319bbc9b1f"
+    },
+    {
+      "path": "akr_closing/core.py",
+      "bytes": 9901,
+      "sha256": "5920b92bbbe9470d3a8708c07ac48a646ed13bdf5a047de4bb7c4fa71f1f1195"
+    },
+    {
+      "path": "akr_closing/legacy.py",
+      "bytes": 7497,
+      "sha256": "b693497b9b3e73aabbe0e85303b4d9a069cbc4fed01cad624bede8728259f514"
+    },
+    {
+      "path": "akr_closing/lora.py",
+      "bytes": 14427,
+      "sha256": "e9e75d66ccf460b2a098bc4e389bf238bf81d93b1b2d2c9c8182205b9da8d971"
+    },
+    {
+      "path": "akr_closing/optional.py",
+      "bytes": 3774,
+      "sha256": "347e25c336270c414618204974c4d8a147dafec37e0e7eddbeffe41daf71d735"
+    },
+    {
+      "path": "akr_closing/orders.py",
+      "bytes": 5443,
+      "sha256": "719acf7c078b5f7d4b6f3ed238754fe841165598af8d5a17b1af1db4eba4fc3a"
+    },
+    {
+      "path": "akr_closing/pipeline.py",
+      "bytes": 34929,
+      "sha256": "8fe5ab2bdce3281175714bb0654037321c04a1625b7d46150d79f26d98bd7ee2"
+    },
+    {
+      "path": "akr_closing/process.py",
+      "bytes": 1672,
+      "sha256": "50870ed75a28f124e804931bcb7e3868f34568cdfa81a81cb36940c28dfb87b5"
+    },
+    {
+      "path": "akr_closing/protocol.py",
+      "bytes": 3688,
+      "sha256": "aef58e5c5cd69c07847f2be8be77cf772eeb65d13441ad7f5fc17b3e3008109a"
+    },
+    {
+      "path": "akr_closing/repair.py",
+      "bytes": 5825,
+      "sha256": "d9502ba1a3362bdb4c18a251abe8039032b61859617d37b3958d0029068f538d"
+    },
+    {
+      "path": "akr_closing/report.py",
+      "bytes": 2789,
+      "sha256": "b5b457d6c6e1e58340b13a09b46ed065c441296d1b98062a08107bcad3c52af5"
+    },
+    {
+      "path": "akr_closing/scaling.py",
+      "bytes": 3448,
+      "sha256": "e967962e85380ee8cf723def290c11c938851acb59cc5dd482328007d645ca3e"
+    },
+    {
+      "path": "akr_final/__init__.py",
+      "bytes": 74,
+      "sha256": "1545c2c86b461563492bcfc220b2ca5f79e8c5e85e1ad0500e2b07ba3f5f77f6"
+    },
+    {
+      "path": "akr_final/predictability.py",
+      "bytes": 6426,
+      "sha256": "f8148802b3f90fa6f08c80cf6eec22eee707ff87ab77d359998d8b0a4b4903b9"
+    },
+    {
+      "path": "akr_final/release.py",
+      "bytes": 3847,
+      "sha256": "c8c1e557483e8deae8298cbc3b1706fcd3c9ea9d38b6d18358138cbb258c9267"
+    },
+    {
+      "path": "akr_final/runner.py",
+      "bytes": 32213,
+      "sha256": "fa2a4a5f776ea903d3070c3f75e6996af14a73c9bf42ac829500c8229860ac37"
+    },
+    {
+      "path": "akr_final/simple_baselines.py",
+      "bytes": 5244,
+      "sha256": "f00a5d345a35163fb2d719439b92fe4a4e685d86914e007d234583bb98375b2c"
+    },
+    {
+      "path": "akr_final/standalone.py",
+      "bytes": 8181,
+      "sha256": "c6cf9a2e63f720fd06234247b0dfb4c9ab9f2c3416bf985230ba2c7d3b90c73b"
+    },
+    {
+      "path": "configs/akr_closing.yaml",
+      "bytes": 2679,
+      "sha256": "1d7c7372750d2ba75a32afb5558ae0cee560d588f792986ce756fa14b878daff"
+    },
+    {
+      "path": "configs/akr_final_three.yaml",
+      "bytes": 284,
+      "sha256": "5acae6c733954cf4e110b5bd7cc6b0f4e416e18e25df1555b9337e4e841fbc76"
+    },
+    {
+      "path": "configs/akr_registry.json",
+      "bytes": 6317,
+      "sha256": "7c9321ada1caa85e40bdaee670645b8a0f36e531384bf4abb8ec0bc73c9555da"
+    },
+    {
+      "path": "configs/akr_standalone.yaml",
+      "bytes": 766,
+      "sha256": "9aa3d8bb712b4ca93996e29a1750b1895608c2c8ed7bc914000c14a158f78080"
+    },
+    {
+      "path": "docs/AKR_CLOSING_E1_E9.md",
+      "bytes": 5979,
+      "sha256": "1d795db5888794e999939f3dc131d397f4eab1b114b29324ea1f829d9d17d16b"
+    },
+    {
+      "path": "docs/AKR_FINAL_THREE_VERIFICATION.json",
+      "bytes": 769,
+      "sha256": "13bc6419cc22db3a9f22fba6441029f4112a9dcb9b00e9f1589413038c9ff4a6"
+    },
+    {
+      "path": "docs/AKR_FINAL_THREE_ZH.md",
+      "bytes": 6678,
+      "sha256": "21c21dd6b42112442da54ef60480777176f078566bae21ccd90c565ef0e2aee0"
+    },
+    {
+      "path": "docs/AKR_RUNBOOK_ZH.md",
+      "bytes": 15115,
+      "sha256": "aca3276b9017f6c8f08a4af96160c1ff7f024b999226841d7ac57ec54d1ab70c"
+    },
+    {
+      "path": "docs/AKR_STANDALONE_ZH.md",
+      "bytes": 3596,
+      "sha256": "479782a4a9399d43b3a4235abf6b4e73ecafbe6dc381197c8b0f691985db1b9f"
+    },
+    {
+      "path": "docs/FINAL_EXPERIMENTS_ZH.md",
+      "bytes": 5848,
+      "sha256": "d492229ca4711329f985598d975e145d0fe8d5dc00a45c69985042435637d3e7"
+    },
+    {
+      "path": "docs/research/AUTORESEARCH_CHECK_ZH.md",
+      "bytes": 4869,
+      "sha256": "20cc524dc8f30774f27d73008dab1687b75e0b731599d4a1fbffcb663e4aabde"
+    }
+  ],
+  "missing_tail": "docs/research/IMPLEMENTATION_PLAN.md and any subsequent entries; recovered separately",
+  "not_private_HEAD_equivalence": true
+}
