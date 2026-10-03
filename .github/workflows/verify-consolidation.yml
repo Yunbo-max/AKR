@@ -1,0 +1,22 @@
+name: Verify AKR consolidation
+on:
+  push:
+    branches: [akr-final-consolidation-20261002]
+    paths: ['.github/workflows/verify-consolidation.yml']
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Export current files without executing project code
+        run: git archive --format=zip --output="$RUNNER_TEMP/akr-current.zip" HEAD
+      - uses: actions/upload-artifact@v4
+        with:
+          name: akr-current-complete-entries
+          path: ${{ runner.temp }}/akr-current.zip
+          retention-days: 7
