@@ -1,0 +1,59 @@
+# New rebuttal variants. No old result is relabelled as a result of this protocol.
+version: 1
+old_root: /root/animal-omni-kv
+seeds: [20260914, 20260915, 20260916]
+models:
+  qwen7b:
+    id: Qwen/Qwen2.5-Omni-7B
+    revision: ae9e1690543ffd5c0221dc27f79834d0294cba00
+  qwen3b:
+    id: Qwen/Qwen2.5-Omni-3B
+    revision: f75b40e3da2003cdd6e1829b1f420ca70797c34e
+settings:
+  rank: 4
+  ridge_alpha: 10.0
+  relative_alpha: 0.01
+  raw_eta: 300.0
+  layer_fractions: [0.25, 0.5, 0.75, 0.875]
+  feature_fraction: 0.875
+  max_context_tokens: 32768
+  max_new_tokens: 12
+  gain_steps: [0.5, 0.25]
+  gain_regularization: 0.01
+  gain_upper: 2.0
+  guard_tolerance: 0.0
+  min_improvement: 0.000001
+  control_alphas: [0.003, 0.01, 0.03]
+datasets:
+  marmaudio:
+    manifest: data/manifests/marmaudio_expert_validation.csv
+    labels: [Infant Cry, Phee, Seep, Trill, Tsik, Twitter]
+    group_key: recording_id
+    partition: recording_group_confirmation
+    fit_per_class: 8
+    calibration_per_class: 2
+    guard_per_class: 2
+    conditions: [full, 'lp:1000']
+  dogs:
+    manifest: data/manifests/beans_dogs_protocol.csv
+    labels_from_config: configs/beans_dogs.yaml
+    group_key: source_filename
+    partition: official_test
+    fit_per_class: 8
+    calibration_per_class: 2
+    guard_per_class: 2
+    conditions: [full, 'lp:1000']
+  watkins:
+    manifest: data/manifests/beans_watkins_protocol.csv
+    labels_from_config: configs/beans_watkins.yaml
+    group_key: source_filename
+    partition: official_test
+    fit_per_class: 2
+    calibration_per_class: 1
+    guard_per_class: 1
+    conditions: [full, 'lp:1000']
+suites:
+  core: {dataset: marmaudio, model: qwen7b, seeds: all}
+  scale: {dataset: marmaudio, model: qwen3b, seeds: first}
+  dogs: {dataset: dogs, model: qwen7b, seeds: first}
+  watkins: {dataset: watkins, model: qwen7b, seeds: first}

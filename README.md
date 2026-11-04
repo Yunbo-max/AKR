@@ -6,6 +6,28 @@
 
 AKR predicts continuous **additive K/V corrections**, not animal labels or replacement model weights. Labelled support recordings supply negative answer-loss gradients; centred SVD and ridge regression map frozen acoustic features to correction coefficients. An unlabelled query uses a feature pass followed by an intervened generation pass. The Speech LM stays frozen.
 
+## ICLR rebuttal stability addendum
+
+**Publication verification:** 182 CPU tests and 116 release checks passed remotely; [verification record](docs/rebuttal/REMOTE_PUBLICATION_20261104.json). No GPU experiment was started.
+
+The opt-in rebuttal implementation is described in [the execution runbook](docs/ICLR_REBUTTAL_RUNBOOK_ZH.md).
+It preserves the historical default and results, adds effective BF16 update telemetry,
+relative-norm caps, and support-only answer-loss gain calibration with scalar and
+same-total-label alternatives. This is implemented software, **not a new GPU result**.
+
+```bash
+python scripts/run_akr_rebuttal.py plan
+python scripts/run_akr_rebuttal.py check --run-id iclr_rebuttal_v1
+python scripts/run_akr_rebuttal.py run --run-id iclr_rebuttal_v1 --profile 24gb --budget-hours 24 --execute
+python scripts/run_akr_rebuttal.py report --run-id iclr_rebuttal_v1
+```
+
+The default queue is MA-CT/7B (three support draws), MA-CT/3B (matched first draw),
+and BEANS Dogs/7B, each on Full/LP1. Watkins is explicitly optional (`--tasks all`).
+No historical RUN/LOCK is required. Real waveforms and models are required for execution.
+Changed code/configuration/environment needs a new run ID; do not resume old active runs
+with this patch. The 24-hour wall cap is per invocation, not a completion promise.
+
 ## Start here
 
 - [Final experiments: exact data, models, metrics and commands](docs/FINAL_EXPERIMENTS_ZH.md)

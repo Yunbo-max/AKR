@@ -26,6 +26,9 @@ class KVDeltaHooks(AbstractContextManager):
         self.applied_relative_norms = {}
         self.applied_scales_by_example = {}
         self.applied_relative_norms_by_example = {}
+        self.effective_relative_norms = {}
+        self.effective_relative_norms_by_example = {}
+        self.unchanged_fractions = {}
         self.handles = []
 
     def _hook(self, layer_index: int, kind: str):
@@ -34,7 +37,19 @@ class KVDeltaHooks(AbstractContextManager):
             if self.learn:
                 delta = output.new_zeros(output.shape, requires_grad=True)
                 self.learned[key] = delta
-                return output + delta
+                updated = output + delta  # historical arithmetic unchanged
+                import torch
+                active = delta.float().square().sum(dim=-1) > 0
+                mask = active.unsqueeze(-1).float()
+                effective = updated.float() - output.float()
+                base = torch.sqrt((output.float().square() * mask).sum(dim=(1, 2)))
+                ratio = torch.sqrt((effective.square() * mask).sum(dim=(1, 2))) / base.clamp_min(1e-12)
+                values = [float(x) for x in ratio.detach().cpu()]
+                self.effective_relative_norms_by_example[key] = values
+                self.effective_relative_norms[key] = sum(values) / len(values)
+                self.unchanged_fractions[key] = (float((effective[active] == 0).float().mean().detach().cpu())
+                                                 if active.any() else 1.0)
+                return updated
             delta = self.fixed_deltas.get(key)
             # During autoregressive decode the sequence dimension becomes 1;
             # fixed Oracle deltas apply only to the matching prefill state.
@@ -69,7 +84,19 @@ class KVDeltaHooks(AbstractContextManager):
                     self.applied_relative_norms_by_example[key] = ratios_cpu
                     self.applied_scales[key] = float(sum(scales_cpu) / len(scales_cpu))
                     self.applied_relative_norms[key] = float(sum(ratios_cpu) / len(ratios_cpu))
-                return output + delta
+                updated = output + delta  # historical arithmetic unchanged
+                import torch
+                active = delta.float().square().sum(dim=-1) > 0
+                mask = active.unsqueeze(-1).float()
+                effective = updated.float() - output.float()
+                base = torch.sqrt((output.float().square() * mask).sum(dim=(1, 2)))
+                ratio = torch.sqrt((effective.square() * mask).sum(dim=(1, 2))) / base.clamp_min(1e-12)
+                values = [float(x) for x in ratio.detach().cpu()]
+                self.effective_relative_norms_by_example[key] = values
+                self.effective_relative_norms[key] = sum(values) / len(values)
+                self.unchanged_fractions[key] = (float((effective[active] == 0).float().mean().detach().cpu())
+                                                 if active.any() else 1.0)
+                return updated
             return output
         return apply
 

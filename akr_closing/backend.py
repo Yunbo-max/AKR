@@ -27,11 +27,21 @@ def candidate_logprob(logits, answer_ids, prompt_length):
 
 
 class ProjectionIntervention(AbstractContextManager):
-    """One prefill-only additive intervention; alpha is relative active-state norm."""
-    def __init__(self,modules,directions,mask,alpha):
+    """One prefill-only update; the historical relative_norm remains default.
+
+    relative_cap limits eta*direction without amplifying a small prediction.
+    Its cap is pre-rounding: effective BF16 additions are logged separately.
+    """
+    def __init__(self,modules,directions,mask,alpha,*,scale_mode='relative_norm',raw_eta=1.):
         if not np.isfinite(alpha) or alpha<0: raise ValueError('alpha must be finite and nonnegative')
+        if not np.isfinite(raw_eta) or raw_eta<0: raise ValueError('raw_eta must be finite and nonnegative')
+        if scale_mode not in {'relative_norm','relative_cap','raw'}: raise ValueError('unknown scale mode')
+        if set(directions)-set(modules): raise ValueError('unknown K/V projection key')
+        if mask.ndim!=2 or mask.shape[0]!=1: raise ValueError('batch-one position mask required')
         self.modules=modules; self.directions=directions; self.mask=mask
-        self.alpha=alpha; self.handles=[]; self.ratios={}; self.norms={}; self.called=set()
+        self.alpha=alpha; self.scale_mode=scale_mode; self.raw_eta=raw_eta
+        self.handles=[]; self.ratios={}; self.effective_ratios={}; self.norms={}; self.called=set()
+
     def __enter__(self):
         import torch
         for key,module in self.modules.items():
@@ -39,25 +49,45 @@ class ProjectionIntervention(AbstractContextManager):
             def hook(_m,_x,out,key=key):
                 if key in self.called or out.shape[:2]!=self.mask.shape: return out
                 self.called.add(key)
-                if self.alpha==0: return out
                 mask=self.mask.to(out.device).bool()
-                if not mask.any(): return out
+                if not mask.any(): raise ValueError('empty active intervention mask')
+                if not torch.isfinite(out[mask]).all(): raise ValueError('non-finite active K/V state')
                 direction=torch.as_tensor(self.directions[key],device=out.device,dtype=torch.float32)
                 if not torch.isfinite(direction).all(): raise ValueError('non-finite KV correction')
                 delta=torch.zeros_like(out,dtype=torch.float32)
-                if direction.ndim==1: delta[mask]=direction
+                if direction.ndim==1 and direction.numel()==out.shape[-1]: delta[mask]=direction
                 elif direction.shape==out.shape: delta=direction*mask[:,:,None]
-                elif direction.ndim==2 and direction.shape[0]==int(mask.sum()): delta[mask]=direction
+                elif direction.ndim==2 and direction.shape==(int(mask.sum()),out.shape[-1]): delta[mask]=direction
                 else: raise ValueError(f'field shape incompatible at {key}: {direction.shape}')
                 dn=torch.linalg.vector_norm(delta[mask]); bn=torch.linalg.vector_norm(out.float()[mask])
-                scale=self.alpha*bn/dn.clamp_min(1e-30) if dn>0 else dn*0
+                if self.scale_mode=='relative_norm':
+                    # Keep original arithmetic for nonzero updates.
+                    scale=self.alpha*bn/dn.clamp_min(1e-30) if dn>0 else dn*0
+                elif self.scale_mode=='relative_cap':
+                    scale=torch.minimum(torch.full_like(dn,self.raw_eta),
+                                        self.alpha*bn/dn.clamp_min(1e-30)) if dn>0 else dn*0
+                else: scale=torch.full_like(dn,self.raw_eta) if dn>0 else dn*0
                 applied=(delta*scale).to(out.dtype)
+                updated=out if not torch.count_nonzero(applied) else out+applied
+                if not torch.isfinite(updated[mask]).all(): raise ValueError('non-finite updated K/V state')
                 actual=torch.linalg.vector_norm(applied.float()[mask])
+                effective=updated.float()[mask]-out.float()[mask]
+                en=torch.linalg.vector_norm(effective)
                 self.ratios[str(key)]=float((actual/bn.clamp_min(1e-30)).detach().cpu())
-                self.norms[str(key)]={'base_frobenius':float(bn.detach().cpu()),'delta_frobenius':float(actual.detach().cpu()),'active_tokens':int(mask.sum())}
-                return out+applied
+                self.effective_ratios[str(key)]=float((en/bn.clamp_min(1e-30)).detach().cpu())
+                self.norms[str(key)]={'base_frobenius':float(bn.detach().cpu()),
+                    'delta_frobenius':float(actual.detach().cpu()),
+                    'effective_delta_frobenius':float(en.detach().cpu()),
+                    'unchanged_fraction':float((effective==0).float().mean().detach().cpu()),
+                    'active_tokens':int(mask.sum()),'scale_mode':self.scale_mode}
+                return updated
             self.handles.append(module.register_forward_hook(hook))
         return self
+
+    def assert_applied(self):
+        missing=set(self.directions)-self.called
+        if missing: raise RuntimeError(f'K/V intervention missed matching prefill: {sorted(missing)}')
+
     def __exit__(self,*args):
         for h in self.handles: h.remove()
         self.handles=[]
@@ -71,8 +101,8 @@ class OmniBackend:
         from transformers import Qwen2_5OmniThinkerForConditionalGeneration,Qwen2_5OmniProcessor
         self.torch=torch; self.max_context_tokens=max_context_tokens
         if not torch.cuda.is_available(): raise RuntimeError('Real experiments require CUDA; CPU tests do not run Omni.')
-        budget={'16gb':'13GiB','24gb':'20GiB','48gb':'43GiB'}
-        if profile not in budget: raise ValueError('profile must be 16gb/24gb/48gb')
+        budget={'16gb':'13GiB','24gb':'20GiB','48gb':'43GiB','80gb':'72GiB'}
+        if profile not in budget: raise ValueError('profile must be 16gb/24gb/48gb/80gb')
         self.processor=Qwen2_5OmniProcessor.from_pretrained(model_id,revision=revision)
         self.thinker=Qwen2_5OmniThinkerForConditionalGeneration.from_pretrained(
             model_id,revision=revision,torch_dtype=torch.bfloat16,device_map='auto',
@@ -144,6 +174,8 @@ class OmniBackend:
         """Only invoke on registered labeled SUPPORT, never on held-out queries."""
         t=self.torch; x=self._prepare(q,prompt); prefix=x['input_ids'].shape[1]
         answer=self.processor.tokenizer(target,add_special_tokens=False,return_tensors='pt')['input_ids'].to(self.device)
+        if not answer.shape[1] or prefix+answer.shape[1]>self.max_context_tokens:
+            raise ContextLimit('Empty answer or support prefix + answer exceeds context budget')
         x['input_ids']=t.cat([x['input_ids'],answer],1)
         x['attention_mask']=t.cat([x['attention_mask'],t.ones_like(answer)],1)
         labels=t.full_like(x['input_ids'],-100); labels[:,prefix:]=answer; x['labels']=labels
@@ -177,18 +209,46 @@ class OmniBackend:
         return out
 
     def predict(self,q,prompt,labels,*,support=(),direction=None,alpha=0.,scope='audio',
-                kind='kv',layer_group='all',max_new_tokens=12):
+                kind='kv',layer_group='all',max_new_tokens=12,scale_mode='relative_norm',raw_eta=1.):
         x=self._prepare(q,prompt,support); n=x['input_ids'].shape[1]
         if direction is not None and support: raise ValueError('repair uses no audio ICL prefix in this protocol')
         directions={} if direction is None else self.unflatten(direction,kind,layer_group)
-        with self.torch.inference_mode(),ProjectionIntervention(self.modules,directions,self._mask(x,scope),alpha) as hooks:
+        with self.torch.inference_mode(),ProjectionIntervention(self.modules,directions,self._mask(x,scope),alpha,
+                scale_mode=scale_mode,raw_eta=raw_eta) as hooks:
             output=self.thinker.generate(**x,do_sample=False,max_new_tokens=max_new_tokens,use_cache=True)
+            hooks.assert_applied()
         raw=self.processor.batch_decode(output[:,n:],skip_special_tokens=True,clean_up_tokenization_spaces=False)[0].strip()
         # Use the repository's authoritative normalizer; ambiguous strings remain invalid.
         from animal_omni.metrics import normalize_label
         prediction=normalize_label(raw,labels) or ''
         return {'prediction':prediction,'raw_prediction':raw,'applied_relative_norms':hooks.ratios,
-                'applied_norms':hooks.norms,'generated_tokens':int(output.shape[1]-n),'input_tokens':int(n)}
+                'applied_norms':hooks.norms,'effective_relative_norms':hooks.effective_ratios,
+                'scale_mode':scale_mode,'raw_eta':raw_eta,'generated_tokens':int(output.shape[1]-n),'input_tokens':int(n)}
+
+    def support_answer_loss(self,q:Query,target:str,prompt:str,*,direction=None,alpha=0.,
+                            scale_mode='relative_norm',raw_eta=1.):
+        """Answer-only CE with actual injection, for registered calibration/guard.
+
+        The runner checks membership. No query uses this labelled endpoint.
+        The coordinate calibrator performs no model/gain backward or weight step.
+        """
+        t=self.torch; x=self._prepare(q,prompt); prefix=x['input_ids'].shape[1]
+        answer=self.processor.tokenizer(target,add_special_tokens=False,return_tensors='pt')['input_ids'].to(self.device)
+        if not answer.shape[1] or prefix+answer.shape[1]>self.max_context_tokens:
+            raise ContextLimit('Empty answer or support prefix + answer exceeds context budget')
+        x['input_ids']=t.cat([x['input_ids'],answer],1)
+        x['attention_mask']=t.cat([x['attention_mask'],t.ones_like(answer)],1)
+        labels=t.full_like(x['input_ids'],-100); labels[:,prefix:]=answer; x['labels']=labels
+        directions={} if direction is None else self.unflatten(direction)
+        with t.inference_mode(),ProjectionIntervention(self.modules,directions,
+                self._mask(x,'audio',prefix),alpha,scale_mode=scale_mode,raw_eta=raw_eta) as hooks:
+            out=self.thinker(**x,use_cache=False,return_dict=True)
+            hooks.assert_applied()
+            loss=float(out.loss.float().detach().cpu())
+        if not np.isfinite(loss): raise ValueError('non-finite support answer loss')
+        return {'answer_loss':loss,'answer_tokens':int(answer.shape[1]),
+                'applied_norms':hooks.norms,'applied_relative_norms':hooks.ratios,
+                'effective_relative_norms':hooks.effective_ratios}
 
     def candidates(self,q,prompt,labels,*,support=()):
         t=self.torch; base=self._prepare(q,prompt,support); n=base['input_ids'].shape[1]; scores=[]

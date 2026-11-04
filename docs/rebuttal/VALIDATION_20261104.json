@@ -1,0 +1,86 @@
+{
+  "date": "2026-11-04",
+  "upstream_base": "95bcf7c99cc011c1d0d852abfa640fe2d01690f1",
+  "scope": "local software and metadata verification, not a scientific experiment",
+  "cpu_tests": {
+    "total_passed": 182,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "execution": "all collected tests covered in six disjoint pytest batches",
+    "batches": [
+      {
+        "name": "test_release",
+        "passed": 25,
+        "failures": 0,
+        "errors": 0,
+        "skips": 0
+      },
+      {
+        "name": "test_runner",
+        "passed": 7,
+        "failures": 0,
+        "errors": 0,
+        "skips": 0
+      },
+      {
+        "name": "test_closing",
+        "passed": 59,
+        "failures": 0,
+        "errors": 0,
+        "skips": 0
+      },
+      {
+        "name": "test_final_three",
+        "passed": 26,
+        "failures": 0,
+        "errors": 0,
+        "skips": 0
+      },
+      {
+        "name": "test_standalone",
+        "passed": 14,
+        "failures": 0,
+        "errors": 0,
+        "skips": 0
+      },
+      {
+        "name": "test_numerical",
+        "passed": 51,
+        "failures": 0,
+        "errors": 0,
+        "skips": 0
+      }
+    ]
+  },
+  "pytest_environment": {
+    "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "PYTHONPATH": "src:.",
+    "note": "Disable unrelated host plugins; batches stay within execution limits."
+  },
+  "release_integrity": {
+    "complete": true,
+    "checks": 116,
+    "errors": [],
+    "gpu_started": false,
+    "raw_audio_required_for_this_check": false,
+    "scope": "release integrity, not scientific validation"
+  },
+  "default_jobs": 10,
+  "default_method_cells": 158,
+  "optional_all_jobs": 12,
+  "optional_all_method_cells": 184,
+  "compileall": "passed",
+  "git_diff_check": "passed",
+  "model_inference_runs": 0,
+  "gpu_experiments": 0,
+  "remote_pushed": false,
+  "remote_blocker": "Current GitHub toolset is read-only; container DNS cannot reach GitHub.",
+  "paper_and_historical_results_changed": false,
+  "raw_waveforms_present": false,
+  "new_methods_scientific_status": "implemented; no measured bioacoustic accuracy or throughput",
+  "python": "3.13.5"
+}
