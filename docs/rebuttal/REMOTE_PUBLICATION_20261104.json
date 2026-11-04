@@ -1,0 +1,70 @@
+{
+  "date": "2026-11-04",
+  "upstream_base": "95bcf7c99cc011c1d0d852abfa640fe2d01690f1",
+  "workflow_run_id": "41810021799",
+  "bootstrap_commit": "ee472d2563791b733406be75dcfa6eddb43f8634",
+  "branch": "research/iclr-rebuttal-stability-20261104",
+  "cpu_tests": {
+    "tests": 182,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "release_integrity": {
+    "complete": true,
+    "checks": 116,
+    "errors": [],
+    "gpu_started": false,
+    "raw_audio_required_for_this_check": false,
+    "scope": "release integrity, not scientific validation"
+  },
+  "prepared_patch_sha256": "ff34c0b9a16816dd02adf8d1ff5b87d8bb8d6b2881b6c3d6bf2c97ddab343843",
+  "prepared_source_blobs": {
+    "README.md": "86712ef1b7602b83980d7423ead644d19bbafe7d",
+    "akr_closing/backend.py": "a766797f1dac2e51368728eed62b934453d64d2e",
+    "akr_final/rebuttal_cli.py": "bf02dab34a0a9253177b5bcb0db0fbd4841a5a52",
+    "akr_final/rebuttal_math.py": "cc66c11ca3c6323d0f7bf5c336bb6cf8ee15e22b",
+    "akr_final/rebuttal_plan.py": "429db15397d46580e63c1d47bebc3a25dd574223",
+    "akr_final/rebuttal_runner.py": "e6bb44af77518a4268fbbd6001a915a0f727e8de",
+    "akr_final/runner.py": "072b382bfcd6111566b5c8f17b7f738139130a3e",
+    "configs/akr_rebuttal.yaml": "71c442918ea9aa95cc4d76c601a7b04a990059bc",
+    "docs/ICLR_REBUTTAL_RUNBOOK_ZH.md": "aea07237126baf64147846d24a6addfb53a14886",
+    "docs/rebuttal/README.md": "d46ff0454312d49c21054c0ae2553566f887e05e",
+    "docs/rebuttal/VALIDATION_20261104.json": "352638f5340a64d17b9091dfc8ee393ba976b51c",
+    "docs/superpowers/plans/2026-11-04-akr-rebuttal.md": "f3df131203b25a45a81309a9190f0f1e6f35c69b",
+    "scripts/run_akr_rebuttal.py": "99305c00fc8fed8ca95e91df1baf8a0a9d8adf30",
+    "src/animal_omni/kv_hooks.py": "265af7a7390fa5f488e4d4bc6366986cfd6fdc9e",
+    "tests/test_rebuttal_plan.py": "72ac15df6276ee7dc72e6adfa3cf225f44791f65",
+    "tests/test_rebuttal_runner.py": "8dc19be1449c57f0bc62baf2258c0df88669fa96",
+    "tests/test_rebuttal_stability.py": "08a5532773dbbe8a18c60e9f286a6662327f59d1"
+  },
+  "published_file_sha256": {
+    "README.md": "d40376d802dcfc1a25443943d1bd3bcac89ca4cabce7f84a72513232d7fac4ca",
+    "akr_closing/backend.py": "bf68b9414fd0f4c64ace4d591b93cbf57df4de96fb650a13dd695bd370d64f8b",
+    "akr_final/rebuttal_cli.py": "b7be02d0ef02ad7d6387d1d9ef29c37e7a8d1b548f72163cd282bf611f56a0af",
+    "akr_final/rebuttal_math.py": "c557db5fe7ce3af2dd29345ab82d8cb6c6db2ab1ad37b25407c5964ce2fda7fe",
+    "akr_final/rebuttal_plan.py": "8ca361db2081f606026c84fbe22c75e2921d5b902cee3d523861f8b80e9abf2b",
+    "akr_final/rebuttal_runner.py": "1cc1f2b16e0f3f47a798cbabe62f77d1758fd21b88a54157c17f9ab83cab4f19",
+    "akr_final/runner.py": "21febc1f9bf999bf7f1dca7c222ccddec310dce8610b74a5dc5f5a5b89e269d8",
+    "configs/akr_rebuttal.yaml": "549f73eaf513fcf02ea62f1fe168e70c8fa30fa226617eb7248b6cfd13288d2e",
+    "docs/ICLR_REBUTTAL_RUNBOOK_ZH.md": "5409c5e590cd8803f13b5024eb41663486085ffb765b106274ad7189d7c2cfbc",
+    "docs/rebuttal/README.md": "4a964131e1831af27024b9c62486a3820c5aa6e4c7817e8e522c01111de9c69c",
+    "docs/rebuttal/VALIDATION_20261104.json": "5535777cd03fc8d143c5523229e6aa10b263dc6aa506b4973fe17adc0828cf4b",
+    "docs/superpowers/plans/2026-11-04-akr-rebuttal.md": "c011c5e1bc0d611cc091a1bb4aadd9868eea9599b65dcce122964f97892ddbfc",
+    "scripts/run_akr_rebuttal.py": "cbe2c8273970aedde1978c87d2b9e042cbc81326ba741a1e1f1ea0b1d44ace2d",
+    "src/animal_omni/kv_hooks.py": "dc0e43e2fd510c307c3704a977b468fab7ecf178e16d1efa61f29b8142013b81",
+    "tests/test_rebuttal_plan.py": "ff70cb775a4f0314d91f84d6bcaa926fce7ce404b2734ae26b9665c4644929af",
+    "tests/test_rebuttal_runner.py": "43bfb928bf669f0d5ca7dfaa6c08dd15870e6a0a214edf19378809d0ad97f23d",
+    "tests/test_rebuttal_stability.py": "af3658fb4c9404731e66f1cad44d46a107b820a57661676cde74f00963066e3c"
+  },
+  "publication_only_edits": [
+    "README.md",
+    "docs/rebuttal/README.md",
+    "docs/superpowers/plans/2026-11-04-akr-rebuttal.md"
+  ],
+  "python": "3.11.18 (main, Oct 26 2026, 02:48:29) [GCC 15.2.0]",
+  "model_inference_runs": 0,
+  "gpu_experiments": 0,
+  "paper_and_historical_results_changed": false,
+  "scope": "software verification and source publication, not scientific validation"
+}

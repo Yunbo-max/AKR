@@ -123,12 +123,12 @@ def prediction_summary(target, native, prediction, labels):
 
 
 class FinalRunner:
-    def __init__(self,root,source,run_id,options,profile='24gb',*,backend_factory=None,router_fit=None,cache_only=False,standalone_plan=None):
+    def __init__(self,root,source,run_id,options,profile='24gb',*,backend_factory=None,router_fit=None,cache_only=False,standalone_plan=None,output_root=None):
         import re
         if not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_.-]*',run_id):
             raise ValueError('run_id must be a simple name.')
         self.root,self.source = Path(root).resolve(),Path(source).resolve()
-        self.out = self.root/'results/akr_final'/run_id
+        self.out = (Path(output_root).resolve() if output_root is not None else self.root/'results/akr_final')/run_id
         if self.out == self.source or self.source in self.out.parents:
             raise ValueError('Output must not be inside source run.')
         self.options,self.profile,self.cache_only = deepcopy(options),profile,cache_only
