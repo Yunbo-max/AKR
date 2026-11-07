@@ -1,0 +1,11 @@
+# CPU acoustic features and direct official HF parquet materialization.
+numpy>=1.24,<3
+scipy>=1.10,<2
+soundfile>=0.12,<1
+pyarrow>=14,<23
+huggingface_hub>=0.25,<2
+opensmile==2.6.0
+# BEATs additionally requires mutually compatible torch/torchaudio builds and
+# the dependencies imported by the pinned microsoft/unilm/beats source.
+# Install torch/torchaudio for your CPU/CUDA environment explicitly; do not let
+# this optional requirements file replace an existing Speech-LM Torch build.

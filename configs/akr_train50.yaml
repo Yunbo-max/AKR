@@ -1,0 +1,37 @@
+version: 1
+old_root: /root/animal-omni-kv
+seed: 20261107
+models:
+  qwen7b:
+    id: Qwen/Qwen2.5-Omni-7B
+    revision: ae9e1690543ffd5c0221dc27f79834d0294cba00
+  qwen3b:
+    id: Qwen/Qwen2.5-Omni-3B
+    revision: f75b40e3da2003cdd6e1829b1f420ca70797c34e
+  glm4voice9b:
+    id: zai-org/glm-4-voice-9b
+    revision: 352e5a64063448d5e46394753fb65bf1dbab975b
+settings:
+  layer_fractions: [0.25, 0.5, 0.75, 0.875]
+  feature_fraction: 0.875
+  max_context_tokens: 32768
+  max_new_tokens: 32
+  ridge_alpha: 10.0
+  bootstrap_samples: 2000
+datasets:
+  dogs:
+    manifest: data/manifests/train50/dogs.csv
+    group_key: source_filename
+    expected_test_count: 139
+  watkins:
+    manifest: data/manifests/train50/watkins.csv
+    group_key: source_filename
+    expected_test_count: 339
+  bats:
+    manifest: data/manifests/train50/bats.csv
+    group_key: source_filename
+    expected_test_count: 2000
+  humbugdb:
+    manifest: data/manifests/train50/humbugdb.csv
+    group_key: source_filename
+    expected_test_count: 1859

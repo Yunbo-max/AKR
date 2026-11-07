@@ -2,7 +2,29 @@
 
 **Bioacoustic Recognition in Speech Language Models.** Canonical consolidation: `Yunbo-max/AKR`.
 
-**2026-11-07 development checkpoint:** [Current results, dataset coverage and stopped-work status](docs/PROJECT_STATUS_20261107.md). The completed Dogs/3B experiments used 40 calibration and 40 development clips; they are not full-dataset tests. The forty-calibration/full-test expansion is an unfinished draft with documented review findings and has not run GPU experiments.
+## Final Train-50 rebuttal cases — 2026-11-07
+
+The current experiment implementation has **17 independently launched cases**, each with isolated outputs and immutable support/query registrations. The primary suite is Dogs, Watkins, Bats and HumBugDB, with **50 total stratified official-train labels** and the **complete official test**. It preserves the original continuous mapping and adds prior-centered soft class prototypes with capped additive K/V injection. Same-support readouts, acoustic features, audio ICL, controls, support scaling, frequency transfer, GLM, LoRA, no-op/cost diagnostics and a native NatureLM comparison have separate entries. A historical readout supplement requires real source registrations.
+
+- [Final experiments and exact independent commands (中文)](docs/rebuttal/FINAL_CASES_ZH.md)
+- [Every recovered reviewer concern → experiment → response boundary](docs/rebuttal/REVIEWER_MAP.md)
+- [Data preparation and actual MFCC/eGeMAPS/BEATs definitions](docs/rebuttal/DATA_AND_FEATURES.md)
+- [NatureLM specialist scope and required assets](docs/rebuttal/NATURELM_SCOPE.md)
+- [Historical readout source requirements](docs/rebuttal/HISTORICAL_READOUTS.md)
+- [Current software validation receipt](docs/rebuttal/VALIDATION_20261107.json)
+
+```bash
+python experiments/rebuttal_cases/c01_main.py plan --dataset dogs --model qwen7b --condition full
+# After preparing actual audio and a compatible GPU environment:
+python experiments/rebuttal_cases/c01_main.py check --dataset dogs --model qwen7b --condition full --run-id final_v1
+python experiments/rebuttal_cases/c01_main.py run --execute --dataset dogs --model qwen7b --condition full --run-id final_v1
+```
+
+**No new scientific experiment was run during this code preparation.** CPU and injected-backend tests validate software contracts, not production checkpoint compatibility or recognition improvements. Missing specialist assets, original raw-eta registrations and real-world drift evidence remain explicit limits in the reviewer map. The known reviewer IDs come from a saved secondary summary; original review ordering and complete wording have not been recovered.
+
+The completed earlier Dogs/3B experiments used 40 calibration and 40 development clips; they are not full-dataset tests. Their [development checkpoint](docs/PROJECT_STATUS_20261107.md) and the earlier release instructions below retain their historical scope. The Train-50 runbook above supersedes the unfinished Cal-40 expansion for the newly proposed rebuttal experiments.
+
+## Earlier release verification
 
 **2026-10-03 verification:** 148 CPU tests passed with no failures or skips; all 116 offline release checks passed. [Remote verification](docs/research/REMOTE_VERIFICATION_20261003.json) · [Tested materialization run](https://github.com/Yunbo-max/AKR/actions/runs/37131602379) · [Integration PR #1](https://github.com/Yunbo-max/AKR/pull/1). No new GPU experiment was run; S1 remains pending real-model evaluation.
 

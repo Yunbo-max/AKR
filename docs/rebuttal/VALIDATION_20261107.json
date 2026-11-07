@@ -1,0 +1,190 @@
+{
+  "validated_utc": "2026-11-07T16:31:18.975056+00:00",
+  "status": "CPU software contracts passed; production scientific execution pending",
+  "git_branch": "research/rebuttal-train50-cases-20261107",
+  "base_commit_before_changes": "19dee12cea0e2009c35a75fade8addc3922bd670",
+  "pytest": {
+    "command": "python -m pytest -q -rs",
+    "exit_code": 0,
+    "passed": 399,
+    "skipped": 7,
+    "warnings": 1,
+    "elapsed_seconds": 54.54,
+    "summary": "399 passed, 7 skipped, 1 warning in 54.54s",
+    "skip_reasons": [
+      "SKIPPED [1] tests/test_glm_backend.py:144: run with /root/.venvs/akr-glm/bin/python for pinned-class CPU integration",
+      "SKIPPED [1] tests/test_glm_backend.py:173: run with /root/.venvs/akr-glm/bin/python for pinned-class CPU integration",
+      "SKIPPED [1] tests/test_glm_backend.py:240: requires isolated GLM environment",
+      "SKIPPED [1] tests/test_qwen3_backend.py:105: Qwen3 optional environment required",
+      "SKIPPED [1] tests/test_qwen3_backend.py:124: Qwen3 optional environment required",
+      "SKIPPED [1] tests/test_qwen3_backend.py:134: Qwen3 optional environment required",
+      "SKIPPED [1] tests/test_train50_features.py:103: official BEATs checkpoint/source assets are not provisioned"
+    ],
+    "warning": "Existing tiny PEFT save/reload fixture has no source config file; this is not a production checkpoint acceptance test."
+  },
+  "entrypoint_plans": [
+    {
+      "entry": "experiments/rebuttal_cases/c00_protocol.py",
+      "exit_code": 0,
+      "plan_parsed": true
+    },
+    {
+      "entry": "experiments/rebuttal_cases/c01_main.py",
+      "exit_code": 0,
+      "plan_parsed": true
+    },
+    {
+      "entry": "experiments/rebuttal_cases/c02_ridge_decoder.py",
+      "exit_code": 0,
+      "plan_parsed": true
+    },
+    {
+      "entry": "experiments/rebuttal_cases/c03_acoustic_features.py",
+      "exit_code": 0,
+      "plan_parsed": true
+    },
+    {
+      "entry": "experiments/rebuttal_cases/c04_audio_icl.py",
+      "exit_code": 0,
+      "plan_parsed": true
+    },
+    {
+      "entry": "experiments/rebuttal_cases/c05_routing_scale.py",
+      "exit_code": 0,
+      "plan_parsed": true
+    },
+    {
+      "entry": "experiments/rebuttal_cases/c06_centering.py",
+      "exit_code": 0,
+      "plan_parsed": true
+    },
+    {
+      "entry": "experiments/rebuttal_cases/c07_direction_controls.py",
+      "exit_code": 0,
+      "plan_parsed": true
+    },
+    {
+      "entry": "experiments/rebuttal_cases/c08_kv_layers.py",
+      "exit_code": 0,
+      "plan_parsed": true
+    },
+    {
+      "entry": "experiments/rebuttal_cases/c09_support_size.py",
+      "exit_code": 0,
+      "plan_parsed": true
+    },
+    {
+      "entry": "experiments/rebuttal_cases/c10_sensitivity.py",
+      "exit_code": 0,
+      "plan_parsed": true
+    },
+    {
+      "entry": "experiments/rebuttal_cases/c11_frequency_transfer.py",
+      "exit_code": 0,
+      "plan_parsed": true
+    },
+    {
+      "entry": "experiments/rebuttal_cases/c12_glm_architecture.py",
+      "exit_code": 0,
+      "plan_parsed": true
+    },
+    {
+      "entry": "experiments/rebuttal_cases/c13_matched_lora.py",
+      "exit_code": 0,
+      "plan_parsed": true
+    },
+    {
+      "entry": "experiments/rebuttal_cases/c14_cost_noop.py",
+      "exit_code": 0,
+      "plan_parsed": true
+    },
+    {
+      "entry": "experiments/rebuttal_cases/c15_naturelm.py",
+      "exit_code": 0,
+      "plan_parsed": true
+    },
+    {
+      "entry": "experiments/rebuttal_cases/c16_historical_readouts.py",
+      "exit_code": 0,
+      "plan_parsed": true
+    }
+  ],
+  "verified_contracts": [
+    "Train-50 is total support from official train, with class coverage and nested budgets.",
+    "Full official test is retained; source/decoded-PCM connected overlap excludes training candidates only.",
+    "Synthetic end-to-end comparisons use real waveforms, a tiny injected backend and exact ordered query coverage.",
+    "No query-target gradient path; zero-alpha/zero-field exact no-op and ridge/text rendering identity.",
+    "Immutable data/config/code/assets/environment receipts and interrupted-run cache reuse.",
+    "Partial, reordered, foreign or corrupt journals cannot be reported complete; stale completion resets on preflight/config/report failure.",
+    "Original continuous mapping parity, support-prior centering, routing, matched shuffle controls and K/V location enum contracts.",
+    "Full probability/priors text baseline preserves exactly the soft router class information; no query truth accepted.",
+    "Actual installed openSMILE eGeMAPSv02 and real PyArrow preparation of synthetic canonical shard fixtures.",
+    "NatureLM injected-runtime interface, all-window aggregation, tokenizer identity and explicit generate-call measurement unit.",
+    "Historical C16 source-locked six-method contract, exact source bytes, population/receipt verification and unsupported raw-eta failure."
+  ],
+  "independent_review": {
+    "mode": "read-only review of initial integrated implementation",
+    "material_findings_addressed": [
+      "full_prefill scope",
+      "matched continuous-cap shuffled-pair comparator",
+      "external feature resume provenance",
+      "NatureLM tokenizer.model asset hash",
+      "NatureLM timing and generate-window counter",
+      "protocol-only C00 exit status"
+    ],
+    "limits": "No independent production checkpoint, full official audio materialization, GPU feasibility or scientific-outcome acceptance."
+  },
+  "production_execution": {
+    "new_gpu_experiments_run": false,
+    "official_full_datasets_materialized": false,
+    "large_model_checkpoints_downloaded": false,
+    "new_scientific_scores": false,
+    "automatic_reviewer_messages_sent": false
+  },
+  "remaining_evidence_limits": [
+    "Original reviewer full text/order absent; only secondary summaries recovered.",
+    "Historical raw eta=300 source registration absent; C16 supports registered relative_active_state_norm only.",
+    "Real BEATs/NatureLM assets and GLM/NatureLM production environment acceptance pending.",
+    "No BirdSet/natural soundscape drift experiment.",
+    "No NatureLM K/V AKR adapter.",
+    "Single fixed main support draw; no cross-draw variance claim."
+  ],
+  "files_sha256": {
+    "akr_final/train50_cases.py": "ece3c77e8bc4cca610ab97cd39e3c5bfd305337da9ad37db64a6011607c77476",
+    "akr_final/train50_evidence.py": "9f221c2cffb14aa5c1a9ad0eed991656d69dea93a8586faa6a70c6a4be46f2c7",
+    "akr_final/train50_features.py": "4970de9cab7fc5c1d85693927dc31ebbac4d0060eb2ff6024dab5bba1aaaebce",
+    "akr_final/train50_methods.py": "a5a996a27fa763d9d850790f038b46bc652577e5f61727819b0a80bf1fd815b9",
+    "akr_final/train50_naturelm.py": "87d71f01e470fa574494c2b8d4e2c6506a3c6bb2f1b1b8a41317ae922d777630",
+    "akr_final/train50_protocol.py": "5c39922342d8efbb60f00d90d885dd396dd8f7770897b4f6a976cc9b3df23883",
+    "akr_final/train50_runner.py": "6ea961055bb5871fd7c1e5b8919dd7e3b4bd551be8557a5b6f806172daf3470e",
+    "configs/akr_train50.yaml": "991292c0fe002cc5fb26ecea95fd8dd746b4ea65677d93c5014059b424a79065",
+    "experiments/rebuttal_cases/c00_protocol.py": "564f929ca40be7ffa846dfc2b1d237513b7982ce5070e0e9a1daeda3ca9dc6ce",
+    "experiments/rebuttal_cases/c01_main.py": "7f61c33277a3df735f723c8887adff3113352f81746b9d7b07cf66b2e8347f68",
+    "experiments/rebuttal_cases/c02_ridge_decoder.py": "aa6ade6f6386792a30b5e8e1c0ea825ebec6de2f8a68003767bdaa5acbcd6b52",
+    "experiments/rebuttal_cases/c03_acoustic_features.py": "5212d0aeab2c7ccb4a2cf15e13808bce564562e999638da85da8aeb0d91fb87a",
+    "experiments/rebuttal_cases/c04_audio_icl.py": "119c8274043f3d8fbf7fc1307245b3d04d3a484fdb5af775156fb89bc44e6c7b",
+    "experiments/rebuttal_cases/c05_routing_scale.py": "7ab65c86ee1a9b3c7e47c5144b265fc6df0f9df0fa3d18b732b50077db4ff45f",
+    "experiments/rebuttal_cases/c06_centering.py": "db802a56ba83f77911f97d597355bd9f4d6c68e25ff4f1956d6e326ce3f8ba1d",
+    "experiments/rebuttal_cases/c07_direction_controls.py": "2d1096fc2689ecb7be0e78b14394371312720d3a13c81de8ae1c936a623eecc7",
+    "experiments/rebuttal_cases/c08_kv_layers.py": "77a2ec0256074208c32e1a7b29bb051c451bb7a09ce4e47e7c791f06c583f908",
+    "experiments/rebuttal_cases/c09_support_size.py": "3f70e2fb31ebdb699afdef324fac607ad13fae4ec24b8bda388e7256dec67a69",
+    "experiments/rebuttal_cases/c10_sensitivity.py": "11f71f1aaf639e125d9537f3c51b7b587890f081d54bfa0b41b7d3bcd0727e0c",
+    "experiments/rebuttal_cases/c11_frequency_transfer.py": "ee9fe0636a9aaf38adec37e0f87c6273f9e91c948853bfb695edb120c0fa9531",
+    "experiments/rebuttal_cases/c12_glm_architecture.py": "5939879aea9ccefb4d2995f707a654e543bbdf6b5fd5eb0599c6ac19ed0fce02",
+    "experiments/rebuttal_cases/c13_matched_lora.py": "b444bdbe137201e2ab4c65eec0b584d83d3b8bd66842466a4ff472e60fe4249f",
+    "experiments/rebuttal_cases/c14_cost_noop.py": "229e7d5da65df4f6eaf0f897332c0da2c4363a0c3d2eaca97e5be8cbf33bee98",
+    "experiments/rebuttal_cases/c15_naturelm.py": "f23f8f97482b03ec843689006a3979218dfd22a0e351ac9ca0470e84be654ef9",
+    "experiments/rebuttal_cases/c16_historical_readouts.py": "772db30b172625648bf13760d489e143f466a60e70d23d3f933b7b64819d871c",
+    "requirements-train50-features.txt": "5ac2b740106262c8470684531178c261134d5929ef0dab625fbfee2ec8d0e5b7",
+    "scripts/prepare_train50_data.py": "a41a602d2affc10bcd46d8fe8ad0bc8e9ac3c244077a89ec4d2b05bf9b2fcf1f",
+    "tests/test_prepare_train50_data.py": "b5e4fa9a572c30e3e19261a9bea3fc13cff57a05f70f2fed427136bc99f0db05",
+    "tests/test_train50_cases.py": "c563409a954623cc2451df615ba2cac8f59a21f169be3242cfa39076b4455a15",
+    "tests/test_train50_evidence.py": "7944dad0748e60276d37a9c79a95fc96b8b40d1f4d2981089ca8906c997d6493",
+    "tests/test_train50_features.py": "e1f35fac307d68e4a9840d570f4b9178cd5552e40ce60983ba8833149987e1c0",
+    "tests/test_train50_historical.py": "3cc4bf6ac25a455c0264fc29f314d756ee3422b662b61d92dd91b4c8b841a4bd",
+    "tests/test_train50_methods.py": "b9f9c19d616b0e4297134daff5068d105b576a161a1cc1dca0650bfd890c729a",
+    "tests/test_train50_naturelm.py": "7618247c57fde63c38681dcada8cc9dd265cd3fc221d64d8fa6bf0326c2965f2",
+    "tests/test_train50_protocol.py": "5791723026c83db290b0997480bfab97c02d66e56d9a1b2f08f9da74870e36b9",
+    "tests/test_train50_runner.py": "de82c1df238d326028045d095e5bd090d184e5b6200abd5f2441f32e1a3259c6"
+  }
+}
