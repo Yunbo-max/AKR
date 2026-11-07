@@ -1,0 +1,221 @@
+{
+  "refit": {
+    "adapter": null,
+    "adapter_files": null,
+    "kind": "native",
+    "run": "2bc926ae9129426777ba70b69ba683f2202d502a7c231ac2fd4d18eb16d23dad",
+    "selection_sha256": "40600268677421f3f79894e3de534667cbd647d135ee47c67482c84a36e5dab7"
+  },
+  "selection": {
+    "calibration_ids": [
+      "train_469",
+      "train_448",
+      "train_546",
+      "train_553",
+      "train_506",
+      "train_507",
+      "train_180",
+      "train_178",
+      "train_583",
+      "train_675",
+      "train_41",
+      "train_51",
+      "train_400",
+      "train_357",
+      "train_101",
+      "train_91",
+      "train_109",
+      "train_146",
+      "train_257",
+      "train_242",
+      "train_486",
+      "train_541",
+      "train_515",
+      "train_183",
+      "train_643",
+      "train_9",
+      "train_405",
+      "train_97",
+      "train_113",
+      "train_265",
+      "train_473",
+      "train_551",
+      "train_530",
+      "train_185",
+      "train_584",
+      "train_14",
+      "train_406",
+      "train_88",
+      "train_117",
+      "train_253"
+    ],
+    "choices": {
+      "akr": {
+        "accepted": true,
+        "candidate": "centered_class_a0.3",
+        "criterion": "OOF accuracy, then macro-F1, then lower invalid rate, then native/simpler predeclared order",
+        "prediction_forward_calls": 4800,
+        "prediction_seconds": 1013.6474806230017,
+        "scores": {
+          "centered_class_a0.03": {
+            "accuracy": 0.175,
+            "balanced_accuracy": 0.175,
+            "invalid_rate": 0.0,
+            "macro_f1": 0.06901098901098901,
+            "n": 40
+          },
+          "centered_class_a0.1": {
+            "accuracy": 0.2,
+            "balanced_accuracy": 0.2,
+            "invalid_rate": 0.0,
+            "macro_f1": 0.06836363636363636,
+            "n": 40
+          },
+          "centered_class_a0.3": {
+            "accuracy": 0.225,
+            "balanced_accuracy": 0.225,
+            "invalid_rate": 0.0,
+            "macro_f1": 0.11073271413828689,
+            "n": 40
+          },
+          "centered_regression_a0.03": {
+            "accuracy": 0.125,
+            "balanced_accuracy": 0.125,
+            "invalid_rate": 0.0,
+            "macro_f1": 0.046218487394957986,
+            "n": 40
+          },
+          "centered_regression_a0.1": {
+            "accuracy": 0.05,
+            "balanced_accuracy": 0.05,
+            "invalid_rate": 0.0,
+            "macro_f1": 0.017391304347826087,
+            "n": 40
+          },
+          "centered_regression_a0.3": {
+            "accuracy": 0.1,
+            "balanced_accuracy": 0.1,
+            "invalid_rate": 0.15,
+            "macro_f1": 0.058659469185784976,
+            "n": 40
+          },
+          "native": {
+            "accuracy": 0.175,
+            "balanced_accuracy": 0.175,
+            "invalid_rate": 0.0,
+            "macro_f1": 0.06901098901098901,
+            "n": 40
+          },
+          "shrunk_a0.03": {
+            "accuracy": 0.125,
+            "balanced_accuracy": 0.125,
+            "invalid_rate": 0.0,
+            "macro_f1": 0.05,
+            "n": 40
+          },
+          "shrunk_a0.1": {
+            "accuracy": 0.075,
+            "balanced_accuracy": 0.075,
+            "invalid_rate": 0.0,
+            "macro_f1": 0.025874125874125874,
+            "n": 40
+          },
+          "shrunk_a0.3": {
+            "accuracy": 0.075,
+            "balanced_accuracy": 0.075,
+            "invalid_rate": 0.0,
+            "macro_f1": 0.01875,
+            "n": 40
+          }
+        },
+        "settings": {
+          "alpha": 0.3,
+          "kind": "centered_class"
+        }
+      },
+      "lora": {
+        "accepted": false,
+        "candidate": "native",
+        "criterion": "OOF accuracy, then macro-F1, then lower invalid rate, then native/simpler predeclared order",
+        "prediction_forward_calls": 4800,
+        "prediction_seconds": 1000.0897167549974,
+        "scores": {
+          "lr_0.0002_epoch_1": {
+            "accuracy": 0.1,
+            "balanced_accuracy": 0.1,
+            "invalid_rate": 0.0,
+            "macro_f1": 0.01818181818181818,
+            "n": 40
+          },
+          "lr_0.0002_epoch_3": {
+            "accuracy": 0.15,
+            "balanced_accuracy": 0.15,
+            "invalid_rate": 0.0,
+            "macro_f1": 0.07649769585253456,
+            "n": 40
+          },
+          "lr_0.0002_epoch_5": {
+            "accuracy": 0.125,
+            "balanced_accuracy": 0.125,
+            "invalid_rate": 0.0,
+            "macro_f1": 0.06282828282828282,
+            "n": 40
+          },
+          "lr_0.0005_epoch_1": {
+            "accuracy": 0.1,
+            "balanced_accuracy": 0.1,
+            "invalid_rate": 0.0,
+            "macro_f1": 0.03333333333333333,
+            "n": 40
+          },
+          "lr_0.0005_epoch_3": {
+            "accuracy": 0.125,
+            "balanced_accuracy": 0.125,
+            "invalid_rate": 0.0,
+            "macro_f1": 0.045,
+            "n": 40
+          },
+          "lr_0.0005_epoch_5": {
+            "accuracy": 0.125,
+            "balanced_accuracy": 0.125,
+            "invalid_rate": 0.0,
+            "macro_f1": 0.046052631578947366,
+            "n": 40
+          },
+          "lr_5e-05_epoch_1": {
+            "accuracy": 0.125,
+            "balanced_accuracy": 0.125,
+            "invalid_rate": 0.0,
+            "macro_f1": 0.04666666666666667,
+            "n": 40
+          },
+          "lr_5e-05_epoch_3": {
+            "accuracy": 0.1,
+            "balanced_accuracy": 0.1,
+            "invalid_rate": 0.0,
+            "macro_f1": 0.018604651162790697,
+            "n": 40
+          },
+          "lr_5e-05_epoch_5": {
+            "accuracy": 0.15,
+            "balanced_accuracy": 0.15,
+            "invalid_rate": 0.0,
+            "macro_f1": 0.048888888888888885,
+            "n": 40
+          },
+          "native": {
+            "accuracy": 0.175,
+            "balanced_accuracy": 0.175,
+            "invalid_rate": 0.0,
+            "macro_f1": 0.06901098901098901,
+            "n": 40
+          }
+        },
+        "settings": {}
+      }
+    },
+    "development_labels_used_for_selection": false,
+    "native_cv_parity": true,
+    "registration": "f7b1997ef6e284b3c8098fffb7bd2b3d6ea8cf3b9364d3d649d5b533d5dd2722"
+  }
+}

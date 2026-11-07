@@ -1,0 +1,800 @@
+version: 1
+old_root: /root/animal-omni-kv
+seeds:
+- 20260914
+- 20260915
+- 20260916
+models:
+  qwen7b:
+    id: Qwen/Qwen2.5-Omni-7B
+    revision: ae9e1690543ffd5c0221dc27f79834d0294cba00
+  qwen3b:
+    id: Qwen/Qwen2.5-Omni-3B
+    revision: f75b40e3da2003cdd6e1829b1f420ca70797c34e
+  glm4voice9b:
+    id: zai-org/glm-4-voice-9b
+    revision: 352e5a64063448d5e46394753fb65bf1dbab975b
+  qwen3omni:
+    id: Qwen/Qwen3-Omni-30B-A3B-Instruct
+    revision: 26291f793822fb6be9555850f06dfe95f2d7e695
+settings:
+  rank: 4
+  ridge_alpha: 10.0
+  relative_alpha: 0.01
+  raw_eta: 300.0
+  layer_fractions:
+  - 0.25
+  - 0.5
+  - 0.75
+  - 0.875
+  feature_fraction: 0.875
+  max_context_tokens: 32768
+  max_new_tokens: 12
+  gain_steps:
+  - 0.5
+  - 0.25
+  gain_regularization: 0.01
+  gain_upper: 2.0
+  guard_tolerance: 0.0
+  min_improvement: 1.0e-06
+  control_alphas:
+  - 0.003
+  - 0.01
+  - 0.03
+datasets:
+  marmaudio:
+    manifest: data/manifests/marmaudio_expert_validation.csv
+    labels:
+    - Infant Cry
+    - Phee
+    - Seep
+    - Trill
+    - Tsik
+    - Twitter
+    group_key: recording_id
+    partition: recording_group_confirmation
+    fit_per_class: 8
+    calibration_per_class: 2
+    guard_per_class: 2
+    conditions:
+    - full
+    - lp:1000
+  dogs:
+    manifest: data/manifests/beans_dogs_protocol.csv
+    labels_from_config: configs/beans_dogs.yaml
+    group_key: source_filename
+    partition: official_test
+    fit_per_class: 8
+    calibration_per_class: 2
+    guard_per_class: 2
+    conditions:
+    - full
+    - lp:1000
+  watkins:
+    manifest: data/manifests/beans_watkins_protocol.csv
+    labels_from_config: configs/beans_watkins.yaml
+    group_key: source_filename
+    partition: official_test
+    fit_per_class: 2
+    calibration_per_class: 1
+    guard_per_class: 1
+    conditions:
+    - full
+    - lp:1000
+  bz_call-type_771443ab:
+    manifest: data/manifests/beans_zero_akr_v1/bz_call-type_771443ab.csv
+    labels:
+    - call
+    - song
+    group_key: recording_group
+    partition: beans_zero_supervised
+    fit_per_class: 1
+    calibration_per_class: 1
+    guard_per_class: 1
+    rank: 1
+    max_new_tokens: 64
+    conditions:
+    - full
+    - lp:1000
+    supervised_registration: data/manifests/beans_zero_akr_v1/registration.json
+    registration_sources:
+    - data/manifests/beans_zero_akr_v1/registration.json
+    - data/manifests/beans_zero_targets_fullscan_cap10.csv
+  bz_unseen-family-cmn_637d4b9f:
+    manifest: data/manifests/beans_zero_akr_v1/bz_unseen-family-cmn_637d4b9f.csv
+    labels:
+    - American Beaver
+    - Common Midwife Toad
+    - Dall's Porpoise
+    - Eurasian Wild Pig
+    - Forest Hog
+    - Great Grig
+    - Harbor Porpoise
+    - Paddy Field Frog
+    - Spotted Elachura
+    group_key: recording_group
+    partition: beans_zero_supervised
+    fit_per_class: 1
+    calibration_per_class: 1
+    guard_per_class: 1
+    rank: 1
+    max_new_tokens: 64
+    conditions:
+    - full
+    - lp:1000
+    supervised_registration: data/manifests/beans_zero_akr_v1/registration.json
+    registration_sources:
+    - data/manifests/beans_zero_akr_v1/registration.json
+    - data/manifests/beans_zero_targets_fullscan_cap10.csv
+  bz_unseen-family-sci_e9d6cf63:
+    manifest: data/manifests/beans_zero_akr_v1/bz_unseen-family-sci_e9d6cf63.csv
+    labels:
+    - Alytes obstetricans
+    - Elachura formosa
+    - Fejervarya limnocharis
+    - Hylochoerus meinertzhageni
+    - Phocoena phocoena
+    - Phocoenoides dalli
+    - Sus scrofa
+    group_key: recording_group
+    partition: beans_zero_supervised
+    fit_per_class: 1
+    calibration_per_class: 1
+    guard_per_class: 1
+    rank: 1
+    max_new_tokens: 64
+    conditions:
+    - full
+    - lp:1000
+    supervised_registration: data/manifests/beans_zero_akr_v1/registration.json
+    registration_sources:
+    - data/manifests/beans_zero_akr_v1/registration.json
+    - data/manifests/beans_zero_targets_fullscan_cap10.csv
+  bz_unseen-family-tax_f5171f1d:
+    manifest: data/manifests/beans_zero_akr_v1/bz_unseen-family-tax_f5171f1d.csv
+    labels:
+    - Arthropoda Insecta Orthoptera Prophalangopsidae Cyphoderris monstrosa
+    - Chordata Amphibia Anura Alytidae Alytes obstetricans
+    - Chordata Amphibia Anura Dicroglossidae Fejervarya limnocharis
+    - Chordata Aves Passeriformes Elachuridae Elachura formosa
+    - Chordata Mammalia Artiodactyla Suidae Hylochoerus meinertzhageni
+    - Chordata Mammalia Artiodactyla Suidae Sus scrofa
+    - Chordata Mammalia Cetacea Phocoenidae Phocoena phocoena
+    - Chordata Mammalia Cetacea Phocoenidae Phocoenoides dalli
+    - Chordata Mammalia Rodentia Castoridae Castor canadensis
+    group_key: recording_group
+    partition: beans_zero_supervised
+    fit_per_class: 1
+    calibration_per_class: 1
+    guard_per_class: 1
+    rank: 1
+    max_new_tokens: 64
+    conditions:
+    - full
+    - lp:1000
+    supervised_registration: data/manifests/beans_zero_akr_v1/registration.json
+    registration_sources:
+    - data/manifests/beans_zero_akr_v1/registration.json
+    - data/manifests/beans_zero_targets_fullscan_cap10.csv
+  bz_unseen-genus-cmn_c42ad3b7:
+    manifest: data/manifests/beans_zero_akr_v1/bz_unseen-genus-cmn_c42ad3b7.csv
+    labels:
+    - Beijing Babbler
+    - Black Giant Cicada
+    - Black-tailed Trainbearer
+    - Bourke's Parrot
+    - Brazilian Teal
+    - Crested Gallito
+    - Crimson-collared Grosbeak
+    - Double-barred Finch
+    - Golden-winged Sunbird
+    - Goldenface
+    - Green-tailed Trainbearer
+    - Mallee Emu-wren
+    - Meadow Grasshopper
+    - Nanday Parakeet
+    - Orange-crested Manakin
+    - Palm Cockatoo
+    - Ross's Gull
+    - Shining Sunbeam
+    - Southern Emu-wren
+    - Southern Whiteface
+    - Spectacled Tyrant
+    - Spotted Nightjar
+    - Three-toed Jacamar
+    - Tylas Vanga
+    - White-crowned Cuckoo
+    - White-throated Nightjar
+    - Wood Cricket
+    - Yellow-crested Manakin
+    group_key: recording_group
+    partition: beans_zero_supervised
+    fit_per_class: 1
+    calibration_per_class: 1
+    guard_per_class: 1
+    rank: 1
+    max_new_tokens: 64
+    conditions:
+    - full
+    - lp:1000
+    supervised_registration: data/manifests/beans_zero_akr_v1/registration.json
+    registration_sources:
+    - data/manifests/beans_zero_akr_v1/registration.json
+    - data/manifests/beans_zero_targets_fullscan_cap10.csv
+  bz_unseen-genus-sci_cf55f566:
+    manifest: data/manifests/beans_zero_akr_v1/bz_unseen-genus-sci_cf55f566.csv
+    labels:
+    - Aglaeactis cupripennis
+    - Aglaeactis pamela
+    - Amazonetta brasiliensis
+    - Aphelocephala leucopsis
+    - Aratinga nenday
+    - Cacomantis leucolophus
+    - Cryptotympana facialis
+    - Doliornis remseni
+    - Eurostopodus argus
+    - Heterocercus aurantiivertex
+    - Jacamaralcyon tridactyla
+    - Lesbia victoriae
+    - Nemobius sylvestris
+    - Probosciger aterrimus
+    - Pseudochorthippus parallelus
+    - Rhinocrypta lanceolata
+    - Rhodostethia rosea
+    - Rhodothraupis celaeno
+    - Rhopophilus pekinensis
+    - Stipiturus malachurus
+    - Stizoptera bichenovii
+    - Tylas eduardi
+    - Tympanistalna gastrica
+    - Vini kuhlii
+    - Vini peruviana
+    group_key: recording_group
+    partition: beans_zero_supervised
+    fit_per_class: 1
+    calibration_per_class: 1
+    guard_per_class: 1
+    rank: 1
+    max_new_tokens: 64
+    conditions:
+    - full
+    - lp:1000
+    supervised_registration: data/manifests/beans_zero_akr_v1/registration.json
+    registration_sources:
+    - data/manifests/beans_zero_akr_v1/registration.json
+    - data/manifests/beans_zero_targets_fullscan_cap10.csv
+  bz_unseen-genus-tax_ff8ccbde:
+    manifest: data/manifests/beans_zero_akr_v1/bz_unseen-genus-tax_ff8ccbde.csv
+    labels:
+    - Arthropoda Insecta Hemiptera Cicadidae Cryptotympana facialis
+    - Arthropoda Insecta Orthoptera Acrididae Pseudochorthippus parallelus
+    - Arthropoda Insecta Orthoptera Trigonidiidae Cyrtoxipha gundlachi
+    - Chordata Aves Anseriformes Anatidae Amazonetta brasiliensis
+    - Chordata Aves Apodiformes Trochilidae Aglaeactis pamela
+    - Chordata Aves Apodiformes Trochilidae Lesbia nuna
+    - Chordata Aves Apodiformes Trochilidae Lesbia victoriae
+    - Chordata Aves Cuculiformes Cuculidae Pachycoccyx audeberti
+    - Chordata Aves Passeriformes Acanthizidae Pachycare flavogriseum
+    - Chordata Aves Passeriformes Cardinalidae Rhodothraupis celaeno
+    - Chordata Aves Passeriformes Estrildidae Stizoptera bichenovii
+    - Chordata Aves Passeriformes Maluridae Stipiturus malachurus
+    - Chordata Aves Passeriformes Pipridae Heterocercus aurantiivertex
+    - Chordata Aves Passeriformes Pipridae Heterocercus linteatus
+    - Chordata Aves Passeriformes Rhinocryptidae Rhinocrypta lanceolata
+    - Chordata Aves Passeriformes Sylviidae Rhopophilus pekinensis
+    - Chordata Aves Passeriformes Vangidae Tylas eduardi
+    - Chordata Aves Piciformes Galbulidae Jacamaralcyon tridactyla
+    - Chordata Aves Psittaciformes Psittacidae Aratinga nenday
+    - Chordata Aves Psittaciformes Psittacidae Probosciger aterrimus
+    group_key: recording_group
+    partition: beans_zero_supervised
+    fit_per_class: 1
+    calibration_per_class: 1
+    guard_per_class: 1
+    rank: 1
+    max_new_tokens: 64
+    conditions:
+    - full
+    - lp:1000
+    supervised_registration: data/manifests/beans_zero_akr_v1/registration.json
+    registration_sources:
+    - data/manifests/beans_zero_akr_v1/registration.json
+    - data/manifests/beans_zero_targets_fullscan_cap10.csv
+  bz_unseen-species-cmn_15d88896:
+    manifest: data/manifests/beans_zero_akr_v1/bz_unseen-species-cmn_15d88896.csv
+    labels:
+    - Amazonian Inezia
+    - Black-and-orange Flycatcher
+    - Black-bibbed Tit
+    - Black-fronted Tern
+    - Black-tailed Treecreeper
+    - Black-winged Monarch
+    - Buff-bellied Tanager
+    - Chestnut-collared Swallow
+    - Chinese Shortwing
+    - Cuzco Warbler
+    - Dark-winged Canastero
+    - Fire-tailed Sunbird
+    - Flesh-footed Shearwater
+    - Grey-faced Tit-Babbler
+    - Indian Nuthatch
+    - Johanna's Sunbird
+    - Long-winged Harrier
+    - Maghreb Magpie
+    - Meyer's Friarbird
+    - Pacific Robin
+    - Parrot-billed Sparrow
+    - Pectoral-patch Cisticola
+    - Pine Barrens Treefrog
+    - Plain-backed Sunbird
+    - Red-throated Tit
+    - Salvadori's Nightjar
+    - Sanborn's Tree Frog
+    - Sokoke Pipit
+    - Sombre Rock Chat
+    - Sooty Falcon
+    - Strange Weaver
+    - Streak-backed Antshrike
+    - Thick-billed Saltator
+    - Western Gerygone
+    - Western Quail-thrush
+    - Wreathed Hornbill
+    group_key: recording_group
+    partition: beans_zero_supervised
+    fit_per_class: 1
+    calibration_per_class: 1
+    guard_per_class: 1
+    rank: 1
+    max_new_tokens: 64
+    conditions:
+    - full
+    - lp:1000
+    supervised_registration: data/manifests/beans_zero_akr_v1/registration.json
+    registration_sources:
+    - data/manifests/beans_zero_akr_v1/registration.json
+    - data/manifests/beans_zero_targets_fullscan_cap10.csv
+  bz_unseen-species-sci_2dfa085a:
+    manifest: data/manifests/beans_zero_akr_v1/bz_unseen-species-sci_2dfa085a.csv
+    labels:
+    - Aethopyga ignicauda
+    - Anthus sokokensis
+    - Aplonis magna
+    - Ardenna grisea
+    - Asthenes arequipae
+    - Atlapetes meridae
+    - Brachypteryx sinensis
+    - Ceblepyris caesius
+    - Chlidonias albostriatus
+    - Columba arquatrix
+    - Dryocopus schulzii
+    - Falco concolor
+    - Herpsilochmus motacilloides
+    - Inezia subflava
+    - Machlolophus aplonotus
+    - Melaniparus fringillinus
+    - Mixornis kelleyi
+    - Myiothlypis chrysogaster
+    - Passer gongonensis
+    - Philemon meyeri
+    - Pica mauritanica
+    - Poecile hypermelaenus
+    - Pycnonotus blanfordi
+    - Ranoidea nudidigita
+    - Saltator cinctus
+    - Saltator maxillosus
+    - Sirystes subcanescens
+    - Thamnophilus insignis
+    - Treron affinis
+    - Zosterops cinereus
+    group_key: recording_group
+    partition: beans_zero_supervised
+    fit_per_class: 1
+    calibration_per_class: 1
+    guard_per_class: 1
+    rank: 1
+    max_new_tokens: 64
+    conditions:
+    - full
+    - lp:1000
+    supervised_registration: data/manifests/beans_zero_akr_v1/registration.json
+    registration_sources:
+    - data/manifests/beans_zero_akr_v1/registration.json
+    - data/manifests/beans_zero_targets_fullscan_cap10.csv
+  bz_unseen-species-tax_3368756e:
+    manifest: data/manifests/beans_zero_akr_v1/bz_unseen-species-tax_3368756e.csv
+    labels:
+    - Chordata Amphibia Anura Pelodryadidae Ranoidea nudidigita
+    - Chordata Aves Bucerotiformes Bucerotidae Rhyticeros undulatus
+    - Chordata Aves Columbiformes Columbidae Columba arquatrix
+    - Chordata Aves Falconiformes Falconidae Falco concolor
+    - Chordata Aves Passeriformes Acanthizidae Gerygone fusca
+    - Chordata Aves Passeriformes Climacteridae Climacteris melanurus
+    - Chordata Aves Passeriformes Corvidae Pica mauritanica
+    - Chordata Aves Passeriformes Dicruridae Dicrurus lophorinus
+    - Chordata Aves Passeriformes Furnariidae Asthenes arequipae
+    - Chordata Aves Passeriformes Hirundinidae Petrochelidon rufocollaris
+    - Chordata Aves Passeriformes Meliphagidae Philemon meyeri
+    - Chordata Aves Passeriformes Monarchidae Monarcha frater
+    - Chordata Aves Passeriformes Motacillidae Anthus sokokensis
+    - Chordata Aves Passeriformes Nectariniidae Aethopyga ignicauda
+    - Chordata Aves Passeriformes Pachycephalidae Pachycephala soror
+    - Chordata Aves Passeriformes Paridae Machlolophus aplonotus
+    - Chordata Aves Passeriformes Pycnonotidae Pycnonotus blanfordi
+    - Chordata Aves Passeriformes Pycnonotidae Pycnonotus penicillatus
+    - Chordata Aves Passeriformes Thamnophilidae Herpsilochmus motacilloides
+    - Chordata Aves Passeriformes Thraupidae Saltator cinctus
+    - Chordata Aves Passeriformes Thraupidae Saltator maxillosus
+    - Chordata Aves Passeriformes Thraupidae Thlypopsis inornata
+    - Chordata Aves Passeriformes Tyrannidae Sirystes subcanescens
+    - Chordata Aves Pelecaniformes Ardeidae Egretta picata
+    - Chordata Aves Psittaciformes Psittacidae Touit batavicus
+    group_key: recording_group
+    partition: beans_zero_supervised
+    fit_per_class: 1
+    calibration_per_class: 1
+    guard_per_class: 1
+    rank: 1
+    max_new_tokens: 64
+    conditions:
+    - full
+    - lp:1000
+    supervised_registration: data/manifests/beans_zero_akr_v1/registration.json
+    registration_sources:
+    - data/manifests/beans_zero_akr_v1/registration.json
+    - data/manifests/beans_zero_targets_fullscan_cap10.csv
+  bz_watkins_aab15ece:
+    manifest: data/manifests/beans_zero_akr_v1/bz_watkins_aab15ece.csv
+    labels:
+    - Atlantic Spotted Dolphin
+    - Bearded Seal
+    - Beluga, White Whale
+    - Bowhead Whale
+    - Clymene Dolphin
+    - False Killer Whale
+    - Fin, Finback Whale
+    - Frasers Dolphin
+    - Grampus, Rissos Dolphin
+    - Humpback Whale
+    - Long-Finned Pilot Whale
+    - Melon Headed Whale
+    - Short-Finned Pacific Pilot Whale
+    - Southern Right Whale
+    - Sperm Whale
+    - Spinner Dolphin
+    - Striped Dolphin
+    - White-beaked Dolphin
+    - White-sided Dolphin
+    group_key: recording_group
+    partition: beans_zero_supervised
+    fit_per_class: 1
+    calibration_per_class: 1
+    guard_per_class: 1
+    rank: 1
+    max_new_tokens: 64
+    conditions:
+    - full
+    - lp:1000
+    supervised_registration: data/manifests/beans_zero_akr_v1/registration.json
+    registration_sources:
+    - data/manifests/beans_zero_akr_v1/registration.json
+    - data/manifests/beans_zero_targets_fullscan_cap10.csv
+  bz_zf-indiv_fa56a8cc:
+    manifest: data/manifests/beans_zero_akr_v1/bz_zf-indiv_fa56a8cc.csv
+    labels:
+    - More
+    - One
+    group_key: recording_group
+    partition: beans_zero_supervised
+    fit_per_class: 1
+    calibration_per_class: 1
+    guard_per_class: 1
+    rank: 1
+    max_new_tokens: 64
+    conditions:
+    - full
+    - lp:1000
+    supervised_registration: data/manifests/beans_zero_akr_v1/registration.json
+    registration_sources:
+    - data/manifests/beans_zero_akr_v1/registration.json
+    - data/manifests/beans_zero_targets_fullscan_cap10.csv
+suites:
+  marm7b:
+    dataset: marmaudio
+    model: qwen7b
+    seeds: all
+    controls: first
+  marm3b:
+    dataset: marmaudio
+    model: qwen3b
+    seeds: all
+    controls: first
+  dogs7b:
+    dataset: dogs
+    model: qwen7b
+    seeds: all
+    controls: first
+  dogs3b:
+    dataset: dogs
+    model: qwen3b
+    seeds: all
+    controls: first
+  watkins7b:
+    dataset: watkins
+    model: qwen7b
+    seeds: all
+    controls: first
+  watkins3b:
+    dataset: watkins
+    model: qwen3b
+    seeds: all
+    controls: first
+  marm_glm:
+    dataset: marmaudio
+    model: glm4voice9b
+    seeds: all
+    controls: first
+  dogs_glm:
+    dataset: dogs
+    model: glm4voice9b
+    seeds: all
+    controls: first
+  watkins_glm:
+    dataset: watkins
+    model: glm4voice9b
+    seeds: all
+    controls: first
+  marm_qwen3:
+    dataset: marmaudio
+    model: qwen3omni
+    seeds: all
+    controls: first
+  dogs_qwen3:
+    dataset: dogs
+    model: qwen3omni
+    seeds: all
+    controls: first
+  watkins_qwen3:
+    dataset: watkins
+    model: qwen3omni
+    seeds: all
+    controls: first
+  bz_call-type_771443ab_qwen7b:
+    dataset: bz_call-type_771443ab
+    model: qwen7b
+    seeds: all
+    controls: first
+  bz_call-type_771443ab_qwen3b:
+    dataset: bz_call-type_771443ab
+    model: qwen3b
+    seeds: all
+    controls: first
+  bz_call-type_771443ab_glm4voice9b:
+    dataset: bz_call-type_771443ab
+    model: glm4voice9b
+    seeds: all
+    controls: first
+  bz_call-type_771443ab_qwen3omni:
+    dataset: bz_call-type_771443ab
+    model: qwen3omni
+    seeds: all
+    controls: first
+  bz_unseen-family-cmn_637d4b9f_qwen7b:
+    dataset: bz_unseen-family-cmn_637d4b9f
+    model: qwen7b
+    seeds: all
+    controls: first
+  bz_unseen-family-cmn_637d4b9f_qwen3b:
+    dataset: bz_unseen-family-cmn_637d4b9f
+    model: qwen3b
+    seeds: all
+    controls: first
+  bz_unseen-family-cmn_637d4b9f_glm4voice9b:
+    dataset: bz_unseen-family-cmn_637d4b9f
+    model: glm4voice9b
+    seeds: all
+    controls: first
+  bz_unseen-family-cmn_637d4b9f_qwen3omni:
+    dataset: bz_unseen-family-cmn_637d4b9f
+    model: qwen3omni
+    seeds: all
+    controls: first
+  bz_unseen-family-sci_e9d6cf63_qwen7b:
+    dataset: bz_unseen-family-sci_e9d6cf63
+    model: qwen7b
+    seeds: all
+    controls: first
+  bz_unseen-family-sci_e9d6cf63_qwen3b:
+    dataset: bz_unseen-family-sci_e9d6cf63
+    model: qwen3b
+    seeds: all
+    controls: first
+  bz_unseen-family-sci_e9d6cf63_glm4voice9b:
+    dataset: bz_unseen-family-sci_e9d6cf63
+    model: glm4voice9b
+    seeds: all
+    controls: first
+  bz_unseen-family-sci_e9d6cf63_qwen3omni:
+    dataset: bz_unseen-family-sci_e9d6cf63
+    model: qwen3omni
+    seeds: all
+    controls: first
+  bz_unseen-family-tax_f5171f1d_qwen7b:
+    dataset: bz_unseen-family-tax_f5171f1d
+    model: qwen7b
+    seeds: all
+    controls: first
+  bz_unseen-family-tax_f5171f1d_qwen3b:
+    dataset: bz_unseen-family-tax_f5171f1d
+    model: qwen3b
+    seeds: all
+    controls: first
+  bz_unseen-family-tax_f5171f1d_glm4voice9b:
+    dataset: bz_unseen-family-tax_f5171f1d
+    model: glm4voice9b
+    seeds: all
+    controls: first
+  bz_unseen-family-tax_f5171f1d_qwen3omni:
+    dataset: bz_unseen-family-tax_f5171f1d
+    model: qwen3omni
+    seeds: all
+    controls: first
+  bz_unseen-genus-cmn_c42ad3b7_qwen7b:
+    dataset: bz_unseen-genus-cmn_c42ad3b7
+    model: qwen7b
+    seeds: all
+    controls: first
+  bz_unseen-genus-cmn_c42ad3b7_qwen3b:
+    dataset: bz_unseen-genus-cmn_c42ad3b7
+    model: qwen3b
+    seeds: all
+    controls: first
+  bz_unseen-genus-cmn_c42ad3b7_glm4voice9b:
+    dataset: bz_unseen-genus-cmn_c42ad3b7
+    model: glm4voice9b
+    seeds: all
+    controls: first
+  bz_unseen-genus-cmn_c42ad3b7_qwen3omni:
+    dataset: bz_unseen-genus-cmn_c42ad3b7
+    model: qwen3omni
+    seeds: all
+    controls: first
+  bz_unseen-genus-sci_cf55f566_qwen7b:
+    dataset: bz_unseen-genus-sci_cf55f566
+    model: qwen7b
+    seeds: all
+    controls: first
+  bz_unseen-genus-sci_cf55f566_qwen3b:
+    dataset: bz_unseen-genus-sci_cf55f566
+    model: qwen3b
+    seeds: all
+    controls: first
+  bz_unseen-genus-sci_cf55f566_glm4voice9b:
+    dataset: bz_unseen-genus-sci_cf55f566
+    model: glm4voice9b
+    seeds: all
+    controls: first
+  bz_unseen-genus-sci_cf55f566_qwen3omni:
+    dataset: bz_unseen-genus-sci_cf55f566
+    model: qwen3omni
+    seeds: all
+    controls: first
+  bz_unseen-genus-tax_ff8ccbde_qwen7b:
+    dataset: bz_unseen-genus-tax_ff8ccbde
+    model: qwen7b
+    seeds: all
+    controls: first
+  bz_unseen-genus-tax_ff8ccbde_qwen3b:
+    dataset: bz_unseen-genus-tax_ff8ccbde
+    model: qwen3b
+    seeds: all
+    controls: first
+  bz_unseen-genus-tax_ff8ccbde_glm4voice9b:
+    dataset: bz_unseen-genus-tax_ff8ccbde
+    model: glm4voice9b
+    seeds: all
+    controls: first
+  bz_unseen-genus-tax_ff8ccbde_qwen3omni:
+    dataset: bz_unseen-genus-tax_ff8ccbde
+    model: qwen3omni
+    seeds: all
+    controls: first
+  bz_unseen-species-cmn_15d88896_qwen7b:
+    dataset: bz_unseen-species-cmn_15d88896
+    model: qwen7b
+    seeds: all
+    controls: first
+  bz_unseen-species-cmn_15d88896_qwen3b:
+    dataset: bz_unseen-species-cmn_15d88896
+    model: qwen3b
+    seeds: all
+    controls: first
+  bz_unseen-species-cmn_15d88896_glm4voice9b:
+    dataset: bz_unseen-species-cmn_15d88896
+    model: glm4voice9b
+    seeds: all
+    controls: first
+  bz_unseen-species-cmn_15d88896_qwen3omni:
+    dataset: bz_unseen-species-cmn_15d88896
+    model: qwen3omni
+    seeds: all
+    controls: first
+  bz_unseen-species-sci_2dfa085a_qwen7b:
+    dataset: bz_unseen-species-sci_2dfa085a
+    model: qwen7b
+    seeds: all
+    controls: first
+  bz_unseen-species-sci_2dfa085a_qwen3b:
+    dataset: bz_unseen-species-sci_2dfa085a
+    model: qwen3b
+    seeds: all
+    controls: first
+  bz_unseen-species-sci_2dfa085a_glm4voice9b:
+    dataset: bz_unseen-species-sci_2dfa085a
+    model: glm4voice9b
+    seeds: all
+    controls: first
+  bz_unseen-species-sci_2dfa085a_qwen3omni:
+    dataset: bz_unseen-species-sci_2dfa085a
+    model: qwen3omni
+    seeds: all
+    controls: first
+  bz_unseen-species-tax_3368756e_qwen7b:
+    dataset: bz_unseen-species-tax_3368756e
+    model: qwen7b
+    seeds: all
+    controls: first
+  bz_unseen-species-tax_3368756e_qwen3b:
+    dataset: bz_unseen-species-tax_3368756e
+    model: qwen3b
+    seeds: all
+    controls: first
+  bz_unseen-species-tax_3368756e_glm4voice9b:
+    dataset: bz_unseen-species-tax_3368756e
+    model: glm4voice9b
+    seeds: all
+    controls: first
+  bz_unseen-species-tax_3368756e_qwen3omni:
+    dataset: bz_unseen-species-tax_3368756e
+    model: qwen3omni
+    seeds: all
+    controls: first
+  bz_watkins_aab15ece_qwen7b:
+    dataset: bz_watkins_aab15ece
+    model: qwen7b
+    seeds: all
+    controls: first
+  bz_watkins_aab15ece_qwen3b:
+    dataset: bz_watkins_aab15ece
+    model: qwen3b
+    seeds: all
+    controls: first
+  bz_watkins_aab15ece_glm4voice9b:
+    dataset: bz_watkins_aab15ece
+    model: glm4voice9b
+    seeds: all
+    controls: first
+  bz_watkins_aab15ece_qwen3omni:
+    dataset: bz_watkins_aab15ece
+    model: qwen3omni
+    seeds: all
+    controls: first
+  bz_zf-indiv_fa56a8cc_qwen7b:
+    dataset: bz_zf-indiv_fa56a8cc
+    model: qwen7b
+    seeds: all
+    controls: first
+  bz_zf-indiv_fa56a8cc_qwen3b:
+    dataset: bz_zf-indiv_fa56a8cc
+    model: qwen3b
+    seeds: all
+    controls: first
+  bz_zf-indiv_fa56a8cc_glm4voice9b:
+    dataset: bz_zf-indiv_fa56a8cc
+    model: glm4voice9b
+    seeds: all
+    controls: first
+  bz_zf-indiv_fa56a8cc_qwen3omni:
+    dataset: bz_zf-indiv_fa56a8cc
+    model: qwen3omni
+    seeds: all
+    controls: first

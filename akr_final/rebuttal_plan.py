@@ -69,32 +69,52 @@ def build_study(root,config_path,tasks):
     for tag,expected in [('qwen7b','Qwen/Qwen2.5-Omni-7B'),('qwen3b','Qwen/Qwen2.5-Omni-3B')]:
         m=cfg['models'][tag]
         if m['id']!=expected or not re.fullmatch('[0-9a-f]{40}',m['revision']):raise ValueError('pinned supported model revision required')
+    from akr_closing.model_factory import model_family
+    for tag, model in cfg['models'].items():
+        if not re.fullmatch('[A-Za-z0-9_-]+', tag):raise ValueError('unsafe model tag')
+        model_family(model['id'])
+        if not re.fullmatch('[0-9a-f]{40}',model['revision'] or ''):raise ValueError('pinned model revision required')
     jobs=[];needed={}
     for task in tasks:
         suite=cfg['suites'][task];name=suite['dataset'];tag=suite['model']
         if name not in cfg['datasets'] or tag not in cfg['models'] or suite['seeds'] not in ['all','first']:raise ValueError('invalid suite')
         if not re.fullmatch('[A-Za-z0-9_-]+',name):raise ValueError('unsafe dataset name')
         selected=seeds if suite['seeds']=='all' else seeds[:1]
+        control_policy=suite.get('controls','first' if task=='core' else 'none')
+        if control_policy not in ['first','all','none']:raise ValueError('controls must be first/all/none')
         for seed in selected:
             needed.setdefault(name,set()).add(seed)
             for c in cfg['datasets'][name]['conditions']:
                 jobs.append({'suite':task,'dataset':name,'model':tag,'seed':seed,'condition':c,
-                    'episode':f's{seed}_{c.replace(":","_")}', 'controls':task=='core' and seed==seeds[0]})
+                    'episode':f's{seed}_{c.replace(":","_")}',
+                    'controls':control_policy=='all' or (control_policy=='first' and seed==selected[0])})
+    job_keys=[(j['dataset'],j['model'],j['episode']) for j in jobs]
+    if len(set(job_keys))!=len(job_keys):raise ValueError('duplicate model/dataset/episode jobs')
     datasets={}
     for name,used_seeds in needed.items():
         ds=deepcopy(cfg['datasets'][name]);manifest=Path(ds['manifest'])
+        settings={**s, **{key:positive_int(ds[key],key) for key in ['rank','max_new_tokens'] if key in ds}}
         if not manifest.is_absolute():manifest=root/manifest
         rows=sorted(read_manifest(manifest,old_root=cfg.get('old_root'),root=root),key=lambda r:r['event_id'])
         labels=ds.get('labels');hashes={str(path):file_hash(path),str(manifest):file_hash(manifest)}
+        for source in ds.get('registration_sources',[]):
+            source=root/source
+            hashes[str(source)]=file_hash(source)
         if labels is None:
             lp=root/ds['labels_from_config'];labels=yaml.safe_load(lp.read_text())['dataset']['labels'];hashes[str(lp)]=file_hash(lp)
         if not labels or len(set(labels))!=len(labels) or set(labels)!={r['label'] for r in rows}:raise ValueError('label vocabulary mismatch')
+        if ds['partition']=='beans_zero_supervised':
+            from .beans_zero_protocol import validate_registration
+            if not ds.get('supervised_registration'):
+                raise ValueError('BEANS-Zero supervised registration file is required')
+            hashes.update(validate_registration(root,root/ds['supervised_registration'],name,manifest,labels,rows))
         conditions=ds['conditions']
         if not conditions or len(set(conditions))!=len(conditions) or any(c not in ['full','lp:1000'] for c in conditions):raise ValueError('only Full/LP1 supported')
         counts={role:positive_int(ds[role+'_per_class'],role) for role in ['fit','calibration','guard']}
-        if s['rank']>counts['fit']*len(labels)-1:raise ValueError('rank exceeds centered fit capacity')
+        if settings['rank']>counts['fit']*len(labels)-1:raise ValueError('rank exceeds centered fit capacity')
         group=ds['group_key'];lookup={r['event_id']:r for r in rows};episodes=[];splits={}
         for seed in sorted(used_seeds):
+            roles=None
             if ds['partition']=='recording_group_confirmation':
                 split=make_split(rows,labels,seed=seed,group_key=group)
                 pool=split['train']+split['selection'];query=split['confirmation']
@@ -109,25 +129,35 @@ def build_study(root,config_path,tasks):
                 split={'training_pool':pool,'test':query,'excluded_train_ids':excluded,
                        'exclusion_rule':'source group or supplied waveform hash overlaps official test; query population unchanged',
                        'unused_valid':[r['event_id'] for r in rows if r['split'] in ['valid','validation']]}
+            elif ds['partition']=='beans_zero_supervised':
+                from .beans_zero_protocol import allocate
+                if group!='recording_group' or set(counts.values())!={1}:
+                    raise ValueError('BEANS-Zero supervised protocol requires one example per role/class and recording_group')
+                allocation=allocate(rows,labels,seed)
+                roles={key:allocation[key] for key in ['fit_ids','calibration_ids','guard_ids']}
+                query=allocation['query_ids'];pool=allocation['support_ids']
+                split={**allocation,'evaluation_status':'derived supervised re-evaluation; not original zero-shot benchmark'}
             else:raise ValueError('unknown partition policy')
             if not query or any(not lookup[i].get(group) for i in pool+query):raise ValueError('real group values required')
-            roles=allocate_roles(rows,pool,labels,counts,seed,group)
+            if roles is None:roles=allocate_roles(rows,pool,labels,counts,seed,group)
             support=roles['fit_ids']+roles['calibration_ids']+roles['guard_ids']
             role_sets=[{lookup[i][group] for i in ids} for ids in [roles['fit_ids'],roles['calibration_ids'],roles['guard_ids'],query]]
             if any(role_sets[a]&role_sets[b] for a in range(4) for b in range(a+1,4)):raise ValueError('role/query group overlap')
             splits[str(seed)]=split
             for c in conditions:
-                fixed={'rank':s['rank'],'ridge_alpha':s['ridge_alpha'],'alpha':s['relative_alpha']}
+                fixed={'rank':settings['rank'],'ridge_alpha':s['ridge_alpha'],'alpha':s['relative_alpha']}
                 episodes.append({'seed':seed,'condition':c,'id':f's{seed}_{c.replace(":","_")}',
                     'support_ids':support,'query_ids':query,**roles,
                     'lock':{'selection':fixed,'support':support,'prompt':prompt_for(labels)},
                     'meta':{'condition':c,'support_ids':support},'lock_sha256':digest(fixed)})
-        internal={'models':[{'tag':'qwen7b',**cfg['models']['qwen7b']}],'E9':cfg['models']['qwen3b'],
+        internal={'models':[{'tag':tag,**spec} for tag,spec in cfg['models'].items()],'E9':cfg['models']['qwen3b'],
                   **{k:s[k] for k in ['layer_fractions','feature_fraction','max_context_tokens','ridge_alpha']}}
         plan={'mode':'standalone','config':internal,'dataset':{'name':name,**ds},'labels':labels,'rows':rows,
               'episodes':episodes,'splits':splits,'source_hashes':hashes,
               'historical_metadata_recovered':False,'selection_uses_outcomes':False,'query_partition':ds['partition'],
               'evaluation_status':'new rebuttal protocol on previously inspected source data; not an untouched test'}
-        datasets[name]={'plan':plan,'options':{'dataset':name,'settings':s,'all_labelled_per_class':sum(counts.values())}}
+        if ds['partition']=='beans_zero_supervised':
+            plan['evaluation_status']='derived supervised BEANS-Zero closed-label re-evaluation; eligible classes only; not original zero-shot benchmark'
+        datasets[name]={'plan':plan,'options':{'dataset':name,'settings':settings,'all_labelled_per_class':sum(counts.values())}}
     return {'config':cfg,'config_sha256':file_hash(path),'tasks':tasks,'jobs':jobs,'datasets':datasets,
             'new_scientific_results':False,'old_RUN_LOCK_required':False}

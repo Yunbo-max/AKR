@@ -141,12 +141,12 @@ class FinalRunner:
         self.backend_factory=backend_factory
         self.router_fit=router_fit or fit_repository
         self.backend=None;self.model_tag=None
-        self.models={'qwen7b':next(m for m in self.cfg['models'] if m['tag']=='qwen7b'),
-                     'qwen3b':{'tag':'qwen3b','id':self.cfg['E9']['id'],'revision':self.cfg['E9']['revision']}}
+        self.models={m['tag']:m for m in self.cfg['models']}
+        self.models.setdefault('qwen3b',{'tag':'qwen3b','id':self.cfg['E9']['id'],'revision':self.cfg['E9']['revision']})
         self.spec={k:self.cfg[k] for k in ['layer_fractions','feature_fraction','max_context_tokens']}
         self.imports=[]
         files=list(Path(__file__).parent.glob('*.py'))
-        files += [self.root/'akr_closing'/n for n in ['backend.py','core.py','repair.py','pipeline.py']]
+        files += list((self.root/'akr_closing').glob('*.py'))
         files += [self.root/'src/animal_omni/conditional_kv.py',self.root/'src/animal_omni/metrics.py']
         self.identity={'source':str(self.source),'source_hashes':self.plan['source_hashes'],
                        'options':options,'profile':profile,'code':_hashes(files),'models':self.models,
@@ -182,8 +182,8 @@ class FinalRunner:
             _check_stop()
             factory=self.backend_factory
             if factory is None:
-                from akr_closing.backend import OmniBackend
-                factory=OmniBackend
+                from akr_closing.model_factory import create_backend
+                factory=create_backend
             model=self.models[tag]
             self.backend=factory(model['id'],model['revision'],profile=self.profile,**self.spec)
             self.model_tag=tag

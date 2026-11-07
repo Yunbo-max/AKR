@@ -1,0 +1,15 @@
+﻿{
+    "scientific_report_sha256":  "6503ea0a8fe7f8014c01e95054e7135d4c5ddb413bb86d8d033daf27c514a3d7",
+    "original_script_sha256":  "af03ce6dd98c9ffec3a9e04fdf570c7184f79532fd4d33728cbc09fbad2f0610",
+    "maintained_script_sha256":  "5fedea30f7e60a101b6a5fb388cb5855412f0f2a3c3aea94c9e717241c9d9bb1",
+    "changes":  [
+                    "Count PEFT wrapper forward calls without generation double counting",
+                    "Use NVIDIA total occupancy and CUDA allocator headroom together under WSL"
+                ],
+    "original_receipts_preserved":  true,
+    "corrected_cost_receipt":  "COST_AUDIT.json",
+    "maintenance_tests_passed":  39,
+    "maintenance_test_log":  "/tmp/akr_fair_maintenance_tests.log",
+    "subsequent_targeted_tests_passed":  18,
+    "subsequent_targeted_test_log":  "/tmp/akr_acc_combined_tests.log"
+}

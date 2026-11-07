@@ -1,0 +1,20 @@
+model:
+  id: Qwen/Qwen2.5-Omni-7B
+  thinker_only: true
+  target_sample_rate: 16000
+dataset:
+  manifest: data/manifests/beans_dogs.csv
+  labels: [Farley, Freid, Keri, Louie, Luke, Mac, Roodie, Rudy, Siggy, Zoe]
+audio:
+  peak_normalize: false
+  lowpass_cutoffs_hz: [1000, 2000, 4000, 6000, 8000]
+  removed_bands_hz: [[0, 1000], [1000, 2000], [2000, 4000], [4000, 6000], [6000, 8000]]
+  filter_order: 10
+evaluation:
+  prompt: "Listen to this dog vocalization. Identify the individual dog. Choose exactly one label from: Farley, Freid, Keri, Louie, Luke, Mac, Roodie, Rudy, Siggy, Zoe. Answer with only the label."
+  temperature: 0.0
+  do_sample: false
+  max_new_tokens: 12
+  batch_size: 1
+kv:
+  oracle_etas: [0.01, 0.03, 0.1, 0.3, 1.0]

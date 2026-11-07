@@ -1,0 +1,33 @@
+{
+  "complete": true,
+  "report_sha256": "b2c23a6ef7bf199bf9c1dac3e9c3870e59cd45666140a2268b7b6d32666e4711",
+  "summary_sha256": "4cc2ecf0923ad669d71fbcbfc658b1d35a1c163ccf35af51fdd129f66bc34584",
+  "gpu_peak_mib": {
+    "0": 80302,
+    "1": 54234
+  },
+  "calibration_accuracy_curves": {
+    "shrunk": [
+      0.125,
+      0.075,
+      0.075
+    ],
+    "centered_regression": [
+      0.125,
+      0.05,
+      0.1
+    ],
+    "centered_class": [
+      0.175,
+      0.2,
+      0.225
+    ]
+  },
+  "prior_ce_sensitivity": {
+    "joint_ce_change": -0.007505811005830587,
+    "rank_ce_change_at_ridge10": -0.018211014568805695,
+    "ridge_ce_change_at_rank4": 0.006316242367029323,
+    "scope": "This grid and calibration pool only; no global sensitivity claim.",
+    "strength_ce_range_at_original_map": 0.17813685759901987
+  }
+}

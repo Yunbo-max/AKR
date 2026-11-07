@@ -28,6 +28,10 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--output-dir", type=Path, required=True)
     parser.add_argument("--output-manifest", type=Path, required=True)
+    parser.add_argument("--source-dir", type=Path,
+                        help="directory of shard*.parquet files from a pinned local snapshot")
+    parser.add_argument("--target-manifest", type=Path,
+                        help="materialize only event IDs registered in this CSV")
     parser.add_argument("--per-task", type=int, default=25,
                         help="maximum examples per task; 0 scans every matching example")
     parser.add_argument("--tasks", nargs="+", default=DEFAULT_TASKS)
@@ -37,9 +41,21 @@ def main() -> None:
     parser.add_argument("--resume", action="store_true")
     parser.add_argument("--checkpoint-every", type=int, default=50)
     args = parser.parse_args()
+    targets = None
+    if args.target_manifest is not None:
+        with args.target_manifest.open(newline="", encoding="utf-8") as stream:
+            target_rows = list(csv.DictReader(stream))
+        targets = {row["event_id"] for row in target_rows}
+        if len(targets) != len(target_rows) or not targets:
+            parser.error("target manifest must contain distinct, nonempty event IDs")
     rows = []
     if args.resume and args.output_manifest.exists():
         rows = list(csv.DictReader(args.output_manifest.open(newline="", encoding="utf-8")))
+        rows = [row for row in rows
+                if (targets is None or row["event_id"] in targets)
+                and Path(row["audio_path"]) == (args.output_dir / row["dataset_name"] /
+                    f"{row['event_id']}.wav").resolve()
+                and Path(row["audio_path"]).is_file()]
     complete = {row["event_id"] for row in rows}
     counts = Counter(row["dataset_name"] for row in rows)
 
@@ -52,12 +68,24 @@ def main() -> None:
             writer = csv.DictWriter(f, fieldnames=rows[0]); writer.writeheader(); writer.writerows(rows)
         temporary.replace(args.output_manifest)
 
-    stream = load_dataset("EarthSpeciesProject/BEANS-Zero", "BEANS-Zero",
-                          split="test", streaming=True)
+    if targets is not None and complete == targets:
+        checkpoint()
+        print(dict(counts), flush=True)
+        os._exit(0)
+
+    if args.source_dir is None:
+        stream = load_dataset("EarthSpeciesProject/BEANS-Zero", "BEANS-Zero",
+                              split="test", streaming=True)
+    else:
+        shards = sorted(args.source_dir.glob("shard*.parquet"))
+        if not shards:
+            parser.error(f"no shard*.parquet files in {args.source_dir}")
+        stream = load_dataset("parquet", data_files={"test": [str(p) for p in shards]},
+                              split="test", streaming=True)
     for sample in stream:
         task = sample["dataset_name"]
         event_id = str(sample["id"])
-        if task not in args.tasks or event_id in complete:
+        if task not in args.tasks or event_id in complete or (targets is not None and event_id not in targets):
             continue
         if args.per_task and counts[task] >= args.per_task:
             continue
@@ -97,6 +125,11 @@ def main() -> None:
             print(f"materialized={len(rows)} counts={dict(counts)}", flush=True)
         if args.per_task and all(counts[task] >= args.per_task for task in args.tasks):
             break
+        if targets is not None and complete == targets:
+            break
+    if targets is not None and complete != targets:
+        checkpoint()
+        raise RuntimeError(f"missing {len(targets - complete)} target event IDs from source")
     checkpoint()
     print(dict(counts), flush=True)
     # pyarrow streaming can abort during interpreter teardown in this pinned

@@ -1,0 +1,11 @@
+........................................................................ [ 25%]
+........................................................................ [ 50%]
+.....................................................................ss. [ 75%]
+.s.............sss...................................................    [100%]
+=============================== warnings summary ===============================
+tests/test_fair_speech_lm.py::test_real_tiny_peft_training_freezes_base_and_saves_reloads
+  /root/.venvs/akr/lib/python3.12/site-packages/peft/utils/save_and_load.py:286: UserWarning: Could not find a config file in  - will assume that the vocabulary was not modified.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+279 passed, 6 skipped, 1 warning in 114.46s (0:01:54)

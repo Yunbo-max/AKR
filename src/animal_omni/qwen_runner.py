@@ -105,7 +105,7 @@ class QwenThinkerRunner:
         )
         input_length = inputs["input_ids"].shape[1]
         output = self.model.generate(
-            **inputs, return_audio=False, do_sample=False, max_new_tokens=max_new_tokens,
+            **inputs, return_audio=False, do_sample=False, thinker_max_new_tokens=max_new_tokens,
             use_audio_in_video=False,
         )
         return self.processor.batch_decode(
@@ -171,7 +171,7 @@ class QwenThinkerRunner:
         inputs = self.prepare_inputs(audio_path, prompt)
         input_length = inputs["input_ids"].shape[1]
         output = self.model.generate(
-            **inputs, return_audio=False, do_sample=False, max_new_tokens=max_new_tokens,
+            **inputs, return_audio=False, do_sample=False, thinker_max_new_tokens=max_new_tokens,
             use_audio_in_video=False,
         )
         # Decode generated continuation only; prompt labels would otherwise cause
@@ -185,7 +185,7 @@ class QwenThinkerRunner:
         inputs = self.prepare_batch(audio_paths, prompt)
         input_length = inputs["input_ids"].shape[1]
         output = self.model.generate(
-            **inputs, return_audio=False, do_sample=False, max_new_tokens=max_new_tokens,
+            **inputs, return_audio=False, do_sample=False, thinker_max_new_tokens=max_new_tokens,
             use_audio_in_video=False,
         )
         decoded = self.processor.batch_decode(

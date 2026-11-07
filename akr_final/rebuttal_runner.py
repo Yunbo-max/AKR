@@ -60,6 +60,9 @@ class DatasetRunner(FinalRunner):
 
     def preflight(self):
         super().preflight()
+        if self.plan['dataset'].get('partition')=='beans_zero_supervised':
+            if any(self.lookup[i].get('sha256')!=sha for i,sha in self.wave_hashes.items()):
+                raise ValueError('BEANS-Zero waveform changed since supervised registration; prepare a new registration')
         for e in self.plan['episodes']:
             roles=[e[k] for k in ['fit_ids','calibration_ids','guard_ids','query_ids']]
             sets=[{self.wave_hashes[i] for i in ids} for ids in roles]
@@ -245,7 +248,8 @@ class RebuttalStudy:
             atomic_json(self.out/'PREFLIGHT.json',result);return result
         status={}
         try:
-            for job in sorted(self.study['jobs'],key=lambda j:({'core':0,'scale':1,'dogs':2,'watkins':3}[j['suite']],j['seed'],j['condition'])):
+            order={name:index for index,name in enumerate(self.study['tasks'])}
+            for job in sorted(self.study['jobs'],key=lambda j:(order[j['suite']],j['seed'],j['condition'])):
                 key=f"{job['suite']}/{job['model']}/{job['dataset']}/{job['episode']}"
                 # Retain at most one loaded model across dataset runners.
                 for r in runners.values():

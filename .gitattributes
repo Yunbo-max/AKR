@@ -1,0 +1,2 @@
+# Preserve historical evidence bytes and their published SHA-256 receipts.
+results/development_20261107/** -text

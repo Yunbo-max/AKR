@@ -1,0 +1,9 @@
+{
+  "complete": true,
+  "elapsed_seconds": 870.7278144319989,
+  "fingerprint": "59bab04a4f260b2f5a237b2004da4313fcced6f93c6bff9b91484d66c69999b0",
+  "initial_run_seconds": 808.6828583480001,
+  "initial_selection_seconds": 229.7699017169998,
+  "report_sha256": "52c96c9c4adf65ceff987db6382c1a21d201b89d2e1176766909ad9f2363dd4f",
+  "resume_without_model_reload": true
+}

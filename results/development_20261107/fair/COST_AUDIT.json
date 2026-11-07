@@ -1,0 +1,88 @@
+{
+  "complete": true,
+  "cv_top_level_forwards": 1098,
+  "excludes": "checkpoint block recomputation and backward operations; these are not FLOP counts",
+  "explanation": "PEFT LoraModel.forward invokes the original model.forward directly, bypassing the original module hook. Saved hook counts undercount wrapped calls. Reconstructed counts use immutable exposure/heldout records plus three parity calls; original receipts are preserved.",
+  "independently_reproduced_on_tiny_peft": true,
+  "refit_top_level_forwards": 203,
+  "script_sha256": "c9139473b9c18d1e5de721987b90e963c8a6b449f88ac484b4090c7221c60c90",
+  "stages": [
+    {
+      "heldout_and_native_forwards": 80,
+      "optimizer_steps": 25,
+      "original_module_hook_count": 21,
+      "parity_forwards": 3,
+      "receipt_sha256": "7ce5a7955c25bb41d2e187c9781f276620d3fc5dc3553022e21d88c42eebff0e",
+      "reconstructed_top_level_forwards": 183,
+      "stage": "training/fold_0/lr_0.0002",
+      "train_exposures": 100,
+      "wall_seconds": 207.91700018899974
+    },
+    {
+      "heldout_and_native_forwards": 80,
+      "optimizer_steps": 25,
+      "original_module_hook_count": 21,
+      "parity_forwards": 3,
+      "receipt_sha256": "a0e00dcfc31d91138d047e29f9bd2ab1b32250165773fb5266947d28e335f7fc",
+      "reconstructed_top_level_forwards": 183,
+      "stage": "training/fold_0/lr_0.0005",
+      "train_exposures": 100,
+      "wall_seconds": 192.3743518629999
+    },
+    {
+      "heldout_and_native_forwards": 80,
+      "optimizer_steps": 25,
+      "original_module_hook_count": 21,
+      "parity_forwards": 3,
+      "receipt_sha256": "beedd4ab216617a31513f7803c068b89eebdc214c34657472379de6ad553bd0a",
+      "reconstructed_top_level_forwards": 183,
+      "stage": "training/fold_0/lr_5e-05",
+      "train_exposures": 100,
+      "wall_seconds": 249.90005329299856
+    },
+    {
+      "heldout_and_native_forwards": 80,
+      "optimizer_steps": 25,
+      "original_module_hook_count": 21,
+      "parity_forwards": 3,
+      "receipt_sha256": "77ffd7ad022a3edff5da8de39b1bb59b2d930023cd617d6aa133f6ff07c3f2dd",
+      "reconstructed_top_level_forwards": 183,
+      "stage": "training/fold_1/lr_0.0002",
+      "train_exposures": 100,
+      "wall_seconds": 237.7703275640015
+    },
+    {
+      "heldout_and_native_forwards": 80,
+      "optimizer_steps": 25,
+      "original_module_hook_count": 21,
+      "parity_forwards": 3,
+      "receipt_sha256": "0869468205123afa952c9af249041dbcb90554baec7152ade51293f653e00d3c",
+      "reconstructed_top_level_forwards": 183,
+      "stage": "training/fold_1/lr_0.0005",
+      "train_exposures": 100,
+      "wall_seconds": 164.88007615399874
+    },
+    {
+      "heldout_and_native_forwards": 80,
+      "optimizer_steps": 25,
+      "original_module_hook_count": 21,
+      "parity_forwards": 3,
+      "receipt_sha256": "0fe28332d1ce42547cadd48fadcf847c48b2bfb53405ced2931f59668a212a7d",
+      "reconstructed_top_level_forwards": 183,
+      "stage": "training/fold_1/lr_5e-05",
+      "train_exposures": 100,
+      "wall_seconds": 266.5031601240007
+    },
+    {
+      "heldout_and_native_forwards": 0,
+      "optimizer_steps": 50,
+      "original_module_hook_count": 1,
+      "parity_forwards": 3,
+      "receipt_sha256": "5d8b9b5d2777227e6a65b7d64def2bfcd678142ca825521afe9f0271df80c10c",
+      "reconstructed_top_level_forwards": 203,
+      "stage": "training/refit",
+      "train_exposures": 200,
+      "wall_seconds": 246.76686575199892
+    }
+  ]
+}
