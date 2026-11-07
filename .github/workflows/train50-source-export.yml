@@ -1,0 +1,26 @@
+name: Train50 source export
+on:
+  push:
+    branches: [research/rebuttal-train50-cases-20261107]
+    paths: ['.github/workflows/train50-source-export.yml']
+permissions:
+  contents: read
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Archive exact source without running research code
+        run: |
+          git rev-parse HEAD > "$RUNNER_TEMP/source-sha.txt"
+          git archive --format=zip HEAD -o "$RUNNER_TEMP/AKR-train50-base.zip"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: train50-source
+          path: |
+            ${{ runner.temp }}/AKR-train50-base.zip
+            ${{ runner.temp }}/source-sha.txt
+          retention-days: 14
