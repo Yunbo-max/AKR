@@ -1,0 +1,6 @@
+# Install in a separate environment; the original Qwen2.5 environment is pinned.
+# A working CUDA torch/torchvision installation must already be available.
+transformers==4.57.3
+qwen-omni-utils==0.0.9
+accelerate>=1.5
+audioread>=3.0

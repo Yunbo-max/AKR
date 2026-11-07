@@ -2,6 +2,8 @@
 
 **Bioacoustic Recognition in Speech Language Models.** Canonical consolidation: `Yunbo-max/AKR`.
 
+**2026-11-07 development checkpoint:** [Current results, dataset coverage and stopped-work status](docs/PROJECT_STATUS_20261107.md). The completed Dogs/3B experiments used 40 calibration and 40 development clips; they are not full-dataset tests. The forty-calibration/full-test expansion is an unfinished draft with documented review findings and has not run GPU experiments.
+
 **2026-10-03 verification:** 148 CPU tests passed with no failures or skips; all 116 offline release checks passed. [Remote verification](docs/research/REMOTE_VERIFICATION_20261003.json) · [Tested materialization run](https://github.com/Yunbo-max/AKR/actions/runs/37131602379) · [Integration PR #1](https://github.com/Yunbo-max/AKR/pull/1). No new GPU experiment was run; S1 remains pending real-model evaluation.
 
 AKR predicts continuous **additive K/V corrections**, not animal labels or replacement model weights. Labelled support recordings supply negative answer-loss gradients; centred SVD and ridge regression map frozen acoustic features to correction coefficients. An unlabelled query uses a feature pass followed by an intervened generation pass. The Speech LM stays frozen.
@@ -75,7 +77,7 @@ F1/F2/F3 are already completed studies in the supplied report, not mandatory new
 
 ## Models and tasks
 
-Real implemented backbone: frozen **Qwen2.5-Omni Thinker 7B and 3B**, Talker off, BF16, batch one, greedy decoding. Exact pinned revisions and layers are in the registry. **GLM-4-Voice and Qwen3-Omni are not implemented/validated here** and are excluded from automatic queues.
+Primary backbones: frozen **Qwen2.5-Omni Thinker 7B and 3B**, Talker off, BF16, batch one, greedy decoding. Exact pinned revisions and layers are in the registry. The [comprehensive runner](docs/COMPREHENSIVE_RUN.md) covers both sizes on MarmAudio, Dogs, Watkins and 12 explicitly derived supervised BEANS-Zero component tasks, with applicable specialist and adaptation baselines and the separate original BEANS-Zero diagnostic. **GLM-4-Voice and Qwen3-Omni have optional AKR backends and separate environments; their CPU contracts are tested, but production checkpoint execution remains pending and requires explicit conditional activation.**
 
 MA-CT is MarmAudio call-type recognition; BD-ID is BEANS Dogs individual identification; BW-SP is BEANS Watkins species recognition. BZ-12 is a separately capped BEANS-Zero diagnostic, not an official full-duration score. No restricted waveform dataset or pretrained model weights are mirrored.
 

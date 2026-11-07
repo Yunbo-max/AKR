@@ -17,6 +17,9 @@ def test_parser_accepts_dataset_punctuation_variants():
     assert normalize_label("Atlantic spotted dolphin", labels) == "Atlantic_Spotted_Dolphin"
     assert normalize_label("Beluga, White Whale", labels) == "Beluga,_White_Whale"
     assert normalize_label("False Killer Whale", labels) == "False_Killer_Whale"
+    assert normalize_label("Killer Whale or False Killer Whale", labels) is None
+    assert normalize_label("False Killer Whale or Killer Whale", labels) is None
+    assert normalize_label("False Killer Whale, False Killer Whale", labels) == "False_Killer_Whale"
     assert normalize_label("Beluga, White Whale or Killer Whale", labels) is None
 
 

@@ -9,18 +9,14 @@ def normalize_label(text: str, labels: list[str]) -> str | None:
         return " ".join(re.sub(r"[^a-z0-9 ]", " ", value.lower()).split())
 
     cleaned = lexical(text)
-    matches = [label for label in labels
-               if re.search(rf"\b{re.escape(lexical(label))}\b", cleaned)]
-    if len(matches) <= 1:
-        return matches[0] if matches else None
-    # Taxonomies can contain nested names (e.g. Killer Whale and False Killer
-    # Whale). A single longest mention should not be rejected merely because its
-    # suffix is also a class. Distinct non-nested mentions remain invalid.
-    longest = max(matches, key=lambda label: len(lexical(label)))
-    if all(re.search(rf"\b{re.escape(lexical(label))}\b", lexical(longest))
-           for label in matches):
-        return longest
-    return None
+    mentions = [(m.start(), m.end(), label) for label in labels if lexical(label)
+                for m in re.finditer(rf"\b{re.escape(lexical(label))}\b", cleaned)]
+    # Ignore a shorter label only when THAT occurrence sits inside a longer
+    # mention. A separate "Killer Whale" remains ambiguous with "False Killer Whale".
+    matches = {label for start, end, label in mentions
+               if not any(a <= start and end <= b and b - a > end - start
+                          for a, b, _ in mentions)}
+    return next(iter(matches)) if len(matches) == 1 else None
 
 
 def classification_metrics(targets: list[str], predictions: list[str | None], labels: list[str]) -> dict[str, float]:

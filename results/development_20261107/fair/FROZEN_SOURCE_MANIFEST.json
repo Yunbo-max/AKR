@@ -1,0 +1,182 @@
+{
+  "created_utc": "2026-11-07T01:35:42.159905+00:00",
+  "files": {
+    "/mnt/c/ai/akr/akr_closing/__init__.py": {
+      "archive": "frozen_source/akr_closing/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/mnt/c/ai/akr/akr_closing/backend.py": {
+      "archive": "frozen_source/akr_closing/backend.py",
+      "sha256": "1a29d84345c7e05c22dff474f217ac1b67a0d7c72d99495970bdbfa686447d46"
+    },
+    "/mnt/c/ai/akr/akr_closing/cli.py": {
+      "archive": "frozen_source/akr_closing/cli.py",
+      "sha256": "85978709b845648354a4951f4186ec50535203a706b76631255a85e6a6284830"
+    },
+    "/mnt/c/ai/akr/akr_closing/core.py": {
+      "archive": "frozen_source/akr_closing/core.py",
+      "sha256": "502af4ffa2b2a9d069ccdc53f7d1c811a455852ace2b0f7e2bb683b37d35df89"
+    },
+    "/mnt/c/ai/akr/akr_closing/glm_backend.py": {
+      "archive": "frozen_source/akr_closing/glm_backend.py",
+      "sha256": "60af908e5c5bb2dc5298f4823cc9d2e8d20c984abf2c97856ade69e4f8938bba"
+    },
+    "/mnt/c/ai/akr/akr_closing/legacy.py": {
+      "archive": "frozen_source/akr_closing/legacy.py",
+      "sha256": "95ead1a4ebc4a4e463279d3ff2f913299d9cfedc934719caa3d06edd71467027"
+    },
+    "/mnt/c/ai/akr/akr_closing/lora.py": {
+      "archive": "frozen_source/akr_closing/lora.py",
+      "sha256": "67abcdf208ce743306bbf56b01c6382dd114ff9eefa5cbd760ab6889b2daf9bc"
+    },
+    "/mnt/c/ai/akr/akr_closing/model_factory.py": {
+      "archive": "frozen_source/akr_closing/model_factory.py",
+      "sha256": "900ced6cb5289b93bf12c17be61fe56a2bd39cca0b603e16ae0e812b1bdc92ad"
+    },
+    "/mnt/c/ai/akr/akr_closing/optional.py": {
+      "archive": "frozen_source/akr_closing/optional.py",
+      "sha256": "c7359c14014cef0e6f60a8de320e8b0191ee706ac455b8fab5c97539f4f8075e"
+    },
+    "/mnt/c/ai/akr/akr_closing/orders.py": {
+      "archive": "frozen_source/akr_closing/orders.py",
+      "sha256": "5a27bd820f2c8f7c2931f61597203e7097b3e84f9d7b6cf5bcc89a8c2afdec54"
+    },
+    "/mnt/c/ai/akr/akr_closing/pipeline.py": {
+      "archive": "frozen_source/akr_closing/pipeline.py",
+      "sha256": "3f0dc77326fdb38bc4397de77410f533b24d36d84bd0ff365ecb0612a1998919"
+    },
+    "/mnt/c/ai/akr/akr_closing/process.py": {
+      "archive": "frozen_source/akr_closing/process.py",
+      "sha256": "7241b752528b26b24615f5bd6225585addf9e0fe7c05da1bbb736ac5b0f4b85f"
+    },
+    "/mnt/c/ai/akr/akr_closing/protocol.py": {
+      "archive": "frozen_source/akr_closing/protocol.py",
+      "sha256": "eda2d59355a6d1b57914f201dadae9ecfe2a89b7773b73df322b1344a3e60a30"
+    },
+    "/mnt/c/ai/akr/akr_closing/qwen3_backend.py": {
+      "archive": "frozen_source/akr_closing/qwen3_backend.py",
+      "sha256": "10debc16258c65b4721e812f5df9027ad248327358b231b4cd04f3adedebb5f4"
+    },
+    "/mnt/c/ai/akr/akr_closing/repair.py": {
+      "archive": "frozen_source/akr_closing/repair.py",
+      "sha256": "67d44577d988f27c7b98dd8abd8c7d89012025c14ff2a7b7e046330485ab2dbd"
+    },
+    "/mnt/c/ai/akr/akr_closing/report.py": {
+      "archive": "frozen_source/akr_closing/report.py",
+      "sha256": "581516a3df502e6affb69cb952174933d1f9bac5704f52f10d2357fb7dc72f05"
+    },
+    "/mnt/c/ai/akr/akr_closing/scaling.py": {
+      "archive": "frozen_source/akr_closing/scaling.py",
+      "sha256": "b5ec20bf53c1e68d82c86b151c3db3c661a6cc3fb2792cffbd1d0b0aa65694a1"
+    },
+    "/mnt/c/ai/akr/akr_final/__init__.py": {
+      "archive": "frozen_source/akr_final/__init__.py",
+      "sha256": "d8f1ff7d8746d4eaef4bd7548189259f24345bf94970a6aac09b35b9bc52a250"
+    },
+    "/mnt/c/ai/akr/akr_final/beans_zero_protocol.py": {
+      "archive": "frozen_source/akr_final/beans_zero_protocol.py",
+      "sha256": "c8cd83a6f331b0e89049a8d5c5a92f553c936fed9ede9e6f0d1416696143c011"
+    },
+    "/mnt/c/ai/akr/akr_final/calibration_pilot.py": {
+      "archive": "frozen_source/akr_final/calibration_pilot.py",
+      "sha256": "1363ff9c1cfe242d361f19656f24d34cc72ee1a81a176101cc92c278f5ac2968"
+    },
+    "/mnt/c/ai/akr/akr_final/comprehensive.py": {
+      "archive": "frozen_source/akr_final/comprehensive.py",
+      "sha256": "1d0232a14aa4a7690f2dcd9c9a0459aa25b21969ebec8491cb773020fa76d8d3"
+    },
+    "/mnt/c/ai/akr/akr_final/comprehensive_baselines.py": {
+      "archive": "frozen_source/akr_final/comprehensive_baselines.py",
+      "sha256": "8fb718382da5c50cabfbf2ceaffe7903e33681b4921714c69948423abc48f1ec"
+    },
+    "/mnt/c/ai/akr/akr_final/predictability.py": {
+      "archive": "frozen_source/akr_final/predictability.py",
+      "sha256": "2487330d924c7cd17840b52d754e712250374217f3b8cc77aa6f2d6b630c2117"
+    },
+    "/mnt/c/ai/akr/akr_final/rebuttal_cli.py": {
+      "archive": "frozen_source/akr_final/rebuttal_cli.py",
+      "sha256": "6ea656a7a3cddd65e9c14d6b981b90b5d63a6fd89a795a055544fb703ad3e4fd"
+    },
+    "/mnt/c/ai/akr/akr_final/rebuttal_math.py": {
+      "archive": "frozen_source/akr_final/rebuttal_math.py",
+      "sha256": "26f8cc12deb03134024d4ccb674a7062ce93195b62bc1037ca49afd6e94dee4d"
+    },
+    "/mnt/c/ai/akr/akr_final/rebuttal_plan.py": {
+      "archive": "frozen_source/akr_final/rebuttal_plan.py",
+      "sha256": "ce034e0cd160fed0fb4d19328487a40aa00a2edf5863a5d41cbfff564c85b5ed"
+    },
+    "/mnt/c/ai/akr/akr_final/rebuttal_runner.py": {
+      "archive": "frozen_source/akr_final/rebuttal_runner.py",
+      "sha256": "4ed6f233cd1577e9eee5dd7ef792f5a2149a7c7441e298f22ef4f55e87a68ccb"
+    },
+    "/mnt/c/ai/akr/akr_final/release.py": {
+      "archive": "frozen_source/akr_final/release.py",
+      "sha256": "3d84ef0cedaf66c3ea76c6ba52876123ffd45ff1098ec49e6bfcd2d95501d550"
+    },
+    "/mnt/c/ai/akr/akr_final/runner.py": {
+      "archive": "frozen_source/akr_final/runner.py",
+      "sha256": "f01dfb1fbc8dfdc05038abf25f0d0a8b24d870f320cf3adb0e1e0241666ddf64"
+    },
+    "/mnt/c/ai/akr/akr_final/simple_baselines.py": {
+      "archive": "frozen_source/akr_final/simple_baselines.py",
+      "sha256": "3a02d28f7547595e8a2cac744307b13e41f4f8a336af57e79e885a797c7b048f"
+    },
+    "/mnt/c/ai/akr/akr_final/standalone.py": {
+      "archive": "frozen_source/akr_final/standalone.py",
+      "sha256": "11ff5ea94a8dd07b1da0ba1bd6e1450bf1009edc2626cb30033f1de2d5cf5f23"
+    },
+    "/mnt/c/ai/akr/configs/akr_comprehensive.yaml": {
+      "archive": "frozen_source/configs/akr_comprehensive.yaml",
+      "sha256": "f5f64f1b11f90b1e3fc945e138784653bd39e8b06a66d3e889bf619a95be5540"
+    },
+    "/mnt/c/ai/akr/configs/beans_dogs.yaml": {
+      "archive": "frozen_source/configs/beans_dogs.yaml",
+      "sha256": "cc9299e9595a6bb53055567718dceeae6dc9f95f405cfa151cc60fd853bed775"
+    },
+    "/mnt/c/ai/akr/docs/superpowers/plans/2026-11-07-calibration-pool-pilot.md": {
+      "archive": "frozen_source/docs/superpowers/plans/2026-11-07-calibration-pool-pilot.md",
+      "sha256": "0d6d9962bb8b78fa2497fdb178bc6987252532c4c82e41ad615669500cd7cd88"
+    },
+    "/mnt/c/ai/akr/docs/superpowers/plans/2026-11-07-fair-speech-lm.md": {
+      "archive": "frozen_source/docs/superpowers/plans/2026-11-07-fair-speech-lm.md",
+      "sha256": "17912f753df3e7892eec46e8620c1984422a18f9b92bf0a90aec5716a9913fb7"
+    },
+    "/mnt/c/ai/akr/results/fair_speech_lm/audit_cost.py": {
+      "archive": "frozen_source/results/fair_speech_lm/audit_cost.py",
+      "sha256": "c9139473b9c18d1e5de721987b90e963c8a6b449f88ac484b4090c7221c60c90"
+    },
+    "/mnt/c/ai/akr/results/fair_speech_lm/extend_sensitivity.py": {
+      "archive": "frozen_source/results/fair_speech_lm/extend_sensitivity.py",
+      "sha256": "9751d0739855c38c68b24ed6bb4db80e58aa507080c0c4e05016cebac393374b"
+    },
+    "/mnt/c/ai/akr/results/fair_speech_lm/monitor_gpu.py": {
+      "archive": "frozen_source/results/fair_speech_lm/monitor_gpu.py",
+      "sha256": "dc847acdd239ecb3f3119b229734f9313aa398fc4fb54a25fc8da025bf805cc9"
+    },
+    "/mnt/c/ai/akr/results/fair_speech_lm/parameter_ce.py": {
+      "archive": "frozen_source/results/fair_speech_lm/parameter_ce.py",
+      "sha256": "9de2ec90233657b12a0809f6385a58ff0ee005644ea0cc7e4552755550b6a5de"
+    },
+    "/mnt/c/ai/akr/results/fair_speech_lm/summarize_fair.py": {
+      "archive": "frozen_source/results/fair_speech_lm/summarize_fair.py",
+      "sha256": "3cc139441f867ff2614c9871a251cb010ac1a76095319fa10d184d8689b70940"
+    },
+    "/mnt/c/ai/akr/scripts/fair_speech_lm.py": {
+      "archive": "frozen_source/scripts/fair_speech_lm.py",
+      "sha256": "af03ce6dd98c9ffec3a9e04fdf570c7184f79532fd4d33728cbc09fbad2f0610"
+    },
+    "/mnt/c/ai/akr/scripts/pilot_calibration_pool.py": {
+      "archive": "frozen_source/scripts/pilot_calibration_pool.py",
+      "sha256": "04bc7a83b5a094e42f00873875104611f8135da1caccc8773878d2f02912c8e2"
+    },
+    "/mnt/c/ai/akr/src/animal_omni/conditional_kv.py": {
+      "archive": "frozen_source/src/animal_omni/conditional_kv.py",
+      "sha256": "32951c51fa71906003dd646694757513d4ca027433bbaed93ccb473cd6a77ca1"
+    },
+    "/mnt/c/ai/akr/src/animal_omni/metrics.py": {
+      "archive": "frozen_source/src/animal_omni/metrics.py",
+      "sha256": "b6aabe7674ebe432c9dc9fd6c391b121a20358aa809226142f37eb96c9941f93"
+    }
+  },
+  "reason": "Executed scientific sources, preserved before fixing PEFT counter and WSL/NVIDIA memory accounting; no algorithm/outcome retuning."
+}

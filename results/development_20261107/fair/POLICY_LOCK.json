@@ -1,0 +1,67 @@
+{
+  "akr": {
+    "accepted": true,
+    "alpha": 0.1,
+    "candidate": "shrunk_a0.1",
+    "cv_compute": {
+      "additional_backwards": 0,
+      "forward_calls": 400,
+      "imported_support_gradients": 40,
+      "loss_records": 400,
+      "wall_seconds": 489.17812139599664
+    },
+    "kind": "shrunk",
+    "mean_ce": {
+      "class_pooled_a0.01": 1.9662397861480714,
+      "class_pooled_a0.03": 1.9084413819015027,
+      "class_pooled_a0.1": 1.7952756453305483,
+      "native": 1.9941868104040623,
+      "regression_a0.01": 1.938291461020708,
+      "regression_a0.03": 1.8480758756399154,
+      "regression_a0.1": 1.7601546034216882,
+      "shrunk_a0.01": 1.944410965591669,
+      "shrunk_a0.03": 1.842809224128723,
+      "shrunk_a0.1": 1.7596108093857765
+    },
+    "reason": "oof_ce_improved"
+  },
+  "lora": {
+    "accepted": true,
+    "candidate": "lr_0.0005_epoch_5",
+    "cv_compute": {
+      "forward_calls": 126,
+      "optimizer_steps": 150,
+      "train_exposures": 600,
+      "wall_seconds": 1319.3449691869992
+    },
+    "epoch": 5,
+    "lr": 0.0005,
+    "mean_ce": {
+      "lr_0.0002_epoch_1": 1.5330350175499916,
+      "lr_0.0002_epoch_3": 1.368641272187233,
+      "lr_0.0002_epoch_5": 1.3205419316887856,
+      "lr_0.0005_epoch_1": 1.4262969091534614,
+      "lr_0.0005_epoch_3": 1.3383913949131965,
+      "lr_0.0005_epoch_5": 1.292984703183174,
+      "lr_5e-05_epoch_1": 1.936656230688095,
+      "lr_5e-05_epoch_3": 1.5923860475420952,
+      "lr_5e-05_epoch_5": 1.429123379290104,
+      "native": 1.9941868104040623
+    },
+    "reason": "oof_ce_improved"
+  },
+  "query_labels_used_for_selection": false,
+  "reference": {
+    "accepted": true,
+    "alpha": 0.03,
+    "mean_ce": {
+      "0.0": 1.9941868104040623,
+      "0.003": 1.9837416246533395,
+      "0.01": 1.9833285637199878,
+      "0.03": 1.9820448003709317
+    },
+    "reason": "heldout_ce_improved"
+  },
+  "refit_sha256": "5d8b9b5d2777227e6a65b7d64def2bfcd678142ca825521afe9f0271df80c10c",
+  "registration": "3e650eceebd3608e863823a6d921ee7916a9a09d65b0262c4d2288dfd4c470a7"
+}

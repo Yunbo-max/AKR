@@ -1,0 +1,5 @@
+# Install only inside the optional GLM environment. Torch/CUDA stays shared
+# read-only with the core environment; no decoder/server/UI packages needed.
+transformers==4.44.1
+tokenizers==0.19.1
+tiktoken==0.8.0

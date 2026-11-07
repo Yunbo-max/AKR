@@ -1,0 +1,27 @@
+{
+  "complete": true,
+  "gpu_peak_mib": {
+    "0": 84993,
+    "1": 81615
+  },
+  "historical_prediction_parity": {
+    "akr_reference": true,
+    "native": true
+  },
+  "parameter_effects": {
+    "joint_ce_change": -0.007505811005830587,
+    "rank_ce_change_at_ridge10": -0.018211014568805695,
+    "ridge_ce_change_at_rank4": 0.006316242367029323,
+    "scope": "This grid and calibration pool only; no global sensitivity claim.",
+    "strength_ce_range_at_original_map": 0.17813685759901987
+  },
+  "report_sha256": "6503ea0a8fe7f8014c01e95054e7135d4c5ddb413bb86d8d033daf27c514a3d7",
+  "script_sha256": "3cc139441f867ff2614c9871a251cb010ac1a76095319fa10d184d8689b70940",
+  "summary_sha256": "19f35424b68d78d045030f57d9e674105a02c40456255838b5f6af6da6850030",
+  "versions": {
+    "numpy": "2.5.4",
+    "peft": "0.17.1",
+    "torch": "2.13.0",
+    "transformers": "4.52.3"
+  }
+}
