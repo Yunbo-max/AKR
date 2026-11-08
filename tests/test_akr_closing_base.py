@@ -215,10 +215,10 @@ def test_prompt_reverse_does_not_change_vocabulary():
     assert 'A, B, C' in a and 'C, B, A' in b
 
 
-def test_lowpass_rejects_impossible_cutoff(tmp_path):
+def test_lowpass_rejects_nonpositive_cutoff(tmp_path):
     p=module('pipeline');import soundfile as sf
     source=tmp_path/'x.wav'; sf.write(source,np.ones(1600),16000)
-    with pytest.raises(ValueError):p.prepare_audio(source,tmp_path/'bad.wav','lp:20000')
+    with pytest.raises(ValueError):p.prepare_audio(source,tmp_path/'bad.wav','lp:-1')
 
 
 def test_support_cannot_borrow_missing_class_from_query():
@@ -227,16 +227,42 @@ def test_support_cannot_borrow_missing_class_from_query():
     with pytest.raises(ValueError):c.support_ids(rows,['a'],['a','b'],1,seed=1)
 
 
-def test_nyquist_violation_is_an_explicit_input_domain_error(tmp_path):
+def test_lp_covering_native_bandwidth_is_identity_and_annotated(tmp_path):
     p=module('pipeline');import soundfile as sf
     source=tmp_path/'low.wav'
     sf.write(source,np.random.default_rng(1).normal(0,.05,600).astype('float32'),600,subtype='FLOAT')
-    with pytest.raises(p.InputDomainInfeasible) as info:
-        p.prepare_audio(source,tmp_path/'bad.wav','lp:1000')
-    assert info.value.sample_rate==600 and info.value.cutoff==1000
-    assert info.value.condition=='lp:1000'
+    # A 600 Hz recording has no content above its 300 Hz Nyquist, so lp:1000
+    # is the identity transform on the source band: use it as-is, annotate it.
+    low=p.prepare_audio(source,tmp_path/'low_lp.wav','lp:1000')
+    full=p.prepare_audio(source,tmp_path/'low_full.wav','full')
+    a,sa=sf.read(full); b,sb=sf.read(low)
+    assert sa==sb==16000
+    np.testing.assert_array_equal(a,b)
+    annotation=json.loads((tmp_path/'low_lp.wav.native_bw.json').read_text())
+    assert annotation==dict(kind='native_bw_within_passband',sample_rate=600.,cutoff=1000.,
+                            condition='lp:1000',used_as_is=True,
+                            reason='native-bandwidth-within-lowpass-passband',
+                            annotation='used as-is; native bandwidth <= cutoff')
+    # The detector and the retained exception type remain available.
     assert p.input_domain_infeasible(source,'lp:1000')==(600.,1000.)
     assert p.input_domain_infeasible(source,'lp:200') is None
     assert p.input_domain_infeasible(source,'full') is None
-    # Full condition remains in-domain and is resampled to 16 kHz as before.
-    assert p.prepare_audio(source,tmp_path/'full.wav','full').exists()
+    assert issubclass(p.InputDomainInfeasible,ValueError)
+    # A prepared-audio cache hit still carries the annotation sidecar.
+    (tmp_path/'low_lp.wav.native_bw.json').unlink()
+    assert p.prepare_audio(source,tmp_path/'low_lp.wav','lp:1000').exists()
+    assert json.loads((tmp_path/'low_lp.wav.native_bw.json').read_text())==annotation
+
+
+def test_lp_below_nyquist_still_filters_16k_audio(tmp_path):
+    p=module('pipeline');import soundfile as sf
+    sr=16000; t=np.arange(sr//10)/sr
+    x=np.sin(2*np.pi*5000*t)
+    source=tmp_path/'src16.wav'; sf.write(source,x,sr,subtype='FLOAT')
+    full=p.prepare_audio(source,tmp_path/'full16.wav','full')
+    low=p.prepare_audio(source,tmp_path/'low16.wav','lp:1000')
+    a,sa=sf.read(full); b,sb=sf.read(low)
+    assert sa==sb==16000 and len(a)==len(b)==1600
+    assert np.mean(a[400:]**2)>0.4
+    assert np.mean(b[400:]**2)<np.mean(a[400:]**2)*.02
+    assert not (tmp_path/'low16.wav.native_bw.json').exists()

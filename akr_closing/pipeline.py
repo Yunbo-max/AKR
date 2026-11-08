@@ -43,10 +43,12 @@ def write_npz(path,**values):
 
 
 class InputDomainInfeasible(ValueError):
-    """A requested lp condition cannot be evaluated inside the recording's band.
+    """A requested filtering condition cannot be evaluated inside the source band.
 
-    This is an explicit input-domain limitation, not a silent budget change:
-    callers must record the event rather than substitute another waveform.
+    Retained as an explicit guard for future conditions (for example a notch
+    whose band has no defined transform at the native rate). An lp cutoff at
+    or above the source Nyquist is the identity on the source band and is
+    annotated as native-bandwidth, never rejected or substituted.
     """
     def __init__(self,sample_rate,cutoff,condition):
         self.sample_rate=float(sample_rate); self.cutoff=float(cutoff); self.condition=condition
@@ -54,8 +56,18 @@ class InputDomainInfeasible(ValueError):
                          f'({self.sample_rate/2:g} Hz) for sample rate {self.sample_rate:g} Hz')
 
 
+NATIVE_BW_KIND='native_bw_within_passband'
+NATIVE_BW_REASON='native-bandwidth-within-lowpass-passband'
+NATIVE_BW_ANNOTATION='used as-is; native bandwidth <= cutoff'
+
+
 def input_domain_infeasible(path,condition):
-    """Return ``(sample_rate, cutoff)`` when an lp condition exceeds the source band."""
+    """Return ``(sample_rate, cutoff)`` when an lp cutoff covers the source band.
+
+    ``cutoff >= Nyquist`` means the recording carries no information above the
+    cutoff: the low-pass is an identity transform on the source band, so such
+    events are used as-is and annotated rather than excluded.
+    """
     if not condition.startswith('lp:'): return None
     import soundfile as sf
     cutoff=float(condition.split(':',1)[1])
@@ -64,10 +76,33 @@ def input_domain_infeasible(path,condition):
     return (rate,cutoff) if cutoff>=rate/2 else None
 
 
+def native_bandwidth_annotation(path,condition):
+    """Return the used-as-is annotation when the lp condition is the identity."""
+    hit=input_domain_infeasible(path,condition)
+    if hit is None: return None
+    rate,cutoff=hit
+    return dict(kind=NATIVE_BW_KIND,sample_rate=float(rate),cutoff=float(cutoff),
+                condition=condition,used_as_is=True,reason=NATIVE_BW_REASON,
+                annotation=NATIVE_BW_ANNOTATION)
+
+
+def native_bandwidth_sidecar(out):
+    """Audit sidecar written next to prepared audio that was used as-is."""
+    return Path(str(out)+'.native_bw.json')
+
+
 def prepare_audio(path,out,condition):
     import soundfile as sf
     from scipy.signal import butter,sosfiltfilt,resample_poly
-    if out.exists(): return out
+    annotation=native_bandwidth_annotation(path,condition)
+    sidecar=None if annotation is None else native_bandwidth_sidecar(out)
+    if out.exists():
+        if sidecar is not None:
+            if sidecar.exists():
+                if json.loads(sidecar.read_text())!=annotation:
+                    raise RuntimeError('native-bandwidth annotation changed for prepared audio')
+            else: atomic_json(sidecar,annotation)
+        return out
     x,sr=sf.read(path,dtype='float64',always_2d=True); x=x.mean(1)
     if len(x)<32 or not np.isfinite(x).all(): raise ValueError(f'invalid/too short waveform: {path}')
     if condition!='full':
@@ -75,18 +110,22 @@ def prepare_audio(path,out,condition):
         if kind=='lp':
             cutoff=float(cut)
             if cutoff<=0: raise ValueError('low-pass cutoff must be positive')
-            if cutoff>=sr/2: raise InputDomainInfeasible(sr,cutoff,condition)
-            sos=butter(10,cutoff,btype='lowpass',fs=sr,output='sos')
+            if annotation is None:
+                sos=butter(10,cutoff,btype='lowpass',fs=sr,output='sos')
+                x=sosfiltfilt(sos,x,padlen=min(len(x)-1,3*(2*len(sos)+1)))
+            # cutoff >= Nyquist: the recording has no content above the cutoff,
+            # so the low-pass is the identity on the source band (used as-is).
         elif kind=='notch':
             low,high=map(float,cut.split('-'))
             if low==0:
                 sos=butter(10,high,btype='highpass',fs=sr,output='sos')
             else: sos=butter(10,[low,high],btype='bandstop',fs=sr,output='sos')
+            x=sosfiltfilt(sos,x,padlen=min(len(x)-1,3*(2*len(sos)+1)))
         else: raise ValueError('conditions: full, lp:1000, notch:2000-4000')
-        x=sosfiltfilt(sos,x,padlen=min(len(x)-1,3*(2*len(sos)+1)))
     divisor=math.gcd(int(sr),16000); x=resample_poly(x,16000//divisor,int(sr)//divisor)
     out.parent.mkdir(parents=True,exist_ok=True); tmp=out.with_name(out.stem+'.tmp.wav')
     sf.write(tmp,x,16000,subtype='FLOAT'); os.replace(tmp,out)
+    if sidecar is not None: atomic_json(sidecar,annotation)
     return out
 
 

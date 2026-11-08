@@ -180,7 +180,7 @@ def low_sr_rewrite(path,rate=600,samples=600):
              rate,subtype='FLOAT')
 
 
-def test_lp_input_domain_exclusion_is_ledgered_and_shared_by_all_methods(tmp_path):
+def test_lp_native_bandwidth_is_annotated_and_scored_as_is(tmp_path):
     base=tmp_path/'lp';base.mkdir()
     cfg,job,out=fixture(base,'c01')
     low_sr_rewrite(base/'qa0.wav')
@@ -188,57 +188,120 @@ def test_lp_input_domain_exclusion_is_ledgered_and_shared_by_all_methods(tmp_pat
     ToyBackend.loads=0;ToyBackend.predictions=0;ToyBackend.gradients=[]
     result=run_case(ROOT,out,cfg,job,execute=True,backend_factory=ToyBackend)
     assert result['complete'] and result['expected_queries']==4
-    assert result['scored_queries']==3 and result['excluded_queries']==1
+    assert result['scored_queries']==4 and result['native_bw_queries']==1
+    assert 'excluded_queries' not in result
+    entry=dict(event_id='qa0',kind='native_bw_within_passband',sample_rate=600.,cutoff=1000.,
+               condition='lp:1000',role='query',used_as_is=True,
+               reason='native-bandwidth-within-lowpass-passband',
+               annotation='used as-is; native bandwidth <= cutoff')
     ledger=json.loads((out/'INPUT_DOMAIN_EXCLUSIONS.json').read_text())
-    assert ledger['entries']==[dict(event_id='qa0',sample_rate=600.,cutoff=1000.,
-                                    condition='lp:1000',role='query',
-                                    reason='input-domain-infeasible-lowpass-nyquist')]
-    assert result['input_domain_exclusions']['query_count']==1
-    assert result['input_domain_exclusions']['query_ids']==['qa0']
-    assert result['input_domain_exclusions']['registered_low_sr_events']==1
+    assert ledger['version']==2 and ledger['entries']==[entry]
+    annotations=result['native_bandwidth_annotations']
+    assert annotations['kind']=='native_bw_within_passband'
+    assert annotations['query_count']==1 and annotations['query_ids']==['qa0']
+    assert annotations['registered_low_sr_events']==1
     assert ledger['dataset_scan']['by_condition']['lp:1000']==dict(split_counts={'test':1},total=1)
     for name in result['methods']:
         summary=result['methods'][name]
-        assert summary['n']==3 and summary['scored_queries']==3
-        assert summary['excluded_query_ids']==['qa0']
+        assert summary['n']==4 and summary['scored_queries']==4
+        assert summary['native_bw_queries']==1 and summary['native_bw_query_ids']==['qa0']
         items=[json.loads(p.read_text())['result']
                for p in (out/'trials'/name/'items').glob('*.json')]
-        excluded=[r for r in items if r['event_id']=='qa0']
-        assert len(excluded)==1 and excluded[0]['prediction']=='excluded-infeasible'
-        assert excluded[0]['exclusion_reason']=='input-domain-infeasible-lowpass-nyquist'
-        assert excluded[0]['exclusion']['sample_rate']==600.
-        assert excluded[0]['new_model_calls']==0
-    # The excluded query never reached audio preparation or the backend.
-    assert ToyBackend.predictions==3*len(job['methods'])
+        annotated=[r for r in items if r['event_id']=='qa0']
+        assert len(annotated)==1 and annotated[0]['prediction'] in ('a','b')
+        assert annotated[0]['native_bandwidth']==entry
+        assert annotated[0]['new_model_calls']>0
+        assert all('native_bandwidth' not in r for r in items if r['event_id']!='qa0')
+    # The native-bandwidth query is prepared as-is and scored by every method.
+    assert ToyBackend.predictions==4*len(job['methods'])
     before=ToyBackend.predictions
     again=run_case(ROOT,out,cfg,job,execute=True,backend_factory=ToyBackend,cache_only=True)
     assert again['complete'] and ToyBackend.predictions==before
 
 
-def test_lp_infeasible_support_fails_instead_of_shrinking_budget(tmp_path):
+def test_lp_native_bandwidth_support_participates_in_fit(tmp_path):
     base=tmp_path/'support';base.mkdir()
     cfg,job,out=fixture(base,'c01')
     for path in sorted(base.glob('[ab]*.wav')):  # every official-train candidate
         low_sr_rewrite(path)
     job=case_plan('c01','dogs','qwen3b','lp:1000',17)
     ToyBackend.loads=0;ToyBackend.predictions=0;ToyBackend.gradients=[]
-    with pytest.raises(RuntimeError,match='cannot be silently reduced'):
-        run_case(ROOT,out,cfg,job,execute=True,backend_factory=ToyBackend)
+    result=run_case(ROOT,out,cfg,job,execute=True,backend_factory=ToyBackend)
+    assert result['complete'] and result['native_bw_queries']==0
+    reg=json.loads((out/'REGISTRATION.json').read_text())
+    support_ids=reg['splits']['50']['support_ids']
     ledger=json.loads((out/'INPUT_DOMAIN_EXCLUSIONS.json').read_text())
     support=[e for e in ledger['entries'] if e['role']=='support']
-    assert support and all(e['sample_rate']==600. and e['condition']=='lp:1000' for e in support)
-    assert all(e['reason']=='input-domain-infeasible-lowpass-nyquist' for e in support)
+    assert {e['event_id'] for e in support}==set(support_ids)
+    assert all(e['sample_rate']==600. and e['condition']=='lp:1000' for e in support)
+    assert all(e['kind']=='native_bw_within_passband' and e['used_as_is'] for e in support)
+    assert all(e['reason']=='native-bandwidth-within-lowpass-passband' for e in support)
+    # All 50 registered support events, including the low-rate ones, build the fit.
+    assert set(ToyBackend.gradients)==set(support_ids)
+    for name in result['methods']:
+        spec=next(s for s in job['methods'] if s['name']==name)
+        payload=json.loads((out/'trials'/name/'METHOD.json').read_text())['identity']['payload']
+        expected=support_ids if spec['kind'] not in ('native','naturelm') else []
+        assert payload['native_bw_support_ids']==expected
 
 
-def test_full_condition_ignores_lp_input_domain_exclusions(tmp_path):
+def test_full_condition_has_no_native_bandwidth_annotations(tmp_path):
     base=tmp_path/'full';base.mkdir()
     cfg,job,out=fixture(base,'c01')
     low_sr_rewrite(base/'qa0.wav')
     job=case_plan('c01','dogs','qwen3b','full',17)
     ToyBackend.loads=0;ToyBackend.predictions=0;ToyBackend.gradients=[]
     result=run_case(ROOT,out,cfg,job,execute=True,backend_factory=ToyBackend)
-    assert result['complete'] and result['excluded_queries']==0
+    assert result['complete'] and result['native_bw_queries']==0
     assert result['scored_queries']==4 and result['expected_queries']==4
-    assert all(s['n']==4 for s in result['methods'].values())
+    assert result['native_bandwidth_annotations']['entries']==[]
+    assert all(s['n']==4 and s['native_bw_queries']==0 for s in result['methods'].values())
     ledger=json.loads((out/'INPUT_DOMAIN_EXCLUSIONS.json').read_text())
     assert ledger['entries']==[]
+
+
+def test_lp_report_counts_13_native_bandwidth_queries_and_2_support(tmp_path):
+    """Mirror the real Watkins shape: 13 low-rate test queries, 2 low-rate support events."""
+    cfg=yaml.safe_load((ROOT/'configs/akr_train50.yaml').read_text())
+    cfg['settings']['bootstrap_samples']=20
+    rows=[]
+    for c in ['a','b']:
+        for i in range(30):
+            event=f'{c}{i}';p=tmp_path/(event+'.wav')
+            sf.write(p,np.random.default_rng(i+(0 if c=='a' else 100)).normal(0,.05,256),16000,subtype='FLOAT')
+            rows.append(dict(event_id=event,audio_path=str(p),label=c,split='train',source_filename=event))
+    for i in range(10):
+        for c in ['a','b']:
+            event=f'q{c}{i}';p=tmp_path/(event+'.wav')
+            sf.write(p,np.random.default_rng(i+(200 if c=='a' else 300)).normal(0,.05,256),16000,subtype='FLOAT')
+            rows.append(dict(event_id=event,audio_path=str(p),label=c,split='test',source_filename=event))
+    native_bw_ids=[f'q{c}{i}' for i in range(10) for c in ['a','b']][:13]
+    for event in native_bw_ids:low_sr_rewrite(tmp_path/(event+'.wav'))
+    manifest=tmp_path/'data.csv'
+    with manifest.open('w') as f:
+        w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
+    cfg['datasets']['dogs'].update(manifest=str(manifest),expected_test_count=20)
+    job=case_plan('c01','dogs','qwen3b','lp:1000',17)
+    # Choose two events that the deterministic registration actually uses as support.
+    from akr_final.train50_protocol import prepare_registration
+    reg=prepare_registration(ROOT,cfg,'dogs',17,[50])
+    support_ids=reg['splits']['50']['support_ids'];low_support=support_ids[:2]
+    for eid in low_support:low_sr_rewrite(tmp_path/(eid+'.wav'))
+    out=tmp_path/'run'
+    ToyBackend.loads=0;ToyBackend.predictions=0;ToyBackend.gradients=[]
+    result=run_case(ROOT,out,cfg,job,execute=True,backend_factory=ToyBackend)
+    assert result['complete'] and result['expected_queries']==20
+    assert result['scored_queries']==20 and result['native_bw_queries']==13
+    assert sorted(result['native_bw_query_ids'])==sorted(native_bw_ids)
+    annotations=result['native_bandwidth_annotations']
+    assert annotations['query_count']==13
+    assert annotations['registered_low_sr_events']==15
+    assert annotations['dataset_scan']['by_condition']['lp:1000']==dict(
+        split_counts={'test':13,'train':2},total=15)
+    roles={}
+    for entry in annotations['entries']:roles.setdefault(entry['role'],[]).append(entry['event_id'])
+    assert sorted(roles['query'])==sorted(native_bw_ids)
+    assert sorted(roles['support'])==sorted(low_support)
+    for summary in result['methods'].values():
+        assert summary['n']==20 and summary['scored_queries']==20
+        assert summary['native_bw_queries']==13
