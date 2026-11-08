@@ -34,6 +34,35 @@ from .train50_protocol import (prepare_registration, lock_registration,
 def read(path):return json.loads(Path(path).read_text())
 
 
+def normalize_condition(condition):return condition.replace(':','_')
+
+
+def resolve_batch_size(batch_map,*,case,model,condition,dataset):
+    """Per-cell batch for batched backend calls; default 1 keeps old semantics."""
+    if not batch_map:return 1
+    if case in ('c04','c16') or model in ('glm4voice9b','naturelm','qwen3omni'):return 1
+    cells=batch_map.get('cells') or {}
+    for key in (f'{case}|{model}|{condition}|{dataset}',
+                f'{case}|{model}|{normalize_condition(condition)}|{dataset}'):
+        if key in cells:
+            value=int(cells[key])
+            if value<1:raise ValueError(f'invalid batch for {key}')
+            return value
+    value=batch_map.get('datasets',{}).get(dataset,batch_map.get('default',1))
+    value=int(value)
+    if value<1:raise ValueError(f'invalid dataset batch for {dataset}')
+    return value
+
+
+def resolve_extractor_batch(batch_map,*,case,condition,dataset,feature='beats'):
+    if not batch_map:return 1
+    cells=batch_map.get('extractors') or {}
+    for key in (f'{case}|{feature}|{condition}|{dataset}',
+                f'{case}|{feature}|{normalize_condition(condition)}|{dataset}'):
+        if key in cells:return max(1,int(cells[key]))
+    return 1
+
+
 def asset_identity(value):
     """Bind local asset bytes, including code and model shards, before execution."""
     if isinstance(value,dict):return {k:asset_identity(v) for k,v in sorted(value.items())}
@@ -89,12 +118,17 @@ def entry_for(config,job,registration):
 
 
 class CaseWorker(FinalRunner):
-    def __init__(self,root,out,config,job,registration,profile,assets,backend_factory=None,cache_only=False):
+    def __init__(self,root,out,config,job,registration,profile,assets,backend_factory=None,cache_only=False,
+                 batch_map=None):
         plan,options=entry_for(config,job,registration)
         super().__init__(root,Path(root)/'results/.train50_no_private_source','worker',options,profile,
                          backend_factory=backend_factory,cache_only=cache_only,
                          standalone_plan=plan,output_root=out)
         self.job,self.registration,self.settings=job,registration,config['settings']
+        self.batch_size=resolve_batch_size(batch_map,case=job['case'],model=job['model'],
+                                           condition=job['condition'],dataset=job['dataset'])
+        self.extractor_batch=resolve_extractor_batch(batch_map,case=job['case'],
+                                                     condition=job['condition'],dataset=job['dataset'])
         self.assets=assets;self.extractors={};self.naturelm=None;self.stage_costs=[]
         self.case_out=Path(out)
         # The historical filename is retained so old audit tooling finds the
@@ -233,7 +267,64 @@ class CaseWorker(FinalRunner):
         if value.ndim!=1 or not len(value) or not np.isfinite(value).all():raise ValueError('invalid saved array')
         return value
 
+    def _batch_arrays(self,ids,condition,feature):
+        """Batched feature extraction with unchanged per-event cache records."""
+        episode=self.plan['episodes'][0];prompt=prompt_for(self.labels)
+        values=[None]*len(ids);missing=[]
+        for pos,event in enumerate(ids):
+            target=None
+            identity=dict(run=self.fingerprint,event=event,condition=condition,kind='feature',feature=feature,
+                          waveform=self.wave_hashes[event],target=target,prompt=prompt)
+            path=self.out/'cache'/(digest(identity)+'.npz');meta=Path(str(path)+'.json')
+            if path.exists() or meta.exists():
+                if not path.is_file() or not meta.is_file():raise RuntimeError('incomplete array cache pair')
+                info=read(meta)
+                if info.get('identity')!=identity or info.get('sha256')!=file_hash(path):raise RuntimeError('changed array cache')
+                with np.load(path,allow_pickle=False) as z:values[pos]=z['value'].copy()
+            else:
+                if self.cache_only:raise FileNotFoundError('required array missing in cache-only mode')
+                missing.append((pos,event,identity,path,meta))
+        if missing:
+            if feature=='omni':
+                batch_size=self.batch_size;backend=self._model(self.job['model'],episode)
+                batch_fn=getattr(backend,'feature_many',None);owner=backend
+            else:
+                batch_size=self.extractor_batch if feature=='beats' else 1
+                from .train50_features import FeatureExtractor
+                if feature not in self.extractors:self.extractors[feature]=FeatureExtractor(feature,self.assets.get(feature,{}))
+                owner=self.extractors[feature];batch_fn=getattr(owner,'extract_many',None)
+            if batch_fn is None or batch_size<=1:
+                for pos,event,identity,path,meta in missing:
+                    values[pos]=self.array(event,condition,'feature',feature)
+            else:
+                for start in range(0,len(missing),batch_size):
+                    chunk=missing[start:start+batch_size]
+                    if feature=='omni':
+                        qs=[self._query(event,condition) for _,event,_,_,_ in chunk]
+                        out=measured(backend,lambda:dict(values=backend.feature_many(
+                            [dict(q=q,prompt=prompt) for q in qs])))
+                    else:
+                        paths=[self._query(event,condition).audio_path for _,event,_,_,_ in chunk]
+                        out=measured(owner,lambda:dict(values=owner.extract_many(paths)))
+                    arrays=out.pop('values')
+                    if len(arrays)!=len(chunk):raise RuntimeError('batched feature count changed')
+                    total=float(out.get('wall_seconds',0.))
+                    for idx,((pos,event,identity,path,meta),value) in enumerate(zip(chunk,arrays)):
+                        value=np.asarray(value,np.float32)
+                        if value.ndim!=1 or not len(value) or not np.isfinite(value).all():
+                            raise ValueError('invalid feature/gradient array')
+                        cost={**out,'batch_size':len(chunk),'batch_wall_seconds':total,
+                              'wall_seconds':total/len(chunk),
+                              'new_model_calls':out.get('new_model_calls',0) if idx==0 else 0}
+                        write_npz(path,value=value)
+                        atomic_json(meta,dict(identity=identity,sha256=file_hash(path),cost=cost))
+                        values[pos]=value
+        return np.stack(values)
+
     def matrix(self,ids,condition,kind='feature',feature='omni'):
+        if kind=='feature' and self.batch_size>1:
+            batch=self.batch_size if feature=='omni' else (self.extractor_batch if feature=='beats' else 1)
+            if batch>1:return self._batch_arrays(ids,condition,feature)
         return np.stack([self.array(i,condition,kind,feature) for i in ids])
 
     def payload(self,spec):
@@ -319,16 +410,40 @@ class CaseWorker(FinalRunner):
         lock_registration(base/'METHOD.json',method_meta)
         episode=self.plan['episodes'][0];condition=self.job['condition']
         active=payload['scored_query_ids'];position={event:i for i,event in enumerate(active)}
-        loaded_adapter=False
+        loaded_adapter=False;pending=[]
+        batchable={'native','original','soft','hard','zero','random','shuffled_prototypes',
+                   'fixed','shuffled_pair','probe_lm','probability_lm'}
+        def flush():
+            if not pending:return
+            backend=self._model(self.job['model'],episode)
+            items=[record['item'] for record in pending]
+            out=measured(backend,lambda:dict(predictions=backend.predict_many(items,self.labels)))
+            predictions=out.pop('predictions')
+            if len(predictions)!=len(pending):raise RuntimeError('batched prediction count changed')
+            total=float(out.get('wall_seconds',0.))
+            for idx,(record,prediction) in enumerate(zip(pending,predictions)):
+                event,entry,external_j=record['event'],record['entry'],record['external_j']
+                if prediction.get('prediction') not in self.labels and prediction.get('prediction')!='':
+                    raise ValueError('backend returned an unnormalized prediction')
+                if prediction.get('event_id',event)!=event:raise ValueError('backend returned a foreign event identity')
+                if external_j is not None:prediction['external_prediction']=external_j
+                if entry is not None:prediction['native_bandwidth']=entry
+                cost={**out,'batch_size':len(pending),'batch_wall_seconds':total,
+                      'wall_seconds':total/len(pending),
+                      'new_model_calls':out.get('new_model_calls',0) if idx==0 else 0}
+                journal.add(event,{**prediction,'event_id':event,**cost})
+            pending.clear()
         for event in ids:
             entry=self.native_bandwidth_entry(event,condition)
             if journal.has(event):continue
             if self.cache_only:raise FileNotFoundError('required prediction missing in cache-only mode')
             _check_stop();kind=spec['kind'];j=position[event];prompt=prompt_for(self.labels)
             if kind=='ridge':
+                flush()
                 result=dict(prediction=external[j],raw_prediction=external[j],output_source='external_ridge',
                             wall_seconds=0.,new_model_calls=0)
             elif kind=='naturelm':
+                flush()
                 if self.naturelm is None:
                     self.close()
                     from .train50_naturelm import NatureLMBackend
@@ -352,6 +467,17 @@ class CaseWorker(FinalRunner):
                     from .train50_evidence import probability_evidence_prompt
                     prompt=probability_evidence_prompt(prompt,self.labels,payload['class_probabilities'][j],payload['support_priors'])
                 field=None if fields is None else fields[j]
+                if kind in batchable and self.batch_size>1 and hasattr(backend,'predict_many'):
+                    pending.append(dict(event=event,entry=entry,
+                        external_j=None if external is None else external[j],
+                        item=dict(q=self._query(event,condition),prompt=prompt,support=support,
+                            direction=field,alpha=spec['alpha'] if field is not None else 0.,
+                            scope=spec['scope'],kind=spec['kv_kind'],layer_group=spec['layer_group'],
+                            scale_mode=spec['scale_mode'],raw_eta=spec['raw_eta'],
+                            max_new_tokens=self.settings['max_new_tokens'])))
+                    if len(pending)>=self.batch_size:flush()
+                    continue
+                flush()
                 result=measured(backend,lambda:backend.predict(self._query(event,condition),prompt,self.labels,
                     support=support,direction=field,alpha=spec['alpha'] if field is not None else 0.,
                     scope=spec['scope'],kind=spec['kv_kind'],layer_group=spec['layer_group'],
@@ -361,6 +487,7 @@ class CaseWorker(FinalRunner):
             if result.get('event_id',event)!=event:raise ValueError('backend returned a foreign event identity')
             if entry is not None:result['native_bandwidth']=entry
             journal.add(event,{**result,'event_id':event})
+        flush()
         if adapter:self.close()
         records=journal.results();validate_population(ids,records)
         return records
@@ -547,8 +674,9 @@ def report_case(out,*,write=True):
 
 
 def run_case(root,out,config,job,*,execute=False,profile='24gb',assets=None,backend_factory=None,
-             cache_only=False,config_path=None,audio_root=None):
+             cache_only=False,config_path=None,audio_root=None,batch_map=None):
     root=Path(root).resolve();out=Path(out).resolve();assets=assets or {};worker=None
+    job=dict(job);job['batch_map_sha256']=digest(batch_map) if batch_map else None
     out.mkdir(parents=True,exist_ok=True)
     with run_lock(out/'.run.lock'):
         atomic_json(out/'STATUS.json',dict(complete=False,status='preflight',case=job['case']))
@@ -571,7 +699,8 @@ def run_case(root,out,config,job,*,execute=False,profile='24gb',assets=None,back
                             protocol_complete=True,scientific_results=False,expected_queries=len(registration['query_ids']),
                             support_counts={n:s['support_class_counts'] for n,s in registration['splits'].items()})
                 atomic_json(out/'STATUS.json',status);return status
-            worker=CaseWorker(root,out,config,job,registration,profile,assets,backend_factory,cache_only)
+            worker=CaseWorker(root,out,config,job,registration,profile,assets,backend_factory,cache_only,
+                              batch_map=batch_map)
             worker.preflight();worker.prepare_annotations()
             # FinalRunner's legacy descriptor means no model was run at preflight.
             # Here the locked query population is explicitly the official test.
@@ -615,6 +744,8 @@ def main(case=None,argv=None):
     p.add_argument('--profile',choices=['16gb','24gb','48gb','80gb'],default='24gb')
     p.add_argument('--execute',action='store_true')
     p.add_argument('--cache-only',action='store_true')
+    p.add_argument('--batch-map',type=Path,
+                   help='JSON per-cell backend batch groups for native/feature/predict paths')
     args=p.parse_args(argv);case=case or args.case;validate_run_id(args.run_id)
     job=case_plan(case,args.dataset,args.model,args.condition,args.seed)
     if args.action=='plan':print(json.dumps(job,indent=2));return 0
@@ -623,6 +754,7 @@ def main(case=None,argv=None):
     out=(args.output_root or root/'results/akr_train50')/args.run_id/case/cell
     try:
         config=yaml.safe_load(config_path.read_text());assets=read(args.assets) if args.assets else {}
+        batch_map=read(args.batch_map) if args.batch_map else None
     except BaseException as error:
         with run_lock(out/'.run.lock'):
             atomic_json(out/'STATUS.json',dict(complete=False,status='error',case=case,
@@ -641,7 +773,8 @@ def main(case=None,argv=None):
     else:
         if args.action=='run' and not args.execute and not args.cache_only:p.error('run requires --execute or --cache-only')
         result=run_case(root,out,config,job,execute=args.action=='run',profile=args.profile,assets=assets,
-                        cache_only=args.cache_only,config_path=config_path,audio_root=args.audio_root)
+                        cache_only=args.cache_only,config_path=config_path,audio_root=args.audio_root,
+                        batch_map=batch_map)
     print(json.dumps({'output':str(out),**{k:v for k,v in result.items() if k not in ('job','query_ids')}},indent=2))
     return 0 if result.get('complete') or result.get('protocol_complete') or args.action=='check' else 2
 

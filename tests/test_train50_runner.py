@@ -305,3 +305,95 @@ def test_lp_report_counts_13_native_bandwidth_queries_and_2_support(tmp_path):
     for summary in result['methods'].values():
         assert summary['n']==20 and summary['scored_queries']==20
         assert summary['native_bw_queries']==13
+
+
+class BatchToyBackend(ToyBackend):
+    batch_predict_calls=0
+    batch_feature_calls=0
+    batch_rows=0
+    def feature_many(self,items):
+        type(self).batch_feature_calls+=1
+        return [self.feature(item['q'],item['prompt']) for item in items]
+    def predict_many(self,items,labels):
+        type(self).batch_predict_calls+=1
+        rows=[]
+        for item in items:
+            type(self).batch_rows+=1;self.forward_count+=1
+            direction=item.get('direction')
+            prediction=labels[0] if direction is None or item.get('alpha',0)==0 or not np.any(direction) else labels[1]
+            rows.append(dict(prediction=prediction,raw_prediction=prediction,generated_tokens=1,input_tokens=10,
+                             applied_relative_norms={},effective_relative_norms={},applied_norms={}))
+        return rows
+
+
+class FlakyBatchToyBackend(BatchToyBackend):
+    fail_at=None
+    def predict_many(self,items,labels):
+        type(self).batch_predict_calls+=1
+        if type(self).fail_at is not None and type(self).batch_predict_calls>=type(self).fail_at:
+            raise RuntimeError('injected batch interruption')
+        rows=[]
+        for item in items:
+            type(self).batch_rows+=1;self.forward_count+=1
+            direction=item.get('direction')
+            prediction=labels[0] if direction is None or item.get('alpha',0)==0 or not np.any(direction) else labels[1]
+            rows.append(dict(prediction=prediction,raw_prediction=prediction,generated_tokens=1,input_tokens=10,
+                             applied_relative_norms={},effective_relative_norms={},applied_norms={}))
+        return rows
+
+
+def test_batched_predicts_keep_one_journal_record_per_event(tmp_path):
+    cfg,job,out=fixture(tmp_path)
+    BatchToyBackend.batch_predict_calls=0;BatchToyBackend.batch_feature_calls=0;BatchToyBackend.batch_rows=0
+    result=run_case(ROOT,out,cfg,job,execute=True,backend_factory=BatchToyBackend,
+                    batch_map={'datasets':{'dogs':2}})
+    assert result['complete']
+    # c01 has native + three gradient methods, four query ids each.
+    assert BatchToyBackend.batch_predict_calls==4*2
+    assert BatchToyBackend.batch_rows==4*4
+    assert BatchToyBackend.batch_feature_calls>0
+    for spec in job['methods']:
+        items=list((out/'trials'/spec['name']/'items').glob('*.json'))
+        assert len(items)==4
+        for path in items:
+            value=json.loads(path.read_text())['result']
+            assert value['event_id']==json.loads(path.read_text())['key']
+            if spec['kind']!='ridge':
+                assert value['batch_size']==2
+    before=(BatchToyBackend.batch_predict_calls,BatchToyBackend.batch_feature_calls,BatchToyBackend.batch_rows)
+    again=run_case(ROOT,out,cfg,job,execute=True,backend_factory=BatchToyBackend,
+                   batch_map={'datasets':{'dogs':2}},cache_only=True)
+    assert again['complete']
+    assert (BatchToyBackend.batch_predict_calls,BatchToyBackend.batch_feature_calls,BatchToyBackend.batch_rows)==before
+
+
+def test_batched_resume_does_not_duplicate_journal_events(tmp_path):
+    cfg,job,out=fixture(tmp_path)
+    FlakyBatchToyBackend.batch_predict_calls=0;FlakyBatchToyBackend.batch_rows=0
+    FlakyBatchToyBackend.fail_at=2
+    with pytest.raises(RuntimeError):
+        run_case(ROOT,out,cfg,job,execute=True,backend_factory=FlakyBatchToyBackend,
+                 batch_map={'datasets':{'dogs':2}})
+    native_items=list((out/'trials'/'native'/'items').glob('*.json'))
+    assert len(native_items)==2  # first batch committed, second interrupted
+    BatchToyBackend.batch_predict_calls=0;BatchToyBackend.batch_rows=0
+    BatchToyBackend.batch_feature_calls=0
+    result=run_case(ROOT,out,cfg,job,execute=True,backend_factory=BatchToyBackend,
+                    batch_map={'datasets':{'dogs':2}})
+    assert result['complete']
+    # native finishes the two remaining rows; three gradient methods run four each.
+    assert BatchToyBackend.batch_rows==2+3*4
+    assert BatchToyBackend.batch_predict_calls==1+3*2
+    for spec in job['methods']:
+        assert len(list((out/'trials'/spec['name']/'items').glob('*.json')))==4
+
+
+def test_batched_feature_extraction_for_ridge_paths(tmp_path):
+    cfg,job,out=fixture(tmp_path,case='c02')
+    BatchToyBackend.batch_predict_calls=0;BatchToyBackend.batch_feature_calls=0;BatchToyBackend.batch_rows=0
+    result=run_case(ROOT,out,cfg,job,execute=True,backend_factory=BatchToyBackend,
+                    batch_map={'datasets':{'dogs':3}})
+    assert result['complete']
+    assert BatchToyBackend.batch_feature_calls>0
+    for spec in job['methods']:
+        assert len(list((out/'trials'/spec['name']/'items').glob('*.json')))==4

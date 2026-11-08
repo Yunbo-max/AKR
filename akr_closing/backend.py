@@ -94,6 +94,92 @@ class ProjectionIntervention(AbstractContextManager):
         return False
 
 
+class BatchProjectionIntervention:
+    """Row-wise K/V intervention for batched prefill.
+
+    ``row_directions[i]`` is the unflattened direction dict for row ``i`` (empty
+    for a native row).  The per-row arithmetic is exactly the batch-one
+    ``ProjectionIntervention`` arithmetic: the norm ratio is computed over that
+    row's active positions only.  Rows are updated independently; values never
+    mix across the batch.
+    """
+    def __init__(self,modules,row_directions,mask,alphas,*,scale_mode='relative_norm',raw_eta=1.):
+        import numpy as np
+        if mask.ndim!=2: raise ValueError('batch position mask required')
+        if len(row_directions)!=mask.shape[0] or len(alphas)!=mask.shape[0]:
+            raise ValueError('one direction entry and alpha per batch row')
+        for alpha in alphas:
+            if not np.isfinite(alpha) or alpha<0: raise ValueError('alpha must be finite and nonnegative')
+        if not np.isfinite(raw_eta) or raw_eta<0: raise ValueError('raw_eta must be finite and nonnegative')
+        if scale_mode not in {'relative_norm','relative_cap','raw'}: raise ValueError('unknown scale mode')
+        for directions in row_directions:
+            if set(directions)-set(modules): raise ValueError('unknown K/V projection key')
+        self.modules=modules; self.row_directions=row_directions; self.mask=mask
+        self.alphas=alphas; self.scale_mode=scale_mode; self.raw_eta=raw_eta
+        self.handles=[]
+        self.ratios=[{} for _ in row_directions]
+        self.effective_ratios=[{} for _ in row_directions]
+        self.norms=[{} for _ in row_directions]
+        self.called_rows=[set() for _ in row_directions]
+
+    def __enter__(self):
+        import torch
+        for key,module in self.modules.items():
+            rows=[i for i,directions in enumerate(self.row_directions) if key in directions]
+            if not rows: continue
+            def hook(_m,_x,out,key=key,rows=rows):
+                if out.shape[:2]!=self.mask.shape: return out
+                updated=out
+                for i in rows:
+                    mask=self.mask[i].to(out.device).bool()
+                    if not mask.any(): raise ValueError('empty active intervention mask')
+                    row=out[i]
+                    if not torch.isfinite(row[mask]).all(): raise ValueError('non-finite active K/V state')
+                    direction=torch.as_tensor(self.row_directions[i][key],device=out.device,dtype=torch.float32)
+                    if not torch.isfinite(direction).all(): raise ValueError('non-finite KV correction')
+                    delta=torch.zeros_like(row,dtype=torch.float32)
+                    if direction.ndim==1 and direction.numel()==row.shape[-1]: delta[mask]=direction
+                    elif direction.shape==row.shape: delta=direction*mask[:,None]
+                    elif direction.ndim==2 and direction.shape==(int(mask.sum()),row.shape[-1]): delta[mask]=direction
+                    else: raise ValueError(f'field shape incompatible at {key}: {direction.shape}')
+                    dn=torch.linalg.vector_norm(delta[mask]); bn=torch.linalg.vector_norm(row.float()[mask])
+                    if self.scale_mode=='relative_norm':
+                        scale=self.alphas[i]*bn/dn.clamp_min(1e-30) if dn>0 else dn*0
+                    elif self.scale_mode=='relative_cap':
+                        scale=torch.minimum(torch.full_like(dn,self.raw_eta),
+                                            self.alphas[i]*bn/dn.clamp_min(1e-30)) if dn>0 else dn*0
+                    else:
+                        scale=torch.full_like(dn,self.raw_eta) if dn>0 else dn*0
+                    applied=(delta*scale).to(out.dtype)
+                    if torch.count_nonzero(applied):
+                        if updated is out: updated=out.clone()
+                        updated[i]=row+applied
+                    actual=torch.linalg.vector_norm(applied.float()[mask])
+                    effective=updated[i].float()[mask]-row.float()[mask]
+                    en=torch.linalg.vector_norm(effective)
+                    self.ratios[i][str(key)]=float((actual/bn.clamp_min(1e-30)).detach().cpu())
+                    self.effective_ratios[i][str(key)]=float((en/bn.clamp_min(1e-30)).detach().cpu())
+                    self.norms[i][str(key)]={'base_frobenius':float(bn.detach().cpu()),
+                        'delta_frobenius':float(actual.detach().cpu()),
+                        'effective_delta_frobenius':float(en.detach().cpu()),
+                        'unchanged_fraction':float((effective==0).float().mean().detach().cpu()),
+                        'active_tokens':int(mask.sum()),'scale_mode':self.scale_mode}
+                    self.called_rows[i].add(key)
+                return updated
+            self.handles.append(module.register_forward_hook(hook))
+        return self
+
+    def assert_applied(self):
+        for i,directions in enumerate(self.row_directions):
+            missing=set(directions)-self.called_rows[i]
+            if missing: raise RuntimeError(f'batched K/V intervention missed row {i}: {sorted(missing)}')
+
+    def __exit__(self,*args):
+        for h in self.handles: h.remove()
+        self.handles=[]
+        return False
+
+
 class OmniBackend:
     def __init__(self,model_id,revision,*,profile='24gb',layer_fractions=(.25,.5,.75,.875),
                  feature_fraction=.875,max_context_tokens=32768):
@@ -157,6 +243,152 @@ class OmniBackend:
             h=out.hidden_states[self.feature_layer]
             feature=h[mask.to(h.device)].float().mean(0).cpu().numpy()
         return feature
+
+    def _collate_batch(self,prepared,*,left=False):
+        """Collate per-query ``_prepare`` outputs into one batch.
+
+        Text ids are padded (right for forward, left for generation); audio
+        features are packed with a per-row ``feature_attention_mask`` exactly
+        like the memory probe.  No sample is truncated or reordered.
+        """
+        t=self.torch
+        if not prepared: raise ValueError('empty batch')
+        tokenizer=getattr(self.processor,'tokenizer',None)
+        pad=getattr(tokenizer,'pad_token_id',None)
+        if pad is None: pad=getattr(tokenizer,'eos_token_id',0) or 0
+        lengths=[int(x['input_ids'].shape[-1]) for x in prepared]
+        max_t=max(lengths)
+        ids=[];masks=[]
+        for x,n in zip(prepared,lengths):
+            row=x['input_ids'] if x['input_ids'].ndim==2 else x['input_ids'].reshape(1,-1)
+            if row.shape[0]!=1: raise ValueError('per-query input_ids must be batch one')
+            gap=max_t-n
+            if gap:
+                filler=t.full((1,gap),pad,dtype=row.dtype,device=row.device)
+                row=t.cat([filler,row],1) if left else t.cat([row,filler],1)
+            m=x.get('attention_mask')
+            if m is None: m=t.ones((1,n),dtype=t.long,device=row.device)
+            elif m.ndim==1: m=m.reshape(1,-1)
+            if m.shape[0]!=1: raise ValueError('per-query attention_mask must be batch one')
+            if gap:
+                zeros=t.zeros((1,gap),dtype=m.dtype,device=m.device)
+                m=t.cat([zeros,m],1) if left else t.cat([m,zeros],1)
+            ids.append(row);masks.append(m)
+        out=dict(input_ids=t.cat(ids,0),attention_mask=t.cat(masks,0))
+        if 'labels' in prepared[0]:
+            labels=[]
+            for x in prepared:
+                n=int(x['labels'].shape[-1]);gap=max_t-n
+                lab=x['labels'] if x['labels'].ndim==2 else x['labels'].reshape(1,-1)
+                if gap:
+                    filler=t.full((1,gap),-100,dtype=lab.dtype,device=lab.device)
+                    lab=t.cat([filler,lab],1) if left else t.cat([lab,filler],1)
+                labels.append(lab)
+            out['labels']=t.cat(labels,0)
+        have=[i for i,x in enumerate(prepared) if 'input_features' in x]
+        if have:
+            if len(have)!=len(prepared):
+                raise ValueError('mixed batch with and without input_features')
+            feats=[x['input_features'] for x in prepared]
+            if any(f.ndim!=3 for f in feats):
+                raise ValueError('input_features must be [audio, features, frames]')
+            na_max=max(int(f.shape[0]) for f in feats)
+            width=int(feats[0].shape[1]); mel_max=max(int(f.shape[2]) for f in feats)
+            if any(int(f.shape[1])!=width for f in feats):
+                raise ValueError('input feature width differs inside batch')
+            masks_audio=[x.get('feature_attention_mask') for x in prepared]
+            packed=t.zeros((len(feats),na_max,width,mel_max),dtype=feats[0].dtype)
+            packed_mask=t.zeros((len(feats),na_max,mel_max),dtype=t.long)
+            for i,(f,m) in enumerate(zip(feats,masks_audio)):
+                na,_,me=f.shape
+                packed[i,:na,:,:me]=f
+                if m is not None: packed_mask[i,:na,:me]=m
+            out['input_features']=packed.reshape(len(feats)*na_max,width,mel_max)
+            out['feature_attention_mask']=packed_mask.reshape(len(feats)*na_max,mel_max)
+        known={'input_ids','attention_mask','labels','input_features','feature_attention_mask'}
+        for key in prepared[0]:
+            if key in known: continue
+            values=[x[key] for x in prepared]
+            if all(t.is_tensor(v) and v.shape[1:]==values[0].shape[1:] for v in values):
+                out[key]=t.cat(values,0)
+            else:
+                raise ValueError(f'batch collation does not support key {key}')
+        return out,max_t
+
+    def feature_many(self,items):
+        """Batched forward feature extraction; one array per item, same pooling."""
+        t=self.torch
+        prepared=[self._prepare(item['q'],item['prompt']) for item in items]
+        inputs,max_t=self._collate_batch(prepared)
+        if max_t>self.max_context_tokens:
+            raise ContextLimit(f'{max_t} tokens exceeds budget {self.max_context_tokens}; no truncation')
+        amask=inputs['input_ids'].eq(self.audio_token_id)&inputs['attention_mask'].to(t.bool())
+        extra={}
+        if 'logits_to_keep' in self._forward_parameters: extra['logits_to_keep']=1
+        elif 'num_logits_to_keep' in self._forward_parameters: extra['num_logits_to_keep']=1
+        with t.inference_mode():
+            out=self.thinker(**inputs,use_cache=False,output_hidden_states=True,return_dict=True,**extra)
+            h=out.hidden_states[self.feature_layer]
+        values=[]
+        for i in range(len(items)):
+            mask=amask[i].to(h.device)
+            if not mask.any(): raise RuntimeError(f'no audio tokens in batch row {i}')
+            values.append(h[i][mask].float().mean(0).cpu().numpy())
+        return values
+
+    def predict_many(self,items,labels):
+        """Batched greedy prediction with row-wise K/V intervention."""
+        from contextlib import nullcontext
+        t=self.torch
+        if not items: return []
+        for item in items:
+            if item.get('support'): raise ValueError('batched predict does not carry ICL support')
+        prepared=[self._prepare(item['q'],item['prompt']) for item in items]
+        inputs,max_t=self._collate_batch(prepared,left=True)
+        if max_t>self.max_context_tokens:
+            raise ContextLimit(f'{max_t} tokens exceeds budget {self.max_context_tokens}; no truncation')
+        row_directions=[]
+        for item in items:
+            direction=item.get('direction')
+            row_directions.append({} if direction is None else
+                                  self.unflatten(direction,item.get('kind','kv'),item.get('layer_group','all')))
+        alphas=[float(item.get('alpha',0.)) for item in items]
+        scale_modes={item.get('scale_mode','relative_norm') for item in items}
+        raw_etas={float(item.get('raw_eta',1.)) for item in items}
+        if len(scale_modes)>1 or len(raw_etas)>1:
+            raise ValueError('batched predict requires one scale mode and raw eta')
+        scale_mode=scale_modes.pop(); raw_eta=raw_etas.pop()
+        mask=inputs['attention_mask'].to(t.bool()).clone()
+        audio=inputs['input_ids'].eq(self.audio_token_id)&mask
+        for i,item in enumerate(items):
+            scope=item.get('scope','audio')
+            if scope=='audio': mask[i]=audio[i]
+            elif scope=='text': mask[i]=mask[i]&~audio[i]
+            elif scope=='full_prefill': pass
+            else: raise ValueError('scope must be audio/text/full_prefill')
+        new_tokens=max(int(item.get('max_new_tokens',12)) for item in items)
+        hooks=None;context=nullcontext()
+        if any(row_directions):
+            hooks=BatchProjectionIntervention(self.modules,row_directions,mask,alphas,
+                                              scale_mode=scale_mode,raw_eta=raw_eta)
+            context=hooks
+        with t.inference_mode(),context:
+            output=self.thinker.generate(**inputs,do_sample=False,max_new_tokens=new_tokens,use_cache=True)
+            if hooks is not None: hooks.assert_applied()
+        raws=self.processor.batch_decode(output[:,max_t:],skip_special_tokens=True,
+                                         clean_up_tokenization_spaces=False)
+        from animal_omni.metrics import normalize_label
+        results=[]
+        for i,(item,raw) in enumerate(zip(items,raws)):
+            raw=raw.strip()
+            results.append(dict(prediction=normalize_label(raw,labels) or '',raw_prediction=raw,
+                applied_relative_norms={} if hooks is None else hooks.ratios[i],
+                applied_norms={} if hooks is None else hooks.norms[i],
+                effective_relative_norms={} if hooks is None else hooks.effective_ratios[i],
+                scale_mode=scale_mode,raw_eta=raw_eta,
+                generated_tokens=int(output.shape[1]-max_t),
+                input_tokens=int(prepared[i]['input_ids'].shape[-1])))
+        return results
 
     def _mask(self,x,scope,prefix_length=None):
         ids=x['input_ids']; n=prefix_length or ids.shape[1]

@@ -236,6 +236,45 @@ class FeatureExtractor:
         return _vector(hidden.mean(dim=0).cpu().numpy())
 
 
+    def extract_many(self, paths):
+        """Batched extraction; each item keeps its own valid-token mean pool."""
+        paths = list(paths)
+        if self.kind in ("mfcc", "egemaps"):
+            return [self.extract(path) for path in paths]
+        import torch
+        if self._model is None:
+            self._load_beats()
+        waves = []
+        for path in paths:
+            x = _audio(path)
+            # Same 250 ms minimum as the per-file path; padding never enters
+            # any item's mean pool.
+            if len(x) < 4000:
+                x = np.pad(x, (0, 4000 - len(x)))
+            waves.append(x)
+        max_len = max(len(w) for w in waves)
+        padded = torch.zeros((len(waves), max_len), dtype=torch.float32)
+        pmask = torch.zeros((len(waves), max_len), dtype=torch.bool)
+        for i, w in enumerate(waves):
+            padded[i, :len(w)] = torch.from_numpy(w.astype(np.float32))
+            pmask[i, len(w):] = True
+        device = self.assets.get("device", "cpu")
+        padded, pmask = padded.to(device), pmask.to(device)
+        with torch.inference_mode():
+            hidden, token_mask = self._model.extract_features(
+                padded, padding_mask=pmask, fbank_mean=15.41663, fbank_std=6.55582)
+        if hidden.ndim != 3 or hidden.shape[0] != len(paths):
+            raise ValueError("BEATs must return one hidden representation per waveform")
+        values = []
+        for i in range(len(paths)):
+            if token_mask is not None:
+                hidden_i = hidden[i, ~token_mask[i]]
+            else:
+                hidden_i = hidden[i]
+            values.append(_vector(hidden_i.mean(dim=0).cpu().numpy()))
+        return values
+
+
 def extract_feature(path, kind, assets=None):
     return FeatureExtractor(kind, assets).extract(path)
 
