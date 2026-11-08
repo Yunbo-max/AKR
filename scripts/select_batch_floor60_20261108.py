@@ -13,8 +13,8 @@ import collections
 import json
 from pathlib import Path
 
-LO = 60e9
-HI = 76e9
+LO = 30e9
+HI = 76e9  # 76.9 crash-tier avoidance; prefer <=70e9 where available
 DATASETS = ("dogs", "watkins", "bats", "humbugdb")
 CONDS = ("full", "lp:1000")
 

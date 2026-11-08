@@ -1,0 +1,693 @@
+{
+  "version": 1,
+  "interval_bytes": [
+    30000000000,
+    76000000000
+  ],
+  "source": "results/probe_mem_70gb_20261108.json",
+  "cells": {
+    "c01|qwen7b|full|dogs": {
+      "batch": 9,
+      "peak_bytes": 73800086528,
+      "workload": "forward"
+    },
+    "c01|qwen7b|full|watkins": {
+      "batch": 10,
+      "peak_bytes": 73674691584,
+      "workload": "forward"
+    },
+    "c01|qwen7b|full|bats": {
+      "batch": 92,
+      "peak_bytes": 74225632256,
+      "workload": "forward"
+    },
+    "c01|qwen7b|full|humbugdb": {
+      "batch": 6,
+      "peak_bytes": 67198915584,
+      "workload": "forward"
+    },
+    "c01|qwen7b|lp_1000|dogs": {
+      "batch": 9,
+      "peak_bytes": 73800086528,
+      "workload": "forward"
+    },
+    "c01|qwen7b|lp_1000|watkins": {
+      "batch": 10,
+      "peak_bytes": 69461009408,
+      "workload": "forward"
+    },
+    "c01|qwen7b|lp_1000|bats": {
+      "batch": 92,
+      "peak_bytes": 74225632256,
+      "workload": "forward"
+    },
+    "c01|qwen7b|lp_1000|humbugdb": {
+      "batch": 6,
+      "peak_bytes": 67198915584,
+      "workload": "forward"
+    },
+    "c01|qwen3b|full|dogs": {
+      "batch": 9,
+      "peak_bytes": 65314223104,
+      "workload": "forward"
+    },
+    "c01|qwen3b|full|watkins": {
+      "batch": 11,
+      "peak_bytes": 75835898880,
+      "workload": "forward"
+    },
+    "c01|qwen3b|full|bats": {
+      "batch": 96,
+      "peak_bytes": 70573076480,
+      "workload": "forward"
+    },
+    "c01|qwen3b|full|humbugdb": {
+      "batch": 6,
+      "peak_bytes": 58714978304,
+      "workload": "forward"
+    },
+    "c01|qwen3b|lp_1000|dogs": {
+      "batch": 9,
+      "peak_bytes": 65314223104,
+      "workload": "forward"
+    },
+    "c01|qwen3b|lp_1000|watkins": {
+      "batch": 11,
+      "peak_bytes": 70459281408,
+      "workload": "forward"
+    },
+    "c01|qwen3b|lp_1000|bats": {
+      "batch": 96,
+      "peak_bytes": 70573076480,
+      "workload": "forward"
+    },
+    "c01|qwen3b|lp_1000|humbugdb": {
+      "batch": 6,
+      "peak_bytes": 58714978304,
+      "workload": "forward"
+    },
+    "c02|qwen7b|full|dogs": {
+      "batch": 9,
+      "peak_bytes": 73800086528,
+      "workload": "forward"
+    },
+    "c02|qwen7b|full|watkins": {
+      "batch": 10,
+      "peak_bytes": 73674691584,
+      "workload": "forward"
+    },
+    "c02|qwen7b|full|bats": {
+      "batch": 92,
+      "peak_bytes": 74225632256,
+      "workload": "forward"
+    },
+    "c02|qwen7b|full|humbugdb": {
+      "batch": 6,
+      "peak_bytes": 67198915584,
+      "workload": "forward"
+    },
+    "c02|qwen7b|lp_1000|dogs": {
+      "batch": 9,
+      "peak_bytes": 73800086528,
+      "workload": "forward"
+    },
+    "c02|qwen7b|lp_1000|watkins": {
+      "batch": 10,
+      "peak_bytes": 69461009408,
+      "workload": "forward"
+    },
+    "c02|qwen7b|lp_1000|bats": {
+      "batch": 92,
+      "peak_bytes": 74225632256,
+      "workload": "forward"
+    },
+    "c02|qwen7b|lp_1000|humbugdb": {
+      "batch": 6,
+      "peak_bytes": 67198915584,
+      "workload": "forward"
+    },
+    "c03|qwen7b|full|dogs": {
+      "batch": 9,
+      "peak_bytes": 73800086528,
+      "workload": "forward"
+    },
+    "c03|qwen7b|full|watkins": {
+      "batch": 10,
+      "peak_bytes": 73674691584,
+      "workload": "forward"
+    },
+    "c03|qwen7b|full|bats": {
+      "batch": 92,
+      "peak_bytes": 74225632256,
+      "workload": "forward"
+    },
+    "c03|qwen7b|full|humbugdb": {
+      "batch": 6,
+      "peak_bytes": 67198915584,
+      "workload": "forward"
+    },
+    "c03|qwen7b|lp_1000|dogs": {
+      "batch": 9,
+      "peak_bytes": 73800086528,
+      "workload": "forward"
+    },
+    "c03|qwen7b|lp_1000|watkins": {
+      "batch": 10,
+      "peak_bytes": 69461009408,
+      "workload": "forward"
+    },
+    "c03|qwen7b|lp_1000|bats": {
+      "batch": 92,
+      "peak_bytes": 74225632256,
+      "workload": "forward"
+    },
+    "c03|qwen7b|lp_1000|humbugdb": {
+      "batch": 6,
+      "peak_bytes": 67198915584,
+      "workload": "forward"
+    },
+    "c04|qwen7b|full|watkins": {
+      "batch": 1,
+      "peak_bytes": 38035636224,
+      "workload": "icl50"
+    },
+    "c04|qwen7b|full|bats": {
+      "batch": 3,
+      "peak_bytes": 60625242112,
+      "workload": "icl50"
+    },
+    "c04|qwen7b|lp_1000|watkins": {
+      "batch": 1,
+      "peak_bytes": 34269987840,
+      "workload": "icl50"
+    },
+    "c04|qwen7b|lp_1000|bats": {
+      "batch": 3,
+      "peak_bytes": 60625242112,
+      "workload": "icl50"
+    },
+    "c05|qwen7b|full|dogs": {
+      "batch": 9,
+      "peak_bytes": 73800086528,
+      "workload": "forward"
+    },
+    "c05|qwen7b|full|watkins": {
+      "batch": 10,
+      "peak_bytes": 73674691584,
+      "workload": "forward"
+    },
+    "c05|qwen7b|lp_1000|dogs": {
+      "batch": 9,
+      "peak_bytes": 73800086528,
+      "workload": "forward"
+    },
+    "c05|qwen7b|lp_1000|watkins": {
+      "batch": 10,
+      "peak_bytes": 69461009408,
+      "workload": "forward"
+    },
+    "c06|qwen7b|full|dogs": {
+      "batch": 9,
+      "peak_bytes": 73800086528,
+      "workload": "forward"
+    },
+    "c06|qwen7b|full|watkins": {
+      "batch": 10,
+      "peak_bytes": 73674691584,
+      "workload": "forward"
+    },
+    "c06|qwen7b|lp_1000|dogs": {
+      "batch": 9,
+      "peak_bytes": 73800086528,
+      "workload": "forward"
+    },
+    "c06|qwen7b|lp_1000|watkins": {
+      "batch": 10,
+      "peak_bytes": 69461009408,
+      "workload": "forward"
+    },
+    "c07|qwen7b|full|dogs": {
+      "batch": 9,
+      "peak_bytes": 73800086528,
+      "workload": "forward"
+    },
+    "c07|qwen7b|full|watkins": {
+      "batch": 10,
+      "peak_bytes": 73674691584,
+      "workload": "forward"
+    },
+    "c07|qwen7b|lp_1000|dogs": {
+      "batch": 9,
+      "peak_bytes": 73800086528,
+      "workload": "forward"
+    },
+    "c07|qwen7b|lp_1000|watkins": {
+      "batch": 10,
+      "peak_bytes": 69461009408,
+      "workload": "forward"
+    },
+    "c08|qwen7b|full|dogs": {
+      "batch": 9,
+      "peak_bytes": 73800086528,
+      "workload": "forward"
+    },
+    "c08|qwen7b|full|watkins": {
+      "batch": 10,
+      "peak_bytes": 73674691584,
+      "workload": "forward"
+    },
+    "c08|qwen7b|lp_1000|dogs": {
+      "batch": 9,
+      "peak_bytes": 73800086528,
+      "workload": "forward"
+    },
+    "c08|qwen7b|lp_1000|watkins": {
+      "batch": 10,
+      "peak_bytes": 69461009408,
+      "workload": "forward"
+    },
+    "c09|qwen7b|full|dogs": {
+      "batch": 9,
+      "peak_bytes": 73800086528,
+      "workload": "forward"
+    },
+    "c09|qwen7b|full|watkins": {
+      "batch": 10,
+      "peak_bytes": 73674691584,
+      "workload": "forward"
+    },
+    "c09|qwen7b|full|bats": {
+      "batch": 92,
+      "peak_bytes": 74225632256,
+      "workload": "forward"
+    },
+    "c09|qwen7b|full|humbugdb": {
+      "batch": 6,
+      "peak_bytes": 67198915584,
+      "workload": "forward"
+    },
+    "c09|qwen7b|lp_1000|dogs": {
+      "batch": 9,
+      "peak_bytes": 73800086528,
+      "workload": "forward"
+    },
+    "c09|qwen7b|lp_1000|watkins": {
+      "batch": 10,
+      "peak_bytes": 69461009408,
+      "workload": "forward"
+    },
+    "c09|qwen7b|lp_1000|bats": {
+      "batch": 92,
+      "peak_bytes": 74225632256,
+      "workload": "forward"
+    },
+    "c09|qwen7b|lp_1000|humbugdb": {
+      "batch": 6,
+      "peak_bytes": 67198915584,
+      "workload": "forward"
+    },
+    "c10|qwen7b|full|dogs": {
+      "batch": 9,
+      "peak_bytes": 73800086528,
+      "workload": "forward"
+    },
+    "c10|qwen7b|full|watkins": {
+      "batch": 10,
+      "peak_bytes": 73674691584,
+      "workload": "forward"
+    },
+    "c10|qwen7b|lp_1000|dogs": {
+      "batch": 9,
+      "peak_bytes": 73800086528,
+      "workload": "forward"
+    },
+    "c10|qwen7b|lp_1000|watkins": {
+      "batch": 10,
+      "peak_bytes": 69461009408,
+      "workload": "forward"
+    },
+    "c11|qwen7b|full|dogs": {
+      "batch": 9,
+      "peak_bytes": 73800086528,
+      "workload": "forward"
+    },
+    "c11|qwen7b|full|watkins": {
+      "batch": 10,
+      "peak_bytes": 73674691584,
+      "workload": "forward"
+    },
+    "c11|qwen7b|full|bats": {
+      "batch": 92,
+      "peak_bytes": 74225632256,
+      "workload": "forward"
+    },
+    "c11|qwen7b|full|humbugdb": {
+      "batch": 6,
+      "peak_bytes": 67198915584,
+      "workload": "forward"
+    },
+    "c11|qwen7b|lp_1000|dogs": {
+      "batch": 9,
+      "peak_bytes": 73800086528,
+      "workload": "forward"
+    },
+    "c11|qwen7b|lp_1000|watkins": {
+      "batch": 10,
+      "peak_bytes": 69461009408,
+      "workload": "forward"
+    },
+    "c11|qwen7b|lp_1000|bats": {
+      "batch": 92,
+      "peak_bytes": 74225632256,
+      "workload": "forward"
+    },
+    "c11|qwen7b|lp_1000|humbugdb": {
+      "batch": 6,
+      "peak_bytes": 67198915584,
+      "workload": "forward"
+    },
+    "c13|qwen7b|full|dogs": {
+      "batch": 9,
+      "peak_bytes": 70611623424,
+      "workload": "lora"
+    },
+    "c13|qwen7b|full|watkins": {
+      "batch": 10,
+      "peak_bytes": 69489019904,
+      "workload": "lora"
+    },
+    "c13|qwen7b|full|bats": {
+      "batch": 92,
+      "peak_bytes": 74223973376,
+      "workload": "lora"
+    },
+    "c13|qwen7b|full|humbugdb": {
+      "batch": 6,
+      "peak_bytes": 67263026176,
+      "workload": "lora"
+    },
+    "c13|qwen7b|lp_1000|dogs": {
+      "batch": 9,
+      "peak_bytes": 70611623424,
+      "workload": "lora"
+    },
+    "c13|qwen7b|lp_1000|watkins": {
+      "batch": 10,
+      "peak_bytes": 67774986240,
+      "workload": "lora"
+    },
+    "c13|qwen7b|lp_1000|bats": {
+      "batch": 92,
+      "peak_bytes": 74223973376,
+      "workload": "lora"
+    },
+    "c13|qwen7b|lp_1000|humbugdb": {
+      "batch": 6,
+      "peak_bytes": 67263026176,
+      "workload": "lora"
+    },
+    "c14|qwen7b|full|dogs": {
+      "batch": 9,
+      "peak_bytes": 73800086528,
+      "workload": "forward"
+    },
+    "c14|qwen7b|full|watkins": {
+      "batch": 10,
+      "peak_bytes": 73674691584,
+      "workload": "forward"
+    },
+    "c14|qwen7b|lp_1000|dogs": {
+      "batch": 9,
+      "peak_bytes": 73800086528,
+      "workload": "forward"
+    },
+    "c14|qwen7b|lp_1000|watkins": {
+      "batch": 10,
+      "peak_bytes": 69461009408,
+      "workload": "forward"
+    },
+    "c14|qwen3b|full|dogs": {
+      "batch": 9,
+      "peak_bytes": 65314223104,
+      "workload": "forward"
+    },
+    "c14|qwen3b|full|watkins": {
+      "batch": 11,
+      "peak_bytes": 75835898880,
+      "workload": "forward"
+    },
+    "c14|qwen3b|lp_1000|dogs": {
+      "batch": 9,
+      "peak_bytes": 65314223104,
+      "workload": "forward"
+    },
+    "c14|qwen3b|lp_1000|watkins": {
+      "batch": 11,
+      "peak_bytes": 70459281408,
+      "workload": "forward"
+    },
+    "c15|qwen7b|full|dogs": {
+      "batch": 9,
+      "peak_bytes": 73800086528,
+      "workload": "forward"
+    },
+    "c15|qwen7b|full|watkins": {
+      "batch": 10,
+      "peak_bytes": 73674691584,
+      "workload": "forward"
+    },
+    "c15|qwen7b|full|bats": {
+      "batch": 92,
+      "peak_bytes": 74225632256,
+      "workload": "forward"
+    },
+    "c15|qwen7b|full|humbugdb": {
+      "batch": 6,
+      "peak_bytes": 67198915584,
+      "workload": "forward"
+    },
+    "c15|naturelm|full|dogs": {
+      "batch": 256,
+      "peak_bytes": 31059746816,
+      "workload": "naturelm"
+    },
+    "c15|naturelm|full|watkins": {
+      "batch": 256,
+      "peak_bytes": 55378136576,
+      "workload": "naturelm"
+    },
+    "c15|naturelm|full|bats": {
+      "batch": 256,
+      "peak_bytes": 31059746816,
+      "workload": "naturelm"
+    },
+    "c15|naturelm|full|humbugdb": {
+      "batch": 256,
+      "peak_bytes": 37084567552,
+      "workload": "naturelm"
+    }
+  },
+  "extractors": {
+    "c03|beats|full|dogs": {
+      "batch": 60,
+      "peak_bytes": 73015592448,
+      "workload": "beats"
+    },
+    "c03|beats|full|watkins": {
+      "batch": 62,
+      "peak_bytes": 74481923072,
+      "workload": "beats"
+    },
+    "c03|beats|full|humbugdb": {
+      "batch": 48,
+      "peak_bytes": 71356761088,
+      "workload": "beats"
+    },
+    "c03|beats|lp_1000|dogs": {
+      "batch": 60,
+      "peak_bytes": 73015592448,
+      "workload": "beats"
+    },
+    "c03|beats|lp_1000|watkins": {
+      "batch": 52,
+      "peak_bytes": 72899737600,
+      "workload": "beats"
+    },
+    "c03|beats|lp_1000|humbugdb": {
+      "batch": 48,
+      "peak_bytes": 71356761088,
+      "workload": "beats"
+    }
+  },
+  "unavailable": [
+    {
+      "case": "c04",
+      "model": "qwen7b",
+      "condition": "full",
+      "dataset": "dogs",
+      "workload": "icl50",
+      "batch": null,
+      "status": "no_measurement",
+      "ooms": [
+        1
+      ]
+    },
+    {
+      "case": "c04",
+      "model": "qwen7b",
+      "condition": "full",
+      "dataset": "humbugdb",
+      "workload": "icl50",
+      "batch": null,
+      "status": "no_measurement",
+      "ooms": [
+        1
+      ]
+    },
+    {
+      "case": "c04",
+      "model": "qwen7b",
+      "condition": "lp:1000",
+      "dataset": "dogs",
+      "workload": "icl50",
+      "batch": null,
+      "status": "no_measurement",
+      "ooms": [
+        1
+      ]
+    },
+    {
+      "case": "c04",
+      "model": "qwen7b",
+      "condition": "lp:1000",
+      "dataset": "humbugdb",
+      "workload": "icl50",
+      "batch": null,
+      "status": "no_measurement",
+      "ooms": [
+        1
+      ]
+    },
+    {
+      "case": "c12",
+      "model": "glm4voice9b",
+      "condition": "full",
+      "dataset": "dogs",
+      "workload": "glm",
+      "batch": null,
+      "status": "all_below",
+      "peak": 19382045184,
+      "max_batch": 1,
+      "ooms": []
+    },
+    {
+      "case": "c12",
+      "model": "glm4voice9b",
+      "condition": "full",
+      "dataset": "watkins",
+      "workload": "glm",
+      "batch": null,
+      "status": "all_below",
+      "peak": 19444393984,
+      "max_batch": 1,
+      "ooms": []
+    },
+    {
+      "case": "c12",
+      "model": "glm4voice9b",
+      "condition": "full",
+      "dataset": "bats",
+      "workload": "glm",
+      "batch": null,
+      "status": "all_below",
+      "peak": 19183916544,
+      "max_batch": 1,
+      "ooms": []
+    },
+    {
+      "case": "c12",
+      "model": "glm4voice9b",
+      "condition": "full",
+      "dataset": "humbugdb",
+      "workload": "glm",
+      "batch": null,
+      "status": "all_below",
+      "peak": 19495657984,
+      "max_batch": 1,
+      "ooms": []
+    },
+    {
+      "case": "c12",
+      "model": "glm4voice9b",
+      "condition": "lp:1000",
+      "dataset": "dogs",
+      "workload": "glm",
+      "batch": null,
+      "status": "all_below",
+      "peak": 19382045184,
+      "max_batch": 1,
+      "ooms": []
+    },
+    {
+      "case": "c12",
+      "model": "glm4voice9b",
+      "condition": "lp:1000",
+      "dataset": "watkins",
+      "workload": "glm",
+      "batch": null,
+      "status": "all_below",
+      "peak": 19445318656,
+      "max_batch": 1,
+      "ooms": []
+    },
+    {
+      "case": "c12",
+      "model": "glm4voice9b",
+      "condition": "lp:1000",
+      "dataset": "bats",
+      "workload": "glm",
+      "batch": null,
+      "status": "all_below",
+      "peak": 19183916544,
+      "max_batch": 1,
+      "ooms": []
+    },
+    {
+      "case": "c12",
+      "model": "glm4voice9b",
+      "condition": "lp:1000",
+      "dataset": "humbugdb",
+      "workload": "glm",
+      "batch": null,
+      "status": "all_below",
+      "peak": 19495657984,
+      "max_batch": 1,
+      "ooms": []
+    },
+    {
+      "case": "c03",
+      "model": "beats",
+      "condition": "full",
+      "dataset": "bats",
+      "workload": "beats",
+      "batch": null,
+      "status": "all_below",
+      "peak": 3424186880,
+      "max_batch": 256,
+      "ooms": []
+    },
+    {
+      "case": "c03",
+      "model": "beats",
+      "condition": "lp:1000",
+      "dataset": "bats",
+      "workload": "beats",
+      "batch": null,
+      "status": "all_below",
+      "peak": 3424186880,
+      "max_batch": 256,
+      "ooms": []
+    }
+  ],
+  "policy": "largest measured batch whose two-step peak is inside [60e9,76e9]; unmeasured/out-of-window cells are listed for packing or ladder follow-up"
+}
