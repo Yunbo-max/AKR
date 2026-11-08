@@ -19,7 +19,7 @@ import yaml
 
 from akr_closing.cli import run_lock, validate_run_id, environment
 from akr_closing.core import Journal, atomic_json, digest, file_hash, paired_stats
-from akr_closing.pipeline import prompt_for, write_npz
+from akr_closing.pipeline import InputDomainInfeasible, input_domain_infeasible, prompt_for, write_npz
 from akr_closing.repair import RidgeReadout
 from .runner import FinalRunner, prediction_summary, _check_stop
 from .rebuttal_runner import measured, array_hash
@@ -96,6 +96,8 @@ class CaseWorker(FinalRunner):
         self.job,self.registration,self.settings=job,registration,config['settings']
         self.assets=assets;self.extractors={};self.naturelm=None;self.stage_costs=[]
         self.case_out=Path(out)
+        self.exclusion_path=self.case_out/'INPUT_DOMAIN_EXCLUSIONS.json'
+        self._exclusion_doc=None;self._exclusion_index={}
 
     def _model(self,tag,episode=None):
         # The existing, tested LoRA helper calls qwen3b. Alias only this explicit
@@ -109,8 +111,77 @@ class CaseWorker(FinalRunner):
             atomic_json(path,values)
         return backend
 
+    def prepare_exclusions(self):
+        """Lock the run-level lp input-domain ledger before any method runs.
+
+        Only events whose lp cutoff is at or above their own Nyquist are
+        recorded. Every method consumes this one ledger; ``full`` contributes
+        no query entries and is unaffected. The ledger is immutable within a
+        run, and registered support budgets are never reduced to hide it.
+        """
+        wanted={}
+        for eid in self.registration['query_ids']:
+            wanted.setdefault(self.job['condition'],{}).setdefault(eid,'query')
+        for spec in self.job['methods']:
+            fit=spec.get('fit_condition',self.job['condition'])
+            support_condition=self.job['condition'] if spec['kind'] in ('icl','lora') else fit
+            for eid in self.registration['splits'][str(spec['support_budget'])]['support_ids']:
+                wanted.setdefault(support_condition,{}).setdefault(eid,'support')
+        lp_conditions=sorted({condition for condition in wanted if condition.startswith('lp:')})
+        hits={}
+        for condition in lp_conditions:
+            for row in self.registration['rows']:
+                hit=input_domain_infeasible(row['audio_path'],condition)
+                if hit is not None:hits[(row['event_id'],condition)]=hit
+        entries=[]
+        for condition in sorted(wanted):
+            for eid in sorted(wanted[condition]):
+                hit=hits.get((eid,condition))
+                if hit is not None:
+                    rate,cutoff=hit
+                    entries.append(dict(event_id=eid,sample_rate=float(rate),cutoff=float(cutoff),
+                                        condition=condition,role=wanted[condition][eid],
+                                        reason='input-domain-infeasible-lowpass-nyquist'))
+        dataset_scan=None
+        if lp_conditions:
+            by_condition={}
+            for condition in lp_conditions:
+                counts={}
+                for row in self.registration['rows']:
+                    if (row['event_id'],condition) in hits:
+                        split=row.get('split','');counts[split]=counts.get(split,0)+1
+                by_condition[condition]=dict(split_counts=counts,total=sum(counts.values()))
+            dataset_scan=dict(registered_events=len(self.registration['rows']),by_condition=by_condition,
+                              description=('every registered row scanned at its original rate; only the '
+                                           'query and selected-support roles are excluded from execution'))
+        document=dict(version=1,case=self.job['case'],dataset=self.job['dataset'],model=self.job['model'],
+                      reason='input-domain-infeasible-lowpass-nyquist',
+                      definition=('lp cutoff is not below the recording original Nyquist; the event '
+                                  'cannot enter the lp input domain and is excluded explicitly, never '
+                                  'replaced by another waveform or a smaller support budget'),
+                      dataset_scan=dataset_scan,entries=entries)
+        if self.exclusion_path.exists():
+            if read(self.exclusion_path)!=document:
+                raise RuntimeError('input-domain exclusion ledger changed within run; use a new run ID')
+        else:atomic_json(self.exclusion_path,document)
+        self._exclusion_doc=document
+        self._exclusion_index={(e['event_id'],e['condition']):e for e in entries}
+        return document
+
+    def exclusion_entry(self,event,condition):
+        if self._exclusion_doc is None:self.prepare_exclusions()
+        return self._exclusion_index.get((event,condition))
+
     def _query(self,event,condition):
-        q=super()._query(event,condition)
+        try:
+            q=super()._query(event,condition)
+        except InputDomainInfeasible as error:
+            entry=self.exclusion_entry(event,condition)
+            if entry is None:
+                raise RuntimeError(f'event {event} is outside the lp input domain but absent '
+                                   'from the exclusion ledger') from error
+            raise RuntimeError(f'excluded event {event} unexpectedly reached audio preparation '
+                               f'for condition {condition}') from error
         path=Path(q.audio_path);meta=path.with_suffix('.sha256.json');sha=file_hash(path)
         if meta.exists() and read(meta).get('sha256')!=sha:raise RuntimeError('prepared audio cache changed')
         if not meta.exists():atomic_json(meta,{'sha256':sha})
@@ -157,7 +228,21 @@ class CaseWorker(FinalRunner):
     def payload(self,spec):
         support=self.registration['splits'][str(spec['support_budget'])]['support_ids']
         query=self.registration['query_ids'];condition=self.job['condition'];fit=spec.get('fit_condition',condition)
-        payload={'support_ids':support,'query_ids':query,'fit_condition':fit,'query_condition':condition}
+        excluded_set={eid for eid in query if self.exclusion_entry(eid,condition) is not None}
+        excluded=[eid for eid in query if eid in excluded_set]
+        active=[eid for eid in query if eid not in excluded_set]
+        uses_support=spec['kind'] not in ('native','naturelm')
+        support_condition=condition if spec['kind'] in ('icl','lora') else fit
+        blocked_support=([eid for eid in support
+                          if self.exclusion_entry(eid,support_condition) is not None]
+                         if uses_support else [])
+        if blocked_support:
+            raise RuntimeError(f'input-domain-infeasible lp support: {blocked_support}; the registered '
+                               'support budget cannot be silently reduced (re-register support from the '
+                               'lp-feasible pool or obtain explicit approval for an effective-support '
+                               'exclusion)')
+        payload={'support_ids':support,'query_ids':query,'fit_condition':fit,'query_condition':condition,
+                 'excluded_query_ids':excluded,'scored_query_ids':active}
         kind=spec['kind'];fields=None;external=None;adapter=None
         if kind in ('native','icl','naturelm'):return payload,fields,external,adapter
         if kind=='lora':
@@ -171,7 +256,7 @@ class CaseWorker(FinalRunner):
                 result=train_stage(self,directory,support,[],spec['lr'],spec['epochs'],self.job['seed'])
             adapter=result['final_adapter'];payload['adapter_hashes']=result['files'];payload['training']=result
             return payload,fields,external,adapter
-        x=self.matrix(support,fit,feature=spec['feature']);q=self.matrix(query,condition,feature=spec['feature'])
+        x=self.matrix(support,fit,feature=spec['feature']);q=self.matrix(active,condition,feature=spec['feature'])
         y=np.array([self.labels.index(self.lookup[i]['label']) for i in support])
         if kind in ('ridge','probe_lm','probability_lm'):
             start=time.perf_counter()
@@ -197,7 +282,7 @@ class CaseWorker(FinalRunner):
         else:
             g=self.matrix(support,fit,kind='gradient')
             start=time.perf_counter()
-            if kind=='zero':fields=np.zeros((len(query),g.shape[1]),dtype=np.float32);meta={'kind':'zero_field'}
+            if kind=='zero':fields=np.zeros((len(active),g.shape[1]),dtype=np.float32);meta={'kind':'zero_field'}
             else:
                 correction=fit_correction(x,g,y,len(self.labels),spec,seed=self.job['seed'])
                 fields=correction.predict(q);meta=correction.metadata
@@ -227,11 +312,20 @@ class CaseWorker(FinalRunner):
         method_meta={'identity':identity,'sha256':digest(identity)}
         lock_registration(base/'METHOD.json',method_meta)
         episode=self.plan['episodes'][0];condition=self.job['condition']
+        active=payload['scored_query_ids'];position={event:i for i,event in enumerate(active)}
         loaded_adapter=False
-        for j,event in enumerate(ids):
+        for event in ids:
+            entry=self.exclusion_entry(event,condition)
+            if entry is not None:
+                if not journal.has(event):
+                    journal.add(event,dict(event_id=event,prediction='excluded-infeasible',
+                                           raw_prediction='excluded-infeasible',excluded=True,
+                                           exclusion_reason=entry['reason'],exclusion=entry,
+                                           wall_seconds=0.,new_model_calls=0))
+                continue
             if journal.has(event):continue
             if self.cache_only:raise FileNotFoundError('required prediction missing in cache-only mode')
-            _check_stop();kind=spec['kind'];prompt=prompt_for(self.labels)
+            _check_stop();kind=spec['kind'];j=position[event];prompt=prompt_for(self.labels)
             if kind=='ridge':
                 result=dict(prediction=external[j],raw_prediction=external[j],output_source='external_ridge',
                             wall_seconds=0.,new_model_calls=0)
@@ -316,6 +410,36 @@ def report_case(out,*,write=True):
     lock=read(out/'CASE.json');registration=read(out/'REGISTRATION.json')
     if digest(registration)!=lock['registration_sha256']:raise RuntimeError('registration identity changed')
     case_fingerprint=digest(lock);job=lock['job'];ids=registration['query_ids'];records={};incomplete=[];metadata={}
+    lookup={r['event_id']:r for r in registration['rows']}
+    ledger_path=out/'INPUT_DOMAIN_EXCLUSIONS.json'
+    ledger=read(ledger_path) if ledger_path.is_file() else dict(version=1,entries=[])
+    index={(e['event_id'],e['condition']):e for e in ledger.get('entries',[])}
+    excluded=[eid for eid in ids if (eid,job['condition']) in index]
+    excluded_set=set(excluded);scored=[eid for eid in ids if eid not in excluded_set]
+    if not scored:
+        raise RuntimeError('every registered query is outside the lp input domain; no scientific summary')
+    recomputed={eid for eid in ids
+                if input_domain_infeasible(lookup[eid]['audio_path'],job['condition']) is not None}
+    if recomputed!=set(excluded):
+        raise RuntimeError('input-domain exclusion ledger disagrees with the registered query audio')
+    if any(index[(eid,job['condition'])]['reason']!='input-domain-infeasible-lowpass-nyquist'
+           for eid in excluded):
+        raise RuntimeError('input-domain exclusion ledger has an unknown reason')
+    for entry in ledger.get('entries',[]):
+        row=lookup.get(entry.get('event_id'))
+        hit=None if row is None else input_domain_infeasible(row['audio_path'],entry['condition'])
+        if (hit!=(entry.get('sample_rate'),entry.get('cutoff')) or
+                entry.get('reason')!='input-domain-infeasible-lowpass-nyquist'):
+            raise RuntimeError('input-domain exclusion ledger entry disagrees with registered audio')
+    scan=ledger.get('dataset_scan')
+    if scan:
+        for condition,recorded in scan.get('by_condition',{}).items():
+            counts={}
+            for row in registration['rows']:
+                if input_domain_infeasible(row['audio_path'],condition) is not None:
+                    split=row.get('split','');counts[split]=counts.get(split,0)+1
+            if dict(counts)!=recorded.get('split_counts') or sum(counts.values())!=recorded.get('total'):
+                raise RuntimeError('input-domain dataset scan disagrees with registered audio')
     for spec in job['methods']:
         base=out/'trials'/spec['name'];meta_path=base/'METHOD.json'
         if not meta_path.is_file():incomplete.append(spec['name']);continue
@@ -327,47 +451,76 @@ def report_case(out,*,write=True):
         if (payload.get('query_ids')!=ids or payload.get('support_ids')!=registration['splits'][str(spec['support_budget'])]['support_ids'] or
             payload.get('query_condition')!=job['condition'] or payload.get('fit_condition')!=spec.get('fit_condition',job['condition'])):
             raise RuntimeError('method population/protocol differs from registration')
+        if payload.get('excluded_query_ids')!=excluded or payload.get('scored_query_ids')!=scored:
+            raise RuntimeError('method input-domain exclusions differ from the run ledger')
         if not (base/'manifest.json').is_file():incomplete.append(spec['name']);continue
         journal=Journal(base,identity,ids)
         if not journal.complete:incomplete.append(spec['name']);continue
         values=journal.results();validate_population(ids,values)
-        if any(v['prediction'] not in registration['labels']+[''] for v in values):raise RuntimeError('invalid normalized prediction in journal')
+        for event,value in zip(ids,values):
+            entry=index.get((event,job['condition']))
+            if entry is not None:
+                if (value.get('prediction')!='excluded-infeasible' or
+                        value.get('raw_prediction')!='excluded-infeasible' or
+                        value.get('exclusion_reason')!=entry['reason'] or value.get('exclusion')!=entry):
+                    raise RuntimeError('journal does not honor the input-domain exclusion ledger')
+            elif value.get('prediction')=='excluded-infeasible' or value.get('excluded'):
+                raise RuntimeError('journal excludes an event outside the input-domain ledger')
+            elif value.get('prediction') not in registration['labels']+['']:
+                raise RuntimeError('invalid normalized prediction in journal')
         records[spec['name']]=values
         metadata[spec['name']]=identity
-    scores={};lookup={r['event_id']:r for r in registration['rows']};truth=[lookup[i]['label'] for i in ids]
+    scores={};truth_all=[lookup[i]['label'] for i in ids];truth=[lookup[i]['label'] for i in scored]
+    def scored_values(values):
+        return [v for i,v in zip(ids,values) if i not in excluded_set]
     if 'native' in records:
-        native=[r['prediction'] for r in records['native']]
-        groups=[registration['splits']['50']['groups'][i] for i in ids]
+        native=[r['prediction'] for r in scored_values(records['native'])]
+        groups=[registration['splits']['50']['groups'][i] for i in scored]
         for name,values in records.items():
-            predicted=[r['prediction'] for r in values]
+            active_values=scored_values(values)
+            predicted=[r['prediction'] for r in active_values]
             summary=prediction_summary(truth,native,predicted,registration['labels'])
             nb=lock['config']['settings'].get('bootstrap_samples',2000)
             if nb>0:summary['paired']=paired_stats(truth,native,predicted,groups,seed=job['seed'],n_boot=nb)
-            summary.update(generation_wall_seconds=sum(v.get('wall_seconds',0.) for v in values),
-                           generation_model_calls=sum(v.get('new_model_calls',0) for v in values),
-                           generation_model_call_units=sorted({v.get('model_call_unit','instrumented backend forward calls') for v in values}))
+            summary.update(generation_wall_seconds=sum(v.get('wall_seconds',0.) for v in active_values),
+                           generation_model_calls=sum(v.get('new_model_calls',0) for v in active_values),
+                           generation_model_call_units=sorted({v.get('model_call_unit','instrumented backend forward calls') for v in active_values}),
+                           excluded_queries=len(excluded),excluded_query_ids=excluded,scored_queries=len(scored))
             spec=next(s for s in job['methods'] if s['name']==name)
             summary['cost_components']=method_cost(out,spec,job,registration,metadata[name])
             summary['query_feature_plus_generation_seconds']=summary['generation_wall_seconds']+summary['cost_components']['query_feature_wall_seconds']
-            effective=[x for v in values for x in v.get('effective_relative_norms',{}).values()]
+            effective=[x for v in active_values for x in v.get('effective_relative_norms',{}).values()]
             summary['mean_effective_relative_norm']=float(np.mean(effective)) if effective else None
-            planned=[x for v in values for x in v.get('applied_relative_norms',{}).values()]
+            planned=[x for v in active_values for x in v.get('applied_relative_norms',{}).values()]
             summary['mean_planned_relative_norm']=float(np.mean(planned)) if planned else None
-            unchanged=[b['unchanged_fraction'] for v in values for b in v.get('applied_norms',{}).values() if 'unchanged_fraction' in b]
+            unchanged=[b['unchanged_fraction'] for v in active_values for b in v.get('applied_norms',{}).values() if 'unchanged_fraction' in b]
             summary['mean_unchanged_fraction']=float(np.mean(unchanged)) if unchanged else None
             if name in ('probe_to_lm','probe_distribution_to_lm'):
-                summary.update(probe_agreement=sum(v['prediction']==v['external_prediction'] for v in values),
-                               correct_probe_spoiled=sum(v['external_prediction']==t and v['prediction']!=t for v,t in zip(values,truth)),
-                               incorrect_probe_rescued=sum(v['external_prediction']!=t and v['prediction']==t for v,t in zip(values,truth)))
+                pairs=[(v,t) for i,v,t in zip(ids,values,truth_all) if i not in excluded_set]
+                summary.update(probe_agreement=sum(v['prediction']==v['external_prediction'] for v,_ in pairs),
+                               correct_probe_spoiled=sum(v['external_prediction']==t and v['prediction']!=t for v,t in pairs),
+                               incorrect_probe_rescued=sum(v['external_prediction']!=t and v['prediction']==t for v,t in pairs))
             scores[name]=summary
+        def signatures(values):
+            return [(r['prediction'],r['raw_prediction'],r.get('generated_tokens')) for r in scored_values(values)]
         for name in ('zero_alpha','zero_field'):
-            if name in records and [(r['prediction'],r['raw_prediction'],r.get('generated_tokens')) for r in records[name]]!=[(r['prediction'],r['raw_prediction'],r.get('generated_tokens')) for r in records['native']]:
+            if name in records and signatures(records[name])!=signatures(records['native']):
                 raise RuntimeError(f'{name} failed exact native no-op check')
-        if 'ridge_direct' in records and 'probe_to_text' in records and [r['prediction'] for r in records['ridge_direct']]!=[r['prediction'] for r in records['probe_to_text']]:
+        if ('ridge_direct' in records and 'probe_to_text' in records and
+                [r['prediction'] for r in scored_values(records['ridge_direct'])]!=
+                [r['prediction'] for r in scored_values(records['probe_to_text'])]):
             raise RuntimeError('ridge text rendering changed class predictions')
     complete=bool(job['methods']) and not incomplete and len(scores)==len(job['methods'])
     report=dict(complete=complete,case=job['case'],job=job,case_fingerprint=case_fingerprint,
                 registration_sha256=digest(registration),expected_queries=len(ids),query_ids=ids,
+                scored_queries=len(scored),excluded_queries=len(excluded),excluded_query_ids=excluded,
+                input_domain_exclusions=dict(reason='input-domain-infeasible-lowpass-nyquist',
+                                             query_condition=job['condition'],query_count=len(excluded),
+                                             query_ids=excluded,scored_queries=len(scored),
+                                             registered_low_sr_events=((scan or {}).get('by_condition',{})
+                                                                       .get(job['condition'],{}).get('total')),
+                                             dataset_scan=scan,ledger_sha256=digest(ledger),
+                                             entries=ledger.get('entries',[])),
                 methods=scores,incomplete_methods=incomplete,complete_official_test=registration['complete_official_test'],
                 costs=_summary_cost(out),new_scientific_results=complete and not lock.get('injected_backend',False),
                 interpretation='Actual results if produced by real backends; contract-test injected backends are software validation only.')
@@ -407,7 +560,7 @@ def run_case(root,out,config,job,*,execute=False,profile='24gb',assets=None,back
                             support_counts={n:s['support_class_counts'] for n,s in registration['splits'].items()})
                 atomic_json(out/'STATUS.json',status);return status
             worker=CaseWorker(root,out,config,job,registration,profile,assets,backend_factory,cache_only)
-            worker.preflight()
+            worker.preflight();worker.prepare_exclusions()
             # FinalRunner's legacy descriptor means no model was run at preflight.
             # Here the locked query population is explicitly the official test.
             plan=read(worker.out/'PLAN.json');plan['no_test_evaluation']=False;plan['query_partition']='complete_official_test'

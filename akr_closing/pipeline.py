@@ -42,6 +42,28 @@ def write_npz(path,**values):
     os.replace(tmp,path)
 
 
+class InputDomainInfeasible(ValueError):
+    """A requested lp condition cannot be evaluated inside the recording's band.
+
+    This is an explicit input-domain limitation, not a silent budget change:
+    callers must record the event rather than substitute another waveform.
+    """
+    def __init__(self,sample_rate,cutoff,condition):
+        self.sample_rate=float(sample_rate); self.cutoff=float(cutoff); self.condition=condition
+        super().__init__(f'low-pass cutoff {self.cutoff:g} Hz is not below original Nyquist '
+                         f'({self.sample_rate/2:g} Hz) for sample rate {self.sample_rate:g} Hz')
+
+
+def input_domain_infeasible(path,condition):
+    """Return ``(sample_rate, cutoff)`` when an lp condition exceeds the source band."""
+    if not condition.startswith('lp:'): return None
+    import soundfile as sf
+    cutoff=float(condition.split(':',1)[1])
+    if cutoff<=0: return None
+    rate=float(sf.info(path).samplerate)
+    return (rate,cutoff) if cutoff>=rate/2 else None
+
+
 def prepare_audio(path,out,condition):
     import soundfile as sf
     from scipy.signal import butter,sosfiltfilt,resample_poly
@@ -52,7 +74,8 @@ def prepare_audio(path,out,condition):
         kind,cut=condition.split(':',1)
         if kind=='lp':
             cutoff=float(cut)
-            if not 0<cutoff<sr/2: raise ValueError('low-pass cutoff must be below original Nyquist')
+            if cutoff<=0: raise ValueError('low-pass cutoff must be positive')
+            if cutoff>=sr/2: raise InputDomainInfeasible(sr,cutoff,condition)
             sos=butter(10,cutoff,btype='lowpass',fs=sr,output='sos')
         elif kind=='notch':
             low,high=map(float,cut.split('-'))

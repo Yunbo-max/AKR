@@ -225,3 +225,18 @@ def test_support_cannot_borrow_missing_class_from_query():
     c=module('core')
     rows=[{'event_id':'a','label':'a'},{'event_id':'b','label':'b'}]
     with pytest.raises(ValueError):c.support_ids(rows,['a'],['a','b'],1,seed=1)
+
+
+def test_nyquist_violation_is_an_explicit_input_domain_error(tmp_path):
+    p=module('pipeline');import soundfile as sf
+    source=tmp_path/'low.wav'
+    sf.write(source,np.random.default_rng(1).normal(0,.05,600).astype('float32'),600,subtype='FLOAT')
+    with pytest.raises(p.InputDomainInfeasible) as info:
+        p.prepare_audio(source,tmp_path/'bad.wav','lp:1000')
+    assert info.value.sample_rate==600 and info.value.cutoff==1000
+    assert info.value.condition=='lp:1000'
+    assert p.input_domain_infeasible(source,'lp:1000')==(600.,1000.)
+    assert p.input_domain_infeasible(source,'lp:200') is None
+    assert p.input_domain_infeasible(source,'full') is None
+    # Full condition remains in-domain and is resampled to 16 kHz as before.
+    assert p.prepare_audio(source,tmp_path/'full.wav','full').exists()
