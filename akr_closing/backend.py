@@ -396,8 +396,8 @@ class OmniBackend:
             if any(int(f.shape[1])!=width for f in feats):
                 raise ValueError('input feature width differs inside batch')
             masks_audio=[x.get('feature_attention_mask') for x in prepared]
-            packed=t.zeros((len(feats),na_max,width,mel_max),dtype=feats[0].dtype)
-            packed_mask=t.zeros((len(feats),na_max,mel_max),dtype=t.long)
+            packed=t.zeros((len(feats),na_max,width,mel_max),dtype=feats[0].dtype,device=feats[0].device)
+            packed_mask=t.zeros((len(feats),na_max,mel_max),dtype=t.long,device=feats[0].device)
             for i,(f,m) in enumerate(zip(feats,masks_audio)):
                 na,_,me=f.shape
                 packed[i,:na,:,:me]=f
@@ -421,7 +421,7 @@ class OmniBackend:
         inputs,max_t=self._collate_batch(prepared)
         if max_t>self.max_context_tokens:
             raise ContextLimit(f'{max_t} tokens exceeds budget {self.max_context_tokens}; no truncation')
-        amask=inputs['input_ids'].eq(self.audio_token_id)&inputs['attention_mask'].to(t.bool())
+        amask=inputs['input_ids'].eq(self.audio_token_id)&inputs['attention_mask'].to(t.bool)
         extra={}
         if 'logits_to_keep' in self._forward_parameters: extra['logits_to_keep']=1
         elif 'num_logits_to_keep' in self._forward_parameters: extra['num_logits_to_keep']=1
@@ -457,7 +457,7 @@ class OmniBackend:
         if len(scale_modes)>1 or len(raw_etas)>1:
             raise ValueError('batched predict requires one scale mode and raw eta')
         scale_mode=scale_modes.pop(); raw_eta=raw_etas.pop()
-        mask=inputs['attention_mask'].to(t.bool()).clone()
+        mask=inputs['attention_mask'].to(t.bool).clone()
         audio=inputs['input_ids'].eq(self.audio_token_id)&mask
         for i,item in enumerate(items):
             scope=item.get('scope','audio')
