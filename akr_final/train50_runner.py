@@ -109,6 +109,10 @@ def entry_for(config,job,registration):
                  support_ids=biggest['support_ids'],query_ids=registration['query_ids'])
     cfg=dict(models=[{'tag':job['model'],**config['models'][job['model']]}],E9=config['models']['qwen3b'],
              **{k:settings[k] for k in ('layer_fractions','feature_fraction','max_context_tokens','ridge_alpha')})
+    # Only C04 carries the long all-50 audio ICL context; every other case
+    # keeps the previous backend construction and SDPA audio tower.
+    if job['case']=='c04' and settings.get('icl_audio_attention') is not None:
+        cfg['icl_audio_attention']=settings['icl_audio_attention']
     rows=[{**r,'recording_id':biggest['groups'][r['event_id']]} for r in registration['rows']]
     plan=dict(mode='standalone',config=cfg,labels=registration['labels'],rows=rows,episodes=[episode],
               dataset={'name':job['dataset'],'partition':'official_test','group_key':'recording_id'},

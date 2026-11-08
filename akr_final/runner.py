@@ -144,6 +144,10 @@ class FinalRunner:
         self.models={m['tag']:m for m in self.cfg['models']}
         self.models.setdefault('qwen3b',{'tag':'qwen3b','id':self.cfg['E9']['id'],'revision':self.cfg['E9']['revision']})
         self.spec={k:self.cfg[k] for k in ['layer_fractions','feature_fraction','max_context_tokens']}
+        # Audio-ICL-only attention switch; absent from every other config, so
+        # those runs keep the exact previous backend constructor arguments.
+        if self.cfg.get('icl_audio_attention') is not None:
+            self.spec['icl_audio_attention']=self.cfg['icl_audio_attention']
         self.imports=[]
         files=list(Path(__file__).parent.glob('*.py'))
         files += list((self.root/'akr_closing').glob('*.py'))

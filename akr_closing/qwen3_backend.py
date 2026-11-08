@@ -22,9 +22,12 @@ class Qwen3OmniBackend(OmniBackend):
 
     def __init__(self, model_id, revision, *, profile='24gb',
                  layer_fractions=(.25, .5, .75, .875), feature_fraction=.875,
-                 max_context_tokens=32768):
+                 max_context_tokens=32768, icl_audio_attention=None):
         import torch
         import transformers
+        if icl_audio_attention not in (None, False, '', 'sdpa'):
+            # C04 runs on the Qwen2.5 family; never silently ignore the switch.
+            raise ValueError('icl_audio_attention is only implemented for the Qwen2.5-Omni backend')
         try:
             from transformers import Qwen3OmniMoeProcessor, Qwen3OmniMoeThinkerForConditionalGeneration
         except ImportError as exc:

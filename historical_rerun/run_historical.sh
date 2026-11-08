@@ -95,6 +95,17 @@ if [[ "${PREFLIGHT_ONLY:-0}" == "1" ]]; then
   exit 0
 fi
 
+# C16 batch-1 peak measured 2026-11-08 on qz job-b4ce760a (1xH100, FinalRunner,
+# real MarmAudio s20260914_full support/query): 18.401e9 bytes
+# (feature 17.968 / support-gradient 18.401 / predict 17.986).  That is below
+# the platform's 30e9 sustained-memory floor, so a compliance pad of 12.0e9
+# bytes is required for a single-process C16 GPU run; it is not part of any
+# scientific computation.  Uncomment (or export) the pad and start it in the
+# GPU shell when C16 runs without lane packing:
+#   python scripts/floor60_pad.py --bytes 12000000000 --hold-seconds "$JOB_SECONDS"
+C16_PAD_BYTES=${C16_PAD_BYTES:-12000000000}
+export C16_PAD_BYTES
+
 step "run: historical_rerun_v1 core (qwen7b / MarmAudio, GPU)"
 "$VENV" scripts/run_akr_rebuttal.py run --root "$ROOT" \
   --config historical_rerun/akr_rebuttal_historical.yaml \

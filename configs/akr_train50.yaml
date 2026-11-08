@@ -18,6 +18,10 @@ settings:
   max_new_tokens: 32
   ridge_alpha: 10.0
   bootstrap_samples: 2000
+  # C04 all-50 audio ICL: flash-varlen audio tower (same cu_seqlens blocks and
+  # token budget; only the dense mask / per-head materialisation is removed).
+  # `chunked` is the dependency-free per-audio fallback. Other cases ignore it.
+  icl_audio_attention: flash_attention_2
 datasets:
   dogs:
     manifest: data/manifests/train50/dogs.csv

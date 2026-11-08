@@ -6,7 +6,7 @@ This is a new direct-Thinker backend; historical wrapper parity must be checked
 on the user's GPU before comparing new and historical numbers.
 """
 from __future__ import annotations
-from contextlib import AbstractContextManager
+from contextlib import AbstractContextManager, contextmanager
 from pathlib import Path
 import inspect
 import numpy as np
@@ -14,6 +14,81 @@ from .core import Query
 
 
 class ContextLimit(RuntimeError): pass
+
+
+ICL_AUDIO_ATTENTION_MODES = ('sdpa', 'flash_attention_2', 'chunked')
+
+
+def normalize_icl_audio_attention(value):
+    """Validate the audio-ICL attention switch; None/'sdpa' means unchanged."""
+    if value in (None, False, '', 'sdpa'):
+        return None
+    if value not in ICL_AUDIO_ATTENTION_MODES:
+        raise ValueError(f'icl_audio_attention must be one of {ICL_AUDIO_ATTENTION_MODES}')
+    return value
+
+
+def audio_flash_attention_modules(tower):
+    """Build flash-varlen twins of the audio tower's SDPA attention modules.
+
+    The twins share the SDPA modules' parameter storage (``assign=True``), so
+    installing them for one forward neither copies weights nor changes state.
+    Transformers' own Qwen2.5-Omni audio FA2 class consumes the exact
+    ``cu_seqlens`` blocks the SDPA path masks, so no token/support budget
+    changes: only the dense ``[1, N, N]`` mask and materialised per-head
+    attention are removed.
+    """
+    try:
+        import flash_attn
+        from transformers.models.qwen2_5_omni.modeling_qwen2_5_omni import (
+            Qwen2_5OmniAudioFlashAttention2)
+    except ImportError as error:  # pragma: no cover - depends on GPU image
+        raise RuntimeError('icl_audio_attention=flash_attention_2 requires the '
+                           'flash-attn package and a transformers Qwen2.5-Omni '
+                           'audio FA2 class') from error
+    modules = []
+    for layer in tower.layers:
+        old = layer.self_attn
+        new = Qwen2_5OmniAudioFlashAttention2(tower.config)
+        new.load_state_dict(old.state_dict(), assign=True)
+        modules.append(new)
+    return modules, flash_attn.__version__
+
+
+def chunked_audio_forward(forward, input_features=None, feature_lens=None,
+                          aftercnn_lens=None, **kwargs):
+    """Run the audio tower once per audio row over the same cu_seqlens blocks.
+
+    ``get_audio_features`` concatenates the valid mel frames of every audio
+    along dim 1 and passes their lengths in ``feature_lens``.  The encoder then
+    masks attention block-diagonally over the concatenation, so each audio row
+    is an independent block: calling the untouched forward on ``[:, a:b]`` with
+    the matching ``feature_lens``/``aftercnn_lens`` slices reproduces the whole
+    forward exactly while bounding the mask by one audio instead of the ICL
+    context.
+    """
+    import torch
+    if (input_features is None or feature_lens is None
+            or getattr(input_features, 'dim', lambda: 0)() != 2):
+        return forward(input_features, feature_lens=feature_lens,
+                       aftercnn_lens=aftercnn_lens, **kwargs)
+    lens = feature_lens.reshape(-1)
+    if int(lens.numel()) < 2:
+        return forward(input_features, feature_lens=feature_lens,
+                       aftercnn_lens=aftercnn_lens, **kwargs)
+    if int(lens.sum()) != int(input_features.shape[1]):
+        raise ValueError('feature_lens do not partition the concatenated audio frames')
+    from transformers.modeling_outputs import BaseModelOutput
+    pieces = []
+    offset = 0
+    for i, length in enumerate(lens.tolist()):
+        piece = forward(input_features[:, offset:offset + length],
+                        feature_lens=lens[i:i + 1],
+                        aftercnn_lens=None if aftercnn_lens is None else aftercnn_lens[i:i + 1],
+                        **kwargs)
+        pieces.append(piece.last_hidden_state)
+        offset += length
+    return BaseModelOutput(last_hidden_state=torch.cat(pieces, dim=0))
 
 
 def candidate_logprob(logits, answer_ids, prompt_length):
@@ -182,13 +257,14 @@ class BatchProjectionIntervention:
 
 class OmniBackend:
     def __init__(self,model_id,revision,*,profile='24gb',layer_fractions=(.25,.5,.75,.875),
-                 feature_fraction=.875,max_context_tokens=32768):
+                 feature_fraction=.875,max_context_tokens=32768,icl_audio_attention=None):
         import torch
         from transformers import Qwen2_5OmniThinkerForConditionalGeneration,Qwen2_5OmniProcessor
         self.torch=torch; self.max_context_tokens=max_context_tokens
         if not torch.cuda.is_available(): raise RuntimeError('Real experiments require CUDA; CPU tests do not run Omni.')
         budget={'16gb':'13GiB','24gb':'20GiB','48gb':'43GiB','80gb':'72GiB'}
         if profile not in budget: raise ValueError('profile must be 16gb/24gb/48gb/80gb')
+        self.icl_audio_attention=normalize_icl_audio_attention(icl_audio_attention)
         self.processor=Qwen2_5OmniProcessor.from_pretrained(model_id,revision=revision)
         self.thinker=Qwen2_5OmniThinkerForConditionalGeneration.from_pretrained(
             model_id,revision=revision,torch_dtype=torch.bfloat16,device_map='auto',
@@ -196,6 +272,21 @@ class OmniBackend:
         self.thinker.eval()
         for p in self.thinker.parameters(): p.requires_grad_(False)
         self.device=self.thinker.get_input_embeddings().weight.device
+        # The audio-ICL switch is installed only around support-carrying
+        # predicts (see _icl_audio_attention_context); every other forward keeps
+        # the loaded SDPA implementation untouched.
+        self._icl_attention_active=False
+        self._icl_flash_modules=None
+        self._icl_flash_version=None
+        self._icl_original_audio_forward=None
+        self._icl_chunked_forward=None
+        if self.icl_audio_attention=='flash_attention_2':
+            self._icl_flash_modules,self._icl_flash_version=audio_flash_attention_modules(
+                self.thinker.audio_tower)
+        elif self.icl_audio_attention=='chunked':
+            self._icl_original_audio_forward=self.thinker.audio_tower.forward
+            self._icl_chunked_forward=lambda *a,**k: chunked_audio_forward(
+                self._icl_original_audio_forward,*a,**k)
         layers=self.thinker.model.layers; n=len(layers)
         self.layer_ids=sorted({min(n-1,max(0,int(f*n))) for f in layer_fractions})
         self.feature_layer=min(n,max(0,round(feature_fraction*n)))
@@ -209,6 +300,14 @@ class OmniBackend:
         self.provenance={'model_id':model_id,'revision':revision,'dtype':'bfloat16','batch_size':1,
             'backend':'direct Thinker, SDPA attention, new locked re-evaluation protocol',
             'layers':self.layer_ids,'feature_layer':self.feature_layer,'profile':profile,
+            'icl_audio_attention':self.icl_audio_attention or 'sdpa',
+            'icl_audio_attention_scope':('audio tower only, during support-carrying ICL predicts; all other forwards use the loaded SDPA modules'
+                                         if self.icl_audio_attention else 'disabled; unchanged SDPA backend'),
+            'icl_audio_attention_note':('same cu_seqlens blocks and token/support budget; the dense block-diagonal mask and per-head attention are not materialised'
+                                        if self.icl_audio_attention else 'not enabled'),
+            'icl_audio_attention_split':'per audio-row forward' if self.icl_audio_attention=='chunked' else (
+                'transformers audio FA2 varlen (cu_seqlens)' if self.icl_audio_attention=='flash_attention_2' else 'none'),
+            'flash_attn_version':self._icl_flash_version,
             'intervention_site':'pre-RoPE k_proj/v_proj output; not a post-RoPE cache edit'}
 
     def _prepare(self,q:Query,prompt:str,support=()):
@@ -440,13 +539,42 @@ class OmniBackend:
         if offset!=len(vector): raise ValueError('gradient/layout mismatch')
         return out
 
+    @contextmanager
+    def _icl_audio_attention_context(self,support):
+        """Swap the audio tower attention only for a support-carrying forward."""
+        mode=self.icl_audio_attention
+        if not support or mode is None or self._icl_attention_active:
+            yield
+            return
+        tower=self.thinker.audio_tower
+        self._icl_attention_active=True
+        try:
+            if mode=='flash_attention_2':
+                originals=[layer.self_attn for layer in tower.layers]
+                try:
+                    for layer,module in zip(tower.layers,self._icl_flash_modules):
+                        layer.self_attn=module
+                    yield
+                finally:
+                    for layer,module in zip(tower.layers,originals):
+                        layer.self_attn=module
+            else:
+                original=tower.forward
+                tower.forward=self._icl_chunked_forward
+                try:
+                    yield
+                finally:
+                    tower.forward=original
+        finally:
+            self._icl_attention_active=False
+
     def predict(self,q,prompt,labels,*,support=(),direction=None,alpha=0.,scope='audio',
                 kind='kv',layer_group='all',max_new_tokens=12,scale_mode='relative_norm',raw_eta=1.):
         x=self._prepare(q,prompt,support); n=x['input_ids'].shape[1]
         if direction is not None and support: raise ValueError('repair uses no audio ICL prefix in this protocol')
         directions={} if direction is None else self.unflatten(direction,kind,layer_group)
         with self.torch.inference_mode(),ProjectionIntervention(self.modules,directions,self._mask(x,scope),alpha,
-                scale_mode=scale_mode,raw_eta=raw_eta) as hooks:
+                scale_mode=scale_mode,raw_eta=raw_eta) as hooks,self._icl_audio_attention_context(support):
             output=self.thinker.generate(**x,do_sample=False,max_new_tokens=max_new_tokens,use_cache=True)
             hooks.assert_applied()
         raw=self.processor.batch_decode(output[:,n:],skip_special_tokens=True,clean_up_tokenization_spaces=False)[0].strip()
