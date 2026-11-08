@@ -1,5 +1,6 @@
 from copy import deepcopy
 import csv
+import hashlib
 import json
 from pathlib import Path
 import numpy as np
@@ -170,3 +171,74 @@ def test_distribution_text_baseline_preserves_the_soft_router_information(tmp_pa
     np.testing.assert_allclose(payload['support_priors'],[counts[c]/50 for c in ('a','b')])
     assert result['methods']['probe_distribution_to_lm']['n']==4
     assert 'correct_probe_spoiled' in result['methods']['probe_distribution_to_lm']
+
+
+def low_sr_rewrite(path,rate=600,samples=600):
+    """Replace one registered waveform with a band that cannot host lp:1000."""
+    seed=int(hashlib.md5(str(path).encode()).hexdigest()[:8],16)
+    sf.write(path,np.random.default_rng(seed).normal(0,.05,samples).astype('float32'),
+             rate,subtype='FLOAT')
+
+
+def test_lp_input_domain_exclusion_is_ledgered_and_shared_by_all_methods(tmp_path):
+    base=tmp_path/'lp';base.mkdir()
+    cfg,job,out=fixture(base,'c01')
+    low_sr_rewrite(base/'qa0.wav')
+    job=case_plan('c01','dogs','qwen3b','lp:1000',17)
+    ToyBackend.loads=0;ToyBackend.predictions=0;ToyBackend.gradients=[]
+    result=run_case(ROOT,out,cfg,job,execute=True,backend_factory=ToyBackend)
+    assert result['complete'] and result['expected_queries']==4
+    assert result['scored_queries']==3 and result['excluded_queries']==1
+    ledger=json.loads((out/'INPUT_DOMAIN_EXCLUSIONS.json').read_text())
+    assert ledger['entries']==[dict(event_id='qa0',sample_rate=600.,cutoff=1000.,
+                                    condition='lp:1000',role='query',
+                                    reason='input-domain-infeasible-lowpass-nyquist')]
+    assert result['input_domain_exclusions']['query_count']==1
+    assert result['input_domain_exclusions']['query_ids']==['qa0']
+    assert result['input_domain_exclusions']['registered_low_sr_events']==1
+    assert ledger['dataset_scan']['by_condition']['lp:1000']==dict(split_counts={'test':1},total=1)
+    for name in result['methods']:
+        summary=result['methods'][name]
+        assert summary['n']==3 and summary['scored_queries']==3
+        assert summary['excluded_query_ids']==['qa0']
+        items=[json.loads(p.read_text())['result']
+               for p in (out/'trials'/name/'items').glob('*.json')]
+        excluded=[r for r in items if r['event_id']=='qa0']
+        assert len(excluded)==1 and excluded[0]['prediction']=='excluded-infeasible'
+        assert excluded[0]['exclusion_reason']=='input-domain-infeasible-lowpass-nyquist'
+        assert excluded[0]['exclusion']['sample_rate']==600.
+        assert excluded[0]['new_model_calls']==0
+    # The excluded query never reached audio preparation or the backend.
+    assert ToyBackend.predictions==3*len(job['methods'])
+    before=ToyBackend.predictions
+    again=run_case(ROOT,out,cfg,job,execute=True,backend_factory=ToyBackend,cache_only=True)
+    assert again['complete'] and ToyBackend.predictions==before
+
+
+def test_lp_infeasible_support_fails_instead_of_shrinking_budget(tmp_path):
+    base=tmp_path/'support';base.mkdir()
+    cfg,job,out=fixture(base,'c01')
+    for path in sorted(base.glob('[ab]*.wav')):  # every official-train candidate
+        low_sr_rewrite(path)
+    job=case_plan('c01','dogs','qwen3b','lp:1000',17)
+    ToyBackend.loads=0;ToyBackend.predictions=0;ToyBackend.gradients=[]
+    with pytest.raises(RuntimeError,match='cannot be silently reduced'):
+        run_case(ROOT,out,cfg,job,execute=True,backend_factory=ToyBackend)
+    ledger=json.loads((out/'INPUT_DOMAIN_EXCLUSIONS.json').read_text())
+    support=[e for e in ledger['entries'] if e['role']=='support']
+    assert support and all(e['sample_rate']==600. and e['condition']=='lp:1000' for e in support)
+    assert all(e['reason']=='input-domain-infeasible-lowpass-nyquist' for e in support)
+
+
+def test_full_condition_ignores_lp_input_domain_exclusions(tmp_path):
+    base=tmp_path/'full';base.mkdir()
+    cfg,job,out=fixture(base,'c01')
+    low_sr_rewrite(base/'qa0.wav')
+    job=case_plan('c01','dogs','qwen3b','full',17)
+    ToyBackend.loads=0;ToyBackend.predictions=0;ToyBackend.gradients=[]
+    result=run_case(ROOT,out,cfg,job,execute=True,backend_factory=ToyBackend)
+    assert result['complete'] and result['excluded_queries']==0
+    assert result['scored_queries']==4 and result['expected_queries']==4
+    assert all(s['n']==4 for s in result['methods'].values())
+    ledger=json.loads((out/'INPUT_DOMAIN_EXCLUSIONS.json').read_text())
+    assert ledger['entries']==[]

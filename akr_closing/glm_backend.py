@@ -76,6 +76,71 @@ def speech_token_ids(codes, offset, vocabulary_size):
     return [offset + int(c) for c in codes]
 
 
+def resolve_audio_token_ids(tokenizer, vocabulary_size):
+    """Resolve audio-token ids, filling tokenizer gaps with contiguous ids.
+
+    The pinned THUDM/glm-4-voice-tokenizer does not expose every
+    ``<|audio_i|>`` entry that ``quantize_vocab_size`` requires; missing
+    entries resolve to ``None`` or ``unk_token_id``. Tokenizer probing
+    verified that the LM audio embeddings map to the contiguous id block
+    starting at ``<|audio_0|>`` (152353 in the pinned tokenizer), so the one
+    missing final entry falls back to ``audio_offset + i`` = 168736. Any
+    real, non-contiguous mapping still fails.
+    """
+    if (isinstance(vocabulary_size, bool) or not isinstance(vocabulary_size, numbers.Integral)
+            or vocabulary_size < 1):
+        raise ValueError('positive integer speech vocabulary size required')
+    size = int(vocabulary_size)
+    unk = getattr(tokenizer, 'unk_token_id', None)
+    missing_types = (KeyError, IndexError, ValueError, TypeError)
+    try:
+        offset = tokenizer.convert_tokens_to_ids('<|audio_0|>')
+    except missing_types as error:
+        raise RuntimeError('missing <|audio_0|>; cannot establish the audio-token offset') from error
+    if (isinstance(offset, bool) or not isinstance(offset, numbers.Integral) or offset < 0
+            or (unk is not None and offset == unk)):
+        raise RuntimeError('missing <|audio_0|>; cannot establish the audio-token offset')
+    offset = int(offset)
+    tokens = [f'<|audio_{i}|>' for i in range(size)]
+    try:
+        raw = tokenizer.convert_tokens_to_ids(tokens)
+    except missing_types:
+        raw = None
+    if not isinstance(raw, list) or len(raw) != size:
+        # Some tokenizers raise on an unknown token instead of returning unk;
+        # resolve one at a time so only the genuinely missing entries fall back.
+        raw = []
+        for token in tokens:
+            try:
+                raw.append(tokenizer.convert_tokens_to_ids(token))
+            except missing_types:
+                raw.append(None)
+    resolved = []
+    for value in raw:
+        valid = (isinstance(value, numbers.Integral) and not isinstance(value, bool)
+                 and value >= 0 and (unk is None or value != unk))
+        resolved.append(int(value) if valid else None)
+    missing = [tokens[i] for i, value in enumerate(resolved) if value is None]
+    fallback_ids = {tokens[i]: offset + i for i, value in enumerate(resolved) if value is None}
+    ids = [offset + i if value is None else value for i, value in enumerate(resolved)]
+    if ids != list(range(offset, offset + size)):
+        bad = [(tokens[i], raw[i], ids[i]) for i in range(size) if ids[i] != offset + i]
+        raise RuntimeError(f'non-contiguous or incomplete LM speech-token vocabulary: {bad[:8]}')
+    engine_note = {
+        'kind': 'tokenizer_audio_vocab_gap',
+        'audio_vocab_size': size,
+        'audio_offset': offset,
+        'missing_tokens': missing,
+        'fallback_ids': fallback_ids,
+        'fallback_applied': bool(missing),
+        'reason': ('THUDM/glm-4-voice-tokenizer omits audio tokens; tokenizer probing verified '
+                   'the LM audio vocabulary is the contiguous block starting at <|audio_0|> '
+                   '(152353), so missing entries use audio_offset+i instead of unk '
+                   '(<|audio_16383|> -> 168736).'),
+    }
+    return offset, ids, engine_note
+
+
 class FusedKVBridge:
     """Expose independent batch-major K/V hook sites on fused MQA outputs.
 
@@ -207,10 +272,8 @@ class GLMVoiceBackend(OmniBackend):
         self.audio_extractor = WhisperFeatureExtractor.from_pretrained(TOKENIZER_ID, revision=TOKENIZER_REVISION)
         self.audio_device = audio_device
         self.audio_vocab_size = self.audio_encoder.config.quantize_vocab_size
-        self.audio_offset = self.tokenizer.convert_tokens_to_ids('<|audio_0|>')
-        ids = self.tokenizer.convert_tokens_to_ids([f'<|audio_{i}|>' for i in range(self.audio_vocab_size)])
-        if ids != list(range(self.audio_offset, self.audio_offset + self.audio_vocab_size)):
-            raise RuntimeError('non-contiguous or incomplete LM speech-token vocabulary')
+        self.audio_offset, _audio_ids, self._engine_note = resolve_audio_token_ids(
+            self.tokenizer, self.audio_vocab_size)
         self._audio_cache = OrderedDict()
         self._stop_ids = sorted(set(config.eos_token_id if isinstance(config.eos_token_id, list)
                                     else [config.eos_token_id]) | {self._special('<|user|>')})
@@ -224,6 +287,7 @@ class GLMVoiceBackend(OmniBackend):
             'max_context_tokens': self.max_context_tokens, 'projection_layout': 'batch_first',
             'intervention_site': 'fused query_key_value K/V slices before RoPE; prefill only',
             'attention': 'sdpa', 'tokenizer_id': TOKENIZER_ID, 'tokenizer_revision': TOKENIZER_REVISION,
+            'audio_vocab_size': self.audio_vocab_size, 'engine_note': self._engine_note,
             'source_url': SOURCE_URL, 'source_revision': SOURCE_REVISION, 'source_sha256': dependencies['source_sha256'],
             'audio_protocol': 'first channel; 16 kHz; 30 s chunks; Whisper VQ attention-mask filtering',
             'audio_resampler': 'scipy.signal.resample_poly (upstream uses torchaudio sinc)',

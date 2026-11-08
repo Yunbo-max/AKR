@@ -2,12 +2,148 @@
 from types import SimpleNamespace
 from pathlib import Path
 from collections import OrderedDict
+import re
+import sys
+import types
 import numpy as np
 import pytest
 import torch
 
 from akr_closing.backend import ProjectionIntervention
-from akr_closing.glm_backend import FusedKVBridge, GLMVoiceBackend, speech_token_ids
+from akr_closing.glm_backend import (FusedKVBridge, GLMVoiceBackend, resolve_audio_token_ids,
+                                     speech_token_ids)
+
+
+class FakeAudioTokenizer:
+    """Minimal tokenizer with the pinned tokenizer's audio-vocabulary gap."""
+    def __init__(self, missing=(), none=(), wrong=None, unk_token_id=None):
+        self.missing = set(missing)
+        self.none = set(none)
+        self.wrong = dict(wrong or {})
+        self.unk_token_id = unk_token_id
+
+    def convert_tokens_to_ids(self, tokens):
+        def one(token):
+            if token in self.none: return None
+            if token in self.missing: return self.unk_token_id
+            if token in self.wrong: return self.wrong[token]
+            match = re.fullmatch(r'<\|audio_(\d+)\|>', token)
+            assert match, token
+            return 152353 + int(match.group(1))
+        return [one(t) for t in tokens] if isinstance(tokens, list) else one(tokens)
+
+    def encode(self, token, add_special_tokens=False):
+        return [7]
+
+
+def test_audio_vocab_gap_falls_back_to_contiguous_ids_and_engine_note():
+    tokenizer = FakeAudioTokenizer(missing=('<|audio_5|>', '<|audio_16383|>'),
+                                   none=('<|audio_9|>',), unk_token_id=0)
+    offset, ids, note = resolve_audio_token_ids(tokenizer, 16384)
+    assert offset == 152353
+    assert ids == list(range(152353, 152353 + 16384))
+    assert note['kind'] == 'tokenizer_audio_vocab_gap'
+    assert note['missing_tokens'] == ['<|audio_5|>', '<|audio_9|>', '<|audio_16383|>']
+    assert note['fallback_ids'] == {'<|audio_5|>': 152353 + 5, '<|audio_9|>': 152353 + 9,
+                                    '<|audio_16383|>': 168736}
+    assert note['fallback_applied'] is True
+    assert 'contiguous block starting at <|audio_0|>' in note['reason']
+
+
+def test_audio_vocab_complete_vocabulary_records_no_gap():
+    offset, ids, note = resolve_audio_token_ids(FakeAudioTokenizer(), 16)
+    assert offset == 152353 and ids == list(range(152353, 152369))
+    assert note['kind'] == 'tokenizer_audio_vocab_gap'
+    assert note['missing_tokens'] == [] and note['fallback_ids'] == {}
+    assert note['fallback_applied'] is False
+
+
+def test_audio_vocab_non_unk_wrong_mapping_still_fails_closed():
+    tokenizer = FakeAudioTokenizer(wrong={'<|audio_7|>': 999})
+    with pytest.raises(RuntimeError, match='non-contiguous or incomplete'):
+        resolve_audio_token_ids(tokenizer, 16)
+
+
+class KeyErrorAudioTokenizer(FakeAudioTokenizer):
+    """Slow ChatGLM tokenizer raises KeyError for the absent final entry."""
+    def convert_tokens_to_ids(self, tokens):
+        if isinstance(tokens, list) and any(t in self.missing or t in self.none for t in tokens):
+            raise KeyError(tokens[0])
+        return super().convert_tokens_to_ids(tokens)
+
+
+def test_audio_vocab_tokenizer_key_error_falls_back_per_token():
+    tokenizer = KeyErrorAudioTokenizer(missing=('<|audio_16383|>',))
+    offset, ids, note = resolve_audio_token_ids(tokenizer, 16384)
+    assert offset == 152353 and ids[-1] == 168736
+    assert note['missing_tokens'] == ['<|audio_16383|>']
+    assert note['fallback_ids'] == {'<|audio_16383|>': 168736}
+
+
+def test_backend_provenance_contains_engine_note_without_loading_weights(monkeypatch):
+    """Fake tokenizer/encoder/model prove the note reaches backend provenance."""
+    import importlib.metadata
+    import transformers
+    import akr_closing.glm_backend as glm
+
+    class FakeConfig:
+        multi_query_attention = True
+        seq_length = 256
+        num_attention_heads = 2
+        kv_channels = 8
+        multi_query_group_num = 1
+        eos_token_id = 2
+        quantize_vocab_size = 16
+
+    class FakeThinker:
+        config = FakeConfig()
+        transformer = SimpleNamespace(encoder=SimpleNamespace(layers=[
+            SimpleNamespace(self_attention=SimpleNamespace(query_key_value=torch.nn.Identity()))]))
+        def eval(self): return self
+        def parameters(self): return []
+        def get_input_embeddings(self):
+            return SimpleNamespace(weight=torch.zeros(1, device='cpu'))
+        def register_forward_hook(self, hook):
+            return SimpleNamespace(remove=lambda: None)
+
+    class FakeAudioEncoder:
+        config = FakeConfig()
+        @classmethod
+        def from_pretrained(cls, *args, **kwargs): return cls()
+        def eval(self): return self
+        def to(self, device): return self
+        def parameters(self): return []
+
+    class FakeAudioExtractor:
+        @classmethod
+        def from_pretrained(cls, *args, **kwargs): return cls()
+
+    tokenizer = FakeAudioTokenizer(missing=('<|audio_15|>',))
+    monkeypatch.setattr(transformers.AutoTokenizer, 'from_pretrained',
+                        classmethod(lambda cls, *a, **k: tokenizer))
+    monkeypatch.setattr(transformers.AutoModel, 'from_pretrained',
+                        classmethod(lambda cls, *a, **k: FakeThinker()))
+    monkeypatch.setattr(transformers.WhisperFeatureExtractor, 'from_pretrained',
+                        classmethod(lambda cls, *a, **k: FakeAudioExtractor()))
+    monkeypatch.setattr(glm, 'check_dependencies', lambda source_path=None: {'source_sha256': {}})
+    monkeypatch.setattr(torch.cuda, 'is_available', lambda: True)
+    monkeypatch.setattr(importlib.metadata, 'version', lambda name: '0.0.0')
+    package = types.ModuleType('speech_tokenizer'); package.__path__ = []
+    module = types.ModuleType('speech_tokenizer.modeling_whisper')
+    module.WhisperVQEncoder = FakeAudioEncoder
+    monkeypatch.setitem(sys.modules, 'speech_tokenizer', package)
+    monkeypatch.setitem(sys.modules, 'speech_tokenizer.modeling_whisper', module)
+
+    backend = GLMVoiceBackend('zai-org/glm-4-voice-9b', glm.MODEL_REVISION,
+                              max_context_tokens=64, audio_device='cpu')
+    try:
+        note = backend.provenance['engine_note']
+        assert note['kind'] == 'tokenizer_audio_vocab_gap'
+        assert note['missing_tokens'] == ['<|audio_15|>']
+        assert note['fallback_ids'] == {'<|audio_15|>': 152368}
+        assert backend.audio_vocab_size == 16 and backend.audio_offset == 152353
+    finally:
+        backend._bridge.close()
 
 
 @pytest.mark.parametrize('layout', ['batch_first', 'sequence_first'])
