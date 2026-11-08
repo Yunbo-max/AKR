@@ -1,0 +1,25 @@
+# Reference options for the C16 consumer on the rebuilt registration.
+# The authoritative copy is generated next to each source registration as
+# C16_OPTIONS.json by historical_rerun/register_rebuild.py; run_historical.sh
+# passes that generated file, not this reference.
+#
+# k_per_class=12 comes from the recovered STANDALONE_PROTOCOL
+# (fit 8 + calibration 2 + guard 2 per class; 72 support total).
+# conditions and label_mode are fixed by FinalRunner.select_episodes.
+dataset: marmaudio
+label_mode: semantic
+k_per_class: 12
+max_seeds: 3
+conditions: [full, 'lp:1000']
+anchor_condition: lp:1000
+ranks: [1, 2, 4, 8]
+folds: 5
+bootstrap_samples: 0
+all_labelled_per_class: 12
+settings:
+  rank: 4
+  relative_alpha: 0.01
+  ridge_alpha: 10.0
+  layer_fractions: [0.25, 0.5, 0.75, 0.875]
+  feature_fraction: 0.875
+  max_context_tokens: 32768

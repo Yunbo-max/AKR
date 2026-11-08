@@ -1,0 +1,32 @@
+2026-11-08T10:35:04+00:00 prep start: worktree HEAD=abbc396
+2026-11-08T10:35:07+00:00 read train50_protocol code_identity globs
+2026-11-08T10:35:11+00:00 listed iclr_rebuttal_v1_core artifacts
+2026-11-08T10:35:18+00:00 located historical metadata in main checkout (read-only)
+2026-11-08T10:35:22+00:00 summarized metadata JSON structures
+2026-11-08T10:35:28+00:00 inspected STANDALONE_PROTOCOL details
+2026-11-08T10:35:36+00:00 checked historical akr_rebuttal.yaml at bbe2a44 and current hashes
+2026-11-08T10:35:50+00:00 inspected FinalRunner loader + listed probe scripts
+2026-11-08T10:35:55+00:00 located memory probe docs/scripts; checked stash manifest hash
+2026-11-08T10:35:59+00:00 compared stash config/standalone hashes
+2026-11-08T10:36:31+00:00 audited manifest current vs stash
+2026-11-08T10:36:39+00:00 audited historical IDs/audio against current manifest
+2026-11-08T10:37:44+00:00 checked equal-support split artifacts (not main table)
+2026-11-08T10:38:02+00:00 read qz memprobe specs; diffed historical vs current config
+2026-11-08T10:38:45+00:00 verified split/role/waveform reproducibility
+2026-11-08T10:40:49+00:00 finalized C16 options requirements
+2026-11-08T10:40:55+00:00 wrote historical manifest copy (sha256 4b236b7b)
+2026-11-08T10:41:58+00:00 ran pytest historical register rebuild (rc above)
+2026-11-08T10:42:04+00:00 generated real registration from recovered protocol
+2026-11-08T10:42:19+00:00 generated real registration from recovered protocol (rc recorded)
+2026-11-08T10:42:22+00:00 C16 check on reconstructed registration (rc recorded)
+2026-11-08T10:42:36+00:00 C16 check via 80gb wrapper on reconstructed registration
+2026-11-08T10:43:12+00:00 wrote historical config copy from stash (expect sha256 de69c0...)
+2026-11-08T10:43:23+00:00 ran run_historical.sh preflight-only (CPU)
+2026-11-08T10:43:36+00:00 inspected source bundle zip/annotations
+2026-11-08T10:43:38+00:00 DATA AUDIT: 546/546 manifest rows on disk; 318/318 historical waveform hashes match; current tracked manifest ec13d9 has stale /root paths; stash manifest 4b236b7b is the registered one and is committed under historical_rerun/
+2026-11-08T10:43:38+00:00 PROTOCOL: recovered core has 72 support (12/class, 3 seeds), queries 97/56/62, relative_active_state_norm; raw_eta=300 only a relative_cap ceiling; 20-support 5-draw raw-eta main table remains unrecoverable
+2026-11-08T10:43:38+00:00 TESTS: 3 pytest cases pass; real recovered protocol rebuilt and C16 check passed offline (6 episodes)
+2026-11-08T10:43:38+00:00 SCRIPTS: run_historical.sh + qz JSON written, CPU preflight PREFLIGHT_OK; no GPU job submitted
+2026-11-08T10:43:42+00:00 zip covers manifest wavs check done
+2026-11-08T10:43:53+00:00 final pytest+bash syntax check passed; committing
+2026-11-08T10:44:04+00:00 committed b21ce4b and created branch historical-rerun-prep; main checkout untouched
