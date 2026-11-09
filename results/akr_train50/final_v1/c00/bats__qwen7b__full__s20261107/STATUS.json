@@ -1,0 +1,22 @@
+{
+  "case": "c00",
+  "complete": false,
+  "expected_queries": 2000,
+  "protocol_complete": true,
+  "scientific_results": false,
+  "status": "preflight_passed",
+  "support_counts": {
+    "50": {
+      "111": 5,
+      "210": 5,
+      "211": 5,
+      "215": 5,
+      "216": 5,
+      "220": 5,
+      "226": 5,
+      "228": 5,
+      "230": 5,
+      "231": 5
+    }
+  }
+}

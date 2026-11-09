@@ -1,0 +1,6 @@
+case,dataset,model,condition,seed,method,n,accuracy,macro_f1,invalid_rate,repaired,harmed,gain_pp
+c03,bats,qwen7b,full,20261107,native,2000,0.112,0.04392689751770708,0.003,0,0,0.0
+c03,bats,qwen7b,full,20261107,omni_ridge,2000,0.2775,0.2692597293222413,0.0,474,143,16.55
+c03,bats,qwen7b,full,20261107,mfcc_ridge,2000,0.3275,0.3140905504498222,0.0,621,190,21.55
+c03,bats,qwen7b,full,20261107,egemaps_ridge,2000,0.2445,0.23820927959370267,0.0,450,185,13.25
+c03,bats,qwen7b,full,20261107,beats_ridge,2000,0.357,0.35078994762491456,0.0,658,168,24.5

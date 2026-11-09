@@ -1,0 +1,7 @@
+{
+  "case": "c14",
+  "complete": false,
+  "error": "RuntimeError",
+  "reason": "zero_alpha failed exact native no-op check",
+  "status": "error"
+}

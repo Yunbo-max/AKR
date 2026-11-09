@@ -1,0 +1,147 @@
+{
+  "assets": {},
+  "config": {
+    "datasets": {
+      "bats": {
+        "expected_test_count": 2000,
+        "group_key": "source_filename",
+        "manifest": "data/manifests/train50/bats.csv"
+      },
+      "dogs": {
+        "expected_test_count": 139,
+        "group_key": "source_filename",
+        "manifest": "data/manifests/train50/dogs.csv"
+      },
+      "humbugdb": {
+        "expected_test_count": 1859,
+        "group_key": "source_filename",
+        "manifest": "data/manifests/train50/humbugdb.csv"
+      },
+      "watkins": {
+        "expected_test_count": 339,
+        "group_key": "source_filename",
+        "manifest": "data/manifests/train50/watkins.csv"
+      }
+    },
+    "models": {
+      "glm4voice9b": {
+        "id": "zai-org/glm-4-voice-9b",
+        "revision": "352e5a64063448d5e46394753fb65bf1dbab975b"
+      },
+      "qwen3b": {
+        "id": "Qwen/Qwen2.5-Omni-3B",
+        "revision": "f75b40e3da2003cdd6e1829b1f420ca70797c34e"
+      },
+      "qwen7b": {
+        "id": "Qwen/Qwen2.5-Omni-7B",
+        "revision": "ae9e1690543ffd5c0221dc27f79834d0294cba00"
+      }
+    },
+    "old_root": "/root/animal-omni-kv",
+    "seed": 20261107,
+    "settings": {
+      "bootstrap_samples": 2000,
+      "feature_fraction": 0.875,
+      "icl_audio_attention": "flash_attention_2",
+      "layer_fractions": [
+        0.25,
+        0.5,
+        0.75,
+        0.875
+      ],
+      "max_context_tokens": 32768,
+      "max_new_tokens": 32,
+      "ridge_alpha": 10.0
+    },
+    "version": 1
+  },
+  "environment": {
+    "packages": {
+      "numpy": "1.26.4",
+      "peft": "0.17.1",
+      "qwen-omni-utils": "0.0.9",
+      "scikit-learn": "1.6.1",
+      "scipy": "1.14.1",
+      "torch": "2.8.0a0+5228986c39.nv25.6",
+      "transformers": "4.52.3"
+    },
+    "python": "3.12.3 (main, Feb  4 2025, 14:48:35) [GCC 13.3.0]"
+  },
+  "extra_provenance": {},
+  "injected_backend": false,
+  "job": {
+    "batch_map_sha256": "7e2162838b6fd320457bfb25e0dc9a6e7c71959a062d7cb1effac655c6a87120",
+    "case": "c06",
+    "condition": "full",
+    "dataset": "watkins",
+    "fixed_policy": true,
+    "methods": [
+      {
+        "alpha": 0.3,
+        "centered": true,
+        "feature": "omni",
+        "kind": "native",
+        "kv_kind": "kv",
+        "layer_group": "all",
+        "name": "native",
+        "rank": 4,
+        "raw_eta": 300.0,
+        "ridge": 10.0,
+        "scale_mode": "relative_cap",
+        "scope": "audio",
+        "support_budget": 50,
+        "temperature": 1.0
+      },
+      {
+        "alpha": 0.3,
+        "centered": true,
+        "feature": "omni",
+        "kind": "soft",
+        "kv_kind": "kv",
+        "layer_group": "all",
+        "name": "akr_soft_cap",
+        "rank": 4,
+        "raw_eta": 300.0,
+        "ridge": 10.0,
+        "scale_mode": "relative_cap",
+        "scope": "audio",
+        "support_budget": 50,
+        "temperature": 1.0
+      },
+      {
+        "alpha": 0.3,
+        "centered": false,
+        "feature": "omni",
+        "kind": "soft",
+        "kv_kind": "kv",
+        "layer_group": "all",
+        "name": "soft_uncentered_cap",
+        "rank": 4,
+        "raw_eta": 300.0,
+        "ridge": 10.0,
+        "scale_mode": "relative_cap",
+        "scope": "audio",
+        "support_budget": 50,
+        "temperature": 1.0
+      }
+    ],
+    "model": "qwen7b",
+    "query_population": "complete official test; no max-query limit",
+    "reviewers": [
+      "tbdR",
+      "h8E8"
+    ],
+    "seed": 20261107,
+    "selection_note": "tau=1, eta=300, cap=.3 fixed before test; no all-class two-fold selection with singleton supports; sensitivity never changes main policy",
+    "selection_uses_query_outcomes": false,
+    "slug": "centering",
+    "status": "planned; no scientific result",
+    "support_budgets": [
+      50
+    ],
+    "title": "Centered versus uncentered class prototypes"
+  },
+  "profile": "80gb",
+  "registration_sha256": "1789d52e689b0cb2afc880308775b4a935da4ab508d35b7a657d1e1e3206c26d",
+  "requested_audio_root": null
+}

@@ -1,0 +1,22 @@
+{
+  "case": "c00",
+  "complete": false,
+  "expected_queries": 139,
+  "protocol_complete": true,
+  "scientific_results": false,
+  "status": "preflight_passed",
+  "support_counts": {
+    "50": {
+      "Farley": 5,
+      "Freid": 5,
+      "Keri": 5,
+      "Louie": 5,
+      "Luke": 5,
+      "Mac": 5,
+      "Roodie": 5,
+      "Rudy": 5,
+      "Siggy": 5,
+      "Zoe": 5
+    }
+  }
+}

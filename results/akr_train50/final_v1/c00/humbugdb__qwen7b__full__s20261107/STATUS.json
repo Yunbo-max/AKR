@@ -1,0 +1,26 @@
+{
+  "case": "c00",
+  "complete": false,
+  "expected_queries": 1859,
+  "protocol_complete": true,
+  "scientific_results": false,
+  "status": "preflight_passed",
+  "support_counts": {
+    "50": {
+      "ae aegypti": 4,
+      "an arabiensis": 4,
+      "an dirus": 4,
+      "an funestus sl": 3,
+      "an funestus ss": 4,
+      "an gambiae ss": 3,
+      "an harrisoni": 3,
+      "an maculatus": 4,
+      "an squamosus": 4,
+      "culex pipiens complex": 4,
+      "culex quinquefasciatus": 3,
+      "ma uniformis": 3,
+      "non-mosquito": 4,
+      "others": 3
+    }
+  }
+}

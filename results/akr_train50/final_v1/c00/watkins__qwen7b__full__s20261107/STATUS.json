@@ -1,0 +1,43 @@
+{
+  "case": "c00",
+  "complete": false,
+  "expected_queries": 339,
+  "protocol_complete": true,
+  "scientific_results": false,
+  "status": "preflight_passed",
+  "support_counts": {
+    "50": {
+      "Atlantic_Spotted_Dolphin": 2,
+      "Bearded_Seal": 1,
+      "Beluga,_White_Whale": 1,
+      "Bottlenose_Dolphin": 2,
+      "Bowhead_Whale": 1,
+      "Clymene_Dolphin": 1,
+      "Common_Dolphin": 2,
+      "False_Killer_Whale": 2,
+      "Fin,_Finback_Whale": 1,
+      "Frasers_Dolphin": 2,
+      "Grampus,_Rissos_Dolphin": 2,
+      "Harp_Seal": 2,
+      "Humpback_Whale": 1,
+      "Killer_Whale": 2,
+      "Leopard_Seal": 1,
+      "Long-Finned_Pilot_Whale": 1,
+      "Melon_Headed_Whale": 1,
+      "Minke_Whale": 1,
+      "Narwhal": 1,
+      "Northern_Right_Whale": 2,
+      "Pantropical_Spotted_Dolphin": 2,
+      "Ross_Seal": 2,
+      "Rough-Toothed_Dolphin": 2,
+      "Short-Finned_Pacific_Pilot_Whale": 2,
+      "Southern_Right_Whale": 2,
+      "Sperm_Whale": 2,
+      "Spinner_Dolphin": 2,
+      "Striped_Dolphin": 2,
+      "Walrus": 2,
+      "White-beaked_Dolphin": 1,
+      "White-sided_Dolphin": 2
+    }
+  }
+}

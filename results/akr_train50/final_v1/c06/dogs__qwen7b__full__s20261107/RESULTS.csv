@@ -1,0 +1,4 @@
+case,dataset,model,condition,seed,method,n,accuracy,macro_f1,invalid_rate,repaired,harmed,gain_pp
+c06,dogs,qwen7b,full,20261107,native,139,0.02877697841726619,0.0057553956834532375,0.0,0,0,0.0
+c06,dogs,qwen7b,full,20261107,akr_soft_cap,139,0.02877697841726619,0.0057553956834532375,0.0,0,0,0.0
+c06,dogs,qwen7b,full,20261107,soft_uncentered_cap,139,0.02877697841726619,0.0057553956834532375,0.0,0,0,0.0
