@@ -453,10 +453,12 @@ class OmniBackend:
         def desc(value):
             if value is None:
                 return None
-            t=value.detach()
+            import torch as _torch
+            t=value.detach().contiguous()
+            raw=t.view(_torch.uint8) if t.dtype==_torch.bfloat16 else t
             arr=t.float().cpu().flatten()
             return dict(shape=list(t.shape),dtype=str(t.dtype),device=str(t.device),
-                        sha256=hashlib.sha256(t.cpu().numpy().tobytes()).hexdigest(),
+                        sha256=hashlib.sha256(raw.cpu().numpy().tobytes()).hexdigest(),
                         first8=[round(float(x),6) for x in arr[:8]])
         mask=inputs.get('attention_mask')
         pad=[]
