@@ -223,9 +223,16 @@ def pad_at_b1(c):
     return max(0, 30_000_000_000 - peak) + 1_000_000_000
 
 
-def derived_map(c, to_batch, from_batch, reason, attempt):
-    """Create a per-cell derived batch map, receipt and sha256."""
-    m = json.load(open(MAP_V2))
+def derived_map(c, to_batch, from_batch, reason, attempt, base_path=None):
+    """Create a per-cell derived batch map, receipt and sha256.
+
+    base_path defaults to batch-map v2; pass the cell's current derived map so
+    extractor-batch mitigations survive the OOM ladder.
+    """
+    base = Path(base_path) if base_path else MAP_V2
+    if not base.is_absolute():
+        base = ROOT / base
+    m = json.load(open(base))
     key = f"{c['case']}|{c['model']}|{c['condition']}|{c['dataset']}"
     m.setdefault('cells', {})[key] = int(to_batch)
     m['cells'][key.replace(':', '_')] = int(to_batch)
@@ -237,8 +244,8 @@ def derived_map(c, to_batch, from_batch, reason, attempt):
     path.write_text(json.dumps(m, indent=1))
     sha = fsha(path)
     receipt = dict(cell=key, reason=reason, from_batch=from_batch, to_batch=to_batch,
-                   attempt=attempt, source_map=str(MAP_V2.relative_to(ROOT)),
-                   source_map_sha256=fsha(MAP_V2),
+                   attempt=attempt, source_map=str(base.relative_to(ROOT)),
+                   source_map_sha256=fsha(base),
                    derived_map=str(path.relative_to(ROOT)), derived_map_sha256=sha,
                    created=now(),
                    note='batch-map v2 is forward-only; generation KV-cache triggered this halving')
@@ -393,7 +400,8 @@ def main():
                         e['status'] = 'FAILED'; changed = True
                         log(f'CELL FAILED {tag} attempts={e["attempts"]} reason=oom-at-batch1 {e["last"]}')
                     else:
-                        rel, sha = derived_map(c, nxt, cur, 'cuda_oom_halve', e['attempts'])
+                        rel, sha = derived_map(c, nxt, cur, 'cuda_oom_halve', e['attempts'],
+                                               e.get('batch_map_path'))
                         arch = (archive_cell_for_retry(c, e['attempts']) if cell_code_matches(c)
                                 else full_archive_cell(c, e['attempts']))
                         e['status'] = 'PENDING'
