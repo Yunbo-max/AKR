@@ -39,7 +39,7 @@ def main():
             log('SELFCHECK submitter missing -> restart loop')
             subprocess.Popen(
                 ['setsid', 'nohup', 'bash',
-                 str(ROOT / 'scripts/run_serial_submitter_loop_20261108.sh')],
+                 str(ROOT / 'scripts/run_serial_submitter_loop_v2_20261108.sh')],
                 stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
                 stdin=subprocess.DEVNULL, start_new_session=True)
         if cycle % 6 == 0:
