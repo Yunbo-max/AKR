@@ -439,6 +439,64 @@ class OmniBackend:
             values.append(h[i][mask].float().mean(0).cpu().numpy())
         return values
 
+    def _diag_dump_inputs(self,inputs,items,alphas,row_directions,hooks,context):
+        """Env-gated (AKR_DIAG_INPUTS=1) first-batch input dump for C14 diagnosis."""
+        import os, json, hashlib
+        if os.environ.get('AKR_DIAG_INPUTS')!='1':
+            return
+        spec=str(getattr(self,'_diag_spec','unknown'))
+        seen=getattr(self,'_diag_seen_specs',set())
+        if spec in seen:
+            return
+        seen.add(spec); self._diag_seen_specs=seen
+        idx=int(getattr(self,'_diag_call_index',0))
+        def desc(value):
+            if value is None:
+                return None
+            t=value.detach()
+            arr=t.float().cpu().flatten()
+            return dict(shape=list(t.shape),dtype=str(t.dtype),device=str(t.device),
+                        sha256=hashlib.sha256(t.cpu().numpy().tobytes()).hexdigest(),
+                        first8=[round(float(x),6) for x in arr[:8]])
+        mask=inputs.get('attention_mask')
+        pad=[]
+        if mask is not None:
+            m=mask.detach().cpu()
+            for row in m:
+                nz=int((row!=0).sum())
+                lead=int((row==0).cumsum()[row!=0][0]) if nz else int(row.numel())
+                pad.append(dict(nonzero=nz,leading_zeros=lead,length=int(row.numel())))
+        directions=[]
+        for it in items:
+            d=it.get('direction')
+            if d is None:
+                directions.append(None)
+            else:
+                a=np.asarray(d)
+                directions.append(dict(shape=list(a.shape),sum_abs=float(np.abs(a).sum()),
+                                       first4=[float(x) for x in a.flatten()[:4]]))
+        payload=dict(
+            spec=spec, call_index=idx, n_items=len(items),
+            prompts=[it.get('prompt') for it in items],
+            item_order=[getattr(it['q'],'event_id',None) for it in items],
+            alphas=[float(a) for a in alphas],
+            directions=directions,
+            row_directions_nonempty=[bool(d) for d in row_directions],
+            hooks_installed=bool(hooks is not None),
+            hooks_class=None if hooks is None else type(hooks).__name__,
+            context_type=type(context).__name__,
+            model=dict(device=str(getattr(self,'device',None)),
+                       dtype=str(next(self.thinker.parameters()).dtype)),
+            batch_tensors={k:desc(v) for k,v in inputs.items()},
+            attention_mask_rows=pad,
+            input_feature_mask_shape=(list(inputs['feature_attention_mask'].shape)
+                                      if 'feature_attention_mask' in inputs else None),
+        )
+        outdir=Path(__file__).resolve().parents[1]/'results'/'diag_inputs_20261110'
+        outdir.mkdir(parents=True,exist_ok=True)
+        safe=''.join(c if c.isalnum() or c in '-_.' else '_' for c in spec)
+        (outdir/f'{safe}.json').write_text(json.dumps(payload,indent=1))
+
     def predict_many(self,items,labels):
         """Batched greedy prediction with row-wise K/V intervention."""
         from contextlib import nullcontext
@@ -475,6 +533,8 @@ class OmniBackend:
             hooks=BatchProjectionIntervention(self.modules,row_directions,mask,alphas,
                                               scale_mode=scale_mode,raw_eta=raw_eta)
             context=hooks
+        self._diag_call_index=int(getattr(self,'_diag_call_index',0))+1
+        self._diag_dump_inputs(inputs,items,alphas,row_directions,hooks,context)
         with t.inference_mode(),context:
             output=self.thinker.generate(**inputs,do_sample=False,max_new_tokens=new_tokens,use_cache=True)
             if hooks is not None: hooks.assert_applied()
