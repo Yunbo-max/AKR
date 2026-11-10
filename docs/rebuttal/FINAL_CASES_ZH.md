@@ -1,10 +1,16 @@
 # AKR 最终 rebuttal 实验：独立 case、运行顺序与证据边界
 
-更新日期：2026-11-07。本文对应 `research/rebuttal-train50-cases-20261107` 分支。
+实验设计日期：2026-11-07；研究定位更新：2026-11-10。本文对应 `research/rebuttal-train50-cases-20261107` 分支。
 
-**本轮交付是实验代码与运行方案。新 Train-50 实验尚未进行真实模型/GPU 评测，因此没有新增 accuracy、F1 或加速结论。** CPU 测试、合成音频和注入小模型的验证只用于检验实现契约。最终验证见 [VALIDATION_20261107.json](VALIDATION_20261107.json)。
+**11 月 7 日交付的是实验代码与运行方案，当时没有新增真实模型/GPU 结果。** CPU 测试、合成音频和注入小模型的验证只用于检验实现契约，见 [VALIDATION_20261107.json](VALIDATION_20261107.json)。后续已有 [final_v1 汇总快照](../../results/akr_train50/final_v1)；实际运行清单见 [11 月 8 日命令](RUN_COMMANDS_20261108.md)。本文中的初始计划数量和准备状态按其原日期解释。
 
 最新的 Train-50 决定替代此前 Cal-40 扩展草稿。历史结果仍按原协议解释。逐位审稿人的对应关系见 [REVIEWER_MAP.md](REVIEWER_MAP.md)；数据和声学特征细节见 [DATA_AND_FEATURES.md](DATA_AND_FEATURES.md)。
+
+## 0. 主要研究目标：优化 LM 自己生成的答案
+
+主要对照比较 native、同支持的 Audio ICL / probe-to-LM，以及固定、随机、打乱和学习到的 K/V 修正。评估 LM 输出的正确率、F1、无效输出、repair/harm、成本与稳定性；LoRA 另列为同标签预算的参数微调参考。
+
+Direct ridge 定位为**外部监督读出诊断**，不作为内部修复方法成立的必要门槛。它拟合外接分类器、保持 LM 权重冻结，与微调 LM 参数不同；hard/soft 原型版本同时用它作路由器自身输出的参照。完整定义及 rebuttal 段落见 [LM_OUTPUT_SCOPE_ZH.md](LM_OUTPUT_SCOPE_ZH.md)。
 
 ## 1. 主实验协议
 
@@ -67,7 +73,7 @@
 |---|---|---|
 | C00 `c00_protocol.py` | Train-50 与完整 test 登记、source/PCM 重叠检查 | support/test 是否混淆，是否依赖选错样本；看 ID、每类支持量、排除记录、完整测试数 |
 | C01 `c01_main.py` | Native、原始连续映射、hard-centered、soft-cap | 主结果；看全量 accuracy、macro-F1、invalid、相对 native 的修复和损害 |
-| C02 `c02_ridge_decoder.py` | Native、连续/soft AKR、direct ridge、probe-to-text、top-1 probe-to-LM、全概率/先验 probe-to-LM | 同监督 ridge 是否足够、decoder 有何额外作用；看两种文本通道的改错/救回与成本 |
+| C02 `c02_ridge_decoder.py` | Native、连续/soft AKR、direct ridge、probe-to-text、top-1 probe-to-LM、全概率/先验 probe-to-LM | LM 的提示证据与 K/V 修正通道比较；外部读出另列诊断，记录生成答案对读出决策的保留/改错/救回与成本 |
 | C03 `c03_acoustic_features.py` | Native、Omni feature ridge、MFCC ridge、eGeMAPS ridge、BEATs ridge | 传统声学与冻结自监督特征基线；全部用相同 50 support 和 ridge 读出 |
 | C04 `c04_audio_icl.py` | Native、连续/soft AKR、50-example audio ICL 的 3 个预设顺序 | AKR vs ICL；所有 50 条均进入 ICL，不因上下文限制悄悄缩减样本 |
 | C05 `c05_routing_scale.py` | Hard/soft × relative_norm/relative_cap，另含 native/连续对照 | 路由和缩放的贡献能否分开 |
