@@ -108,6 +108,52 @@ def verify_cell(c):
     return True, ''
 
 
+def current_code_identity():
+    paths = sorted((ROOT / 'akr_final').glob('*.py')) + sorted((ROOT / 'akr_closing').glob('*.py'))
+    paths += [ROOT / 'src/animal_omni/conditional_kv.py', ROOT / 'src/animal_omni/metrics.py',
+              ROOT / 'scripts/fair_speech_lm.py']
+    return {str(p.relative_to(ROOT)): fsha(p) for p in paths if p.exists()}
+
+
+CURRENT_CODE = current_code_identity()
+
+
+def cell_code_hash(c):
+    reg = cell_dir(c) / 'REGISTRATION.json'
+    if not reg.exists():
+        return None
+    try:
+        return json.load(open(reg)).get('code', {}).get('akr_final/train50_runner.py')
+    except Exception:
+        return None
+
+
+def cell_code_matches(c):
+    reg = cell_dir(c) / 'REGISTRATION.json'
+    if not reg.exists():
+        return True
+    try:
+        return json.load(open(reg)).get('code') == CURRENT_CODE
+    except Exception:
+        return False
+
+
+def full_archive_cell(c, attempt):
+    """Move the whole cell dir (incl. stale REGISTRATION) before a new-code retry."""
+    d = cell_dir(c)
+    if not d.exists():
+        return None
+    base = ROOT / 'results/akr_train50/final_v1_codefix_archive' / c['case'] / f'{tag_of(c)}_a{attempt}'
+    dest = base
+    n = 0
+    while dest.exists():
+        n += 1
+        dest = base.parent / f'{base.name}_r{n}'
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    shutil.move(str(d), str(dest))
+    return str(dest.relative_to(ROOT))
+
+
 def archive_cell_for_retry(c, attempt):
     """Keep REGISTRATION; move identity-bound artifacts aside for a derived map.
 
@@ -326,7 +372,9 @@ def main():
             vok, why = verify_cell(c)
             if vok:
                 e['status'] = 'OK'; e['last'] = f"{j['status']}:verified-complete"; changed = True
-                log(f'CELL OK {tag} job={jid} attempts={e["attempts"]} job_status={j["status"]}')
+                ch = cell_code_hash(c)
+                log(f'CELL OK {tag} job={jid} attempts={e["attempts"]} job_status={j["status"]} '
+                    f'code_train50_runner={(ch or "unknown")[:12]}')
             else:
                 e['last'] = f"{j['status']}:{why}"
                 if is_oom(c, name_of(c)):
@@ -337,7 +385,8 @@ def main():
                         log(f'CELL FAILED {tag} attempts={e["attempts"]} reason=oom-at-batch1 {e["last"]}')
                     else:
                         rel, sha = derived_map(c, nxt, cur, 'cuda_oom_halve', e['attempts'])
-                        arch = archive_cell_for_retry(c, e['attempts'])
+                        arch = (archive_cell_for_retry(c, e['attempts']) if cell_code_matches(c)
+                                else full_archive_cell(c, e['attempts']))
                         e['status'] = 'PENDING'
                         e['batch_override'] = nxt
                         e['batch_map_path'] = rel
@@ -350,7 +399,8 @@ def main():
                     e['status'] = 'FAILED'; changed = True
                     log(f'CELL FAILED {tag} attempts={e["attempts"]} reason={e["last"]}')
                 else:
-                    arch = archive_cell_for_retry(c, e['attempts'])
+                    arch = (archive_cell_for_retry(c, e['attempts']) if cell_code_matches(c)
+                            else full_archive_cell(c, e['attempts']))
                     e['status'] = 'PENDING'; changed = True
                     log(f'CELL RETRY {tag} attempts={e["attempts"]}/3 reason={e["last"]} archive={arch}')
         if changed:
