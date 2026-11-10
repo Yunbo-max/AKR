@@ -8,7 +8,10 @@ _real = torch.version.cuda
 try:
     if _real and _real.startswith("12.9"):
         torch.version.cuda = "12.6"
-    import torchaudio  # noqa: F401
+    try:
+        import torchaudio  # noqa: F401
+    except Exception:
+        pass
 finally:
     torch.version.cuda = _real
 
