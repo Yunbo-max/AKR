@@ -463,9 +463,13 @@ class OmniBackend:
         if mask is not None:
             m=mask.detach().cpu()
             for row in m:
-                nz=int((row!=0).sum())
-                lead=int((row==0).cumsum()[row!=0][0]) if nz else int(row.numel())
-                pad.append(dict(nonzero=nz,leading_zeros=lead,length=int(row.numel())))
+                vals=row.tolist()
+                nz=sum(1 for v in vals if v!=0)
+                lead=0
+                for v in vals:
+                    if v==0: lead+=1
+                    else: break
+                pad.append(dict(nonzero=nz,leading_zeros=lead,length=len(vals)))
         directions=[]
         for it in items:
             d=it.get('direction')

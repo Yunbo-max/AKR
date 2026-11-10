@@ -432,7 +432,7 @@ class CaseWorker(FinalRunner):
         def flush():
             if not pending:return
             backend=self._model(self.job['model'],episode)
-            if hasattr(backend,'_diag_spec'):backend._diag_spec=spec['name']
+            backend._diag_spec=spec['name']
             items=[record['item'] for record in pending]
             out=measured(backend,lambda:dict(predictions=backend.predict_many(items,self.labels)))
             predictions=out.pop('predictions')
