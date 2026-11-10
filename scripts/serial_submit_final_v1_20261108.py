@@ -299,7 +299,7 @@ def build_job(c, e=None):
         f'export HF_HOME={ROOT}/.hf-cache ANIMAL_HF_HOME={ROOT}/.hf-cache HF_HUB_OFFLINE=1 && '
         f'MAX_ATTEMPTS=1 bash scripts/run_wave_cells_20261108.sh '
         f'results/run_specs_20261108/serial/spec_{tag}.json > logs/run/{name}/driver.log 2>&1')
-    job['max_running_time_ms'] = '5400000'
+    job['max_running_time_ms'] = '21600000' if (case == 'c04' or e.get('long_cap')) else '5400000'
     job['framework_config'][0]['spec_id'] = SPEC_ID
     job_path = SERIAL_DIR / f'job_{tag}.json'
     job_path.write_text(json.dumps(job, indent=1))
@@ -315,7 +315,7 @@ def build_c16_job():
     job['command'] = (
         f'mkdir -p {ROOT}/logs/run/{name} && cd {ROOT} && '
         f'bash scripts/run_c16_serial_20261108.sh > logs/run/{name}/driver.log 2>&1')
-    job['max_running_time_ms'] = '5400000'
+    job['max_running_time_ms'] = '93600000'
     job['framework_config'][0]['spec_id'] = SPEC_ID
     (SERIAL_DIR / 'job_c16-historical.json').write_text(json.dumps(job, indent=1))
     return name, job
@@ -377,7 +377,16 @@ def main():
                     f'code_train50_runner={(ch or "unknown")[:12]}')
             else:
                 e['last'] = f"{j['status']}:{why}"
-                if is_oom(c, name_of(c)):
+                cap_stop = (j['status'] in ('job_stopped', 'job_timeout', 'job_failed')
+                            and int(j.get('running_time_ms') or 0) >= 5_300_000)
+                if cap_stop:
+                    arch = None if cell_code_matches(c) else full_archive_cell(c, e['attempts'])
+                    e['status'] = 'PENDING'; e['long_cap'] = True; e['attempts'] = 1
+                    e['last'] = f"cap-resubmit {j['status']} at {j.get('running_time_ms')}ms"
+                    changed = True
+                    log(f'CELL CAP-RESUBMIT {tag} job={jid} status={j["status"]} '
+                        f'running_ms={j.get("running_time_ms")} cap=21600000 archive={arch}')
+                elif is_oom(c, name_of(c)):
                     cur = e.get('batch_override') or map_batch(c)
                     nxt = max(1, cur // 2)
                     if nxt == cur:
@@ -417,8 +426,15 @@ def main():
                 log(f'C16 FAILED job={jid} status=missing')
             elif j['status'] not in NONTERM:
                 ok = (j['status'] == 'job_succeeded')
-                c16['status'] = 'OK' if ok else 'FAILED'; c16['last'] = j['status']; save()
-                log(f'C16 {"OK" if ok else "FAILED"} job={jid} status={c16["last"]}')
+                cap_stop = (not ok and j['status'] in ('job_stopped', 'job_timeout', 'job_failed')
+                            and int(j.get('running_time_ms') or 0) >= 5_300_000)
+                if cap_stop:
+                    c16['status'] = 'PENDING'; c16['last'] = f"cap-stop {j['status']}"; save()
+                    log(f'C16 CAP-RESUBMIT job={jid} status={j["status"]} '
+                        f'running_ms={j.get("running_time_ms")} cap=93600000')
+                else:
+                    c16['status'] = 'OK' if ok else 'FAILED'; c16['last'] = j['status']; save()
+                    log(f'C16 {"OK" if ok else "FAILED"} job={jid} status={c16["last"]}')
             # C16 running must NOT block cell refills; falls through to the fill loop.
 
         c16 = state['c16']
