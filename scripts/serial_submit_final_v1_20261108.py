@@ -289,7 +289,7 @@ def build_job(c, e=None):
     cell = dict(case=case, dataset=ds, model=model, condition=cond,
                 profile=c['profile'], batch_map=batch_map)
     if case in ('c03', 'c15'):
-        cell['assets'] = 'results/run_assets_20261108.json'
+        cell['assets'] = e.get('assets_path') or 'results/run_assets_20261108.json'
     if pad:
         cell['pad_bytes'] = pad
     spec = dict(name=name, lanes=[cell])
