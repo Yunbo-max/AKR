@@ -412,13 +412,14 @@ def main():
         if c16.get('status') == 'SUBMITTED':
             jid = c16['job_ids'][-1]
             j = jobs.get(jid)
-            if j is not None and j['status'] in NONTERM:
-                time.sleep(60); continue
-            ok = bool(j and j['status'] == 'job_succeeded')
-            c16['status'] = 'OK' if ok else 'FAILED'
-            c16['last'] = j['status'] if j else 'missing'; save()
-            log(f'C16 {"OK" if ok else "FAILED"} job={jid} status={c16["last"]}')
-            continue
+            if j is None:
+                c16['status'] = 'FAILED'; c16['last'] = 'missing'; save()
+                log(f'C16 FAILED job={jid} status=missing')
+            elif j['status'] not in NONTERM:
+                ok = (j['status'] == 'job_succeeded')
+                c16['status'] = 'OK' if ok else 'FAILED'; c16['last'] = j['status']; save()
+                log(f'C16 {"OK" if ok else "FAILED"} job={jid} status={c16["last"]}')
+            # C16 running must NOT block cell refills; falls through to the fill loop.
 
         c16 = state['c16']
 
@@ -485,7 +486,7 @@ def main():
             return True
 
         reserve = len(PRIORITY_NEW_CASES) + 1
-        while active < MAX_ACTIVE:
+        while active + (1 if c16.get('status') == 'SUBMITTED' else 0) < MAX_ACTIVE:
             new_active = sum(1 for e in state['cells'].values()
                              if e['status'] == 'SUBMITTED' and e['command']['case'] in PRIORITY_NEW_CASES)
             c16_active = 1 if c16.get('status') == 'SUBMITTED' else 0
