@@ -1,6 +1,6 @@
 {
   "case": "c04",
   "complete": false,
-  "method": "akr_soft_cap",
+  "method": "native",
   "status": "running"
 }
