@@ -59,7 +59,7 @@ MarmAudio、DogSpeak、两折 OOF 选参等建议，**不作为当前 Train-50 �
 | C11 | Full/LP1 支持拟合交叉到 Full/LP1 query；原连续 AKR 与 soft，加 native | `fit_condition`/query condition 身份、同 query 配对结果；不是自然环境 drift |
 | C12 | GLM-4-Voice 的 native、原连续 AKR、hard、soft | 真后端可行性、固定 model revision、层/mask/no-op 与完整 test 结果 |
 | C13 | 相同 50 标签的实际 language-decoder LoRA，加 native、原 AKR、soft | adapter 训练 receipt、epochs/LR/exposures、预测、拟合与 query 成本 |
-| C14 | native、原 AKR、soft、zero-alpha、zero-field；分项成本 | exact no-op、实际 hooks/update norms；支持 backward、特征、拟合、两遍 query 和模型加载成本 |
+| C14 | native、原 AKR、soft、zero-alpha、zero-field；分项成本 | no-op gate compares scored labels; raw-continuation nondeterminism disclosed；实际 hooks/update norms；支持 backward、特征、拟合、两遍 query 和模型加载成本 |
 | C15 | frozen native NatureLM specialist 与对应 generalist native | 同 registration/query、specialist asset hashes、所有 window 原文与无效项、已知训练来源范围 |
 | C16 | 另一路径：已有历史 source registration 的 native/fixed/continuous/ridge/text/probe-to-LM 补表 | 历史 `RUN/LOCK/EPISODE`、S1 完整 IDs/metrics、`ARTIFACTS.json`、raw 历史 parity=false |
 

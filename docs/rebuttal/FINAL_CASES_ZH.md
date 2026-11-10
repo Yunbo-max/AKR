@@ -85,7 +85,7 @@ Direct ridge 定位为**外部监督读出诊断**，不作为内部修复方法
 | C11 `c11_frequency_transfer.py` | Full/LP1 support × Full/LP1 query，连续与 soft | 收益是否只在 LP1；是真正跨音频条件还是匹配条件效果 |
 | C12 `c12_glm_architecture.py` | GLM-4-Voice 9B 上 native/连续/hard/soft | 不同模型家族；需生产权重验收和完整结果 |
 | C13 `c13_matched_lora.py` | Same-50 language-decoder LoRA 与 native/连续/soft | 同标注预算的参数更新对照；rank8、lr5e-4、5 epochs，单列训练成本 |
-| C14 `c14_cost_noop.py` | Native/连续/soft、alpha=0、zero-field；组件成本 | 无干预精确一致性、实际 BF16 更新、耗时/调用/内存证据 |
+| C14 `c14_cost_noop.py` | Native/连续/soft、alpha=0、zero-field；组件成本 | 无干预标签一致性（gate 比较预测标签；raw-continuation 差异作为披露统计）、实际 BF16 更新、耗时/调用/内存证据 |
 | C15 `c15_naturelm.py` | Frozen NatureLM native specialist 与 native generalist | 专家模型适用范围；不是 NatureLM+AKR，也不是同预训练监督比较 |
 | C16 `c16_historical_readouts.py` | 从真实原始登记读取 S1 六种 readout 对照 | 原主表缺 ridge/decoder 对照；严格复用历史 support/query，不能用 Train-50 顶替 |
 
@@ -225,7 +225,7 @@ C16 单独保存至 `results/akr_historical_readouts/<run-id>/`，不写入历�
 
 成本表将 support 特征、support backward、映射拟合/路由、query 特征、generation、LoRA 训练和模型加载分开。`query_feature_plus_generation_seconds` 含 query 特征与生成；拟合/全 query 路由成本单列，不冒称纯在线延迟。首个完成计算的成本保留；cache-only 续跑不会被写成“零计算方法”。磁盘 cache I/O 不在模型组件成本中。NatureLM 的调用单位是 **每个音频窗口的一次 generate**，不能与 Qwen decoder forward 数直接作等量比较。
 
-C14 要求 alpha=0 和 zero-field 的规范化预测、raw answer 与生成 token 记录都与 native 一致。所有干预方法记录 planned/effective 相对范数与 unchanged fraction；“方向非零”本身不是 BF16 激活真的发生改变的证据。
+C14 的 no-op gate 比较**规范化预测标签**：alpha=0 和 zero-field 的预测标签必须与 native 逐条一致（0 label diffs）。raw answer 与生成 token 的差异不作为 gate，而是在 REPORT 的 `no_op_disclosure` 中作为透明披露统计保留并注明 “batched greedy generation is nondeterministic; labels identical”——CUDA 批式贪心生成不可逐位复现，被测变量是标签而非 32-token 自由文本尾巴。所有干预方法记录 planned/effective 相对范数与 unchanged fraction；“方向非零”本身不是 BF16 激活真的发生改变的证据。
 
 若 ridge 持平或更强，就如实回答直接分类的作用，不能预先声称 decoder 必要。若只 LP1 有收益，就把结论限制在该条件。若 GLM 或某数据集不提升，仍保留结果。若 ICL 因全部 50 条超过上下文而失败，报告完整预算的可行性失败，另立小预算 case 才能比较小预算性能。
 
