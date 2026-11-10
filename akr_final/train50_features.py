@@ -160,6 +160,7 @@ class FeatureExtractor:
                 raise RuntimeError("cannot fingerprint installed openSMILE configs/binaries")
             common.update(opensmile=_version("opensmile"), settings=dict(
                 feature_set="eGeMAPSv02", feature_level="Functionals", dimension=88,
+                short_audio="right_zero_pad", minimum_samples=4000,
                 feature_names=list(self._model.feature_names), package_assets_sha256=configs))
         elif self.kind == "beats":
             self._source, self._checkpoint, settings = _beats_assets(assets)
@@ -211,6 +212,10 @@ class FeatureExtractor:
         if self.kind == "mfcc":
             return _mfcc(x)
         if self.kind == "egemaps":
+            # Same 250 ms right-zero-pad policy as the BEATs path: opensmile
+            # fills NaN when the segment is too short to form a frame.
+            if len(x) < 4000:
+                x = np.pad(x, (0, 4000 - len(x)))
             values = self._model.process_signal(x, RATE).to_numpy()
             if values.shape != (1, 88):
                 raise ValueError(f"unexpected eGeMAPSv02 functionals shape {values.shape}")

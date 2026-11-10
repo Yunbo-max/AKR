@@ -151,7 +151,12 @@ It requires the actual optional `opensmile` package, pinned to 2.6.0 in the supp
 requirements. Provenance includes installed package version, ordered feature
 names, and hashes of packaged configuration/include files and shared libraries.
 The extractor validates a single row of exactly 88 finite functionals. This is a
-real eGeMAPSv02 extraction; no MFCC approximation is used.
+real eGeMAPSv02 extraction; no MFCC approximation is used. A fixed 250 ms
+right-zero-pad is applied to inputs shorter than 4000 samples before openSMILE
+(the same policy as the BEATs frontend; recorded in provenance as
+`short_audio=right_zero_pad`, `minimum_samples=4000`). Without it, openSMILE
+fills a too-short segment with NaN; the pad makes the functionals finite and is
+applied identically to support and query audio.
 
 ## Official BEATs assets
 
