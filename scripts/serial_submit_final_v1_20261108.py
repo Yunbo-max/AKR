@@ -482,6 +482,9 @@ def main():
             nonlocal active
             e = find(c)
             tag = f"{c['case']}|{c['dataset']}|{c['model']}|{c['condition']}"
+            if not cell_code_matches(c):
+                arch=full_archive_cell(c,e['attempts'])
+                log(f'PRE-SUBMIT ARCHIVE {tag} stale-code dir -> {arch}')
             name, job, pad, bmap = build_job(c, e)
             r = qz(['train', 'CreateJob'], job)
             jid = r.get('Result', {}).get('job_id') if isinstance(r.get('Result'), dict) else None
