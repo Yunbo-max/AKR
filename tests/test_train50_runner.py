@@ -397,3 +397,14 @@ def test_batched_feature_extraction_for_ridge_paths(tmp_path):
     assert BatchToyBackend.batch_feature_calls>0
     for spec in job['methods']:
         assert len(list((out/'trials'/spec['name']/'items').glob('*.json')))==4
+
+
+def test_zero_scale_and_zero_kind_skip_intervention():
+    import numpy as np
+    from akr_final.train50_runner import effective_intervention
+    field = np.ones(4, dtype=np.float32)
+    assert effective_intervention({'kind': 'soft', 'alpha': 0.0}, field) == (None, 0.0)
+    assert effective_intervention({'kind': 'zero', 'alpha': 0.3}, field) == (None, 0.0)
+    d, a = effective_intervention({'kind': 'soft', 'alpha': 0.3}, field)
+    assert d is field and a == 0.3
+    assert effective_intervention({'kind': 'soft', 'alpha': 0.0}, None) == (None, 0.0)

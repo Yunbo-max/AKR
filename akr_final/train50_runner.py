@@ -63,6 +63,18 @@ def resolve_extractor_batch(batch_map,*,case,condition,dataset,feature='beats'):
     return 1
 
 
+def effective_intervention(spec,field):
+    """alpha==0 and the zero-field control are exact native no-ops.
+
+    Route them through the native path (direction=None, alpha=0) so the
+    backend never installs K/V intervention hooks; this keeps the greedy
+    signatures bitwise identical to native.  alpha>0 paths are unchanged.
+    """
+    if field is None or spec.get('kind')=='zero' or float(spec.get('alpha',0.))==0.:
+        return None,0.
+    return field,float(spec['alpha'])
+
+
 def asset_identity(value):
     """Bind local asset bytes, including code and model shards, before execution."""
     if isinstance(value,dict):return {k:asset_identity(v) for k,v in sorted(value.items())}
@@ -471,11 +483,12 @@ class CaseWorker(FinalRunner):
                     from .train50_evidence import probability_evidence_prompt
                     prompt=probability_evidence_prompt(prompt,self.labels,payload['class_probabilities'][j],payload['support_priors'])
                 field=None if fields is None else fields[j]
+                direction,alpha=effective_intervention(spec,field)
                 if kind in batchable and self.batch_size>1 and hasattr(backend,'predict_many'):
                     pending.append(dict(event=event,entry=entry,
                         external_j=None if external is None else external[j],
                         item=dict(q=self._query(event,condition),prompt=prompt,support=support,
-                            direction=field,alpha=spec['alpha'] if field is not None else 0.,
+                            direction=direction,alpha=alpha,
                             scope=spec['scope'],kind=spec['kv_kind'],layer_group=spec['layer_group'],
                             scale_mode=spec['scale_mode'],raw_eta=spec['raw_eta'],
                             max_new_tokens=self.settings['max_new_tokens'])))
@@ -483,7 +496,7 @@ class CaseWorker(FinalRunner):
                     continue
                 flush()
                 result=measured(backend,lambda:backend.predict(self._query(event,condition),prompt,self.labels,
-                    support=support,direction=field,alpha=spec['alpha'] if field is not None else 0.,
+                    support=support,direction=direction,alpha=alpha,
                     scope=spec['scope'],kind=spec['kv_kind'],layer_group=spec['layer_group'],
                     scale_mode=spec['scale_mode'],raw_eta=spec['raw_eta'],max_new_tokens=self.settings['max_new_tokens']))
                 if external is not None:result['external_prediction']=external[j]
