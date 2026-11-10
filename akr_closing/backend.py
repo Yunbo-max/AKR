@@ -130,9 +130,11 @@ class ProjectionIntervention(AbstractContextManager):
                 direction=torch.as_tensor(self.directions[key],device=out.device,dtype=torch.float32)
                 if not torch.isfinite(direction).all(): raise ValueError('non-finite KV correction')
                 delta=torch.zeros_like(out,dtype=torch.float32)
-                if direction.ndim==1 and direction.numel()==out.shape[-1]: delta[mask]=direction
+                if direction.ndim==1 and direction.numel()==out.shape[-1]:
+                    delta[mask]=direction.unsqueeze(0).expand(int(mask.sum()),-1).contiguous()
                 elif direction.shape==out.shape: delta=direction*mask[:,:,None]
-                elif direction.ndim==2 and direction.shape==(int(mask.sum()),out.shape[-1]): delta[mask]=direction
+                elif direction.ndim==2 and direction.shape==(int(mask.sum()),out.shape[-1]):
+                    delta[mask]=direction.expand(int(mask.sum()),-1).contiguous()
                 else: raise ValueError(f'field shape incompatible at {key}: {direction.shape}')
                 dn=torch.linalg.vector_norm(delta[mask]); bn=torch.linalg.vector_norm(out.float()[mask])
                 if self.scale_mode=='relative_norm':
@@ -213,9 +215,11 @@ class BatchProjectionIntervention:
                     direction=torch.as_tensor(self.row_directions[i][key],device=out.device,dtype=torch.float32)
                     if not torch.isfinite(direction).all(): raise ValueError('non-finite KV correction')
                     delta=torch.zeros_like(row,dtype=torch.float32)
-                    if direction.ndim==1 and direction.numel()==row.shape[-1]: delta[mask]=direction
+                    if direction.ndim==1 and direction.numel()==row.shape[-1]:
+                        delta[mask]=direction.unsqueeze(0).expand(int(mask.sum()),-1).contiguous()
                     elif direction.shape==row.shape: delta=direction*mask[:,None]
-                    elif direction.ndim==2 and direction.shape==(int(mask.sum()),row.shape[-1]): delta[mask]=direction
+                    elif direction.ndim==2 and direction.shape==(int(mask.sum()),row.shape[-1]):
+                        delta[mask]=direction.expand(int(mask.sum()),-1).contiguous()
                     else: raise ValueError(f'field shape incompatible at {key}: {direction.shape}')
                     dn=torch.linalg.vector_norm(delta[mask]); bn=torch.linalg.vector_norm(row.float()[mask])
                     if self.scale_mode=='relative_norm':

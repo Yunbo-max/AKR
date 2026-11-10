@@ -301,9 +301,12 @@ def build_job(c, e=None):
     job['name'] = name
     job['description'] = (f'AKR final_v1 serial single-GPU cell {case}/{ds}/{model}/{cond}; '
                           f'pad={pad}; batch_map={batch_map}')
+    det = ('export CUBLAS_WORKSPACE_CONFIG=:4096:8 AKR_DETERMINISTIC=1 && '
+           if case == 'c14' else '')
     job['command'] = (
         f'mkdir -p {ROOT}/logs/run/{name} && cd {ROOT} && '
         f'export HF_HOME={ROOT}/.hf-cache ANIMAL_HF_HOME={ROOT}/.hf-cache HF_HUB_OFFLINE=1 && '
+        f'{det}'
         f'MAX_ATTEMPTS=1 bash scripts/run_wave_cells_20261108.sh '
         f'results/run_specs_20261108/serial/spec_{tag}.json > logs/run/{name}/driver.log 2>&1')
     job['max_running_time_ms'] = '21600000' if (case == 'c04' or e.get('long_cap')) else '5400000'

@@ -266,3 +266,21 @@ def test_lp_below_nyquist_still_filters_16k_audio(tmp_path):
     assert np.mean(a[400:]**2)>0.4
     assert np.mean(b[400:]**2)<np.mean(a[400:]**2)*.02
     assert not (tmp_path/'low16.wav.native_bw.json').exists()
+
+
+def test_intervention_assignment_shape_expansion_preserves_values():
+    import torch
+    row = torch.zeros(5, 3)
+    mask = torch.tensor([True, False, True, True, False])
+    direction = torch.tensor([1.0, 2.0, 3.0])
+    reference = torch.zeros_like(row)
+    reference[mask] = direction
+    explicit = torch.zeros_like(row)
+    explicit[mask] = direction.unsqueeze(0).expand(int(mask.sum()), -1).contiguous()
+    assert torch.equal(reference, explicit)
+    d2 = torch.arange(9, dtype=torch.float32).reshape(3, 3)
+    ref2 = torch.zeros_like(row)
+    ref2[mask] = d2
+    exp2 = torch.zeros_like(row)
+    exp2[mask] = d2.expand(int(mask.sum()), -1).contiguous()
+    assert torch.equal(ref2, exp2)
