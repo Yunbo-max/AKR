@@ -1,0 +1,9 @@
+{
+  "case_id": "c00_native_ntp",
+  "kind": "native",
+  "description": "Unmodified checkpoint, native next-token generation",
+  "model": {"lora": {"enabled": false}, "gradient_checkpointing": false},
+  "sampling": {"mode": "ntp"},
+  "training": {"head_weights": [1.0, 0.0]},
+  "evaluation": {"generation_modes": ["ntp"]}
+}

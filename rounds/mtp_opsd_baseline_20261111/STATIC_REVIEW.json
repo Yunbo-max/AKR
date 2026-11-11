@@ -1,0 +1,75 @@
+{
+  "source_status": "generated_unexecuted",
+  "recorded_at": "2026-11-11T12:54:39.847744+00:00",
+  "branch": "research/mtp-opsd-baseline",
+  "base_main_commit": "bbe2a445d0b63294cf595c92f8de3d09637f5d7f",
+  "checks": {
+    "python_ast_parse": {
+      "status": "passed",
+      "files": 11
+    },
+    "json_parse": {
+      "status": "passed",
+      "files": 7
+    },
+    "bash_syntax_individual_files": {
+      "status": "passed",
+      "files": 7
+    },
+    "new_runbook_relative_links": {
+      "status": "passed",
+      "links": 9
+    },
+    "cross_module_source_review": {
+      "status": "completed",
+      "scope": [
+        "native MTP key mapping and cache alignment",
+        "teacher/student horizon alignment",
+        "full-vocabulary hidden VJP",
+        "training selection and gold-answer separation",
+        "native evaluator API and denominator",
+        "checkpoint/resume identity",
+        "qualification configuration binding"
+      ]
+    }
+  },
+  "not_executed": [
+    "project imports or CLI commands",
+    "dependency installation",
+    "model or dataset download",
+    "CUDA qualification",
+    "model inference",
+    "training",
+    "native benchmark evaluation",
+    "scientific or project tests"
+  ],
+  "source_files_sha256": {
+    "mtp_opsd/__init__.py": "ff0df8c8d33722dbfa5e237a9c463b3feeede1e2c20807f195ae6b1b3b7d6795",
+    "mtp_opsd/answers.py": "91ae7dadd2855eafafd30c2ed5eb8fd754ce2988c691eee5f7801acd987d6140",
+    "mtp_opsd/assets.py": "26d276454477886c57852df420293c7658b2aefd67f7820f7046355f85f90f32",
+    "mtp_opsd/backend.py": "7ee540914ebffb3d86f975122e3d6dd93f5428222544e8cbc454fb04f068aa2a",
+    "mtp_opsd/cli.py": "9aaa64f9447019becd6cdf859a1d292a39c58053d75f1e49bb08635dd88968fe",
+    "mtp_opsd/config.py": "81a53a94d96043bcfb1b8d8756ec8ed1385400a6a942fdb55fe8302e3e5bf90c",
+    "mtp_opsd/data.py": "f8bbb7b194c0545d0876be056526d56e3ab1887572cd6f20f993da5fcc69159a",
+    "mtp_opsd/evaluate.py": "b4daf7929da3258f9362bee9ab09d1a123e9f6a4ba5f48acf61579eaf928fd7c",
+    "mtp_opsd/losses.py": "ab7c41d33f9188e02dca5735d4846304c3df74808985953861eef246b386bac8",
+    "mtp_opsd/qualification.py": "721db9ce8a7e19516a2e94fff06252a5d213e0bef8a0546fe1420fc6bea4e611",
+    "mtp_opsd/train.py": "41cc915b9653229564d3516da83d82b50132164e4a6f626acf4b80418c857b45",
+    "configs/mtp_opsd/c00_native_ntp.json": "6939631da72d21182199b9e415137584ac6610fadbc8b35a4e2608e3e1bd2901",
+    "configs/mtp_opsd/c01_native_mtp.json": "38a71b7ffb10c02b24147ecdc6d77af64792deafd9095468873aeb08a4a70bab",
+    "configs/mtp_opsd/c02_ntp_opsd_g4.json": "fec0d1237a1fa07b2fffd51d50f2c063f250783335e43cfbcc6f27798a80aaa5",
+    "configs/mtp_opsd/c03_mtp_opsd_g4.json": "dc00fda409fe9d57affd2ad013829da2107a2c85ba1b50b6b154053d8d1cd420",
+    "configs/mtp_opsd/c04_ntp_opsd_g8.json": "3793b0265a8a7051d119a1f2a46ee0ec7a7f3d0ade10ee783391dcd8e608f9ad",
+    "configs/mtp_opsd/c05_mtp_opsd_g8.json": "f905c3332776400df1aa6f81d3b90de4495d501deb9a49e257701bcbbe0437f4",
+    "configs/mtp_opsd/common.json": "3426792033d6d98822c36c8ac5fdacafa6c8f5d911d468a85ecee7ebe169c704",
+    "scripts/mtp_opsd/c00_native_ntp.sh": "f1f3bc70c375931ab9d3e43422afac0bc3c64074362f342ef260ee10ab923062",
+    "scripts/mtp_opsd/c01_native_mtp.sh": "252aa138c9324221b7057f27302219ac7a3eb3d273e69beaf266e80e005b2cb7",
+    "scripts/mtp_opsd/c02_ntp_opsd_g4.sh": "09cfd460e159d801749b6372008987bcb8324c4d365a999aa3671b7f0ccbaaf1",
+    "scripts/mtp_opsd/c03_mtp_opsd_g4.sh": "a543a632fc76ea17c816ee7324ab8d8fd2f7f388a03c9b2b0d4bb3a505477eb0",
+    "scripts/mtp_opsd/c04_ntp_opsd_g8.sh": "0d7644199eef4b746d03ab511400f38ff21629d399208d771999516dc6173fed",
+    "scripts/mtp_opsd/c05_mtp_opsd_g8.sh": "cbbfdc015a134b59593168feb43cd9a859694a8cbbad8b2a245026e6d6360ec3",
+    "scripts/mtp_opsd/run_case.sh": "6e7f6e9e1830cde51a46eb03ff303709bb85c33248ecc990e687f4d07d6f259b",
+    "requirements-mtp-opsd.txt": "2242375e2a3e5d7ba176af0eb6d7f40d4ff247c749bc77f4fc41cbd870267de0"
+  },
+  "evidence_limit": "Static source validation only. No numerical acceptance, accuracy, speed, memory or training-success evidence."
+}

@@ -1,0 +1,8 @@
+{
+  "case_id": "c01_native_mtp",
+  "kind": "native",
+  "description": "Unmodified pretrained MTP checkpoint, direct main/MTP pair generation without verifier",
+  "model": {"lora": {"enabled": false}, "gradient_checkpointing": false},
+  "sampling": {"mode": "mtp"},
+  "evaluation": {"generation_modes": ["mtp"]}
+}

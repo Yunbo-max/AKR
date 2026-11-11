@@ -1,0 +1,11 @@
+# Separate environment from historical acoustic AKR (Transformers 4.x).
+# Install the CUDA-compatible torch wheel as instructed in LOCAL_AGENT_RUNBOOK.md.
+torch==2.10.0
+transformers==5.16.1
+accelerate==1.15.0
+datasets==4.8.0
+huggingface-hub==1.7.2
+safetensors==0.8.0
+math-verify[antlr4_11_0]==0.9.0
+antlr4-python3-runtime==4.11.0
+lm_eval[math] @ git+https://github.com/EleutherAI/lm-evaluation-harness.git@d6de81643928d653435c431bae19945d41d32520

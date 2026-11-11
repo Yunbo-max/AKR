@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "round": "mtp_opsd_baseline_20261111",
+  "method_status": "transferred_baseline_not_novel_method",
+  "model": {
+    "id": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "path": null,
+    "dtype": "bfloat16",
+    "attn_implementation": "sdpa",
+    "device": "cuda:0",
+    "max_context_tokens": 8192,
+    "enable_thinking": false,
+    "gradient_checkpointing": true,
+    "lora": {
+      "enabled": true,
+      "rank": 16,
+      "alpha": 32,
+      "dropout": 0.0,
+      "target_modules": ["q_proj", "k_proj", "v_proj", "o_proj", "out_proj", "gate_proj", "up_proj", "down_proj", "in_proj_qkv", "in_proj_z", "in_proj_b", "in_proj_a", "fc"]
+    }
+  },
+  "data": {
+    "train_dataset": "openai/gsm8k",
+    "train_revision": "740312add88f781978c0658806c59bc2815b9866",
+    "train_config": "main",
+    "train_split": "train",
+    "local_root": null
+  },
+  "sampling": {
+    "mode": "mtp",
+    "group_size": 8,
+    "max_new_tokens": 1536,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "top_k": 0,
+    "seed": 42
+  },
+  "selection": {
+    "threshold": 0.5,
+    "reference": "longest",
+    "distill": "disagreeing",
+    "target_selection": "longest",
+    "max_targets": 1
+  },
+  "training": {
+    "seed": 42,
+    "max_prompts": 512,
+    "max_updates": 128,
+    "learning_rate": 0.00001,
+    "weight_decay": 0.0,
+    "gradient_clip": 1.0,
+    "logit_chunk_size": 16,
+    "save_every_updates": 16,
+    "kd_temperature": 1.0,
+    "head_weights": [1.0, 1.0],
+    "supervision": "all_prefixes",
+    "max_hours": 24
+  },
+  "evaluation": {
+    "tasks": ["gsm8k_cot_zeroshot", "minerva_math500"],
+    "harness_revision": "d6de81643928d653435c431bae19945d41d32520",
+    "generation_modes": ["ntp", "mtp"],
+    "num_samples": 1,
+    "max_new_tokens": 1536,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "top_k": 0,
+    "batch_size": 1,
+    "seed": 43
+  }
+}

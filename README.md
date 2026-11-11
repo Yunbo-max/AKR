@@ -1,4 +1,54 @@
-# AKR — Acoustic-to-KV Regression
+# AKR — MTP OPSD baseline branch
+
+## Current work: multiple self-sampled responses → native MTP OPSD
+
+**Branch: `research/mtp-opsd-baseline`. Status: `generated_unexecuted`.**
+The user selected a transferred baseline first: sample G=4/8 responses from the
+same pretrained MTP model, choose a majority-answer reference, and distil the
+reference-conditioned teacher on student trajectories. The student and teacher
+share the current parameters; MTP cases use both released model heads.
+
+- [Local runbook: environment, official downloads, qualification, all six case commands](LOCAL_AGENT_RUNBOOK.md)
+- [Method, NTP/MTP differences, and precise claim boundaries](rounds/mtp_opsd_baseline_20261111/METHOD.md)
+- [Web → Local handoff and evidence status](rounds/mtp_opsd_baseline_20261111/WEB_HANDOFF.md)
+- [Six case configurations](configs/mtp_opsd/) · [Separate launchers](scripts/mtp_opsd/)
+
+| Case | Self-samples per training question | Student rollout / KL heads | Evaluation decoding |
+|---|---:|---|---|
+| c00_native_ntp | — | No training | NTP |
+| c01_native_mtp | — | No training | Native MTP |
+| c02_ntp_opsd_g4 | 4 | NTP / main | NTP + MTP |
+| c03_mtp_opsd_g4 | 4 | MTP / main + MTP | NTP + MTP |
+| c04_ntp_opsd_g8 | 8 | NTP / main | NTP + MTP |
+| c05_mtp_opsd_g8 | 8 | MTP / main + MTP | NTP + MTP |
+
+All cases start from pinned **Qwen/Qwen3.5-4B**, including its pretrained MTP
+weights. The MTP rollout emits a main token followed by an unverified conditional
+MTP token. This is positional, all-prefix self-distillation; no new block-level
+objective is implemented or claimed.
+
+After the separate pinned environment is installed:
+
+```bash
+python -m mtp_opsd.cli download --assets-root assets/mtp_opsd
+python -m mtp_opsd.cli check --assets-root assets/mtp_opsd --full-hashes
+python -m mtp_opsd.cli qualify --assets-root assets/mtp_opsd
+bash scripts/mtp_opsd/c03_mtp_opsd_g4.sh run --run-id mtp_opsd_pilot_v1
+python -m mtp_opsd.cli report --run-id mtp_opsd_pilot_v1
+```
+
+Each case has separate raw rollouts, logs, checkpoints, resume state and native
+evaluation under `runs/mtp_opsd/<run-id>/<case>/seed_42/`. The first development
+budget is 512 train questions, 128 updates and a cumulative 24-hour training
+budget per trained case, checked at safe boundaries. Evaluation uses the full
+GSM8K test (1,319) and MATH-500 (500), initially one sample per problem. Evaluation
+time is additional. No GPU result, speed claim or improvement is established by
+this source delivery; **the historical tests and results below do not validate
+the new MTP pipeline**.
+
+---
+
+## Historical acoustic AKR
 
 **Bioacoustic Recognition in Speech Language Models.** Canonical consolidation: `Yunbo-max/AKR`.
 

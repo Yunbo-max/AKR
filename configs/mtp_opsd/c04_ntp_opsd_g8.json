@@ -1,0 +1,7 @@
+{
+  "case_id": "c04_ntp_opsd_g8",
+  "kind": "train",
+  "description": "Eight self-sampled NTP rollouts, majority-reference NTP OPSD",
+  "sampling": {"mode": "ntp", "group_size": 8},
+  "training": {"head_weights": [1.0, 0.0]}
+}

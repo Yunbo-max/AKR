@@ -1,0 +1,6 @@
+{
+  "case_id": "c03_mtp_opsd_g4",
+  "kind": "train",
+  "description": "Four self-sampled native MTP rollouts, majority-reference main+MTP-head OPSD",
+  "sampling": {"mode": "mtp", "group_size": 4}
+}

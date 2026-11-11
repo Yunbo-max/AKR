@@ -1,5 +1,6 @@
 # Python environments and caches
 /.venv/
+/.venv-mtp-opsd/
 /.hf-cache/
 /.pytest_cache/
 **/__pycache__/
@@ -65,3 +66,8 @@
 /paper/*.fls
 /paper/*.fdb_latexmk
 /paper/main.pdf
+
+# Native-MTP baseline: local complete assets and independently saved runs.
+/assets/mtp_opsd/
+/runs/mtp_opsd/
+/artifacts/mtp_opsd/
