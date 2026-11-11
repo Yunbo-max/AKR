@@ -302,7 +302,7 @@ def build_job(c, e=None):
     job['description'] = (f'AKR final_v1 serial single-GPU cell {case}/{ds}/{model}/{cond}; '
                           f'pad={pad}; batch_map={batch_map}')
     det = ('export CUBLAS_WORKSPACE_CONFIG=:4096:8 AKR_DETERMINISTIC=1 && '
-           if case == 'c14' else '')
+           if (case == 'c14' or e.get('deterministic')) else '')
     job['command'] = (
         f'mkdir -p {ROOT}/logs/run/{name} && cd {ROOT} && '
         f'export HF_HOME={ROOT}/.hf-cache ANIMAL_HF_HOME={ROOT}/.hf-cache HF_HUB_OFFLINE=1 && '
@@ -393,15 +393,19 @@ def main():
                 cap_stop = (j['status'] in ('job_stopped', 'job_timeout', 'job_failed')
                             and int(j.get('running_time_ms') or 0) >= 5_300_000)
                 if cap_stop:
+                    was_26h = bool(e.get('cap_26h'))
                     arch = None if cell_code_matches(c) else full_archive_cell(c, e['attempts'])
                     e['status'] = 'PENDING'; e['long_cap'] = True; e['attempts'] = 1
                     if c['case'] == 'c04':
                         e['cap_26h'] = True
+                        if was_26h:
+                            e['deterministic'] = True
                     e['last'] = f"cap-resubmit {j['status']} at {j.get('running_time_ms')}ms"
                     changed = True
                     cap = 93600000 if c['case'] == 'c04' else 21600000
+                    det = bool(e.get('deterministic'))
                     log(f'CELL CAP-RESUBMIT {tag} job={jid} status={j["status"]} '
-                        f'running_ms={j.get("running_time_ms")} cap={cap} archive={arch}')
+                        f'running_ms={j.get("running_time_ms")} cap={cap} det={det} archive={arch}')
                 elif is_oom(c, name_of(c)):
                     cur = e.get('batch_override') or map_batch(c)
                     nxt = max(1, cur // 2)
