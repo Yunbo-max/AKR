@@ -309,7 +309,10 @@ def build_job(c, e=None):
         f'{det}'
         f'MAX_ATTEMPTS=1 bash scripts/run_wave_cells_20261108.sh '
         f'results/run_specs_20261108/serial/spec_{tag}.json > logs/run/{name}/driver.log 2>&1')
-    job['max_running_time_ms'] = '21600000' if (case == 'c04' or e.get('long_cap')) else '5400000'
+    if e.get('cap_26h'):
+        job['max_running_time_ms'] = '93600000'
+    else:
+        job['max_running_time_ms'] = '21600000' if (case == 'c04' or e.get('long_cap')) else '5400000'
     job['framework_config'][0]['spec_id'] = SPEC_ID
     job_path = SERIAL_DIR / f'job_{tag}.json'
     job_path.write_text(json.dumps(job, indent=1))
@@ -392,10 +395,13 @@ def main():
                 if cap_stop:
                     arch = None if cell_code_matches(c) else full_archive_cell(c, e['attempts'])
                     e['status'] = 'PENDING'; e['long_cap'] = True; e['attempts'] = 1
+                    if c['case'] == 'c04':
+                        e['cap_26h'] = True
                     e['last'] = f"cap-resubmit {j['status']} at {j.get('running_time_ms')}ms"
                     changed = True
+                    cap = 93600000 if c['case'] == 'c04' else 21600000
                     log(f'CELL CAP-RESUBMIT {tag} job={jid} status={j["status"]} '
-                        f'running_ms={j.get("running_time_ms")} cap=21600000 archive={arch}')
+                        f'running_ms={j.get("running_time_ms")} cap={cap} archive={arch}')
                 elif is_oom(c, name_of(c)):
                     cur = e.get('batch_override') or map_batch(c)
                     nxt = max(1, cur // 2)
