@@ -1,0 +1,3 @@
+case,dataset,model,condition,seed,method,n,accuracy,macro_f1,invalid_rate,repaired,harmed,gain_pp
+c15,humbugdb,qwen7b,lp:1000,20261107,native,1859,0.32329209252286173,0.039656410579108146,0.0,0,0,0.0
+c15,humbugdb,qwen7b,lp:1000,20261107,naturelm_native,1859,0.0586336740182894,0.009338881028643414,0.016675632060247445,104,596,-26.465841850457235

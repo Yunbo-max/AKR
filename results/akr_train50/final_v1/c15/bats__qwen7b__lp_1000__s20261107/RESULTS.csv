@@ -1,0 +1,3 @@
+case,dataset,model,condition,seed,method,n,accuracy,macro_f1,invalid_rate,repaired,harmed,gain_pp
+c15,bats,qwen7b,lp:1000,20261107,native,2000,0.1005,0.019221639575078747,0.0,0,0,0.0
+c15,bats,qwen7b,lp:1000,20261107,naturelm_native,2000,0.1015,0.03165981775951403,0.001,49,47,0.1

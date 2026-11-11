@@ -1,0 +1,261 @@
+{
+  "assets": {},
+  "config": {
+    "datasets": {
+      "bats": {
+        "expected_test_count": 2000,
+        "group_key": "source_filename",
+        "manifest": "data/manifests/train50/bats.csv"
+      },
+      "dogs": {
+        "expected_test_count": 139,
+        "group_key": "source_filename",
+        "manifest": "data/manifests/train50/dogs.csv"
+      },
+      "humbugdb": {
+        "expected_test_count": 1859,
+        "group_key": "source_filename",
+        "manifest": "data/manifests/train50/humbugdb.csv"
+      },
+      "watkins": {
+        "expected_test_count": 339,
+        "group_key": "source_filename",
+        "manifest": "data/manifests/train50/watkins.csv"
+      }
+    },
+    "models": {
+      "glm4voice9b": {
+        "id": "zai-org/glm-4-voice-9b",
+        "revision": "352e5a64063448d5e46394753fb65bf1dbab975b"
+      },
+      "qwen3b": {
+        "id": "Qwen/Qwen2.5-Omni-3B",
+        "revision": "f75b40e3da2003cdd6e1829b1f420ca70797c34e"
+      },
+      "qwen7b": {
+        "id": "Qwen/Qwen2.5-Omni-7B",
+        "revision": "ae9e1690543ffd5c0221dc27f79834d0294cba00"
+      }
+    },
+    "old_root": "/root/animal-omni-kv",
+    "seed": 20261107,
+    "settings": {
+      "bootstrap_samples": 2000,
+      "feature_fraction": 0.875,
+      "icl_audio_attention": "flash_attention_2",
+      "layer_fractions": [
+        0.25,
+        0.5,
+        0.75,
+        0.875
+      ],
+      "max_context_tokens": 32768,
+      "max_new_tokens": 32,
+      "ridge_alpha": 10.0
+    },
+    "version": 1
+  },
+  "environment": {
+    "packages": {
+      "numpy": "1.26.4",
+      "peft": "0.17.1",
+      "qwen-omni-utils": "0.0.9",
+      "scikit-learn": "1.6.1",
+      "scipy": "1.14.1",
+      "torch": "2.8.0a0+5228986c39.nv25.6",
+      "transformers": "4.52.3"
+    },
+    "python": "3.12.3 (main, Feb  4 2025, 14:48:35) [GCC 13.3.0]"
+  },
+  "extra_provenance": {},
+  "injected_backend": false,
+  "job": {
+    "batch_map_sha256": "ad0c4aa2cea3eef3c1dba76bede0fef21cdf3aae4f7f52683b2623115aad291b",
+    "case": "c09",
+    "condition": "lp:1000",
+    "dataset": "humbugdb",
+    "fixed_policy": true,
+    "methods": [
+      {
+        "alpha": 0.3,
+        "centered": true,
+        "feature": "omni",
+        "kind": "native",
+        "kv_kind": "kv",
+        "layer_group": "all",
+        "name": "native",
+        "rank": 4,
+        "raw_eta": 300.0,
+        "ridge": 10.0,
+        "scale_mode": "relative_cap",
+        "scope": "audio",
+        "support_budget": 50,
+        "temperature": 1.0
+      },
+      {
+        "alpha": 0.01,
+        "centered": true,
+        "feature": "omni",
+        "kind": "original",
+        "kv_kind": "kv",
+        "layer_group": "all",
+        "name": "original_n50",
+        "rank": 4,
+        "raw_eta": 300.0,
+        "ridge": 10.0,
+        "scale_mode": "relative_norm",
+        "scope": "audio",
+        "support_budget": 50,
+        "temperature": 1.0
+      },
+      {
+        "alpha": 0.3,
+        "centered": true,
+        "feature": "omni",
+        "kind": "soft",
+        "kv_kind": "kv",
+        "layer_group": "all",
+        "name": "soft_n50",
+        "rank": 4,
+        "raw_eta": 300.0,
+        "ridge": 10.0,
+        "scale_mode": "relative_cap",
+        "scope": "audio",
+        "support_budget": 50,
+        "temperature": 1.0
+      },
+      {
+        "alpha": 0.3,
+        "centered": true,
+        "feature": "omni",
+        "kind": "ridge",
+        "kv_kind": "kv",
+        "layer_group": "all",
+        "name": "ridge_n50",
+        "rank": 4,
+        "raw_eta": 300.0,
+        "ridge": 10.0,
+        "scale_mode": "relative_cap",
+        "scope": "audio",
+        "support_budget": 50,
+        "temperature": 1.0
+      },
+      {
+        "alpha": 0.01,
+        "centered": true,
+        "feature": "omni",
+        "kind": "original",
+        "kv_kind": "kv",
+        "layer_group": "all",
+        "name": "original_n100",
+        "rank": 4,
+        "raw_eta": 300.0,
+        "ridge": 10.0,
+        "scale_mode": "relative_norm",
+        "scope": "audio",
+        "support_budget": 100,
+        "temperature": 1.0
+      },
+      {
+        "alpha": 0.3,
+        "centered": true,
+        "feature": "omni",
+        "kind": "soft",
+        "kv_kind": "kv",
+        "layer_group": "all",
+        "name": "soft_n100",
+        "rank": 4,
+        "raw_eta": 300.0,
+        "ridge": 10.0,
+        "scale_mode": "relative_cap",
+        "scope": "audio",
+        "support_budget": 100,
+        "temperature": 1.0
+      },
+      {
+        "alpha": 0.3,
+        "centered": true,
+        "feature": "omni",
+        "kind": "ridge",
+        "kv_kind": "kv",
+        "layer_group": "all",
+        "name": "ridge_n100",
+        "rank": 4,
+        "raw_eta": 300.0,
+        "ridge": 10.0,
+        "scale_mode": "relative_cap",
+        "scope": "audio",
+        "support_budget": 100,
+        "temperature": 1.0
+      },
+      {
+        "alpha": 0.01,
+        "centered": true,
+        "feature": "omni",
+        "kind": "original",
+        "kv_kind": "kv",
+        "layer_group": "all",
+        "name": "original_n200",
+        "rank": 4,
+        "raw_eta": 300.0,
+        "ridge": 10.0,
+        "scale_mode": "relative_norm",
+        "scope": "audio",
+        "support_budget": 200,
+        "temperature": 1.0
+      },
+      {
+        "alpha": 0.3,
+        "centered": true,
+        "feature": "omni",
+        "kind": "soft",
+        "kv_kind": "kv",
+        "layer_group": "all",
+        "name": "soft_n200",
+        "rank": 4,
+        "raw_eta": 300.0,
+        "ridge": 10.0,
+        "scale_mode": "relative_cap",
+        "scope": "audio",
+        "support_budget": 200,
+        "temperature": 1.0
+      },
+      {
+        "alpha": 0.3,
+        "centered": true,
+        "feature": "omni",
+        "kind": "ridge",
+        "kv_kind": "kv",
+        "layer_group": "all",
+        "name": "ridge_n200",
+        "rank": 4,
+        "raw_eta": 300.0,
+        "ridge": 10.0,
+        "scale_mode": "relative_cap",
+        "scope": "audio",
+        "support_budget": 200,
+        "temperature": 1.0
+      }
+    ],
+    "model": "qwen7b",
+    "query_population": "complete official test; no max-query limit",
+    "reviewers": [
+      "tbdR",
+      "h8E8"
+    ],
+    "seed": 20261107,
+    "selection_note": "tau=1, eta=300, cap=.3 fixed before test; no all-class two-fold selection with singleton supports; sensitivity never changes main policy",
+    "selection_uses_query_outcomes": false,
+    "slug": "support_size",
+    "status": "planned; no scientific result",
+    "support_budgets": [
+      50,
+      100,
+      200
+    ],
+    "title": "Nested 50 / 100 / 200 support scaling"
+  },
+  "profile": "80gb",
+  "registration_sha256": "dd819de740507d388f45c77455db86ee6386d5def0426e703918f184b410709f",
+  "requested_audio_root": null
+}

@@ -1,0 +1,3 @@
+case,dataset,model,condition,seed,method,n,accuracy,macro_f1,invalid_rate,repaired,harmed,gain_pp
+c15,dogs,qwen7b,lp:1000,20261107,native,139,0.10071942446043165,0.037469793887704335,0.0,0,0,0.0
+c15,dogs,qwen7b,lp:1000,20261107,naturelm_native,139,0.1079136690647482,0.050748299319727894,0.2805755395683453,9,8,0.7194244604316548

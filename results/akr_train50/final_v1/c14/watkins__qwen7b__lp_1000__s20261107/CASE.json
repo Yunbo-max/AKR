@@ -70,7 +70,7 @@
   "extra_provenance": {},
   "injected_backend": false,
   "job": {
-    "batch_map_sha256": "79a01d5d0f101ee1fd830105ea57044e0cb264b947b6ee93babded70f6a76350",
+    "batch_map_sha256": "9b0e50f7c695da91873abcd1fd98a9422e8b2cf421c2cebc598bcf4d669ea686",
     "case": "c14",
     "condition": "lp:1000",
     "dataset": "watkins",
@@ -174,6 +174,6 @@
     "title": "Real intervention/no-op integrity and end-to-end component costs"
   },
   "profile": "80gb",
-  "registration_sha256": "1789d52e689b0cb2afc880308775b4a935da4ab508d35b7a657d1e1e3206c26d",
+  "registration_sha256": "a624e99bd868ef37dab17a23119dd9dbccf4a69a5cc3ce6c0f52df2dd0b0ae8d",
   "requested_audio_root": null
 }

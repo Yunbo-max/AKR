@@ -1,0 +1,5 @@
+case,dataset,model,condition,seed,method,n,accuracy,macro_f1,invalid_rate,repaired,harmed,gain_pp
+c13,bats,qwen7b,lp:1000,20261107,native,2000,0.1005,0.019221639575078747,0.0,0,0,0.0
+c13,bats,qwen7b,lp:1000,20261107,akr_regression_original,2000,0.1025,0.023094099710189997,0.0,4,0,0.2
+c13,bats,qwen7b,lp:1000,20261107,akr_soft_cap,2000,0.1005,0.019232113635604637,0.0,0,0,0.0
+c13,bats,qwen7b,lp:1000,20261107,lora_same50,2000,0.176,0.1139279276222773,0.0,292,141,7.55

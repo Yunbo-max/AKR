@@ -1,0 +1,520 @@
+{
+  "assets": {
+    "beats": {
+      "checkpoint": {
+        "path": "/inspire/hdd/global_user/zhangjiaquan-253108540222/backup/AKR/external/beats/BEATs_iter3_plus_AS2M.pt",
+        "sha256": "d43cbfad4d7b56381c061d7a24774f908d4d94c72961f6eb1d9090ff18cd8d34"
+      },
+      "checkpoint_sha256": "d43cbfad4d7b56381c061d7a24774f908d4d94c72961f6eb1d9090ff18cd8d34",
+      "device": "cuda",
+      "source_dir": {
+        "files": {
+          "BEATs.py": "27f289db7c56ce26f2ceb50d3719854b91b2dec1c2830d8b1dd8de1bbee19eeb",
+          "Tokenizers.py": "8374ad599cf593d11043c5099a513456e1249fdba5ed3b37517271c77c698f6f",
+          "backbone.py": "31c0378379a7e0f1d1069f9da444fb86890fe1ea078959a2dcd39640cdcadbaa",
+          "modules.py": "edeb6b6cd6a784da749f932c3e0783c0bce556fc768d0d23a4d53d4b819eb424",
+          "quantizer.py": "8d15198f22618db773a5fed2ca416fbde67c7d56ce621822ab9d49d51e5534bb"
+        },
+        "path": "/inspire/hdd/global_user/zhangjiaquan-253108540222/backup/AKR/external/unilm/beats"
+      },
+      "source_revision": "31c5b904ca1bf2afb4c234a6675c683a4e5fc7cd"
+    },
+    "naturelm": {
+      "naturelm_bert_config": {
+        "path": "/inspire/hdd/global_user/zhangjiaquan-253108540222/backup/AKR/external/bert-base-uncased/config.json",
+        "sha256": "7160e1553ad2ca51d8c1cb066be533db31826e12d173824c1bb0cb1a4f187d20"
+      },
+      "naturelm_checkpoint": {
+        "files": {
+          "config.json": "41e09fa233e09901139be19f1dd05f1cf361af39a81bcee00cf89231dfc34d08",
+          "handler.py": "7f65df5ad11ae28eb364cf4da7ccdcd5aaa994cdbc0faec5152aa093eb16caf3",
+          "inference.yml": "f6688045bee7436da1b2eb63054c014de71d2ed8540de93a08782b35caa555e4",
+          "model.safetensors": "3957dd849a4231951bbbdce1b24eab5a0238883dd31020110934e512ec9ab786",
+          "requirements.txt": "aa06920a649102746385bea58d353603ce22cef2a7b52da5822af0793aa08e4c"
+        },
+        "path": "/inspire/hdd/global_user/zhangjiaquan-253108540222/backup/AKR/.hf-cache/hub/models--EarthSpeciesProject--NatureLM-audio/snapshots/77855d9b0acd039f90798dcf0861f626bfefbd6f"
+      },
+      "naturelm_checkpoint_revision": "77855d9b0acd039f90798dcf0861f626bfefbd6f",
+      "naturelm_code": {
+        "files": {
+          ".pre-commit-config.yaml": "62ad0d377bcce19f9e54da1f30c8bff643b5509b3898bf99a62b205c9a5f788d",
+          "NatureLM/augmentations.py": "81419852fa3df687a65a5c38a50184c3fc4273af755f493d9f4ee8daf81daf41",
+          "NatureLM/checkpoint_utils.py": "31c7666d6e50980523647fc39434adc745b55f9f8cdda8dc2954f7280c81bcef",
+          "NatureLM/config.py": "7bcc384b41e99de0b42c5a9bb720f637b46fd2661881300b32bba11badf5c035",
+          "NatureLM/dataset.py": "fe8c1987ce6cdecf68eaa3baad0d219a4a98258611c940716c3ff10e03437727",
+          "NatureLM/dist_utils.py": "38f1f9202bd9843e82d61c72b26426984ea701e35744a6dc92809c0880815e49",
+          "NatureLM/infer.py": "07469db442f91aef68f9383311e9220775df4d7cef89e8db1f1cf59f1eba9d0a",
+          "NatureLM/logger.py": "c910d1d1f39136153a0419098b6de52930856bb567a969d6b19aff5e49d16569",
+          "NatureLM/models/NatureLM.py": "756877ce0d9bd4a9e43ffd5865a5c5b2b5b4a2fa29c2034e4adc1887613d5e60",
+          "NatureLM/models/Qformer.py": "f637f077f415de6e84268285ea70cb2830472c703e6f6c9a2429607c59590f44",
+          "NatureLM/models/__init__.py": "330141c55cca4ea3b16ec586e53c4545025aa64805d3d52e64b858aa8261f9d3",
+          "NatureLM/models/aves.py": "e7d2b1ecd8d75e4a8e05ba47115d7f4b07ea2da1cefd7b63976b6dcc6dea0fe3",
+          "NatureLM/models/beats/BEATs.py": "87aa6a2b625f5b38f49d841ee410787d17517044de5ae4cbd4d3aac27b286961",
+          "NatureLM/models/beats/Tokenizers.py": "315b1e30e8067177ed9d3047532ad39f1ac1dca3458f73539a92583d99808acd",
+          "NatureLM/models/beats/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "NatureLM/models/beats/backbone.py": "1fc1da75d3460995d31d904f7b5eba648184e47e50dc502093e6ea761dc20986",
+          "NatureLM/models/beats/modules.py": "42d9ef9f9cb8767c24e0e34f15ac9f7f6b4bcb3894c2c99df8d8ed7644d44919",
+          "NatureLM/models/beats/quantizer.py": "132b924e222f4ab197ac88ba74e75d26473c26a46f113c1aae3637562c6185a0",
+          "NatureLM/models/utils.py": "02cae6a25a1abcfeaa1c5076b6f6bf8123ef55a059788017766698d7f4cd191d",
+          "NatureLM/optims.py": "c84a22b4c2a4b1474ff7931e053164929b713141e5f69d1a107d5fe1ffd1ac4a",
+          "NatureLM/processors.py": "0fcfbd061a509525fc4e73670d7bdce7173a7acc8d48cca2eb04cdf9e257271e",
+          "NatureLM/runner.py": "aa226d21c1a7b0f233b2f4b70d8e8b30c3fa5c326cfa1e128f2c05d6b2251fa0",
+          "NatureLM/storage_utils.py": "ad8e75ef73ef1cf0e6d13f29c5ee8144784d6c94116f6b0c552bd27dc766edac",
+          "NatureLM/task_metric_utils.py": "dd318d77d47bb265ba6537a774a3bd76e6261fea33ab91ed29daa127700dece6",
+          "NatureLM/task_metrics.py": "98782cbc2386336ce6529bae650ad812649f9928d4ea4a1f049b842de8ac7b6e",
+          "NatureLM/utils.py": "ba2d3c2f1806c6b680c94e6c3dc007607ac63ddefbfc8a16004af084ca11f52e",
+          "beans_zero_dataset_config.json": "cd2b35bbb737f50655f6f054c4eda4a5733cb81d86965e0a15e46b413fc71660",
+          "beans_zero_inference.py": "bc12cd36147b5bc83e01fb1e27bfb469fbf20cc740f22536c8616d1282c4adf5",
+          "cli.py": "3571cb2e65fdbf02d4ce04df40a62bcf10c178d29c164ca938795887a0aa4daf",
+          "configs/inference.yml": "e1331153ee6b4957d46549b80604f23e4bf389961373e91768eace29107e6681",
+          "configs/train_stage1.yml": "ae94d64bf353fd1df2b4a039c93202282bf45e46078201506472e9856635433b",
+          "configs/train_stage2.yml": "70712f99047eb212f4c4f4e1d552ec863fc2a6effc2f1875f344c1a3b0c291b4",
+          "inference_web_app.py": "927958f0eed285518ec40579096fe51cd75784b687aaf2a7e4bea10a7f0f4980",
+          "mkdocs.yml": "e05def42da7b26808fbd53d69525dec57d258e9f9948d7f9118df26dbc493813",
+          "requirements.txt": "34d27142cfdb47a894f0c640da0faff89af868d7eeb37ff4ac6ae3f15d848784",
+          "train.py": "ac8af4f2d136d2af89079d0fffe03f72cce02e088eebae7e49747a08be54c067"
+        },
+        "path": "/inspire/hdd/global_user/zhangjiaquan-253108540222/backup/AKR/external/NatureLM-audio"
+      },
+      "naturelm_config": {
+        "path": "/inspire/hdd/global_user/zhangjiaquan-253108540222/backup/AKR/external/NatureLM-audio/configs/inference.yml",
+        "sha256": "e1331153ee6b4957d46549b80604f23e4bf389961373e91768eace29107e6681"
+      },
+      "naturelm_device": "cuda",
+      "naturelm_llama": {
+        "files": {
+          "config.json": "29e4c210b0d6ac178b16b2a255a568bdb23b581e50ca1ef6a6d071dd85704e6e",
+          "generation_config.json": "189fb0c0d7fd8a527db217c0a60a0e013f0394cd8800f9697a666a9e75e5f7fd",
+          "model-00001-of-00004.safetensors": "2b1879f356aed350030bb40eb45ad362c89d9891096f79a3ab323d3ba5607668",
+          "model-00002-of-00004.safetensors": "09d433f650646834a83c580877bd60c6d1f88f7755305c12576b5c7058f9af15",
+          "model-00003-of-00004.safetensors": "fc1cdddd6bfa91128d6e94ee73d0ce62bfcdb7af29e978ddcab30c66ae9ea7fa",
+          "model-00004-of-00004.safetensors": "92ecfe1a2414458b4821ac8c13cf8cb70aed66b5eea8dc5ad9eeb4ff309d6d7b",
+          "model.safetensors.index.json": "146776fce3f6db1103aa6f249e65ee5544c5923ce6f971b092eee79aa6e5d37b",
+          "special_tokens_map.json": "6f38c73729248f6c127296386e3cdde96e254636cc58b4169d3fd32328d9a8ec",
+          "tokenizer.json": "79e3e522635f3171300913bb421464a87de6222182a0570b9b2ccba2a964b2b4",
+          "tokenizer.model": "82e9d31979e92ab929cd544440f129d9ecd797b69e327f80f17e1c50d5551b55",
+          "tokenizer_config.json": "177c7b61e616fecb84c17ce0591acb92c6c4d60e9ac5ababfb940ff23bbcd424"
+        },
+        "path": "/inspire/hdd/global_user/zhangjiaquan-253108540222/backup/AKR/.hf-cache/hub/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659"
+      },
+      "naturelm_llama_revision": "0e9e39f249a16976918f6564b8830bc894c89659",
+      "naturelm_max_new_tokens": 32,
+      "naturelm_merging_alpha": 1.0,
+      "naturelm_source_revision": "a4c65ad7d558f902852e20a299eafe927ca0921d"
+    }
+  },
+  "config": {
+    "datasets": {
+      "bats": {
+        "expected_test_count": 2000,
+        "group_key": "source_filename",
+        "manifest": "data/manifests/train50/bats.csv"
+      },
+      "dogs": {
+        "expected_test_count": 139,
+        "group_key": "source_filename",
+        "manifest": "data/manifests/train50/dogs.csv"
+      },
+      "humbugdb": {
+        "expected_test_count": 1859,
+        "group_key": "source_filename",
+        "manifest": "data/manifests/train50/humbugdb.csv"
+      },
+      "watkins": {
+        "expected_test_count": 339,
+        "group_key": "source_filename",
+        "manifest": "data/manifests/train50/watkins.csv"
+      }
+    },
+    "models": {
+      "glm4voice9b": {
+        "id": "zai-org/glm-4-voice-9b",
+        "revision": "352e5a64063448d5e46394753fb65bf1dbab975b"
+      },
+      "qwen3b": {
+        "id": "Qwen/Qwen2.5-Omni-3B",
+        "revision": "f75b40e3da2003cdd6e1829b1f420ca70797c34e"
+      },
+      "qwen7b": {
+        "id": "Qwen/Qwen2.5-Omni-7B",
+        "revision": "ae9e1690543ffd5c0221dc27f79834d0294cba00"
+      }
+    },
+    "old_root": "/root/animal-omni-kv",
+    "seed": 20261107,
+    "settings": {
+      "bootstrap_samples": 2000,
+      "feature_fraction": 0.875,
+      "icl_audio_attention": "flash_attention_2",
+      "layer_fractions": [
+        0.25,
+        0.5,
+        0.75,
+        0.875
+      ],
+      "max_context_tokens": 32768,
+      "max_new_tokens": 32,
+      "ridge_alpha": 10.0
+    },
+    "version": 1
+  },
+  "environment": {
+    "packages": {
+      "numpy": "1.26.4",
+      "peft": "0.17.1",
+      "qwen-omni-utils": "0.0.9",
+      "scikit-learn": "1.6.1",
+      "scipy": "1.14.1",
+      "torch": "2.8.0a0+5228986c39.nv25.6",
+      "transformers": "4.52.3"
+    },
+    "python": "3.12.3 (main, Feb  4 2025, 14:48:35) [GCC 13.3.0]"
+  },
+  "extra_provenance": {
+    "beats": {
+      "audio": {
+        "duration_truncation": false,
+        "mono": "channel_mean",
+        "peak_normalization": false,
+        "resample": "scipy.resample_poly",
+        "sample_rate": 16000
+      },
+      "implementation_sha256": "6d21555aa744347b8bee86e86610dafcbdaea12f5680de05b72e43ed793ffff8",
+      "kind": "beats",
+      "numpy": "1.26.4",
+      "schema_version": 1,
+      "scipy": "1.14.1",
+      "settings": {
+        "checkpoint_sha256": "d43cbfad4d7b56381c061d7a24774f908d4d94c72961f6eb1d9090ff18cd8d34",
+        "device": "cuda",
+        "dtype": "float32",
+        "fbank_mean": 15.41663,
+        "fbank_std": 6.55582,
+        "finetuned_model": false,
+        "minimum_samples": 4000,
+        "pooling": "last_hidden_mean_over_unpadded_tokens",
+        "sample_rate": 16000,
+        "short_audio": "right_zero_pad",
+        "source_files_sha256": {
+          "BEATs.py": "27f289db7c56ce26f2ceb50d3719854b91b2dec1c2830d8b1dd8de1bbee19eeb",
+          "Tokenizers.py": "8374ad599cf593d11043c5099a513456e1249fdba5ed3b37517271c77c698f6f",
+          "backbone.py": "31c0378379a7e0f1d1069f9da444fb86890fe1ea078959a2dcd39640cdcadbaa",
+          "modules.py": "edeb6b6cd6a784da749f932c3e0783c0bce556fc768d0d23a4d53d4b819eb424",
+          "quantizer.py": "8d15198f22618db773a5fed2ca416fbde67c7d56ce621822ab9d49d51e5534bb"
+        },
+        "source_repository": "https://github.com/microsoft/unilm",
+        "source_revision": "31c5b904ca1bf2afb4c234a6675c683a4e5fc7cd"
+      },
+      "soundfile": "0.13.1",
+      "torch": "2.8.0a0+5228986c39.nv25.6",
+      "torchaudio": "2.7.1"
+    },
+    "egemaps": {
+      "audio": {
+        "duration_truncation": false,
+        "mono": "channel_mean",
+        "peak_normalization": false,
+        "resample": "scipy.resample_poly",
+        "sample_rate": 16000
+      },
+      "implementation_sha256": "6d21555aa744347b8bee86e86610dafcbdaea12f5680de05b72e43ed793ffff8",
+      "kind": "egemaps",
+      "numpy": "1.26.4",
+      "opensmile": "2.6.0",
+      "schema_version": 1,
+      "scipy": "1.14.1",
+      "settings": {
+        "dimension": 88,
+        "feature_level": "Functionals",
+        "feature_names": [
+          "F0semitoneFrom27.5Hz_sma3nz_amean",
+          "F0semitoneFrom27.5Hz_sma3nz_stddevNorm",
+          "F0semitoneFrom27.5Hz_sma3nz_percentile20.0",
+          "F0semitoneFrom27.5Hz_sma3nz_percentile50.0",
+          "F0semitoneFrom27.5Hz_sma3nz_percentile80.0",
+          "F0semitoneFrom27.5Hz_sma3nz_pctlrange0-2",
+          "F0semitoneFrom27.5Hz_sma3nz_meanRisingSlope",
+          "F0semitoneFrom27.5Hz_sma3nz_stddevRisingSlope",
+          "F0semitoneFrom27.5Hz_sma3nz_meanFallingSlope",
+          "F0semitoneFrom27.5Hz_sma3nz_stddevFallingSlope",
+          "loudness_sma3_amean",
+          "loudness_sma3_stddevNorm",
+          "loudness_sma3_percentile20.0",
+          "loudness_sma3_percentile50.0",
+          "loudness_sma3_percentile80.0",
+          "loudness_sma3_pctlrange0-2",
+          "loudness_sma3_meanRisingSlope",
+          "loudness_sma3_stddevRisingSlope",
+          "loudness_sma3_meanFallingSlope",
+          "loudness_sma3_stddevFallingSlope",
+          "spectralFlux_sma3_amean",
+          "spectralFlux_sma3_stddevNorm",
+          "mfcc1_sma3_amean",
+          "mfcc1_sma3_stddevNorm",
+          "mfcc2_sma3_amean",
+          "mfcc2_sma3_stddevNorm",
+          "mfcc3_sma3_amean",
+          "mfcc3_sma3_stddevNorm",
+          "mfcc4_sma3_amean",
+          "mfcc4_sma3_stddevNorm",
+          "jitterLocal_sma3nz_amean",
+          "jitterLocal_sma3nz_stddevNorm",
+          "shimmerLocaldB_sma3nz_amean",
+          "shimmerLocaldB_sma3nz_stddevNorm",
+          "HNRdBACF_sma3nz_amean",
+          "HNRdBACF_sma3nz_stddevNorm",
+          "logRelF0-H1-H2_sma3nz_amean",
+          "logRelF0-H1-H2_sma3nz_stddevNorm",
+          "logRelF0-H1-A3_sma3nz_amean",
+          "logRelF0-H1-A3_sma3nz_stddevNorm",
+          "F1frequency_sma3nz_amean",
+          "F1frequency_sma3nz_stddevNorm",
+          "F1bandwidth_sma3nz_amean",
+          "F1bandwidth_sma3nz_stddevNorm",
+          "F1amplitudeLogRelF0_sma3nz_amean",
+          "F1amplitudeLogRelF0_sma3nz_stddevNorm",
+          "F2frequency_sma3nz_amean",
+          "F2frequency_sma3nz_stddevNorm",
+          "F2bandwidth_sma3nz_amean",
+          "F2bandwidth_sma3nz_stddevNorm",
+          "F2amplitudeLogRelF0_sma3nz_amean",
+          "F2amplitudeLogRelF0_sma3nz_stddevNorm",
+          "F3frequency_sma3nz_amean",
+          "F3frequency_sma3nz_stddevNorm",
+          "F3bandwidth_sma3nz_amean",
+          "F3bandwidth_sma3nz_stddevNorm",
+          "F3amplitudeLogRelF0_sma3nz_amean",
+          "F3amplitudeLogRelF0_sma3nz_stddevNorm",
+          "alphaRatioV_sma3nz_amean",
+          "alphaRatioV_sma3nz_stddevNorm",
+          "hammarbergIndexV_sma3nz_amean",
+          "hammarbergIndexV_sma3nz_stddevNorm",
+          "slopeV0-500_sma3nz_amean",
+          "slopeV0-500_sma3nz_stddevNorm",
+          "slopeV500-1500_sma3nz_amean",
+          "slopeV500-1500_sma3nz_stddevNorm",
+          "spectralFluxV_sma3nz_amean",
+          "spectralFluxV_sma3nz_stddevNorm",
+          "mfcc1V_sma3nz_amean",
+          "mfcc1V_sma3nz_stddevNorm",
+          "mfcc2V_sma3nz_amean",
+          "mfcc2V_sma3nz_stddevNorm",
+          "mfcc3V_sma3nz_amean",
+          "mfcc3V_sma3nz_stddevNorm",
+          "mfcc4V_sma3nz_amean",
+          "mfcc4V_sma3nz_stddevNorm",
+          "alphaRatioUV_sma3nz_amean",
+          "hammarbergIndexUV_sma3nz_amean",
+          "slopeUV0-500_sma3nz_amean",
+          "slopeUV500-1500_sma3nz_amean",
+          "spectralFluxUV_sma3nz_amean",
+          "loudnessPeaksPerSec",
+          "VoicedSegmentsPerSec",
+          "MeanVoicedSegmentLengthSec",
+          "StddevVoicedSegmentLengthSec",
+          "MeanUnvoicedSegmentLength",
+          "StddevUnvoicedSegmentLength",
+          "equivalentSoundLevel_dBp"
+        ],
+        "feature_set": "eGeMAPSv02",
+        "minimum_samples": 4000,
+        "package_assets_sha256": {
+          "core/bin/manylinux_2_17_x86_64/libSMILEapi.so": "7d708bd3e02ec29d1fdc94e8b60595a65052d6f955b96bb7c88b181d65d81231",
+          "core/config/compare/ComParE_2016.conf": "0f04ad58d498d249d1ea4cf46a5ca792c7eb6f20adb7122f355ba16b4a5a375b",
+          "core/config/compare/ComParE_2016_core.func.conf.inc": "1f37ad33b9dc9dd8135fa7e9e41c8aa9302afb72bd42023c34f84caddd169e18",
+          "core/config/compare/ComParE_2016_core.lld.conf.inc": "81532ba543f351cc355cf343b0b8f59bbd221eea9ee13a8ed37dbde299bd65a3",
+          "core/config/compare/basic_functionals_2016.conf.inc": "9ae4afb9b96b5de9861557751805ba3896d83e7bd8e54dd95d311d6d17167740",
+          "core/config/egemaps/v01a/eGeMAPSv01a.conf": "907e4da62fbb7f1d00e66f7118efcfc1ec942f989663737ea322e70942265b7b",
+          "core/config/egemaps/v01a/eGeMAPSv01a_core.func.conf.inc": "8ef181f0af4e64c86475183a11764812980f1722a04f1f268698085c411f3f35",
+          "core/config/egemaps/v01a/eGeMAPSv01a_core.lld.conf.inc": "41906d3c04550e9102f3a6d49f6741c48e37311df5b4d7035f16f7c55b8918f9",
+          "core/config/egemaps/v01b/eGeMAPSv01b.conf": "9c325c522b771f06e626faa5679612f707650bf24ec3282ea0a88980b5ee9cd1",
+          "core/config/egemaps/v01b/eGeMAPSv01b_core.func.conf.inc": "fc432b634e03cde27e0e1c2fc123bb5e1f58a3efc42f37395cedc1273917a0a2",
+          "core/config/egemaps/v01b/eGeMAPSv01b_core.lld.conf.inc": "caa2f73755d8f75beb7e89e5749ba4daee7a0b0ce8b4ea029da83611c026ff9d",
+          "core/config/egemaps/v02/eGeMAPSv02.conf": "ef451953badced2ed112ba4ffb997f9d2a7e7c444a09e8092665eadd9f24109e",
+          "core/config/egemaps/v02/eGeMAPSv02_core.func.conf.inc": "4ab5c5d2ce46810f289d8b78df0ee19a39728dd190da4a9428d14aef117973ca",
+          "core/config/egemaps/v02/eGeMAPSv02_core.lld.conf.inc": "ad96301a35ea97e14370bb6f5275826ffbf96bad47e80816e5130df072686309",
+          "core/config/emobase/emobase.conf": "d243a0fb7f07be01e27969c54faee9c50e35bed25f3d7498ef74129e77c11a5a",
+          "core/config/gemaps/v01a/GeMAPSv01a.conf": "de5fc440314629867152b813ef2500e230a3f0393c8f1c5b667134b7590ffd69",
+          "core/config/gemaps/v01a/GeMAPSv01a_core.func.conf.inc": "2362133dd98564ca359e36f7d85458a0612195ea85ecc4f97d3797cb3a9d7dbe",
+          "core/config/gemaps/v01a/GeMAPSv01a_core.lld.conf.inc": "1fe789d394a21dc7793f49da3c6762caf5f0e329f7274dcb7468fbc06e4a4cf0",
+          "core/config/gemaps/v01b/GeMAPSv01b.conf": "090f6adec479c16b9685c9eefe2d6b3a58f7096bed17cec01f8595ed664e5c2c",
+          "core/config/gemaps/v01b/GeMAPSv01b_core.func.conf.inc": "94d360b32295a1c910979e732e662665bea2f1732f39107d924a238565a2ff4e",
+          "core/config/gemaps/v01b/GeMAPSv01b_core.lld.conf.inc": "ab6bb6981305af2e758f4f084b206755d7207728d50e1980e07cfdc35d487421",
+          "core/config/is09-13/IS09_emotion.conf": "c084e9c90f205959e34bb63f368d41e75727b52eccb6c647d0e940b02465d89b",
+          "core/config/is09-13/IS09_emotion_core.func.conf.inc": "888bb780d8f7835e30818a66da6b6f331a9926f8545b6bc4f235ece8e115fafb",
+          "core/config/is09-13/IS09_emotion_core.lld.conf.inc": "3143cbc85582599f47487c244164e901b076fb12ad8c005802110b7b640d63de",
+          "core/config/is09-13/IS10_paraling_compat.conf": "f3a165905f5fa89fecb338bcb5c8012041e9ea34230e3dba514de660ceafe0b2",
+          "core/config/is09-13/IS10_paraling_core.func.conf.inc": "ac45cdbc3a928c513254d85262da80e767fb32064f7d5c3268a3fad87429aa3f",
+          "core/config/is09-13/IS10_paraling_core.lld.conf.inc": "8179a9725904ee334ecd0f3f5c8d4cadc1655ff06ca10c67e15da585a1d9a4d7",
+          "core/config/is09-13/IS11_speaker_state.conf": "58e40cdf073468fe2f892d5998573cb75a23d4dbc48f5f8df106bf2f01072a59",
+          "core/config/is09-13/IS12_speaker_trait_compat.conf": "ba0def8afa5313625647c13b8f3f5d69203bfd6a234be7769fe4a5bdda3d638f",
+          "core/config/is09-13/IS13_ComParE.conf": "7c7194f62c3a84c02f967628f4137a3abd39800f9c445e0aaf41fce660287605",
+          "core/config/is09-13/IS13_ComParE_Voc.conf": "1146f0f9c78679af23f689448635371801c8bc2908ef6df63aa37a4f27497845",
+          "core/config/is09-13/IS13_ComParE_core.func.conf.inc": "a5d467afabd45054ff8dc760884c79764c32ea3a7fab1881e4e07b2396c16ce6",
+          "core/config/is09-13/IS13_ComParE_core.lld.conf.inc": "5c4af86d06b6529fee177939167ad2d6738029b52bd6bab75c7795194a93443a",
+          "core/config/shared/BufferMode.conf.inc": "cada3a58949ec8c7bd1a76900da58fad507b49f87c847064722ad301448d18dd",
+          "core/config/shared/BufferModeRb.conf.inc": "ea9fa31166fef969d7d7c77e8c545994ce9f04238ace225ba4d068d982ea3ac8",
+          "core/config/shared/BufferModeRbLag.conf.inc": "5f91c78aca4b1b167750806d7e730a0419626977f6d86704451a92a5f3fa1110",
+          "core/config/shared/BufferModeRbMulti.conf.inc": "7d4723a6ab69126f6ffce62ade1d641fcbd4befe3fa93d41f849cbb6ddf243bf",
+          "core/config/shared/FrameModeFunctionals.conf.inc": "fcf898b98f3a424135c1325c3acd18326606bb56887dabc76878c8102a3e23db",
+          "core/config/shared/FrameModeFunctionalsMulti.conf.inc": "0abfd1264e833afc457dfe7755cf881c1691e7d6429e8940843e438862025596",
+          "core/config/shared/standard_data_output.conf.inc": "87cc23c042d0b4bfac1e187b4941ceb0252396e60c4ab830ebf151fc7a80fcd1",
+          "core/config/shared/standard_data_output_no_lld_de.conf.inc": "65fc54ad412400786db5ffb53da02a62e3093fc1b952755737d88052934ff748",
+          "core/config/shared/standard_external_data_output_multi.conf.inc": "548c9fa5dad9022eb6487ac395584b5d30e9ee698f54e21f9f1c0d8483d39d84",
+          "core/config/shared/standard_external_data_output_single.conf.inc": "c2d0b1f3850c0ab030b79f932a028fe996acdb2a8348d3ddb0c2892ea1c2ba7f",
+          "core/config/shared/standard_external_wave_input.conf.inc": "d87bbef465420abf187342d47115da1eecc2f0e0995c86d112b071bd1dc7cde9",
+          "core/config/shared/standard_wave_input.conf.inc": "d8fb9130fb895ed0bbed2e6b41feea30e25eaffbb116b136085f6ff92083b3f0"
+        },
+        "short_audio": "right_zero_pad"
+      },
+      "soundfile": "0.13.1"
+    },
+    "mfcc": {
+      "audio": {
+        "duration_truncation": false,
+        "mono": "channel_mean",
+        "peak_normalization": false,
+        "resample": "scipy.resample_poly",
+        "sample_rate": 16000
+      },
+      "implementation_sha256": "6d21555aa744347b8bee86e86610dafcbdaea12f5680de05b72e43ed793ffff8",
+      "kind": "mfcc",
+      "numpy": "1.26.4",
+      "schema_version": 1,
+      "scipy": "1.14.1",
+      "settings": {
+        "dct_norm": "ortho",
+        "dct_type": 2,
+        "delta_edges": "replicate",
+        "delta_width": 2,
+        "dimension": 78,
+        "final_frame": "zero_pad",
+        "fmax": 8000,
+        "fmin": 0,
+        "frame_samples": 400,
+        "hop_samples": 160,
+        "log": "natural",
+        "log_floor": 1e-10,
+        "mel_normalization": null,
+        "mel_scale": "HTK",
+        "mono": "channel_mean",
+        "n_fft": 512,
+        "n_mels": 40,
+        "n_mfcc": 13,
+        "pooling": "mean_std_population_of_mfcc_delta_delta2",
+        "preemphasis": 0.97,
+        "resample": "scipy.resample_poly",
+        "sample_rate": 16000,
+        "window": "numpy.hamming_symmetric"
+      },
+      "soundfile": "0.13.1"
+    }
+  },
+  "injected_backend": false,
+  "job": {
+    "batch_map_sha256": "0ac549d4dafb24a3379862814fadba78101357112122a8a87e4e7a8af5bcf807",
+    "case": "c03",
+    "condition": "full",
+    "dataset": "watkins",
+    "fixed_policy": true,
+    "methods": [
+      {
+        "alpha": 0.3,
+        "centered": true,
+        "feature": "omni",
+        "kind": "native",
+        "kv_kind": "kv",
+        "layer_group": "all",
+        "name": "native",
+        "rank": 4,
+        "raw_eta": 300.0,
+        "ridge": 10.0,
+        "scale_mode": "relative_cap",
+        "scope": "audio",
+        "support_budget": 50,
+        "temperature": 1.0
+      },
+      {
+        "alpha": 0.3,
+        "centered": true,
+        "feature": "omni",
+        "kind": "ridge",
+        "kv_kind": "kv",
+        "layer_group": "all",
+        "name": "omni_ridge",
+        "rank": 4,
+        "raw_eta": 300.0,
+        "ridge": 10.0,
+        "scale_mode": "relative_cap",
+        "scope": "audio",
+        "support_budget": 50,
+        "temperature": 1.0
+      },
+      {
+        "alpha": 0.3,
+        "centered": true,
+        "feature": "mfcc",
+        "kind": "ridge",
+        "kv_kind": "kv",
+        "layer_group": "all",
+        "name": "mfcc_ridge",
+        "rank": 4,
+        "raw_eta": 300.0,
+        "ridge": 10.0,
+        "scale_mode": "relative_cap",
+        "scope": "audio",
+        "support_budget": 50,
+        "temperature": 1.0
+      },
+      {
+        "alpha": 0.3,
+        "centered": true,
+        "feature": "egemaps",
+        "kind": "ridge",
+        "kv_kind": "kv",
+        "layer_group": "all",
+        "name": "egemaps_ridge",
+        "rank": 4,
+        "raw_eta": 300.0,
+        "ridge": 10.0,
+        "scale_mode": "relative_cap",
+        "scope": "audio",
+        "support_budget": 50,
+        "temperature": 1.0
+      },
+      {
+        "alpha": 0.3,
+        "centered": true,
+        "feature": "beats",
+        "kind": "ridge",
+        "kv_kind": "kv",
+        "layer_group": "all",
+        "name": "beats_ridge",
+        "rank": 4,
+        "raw_eta": 300.0,
+        "ridge": 10.0,
+        "scale_mode": "relative_cap",
+        "scope": "audio",
+        "support_budget": 50,
+        "temperature": 1.0
+      }
+    ],
+    "model": "qwen7b",
+    "query_population": "complete official test; no max-query limit",
+    "reviewers": [
+      "h8E8"
+    ],
+    "seed": 20261107,
+    "selection_note": "tau=1, eta=300, cap=.3 fixed before test; no all-class two-fold selection with singleton supports; sensitivity never changes main policy",
+    "selection_uses_query_outcomes": false,
+    "slug": "acoustic_features",
+    "status": "planned; no scientific result",
+    "support_budgets": [
+      50
+    ],
+    "title": "MFCC, eGeMAPS and BEATs with the same ridge readout"
+  },
+  "profile": "80gb",
+  "registration_sha256": "c7475ddc90380744ce692408e6dc64275c9e268bd19235de6e47bf6ba64bfe96",
+  "requested_audio_root": null
+}

@@ -410,7 +410,7 @@
   },
   "injected_backend": false,
   "job": {
-    "batch_map_sha256": "ad0c4aa2cea3eef3c1dba76bede0fef21cdf3aae4f7f52683b2623115aad291b",
+    "batch_map_sha256": "3d4d4a666db05e63398de5cc62b901f12270f4ca754e853681f4486f3a70035b",
     "case": "c03",
     "condition": "full",
     "dataset": "dogs",
@@ -513,6 +513,6 @@
     "title": "MFCC, eGeMAPS and BEATs with the same ridge readout"
   },
   "profile": "80gb",
-  "registration_sha256": "f436de149791428f3b3ff07b84b04bb27f4cf32b18add39fbf7702eba9ba3104",
+  "registration_sha256": "ac4e802040ae412c687633cce45d047eb7be2eee79204fcb1e2d891af30db7d0",
   "requested_audio_root": null
 }

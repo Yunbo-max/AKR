@@ -1,0 +1,5 @@
+case,dataset,model,condition,seed,method,n,accuracy,macro_f1,invalid_rate,repaired,harmed,gain_pp
+c12,bats,glm4voice9b,full,20261107,native,2000,0.1,0.01818181818181818,0.0,0,0,0.0
+c12,bats,glm4voice9b,full,20261107,akr_regression_original,2000,0.1,0.01818181818181818,0.0,0,0,0.0
+c12,bats,glm4voice9b,full,20261107,akr_hard_centered,2000,0.1045,0.035059468063170875,0.053,23,14,0.44999999999999996
+c12,bats,glm4voice9b,full,20261107,akr_soft_cap,2000,0.1,0.01818181818181818,0.0,0,0,0.0

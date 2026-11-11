@@ -1,0 +1,7 @@
+{
+  "case": "c12",
+  "complete": false,
+  "error": "ContextLimit",
+  "reason": "15004 tokens exceeds budget 8192; no truncation",
+  "status": "error"
+}

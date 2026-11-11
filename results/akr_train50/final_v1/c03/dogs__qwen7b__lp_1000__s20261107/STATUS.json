@@ -1,6 +1,8 @@
 {
   "case": "c03",
-  "complete": false,
-  "method": "beats_ridge",
-  "status": "running"
+  "complete": true,
+  "invocation_seconds": 1491.2809689231217,
+  "report_sha256": "860840a094f0e382a1f30784a2fb6511b17b42f7278edb7ebd84b871bb3a61f2",
+  "scientific_results": true,
+  "status": "complete"
 }

@@ -1,6 +1,8 @@
 {
   "case": "c04",
-  "complete": false,
-  "method": "audio_icl_50_order0",
-  "status": "running"
+  "complete": true,
+  "invocation_seconds": 8504.419816818088,
+  "report_sha256": "03fa831fa58fcf33ea9108d44278866732874a3cc9f66eed3f6a0bbc2215518a",
+  "scientific_results": true,
+  "status": "complete"
 }

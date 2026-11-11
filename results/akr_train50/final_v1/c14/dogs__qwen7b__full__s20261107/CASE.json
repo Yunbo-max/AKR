@@ -70,7 +70,7 @@
   "extra_provenance": {},
   "injected_backend": false,
   "job": {
-    "batch_map_sha256": "7f8fcb5dbcd0fa0279baa1d07b73566c4d575b548d6225527ddbe125a5dd3c8f",
+    "batch_map_sha256": "ad0c4aa2cea3eef3c1dba76bede0fef21cdf3aae4f7f52683b2623115aad291b",
     "case": "c14",
     "condition": "full",
     "dataset": "dogs",
@@ -174,6 +174,6 @@
     "title": "Real intervention/no-op integrity and end-to-end component costs"
   },
   "profile": "80gb",
-  "registration_sha256": "f436de149791428f3b3ff07b84b04bb27f4cf32b18add39fbf7702eba9ba3104",
+  "registration_sha256": "aefe9a7a2bf2c7e152a7fae923f793fdb91b4e5b684aabe30109bfbda9e00054",
   "requested_audio_root": null
 }

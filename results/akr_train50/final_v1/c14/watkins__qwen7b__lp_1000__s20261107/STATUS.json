@@ -1,7 +1,8 @@
 {
   "case": "c14",
-  "complete": false,
-  "error": "RuntimeError",
-  "reason": "zero_alpha failed exact native no-op check",
-  "status": "error"
+  "complete": true,
+  "invocation_seconds": 1415.5069625519682,
+  "report_sha256": "9f58c6607d2788955763efc926d3dafd023a73c75e6c47e999dcb7f322403d8f",
+  "scientific_results": true,
+  "status": "complete"
 }
